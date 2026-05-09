@@ -1,0 +1,5287 @@
+{
+  "Drift": {
+    "threshold": 3,
+    "members": [
+      "13GXtbGV8mNfNLDNbVKPrTcHTpfZ4CYrXviRCZmyxQvj",
+      "7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh",
+      "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z",
+      "HC6BxMvDLfefSZE16FRRktLHD7JVFLuLKvNRidGzH7iH",
+      "HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:53:34.668Z",
+    "programAuthorities": {
+      "Protocol V2": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo"
+    }
+  },
+  "Pump.fun": {
+    "threshold": 3,
+    "members": [
+      "4tbEe4AquJWyMh7f7yE5poFChhsuPbeGh7EHVQCvq2N8",
+      "5sFJMw5dC59oKGKA9LgeYQCSmYS6rLeCegxMkcM2Pwby",
+      "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz",
+      "7zc8kzBr5wbsQKxYYv9uCMgfcW5zjxLEopvmuf3ig6iw"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:53:41.463Z",
+    "programAuthorities": {
+      "Bonding Curve": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8"
+    }
+  },
+  "Magic Eden": {
+    "threshold": 2,
+    "members": [
+      "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b",
+      "85ckxt7FfpdqjwFm33EA9KR4YFgdBCGFXGur4TbQBK25",
+      "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
+      "D9on7nU5rmANsXSfa7a9YAU2n54VjAxdPKitpxtvwFQs",
+      "EsmFrjZuXg6SMQu78QWSM4DWxYQCj86r4zeFRhvb4S1z",
+      "FoSGKYHTLjL5RzAujxSu356SeUE65VJ2j5TH9buUy2Ze"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:53:51.345Z",
+    "programAuthorities": {
+      "Marketplace": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb"
+    }
+  },
+  "Exponent": {
+    "threshold": 3,
+    "members": [
+      "ZsGaxkUnULynp4jX5AkYfQGtvacoKf9Axcdowc7s3cA",
+      "2cVAT3oviEWgaTJkBipmN5KiYpmguzSqJG6hBa4Jfqgj",
+      "HN8obiLBzfKUz87S7bmkWgcu8ysV7otcPUnws5gQU78E",
+      "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:53:54.944Z",
+    "programAuthorities": {
+      "Core": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP"
+    }
+  },
+  "Nosana": {
+    "threshold": 2,
+    "members": [
+      "5WNNVkahiacGz88kBtZUfVhTFTsp2J4J5n6yEB4q3A3D",
+      "8ywagMXEBdn7RvmqtuY22LbCNDEV8pQwp56sRC2zCudX",
+      "FnCZoNo6ki4njeBKW6hWdS64gi3zj5j2aAAkhGbb7cBH"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:54:02.081Z",
+    "programAuthorities": {
+      "Jobs": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9"
+    }
+  },
+  "Lulo": {
+    "threshold": 2,
+    "members": [
+      "2dMWrjsnvNQTS6C2BFRYSYbe4GsWR6tdcN7SNmouAYPT",
+      "534w7LUbs4jsNp6qJ1r6vEwiZRqadzT7ZXUyVTCZThK4",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh",
+      "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk",
+      "C1twykXr9nKgVEistG3yJk8rtKTnjdhUWrPnQ6TaEkeB"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:54:04.091Z",
+    "programAuthorities": {
+      "FlexLend": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs"
+    }
+  },
+  "Stabble": {
+    "threshold": 2,
+    "members": [
+      "55Th9kAE3FW2ws3xfUu5dxa8Q5NjNrToezpDwW8NhrCB",
+      "BR4ExSPZUMHfWB6kNvYL6AXNbW4NXLzdFnuKs5qSxSR1",
+      "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:54:09.073Z",
+    "programAuthorities": {
+      "Stable Swap": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP"
+    }
+  },
+  "Hylo": {
+    "threshold": 3,
+    "members": [
+      "2n5THJEbrjADhaGbXch6bZQZ3g3zaxnnLgMeWyEqRYrP",
+      "3ChdTfL6iZ1webxcw79wnob1CyZy5FxkCXR7v3j1qRJD",
+      "8TjLVdh5b95Y5Gm6AbJXhmXW9as8QXvTMLVKJZ6pXzzR",
+      "8YRNf7ZN16oXp9vw6BLMBE5kMcqyE4mpGPzwTgCuVNf8",
+      "9rW2KnDiciztjpcf83LjinReaRgZbo2YG9ZCWXZCfVkd",
+      "FH83cpeVPNWS3hTdQzDtwWcJQT3TA7hfAz3T8ojbNqVt",
+      "FaBArNd8rvbmj4zxQVSZnotcgDq8jGm8i58NCTCbS8sR",
+      "H5xDGKUoJmmsNZ3brVqHV8EVxaUQdfEKwBzvzJEcrLMn",
+      "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:54:18.243Z"
+  },
+  "Loopscale": {
+    "threshold": 3,
+    "members": [
+      "LUKET3JPqzoCMZNLos4MN6yHUzpX2qsgjen4uhS86u9",
+      "LoTy38EiLYg85rWq5okYjNwzQECGbYa6uPcJPj8MHu2",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN",
+      "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j",
+      "26Es6MMrHXXBGPoVd5D5VZwepTHPigaSU5iTSd2hmp1m",
+      "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn",
+      "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs",
+      "FmoQf6t1fxNhvzJ7iVyoiue5C8JuhkLxpp6it9jAkkua"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:54:30.701Z"
+  },
+  "Orca": {
+    "threshold": 3,
+    "members": [
+      "r21Gamwd9DtyjHeGywsneoQYR39C1VDwrw7tWxHAwh6",
+      "3HNJ8bKv1tDcc7urfJm51FaF7aVpG6GPwxgfKA8s9U8z",
+      "4gdsTXsc3Df73LyNXeTa9wS5unJ9DE8cTaJhtKqksD4S",
+      "6Li1bEptmfD1RT3LaPUde8yMTdn2Fpr9Vf726VdSueL9",
+      "9f4WNuXfhQsjC2U4tqZ38i4rccey9ys5eeywCmQ9yUAs",
+      "AM1tQFm9YCFZaqU69iX6zg5Sy9RQRxGrU6Pp9od22pb4",
+      "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C",
+      "F8HnFKCbN5H1PnHMVtGSyMv4nn7XxCreMQJPUP7q8qK4",
+      "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY",
+      "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa"
+    ],
+    "timeLock": 86400,
+    "lastChecked": "2026-04-09T16:01:04.535Z"
+  },
+  "Marginfi": {
+    "threshold": 7,
+    "members": [
+      "2owonq2d2LaQNCc4iq8s4848GeRsPQqbRdCReLhdx9mW",
+      "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z",
+      "57vhVhXzzMB5VDSgkgdeg74vgrFKwTiJY1L9crXsfjGX",
+      "6cjetC6BA3adY8G54KNsiY3pbXXkipMQEHCymMgxVNhr",
+      "6ryqDDCwKFZfSiHQrYRkjTEarbsLjg9TmuFg1RJorBk3",
+      "9NQozSJM8yy8JxX2DGgXUYvMnQz7CDmB91PnLAeSXaW8",
+      "9inNvfZy7Ha5KisZ9CU9cjKBWrVHtEzXzRBD9mSyAnyf",
+      "A8tPrJkyrJau857rySaCAvkeYGCpGGSxSxEX11VLxZgD",
+      "AfSM5R2A35qGZ9AgULApe3iS5bNDAtPb6WzZJG1UPVen",
+      "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R",
+      "FAbj8Hm7KGfFoJ8aV9LuW7ATxaqiLLCeQT5kSQ4r4QUE",
+      "FGGC4aPUuWip2CXM8WL4aeefJqmPrh6uNr6NLKtBJaMN"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:04.796Z"
+  },
+  "Kamino": {
+    "threshold": 5,
+    "members": [
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv",
+      "6vkzAQLAERW5RKHX68ZCDxWxW77T8dMqYUYMXCe6ooMC",
+      "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV",
+      "8g2PMddbKrqpPtd74pWM16xnDwtpKtkDJNDsQ9cWJZAC",
+      "BEUTwDjLNoXvT26J9CZD5A1Fsr9WF2UXdcUVZuy4zQ3d",
+      "BMGYmN1hG8evD3pvy1Rk41bFUdGGVP5fYJbh2JHMonqK",
+      "CmJywvWynJAiADsgTkVWu5BJus4ru2SP1PnfBXvThrxZ",
+      "DFheUjWj6BL9CuF8gAYfF6TgrbrruTTCc3vE6Ajn1gyK",
+      "G8fVffcHt3n6DkjSdYj47xWe55QjFsL4P5zhQ9RXFuPa",
+      "HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj"
+    ],
+    "timeLock": 43200,
+    "lastChecked": "2026-04-09T16:01:05.042Z"
+  },
+  "Jupiter Perps": {
+    "threshold": 4,
+    "members": [
+      "3ZR4gMzciDHZudi5e1evdESKZuCQEE9QNHLkMoRsfDxQ",
+      "89FnbsKH8n6FXCghGUijxh3snqx3e6VXJ7q1fQAHWkQQ",
+      "BYidGfUnfoQtqi4nHiuo57Fjreizbej6hawJLnbwJmYr",
+      "CHRDWWqUs6LyeeoD7pJb3iRfnvYeMfwMUtf2N7zWk7uh",
+      "Dg5NLa5JuwfRMkuwZEguD9RpVrcQD3536GxogUv7pLNV",
+      "EhJqf1p39c8NnH5iuZAJyw778LQua1AhZWxarT5SF8sT",
+      "GGG2JyBtwbPAsYwUQED8GBbj9UMi7NQa3uwN3DmyGNtz"
+    ],
+    "timeLock": 86400,
+    "lastChecked": "2026-04-09T16:01:05.305Z"
+  },
+  "Jupiter Lend": {
+    "threshold": 4,
+    "members": [
+      "jtnVCcNHdMVU6nkJLrNC1wq2XS5rnmKap78iQGGoaXQ",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq",
+      "8BR8iAAF9ZnfhLCxmVPzTvF6LcysppKW6SXbjsNKrz9H",
+      "ABun6mSVAoMvGtZF3dJbseSFL27fXZRWG2FS3ZYuK2QR",
+      "FHEPdZxbkM896cQcxR68fTXXnLDnm4t5AKM6xbiP1VQ9",
+      "FXQuS5Yug6GBxbNbf4qpNdFonhhCW7x7a4nTFakzgFnK",
+      "GpvnGqPTq4Ga7k5PgxoBA7Yr6HCnsqeeeb8KhczztdRu"
+    ],
+    "timeLock": 43200,
+    "lastChecked": "2026-04-09T16:01:05.570Z"
+  },
+  "Huma": {
+    "threshold": 2,
+    "members": [
+      "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js",
+      "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z",
+      "8W2VmPoB63YsVt9VZd5hJzzu1D396cszDLGWMZZ1GCKu",
+      "EoKrH8Gg1GMqEAgput6W3SGv6WhyC1Mr3eWAnjNJ3d7E",
+      "G1AonKZArhAC51Mp3uhJ3Yk1kRVsEwbg9RGTrUoqEPRm"
+    ],
+    "timeLock": 43200,
+    "lastChecked": "2026-04-09T16:01:05.816Z"
+  },
+  "Solstice": {
+    "threshold": 3,
+    "members": [
+      "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK",
+      "DtWpcoMN5LMKmvw4sRXVArExBBDyHNk1mQ7DrbYhGADS",
+      "E1iyboRnxBSD8KJncj8mkkzbJu17gr5w6CiTN6q4YoUN",
+      "EBCXuPcvNP39vbVSjadH7YwtKRt47iWK7Xs2yATDhmJ7",
+      "FoMboHErV2g7GjfQayFCRjWdXg3USZkPJCoeYEgPastv"
+    ],
+    "timeLock": 86400,
+    "lastChecked": "2026-04-09T16:01:06.063Z"
+  },
+  "Switchboard": {
+    "threshold": 3,
+    "members": [
+      "nrEbij8ZuwEw8GvjJqS5JsFx55Gy1LmvBXe5B1jtjpH",
+      "2r3cVdpCRYNZKyi3r6pquzCEHrBezPdXPSeCaaWWnGMn",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+      "8dvWh4YPejYUs9fS296jZ1XAxcKEPtzi6v1NGv4ZJFw6",
+      "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP",
+      "E4NGuMwfoTqJKUkzUSWF3rDbMwCR3CCTwFrL4Z3Y7r6X",
+      "EoHK5VNgYisSRDcqSkBPoQTGsGroBnNR4xiWWWo8K3g5"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:06.314Z"
+  },
+  "Titan": {
+    "threshold": 3,
+    "members": [
+      "VmroV2xtoj3yP487d2qt9kjCVn4BcphEtvSMjfGpfgN",
+      "2GafqBhxF23cmRHN2cSHHoUcHZ1iDqzEn8Ayrkj34Csn",
+      "3TPczDPBfQpA6KiHSwYC51Qwzn1DJApVwqCK88zB69Au",
+      "3wLd4AUHQRB9DJrgP8Qwfp5fMh2SyAqj148d7qbUq8Lb",
+      "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk",
+      "DGLjmi6goG6yhaknmyurkfLas33BrJ2yuPhNndUsgTQT",
+      "EDae3XapMwETGSH4HrggdiKDSpX1bPjaRH2HoEWzkLT2",
+      "H93FtQBKFib1nUDchwNLRspgVEYpUw17D4Wo2SsXY5HT"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:06.568Z"
+  },
+  "Solayer": {
+    "threshold": 3,
+    "members": [
+      "hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc",
+      "6eAxgG1KoXC6Q4YBdjptFmyfoWKNGYQEKT3sHoX7JWU8",
+      "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf",
+      "DB75TdZZ3cLgpPATEgXGgJSnH3AG552XeeoB2mf2fsKN",
+      "GjtMGFA81gyP5FRX5skKmwKRT3VV4LdhCJLexwyM4Hjd"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:06.827Z"
+  },
+  "Flash Trade": {
+    "threshold": 3,
+    "members": [
+      "PURmhzmixwasbbfe3Yy82i12LsPLLymEBBADEu74xES",
+      "2mNoXT7xpnpR2PVTArDYco5xE4jdk8yuWPTdXgjx6WEv",
+      "5bdzVTJHC5jV6qgzcXPifEi3DsX7krjH9s82FDwGW9ui",
+      "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw",
+      "8RKb8uN1yvtim3vSFsLcAfjiFcRHbqMV9QxYVKV5NSrp",
+      "9NXhjBeYjkp4UkTR9xhkr2nHMKwSgxMQZSNZ3syqEuWt",
+      "DUDssoE15XShhrJC7jJE3QhyzL7s4TnYogePVzswdR2R"
+    ],
+    "timeLock": 3600,
+    "lastChecked": "2026-04-09T16:01:07.085Z"
+  },
+  "Wick": {
+    "threshold": 3,
+    "members": [
+      "21kF2n1WdJYaTMmwtMfWHydLc3xPjMjRUHBiUcW7iCxM",
+      "28eDFqNQ15VB745zXVSPJVSRZWD7sws2Hy8VHq5pfazu",
+      "6EzEruZ8uKHTRnjQktQsn6U5cimfbUCGGmTEycnmnxPW",
+      "6sY2nhNfW2UoVa9qmLT5h5oNj423JuDa5LKaTwD3JAop",
+      "9RkMtrs93JspVYaDjm1SWWj6zE3xVP5VN26vEMDAVkAf"
+    ],
+    "timeLock": 86400,
+    "lastChecked": "2026-04-09T16:01:07.335Z"
+  },
+  "Sanctum": {
+    "threshold": 6,
+    "members": [
+      "CAkAPXiA99rMM7rop72odftsaq2TjsdWYd5VVoSC5Eo7",
+      "5fDWgBUrNQcnScW96ksESeGLgzSw2xUNHxY65zUsDsVw",
+      "Apv4aSHiQCiRZA71AJrbzv1gyDjw8F4P4ovysjLzYgY3",
+      "HtZpYc7xauRodT8xrMxrKYzFYNebUugjr94jN9HrwCPg",
+      "2AFoXEzBf5RwyUaT8Y7fQ6MKYBzCnXmuLtPbW7B9kR78",
+      "6MZP2PPaBmczZmYyg1BxMDHGqAo25HZAquBzhwMPSNY1",
+      "75AYCWbx9nHQvHgubXWxM5wnhXxNXLeq1Jhpp9hRs29M",
+      "4bnGZL2oLaLPcXkUMFMhnqf4de2YgD98DEALg2GKdUo9",
+      "4wCieA3hWNH3R78aHPEUfce8vAgkcAH7zugJ6ZnCD644",
+      "F9rScNGhj2oXELQpsgAUBwQa9t4Y6PbLVyrLREdP1TS7",
+      "114kXejfrvj55UX742RD4voFo8cKB8sprnN5GNw1JX1"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:07.592Z"
+  },
+  "Jupiter Agg": {
+    "threshold": 4,
+    "members": [
+      "3uEKETFgKZznyAyCCwHxL4CTSqYVREZoevFEqo1tReir",
+      "3zgMHh34bzwnrBGreCHggooidYaSuVPttLTngG46uwej",
+      "HCdbfJkPmzK43bgqVMMuh64so7V4Vu8XoVABsS3QuJF6",
+      "4xiy1ZrK8JrsUT96xYHG8sXgM7PrQeXNEXBSgnqBK2cD",
+      "FMtNYgAgkcRb21sApVftPer5AZzEbAKyS3m8niuSTKJz",
+      "6jfwLneNqmc398Y6nXFAdPyRU6p7t7AkJv1tQhHYNvtF",
+      "137sqWDXSY3mNPX6YyGEtPG3ZRHBnUnY9kXtPefK75Yb",
+      "137sqWDXSY3mNPX6YyGEtPG3ZRHBnUnY9kXtPefK6nHd"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:07.845Z"
+  },
+  "Raydium": {
+    "threshold": 2,
+    "members": [
+      "He658aXxsbzqjgQVgfXLnPUzRvgQMh68x95f9pWkB2i5",
+      "DVFhSFBWKdg6TRtEkXJ4Lm8TPrBV5Z2DZtGVZMNh7mTB",
+      "11VN4qhMpk9nS3mtxdA57QwMLE7iShiNkJsgxmo5uTy"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:08.098Z"
+  },
+  "Tensor": {
+    "threshold": 4,
+    "members": [
+      "FfgxfAvHoFBsd7gG5xQZRhcKcsvzBUv31qEmUfME7gic",
+      "8ss4K8jCJm4dwdKJrJ2hKVsoL5fZMQCFGsk1gHngpzhh",
+      "3k8dvMdu1barAzJzrqqTmSqaCb5wjSgqc6FUZ9ZgA3rV",
+      "22hP9Sifdir3tgZWabFmRrW9Be5KQmShbftGSQR4L42G",
+      "4eUx8PBKP2jmnoFzugtZ9gehXGeNQEE1rqX9BGBXUub5",
+      "5SzEzEgxwFwMXx2ZDk2LzP12TXb9jMNKodmzJUkGjNaZ",
+      "yNuVKb3Y6g4q2aiqYLEVdsKMDThNVcC882shVg7SeZK",
+      "yNuVKb3Y6g4q2aiqYLEVdsKMDThNVcC882shVg7SeZK",
+      "yNuVKb3Y6g4q2aiqYLEVdsKMDThNVcC882shVg7SKfu"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:08.353Z"
+  },
+  "Phoenix DEX": {
+    "threshold": 2,
+    "members": [
+      "AXyhQbniLEM8tSVh2uRgQTfg7eV87iV66S9zoUqBdkeY",
+      "FDNsc9VeXnQPS1T6snFoeQHccyGntgfYkTLxGRjY7btJ",
+      "9JsVLiqmtzZsSU9ShCXouasTTCVuN4yAUXUhqNHiQgKG",
+      "9JsVLiqmtzZsSU9ShCXouasTTCVuN4yAUXUhqNHiQgKG",
+      "9JsVLiqmtzZsSU9ShCXouasTTCVuN4yAUXUhqNHiQMyR"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:08.609Z"
+  },
+  "Meteora": {
+    "threshold": 4,
+    "members": [
+      "4aL77sN81JDt7bfLCqmhDe8e7s347ihYmz1zacGeBabV",
+      "73zRVNZL6XGm2US4MAYR3CBeMi75hbWiTCHPLLa6sz2F",
+      "9bJYaqfcfcvi1KEQAVF9UntMsS6Tc1VSc9zM81ugpygg",
+      "4xiy1ZrK8JrsUT96xYHG8sXgM7PrQeXNEXBSgnqBK36Z",
+      "6BqXX22gxczWCe8ArS3WTkpxrZj3UmQKa7MZADW9jxy8",
+      "578v8wFm6FjRb1Cfa7zPBBxZDmzGD3SDr2BXzNuSTwXj",
+      "5uB2wCDNyRYcAzDKpiERDjrbD5zSWoxsEDKx3y8oi4iH",
+      "5uB2wCDNyRYcAzDKpiERDjrbD5zSWoxsEDKx3y8ohm6o"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:08.865Z"
+  },
+  "Parcl": {
+    "threshold": 3,
+    "members": [
+      "4Wj1ZwaJWgmFhjHsggFRyfiyaB85xceEjmcfhgumZ8bF",
+      "CtrXUTAA7UqDajTGNfnYf7eQs8X4JuyBmtodf6oQyk4e",
+      "G8drWN5snM3LwprfLLQXg9KvZxFzJSiu7TGwAdnFRbMb",
+      "6CEXJtczjVTycp5RLigxqcTETGfm4htktNbhdCq3Qt8t",
+      "FSJWFdvnUkcVgtFDwEVTkojnZjz6bHnEEG8YTiA1giw9"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:09.134Z"
+  },
+  "Marinade": {
+    "threshold": 6,
+    "members": [
+      "8DzsCSvbvBDYxGB4ytNF698zi6Dyo9dUBVRNjZQFHSUt",
+      "3UnpVHnaKtq3v6pBxsueocPBX7FQdsSTHZ8UittTDUpV",
+      "CoxYLqf6zUrkTvWfVSHbxdjswrDEaNnciuGtzWniFzu5",
+      "CZ3CfmeqRcjQ5iAC1iQ5dhMjzpnnzveZZp2SbFKDwUZE",
+      "6PVyHxZjUDEDB36Cz6uGTPBAKSx4gzuyvCE9xeGqdWVS",
+      "AsSxcz9NgbGsvBSJTjcvrJbbs4rNF7AdN7zeboR3o5Xs",
+      "8HVYKgq2PA4SCDuPZSfHBH1aupTBJYPVru6kq3UfuSX9",
+      "ELg5GDPLMKmyo7vTfnYE5aiDEovcCxqhedxp71tQGrFe",
+      "B7wXBXU8kWdBY958hstHKC9NuH2EaHoiY7GEZtWQ4bR8",
+      "GDmSxpPzLkfxxr6dHLNRnCoYVGzvgc41tozkrr4pHTjB",
+      "6zBGXPrrotjM6sQ3dSNbDVh5W7dwJ8h1iqK84MHPBKkY",
+      "3LPh9LN88kxSe3shxLZ2R4jiNmHh2U2F9h9TmVKjc18P",
+      "5ygHFBRddFh7v4PpqquQu2yeRdxWvN1PhyjyzfENdUVh"
+    ],
+    "timeLock": 0,
+    "lastChecked": "2026-04-09T16:01:09.394Z"
+  },
+  "Save (Solend)": {
+    "threshold": 0,
+    "members": [],
+    "timeLock": 0,
+    "programAuthorities": {},
+    "lastChecked": "2026-04-09T16:54:43.079Z"
+  },
+  "Zebec": {
+    "threshold": 0,
+    "members": [],
+    "timeLock": 0,
+    "programAuthorities": {
+      "Streaming": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h"
+    },
+    "lastChecked": "2026-04-09T16:54:43.433Z"
+  },
+  "_integrity": {
+    "scannedAt": "2026-04-20T19:14:42.170Z",
+    "dvnMultisigs": [
+      {
+        "name": "LayerZero Labs",
+        "address": "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+        "quorum": 2,
+        "signerCount": 3
+      },
+      {
+        "name": "Nethermind",
+        "address": "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab",
+        "quorum": 1,
+        "signerCount": 4
+      },
+      {
+        "name": "Google",
+        "address": "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+        "quorum": 2,
+        "signerCount": 3
+      },
+      {
+        "name": "Horizen",
+        "address": "HR9NQKK1ynW9NzgdM37dU5CBtqRHTukmbMKS7qkwSkHX",
+        "quorum": 2,
+        "signerCount": 2
+      },
+      {
+        "name": "Deutsche Telekom",
+        "address": "FxFxe8j7e2xgpP9bw8LUehmz7DoQXaNFadJMEUKwBcRs",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Luganodes",
+        "address": "41QAdzUraTcvk1P2B6fcs5nQ4EeEKEGnQy5EPpCQ5AdX",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Frax",
+        "address": "6YB63FDuyYLt5gnJeiVmYRE4c6tFid5SrBZzMLQFfexm",
+        "quorum": 2,
+        "signerCount": 3
+      },
+      {
+        "name": "Ondo",
+        "address": "D1A8NPP4S5RX5jFLprNQGytLFCrV9ZiaFykLmat4WGA7",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Ondo Staging",
+        "address": "4npJTMgVbLn2jAiLGg7pNEBv4RjQ5HScjLeSQPZAdJdq",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Canary",
+        "address": "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "USDT0",
+        "address": "JBt34GkVns6VSoP2dCPpViW28eqE4GNgKaoZPRP63wZs",
+        "quorum": 1,
+        "signerCount": 2
+      },
+      {
+        "name": "Brale",
+        "address": "4EsNicsBtbNE2ZQqB24DVjjqgKh1sWjSKNcdxEgD5d8b",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Wyoming",
+        "address": "6bdMfqghzhFpMsbrfy6qiyXnGkYGcamn3WYxeKx8Muik",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "MantleCross",
+        "address": "AKPKvgSvx4XocG7rMBv3qycKpZWaSCE4gZUCaTZp3J5W",
+        "quorum": 2,
+        "signerCount": 2
+      },
+      {
+        "name": "P2P",
+        "address": "29EKzmCscUg8mf4f5uskwMqvu2SXM8hKF1gWi1cCBoKT",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "B-Harvest",
+        "address": "F8tr3GMivioYFEvJAR2WW5CKjPtgMQtM5CEuSjjVkjWL",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Nansen",
+        "address": "Fn8yyjaLbqw9FZyyLaTkb8o8RWp3vztxNChtPxcV1cLV",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Paxos",
+        "address": "4HxXbLv37XrivKukEbofybpHr7C8HUGJzd4B5T9USpGh",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Worldpay",
+        "address": "SzcKuPbuMGwMqd9pWTRQDEyL3qZT8YJU4Q5DY9M2aee",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "Mantle Bank",
+        "address": "GfG8FCkhxmkgXd2yZQbogUV669jX5t9RK87jL2bWBkKK",
+        "quorum": 2,
+        "signerCount": 2
+      },
+      {
+        "name": "Fidelity",
+        "address": "AQGjhJcqEVZP5WHd3NhidpbL743eiTti2Mxgc6XZeKPV",
+        "quorum": 1,
+        "signerCount": 1
+      },
+      {
+        "name": "P-OPS",
+        "address": "CratyHhkQXbRAgck3sooXFYbBADsCtjoxhjVbPKAAhK2",
+        "quorum": 1,
+        "signerCount": 1
+      }
+    ],
+    "tokenAuthorities": [
+      {
+        "protocol": "SolvBTC",
+        "symbol": "SolvBTC",
+        "mint": "SoLvHDFVstC74Jr9eNLTDoG4goSUsn1RENmjNtFKZvW",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "Fy1qxnjucTtbLgniZRz8UmdPXet6YyxXCz4HkDz5fBKs",
+          "type": "spl-multisig",
+          "m": 1,
+          "n": 2
+        },
+        "freezeAuthority": {
+          "address": "4cPFyaxcDbXozAHtQB2s6Z4yHuCJCdwEHeNnWdmRLCLh",
+          "type": "single-keypair"
+        }
+      },
+      {
+        "protocol": "zBTC",
+        "symbol": "zBTC",
+        "mint": "zBTCug3er3tLyffELcvDNrKkCymbPWysGcWihESYfLg",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "C82azkvqxFNBx5x14Cm6bgQZbLnVV79THeMCYKWW2w1X",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "zenBTC",
+        "symbol": "zenBTC",
+        "mint": "9hX59xHHnaZXLU6quvm5uGY2iDiT3jczaReHy6A6TYKw",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "E7AxNdStGFka5JQvpbYZEitr83idsy135ccHHiH5E7Bk",
+          "type": "spl-multisig",
+          "m": 1,
+          "n": 2
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "xBTC",
+        "symbol": "xBTC",
+        "mint": "CtzPWv73Sn1dMGVU3ZtLv9yWSyUAanBni19YWDaznnkn",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "2hkCcczkANNHGxi3tMgtwsMHqQysEkBXmzpDXdqUBKWE",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": "CjoV5B96reuCfPh2rRK11G1QptG97jZdyZArTn3EN1Mj",
+          "type": "single-keypair"
+        }
+      },
+      {
+        "protocol": "tBTC",
+        "symbol": "tBTC",
+        "mint": "6DNSN2BJsaPFdFFc1zP37kkeNe4Usc1Sqkzr9C9vPWcU",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "2PfR3xUdMS8xHUhE9H47dy2Ro3Ww9agP5GdnNoKj3Vtf",
+          "type": "program-pda"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "cbBTC",
+        "symbol": "cbBTC",
+        "mint": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "CTQE6PMesbH4szKR9Nk5moj9WWUr9MVGP734wYX9wy3p",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": "DSFAkPhfrSR95J9oq9Sh8rUetbj5vgFmwiSuHw6rAVnz",
+          "type": "single-keypair"
+        }
+      },
+      {
+        "protocol": "Jito",
+        "symbol": "JitoSOL",
+        "mint": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "6iQKfEyhr3bZMotVkW6beNZz5CPAkiwvgV2CTje9pVSS",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Marinade",
+        "symbol": "mSOL",
+        "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "3JLPCS1qM2zRw3Dp6V4hZnYHd4toMNPkNesXdX9tg6KM",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "BlazeStake",
+        "symbol": "bSOL",
+        "mint": "bSo13r4TkiE4KumL71LsHTPpL2euBYLFx6h9HP3piy1",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "6WecYymEARvjG5ZyqkrVQ6YkhPfujNzWpSPwNKXHCbV2",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Sanctum",
+        "symbol": "INF",
+        "mint": "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "AYhux5gJzCoeoc1PoJ1VxwPDe22RwcvpHviLDD1oCGvW",
+          "type": "program-pda"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Jupiter Staked SOL",
+        "symbol": "JupSOL",
+        "mint": "jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "EMjuABxELpYWYEwjkKmQKBNCwdaFAy4QYAs6W9bDQDNw",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Circle",
+        "symbol": "USDC",
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG",
+          "type": "spl-multisig",
+          "m": 2,
+          "n": 4
+        },
+        "freezeAuthority": {
+          "address": "7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar",
+          "type": "spl-multisig",
+          "m": 2,
+          "n": 4
+        }
+      },
+      {
+        "protocol": "Tether",
+        "symbol": "USDT",
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi",
+          "type": "spl-multisig",
+          "m": 2,
+          "n": 3
+        },
+        "freezeAuthority": {
+          "address": "Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi",
+          "type": "spl-multisig",
+          "m": 2,
+          "n": 3
+        }
+      },
+      {
+        "protocol": "PayPal",
+        "symbol": "PYUSD",
+        "mint": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+        "isToken2022": true,
+        "tokenProgram": "token-2022",
+        "extensions": [
+          3,
+          12,
+          1,
+          4,
+          16,
+          14,
+          18,
+          19
+        ],
+        "transferHook": {
+          "authority": "2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk",
+          "programId": "11111111111111111111111111111111",
+          "isActive": false
+        },
+        "hasTransferHookExtension": true,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "8Jornc27vtAYPkwDzsZVgLQchAYyC8nD7aCNPCDV8Qk2",
+          "type": "spl-multisig",
+          "m": 1,
+          "n": 4
+        },
+        "freezeAuthority": {
+          "address": "2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk",
+          "type": "single-keypair"
+        }
+      },
+      {
+        "protocol": "Sky",
+        "symbol": "USDS",
+        "mint": "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "BEvTHkTyXooyaJzP8egDUC7WQK8cyRrq5WvERZNWhuah",
+          "type": "program-pda"
+        },
+        "freezeAuthority": {
+          "address": "AYPtjx4Hc8us1ikULUedkmZ3wtiD6tmL7gK3qe4V3oHt",
+          "type": "single-keypair"
+        }
+      },
+      {
+        "protocol": "Global Dollar Network",
+        "symbol": "USDG",
+        "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+        "isToken2022": true,
+        "tokenProgram": "token-2022",
+        "extensions": [
+          3,
+          12,
+          1,
+          4,
+          16,
+          14,
+          18,
+          19
+        ],
+        "transferHook": {
+          "authority": "2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk",
+          "programId": "11111111111111111111111111111111",
+          "isActive": false
+        },
+        "hasTransferHookExtension": true,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "3YJL8sesK3ooPpJddypvFUhCvnvaQ1oF8This4J3bhxR",
+          "type": "spl-multisig",
+          "m": 1,
+          "n": 4
+        },
+        "freezeAuthority": {
+          "address": "2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk",
+          "type": "single-keypair"
+        }
+      },
+      {
+        "protocol": "Jupiter USD",
+        "symbol": "JupUSD",
+        "mint": "JuprjznTrTSp2UFa3ZBUFgwdAmtZCq4MQCwysN55USD",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "CkzLnD9r4d4ZZofsgNVo2VNunxDmte5YJ4vfAgMfBZNA",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": "CkzLnD9r4d4ZZofsgNVo2VNunxDmte5YJ4vfAgMfBZNA",
+          "type": "single-keypair"
+        }
+      },
+      {
+        "protocol": "Huma Finance",
+        "symbol": "HUMA",
+        "mint": "HUMA1821qVDKta3u2ovmfDQeW2fSQouSKE8fkF44wvGw",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": null,
+          "type": "null"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Jupiter",
+        "symbol": "JUP",
+        "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": null,
+          "type": "null"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Drift",
+        "symbol": "DRIFT",
+        "mint": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": null,
+          "type": "null"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Orca",
+        "symbol": "ORCA",
+        "mint": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+          "type": "single-keypair"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Raydium",
+        "symbol": "RAY",
+        "mint": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": null,
+          "type": "null"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "Pyth",
+        "symbol": "PYTH",
+        "mint": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": null,
+          "type": "null"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "LayerZero (WIF)",
+        "symbol": "$WIF",
+        "mint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": null,
+          "type": "null"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "LayerZero (TRUMP)",
+        "symbol": "TRUMP",
+        "mint": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": null,
+          "type": "null"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "LayerZero (MELANIA)",
+        "symbol": "MELANIA",
+        "mint": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": null,
+          "type": "null"
+        },
+        "freezeAuthority": {
+          "address": null,
+          "type": "null"
+        }
+      },
+      {
+        "protocol": "LayerZero (PLUME)",
+        "symbol": "PLUME",
+        "mint": "C7Xr4VM6H3W9HHpVep96Hrknkxv2c33kcBTi6e9ZjphW",
+        "isToken2022": false,
+        "tokenProgram": "spl-token",
+        "extensions": [],
+        "transferHook": null,
+        "hasTransferHookExtension": false,
+        "hasActiveTransferHook": false,
+        "hasTransferHook": false,
+        "mintAuthority": {
+          "address": "9kneLSBsykLzbuYEVZmBEMNV53QqCxKwJJu3iFd6JvJk",
+          "type": "program-pda"
+        },
+        "freezeAuthority": {
+          "address": "GrvPpMeeYmT7hzfSp1UUatma2orhUE6mg7NWjRKvhmwZ",
+          "type": "single-keypair"
+        }
+      }
+    ],
+    "oftConfigs": [
+      {
+        "symbol": "DOGL",
+        "name": "DogLibre",
+        "oapp": "Fyh97C9bg2vBku6496CB4BesbDdU1XKXVW45X51cmbHJ",
+        "isAdapter": false,
+        "chainCount": 3,
+        "criticalChainCount": 3,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          },
+          {
+            "chain": "BNB",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          },
+          {
+            "chain": "Base",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "RECORD",
+        "name": "RECORD",
+        "oapp": "JAKgTMMQBJJ8zQBDYnpv3jbjDywzQ9GD5zpVNPRHES6b",
+        "isAdapter": false,
+        "chainCount": 1,
+        "criticalChainCount": 1,
+        "chains": [
+          {
+            "chain": "Base",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "SEI",
+        "name": "SEI",
+        "oapp": "D84rGDZpMcTAtjVpL6qj7VZLGeapsp6jJtR8UQjAm2P9",
+        "isAdapter": false,
+        "chainCount": 1,
+        "criticalChainCount": 0,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "(u6JEU)",
+        "name": "(no name)",
+        "oapp": "F1aSg38wNj5PF4KB5FLdxpXWSL4GgVEprVsnRRLB8tfE",
+        "isAdapter": false,
+        "chainCount": 1,
+        "criticalChainCount": 1,
+        "chains": [
+          {
+            "chain": "BNB",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "(u6MK2)",
+        "name": "(no name)",
+        "oapp": "GY1znQCTP6fx6D8FM4sm1uXnKdmNoUMUMSKcALAQhk6r",
+        "isAdapter": false,
+        "chainCount": 3,
+        "criticalChainCount": 0,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            }
+          },
+          {
+            "chain": "BNB",
+            "send": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            }
+          },
+          {
+            "chain": "Base",
+            "send": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "DOGL",
+        "name": "DogLibre",
+        "oapp": "5amawQCbpFfQPgoV8sY8gcttWfEhtsnLgNJAKwHnC7HK",
+        "isAdapter": false,
+        "chainCount": 1,
+        "criticalChainCount": 1,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "DOGL",
+        "name": "DogLibre",
+        "oapp": "DvurZtM1aBQ6Ak34yF7H5Gp4hNQZKorceJMQo2PaoqEM",
+        "isAdapter": false,
+        "chainCount": 3,
+        "criticalChainCount": 3,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          },
+          {
+            "chain": "BNB",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          },
+          {
+            "chain": "Base",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "CARV",
+        "name": "CARV",
+        "oapp": "B5rkCehYe9DE7XJjTsSnRWd9ST8Xhv9DL5YfQ4HVHmSN",
+        "isAdapter": false,
+        "chainCount": 2,
+        "criticalChainCount": 0,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 2,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 2,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            }
+          },
+          {
+            "chain": "Arbitrum",
+            "send": {
+              "requiredDvnCount": 2,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 2,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "(uAGGP)",
+        "name": "(no name)",
+        "oapp": "5Nw6pPJzjy7bhwiKNhC6mEmynA6kc4fJ58cuinYBeG5Q",
+        "isAdapter": false,
+        "chainCount": 1,
+        "criticalChainCount": 1,
+        "chains": [
+          {
+            "chain": "Arbitrum",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "PLUME",
+        "name": "Plume",
+        "oapp": "9kneLSBsykLzbuYEVZmBEMNV53QqCxKwJJu3iFd6JvJk",
+        "isAdapter": false,
+        "chainCount": 1,
+        "criticalChainCount": 1,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "DOGL",
+        "name": "DogLibre",
+        "oapp": "4wr6ihmprrhjSbFa3u7RGi2NkJ7mEhJJTn5g1sMPkoKW",
+        "isAdapter": false,
+        "chainCount": 2,
+        "criticalChainCount": 0,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            }
+          },
+          {
+            "chain": "Base",
+            "send": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 3,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "(uFHPM)",
+        "name": "(no name)",
+        "oapp": "HPDNXPduoiUhRyzx5RRMsmRpjdLqKRZHpozmwSxUL4gG",
+        "isAdapter": false,
+        "chainCount": 2,
+        "criticalChainCount": 2,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          },
+          {
+            "chain": "Arbitrum",
+            "send": {
+              "requiredDvnCount": 2,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+                "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "(uFZXJ)",
+        "name": "(no name)",
+        "oapp": "BKqgX75oSCzUaAijqXRFZi9PerAPcmYYyUs98fbT5rej",
+        "isAdapter": false,
+        "chainCount": 1,
+        "criticalChainCount": 1,
+        "chains": [
+          {
+            "chain": "Arbitrum",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "DOGL",
+        "name": "DogLibre",
+        "oapp": "2URsuog9qS2dD6Fn6s2eTuq7TLTn8jRtZ9fS7krALzPh",
+        "isAdapter": false,
+        "chainCount": 3,
+        "criticalChainCount": 3,
+        "chains": [
+          {
+            "chain": "Ethereum",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          },
+          {
+            "chain": "BNB",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          },
+          {
+            "chain": "Base",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "symbol": "RECORD",
+        "name": "RECORD",
+        "oapp": "3fBhFTKnYDBy7CrvLbjKVCzTLCKeDzKtUVVcGr1esatN",
+        "isAdapter": false,
+        "chainCount": 1,
+        "criticalChainCount": 1,
+        "chains": [
+          {
+            "chain": "Base",
+            "send": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            },
+            "receive": {
+              "requiredDvnCount": 1,
+              "optionalDvnCount": 0,
+              "requiredDvns": [
+                "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "_activityLog": [
+    {
+      "date": "2025-06-19",
+      "timestamp": "2026-04-30T08:37:52.077Z",
+      "protocol": "Huma",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-19",
+      "timestamp": "2026-04-30T08:37:52.079Z",
+      "protocol": "Huma",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-19",
+      "timestamp": "2026-04-30T08:37:52.080Z",
+      "protocol": "Huma",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-06",
+      "timestamp": "2026-04-30T08:37:52.081Z",
+      "protocol": "Huma",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-05-06",
+      "timestamp": "2026-04-30T08:37:52.082Z",
+      "protocol": "Huma",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-17",
+      "timestamp": "2026-04-30T08:37:53.471Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-17",
+      "timestamp": "2026-04-30T08:37:53.472Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-17",
+      "timestamp": "2026-04-30T08:37:53.474Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-16",
+      "timestamp": "2026-04-30T08:37:53.475Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-16",
+      "timestamp": "2026-04-30T08:37:53.477Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-16",
+      "timestamp": "2026-04-30T08:37:53.478Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-16",
+      "timestamp": "2026-04-30T08:37:53.480Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-14",
+      "timestamp": "2026-04-30T08:37:53.481Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-14",
+      "timestamp": "2026-04-30T08:37:53.482Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-14",
+      "timestamp": "2026-04-30T08:37:53.484Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-14",
+      "timestamp": "2026-04-30T08:37:53.485Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-14",
+      "timestamp": "2026-04-30T08:37:53.487Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-14",
+      "timestamp": "2026-04-30T08:37:53.489Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-11",
+      "timestamp": "2026-04-30T08:37:53.490Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-11",
+      "timestamp": "2026-04-30T08:37:53.492Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-08",
+      "timestamp": "2026-04-30T08:37:53.493Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-06",
+      "timestamp": "2026-04-30T08:37:53.495Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-02",
+      "timestamp": "2026-04-30T08:37:53.496Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-01",
+      "timestamp": "2026-04-30T08:37:53.498Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-01",
+      "timestamp": "2026-04-30T08:37:53.499Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-28",
+      "timestamp": "2026-04-30T08:37:53.501Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-06-27",
+      "timestamp": "2026-04-30T08:37:53.503Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-06-27",
+      "timestamp": "2026-04-30T08:37:53.505Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-06-24",
+      "timestamp": "2026-04-30T08:37:53.506Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-24",
+      "timestamp": "2026-04-30T08:37:53.508Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-24",
+      "timestamp": "2026-04-30T08:37:53.513Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-21",
+      "timestamp": "2026-04-30T08:37:53.515Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-21",
+      "timestamp": "2026-04-30T08:37:53.516Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-21",
+      "timestamp": "2026-04-30T08:37:53.518Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-21",
+      "timestamp": "2026-04-30T08:37:53.520Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-06-21",
+      "timestamp": "2026-04-30T08:37:53.521Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-20",
+      "timestamp": "2026-04-30T08:37:53.522Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-20",
+      "timestamp": "2026-04-30T08:37:53.523Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-20",
+      "timestamp": "2026-04-30T08:37:53.525Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-20",
+      "timestamp": "2026-04-30T08:37:53.526Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-20",
+      "timestamp": "2026-04-30T08:37:53.528Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-20",
+      "timestamp": "2026-04-30T08:37:53.529Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-06-20",
+      "timestamp": "2026-04-30T08:37:53.531Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-28",
+      "timestamp": "2026-04-30T08:37:54.743Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-26",
+      "timestamp": "2026-04-30T08:37:54.744Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.745Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.746Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.747Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.748Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.750Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.751Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.752Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.753Z",
+      "protocol": "Solstice",
+      "type": "ConfigProposal",
+      "detail": "CREATE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.754Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.755Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.757Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.758Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.760Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.762Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.763Z",
+      "protocol": "Solstice",
+      "type": "ConfigProposal",
+      "detail": "CREATE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.764Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.766Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.767Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.768Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.769Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.770Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.771Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-25",
+      "timestamp": "2026-04-30T08:37:54.772Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.774Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.775Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.776Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.777Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.779Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.780Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.781Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.783Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.785Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.786Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.787Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.788Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:37:54.789Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-18",
+      "timestamp": "2026-04-30T08:37:54.790Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-18",
+      "timestamp": "2026-04-30T08:37:54.792Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-11",
+      "timestamp": "2026-04-30T08:37:55.835Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-02",
+      "timestamp": "2026-04-30T08:37:55.841Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-02",
+      "timestamp": "2026-04-30T08:37:55.842Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-31",
+      "timestamp": "2026-04-30T08:37:55.843Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-28",
+      "timestamp": "2026-04-30T08:37:55.845Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-28",
+      "timestamp": "2026-04-30T08:37:55.846Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-18",
+      "timestamp": "2026-04-30T08:37:55.847Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-18",
+      "timestamp": "2026-04-30T08:37:55.849Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-18",
+      "timestamp": "2026-04-30T08:37:55.850Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:37:55.852Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:37:55.853Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:37:55.855Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:37:55.856Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:37:55.857Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:37:55.859Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:37:55.860Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:37:55.861Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-06",
+      "timestamp": "2026-04-30T08:37:55.862Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-06",
+      "timestamp": "2026-04-30T08:37:55.864Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-06",
+      "timestamp": "2026-04-30T08:37:55.865Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-04",
+      "timestamp": "2026-04-30T08:37:55.867Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-01",
+      "timestamp": "2026-04-30T08:37:55.868Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-01",
+      "timestamp": "2026-04-30T08:37:55.869Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-29",
+      "timestamp": "2026-04-30T08:37:55.871Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-29",
+      "timestamp": "2026-04-30T08:37:55.872Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-29",
+      "timestamp": "2026-04-30T08:37:55.873Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-29",
+      "timestamp": "2026-04-30T08:37:55.874Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-29",
+      "timestamp": "2026-04-30T08:37:55.876Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-28",
+      "timestamp": "2026-04-30T08:37:55.877Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-28",
+      "timestamp": "2026-04-30T08:37:55.878Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-28",
+      "timestamp": "2026-04-30T08:37:55.880Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-28",
+      "timestamp": "2026-04-30T08:37:55.882Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-28",
+      "timestamp": "2026-04-30T08:37:55.883Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-28",
+      "timestamp": "2026-04-30T08:37:55.885Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-27",
+      "timestamp": "2026-04-30T08:37:56.714Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-24",
+      "timestamp": "2026-04-30T08:37:56.716Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-21",
+      "timestamp": "2026-04-30T08:37:56.717Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-21",
+      "timestamp": "2026-04-30T08:37:56.719Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-13",
+      "timestamp": "2026-04-30T08:37:56.720Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-08",
+      "timestamp": "2026-04-30T08:37:56.722Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-07",
+      "timestamp": "2026-04-30T08:37:56.723Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-06",
+      "timestamp": "2026-04-30T08:37:56.725Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-02",
+      "timestamp": "2026-04-30T08:37:56.726Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-28",
+      "timestamp": "2026-04-30T08:37:56.727Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-28",
+      "timestamp": "2026-04-30T08:37:56.729Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-26",
+      "timestamp": "2026-04-30T08:37:56.730Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-26",
+      "timestamp": "2026-04-30T08:37:56.732Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-26",
+      "timestamp": "2026-04-30T08:37:56.733Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-24",
+      "timestamp": "2026-04-30T08:37:56.735Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-24",
+      "timestamp": "2026-04-30T08:37:56.738Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-23",
+      "timestamp": "2026-04-30T08:37:56.741Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-23",
+      "timestamp": "2026-04-30T08:37:56.743Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-18",
+      "timestamp": "2026-04-30T08:37:56.744Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-12",
+      "timestamp": "2026-04-30T08:37:56.745Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-11",
+      "timestamp": "2026-04-30T08:37:56.747Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-02-18",
+      "timestamp": "2026-04-30T08:37:57.538Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-09",
+      "timestamp": "2026-04-30T08:37:57.540Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-02-09",
+      "timestamp": "2026-04-30T08:37:57.541Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-02-09",
+      "timestamp": "2026-04-30T08:37:57.542Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-02-04",
+      "timestamp": "2026-04-30T08:37:57.543Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-01-28",
+      "timestamp": "2026-04-30T08:37:57.545Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-01-28",
+      "timestamp": "2026-04-30T08:37:57.546Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-01-05",
+      "timestamp": "2026-04-30T08:37:57.548Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-05",
+      "timestamp": "2026-04-30T08:37:57.549Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-01-05",
+      "timestamp": "2026-04-30T08:37:57.550Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-01-02",
+      "timestamp": "2026-04-30T08:37:57.552Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-01-02",
+      "timestamp": "2026-04-30T08:37:57.553Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-12-15",
+      "timestamp": "2026-04-30T08:37:57.554Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-12-15",
+      "timestamp": "2026-04-30T08:37:57.555Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-12-03",
+      "timestamp": "2026-04-30T08:37:57.556Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-11-28",
+      "timestamp": "2026-04-30T08:37:57.557Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-11-27",
+      "timestamp": "2026-04-30T08:37:57.558Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-11-24",
+      "timestamp": "2026-04-30T08:37:57.559Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-11-14",
+      "timestamp": "2026-04-30T08:37:57.560Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-11-14",
+      "timestamp": "2026-04-30T08:37:57.562Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-11-14",
+      "timestamp": "2026-04-30T08:37:57.563Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-31",
+      "timestamp": "2026-04-30T08:37:57.564Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-31",
+      "timestamp": "2026-04-30T08:37:57.566Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-31",
+      "timestamp": "2026-04-30T08:37:57.568Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-27",
+      "timestamp": "2026-04-30T08:37:58.801Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-22",
+      "timestamp": "2026-04-30T08:37:58.803Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-22",
+      "timestamp": "2026-04-30T08:37:58.804Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-14",
+      "timestamp": "2026-04-30T08:37:58.806Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-14",
+      "timestamp": "2026-04-30T08:37:58.807Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-06",
+      "timestamp": "2026-04-30T08:37:58.808Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:37:58.810Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:37:58.811Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-03-31",
+      "timestamp": "2026-04-30T08:37:58.813Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-03-18",
+      "timestamp": "2026-04-30T08:37:58.814Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-03-18",
+      "timestamp": "2026-04-30T08:37:58.816Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-03-18",
+      "timestamp": "2026-04-30T08:37:58.818Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-03-16",
+      "timestamp": "2026-04-30T08:37:58.819Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-02-25",
+      "timestamp": "2026-04-30T08:37:58.821Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-24",
+      "timestamp": "2026-04-30T08:37:58.823Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-02-24",
+      "timestamp": "2026-04-30T08:37:58.825Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2024-08-08",
+      "timestamp": "2026-04-30T08:38:00.005Z",
+      "protocol": "Switchboard",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-08-08",
+      "timestamp": "2026-04-30T08:38:00.007Z",
+      "protocol": "Switchboard",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-04-02",
+      "timestamp": "2026-04-30T08:38:00.009Z",
+      "protocol": "Switchboard",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-04-02",
+      "timestamp": "2026-04-30T08:38:00.011Z",
+      "protocol": "Switchboard",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-04-02",
+      "timestamp": "2026-04-30T08:38:00.012Z",
+      "protocol": "Switchboard",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-22",
+      "timestamp": "2026-04-30T08:38:00.728Z",
+      "protocol": "Switchboard",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-22",
+      "timestamp": "2026-04-30T08:38:00.730Z",
+      "protocol": "Switchboard",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-11-21",
+      "timestamp": "2026-04-30T08:38:02.385Z",
+      "protocol": "Titan",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-11-15",
+      "timestamp": "2026-04-30T08:38:02.386Z",
+      "protocol": "Titan",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-11-15",
+      "timestamp": "2026-04-30T08:38:02.388Z",
+      "protocol": "Titan",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-12-13",
+      "timestamp": "2026-04-30T08:38:03.223Z",
+      "protocol": "Titan",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-12-05",
+      "timestamp": "2026-04-30T08:38:03.228Z",
+      "protocol": "Titan",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-12-05",
+      "timestamp": "2026-04-30T08:38:03.230Z",
+      "protocol": "Titan",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-03-10",
+      "timestamp": "2026-04-30T08:38:04.785Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-03-06",
+      "timestamp": "2026-04-30T08:38:04.787Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-02-14",
+      "timestamp": "2026-04-30T08:38:04.788Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-02-14",
+      "timestamp": "2026-04-30T08:38:04.789Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-02-07",
+      "timestamp": "2026-04-30T08:38:04.791Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-01-06",
+      "timestamp": "2026-04-30T08:38:04.792Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-28",
+      "timestamp": "2026-04-30T08:38:05.588Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-05-26",
+      "timestamp": "2026-04-30T08:38:05.590Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-05-11",
+      "timestamp": "2026-04-30T08:38:05.592Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-10",
+      "timestamp": "2026-04-30T08:38:05.593Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-03-25",
+      "timestamp": "2026-04-30T08:38:05.595Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-22",
+      "timestamp": "2026-04-30T08:38:06.493Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-12",
+      "timestamp": "2026-04-30T08:38:06.494Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-06-11",
+      "timestamp": "2026-04-30T08:38:06.496Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-06-03",
+      "timestamp": "2026-04-30T08:38:06.497Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-12",
+      "timestamp": "2026-04-30T08:38:07.306Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-07-22",
+      "timestamp": "2026-04-30T08:38:07.307Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-09-03",
+      "timestamp": "2026-04-30T08:38:08.149Z",
+      "protocol": "Titan",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-10-13",
+      "timestamp": "2026-04-30T08:38:09.126Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-09-12",
+      "timestamp": "2026-04-30T08:38:09.128Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-13",
+      "timestamp": "2026-04-30T08:38:10.049Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-14",
+      "timestamp": "2026-04-30T08:38:11.498Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-14",
+      "timestamp": "2026-04-30T08:38:12.337Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-17",
+      "timestamp": "2026-04-30T08:38:13.122Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-14",
+      "timestamp": "2026-04-30T08:38:13.124Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-17",
+      "timestamp": "2026-04-30T08:38:14.662Z",
+      "protocol": "Titan",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-10-17",
+      "timestamp": "2026-04-30T08:38:15.870Z",
+      "protocol": "Solayer",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-05-15",
+      "timestamp": "2026-04-30T08:38:15.872Z",
+      "protocol": "Solayer",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-05-15",
+      "timestamp": "2026-04-30T08:38:15.873Z",
+      "protocol": "Solayer",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-05-15",
+      "timestamp": "2026-04-30T08:38:15.874Z",
+      "protocol": "Solayer",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-05-14",
+      "timestamp": "2026-04-30T08:38:15.876Z",
+      "protocol": "Solayer",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-05-14",
+      "timestamp": "2026-04-30T08:38:15.877Z",
+      "protocol": "Solayer",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-11-26",
+      "timestamp": "2026-04-30T08:38:17.090Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-31",
+      "timestamp": "2026-04-30T08:38:17.864Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-03",
+      "timestamp": "2026-04-30T08:38:18.597Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.599Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.600Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.601Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.602Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.603Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.604Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.605Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.606Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.607Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:18.609Z",
+      "protocol": "Flash Trade",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-03",
+      "timestamp": "2026-04-30T08:38:19.557Z",
+      "protocol": "Wick",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-09",
+      "timestamp": "2026-04-30T08:38:21.375Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-09",
+      "timestamp": "2026-04-30T08:38:21.376Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-01",
+      "timestamp": "2026-04-30T08:38:21.378Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-09",
+      "timestamp": "2026-04-30T08:38:21.379Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-08",
+      "timestamp": "2026-04-30T08:38:21.381Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-08",
+      "timestamp": "2026-04-30T08:38:21.383Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-08",
+      "timestamp": "2026-04-30T08:38:21.384Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-08",
+      "timestamp": "2026-04-30T08:38:21.386Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-04",
+      "timestamp": "2026-04-30T08:38:21.387Z",
+      "protocol": "Onre Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-04-03",
+      "timestamp": "2026-04-30T08:38:21.388Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-03",
+      "timestamp": "2026-04-30T08:38:21.390Z",
+      "protocol": "Onre Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-04-03",
+      "timestamp": "2026-04-30T08:38:21.391Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-01",
+      "timestamp": "2026-04-30T08:38:21.393Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-01",
+      "timestamp": "2026-04-30T08:38:21.394Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-03-27",
+      "timestamp": "2026-04-30T08:38:21.396Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-03-27",
+      "timestamp": "2026-04-30T08:38:21.397Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-03-18",
+      "timestamp": "2026-04-30T08:38:21.399Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-17",
+      "timestamp": "2026-04-30T08:38:22.334Z",
+      "protocol": "Onre Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-07-10",
+      "timestamp": "2026-04-30T08:38:22.336Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-06-09",
+      "timestamp": "2026-04-30T08:38:22.337Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-28",
+      "timestamp": "2026-04-30T08:38:22.338Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-23",
+      "timestamp": "2026-04-30T08:38:22.340Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-23",
+      "timestamp": "2026-04-30T08:38:22.342Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-09-01",
+      "timestamp": "2026-04-30T08:38:23.397Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-08-21",
+      "timestamp": "2026-04-30T08:38:23.398Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-08-21",
+      "timestamp": "2026-04-30T08:38:23.400Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-21",
+      "timestamp": "2026-04-30T08:38:23.401Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-20",
+      "timestamp": "2026-04-30T08:38:23.402Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-20",
+      "timestamp": "2026-04-30T08:38:23.404Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-18",
+      "timestamp": "2026-04-30T08:38:23.405Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-08-11",
+      "timestamp": "2026-04-30T08:38:23.407Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-10-08",
+      "timestamp": "2026-04-30T08:38:24.909Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-09-22",
+      "timestamp": "2026-04-30T08:38:24.910Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-09-19",
+      "timestamp": "2026-04-30T08:38:24.912Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-05",
+      "timestamp": "2026-04-30T08:38:25.763Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-10-27",
+      "timestamp": "2026-04-30T08:38:25.765Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-27",
+      "timestamp": "2026-04-30T08:38:25.766Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-27",
+      "timestamp": "2026-04-30T08:38:25.768Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-27",
+      "timestamp": "2026-04-30T08:38:25.769Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-10-27",
+      "timestamp": "2026-04-30T08:38:25.770Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-27",
+      "timestamp": "2026-04-30T08:38:25.773Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-20",
+      "timestamp": "2026-04-30T08:38:25.775Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-10-16",
+      "timestamp": "2026-04-30T08:38:25.776Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-26",
+      "timestamp": "2026-04-30T08:38:26.902Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-21",
+      "timestamp": "2026-04-30T08:38:26.903Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-20",
+      "timestamp": "2026-04-30T08:38:26.905Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-13",
+      "timestamp": "2026-04-30T08:38:26.906Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-11-13",
+      "timestamp": "2026-04-30T08:38:26.907Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-11",
+      "timestamp": "2026-04-30T08:38:28.276Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-12-11",
+      "timestamp": "2026-04-30T08:38:28.277Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-11",
+      "timestamp": "2026-04-30T08:38:28.279Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-29",
+      "timestamp": "2026-04-30T08:38:28.280Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-29",
+      "timestamp": "2026-04-30T08:38:28.281Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-12-22",
+      "timestamp": "2026-04-30T08:38:29.590Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-21",
+      "timestamp": "2026-04-30T08:38:29.592Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-16",
+      "timestamp": "2026-04-30T08:38:29.593Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-11",
+      "timestamp": "2026-04-30T08:38:29.594Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-11",
+      "timestamp": "2026-04-30T08:38:29.595Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-12-11",
+      "timestamp": "2026-04-30T08:38:29.596Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-12-11",
+      "timestamp": "2026-04-30T08:38:29.597Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-12-11",
+      "timestamp": "2026-04-30T08:38:29.598Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-21",
+      "timestamp": "2026-04-30T08:38:30.939Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-20",
+      "timestamp": "2026-04-30T08:38:30.941Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-12",
+      "timestamp": "2026-04-30T08:38:30.943Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-12",
+      "timestamp": "2026-04-30T08:38:30.944Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-12",
+      "timestamp": "2026-04-30T08:38:30.945Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-05",
+      "timestamp": "2026-04-30T08:38:30.947Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-05",
+      "timestamp": "2026-04-30T08:38:31.809Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-05",
+      "timestamp": "2026-04-30T08:38:31.810Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-04",
+      "timestamp": "2026-04-30T08:38:31.812Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-02",
+      "timestamp": "2026-04-30T08:38:31.813Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-27",
+      "timestamp": "2026-04-30T08:38:31.814Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-23",
+      "timestamp": "2026-04-30T08:38:32.703Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-21",
+      "timestamp": "2026-04-30T08:38:32.705Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-16",
+      "timestamp": "2026-04-30T08:38:32.706Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-24",
+      "timestamp": "2026-04-30T08:38:33.526Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-16",
+      "timestamp": "2026-04-30T08:38:33.528Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-16",
+      "timestamp": "2026-04-30T08:38:33.529Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-04",
+      "timestamp": "2026-04-30T08:38:33.530Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-03",
+      "timestamp": "2026-04-30T08:38:33.532Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-13",
+      "timestamp": "2026-04-30T08:38:34.407Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-08",
+      "timestamp": "2026-04-30T08:38:34.409Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-03",
+      "timestamp": "2026-04-30T08:38:34.410Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-03",
+      "timestamp": "2026-04-30T08:38:34.411Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-03",
+      "timestamp": "2026-04-30T08:38:34.413Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:34.415Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-02",
+      "timestamp": "2026-04-30T08:38:34.417Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-24",
+      "timestamp": "2026-04-30T08:38:35.738Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-21",
+      "timestamp": "2026-04-30T08:38:35.739Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-20",
+      "timestamp": "2026-04-30T08:38:35.741Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-20",
+      "timestamp": "2026-04-30T08:38:35.743Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-20",
+      "timestamp": "2026-04-30T08:38:35.745Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-20",
+      "timestamp": "2026-04-30T08:38:35.746Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-20",
+      "timestamp": "2026-04-30T08:38:35.747Z",
+      "protocol": "Onre Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-04-03",
+      "timestamp": "2026-04-30T08:38:37.808Z",
+      "protocol": "MetaDAO",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2024-08-29",
+      "timestamp": "2026-04-30T08:38:39.855Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2024-08-29",
+      "timestamp": "2026-04-30T08:38:39.856Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-03-03",
+      "timestamp": "2026-04-30T08:38:41.582Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-01-30",
+      "timestamp": "2026-04-30T08:38:41.584Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-01-30",
+      "timestamp": "2026-04-30T08:38:41.586Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-08",
+      "timestamp": "2026-04-30T08:38:42.513Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-04",
+      "timestamp": "2026-04-30T08:38:42.514Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-03",
+      "timestamp": "2026-04-30T08:38:42.516Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-08-15",
+      "timestamp": "2026-04-30T08:38:43.375Z",
+      "protocol": "MetaDAO",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-08-13",
+      "timestamp": "2026-04-30T08:38:43.377Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-08-09",
+      "timestamp": "2026-04-30T08:38:43.378Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:38:43.379Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-05",
+      "timestamp": "2026-04-30T08:38:43.381Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-07-24",
+      "timestamp": "2026-04-30T08:38:43.383Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-05",
+      "timestamp": "2026-04-30T08:38:43.384Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-06-04",
+      "timestamp": "2026-04-30T08:38:43.386Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-09-05",
+      "timestamp": "2026-04-30T08:38:44.426Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-09-01",
+      "timestamp": "2026-04-30T08:38:44.428Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-13",
+      "timestamp": "2026-04-30T08:38:45.346Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-13",
+      "timestamp": "2026-04-30T08:38:45.348Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-09",
+      "timestamp": "2026-04-30T08:38:45.350Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-10-06",
+      "timestamp": "2026-04-30T08:38:45.351Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-22",
+      "timestamp": "2026-04-30T08:38:46.368Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-12-07",
+      "timestamp": "2026-04-30T08:38:46.369Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-07",
+      "timestamp": "2026-04-30T08:38:46.371Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-01",
+      "timestamp": "2026-04-30T08:38:46.372Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-11-20",
+      "timestamp": "2026-04-30T08:38:46.373Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-06",
+      "timestamp": "2026-04-30T08:38:46.375Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-05",
+      "timestamp": "2026-04-30T08:38:46.376Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-07",
+      "timestamp": "2026-04-30T08:38:47.341Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-02",
+      "timestamp": "2026-04-30T08:38:47.343Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-07",
+      "timestamp": "2026-04-30T08:38:54.022Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-03",
+      "timestamp": "2026-04-30T08:38:54.024Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-30",
+      "timestamp": "2026-04-30T08:38:54.025Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-27",
+      "timestamp": "2026-04-30T08:38:54.027Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-26",
+      "timestamp": "2026-04-30T08:38:54.028Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-26",
+      "timestamp": "2026-04-30T08:38:54.030Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-22",
+      "timestamp": "2026-04-30T08:38:54.031Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-13",
+      "timestamp": "2026-04-30T08:38:55.081Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-13",
+      "timestamp": "2026-04-30T08:38:55.082Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-11",
+      "timestamp": "2026-04-30T08:38:55.981Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-11",
+      "timestamp": "2026-04-30T08:38:55.983Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-11",
+      "timestamp": "2026-04-30T08:38:55.985Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-10",
+      "timestamp": "2026-04-30T08:38:55.986Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-11",
+      "timestamp": "2026-04-30T08:38:56.813Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-10",
+      "timestamp": "2026-04-30T08:38:56.815Z",
+      "protocol": "MetaDAO",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-04-01",
+      "timestamp": "2026-04-30T08:38:56.816Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-01",
+      "timestamp": "2026-04-30T08:38:56.817Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-01",
+      "timestamp": "2026-04-30T08:38:56.819Z",
+      "protocol": "MetaDAO",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-11-07",
+      "timestamp": "2026-04-30T08:38:58.279Z",
+      "protocol": "Helium",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-30",
+      "timestamp": "2026-04-30T08:38:58.280Z",
+      "protocol": "Helium",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-24",
+      "timestamp": "2026-04-30T08:38:58.282Z",
+      "protocol": "Helium",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-17",
+      "timestamp": "2026-04-30T08:38:58.283Z",
+      "protocol": "Helium",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-17",
+      "timestamp": "2026-04-30T08:38:58.285Z",
+      "protocol": "Helium",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-15",
+      "timestamp": "2026-04-30T08:38:58.287Z",
+      "protocol": "Helium",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-15",
+      "timestamp": "2026-04-30T08:38:58.289Z",
+      "protocol": "Helium",
+      "type": "ConfigProposal",
+      "detail": "CREATE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-15",
+      "timestamp": "2026-04-30T08:39:03.025Z",
+      "protocol": "Voltr",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-14",
+      "timestamp": "2026-04-30T08:39:03.027Z",
+      "protocol": "Voltr",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-14",
+      "timestamp": "2026-04-30T08:39:03.029Z",
+      "protocol": "Voltr",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-14",
+      "timestamp": "2026-04-30T08:39:03.031Z",
+      "protocol": "Voltr",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-11-19",
+      "timestamp": "2026-04-30T08:39:04.123Z",
+      "protocol": "Tessera V",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-11-19",
+      "timestamp": "2026-04-30T08:39:04.125Z",
+      "protocol": "Tessera V",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-26",
+      "timestamp": "2026-04-30T08:39:05.207Z",
+      "protocol": "LayerZero OFT",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-26",
+      "timestamp": "2026-04-30T08:39:05.208Z",
+      "protocol": "LayerZero OFT",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-26",
+      "timestamp": "2026-04-30T08:39:05.210Z",
+      "protocol": "LayerZero OFT",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-26",
+      "timestamp": "2026-04-30T08:39:05.212Z",
+      "protocol": "LayerZero OFT",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-01-06",
+      "timestamp": "2026-04-30T08:39:06.552Z",
+      "protocol": "SolvBTC",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-31",
+      "timestamp": "2026-04-30T08:39:06.554Z",
+      "protocol": "SolvBTC",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-31",
+      "timestamp": "2026-04-30T08:39:06.555Z",
+      "protocol": "SolvBTC",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-31",
+      "timestamp": "2026-04-30T08:39:06.557Z",
+      "protocol": "SolvBTC",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-01-28",
+      "timestamp": "2026-04-30T08:39:10.571Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-01-26",
+      "timestamp": "2026-04-30T08:39:10.573Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-01-23",
+      "timestamp": "2026-04-30T08:39:10.575Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-03-06",
+      "timestamp": "2026-04-30T08:39:15.073Z",
+      "protocol": "GMSOL",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-19",
+      "timestamp": "2026-04-30T08:39:21.596Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-06",
+      "timestamp": "2026-04-30T08:39:21.597Z",
+      "protocol": "GMSOL",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-06-22",
+      "timestamp": "2026-04-30T08:39:23.777Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-06-29",
+      "timestamp": "2026-04-30T08:39:24.516Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-06-22",
+      "timestamp": "2026-04-30T08:39:24.518Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-04",
+      "timestamp": "2026-04-30T08:39:29.897Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-04",
+      "timestamp": "2026-04-30T08:39:29.898Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:39:32.588Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-08-07",
+      "timestamp": "2026-04-30T08:39:32.590Z",
+      "protocol": "GMSOL",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-21",
+      "timestamp": "2026-04-30T08:39:59.816Z",
+      "protocol": "Ore",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-21",
+      "timestamp": "2026-04-30T08:39:59.818Z",
+      "protocol": "Ore",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-03-29",
+      "timestamp": "2026-04-30T08:40:11.692Z",
+      "protocol": "GMSOL Deploy",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-03-29",
+      "timestamp": "2026-04-30T08:40:11.694Z",
+      "protocol": "GMSOL Deploy",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-03-27",
+      "timestamp": "2026-04-30T08:40:11.695Z",
+      "protocol": "GMSOL Deploy",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-01-24",
+      "timestamp": "2026-04-30T08:40:15.605Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-01-24",
+      "timestamp": "2026-04-30T08:40:15.608Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-01",
+      "timestamp": "2026-04-30T08:40:17.677Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-08-31",
+      "timestamp": "2026-04-30T08:40:17.679Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-07-31",
+      "timestamp": "2026-04-30T08:40:17.681Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-07-31",
+      "timestamp": "2026-04-30T08:40:17.682Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-09",
+      "timestamp": "2026-04-30T08:40:19.070Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigProposal",
+      "detail": "CREATE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-09",
+      "timestamp": "2026-04-30T08:40:19.072Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-07",
+      "timestamp": "2026-04-30T08:40:19.074Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-04",
+      "timestamp": "2026-04-30T08:40:19.075Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-01-04",
+      "timestamp": "2026-04-30T08:40:19.076Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-12-03",
+      "timestamp": "2026-04-30T08:40:19.078Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-11-01",
+      "timestamp": "2026-04-30T08:40:19.080Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-02-10",
+      "timestamp": "2026-04-30T08:40:20.046Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-02-09",
+      "timestamp": "2026-04-30T08:40:20.047Z",
+      "protocol": "DefiTuna",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-07",
+      "timestamp": "2026-04-30T08:40:20.949Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-03-07",
+      "timestamp": "2026-04-30T08:40:20.951Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-05-01",
+      "timestamp": "2026-05-02T12:28:15.548Z",
+      "protocol": "Hylo",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-05-01",
+      "timestamp": "2026-05-02T12:28:20.612Z",
+      "protocol": "Solstice",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-05-01",
+      "timestamp": "2026-05-02T12:28:20.613Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-05-01",
+      "timestamp": "2026-05-02T12:28:20.616Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-05-01",
+      "timestamp": "2026-05-02T12:28:20.617Z",
+      "protocol": "Solstice",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-05-07",
+      "timestamp": "2026-05-09T12:36:29.760Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-07",
+      "timestamp": "2026-05-09T12:36:29.762Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-07",
+      "timestamp": "2026-05-09T12:36:29.763Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-07",
+      "timestamp": "2026-05-09T12:36:29.765Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-07",
+      "timestamp": "2026-05-09T12:36:29.767Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-07",
+      "timestamp": "2026-05-09T12:36:29.769Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-03-18",
+      "timestamp": "2026-05-09T12:36:29.771Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-03-18",
+      "timestamp": "2026-05-09T12:36:29.774Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-02-19",
+      "timestamp": "2026-05-09T12:36:29.776Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-02-19",
+      "timestamp": "2026-05-09T12:36:29.778Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-02-19",
+      "timestamp": "2026-05-09T12:36:29.780Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-02-19",
+      "timestamp": "2026-05-09T12:36:29.782Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-02-19",
+      "timestamp": "2026-05-09T12:36:29.784Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-02-19",
+      "timestamp": "2026-05-09T12:36:29.787Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-06",
+      "timestamp": "2026-05-09T12:36:31.669Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-05-06",
+      "timestamp": "2026-05-09T12:36:34.036Z",
+      "protocol": "Exponent",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-05-04",
+      "timestamp": "2026-05-09T12:36:34.038Z",
+      "protocol": "Exponent",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-05-06",
+      "timestamp": "2026-05-09T12:36:36.098Z",
+      "protocol": "Hylo",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-05-06",
+      "timestamp": "2026-05-09T12:36:36.100Z",
+      "protocol": "Hylo",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-05-03",
+      "timestamp": "2026-05-09T12:36:36.103Z",
+      "protocol": "Hylo",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-05-03",
+      "timestamp": "2026-05-09T12:36:36.105Z",
+      "protocol": "Hylo",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-05-07",
+      "timestamp": "2026-05-09T12:36:38.068Z",
+      "protocol": "Orca",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-06",
+      "timestamp": "2026-05-09T12:36:41.925Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-11",
+      "timestamp": "2026-05-09T12:36:41.927Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-10",
+      "timestamp": "2026-05-09T12:36:41.930Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-10",
+      "timestamp": "2026-05-09T12:36:41.933Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-10",
+      "timestamp": "2026-05-09T12:36:41.935Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-10",
+      "timestamp": "2026-05-09T12:36:41.936Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-04-10",
+      "timestamp": "2026-05-09T12:36:41.939Z",
+      "protocol": "Huma Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-04-10",
+      "timestamp": "2026-05-09T12:36:41.941Z",
+      "protocol": "Huma Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-04-09",
+      "timestamp": "2026-05-09T12:36:41.943Z",
+      "protocol": "Huma Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-04-09",
+      "timestamp": "2026-05-09T12:36:41.945Z",
+      "protocol": "Huma Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-04-05",
+      "timestamp": "2026-05-09T12:36:41.948Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-05-06",
+      "timestamp": "2026-05-09T12:36:43.000Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-15",
+      "timestamp": "2026-05-09T12:36:43.002Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-13",
+      "timestamp": "2026-05-09T12:36:43.004Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-11",
+      "timestamp": "2026-05-09T12:36:43.006Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-10",
+      "timestamp": "2026-05-09T12:36:43.008Z",
+      "protocol": "Huma Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-10",
+      "timestamp": "2026-05-09T12:36:43.011Z",
+      "protocol": "Huma Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-04-10",
+      "timestamp": "2026-05-09T12:36:43.015Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-09",
+      "timestamp": "2026-05-09T12:36:43.018Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-04-08",
+      "timestamp": "2026-05-09T12:36:43.021Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2026-03-23",
+      "timestamp": "2026-05-09T12:36:43.024Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-10-23",
+      "timestamp": "2026-05-09T12:36:43.026Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-09-20",
+      "timestamp": "2026-05-09T12:36:43.029Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-08-20",
+      "timestamp": "2026-05-09T12:36:43.032Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-07-20",
+      "timestamp": "2026-05-09T12:36:43.034Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-06-19",
+      "timestamp": "2026-05-09T12:36:43.037Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-19",
+      "timestamp": "2026-05-09T12:36:43.039Z",
+      "protocol": "Huma Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-05-19",
+      "timestamp": "2026-05-09T12:36:43.041Z",
+      "protocol": "Huma Finance",
+      "type": "ConfigChange",
+      "detail": "EXECUTE_CONFIG_TRANSACTION"
+    },
+    {
+      "date": "2025-05-06",
+      "timestamp": "2026-05-09T12:36:43.044Z",
+      "protocol": "Huma Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2025-05-06",
+      "timestamp": "2026-05-09T12:36:43.046Z",
+      "protocol": "Huma Finance",
+      "type": "VaultTx",
+      "detail": "EXECUTE_VAULT_TRANSACTION"
+    },
+    {
+      "date": "2026-05-04",
+      "timestamp": "2026-05-09T12:36:48.443Z",
+      "protocol": "Onre Finance",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2026-05-08",
+      "timestamp": "2026-05-09T12:36:55.914Z",
+      "protocol": "DefiTuna",
+      "type": "SpendingLimit",
+      "detail": "USE_SPENDING_LIMIT"
+    },
+    {
+      "date": "2025-04-15",
+      "timestamp": "2026-05-09T12:37:26.594Z",
+      "protocol": "Raydium (treasury)",
+      "type": "ConfigProposal",
+      "detail": "CREATE_CONFIG"
+    },
+    {
+      "date": "2025-04-15",
+      "timestamp": "2026-05-09T12:37:26.597Z",
+      "protocol": "Raydium (treasury)",
+      "type": "ConfigProposal",
+      "detail": "CREATE_CONFIG"
+    },
+    {
+      "date": "2025-09-10",
+      "timestamp": "2026-05-09T12:37:30.972Z",
+      "protocol": "Raydium (treasury)",
+      "type": "ConfigProposal",
+      "detail": "CREATE_CONFIG"
+    },
+    {
+      "date": "2026-04-24",
+      "timestamp": "2026-05-09T12:37:34.468Z",
+      "protocol": "Raydium (treasury)",
+      "type": "ConfigProposal",
+      "detail": "CREATE_CONFIG"
+    }
+  ]
+}

@@ -1,0 +1,2383 @@
+{
+  "address": "hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc",
+  "sample": [
+    {
+      "sig": "iCqpYiC33SU3xAWemfMqC8GWGfA8zcFiLcZkD77NPYGeF15yuN4GWSzMH8ErV5SwcEdFtrKa9Siox5nbLCBsNuz",
+      "ts": 1775018537,
+      "date": "2026-04-01T04:42:17.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "HRS6JqXcFgWrWxaBPjhnThQiWmUMkE3GrYHWR86tbFqR transferred 8000 TYTAN to GKGd62H1xvs8rqBA6m99CTZub3CHYZjTAb5766pzbqyq.",
+      "feePayer": "HRS6JqXcFgWrWxaBPjhnThQiWmUMkE3GrYHWR86tbFqR",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "BnYKTZjTf42u5G9qqsBBzYCuGZT8CvrGL3JuRcLnpump",
+          "amount": 8000
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "HRS6JqXcFgWrWxaBPjhnThQiWmUMkE3GrYHWR86tbFqR",
+        "GKGd62H1xvs8rqBA6m99CTZub3CHYZjTAb5766pzbqyq",
+        "BefSNqAkWszu6ttfxzjHNFM1Bf8whhEALXHq7XtgQSkW",
+        "FvRKx98tsAzZxRXsSypdKVR4a1FGnBSiEed55udkn1pk",
+        "9tzVfeidmmHd21X9NxK1Soz7M6UvfEGtpTwdgkWw7qNN"
+      ]
+    },
+    {
+      "sig": "3w1pgJmrpzG9cgz9BDWrAi4yDYAA4g1VNFLhfb3hSe6Vr72ffw2DbyquMAKgjEhHyN4gPdKWS8XDWVw54hbGivG",
+      "ts": 1773157504,
+      "date": "2026-03-10T15:45:04.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "GPqGAgqtsoq7A91f6JLZDinhnBMkhFqQaufaCxLEufRm transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "GPqGAgqtsoq7A91f6JLZDinhnBMkhFqQaufaCxLEufRm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "43qoXhbseHrikUmxiovpaGKtrWYyxuoMcYZwdjt7ZyfVjdbTLSKSReEzrxB7xo8etQfych7SiLZ6ghvZttCuiajQ",
+      "ts": 1773149819,
+      "date": "2026-03-10T13:36:59.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "GPqGAgqtsoq7A91f6JLZDinhnBMkhFqQaufaCxLEufRm transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "GPqGAgqtsoq7A91f6JLZDinhnBMkhFqQaufaCxLEufRm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "geSkgXteajDSJ43wUT1gMToEPVbt1cuAm9qRaDs2BTSiTgbJZVSwkJLnyAZxRtpUeuLuiWDmxg13JcNYG2dKp7g",
+      "ts": 1773140946,
+      "date": "2026-03-10T11:09:06.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "GPqGAgqtsoq7A91f6JLZDinhnBMkhFqQaufaCxLEufRm transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "GPqGAgqtsoq7A91f6JLZDinhnBMkhFqQaufaCxLEufRm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4Ph549PfS9XS4N9C8WkDuyiSKsnHbHn6m6gSsbYtyB1DuEMnJZuhh8kNqTdxtUf95ARZuMA6kgzLYVFYiKdDU9VX",
+      "ts": 1773131571,
+      "date": "2026-03-10T08:32:51.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "GPqGAgqtsoq7A91f6JLZDinhnBMkhFqQaufaCxLEufRm transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "GPqGAgqtsoq7A91f6JLZDinhnBMkhFqQaufaCxLEufRm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "cq5MwJ532cKTQh5v4wAWNG8De9YVqBcUdPMk9HFAEefEsdLV5Td74hxTfQoeQdbzfVdYddQC7J9bjKUpyW56ixY",
+      "ts": 1771358185,
+      "date": "2026-02-17T19:56:25.000Z",
+      "type": "COMPRESSED_NFT_TRANSFER",
+      "source": "BUBBLEGUM",
+      "desc": "DHNrW4UBzGtdggPnZjHsWhZbpvWQ7ZEyu8ygUPZucaQ transferred a compressed nft.",
+      "feePayer": "DHNrW4UBzGtdggPnZjHsWhZbpvWQ7ZEyu8ygUPZucaQ",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "G8TtC9mnrXEdCauUHJoNfjXP2QvcJPWACG9i4VKk1NnWVEz2ez9qRLmD4WGo4ejizSprpyy8hep9cKYc7WHEpYw",
+      "ts": 1771111087,
+      "date": "2026-02-14T23:18:07.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5Z84wihCtpNP9W58KoExJ5e9CG4SP2QUUg6tsnXb9WGF transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "5Z84wihCtpNP9W58KoExJ5e9CG4SP2QUUg6tsnXb9WGF",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "6UNuqKYy3ZyVMDWmteZEJR6FLCY6jVRGZaqXUMzhSFvssADibf34S8YvHnyA8QcY6Cy4Sgtq29vWWsJMsX79L3D",
+      "ts": 1770661558,
+      "date": "2026-02-09T18:25:58.000Z",
+      "type": "INITIALIZE_USER",
+      "source": "KAMINO_FARMS",
+      "desc": "",
+      "feePayer": "VESTW2N3Qq4GYDinSRr5rSVTWyF5c1Yqti39Z2HUqhJ",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5VqafZUAwcnoB14LrTwyq8xqb2VRReHGHdV1MWBw3HuNPqcTRNnc384CNsJeW7Q9vymhhP4ntzLhmtuuZ2mD95tf",
+      "ts": 1770612739,
+      "date": "2026-02-09T04:52:19.000Z",
+      "type": "COMPRESSED_NFT_TRANSFER",
+      "source": "BUBBLEGUM",
+      "desc": "JUPs5LZpsq5RYoRGBdqbbMpusdFxUUKLop4n9r7LSsh transferred a compressed nft.",
+      "feePayer": "JUPs5LZpsq5RYoRGBdqbbMpusdFxUUKLop4n9r7LSsh",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2WfcgQPKYKDUbcBQBhybc5LiYkiQ4X6xbpAcDtUFa8Wc5PU7CrMhdP9AzFPkzAZexsKuKRJjj1JjmcPQBp7s2mmN",
+      "ts": 1770209124,
+      "date": "2026-02-04T12:45:24.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "BUAZUAPtrdufdu3rsWL12BfekUR5Nh9cpXAZdwLbSJ3j transferred 3 mysticrSzUfD2pz4RayXF5oEHGfNNAFsSY3z5hTQZSN to FFY7Cb55qVCcqdRoF56DSAQJeF9xcKeYy4jqoXHAGY6M.",
+      "feePayer": "BUAZUAPtrdufdu3rsWL12BfekUR5Nh9cpXAZdwLbSJ3j",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "mysticrSzUfD2pz4RayXF5oEHGfNNAFsSY3z5hTQZSN",
+          "amount": 3
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "BUAZUAPtrdufdu3rsWL12BfekUR5Nh9cpXAZdwLbSJ3j",
+        "FFY7Cb55qVCcqdRoF56DSAQJeF9xcKeYy4jqoXHAGY6M",
+        "3VthjFqocJgsy18J3Bp7oN2oK8GHidUFPg1UhdpnUmmZ",
+        "DUfis3YqxMXBEUMBdZ9tPhkQhBD7VkghLESiyQ7tJKzG",
+        "5KHaNywckffUg1EBwqkQH3rgRK5DoBb9yFnDdz1kEC7z"
+      ]
+    },
+    {
+      "sig": "4XuEbAbZK4FtstFs3XDnjTwjuMiWK2WatkgkADAKA5Uq4bFDkEhbe2NQregndHwhUSgQS8fQg29ewzFxTWVn4U6G",
+      "ts": 1770164807,
+      "date": "2026-02-04T00:26:47.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "DayKwAq1u4qk9cjHFNkrAUbZy9HjvB75hYP2rqVnSmXq transferred 11000 LADYBUG to hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc.",
+      "feePayer": "DayKwAq1u4qk9cjHFNkrAUbZy9HjvB75hYP2rqVnSmXq",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "7TgfC7finEVA1QcCbn1Jb2cz4RiDL4if4ATEGHZupump",
+          "amount": 11000
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "DayKwAq1u4qk9cjHFNkrAUbZy9HjvB75hYP2rqVnSmXq",
+        "DFLAf1dgMEBPvMUQLFqrkStboUnEpj5mbJdQgyDkzCvi",
+        "2QnK8isPKGvXxG1q6qcPDm76TJF5QtommhGzj5jHdYKt",
+        "2v1MDKmk36LDJyro3jqhSBHdsoWQt1NvLCaL2PvCKWG3",
+        "8QYNHTArsFJijMtvou9No5uLuyLEkwe9GF5TnGoMW5ic"
+      ]
+    },
+    {
+      "sig": "4xpeULAtVhLUVFWwkNVP38xb5NyN2LEzN9q12JgFZE3uvyfV3DkWQqB1zooNYfm7wKNXRwyZyt8GKVEm7tYbYCLR",
+      "ts": 1770078809,
+      "date": "2026-02-03T00:33:29.000Z",
+      "type": "TRANSFER",
+      "source": "PHANTOM",
+      "desc": "7wcd9AChphAJ1rsZwQ2TxmNWo5PtvqihgWCU2sJhw3dR transferred 100 Orbix to hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc.",
+      "feePayer": "7wcd9AChphAJ1rsZwQ2TxmNWo5PtvqihgWCU2sJhw3dR",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "95zkX1riMRBUWKcctUgton5t8G1mvgsp3UFU7X1YkxfG",
+          "amount": 100
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "7wcd9AChphAJ1rsZwQ2TxmNWo5PtvqihgWCU2sJhw3dR"
+      ]
+    },
+    {
+      "sig": "5BbdjMnExYSF2uUMKrRHePCcuredFGXR5cKKrWEj2Tkg6TJw4sA92YsodeJ62nUsRx4A7VS2mrSaoz7L8RcHEauq",
+      "ts": 1769240419,
+      "date": "2026-01-24T07:40:19.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "811txS7TBMK8PH7RiY2WjFd44nthWpMWyK2Rt9zYC4E9 transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "811txS7TBMK8PH7RiY2WjFd44nthWpMWyK2Rt9zYC4E9",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "3psJaFPrpEW6AHGu5LXWiLPmCxwS9pwY6B2cYLE4xQU9nwG4vBWXKGeEPsp5Sd3qhsPa1Sg3GCHpTQmFdPVKGcRo",
+      "ts": 1769233091,
+      "date": "2026-01-24T05:38:11.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "811txS7TBMK8PH7RiY2WjFd44nthWpMWyK2Rt9zYC4E9 transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "811txS7TBMK8PH7RiY2WjFd44nthWpMWyK2Rt9zYC4E9",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4sK2dWCrKu6eHKsktmXoUuQoSeGQgEAdmLh8wUAg3bsaqixv4tLcjxRS6cz1x32BEtMF5jqRe6YoVopnodGxoaQn",
+      "ts": 1769225764,
+      "date": "2026-01-24T03:36:04.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "811txS7TBMK8PH7RiY2WjFd44nthWpMWyK2Rt9zYC4E9 transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "811txS7TBMK8PH7RiY2WjFd44nthWpMWyK2Rt9zYC4E9",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "35p1tueLgbbp7QaUrgwusgRynEZS5TgLAi3sQZeMH9z91nuMof383gYjrDNHiDt6CkgoYpwBpvMYZHb4haJ649Km",
+      "ts": 1768835108,
+      "date": "2026-01-19T15:05:08.000Z",
+      "type": "TRANSFER",
+      "source": "PHANTOM",
+      "desc": "D69JHfpcydUEp6WJLxrUsJqt28ygwdsgHojT9SHUkXVN transferred 2100 CHONK to hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc.",
+      "feePayer": "D69JHfpcydUEp6WJLxrUsJqt28ygwdsgHojT9SHUkXVN",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "E1zA94mNEega7HS7stsZayjoRjHo3rYtZnJWZ9Tm53ji",
+          "amount": 2100
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "D69JHfpcydUEp6WJLxrUsJqt28ygwdsgHojT9SHUkXVN"
+      ]
+    },
+    {
+      "sig": "4s8aCQTFBWVkN3FAQU4VJUutWproy85iASE52BTU7NWRDM9vwQY3SPXx9ug2hnMnnyFRqeVefsTr7RrAvpudzPXw",
+      "ts": 1767558666,
+      "date": "2026-01-04T20:31:06.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "FJGSVShEbfLqyVJSABACJQgimZMdK1T3oiNyQwAxvoix transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "FJGSVShEbfLqyVJSABACJQgimZMdK1T3oiNyQwAxvoix",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5HVAfk8KqcoAerCQoV3QnaY5hZoNrL6BqSnxz1F5DDLa8jRn1JMvberSL2aHjN2Rm7UmccuC6Ry5Vmjm8Qmtcj8h",
+      "ts": 1767550323,
+      "date": "2026-01-04T18:12:03.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "FJGSVShEbfLqyVJSABACJQgimZMdK1T3oiNyQwAxvoix transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "FJGSVShEbfLqyVJSABACJQgimZMdK1T3oiNyQwAxvoix",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5zH8wXNH1BNJRGcKGBedRi1S1K7HA6peMUZLntAmn1Ae8BfK3t5hU74WPD9yjrBwpk8pYT9cvWZmnbQyVmfJT48X",
+      "ts": 1767542337,
+      "date": "2026-01-04T15:58:57.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "FJGSVShEbfLqyVJSABACJQgimZMdK1T3oiNyQwAxvoix transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "FJGSVShEbfLqyVJSABACJQgimZMdK1T3oiNyQwAxvoix",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "61eCoMmXX7VsCFDKgjQVv4o7QwZHnjQpLKHzmsqLej7jfYsRtvy7zyWW9qTHD7e1w2FyPKWkPCduH8DFxrqv2cNi",
+      "ts": 1767534402,
+      "date": "2026-01-04T13:46:42.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "FJGSVShEbfLqyVJSABACJQgimZMdK1T3oiNyQwAxvoix transferred a total 0.000005333 SOL to multiple accounts.",
+      "feePayer": "FJGSVShEbfLqyVJSABACJQgimZMdK1T3oiNyQwAxvoix",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "Gfmh7fBc85QrBWARDowEGTDEfEUdk8QGZhTskxLpDzq2kZs9Y5dEWnCHy5XP9nmHKvqFvWCfLA6vnk9hEQc2a7Q",
+      "ts": 1767239692,
+      "date": "2026-01-01T03:54:52.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 830.390225
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0.00407856,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "GGztQqQ6pCPaJQnNpXBgELr5cs3WwDakRbh1iEMzjgSJ",
+        "4uWuh9fC7rrZKrN8ZdJf69MN1e2S7FPpMqcsyY1aof6K",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "2Dw3JvbhTDCXDrs9BhTXnsVEwfRZVpvnf1We7sCCD7azJoLdcL65FGDEcwKAAxgtErivQhgr5kHDmiorwCGPxn3Z",
+      "ts": 1767239667,
+      "date": "2026-01-01T03:54:27.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838329 USDC for 2743.432936 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2740.689504
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0.00407856,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3WLALfZSDFDzK7jfSZbNcJdEzUi9CnBgchJMmKaEoG4rq4wuUHZWLpvnG7bJiPGC7pxKdqwQbJudbx7f8rMvw8mF",
+      "ts": 1767239397,
+      "date": "2026-01-01T03:49:57.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 830.001217
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "hKgG7iEDRFNsJSwLYqz8ETHuZwzh6qMMLow8VXa8pLm",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2mzRGgi13VyUke49pDikvHHE3RSQxFiz5dxCe2fgcBiQ6uwoJUGRGgWj4u4PvGaVsTMbdy7xRxvFPgtvFnSPzwQQ",
+      "ts": 1767239361,
+      "date": "2026-01-01T03:49:21.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2744.649381 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2741.904732
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "41tD2dMD4952P3nHEcDFJNUsa6ccDLvZiZyTC2negyZgmRoJUj6hFeLj9pQg4FkHmiG7Cm31EHqYjmDMRHSorNDw",
+      "ts": 1767239090,
+      "date": "2026-01-01T03:44:50.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 828.850444
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "GGztQqQ6pCPaJQnNpXBgELr5cs3WwDakRbh1iEMzjgSJ",
+        "FksffEqnBRixYGR791Qw2MgdU7zNCpHVFYBL4Fa4qVuH",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "63tqcjEybypd3WrT6CDntPoHyfPug41PcQuwxm3AQ9SMc3xYg7ZQVC4FfwvrYeUVMDjk3PuBG8M1b36eR28PC7R7",
+      "ts": 1767239064,
+      "date": "2026-01-01T03:44:24.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2738.93639 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2736.197454
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "wdUTtGfaZxAiP9Ufjp1mBXw5RyNHKp3ffBxZ8hdF8GfTV39byQW5AdjUqXVemCyWBNFt6EqyRwi2hnMf22Zi8bQ",
+      "ts": 1767238794,
+      "date": "2026-01-01T03:39:54.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 829.561208
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "4xDsmeTWPNjgSVSS1VTfzFq3iHZhp77ffPkAmkZkdu71",
+        "6n9VhCwQ7EwK6NqFDjnHPzEk6wZdRBTfh43RFgHQWHuQ",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "3Vwd79EBeKfauukFjCyEPFUEZFiW64dJuqhfnzGcTFBZQi5koL12sk7h3s5eWu27oN14NgFqPEvt8FZk8pYDr66j",
+      "ts": 1767238762,
+      "date": "2026-01-01T03:39:22.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2741.904412 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2739.162508
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3TRWA7w6SA3Kr638zQuyBTBXNJ43qojkp1TCFdn1JehkVY4mVyKoVYV1fqA2dYGRCe1nS3EGJ2a9dswERCdGdUih",
+      "ts": 1767238487,
+      "date": "2026-01-01T03:34:47.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 829.302342
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "25d5M6CfG9uxyZCLpiW2Bb4fdKUw2tJswnsKfqjjX62cPFUpcTCx7P9eFcapZHa8VbT4wWqndfBLTUEeXkXJf1Lx",
+      "ts": 1767238462,
+      "date": "2026-01-01T03:34:22.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2742.353421 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2739.611068
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "8Cn9qjjhyzA5GxtbD2HUkuDio6CmpXRV7vFUAYDtyP1X",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4W8kRuSrkT5ZJgiHNqw5fFud2VRcpwg67Hnary8KtYbMqKU4tfxhcmUARj4DBbhtFjp5k8TqzSNBzpRyb3LR6Zps",
+      "ts": 1767238196,
+      "date": "2026-01-01T03:29:56.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 827.690071
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4a6nH1SyH2DTLiJpqEr4P5XxAyoQ9JzhUcAjqtfRp3VKYwjDo6Qq4ADP4W3E9XQaakNzJVsNVrbW7xLgqiV7TwYz",
+      "ts": 1767238167,
+      "date": "2026-01-01T03:29:27.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2749.93631 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2747.186374
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3v1sb6UYUgJjEBLVeC3su2qssfu3ggMpL726HgnVdesUJMFEPya1BWRg5aoNnHcKNARCyHegU1rVtMdErg1d4A4X",
+      "ts": 1767237896,
+      "date": "2026-01-01T03:24:56.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 827.234621
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "9zsMX2AWGqF8Ap2Kwv46nTPsLyuX8XAv4yeyQ2CfUbTP",
+        "GtwzYxBQcPFNFQcYbdELuaKzb4DGJpGVU2ehLhzbffCw",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "fTCfqR6CwKMeVgCdRiw3Wgy87eYhSARqQQ4Do4nveYGApiGYUhesZnT9CxiQpuuYvQyacD1fgXmoG4aRnYPZ2g9",
+      "ts": 1767237860,
+      "date": "2026-01-01T03:24:20.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2751.382656 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2748.631274
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3c5ocyR4C5ZnVhtZzQ66qgbkGECUmrekzbXHJj86vZyvEq5JXv8qJA4hkcNqbKvEm3qDSNginJthk1ohv7sLBR3u",
+      "ts": 1767237589,
+      "date": "2026-01-01T03:19:49.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.96203
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "P35pFpzbhRVkmxsu4dy7rz5z9ZQ7RvevR8LLQLvFkyK2rV2dCM6rN6BEKzoJG2v6y66EKoeF9pECHTMP7NbhCR8",
+      "ts": 1767237565,
+      "date": "2026-01-01T03:19:25.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2749.585043 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2746.835458
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2a4LRoVJiwDA25NaMuTwMH8d46CfznNfBvTsnzJ2cjk9QfaQynsgiM7rm8MBoUJ2J5ZhJZAVRoDt8FeAuV34d8Nt",
+      "ts": 1767237293,
+      "date": "2026-01-01T03:14:53.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.746418
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "6U91aKa8pmMxkJwBCfPTmUEfZi6dHe7DcFq2ALvB2tbB",
+        "AvGeFw71N5sNfV97mZ1uNrHg4yfufRicCJUrS9j2ehTX",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "3PhQPeqoDKRQuo39iKyiWSX3KdcPrtAEAd3Qo9AJ1EVWDi2hMPCs2NhcwWCqSqy6vA1ZP9cdpZu11RYorm5RKH7W",
+      "ts": 1767237269,
+      "date": "2026-01-01T03:14:29.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2747.116591 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2744.369475
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2Rq8kzfdQGx2yNMTfCCejgQq3rK8BRXxFHQzQmTURC8e8DNvp7XmvVGmahbJuzFfAv7WfrKniHAXf9Ne7jBFB7Je",
+      "ts": 1767236987,
+      "date": "2026-01-01T03:09:47.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.100182
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "2MFoS3MPtvyQ4Wh4M9pdfPjz6UhVoNbFbGJAskCPCj3h",
+        "AvGeFw71N5sNfV97mZ1uNrHg4yfufRicCJUrS9j2ehTX",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "4BjDrX3MTGad2WVKznJaahEuoizFQMNhCvUfiBkjE1B5S1eorx7hqqUer46JsH1ez5a1p7kG2GYbcSqhtkmWRX3E",
+      "ts": 1767236962,
+      "date": "2026-01-01T03:09:22.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2746.222205 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2743.475983
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4avgiJQ9be8qPUiVq1dTQZTdZgZxQtepDcj3GbYCtDFCqSMFNjvxupFWc4JVR8BTJEUXWQDUCBG4w9BgKcsM4Vdx",
+      "ts": 1767236691,
+      "date": "2026-01-01T03:04:51.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.095878
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3FFKbybftxgaFRFXtxjrxgzuXmZyFk2VL5oe3S1NtPwYShvHdG9MQhAkXA9MFh8uEovo7UVVsytCAycKPHvhrRV2",
+      "ts": 1767236667,
+      "date": "2026-01-01T03:04:27.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2746.820439 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2744.073619
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3w88p9JKnNQD1uV82D2c86XefaksjmoPZMmRmYnUU3ce8XYZ1epamqzQmAJGFDwgJYDGPSCciB7K3VNwNzvEriXU",
+      "ts": 1767236395,
+      "date": "2026-01-01T02:59:55.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.795478
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2QapNyEYH9XzzwuDjMrPdy6rgwkZ2sqj8S7pmqFQyJ89MwYKiqSR8idZha2ysy6YDvAYkEyX78K3LgU8115hFB2p",
+      "ts": 1767236360,
+      "date": "2026-01-01T02:59:20.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2755.898582 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2753.142684
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "5ywir1JUaMffg6Q4dGvBFXbJrASSnRdoh3vNHYxPimScgtB2Xvh3GazFE1BzG62Q28AWkvyzYCyrH2jzLsVAXms",
+      "ts": 1767236088,
+      "date": "2026-01-01T02:54:48.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.253362
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2SvjCHze7YeBvBazA5WCd4ziAj3ToKHvQCcPXnwWFChuGdqz5A5BGzRHGwRU51MpEqyAPzfkemXqPuW5NK9DEYuR",
+      "ts": 1767236057,
+      "date": "2026-01-01T02:54:17.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2756.105456 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2753.349351
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2ttEMS1i7tkaK5QKTHg17Vxwh3rGVGnPzn4MNacdAj9zGSNr8J3Bcg31yhg9PDFHQnDEKFnQ6fdi2ce8JD6TwmEz",
+      "ts": 1767235796,
+      "date": "2026-01-01T02:49:56.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.658342
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "BQ72nSv9f3PRyRKCBnHLVrerrv37CYTHm5h3s9VSGQDV",
+        "FksffEqnBRixYGR791Qw2MgdU7zNCpHVFYBL4Fa4qVuH",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "2L7zcJPHWYqZzpzTAH6WEgE7CWmASEnoZyXLgcn7QePQhVE6aKQgULucYQ67rE1qCYtexZM57ov8v3urper5oDRL",
+      "ts": 1767235769,
+      "date": "2026-01-01T02:49:29.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2753.301788 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2750.548487
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4kRoT46uDyK9cu87tcvtM9y8tgTeSsKoqsjpQusJj2GM2gYLtEFPwuKtKvfh28XiVukthMy7XZHHRGzCMbjaqBrw",
+      "ts": 1767235488,
+      "date": "2026-01-01T02:44:48.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.767792
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3cRp28VvQHvGtLjnraBkVvshzqXJeBeNJBJa9pCbbdBMeyBpSq9vDA4o715H5K7vvc9unk7jnn1zTUS1qcArg17b",
+      "ts": 1767235461,
+      "date": "2026-01-01T02:44:21.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2754.203402 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2751.449199
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3W7Doen3wAntx4etSeemRxF3K9EWN8BmmnogkZXqu8Cyk23zUdTuzMyPpEC9jGoMRtZoyyz5eVpEQae5SpzyK1Hx",
+      "ts": 1767235193,
+      "date": "2026-01-01T02:39:53.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 824.660076
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "hKgG7iEDRFNsJSwLYqz8ETHuZwzh6qMMLow8VXa8pLm",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4KbRvjSEegbBTuFKF2VyeAL1aPqAVs7Gw2y7y6gPK5yM55KKfECK2DS1uiggvX52BfdaoWYMoxMLaCriya88pLky",
+      "ts": 1767235166,
+      "date": "2026-01-01T02:39:26.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2752.469818 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2749.717349
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "27cHhkJu2XT9jWarwjvAv7F4DagnWUW4SkuPLYFJ26hP74H8Pi9qtSFpKjLPnax7EffeQny8zSUG2bKwZjMyeQ7Z",
+      "ts": 1767234898,
+      "date": "2026-01-01T02:34:58.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.454586
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2PBdkBGZo5w9Pi2Ay24eFqsQcJ77jpzhHhPFPDXXag4G3tNWxgpoFZdap5qALsdRNb9VhTTtK9KEsd25nCyBkijh",
+      "ts": 1767234858,
+      "date": "2026-01-01T02:34:18.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2752.376857 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2749.624481
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "36z2ab7c2bBaK6Pz2oYscTtV8zCL2G8YGxtqvirfhcUdZhQL22aT9AJvZ95eYXK1ebzoUoM3W1dnxyGgodnp5fP8",
+      "ts": 1767234590,
+      "date": "2026-01-01T02:29:50.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 827.430365
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "hKgG7iEDRFNsJSwLYqz8ETHuZwzh6qMMLow8VXa8pLm",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2rxGYyasL9m5EgAyQQ51MkXusWDmyp5tDVBkQDeJJ9LVYHJaSqZGwXHxkoDmj4wDWyRSMtgSdYwQ78uN5KtVJfXX",
+      "ts": 1767234566,
+      "date": "2026-01-01T02:29:26.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2753.964628 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2751.210664
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "5CPPSQwQhBbxHhqaAHdL1txywJiC2BUuqc32zJCVP5qcpbjx4FP4q3Z2efwpUUrf1svC2T4tPCjXHvQB5ZSUv6tf",
+      "ts": 1767234295,
+      "date": "2026-01-01T02:24:55.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.312067
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4ZLuKXNXxc5Axbfte7SJSDBG5grARNpMtHgNS5Th5ChVm93sUerU5JSeaT7nnKrhwrEFjywnPS5PMF7Kk8Ttk5qr",
+      "ts": 1767234259,
+      "date": "2026-01-01T02:24:19.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2753.405511 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2750.652106
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "63KL41EiWqDtwg27xYXoByJkRFGTHd1h4shvrHi1e2mSuNHPo8yrcw9UVn84q9m4qgEAxdQ4jif1FSX52Pd185NR",
+      "ts": 1767233988,
+      "date": "2026-01-01T02:19:48.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.713957
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "hKgG7iEDRFNsJSwLYqz8ETHuZwzh6qMMLow8VXa8pLm",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4Lv6gddkSy8oerYHDz7aAHadVmY6QA6wHuycb4SAzDS2HHMtSKd1ZKqYsTzEJAAvsCCM4HuXUpkbg3go23YpVNe2",
+      "ts": 1767233961,
+      "date": "2026-01-01T02:19:21.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2753.806619 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2751.052813
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "48M4NjPrJbppsyurhwy3GaFzbWtCRjsiT1t9bkcsYhCww8zuTKXwsYiHNxEhDE5VE2em5NSNKJ131ohzsZRg633R",
+      "ts": 1767233693,
+      "date": "2026-01-01T02:14:53.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.346036
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "CapuXNQoDviLvU1PxFiizLgPNQCxrsag1uMeyk6zLVps",
+        "AvGeFw71N5sNfV97mZ1uNrHg4yfufRicCJUrS9j2ehTX",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "2RzVeEodgyeuPbpfQu3CiHjfhG9ecz9G5Z1uzkFsWLU1f9NrLte8564Ma2Skqt43cPQ7UGNY9az9AigcxfyKAjtF",
+      "ts": 1767233669,
+      "date": "2026-01-01T02:14:29.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2756.719075 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2753.962356
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "41T614NbD2ZLjJUK3Yk5qQ3m6Sob9ndL277fWp41KztUsaeiJzP1PHZm9p6DAp4akSzfudKSS3xgh5pyg2jwH2cN",
+      "ts": 1767233388,
+      "date": "2026-01-01T02:09:48.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.732067
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "hKgG7iEDRFNsJSwLYqz8ETHuZwzh6qMMLow8VXa8pLm",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3cuMkXeGmjXS7tSn58jSNNYsfActPGFyRp9qHa33YFRcpaDfwyHR6oaRykB7tV7XvU2m3FKeWd3dRZjWWjtbA13n",
+      "ts": 1767233364,
+      "date": "2026-01-01T02:09:24.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2755.428601 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2752.673173
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "5kfBjS5J4cnqm1MN89nQ9Uik5Vnjc28XQRdsosgBrDHE2GpeXJ5mgqYZUrpSYYgMBXebGhYNVyLy9Avm3r78kDvh",
+      "ts": 1767233087,
+      "date": "2026-01-01T02:04:47.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.54288
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "39D6KyatyoYXDDXpKxNQuQWYTxC8MbrvsNdWezFFgmVTFB9S7nYxHWUvEau6jfEGzwAzEXvPeLDPyfy7R7ZmX6J",
+      "ts": 1767233060,
+      "date": "2026-01-01T02:04:20.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2756.707803 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2753.951096
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "5ShnAAQvvU6jaXMAS24LF5mjU6N3rVqGnhM1vTmaWH37J7bd7N7vXY2RMV39qo7mxiYXVD92H9sjvXsATPG6etNT",
+      "ts": 1767232788,
+      "date": "2026-01-01T01:59:48.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.559364
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "ypZAGdo2aU1xTnZCSp1XmYE3gH5BXaJiftoebPKPPiRoFbQ2feVqBv2Tg1UouZ1AQM8BC2R6nrtphZ5e7NMTyD3",
+      "ts": 1767232769,
+      "date": "2026-01-01T01:59:29.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2754.84195 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2752.087109
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2YQvyjxqUup9roq6yV5e8TDAgN5RAuak7VeGfc1qnUxLHJmfWkgcecWb4dgGTY1uFvz4dN1BosN9qVh2xhenY4nX",
+      "ts": 1767232494,
+      "date": "2026-01-01T01:54:54.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.278077
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "GGztQqQ6pCPaJQnNpXBgELr5cs3WwDakRbh1iEMzjgSJ",
+        "DB3sUCP2H4icbeKmK6yb6nUxU5ogbcRHtGuq7W2RoRwW",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "3hKcwEq1SNL6rLtycHTopYH6tSDg9J9Fd4dbNMvnH5hpxQMzXq4RPRCg34FVC6E2odMqVdXZcwJEKDGrtPAack8x",
+      "ts": 1767232470,
+      "date": "2026-01-01T01:54:30.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2752.981949 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2750.228968
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3JdMap5ixnQGUsizZhYjMtiztDEw5otns7RNZmhzmjeUMTgBCPMPYN2XFkX8678G4dtXqDeqUm7wa7kTrRHgUgwm",
+      "ts": 1767232187,
+      "date": "2026-01-01T01:49:47.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.445731
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "TiZ5QQBdqMtVwDG7QK82zhtsi1V4AHy14DUpmpPkRYg55To46NUusW9mShDYtKkgkUSf5t5hNH7jFtFTAQ14sq5",
+      "ts": 1767232162,
+      "date": "2026-01-01T01:49:22.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2750.116331 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2747.366215
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "cD7n7aw4DEM52qa2yyYDixT4cuJNGeVvQrkKCxobLprubYTBT8d8uz4ZPt9fu9bEHFJs5x5i4yxoGnierHLHZ1L",
+      "ts": 1767231891,
+      "date": "2026-01-01T01:44:51.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 824.615189
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "ddkeCPgyhYiCANf3aXHZb27RAF5ZQD6XqQm6k8SaYpvFe9psXvEBBVKmos6izPupWTxv1zMaMjTV144PcshkEE3",
+      "ts": 1767231862,
+      "date": "2026-01-01T01:44:22.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2749.125209 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2746.376084
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4a3HU7rG5pKuLArvy9VWrqRVND75NK6J4dUDpSqNJgq2Qp7dnGgMs8ok7TBh9kBSnucUzoPM9vayEgqEZkYafvQw",
+      "ts": 1767231603,
+      "date": "2026-01-01T01:40:03.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.11077
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "6LXutJvKUw8Q5ue2gCgKHQdAN4suWW8awzFVC6XCguFx",
+        "Eio6hAieGTAmKgfvbEfbnXke6o5kfEd74tqHm2Z9SFjf",
+        "6n9VhCwQ7EwK6NqFDjnHPzEk6wZdRBTfh43RFgHQWHuQ"
+      ]
+    },
+    {
+      "sig": "5j7cXdHmV8mvbvmCmunoqAaFfcWYJxuEN1bD2RwbfkiYwZJEbJLp7niXCpLAVxvJHZsfRErEEu9GPgvTTteufM1n",
+      "ts": 1767231559,
+      "date": "2026-01-01T01:39:19.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2744.746329 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2742.001583
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2rmfKdMQecBHABk41zHy1kB8WKU8oSQo6KYKrEcN6uYQvZM75eCRVDcheJwV3Kz1uHBNsGQ3y6hBLLhJLjmcreoE",
+      "ts": 1767231288,
+      "date": "2026-01-01T01:34:48.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.90855
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "9zsMX2AWGqF8Ap2Kwv46nTPsLyuX8XAv4yeyQ2CfUbTP",
+        "GtwzYxBQcPFNFQcYbdELuaKzb4DGJpGVU2ehLhzbffCw",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3QYbEa4VSH53SaozSVMQbbKaXJ3g7EQQYArYSS2tgXNrPRaf5XAbZSgwX46kuGCuEWijdrJbzk8w4Xde4XrNHNxi",
+      "ts": 1767231264,
+      "date": "2026-01-01T01:34:24.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2744.598958 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2741.85436
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4eEidv3g2ZV3aLnquoLs11TYUErJj3tCiXcDQHJg7yy9UKaZUGWu6WBtNkRRht3oJVv68FtqqarqjbgLortnibNZ",
+      "ts": 1767230993,
+      "date": "2026-01-01T01:29:53.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.862147
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "39QdCBDDKWYKYK6fSBjvreMSmR5jARzSffGchYTWxvfT6hfpd6tJeHziEcqVaKdwWPbAX881q9Bc12Lr5p7BtiEs",
+      "ts": 1767230969,
+      "date": "2026-01-01T01:29:29.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2748.40311 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2745.654707
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4BDeFssQ6zWmMQR66YS34WvRX7WzifspnbDBCDj5QuRhxh2myTbVcX1nUnJUxRUGSUxy19xCux5j5QxJua2XZsnB",
+      "ts": 1767230686,
+      "date": "2026-01-01T01:24:46.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 824.27681
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "JvMU779YqxyxVuRP7KRu2hQiq12W5LxzVzLT9bCyXNtxRsJste6589VVf7esntBPsxtQhHruPgYcC6mJuuABWg5",
+      "ts": 1767230662,
+      "date": "2026-01-01T01:24:22.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2743.95626 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2741.212304
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "45K9kqo4tNg1ppbd4ZYiYpuASPcvN28X7pGG21sja63sfRH6ocj9mJYgmzdFGksZd78tL2GscKEh92kduiNnvDDe",
+      "ts": 1767230391,
+      "date": "2026-01-01T01:19:51.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 823.779974
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3xNhuGkX9nGFy8vvNdundqhJJSsHceRKPxXqPKtCGSJP5LSAnT14euNDQSqbBNdKfjfBpAe2CtWHmx8KGiLNnqnZ",
+      "ts": 1767230367,
+      "date": "2026-01-01T01:19:27.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2741.035764 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2738.294729
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "32bjU8QCzNgmPvRsLZjSNWqeEsNfCJXHriEdBZkceWCinvCiA5HHmes2MNL7PeusP4GRwAFtgyEsU3NA2Lm8VNeZ",
+      "ts": 1767230086,
+      "date": "2026-01-01T01:14:46.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 822.210991
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "4xDsmeTWPNjgSVSS1VTfzFq3iHZhp77ffPkAmkZkdu71",
+        "65ZHSArs5XxPseKQbB1B4r16vDxMWnCxHMzogDAqiDUc",
+        "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz"
+      ]
+    },
+    {
+      "sig": "4Nej5MeDoAwUsarEz5SRFu6TgyFwBMXEQk1acUUm7gPtpTw1rZ4ecZ3khoaSHXUhWGATrRYSmR21QEwYAo1rFG8F",
+      "ts": 1767230062,
+      "date": "2026-01-01T01:14:22.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2742.157895 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2739.415738
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "34m9QxngCcpusirW1J76KMBzAgfMvaJfmcnPAhnHC2YQW6szGiPMAWtpuT7U7ptU9Rr22tUhLQGh3keNQ8kAX3iJ",
+      "ts": 1767229794,
+      "date": "2026-01-01T01:09:54.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 823.5774 JUP",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 822.753823
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "HfgjZDmexhFVD28Vkb1NbQwWeXP3uDcVTLPjSGHmRHhL",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4wVyfTJBehFK8XNZeEWsE7B9pT9gJku9MVRDg9jLdPZbEQ3436J8fguXyrpgaLhsHuhCnKGXdfKM4tRc66xpUuG6",
+      "ts": 1767229767,
+      "date": "2026-01-01T01:09:27.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2742.390126 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2739.647736
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "wDW2TLSVHEf3eF5eFfLpMEYTLj37nUiCh2b9dJdLvqN67XEeEYbruouHwxCpvQUQnQKeCSfNv6cq74YrjXF7umj",
+      "ts": 1767229488,
+      "date": "2026-01-01T01:04:48.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.231429
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "hKgG7iEDRFNsJSwLYqz8ETHuZwzh6qMMLow8VXa8pLm",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "5oduYw96AW21iNWC6Sq4CAQnMBGy7XKnZGggwp7rcTWMgY2zViZoRAenK3cyVTRAq8nrg85QGx3vs13rdXs9yZRR",
+      "ts": 1767229464,
+      "date": "2026-01-01T01:04:24.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2742.566501 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2739.823935
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "23jGfgpPunFneDokCc95Dbz5cbyVXMWzKw88DEBX62K5PXt8javJaDQXMVjRmJ9tYU1nSa6RKBLDQB6pMXTz7rbr",
+      "ts": 1767229192,
+      "date": "2026-01-01T00:59:52.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.279841
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "hKgG7iEDRFNsJSwLYqz8ETHuZwzh6qMMLow8VXa8pLm",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4PdEBZUK4GuCwg7izYt8ZHXdAZSMgb6iz8Gm58RG5W5ZycBCvAuxtczy3oTeo1ZfS73MmY7wakBWYgk69454Uzy",
+      "ts": 1767229156,
+      "date": "2026-01-01T00:59:16.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2748.909178 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2746.160269
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "33PpiJh21DvcEPJ16J942hQfFCLbx8LKwnSBWzZ13RThpNSRB4pGuS6EVhnkn9UaHBw26nH4GwjWhCKjmyxGRwLB",
+      "ts": 1767228898,
+      "date": "2026-01-01T00:54:58.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.052023
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "hKgG7iEDRFNsJSwLYqz8ETHuZwzh6qMMLow8VXa8pLm",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "2X8GwAtQC9s6iM14gEmWGcvFxdi5U2L2nzGBfvSgydDqcamsZqo1gjXBWNk5AtcxyAuK9NB7i29Pcjeu6dqNxkep",
+      "ts": 1767228861,
+      "date": "2026-01-01T00:54:21.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2742.98119 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2740.238209
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4qE6B4yruTQkYFFk4yp4DB5s38a3ZyCgNAhhzCTccqvSdVYCL1wjkjKCJiEeYnEVu1Y78vfjWMyC5Ys9AqrCYTjr",
+      "ts": 1767228589,
+      "date": "2026-01-01T00:49:49.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 825.518409
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "4uLg6K4jYJ4TmDhf7Qoccq7wZQKGqmH9xnFkyp6ZLAQfWiszCwbpjbwR3TEwvkFEZN3DpW5W1gqdfWB9WeTxaSNr",
+      "ts": 1767228566,
+      "date": "2026-01-01T00:49:26.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2752.21229 KMNO",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2749.460078
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "3wVDywodunXfH263SSME5pqAcmsJj3sBkMLBjAHt7N8GtYcQ4kPpu9UL42TZLMQVTLNMoaiNeY7GyXWxJpCF1Ssj",
+      "ts": 1767228284,
+      "date": "2026-01-01T00:44:44.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.314248
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "9zsMX2AWGqF8Ap2Kwv46nTPsLyuX8XAv4yeyQ2CfUbTP",
+        "GtwzYxBQcPFNFQcYbdELuaKzb4DGJpGVU2ehLhzbffCw",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "35mvQfBspynD6f1VmXqrSZaPMVerhnxxj1THj7JDc9mq1pi82w5pbRUvEcHcE5mm8hdag4CnheMF5X1dESeJVZF6",
+      "ts": 1767228259,
+      "date": "2026-01-01T00:44:19.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2755.317563 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2752.562246
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "xU8McxcxxmmqBY2pbwhucpbmWpT9xYnt9KZ3ugT6wD7r4Y9UqMBzJ1ZqXqSyhmoc3PG9StdRycHRPuDXdbNTAmk",
+      "ts": 1767227987,
+      "date": "2026-01-01T00:39:47.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "amount": 826.201387
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "H1gy5NHDoGZ2i1Di7eFCBgAcBDRnogDecj23ydtmNENK",
+        "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k",
+        "Azqyr9SxHQSHS9jhbgnsbehJSsyaKSd7jSB9qUF64L4J",
+        "36ZDJq3sERpj9hKnBM5RLxmVhQ6mJQswMHwj65L1Kv5p",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    },
+    {
+      "sig": "29JMMuJE93WSkFt3Cr124FPg2DYjxJ83Ffi7Nhr9t3zUULq2rcfABSLH19sSv9XfMS3E2Ew5DhBhctcCiwP5SsPX",
+      "ts": 1767227963,
+      "date": "2026-01-01T00:39:23.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2752.110414 KMNO",
+      "feePayer": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+          "amount": 2749.358304
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "AZFjHBwSiodcrKCjsH5bJJgJDWY3AcEnVkq2V89CWiyQ",
+        "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy",
+        "3ndjN1nJVUKGrJBc1hhVpER6kWTZKHdyDrPyCJyX3CXK",
+        "CpoD6tWAsMDeyvVG2q2rD1JbDY6d4AujnvAn2NdrhZV2"
+      ]
+    }
+  ]
+}

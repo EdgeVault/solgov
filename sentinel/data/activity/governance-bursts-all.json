@@ -1,0 +1,330 @@
+{
+  "computedAt": "2026-04-17T15:44:45.337Z",
+  "protocols": [
+    {
+      "protocol": "Exponent",
+      "bursts": [
+        {
+          "windowStart": 1775747707,
+          "windowEnd": 1776352507,
+          "count": 3,
+          "events": [
+            {
+              "ts": 1775747707,
+              "sig": "2o7yVyMESNiapwZdXJUpQwtm4VqKnQ2CrnHxyeVFChHWd8XqszRb7GqPwkTpBTVj3Vo6y9xqvxRXS3DG4zHh4ce2",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775748093,
+              "sig": "24rzPBQ8wbznwuowvKw51VoqgHvEAEbWK5o1unMm7ATcuXCDoz62gaAVUg7vExj9HSKEv2ZPq412fSdLbH7u7gjW",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775934504,
+              "sig": "Yd6wBLZh9CsgApQbvvtKYWYZXmw9aDYGfKx2KsxRbRM9jTJiB7dnBEnABaJ2EvschWaEig8Mzg6rNWJbGSr1aXj",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "Stabble",
+      "bursts": [
+        {
+          "windowStart": 1774518455,
+          "windowEnd": 1775123255,
+          "count": 3,
+          "events": [
+            {
+              "ts": 1774518455,
+              "sig": "4ojMaDJrKaTs4PhwHQGaDrewnSFdWUdkx8ZWRcc7ogwyyUT395Q96zQa6HYwqu26PQBKzqrb1bSitgENKUNct3b6",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775065895,
+              "sig": "3Qasi2QLWnUYcpC8L4uabe4SHQMLv1wRpbzRo1tcC3A5h5eyfgCoauKB8dDsmZxZR9YEQCknxXzLxrZam6A7dXNn",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775068395,
+              "sig": "DUP1NtsrhUfoQVQnk41MFwtgqgQNy4RmDmCVzFsk317ZhuVqSvtUrTY67qXvpVeaqJFTng42AFuKLKg2PjjB4hS",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "Jupiter Perps",
+      "bursts": [
+        {
+          "windowStart": 1770187505,
+          "windowEnd": 1770792305,
+          "count": 3,
+          "events": [
+            {
+              "ts": 1770187505,
+              "sig": "29UF7c4v2vjj93tnZismhKXJ8aqNyW4wa1WTAXH4735XrKv9uQED34ZBLFLWmAG2CsGTfSo42Wy1KpbHGCVuDVFJ",
+              "instruction": "MultisigCreateV2"
+            },
+            {
+              "ts": 1770376501,
+              "sig": "ggRHbhisPqYPmegHvUnJmGmWPuCCUeXkVt4n6owwYAB2go7yWV9FBfd4hF5V83GWJ7oFer4UyhNWMRjvaQac1nm",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1770789650,
+              "sig": "57WRiLbFwKn78KuHs4Jvcb5tjJQ7w3QrrwwswgEVE57JRJvyaZYnJRSbdLkfnARGaqf6S7ey1hkTpn6WEyBEDEk8",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "Huma",
+      "bursts": [
+        {
+          "windowStart": 1775656471,
+          "windowEnd": 1776261271,
+          "count": 6,
+          "events": [
+            {
+              "ts": 1775656471,
+              "sig": "REBp2kdYzwBsY4bBATi1nXijda4ZxVsiWtSWgNDCUjsT8Uv5pASVJyDWH1n4xZ8VaeX9HwLZknx757QE2dVKDGY",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775705620,
+              "sig": "3qqV5TC9hhmgs3r3G6of3dnaEwFRjWVG5JSf4hpThYSaTQCezdbmVMp3cCdqkKBRmMAVCousxBA42HXpseg9BPhi",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775795994,
+              "sig": "3BmGYmeqs94fvdc53FrPm34N8vZyhLSB2k4kdPAmpqAU7dSR76prCbqgsAMt5W8Ga3ZYQMMnbwjo7PAMbsk5vis9",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775922305,
+              "sig": "29FiThHBDp7Qm3jqcPAgwHRbFDyEE7uhQLvkApnDa29MizsjH7okzppq99kfgQEmsgK6n3x5mUZvfQBXqrW3Km3L",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1776061853,
+              "sig": "3w9fDmvNX35w3ML8sJhu55xw7jAZQKK91QszeNZ6oZ4FjVc6g9JJBTsgSvT7LPgpCVhgt6tLNY1i5EV9ehoXC95k",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1776213357,
+              "sig": "3wMGqzPd1J4QwnW6VhNcqp2aFEA4SZs74BYsZKzTUgV8SXriHPpisdTqoDQHikqcwEFLBXsDKc3iaXJvtpGjw3ch",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "Solayer",
+      "bursts": [
+        {
+          "windowStart": 1715789281,
+          "windowEnd": 1716394081,
+          "count": 3,
+          "events": [
+            {
+              "ts": 1715789281,
+              "sig": "2DVAmantqjEW1PLGhoi7FniXrgcvCgmrcLVm6QVDgW9dTWR2WcwhtyMSjQ2KJhu4evpvVEDYkQtPAA5sGw6sgrpg",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1715792258,
+              "sig": "4WZnNkmLSodStzZkPuqP9evxZLhZ8mz9MxW4ouDyLnBqsQxdEGBvgnZTCwkW98Z21iKwo7PNwZfULyJijDNwsp5s",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1715792340,
+              "sig": "5NxWm6pUADvFHpCHB4j6hZvV81f4NjZ7FQaWr3wakJRrTUKdfo1xC9MpiraJj3aEmLK7jAhnW22DXwYgCfpE7HRx",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "Flash Trade",
+      "bursts": [
+        {
+          "windowStart": 1775140290,
+          "windowEnd": 1775745090,
+          "count": 8,
+          "events": [
+            {
+              "ts": 1775140290,
+              "sig": "4bgpKvbyBSnK39mQ1dn6vpqw3iJMEnH3NNNbozGdEK1vBRuRLoceBEcksRNv7t4MxdbxyPHDMgsPf8nfX1AwYFrW",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775140428,
+              "sig": "3ZhJc5DXruJcWRFykMuB5XRgR61wt4PgAk6VJ6FNBNzntGYLrgmyddfrhgkWxfiMBeVaY94Mjxk1Ep6SK9PXWUTj",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775140607,
+              "sig": "58gg3z1ZU5NfDruPnGqP7HNnKaPtM6sQfbFc18KtLBjvpV3UMSFfbyZYVpPoprc3wjwemsLqhQhZDue6nu8neovG",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775140776,
+              "sig": "3UffNnLVniBsJRnZznUiGL6rbjni7uTERBqHQwjjKWmZ7SaLKDxuz73QB2TxSpZ9ygdpHxGotsQNpsAxrLAUFFBL",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775140970,
+              "sig": "BWodNCvUvPGgtZoFyuuKtr5hzik6q1G78dn9HCTCVWrZEYSj16EsJFEZm7rk8rinzKQ7RcFmk67d5AVqCUz53qA",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775141049,
+              "sig": "4dGPPcLYCYPs7hJUhfRfzGCoQtcsDWhcERtzRWTVtWx2rsYg2MdHTnJo9wH9yGa3dwCJF4BhehnGf9KJjivbZJAQ",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775141579,
+              "sig": "4ShtPF72iabavmutY5xScf5ruia9nNUGoSpRk12f5Bm36Rwr7EqRa7yxwL2uimhu8AFnY4Y7zVSL6AnCWsUyPRE",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775175572,
+              "sig": "3aPPXTmoxwvkVXqC7ZWmRa7UbMSAa6krWPQZmJuMC6vjDBd9EFMbnncp989HoxV6FrcGDfn3reHuoZ1tfdUD8uXv",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "Onre Finance",
+      "bursts": [
+        {
+          "windowStart": 1775222490,
+          "windowEnd": 1775827290,
+          "count": 3,
+          "events": [
+            {
+              "ts": 1775222490,
+              "sig": "2LbR5in9SKDGNNGsnXgQfyBpenuEh9BoFLPXZ5CECjq7dAxKKx9WeouyaModWFQ9czJdV8oBxtqWa8Cu67Tt5h2S",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775222719,
+              "sig": "484D8DQt48y427L4vrmfBV87DFaedQvcguPVj8wFEZgU5Rrm5phSpYvZzZJsQCCJp6RDCNuhBYHR9RnNBmcLhPaZ",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775667321,
+              "sig": "5id3WGD2Gz23onWLxgaSDXHaKrM38jvn54KEHqTLbMDRdBYyybCmCJfHxymGfdyPNse8W2B3ZiGqFWioqHHzwDwW",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "MetaDAO",
+      "bursts": [
+        {
+          "windowStart": 1775084010,
+          "windowEnd": 1775688810,
+          "count": 3,
+          "events": [
+            {
+              "ts": 1775084010,
+              "sig": "42tpAXs2zx3BPkqMN8DumVf9tp35NYiV4rP2mHniGSJqVDnK5yFdT6LLi1SgXk5UdUoa6Y7qzr32ZbMncXJzQopU",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775084101,
+              "sig": "2PeJUQ9ESEsLQg9hYVEEvBkHq3xfewjkrnVEsyW2nCPVCftrFUNoXY1oGmGgUacsWhEABGxRmxKme6AFUUn3Yns6",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1775084183,
+              "sig": "B39qJDvrgYrPXRBKLHvjJgkGjTm2ptWj3LwkJ6sbG2ELrRQT2St3KJ2swrdtxLwPGKGCe2FP6c7RDe3ZZasbtSa",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "Voltr",
+      "bursts": [
+        {
+          "windowStart": 1776176844,
+          "windowEnd": 1776781644,
+          "count": 4,
+          "events": [
+            {
+              "ts": 1776176844,
+              "sig": "5dTpWaVnVJ7GbmPD3Tjw5ZR9zUffJoZNk8NPBG8Axdw9cpn3HG8NAWX45hUfvDEi2rBEyR6BRyXEdEXQSqzVU9NL",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1776177368,
+              "sig": "5r1xmXrnkPpMfnh4wfsCNTpYb4ALxaUY4Hzvzzh37C9z3bk9e6Mtd1VXSjobMF7xE1bEtmXFEVLqpZKRjwsZspHu",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1776177500,
+              "sig": "2M3fhZtMW7GCCqEbUzdTsVTE25RmDhsF6W9e8L66wq3BfkhVn2Cw1u3ac9nHAZq3fZbny4BZoeG2QYovKSyHi922",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1776213662,
+              "sig": "2fWP6eKEaKQEh6epMSpRKWRtjE2ybNiWPkeT6oJGoVUeVzra3aF4NCdmbZMbwFLLoG8zWmHvp7keXz2sjXAdaBqq",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "protocol": "LayerZero OFT",
+      "bursts": [
+        {
+          "windowStart": 1769386605,
+          "windowEnd": 1769991405,
+          "count": 5,
+          "events": [
+            {
+              "ts": 1769386605,
+              "sig": "2LD3Da4YjQwHfJGVsM8qjLDZfkBR1eoBdaixYq8L7w2r8TaiXyHcLF9dQaFDAWpa8rLoHZtZZw3FSkEqk2jjtEjY",
+              "instruction": "MultisigCreateV2"
+            },
+            {
+              "ts": 1769387012,
+              "sig": "4Xm8xJZA52Hi8Q5g8kBF2jF3VYrsvP6ibtpVPsVcU16KDk6YVZSJeHMiYLmGYopuVRGzDzNdfMRvaPQ4uVotYydq",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1769387483,
+              "sig": "4Czc43DY6onFmqsPDQALfHriaDJ1VQhFyNQj5jdzBiGkjhWkwz6tbeE4gFRz3RAsYErbRb5MkP7wBWsarnGY8AME",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1769387494,
+              "sig": "3RzjnG3MpPPgNNaQxdMHrcZdkzw4SUGLGCwMWVbq5EJMqtSgC6fL8EW2wZtm4NSat7aLU5T5J7gCvA6xqGmAMw39",
+              "instruction": "ConfigTransactionExecute"
+            },
+            {
+              "ts": 1769387561,
+              "sig": "2jfP8mn5q6arkKht9xoa7fpkcwaspDorHKGbJZZQdHKCJoY7QYWKzKH3giL2bZnov7HgG52U7WTfEZAxqJZBiGfC",
+              "instruction": "ConfigTransactionExecute"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

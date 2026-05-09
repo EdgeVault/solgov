@@ -1,0 +1,25 @@
+{
+  "protocol": "Exponent",
+  "programId": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+  "auditedAt": "2026-04-23",
+  "methodology": "Reviewed forensics profile + public docs. Exponent is a yield/points-trading protocol with interest-rate markets, not an order-matched perpetual DEX.",
+  "findings": {
+    "permitsSameOwnerSelfMatch": "n/a - not a matched-order venue",
+    "evidence": {
+      "architecturalNote": "Exponent runs yield and point markets. Users take leveraged positions on yield/points rather than placing matched orders against other users. There is no haircut-residual socialisation surface in the Percolator F7 sense.",
+      "programImmutable": "Exponent Core program is IMMUTABLE (no upgrade authority). Any F7-class vulnerability in the matching logic cannot be hotfixed if found."
+    },
+    "hasInsuranceFund": "unknown",
+    "hasSocialisation": "unclear - if a counterparty can't pay, losses may flow to LP vault (pool absorption model) rather than via F7-style residual",
+    "residualClaimSurface": "none documented",
+    "classification": "GREEN (likely, pending deeper review - not a matched-order perp architecture)",
+    "confidence": "medium - architecture is yield/points, not traditional perps"
+  },
+  "notes": [
+    "Protocol Core is IMMUTABLE. Any structural defence (or absence) is permanent.",
+    "Worth a deeper review of yield/points specific attack surfaces (oracle manipulation on yield indexes, point-allocation race conditions) but those are not F7-class."
+  ],
+  "sourceUrls": [
+    "https://docs.exponent.finance/"
+  ]
+}

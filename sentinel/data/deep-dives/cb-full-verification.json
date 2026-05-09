@@ -1,0 +1,238 @@
+{
+  "verifiedAt": "2026-04-20T18:49:30.083Z",
+  "summary": {
+    "total": 28,
+    "t22": 2,
+    "hookExt": 2,
+    "hookActive": 0,
+    "kelpClass": 4,
+    "freezePresent": 10,
+    "renounced": 9
+  },
+  "details": [
+    {
+      "symbol": "SolvBTC",
+      "owner": "spl-token",
+      "mintAuthType": "spl-multisig",
+      "mintAuthMn": "1/2",
+      "freezePresent": true,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "zBTC",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair-unfunded",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "zenBTC",
+      "owner": "spl-token",
+      "mintAuthType": "spl-multisig",
+      "mintAuthMn": "1/2",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "xBTC",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair",
+      "mintAuthMn": "n/a",
+      "freezePresent": true,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "tBTC",
+      "owner": "spl-token",
+      "mintAuthType": "program-pda:Gj93RRt6",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "cbBTC",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair",
+      "mintAuthMn": "n/a",
+      "freezePresent": true,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "JitoSOL",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "mSOL",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair-unfunded",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "bSOL",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "INF",
+      "owner": "spl-token",
+      "mintAuthType": "program-pda:5ocnV1qi",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "JupSOL",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair-unfunded",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "USDC",
+      "owner": "spl-token",
+      "mintAuthType": "spl-multisig",
+      "mintAuthMn": "2/4",
+      "freezePresent": true,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "USDT",
+      "owner": "spl-token",
+      "mintAuthType": "spl-multisig",
+      "mintAuthMn": "2/3",
+      "freezePresent": true,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "PYUSD",
+      "owner": "token-2022",
+      "mintAuthType": "token2022-multisig",
+      "mintAuthMn": "1/4",
+      "freezePresent": true,
+      "hookState": "extension-only (no programId set)"
+    },
+    {
+      "symbol": "USDS",
+      "owner": "spl-token",
+      "mintAuthType": "program-pda:SKYTAiJR",
+      "mintAuthMn": "n/a",
+      "freezePresent": true,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "USDG",
+      "owner": "token-2022",
+      "mintAuthType": "token2022-multisig",
+      "mintAuthMn": "1/4",
+      "freezePresent": true,
+      "hookState": "extension-only (no programId set)"
+    },
+    {
+      "symbol": "JupUSD",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair-unfunded",
+      "mintAuthMn": "n/a",
+      "freezePresent": true,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "HUMA",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "JUP",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "DRIFT",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "ORCA",
+      "owner": "spl-token",
+      "mintAuthType": "plain-keypair",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "RAY",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "PYTH",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "$WIF",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "TRUMP",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "MELANIA",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "PLUME",
+      "owner": "spl-token",
+      "mintAuthType": "program-pda:HRPXLCqs",
+      "mintAuthMn": "n/a",
+      "freezePresent": true,
+      "hookState": "n/a"
+    },
+    {
+      "symbol": "HUMA",
+      "owner": "spl-token",
+      "mintAuthType": "renounced",
+      "mintAuthMn": "n/a",
+      "freezePresent": false,
+      "hookState": "n/a"
+    }
+  ]
+}

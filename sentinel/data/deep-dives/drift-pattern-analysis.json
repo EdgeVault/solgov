@@ -1,0 +1,585 @@
+{
+  "Drift": {
+    "flags": [
+      "ZERO_REJECTION",
+      "CONFIG_AUTHORITY_BYPASS"
+    ],
+    "riskLevel": 7,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 0,
+    "activeSigners": 4,
+    "totalSigners": 4,
+    "rejectionRate": 0,
+    "approvals": 41,
+    "rejections": 0
+  },
+  "Pumpfun": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 9,
+    "activeSigners": 4,
+    "totalSigners": 13,
+    "rejectionRate": 6,
+    "approvals": 178,
+    "rejections": 12
+  },
+  "Magic Eden": {
+    "flags": [
+      "ZERO_REJECTION",
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 4,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 3,
+    "activeSigners": 2,
+    "totalSigners": 5,
+    "rejectionRate": 0,
+    "approvals": 100,
+    "rejections": 0
+  },
+  "Exponent": {
+    "flags": [
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 1,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 1,
+    "activeSigners": 4,
+    "totalSigners": 5,
+    "rejectionRate": 1,
+    "approvals": 323,
+    "rejections": 3
+  },
+  "Nosana": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 4,
+    "activeSigners": 0,
+    "totalSigners": 4,
+    "rejectionRate": 1,
+    "approvals": 137,
+    "rejections": 1
+  },
+  "Lulo": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 3,
+    "activeSigners": 3,
+    "totalSigners": 6,
+    "rejectionRate": 4,
+    "approvals": 243,
+    "rejections": 9
+  },
+  "Stabble": {
+    "flags": [
+      "HOT_WALLET",
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 3,
+    "hotWalletCount": 2,
+    "bridgeCount": 0,
+    "ghostSigners": 3,
+    "activeSigners": 6,
+    "totalSigners": 9,
+    "rejectionRate": 2,
+    "approvals": 611,
+    "rejections": 12
+  },
+  "Hylo": {
+    "flags": [
+      "HOT_WALLET",
+      "MAJORITY_GHOST",
+      "SINGLE_PIPELINE"
+    ],
+    "riskLevel": 5,
+    "hotWalletCount": 2,
+    "bridgeCount": 0,
+    "ghostSigners": 8,
+    "activeSigners": 2,
+    "totalSigners": 10,
+    "rejectionRate": 6,
+    "approvals": 472,
+    "rejections": 31
+  },
+  "Loopscale": {
+    "flags": [
+      "HOT_WALLET",
+      "GHOST_SIGNERS",
+      "SINGLE_PIPELINE"
+    ],
+    "riskLevel": 6,
+    "hotWalletCount": 3,
+    "bridgeCount": 0,
+    "ghostSigners": 3,
+    "activeSigners": 6,
+    "totalSigners": 9,
+    "rejectionRate": 3,
+    "approvals": 490,
+    "rejections": 16
+  },
+  "Orca": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 11,
+    "activeSigners": 2,
+    "totalSigners": 13,
+    "rejectionRate": 2,
+    "approvals": 63,
+    "rejections": 1
+  },
+  "Marginfi": {
+    "flags": [
+      "HOT_WALLET",
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 3,
+    "hotWalletCount": 3,
+    "bridgeCount": 0,
+    "ghostSigners": 5,
+    "activeSigners": 13,
+    "totalSigners": 18,
+    "rejectionRate": 3,
+    "approvals": 566,
+    "rejections": 18
+  },
+  "Kamino": {
+    "flags": [
+      "ZERO_REJECTION",
+      "HOT_WALLET"
+    ],
+    "riskLevel": 4,
+    "hotWalletCount": 1,
+    "bridgeCount": 0,
+    "ghostSigners": 0,
+    "activeSigners": 7,
+    "totalSigners": 7,
+    "rejectionRate": 0,
+    "approvals": 236,
+    "rejections": 0
+  },
+  "Jupiter Perps": {
+    "flags": [
+      "ZERO_REJECTION"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 0,
+    "activeSigners": 6,
+    "totalSigners": 6,
+    "rejectionRate": 0,
+    "approvals": 12,
+    "rejections": 0
+  },
+  "Jupiter Lend": {
+    "flags": [
+      "ZERO_REJECTION",
+      "HOT_WALLET",
+      "BRIDGE_ACTIVITY",
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 8,
+    "hotWalletCount": 1,
+    "bridgeCount": 1,
+    "ghostSigners": 3,
+    "activeSigners": 5,
+    "totalSigners": 8,
+    "rejectionRate": 0,
+    "approvals": 106,
+    "rejections": 0
+  },
+  "Huma": {
+    "flags": [
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 1,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 2,
+    "activeSigners": 5,
+    "totalSigners": 7,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "Solstice": {
+    "flags": [
+      "HOT_WALLET",
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 1,
+    "bridgeCount": 0,
+    "ghostSigners": 2,
+    "activeSigners": 5,
+    "totalSigners": 7,
+    "rejectionRate": 1,
+    "approvals": 372,
+    "rejections": 5
+  },
+  "Switchboard": {
+    "flags": [
+      "HOT_WALLET",
+      "BRIDGE_ACTIVITY",
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 8,
+    "hotWalletCount": 2,
+    "bridgeCount": 1,
+    "ghostSigners": 7,
+    "activeSigners": 0,
+    "totalSigners": 7,
+    "rejectionRate": 4,
+    "approvals": 124,
+    "rejections": 5
+  },
+  "Titan": {
+    "flags": [
+      "HOT_WALLET",
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 3,
+    "bridgeCount": 0,
+    "ghostSigners": 2,
+    "activeSigners": 7,
+    "totalSigners": 9,
+    "rejectionRate": 1,
+    "approvals": 703,
+    "rejections": 10
+  },
+  "Solayer": {
+    "flags": [
+      "HOT_WALLET",
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 5,
+    "hotWalletCount": 2,
+    "bridgeCount": 0,
+    "ghostSigners": 6,
+    "activeSigners": 0,
+    "totalSigners": 6,
+    "rejectionRate": 9,
+    "approvals": 30,
+    "rejections": 3
+  },
+  "Onre Finance": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 6,
+    "activeSigners": 2,
+    "totalSigners": 8,
+    "rejectionRate": 6,
+    "approvals": 689,
+    "rejections": 42
+  },
+  "MetaDAO": {
+    "flags": [
+      "GHOST_SIGNERS",
+      "OFF_HOURS_CONFIG"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 5,
+    "activeSigners": 10,
+    "totalSigners": 15,
+    "rejectionRate": 5,
+    "approvals": 463,
+    "rejections": 23
+  },
+  "Helium": {
+    "flags": [
+      "GHOST_SIGNERS",
+      "SINGLE_PIPELINE"
+    ],
+    "riskLevel": 3,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 2,
+    "activeSigners": 6,
+    "totalSigners": 8,
+    "rejectionRate": 13,
+    "approvals": 187,
+    "rejections": 27
+  },
+  "Voltr": {
+    "flags": [
+      "ZERO_REJECTION"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 0,
+    "activeSigners": 4,
+    "totalSigners": 4,
+    "rejectionRate": 0,
+    "approvals": 22,
+    "rejections": 0
+  },
+  "Tessera V": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 4,
+    "activeSigners": 4,
+    "totalSigners": 8,
+    "rejectionRate": 11,
+    "approvals": 65,
+    "rejections": 8
+  },
+  "LayerZero OFT": {
+    "flags": [
+      "THRESHOLD_1"
+    ],
+    "riskLevel": 3,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 0,
+    "activeSigners": 2,
+    "totalSigners": 2,
+    "rejectionRate": 0,
+    "approvals": 10,
+    "rejections": 0
+  },
+  "SolvBTC": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 4,
+    "activeSigners": 0,
+    "totalSigners": 4,
+    "rejectionRate": 2,
+    "approvals": 48,
+    "rejections": 1
+  },
+  "GMSOL": {
+    "flags": [
+      "GHOST_SIGNERS",
+      "SINGLE_PIPELINE"
+    ],
+    "riskLevel": 3,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 5,
+    "activeSigners": 6,
+    "totalSigners": 11,
+    "rejectionRate": 6,
+    "approvals": 551,
+    "rejections": 35
+  },
+  "Ore": {
+    "flags": [
+      "HOT_WALLET",
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 1,
+    "bridgeCount": 0,
+    "ghostSigners": 1,
+    "activeSigners": 2,
+    "totalSigners": 3,
+    "rejectionRate": 2,
+    "approvals": 621,
+    "rejections": 12
+  },
+  "GMSOL Deploy": {
+    "flags": [
+      "HOT_WALLET"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 2,
+    "bridgeCount": 0,
+    "ghostSigners": 0,
+    "activeSigners": 2,
+    "totalSigners": 2,
+    "rejectionRate": 11,
+    "approvals": 17,
+    "rejections": 2
+  },
+  "Carrot": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 2,
+    "activeSigners": 0,
+    "totalSigners": 2,
+    "rejectionRate": 8,
+    "approvals": 160,
+    "rejections": 13
+  },
+  "DefiTuna": {
+    "flags": [
+      "HOT_WALLET",
+      "GHOST_SIGNERS",
+      "SINGLE_PIPELINE"
+    ],
+    "riskLevel": 6,
+    "hotWalletCount": 2,
+    "bridgeCount": 0,
+    "ghostSigners": 2,
+    "activeSigners": 4,
+    "totalSigners": 6,
+    "rejectionRate": 10,
+    "approvals": 323,
+    "rejections": 36
+  },
+  "Sanctum": {
+    "flags": [
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 1,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 5,
+    "activeSigners": 7,
+    "totalSigners": 12,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "Jupiter Agg": {
+    "flags": [
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 1,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 5,
+    "activeSigners": 6,
+    "totalSigners": 11,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "Raydium": {
+    "flags": [
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 1,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 1,
+    "activeSigners": 2,
+    "totalSigners": 3,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "Tensor": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 6,
+    "activeSigners": 0,
+    "totalSigners": 6,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "Phoenix DEX": {
+    "flags": [
+      "GHOST_SIGNERS"
+    ],
+    "riskLevel": 1,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 2,
+    "activeSigners": 4,
+    "totalSigners": 6,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "Meteora": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 7,
+    "activeSigners": 5,
+    "totalSigners": 12,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "Parcl": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 4,
+    "activeSigners": 3,
+    "totalSigners": 7,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "Marinade": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 12,
+    "activeSigners": 0,
+    "totalSigners": 12,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  },
+  "SPL Stake Pool": {
+    "flags": [
+      "MAJORITY_GHOST"
+    ],
+    "riskLevel": 2,
+    "hotWalletCount": 0,
+    "bridgeCount": 0,
+    "ghostSigners": 10,
+    "activeSigners": 0,
+    "totalSigners": 10,
+    "rejectionRate": 0,
+    "approvals": 0,
+    "rejections": 0
+  }
+}

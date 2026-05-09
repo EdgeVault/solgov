@@ -1,0 +1,8 @@
+{
+  "protocol":"Photon","researchedAt":"2026-04-17T23:00:00Z","researcher":"manual stub",
+  "sources":[],"programs":[],
+  "multisigs":[{"address":"9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6","role":"Photon single-signer authority","alreadyTracked":true}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Single-signer authority.","gaps":["Likely a trading terminal - may not run own on-chain programs"],"confidence":"low",
+  "notes":"Photon is known as a Solana trading terminal."
+}

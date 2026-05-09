@@ -1,0 +1,78 @@
+{
+  "protocol": "Tensor",
+  "researchedAt": "2026-04-17T22:05:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "github",
+      "url": "https://github.com/tensor-hq"
+    },
+    {
+      "kind": "docs",
+      "url": "https://docs.tensor.trade/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN",
+      "name": "TensorSwap",
+      "role": "NFT AMM / bid pool program",
+      "source": "Tensor widely-published ID",
+      "alreadyTracked": false,
+      "confidence": "medium",
+      "needsRpcVerify": [
+        "confirm ID via GitHub"
+      ],
+      "upgradeAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp",
+      "name": "Tensor cNFT marketplace (TComp)",
+      "role": "compressed NFT trading",
+      "source": "Tensor widely-published ID",
+      "alreadyTracked": false,
+      "confidence": "medium",
+      "upgradeAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "TLoCKic2wGJm7VhZKumih4Lz35StYnLr8NqVWuULBYz",
+      "name": "TLock (Tensorians)",
+      "role": "NFT locking / Tensorians program",
+      "source": "Tensor community references",
+      "alreadyTracked": false,
+      "confidence": "low",
+      "needsRpcVerify": [
+        "confirm ID"
+      ],
+      "upgradeAuthority": null,
+      "upgradeAuthorityKind": "IMMUTABLE - not upgradeable"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "3djJ66VVaG7si2wsh9isspeZX13meHDvwBzuPGCowY4Z",
+      "role": "Tensor governance (Squads V3)",
+      "threshold": "? (V3)",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "parentMultisig": "3djJ66VVaG7si2wsh9isspeZX13meHDvwBzuPGCowY4Z",
+      "vaultIndex": "unknown",
+      "notes": "Squads V3 - uses tracked Tensor multisig - discovered via RPC concentration sweep April 17 2026",
+      "alreadyTracked": false
+    }
+  ],
+  "governanceModel": "Squads V3 multisig. Multiple programs (TSwap, TComp, TLock). Governance chain not in local data.",
+  "gaps": [
+    "Confirm all Tensor program IDs via official docs (docs.tensor.trade)",
+    "Upgrade authority for each Tensor program - RPC needed"
+  ],
+  "confidence": "low",
+  "notes": "Tensor program IDs pulled from community memory; confidence is medium-low. Primary docs not fetched successfully. Flagged for verification."
+}

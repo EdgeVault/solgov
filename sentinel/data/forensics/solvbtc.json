@@ -1,0 +1,53 @@
+{
+  "protocol": "SolvBTC",
+  "researchedAt": "2026-04-17T22:20:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.solv.finance/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz",
+      "name": "SolvBTC program",
+      "role": "wrapped BTC on Solana",
+      "alreadyTracked": true,
+      "source": "verified-programs-governance.json - vault BsF2mR9brTd7u owns it",
+      "needsRpcVerify": [
+        "confirm via docs/GitHub"
+      ],
+      "upgradeAuthority": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE",
+      "role": "SolvBTC multisig (tracked)",
+      "threshold": "3/5",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+      "parentMultisig": "HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz"
+      ],
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Single Squads V4 3/5, 0 timelock, autonomous. 1 program.",
+  "gaps": [
+    "Confirm program ID via Solv docs/GitHub",
+    "Enumerate auxiliary SolvBTC programs if any (LST wrappers, bridge endpoints)"
+  ],
+  "confidence": "medium"
+}

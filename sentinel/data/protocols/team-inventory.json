@@ -1,0 +1,931 @@
+{
+  "computedAt": "2026-04-17T17:48:21.530Z",
+  "source": "verified-programs-governance.json + tracked-multisigs.json, no RPC",
+  "labelMismatches": [
+    {
+      "vault": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "claimedTeam": "Kamino",
+      "actualParent": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+      "actualTeam": "GMSOL"
+    },
+    {
+      "vault": "G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5",
+      "claimedTeam": "Kamino",
+      "actualParent": "HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC",
+      "actualTeam": "LayerZero"
+    },
+    {
+      "vault": "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY",
+      "claimedTeam": "Switchboard",
+      "actualParent": "5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk",
+      "actualTeam": "Kamino"
+    },
+    {
+      "vault": "9ECeczLtFZDYE3NX6G7uNw5BUGjoJAu1kFyEihA5hMaM",
+      "claimedTeam": "Meteora",
+      "actualParent": "EfMUASGwCsPBafiPi8rwdZfUJSUt7pxAoxayR39PVpMr",
+      "actualTeam": "Ondo"
+    },
+    {
+      "vault": "5JKhn62nyvAE7aRb5zksXiovDEPX6mAcbdxFsJEdVmbw",
+      "claimedTeam": "Parcl",
+      "actualParent": "DK37X6PNtzS4oiJAWgJ364NkUq6us3gf4u7GVRdezqvW",
+      "actualTeam": "Ondo"
+    },
+    {
+      "vault": "3hiQADryzHeV6gQa8gojLV5EHNAKXdujtTX2u8evVh1Z",
+      "claimedTeam": "Solayer",
+      "actualParent": "9dUjjx2Vi7GbBtuxN8N71MEFuD6Yn3QTtwLTYYjvZnLr",
+      "actualTeam": "Berrie"
+    }
+  ],
+  "teams": {
+    "Drift": [
+      {
+        "address": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+        "threshold": 3,
+        "members": 5,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Drift"
+      },
+      {
+        "address": "BBC5gSPh71YB2eUXdCqvkmL6kj6YDkUQJpX997qXUt2Q",
+        "threshold": 3,
+        "members": 5,
+        "timeLock": 0,
+        "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+        "source": "tracked",
+        "reachedVia": [
+          "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9"
+        ],
+        "programs": 1,
+        "programIds": [
+          "J1TnP8zvVxbtF5KFp5xRmWuvG9McnhzmBd9XGfCyuxFP"
+        ],
+        "role": "Drift (historical BBC5g)"
+      },
+      {
+        "address": "Er82vnftZhA2YrRZyuGpw1an3Ho585eYCAxNv2U9F2uY",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Drift (historical Er82vnft)"
+      },
+      {
+        "address": "2LW6PSEjp81xSEttWwXDB6Etb1eKdhYPbFEojYbyhx88",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Drift (historical 2LW6PS exploited)"
+      },
+      {
+        "address": "61ApQqLoWVfTuzua9c22SWMj78RGv77x6Z2kzcJVGNjP",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Drift (historical 61ApQqLoW)"
+      },
+      {
+        "address": "GMNVGNk8Kso1cjre4Wx7zx2knP4uKLNVtpfay2FEEaAi",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Drift (historical GMNVGNk8)"
+      }
+    ],
+    "Pumpfun": [
+      {
+        "address": "2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Pumpfun"
+      }
+    ],
+    "Magic": [
+      {
+        "address": "J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE",
+        "threshold": 2,
+        "members": 6,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Magic Eden"
+      }
+    ],
+    "Exponent": [
+      {
+        "address": "51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH",
+        "threshold": 3,
+        "members": 4,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Exponent"
+      }
+    ],
+    "Nosana": [
+      {
+        "address": "ktKWwDt5J8NFMi5jQNRRBDKAhimU5tnrGCcXuYJmxqE",
+        "threshold": 2,
+        "members": 3,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Nosana"
+      }
+    ],
+    "Lulo": [
+      {
+        "address": "8Sr4rQJL2aQT3EL97mbrk1T9VMw4pCS2mxMPp2QBzHQq",
+        "threshold": 2,
+        "members": 5,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Lulo"
+      }
+    ],
+    "Stabble": [
+      {
+        "address": "AFRN2ECAY1YTbfkXD7yvoc1iaxYdt5BdyyqyPRsrHaK2",
+        "threshold": 2,
+        "members": 3,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Stabble"
+      }
+    ],
+    "Hylo": [
+      {
+        "address": "2z3t2eBz7VL39Q3vEvaemd5mhT9XLoFofEH2cXvwCJvb",
+        "threshold": 3,
+        "members": 9,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Hylo"
+      }
+    ],
+    "Loopscale": [
+      {
+        "address": "C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk",
+        "threshold": 3,
+        "members": 8,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Loopscale"
+      },
+      {
+        "address": "NG2KqHb4SE1HmqSf1GfJHorKGVNcYfgVSdwPPvn7Lsq",
+        "threshold": 2,
+        "members": 5,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P"
+        ],
+        "programs": 2,
+        "programIds": [
+          "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF",
+          "jg82rRko6Hu1KqZ47RR95Jrq1cfqBhaAPXStseajmfQ"
+        ],
+        "role": "Loopscale (program admin)"
+      }
+    ],
+    "Orca": [
+      {
+        "address": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+        "threshold": 3,
+        "members": 10,
+        "timeLock": 86400,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV"
+        ],
+        "programs": 1,
+        "programIds": [
+          "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc"
+        ],
+        "role": "Orca"
+      }
+    ],
+    "Marginfi": [
+      {
+        "address": "7FCPipJWVbPbdHymVt1gJYwKciakkJz5GahdQySemvHk",
+        "threshold": 7,
+        "members": 13,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Marginfi"
+      },
+      {
+        "address": "9CiwEGczicmjioXiPsaJV92j4UXG1qMLYLQTxej4U7tr",
+        "threshold": 4,
+        "members": 6,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "Gy7pgCryzquDBHkpGkJGBRAyLpdmdqkifjLdKMoS1GEE"
+        ],
+        "programs": 1,
+        "programIds": [
+          "CAW7771FWrfBFtxAUrSw38fBVtKHns9WW9KCw65vnVsH"
+        ],
+        "role": "Marginfi (program admin)"
+      }
+    ],
+    "Kamino": [
+      {
+        "address": "6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM",
+        "threshold": 5,
+        "members": 10,
+        "timeLock": 43200,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Kamino"
+      },
+      {
+        "address": "5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk",
+        "threshold": 5,
+        "members": 10,
+        "timeLock": 43200,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY"
+        ],
+        "programs": 1,
+        "programIds": [
+          "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr"
+        ],
+        "role": "Kamino KFarms"
+      }
+    ],
+    "Jupiter": [
+      {
+        "address": "AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm",
+        "threshold": 4,
+        "members": 7,
+        "timeLock": 86400,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Jupiter Perps"
+      },
+      {
+        "address": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+        "threshold": 4,
+        "members": 7,
+        "timeLock": 43200,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ"
+        ],
+        "programs": 1,
+        "programIds": [
+          "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS"
+        ],
+        "role": "Jupiter Lend"
+      },
+      {
+        "address": "7ZyDFzet6sKgZLN4D89JLfo7chu2n7nYdkFt5RCFk8Sf",
+        "threshold": 4,
+        "members": 8,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Jupiter Agg"
+      }
+    ],
+    "Huma": [
+      {
+        "address": "uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX",
+        "threshold": 2,
+        "members": 5,
+        "timeLock": 43200,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Huma"
+      }
+    ],
+    "Solstice": [
+      {
+        "address": "AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf",
+        "threshold": 3,
+        "members": 5,
+        "timeLock": 86400,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Solstice"
+      },
+      {
+        "address": "BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE",
+        "threshold": 2,
+        "members": 3,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9"
+        ],
+        "programs": 1,
+        "programIds": [
+          "7FaMyGiTVdjm8dd3PxpjjCX15ibbmuE1zWVFX2PHxYUK"
+        ],
+        "role": "Solstice (program admin)"
+      }
+    ],
+    "Switchboard": [
+      {
+        "address": "93RQfY6VHRkqXBCEhMY5u92bCGp428DTzqZUEA2Hjr9h",
+        "threshold": 3,
+        "members": 7,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Switchboard"
+      }
+    ],
+    "Titan": [
+      {
+        "address": "F1WZezmt2J1dSsXrQWrS2Umn9CYzPPR2eP3sunZrMX29",
+        "threshold": 3,
+        "members": 8,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Titan"
+      }
+    ],
+    "Solayer": [
+      {
+        "address": "5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp",
+        "threshold": 3,
+        "members": 6,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Solayer"
+      }
+    ],
+    "Flash": [
+      {
+        "address": "Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF",
+        "threshold": 3,
+        "members": 7,
+        "timeLock": 3600,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Flash Trade"
+      },
+      {
+        "address": "GPuMML3FeJXTr948CvTwSYANHm74RSW5iUibw5T6vSfa",
+        "threshold": 3,
+        "members": 5,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda"
+        ],
+        "programs": 1,
+        "programIds": [
+          "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE"
+        ],
+        "role": "Flash Trade (program admin)"
+      }
+    ],
+    "Wick": [
+      {
+        "address": "8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA",
+        "threshold": 3,
+        "members": 5,
+        "timeLock": 86400,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Wick"
+      }
+    ],
+    "Onre": [
+      {
+        "address": "922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Onre Finance"
+      }
+    ],
+    "MetaDAO": [
+      {
+        "address": "8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "MetaDAO"
+      }
+    ],
+    "Helium": [
+      {
+        "address": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+        "threshold": 3,
+        "members": 6,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U"
+        ],
+        "programs": 1,
+        "programIds": [
+          "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs"
+        ],
+        "role": "Helium"
+      },
+      {
+        "address": "1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz",
+        "threshold": 3,
+        "members": 9,
+        "timeLock": 10800,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ"
+        ],
+        "programs": 1,
+        "programIds": [
+          "omnixgS8fnqHfCcTGKWj6JtKjzpJZ1Y5y9pyFkQDkYE"
+        ],
+        "role": "Helium (Omnix admin)"
+      }
+    ],
+    "Voltr": [
+      {
+        "address": "5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Voltr"
+      }
+    ],
+    "Tessera": [
+      {
+        "address": "3JW5VWy76TBT5NBbdyrWU6i3fz8XecDko7viGeFSKw7e",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Tessera V"
+      }
+    ],
+    "LayerZero": [
+      {
+        "address": "9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN",
+        "threshold": 1,
+        "members": 2,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31"
+        ],
+        "programs": 1,
+        "programIds": [
+          "219m42qCuVirVvWs5GnkuX4aWFx5pX6D9RSTE1vsV5WS"
+        ],
+        "role": "LayerZero OFT"
+      },
+      {
+        "address": "HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC",
+        "threshold": 4,
+        "members": 6,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5"
+        ],
+        "programs": 1,
+        "programIds": [
+          "A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN"
+        ],
+        "role": "LayerZero OFT (devtools admin)"
+      }
+    ],
+    "SolvBTC": [
+      {
+        "address": "HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE",
+        "threshold": 3,
+        "members": 5,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM"
+        ],
+        "programs": 1,
+        "programIds": [
+          "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz"
+        ],
+        "role": "SolvBTC"
+      }
+    ],
+    "GMSOL": [
+      {
+        "address": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+        "threshold": 4,
+        "members": 7,
+        "timeLock": 600,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA"
+        ],
+        "programs": 4,
+        "programIds": [
+          "2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc",
+          "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo",
+          "GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg",
+          "LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8"
+        ],
+        "role": "GMSOL"
+      },
+      {
+        "address": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+        "threshold": 2,
+        "members": 3,
+        "timeLock": 3600,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ"
+        ],
+        "programs": 6,
+        "programIds": [
+          "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH",
+          "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj",
+          "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2",
+          "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR",
+          "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ",
+          "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd"
+        ],
+        "role": "GMSOL Deploy"
+      }
+    ],
+    "Ore": [
+      {
+        "address": "CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo",
+        "threshold": 2,
+        "members": 4,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV"
+        ],
+        "programs": 3,
+        "programIds": [
+          "3jSkUuYBoJzQPMEzTvkDFXCZUBksPamrVhrnHR9igu2X",
+          "LStwN2E5Uw6MCtuxHRLhy8RY9hxqW2XRpLzettb696y",
+          "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv"
+        ],
+        "role": "Ore"
+      }
+    ],
+    "Carrot": [
+      {
+        "address": "BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Carrot"
+      },
+      {
+        "address": "DrFv23CkTxu84aAYCK7cvUP3zBvFGz2ruuCXuuyPZWbV",
+        "threshold": 2,
+        "members": 2,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV"
+        ],
+        "programs": 2,
+        "programIds": [
+          "Fk1RpqsfeWt8KnFCTW9NQVdVxYvxuqjGn6iPB9wrmM8h",
+          "JAZWcGrpSWNPTBj8QtJ9UyQqhJCDhG9GJkDeMf5NQBiq"
+        ],
+        "role": "Carrot (program admin)"
+      }
+    ],
+    "DefiTuna": [
+      {
+        "address": "7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "DefiTuna"
+      },
+      {
+        "address": "5Sjxeibf9PmN2WG23nhfJVEJ8paPKfpK7pQ9oyfQkrZy",
+        "threshold": 2,
+        "members": 3,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "87VfCnQ4d7XuZwriJAK7yADmqzrJQBx9FYMqCwdue5kv"
+        ],
+        "programs": 1,
+        "programIds": [
+          "par1tyqusak2f2DXg9RHv78SVHNWXkJLSbtJZQSuWjV"
+        ],
+        "role": "DefiTuna (program admin)"
+      }
+    ],
+    "Sanctum": [
+      {
+        "address": "AApfiPZgV5MoPU691GwhdDhq5sKEMMH1Uh8S4Z9xvP6b",
+        "threshold": 6,
+        "members": 11,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Sanctum"
+      }
+    ],
+    "Raydium": [
+      {
+        "address": "EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm",
+        "threshold": 2,
+        "members": 3,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Raydium"
+      }
+    ],
+    "Tensor": [
+      {
+        "address": "3djJ66VVaG7si2wsh9isspeZX13meHDvwBzuPGCowY4Z",
+        "threshold": 4,
+        "members": 9,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Tensor"
+      }
+    ],
+    "Phoenix": [
+      {
+        "address": "6x3BDkL2n7VjBWxRD95EsbQi2R2E4zxrvcz1VA6pihnK",
+        "threshold": 2,
+        "members": 5,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Phoenix DEX"
+      }
+    ],
+    "Meteora": [
+      {
+        "address": "CoEsykatDegLB7pcMJia79JSriDdi71nPnjgeSfw623k",
+        "threshold": 4,
+        "members": 8,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Meteora"
+      }
+    ],
+    "Parcl": [
+      {
+        "address": "7qCHZqcbLm9VYUCLtFmFFSyDsvuZ5GHhypv7b4JRAEUE",
+        "threshold": 3,
+        "members": 5,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Parcl"
+      }
+    ],
+    "Marinade": [
+      {
+        "address": "magrsHFQxkkioAy45VWnZnFBBdKVdy2ZiRoRGYT9Wed",
+        "threshold": 6,
+        "members": 13,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "Marinade"
+      }
+    ],
+    "SPL": [
+      {
+        "address": "3yqoHFE4nBGchuVH5rJuZMFvsmnaDTuLLdvGPDUEJcbW",
+        "threshold": 0,
+        "members": 0,
+        "timeLock": 0,
+        "configAuthority": "unknown",
+        "source": "tracked",
+        "reachedVia": [],
+        "programs": 0,
+        "programIds": [],
+        "role": "SPL Stake Pool"
+      }
+    ],
+    "Berrie": [
+      {
+        "address": "9dUjjx2Vi7GbBtuxN8N71MEFuD6Yn3QTtwLTYYjvZnLr",
+        "threshold": 2,
+        "members": 4,
+        "timeLock": 0,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "3hiQADryzHeV6gQa8gojLV5EHNAKXdujtTX2u8evVh1Z"
+        ],
+        "programs": 2,
+        "programIds": [
+          "8Hcd5Kmi47JhgNr1GVYfAbMyXfwYo5T7UUYhGeEu8qPr",
+          "EP1N2w7ijCboXHJS6mfysTWu2vQohP933ny2cHovSxfU"
+        ],
+        "role": "Berrie Dex (program admin)"
+      }
+    ],
+    "Ondo": [
+      {
+        "address": "EfMUASGwCsPBafiPi8rwdZfUJSUt7pxAoxayR39PVpMr",
+        "threshold": 4,
+        "members": 7,
+        "timeLock": 7200,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "9ECeczLtFZDYE3NX6G7uNw5BUGjoJAu1kFyEihA5hMaM"
+        ],
+        "programs": 1,
+        "programIds": [
+          "XzTT4XB8m7sLD2xi6snefSasaswsKCxx5Tifjondogm"
+        ],
+        "role": "Ondo Global Markets (admin)"
+      },
+      {
+        "address": "DK37X6PNtzS4oiJAWgJ364NkUq6us3gf4u7GVRdezqvW",
+        "threshold": 1,
+        "members": 8,
+        "timeLock": 10,
+        "configAuthority": "autonomous",
+        "source": "tracked",
+        "reachedVia": [
+          "5JKhn62nyvAE7aRb5zksXiovDEPX6mAcbdxFsJEdVmbw"
+        ],
+        "programs": 1,
+        "programIds": [
+          "xoVUinQWoi4Bxre6oqEJHp9WrJaHacs74gtYtondogm"
+        ],
+        "role": "Ondo Global Markets (1/8 keeper)"
+      }
+    ]
+  }
+}

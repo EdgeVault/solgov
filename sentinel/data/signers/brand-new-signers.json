@@ -1,0 +1,32 @@
+{
+  "computedAt": "2026-04-17T15:21:48.992Z",
+  "findings": [
+    {
+      "protocol": "Drift",
+      "multisig": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+      "member": "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z",
+      "memberFirstActive": 1775092300,
+      "multisigFirstActive": 1775090511,
+      "memberAgeAtMultisigDays": -0.02070601851851852,
+      "severity": "CRITICAL"
+    },
+    {
+      "protocol": "Drift",
+      "multisig": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+      "member": "HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6",
+      "memberFirstActive": 1775067953,
+      "multisigFirstActive": 1775090511,
+      "memberAgeAtMultisigDays": 0.26108796296296294,
+      "severity": "CRITICAL"
+    },
+    {
+      "protocol": "Drift",
+      "multisig": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+      "member": "13GXtbGV8mNfNLDNbVKPrTcHTpfZ4CYrXviRCZmyxQvj",
+      "memberFirstActive": 1774540093,
+      "multisigFirstActive": 1775090511,
+      "memberAgeAtMultisigDays": 6.370578703703703,
+      "severity": "MONITOR"
+    }
+  ]
+}

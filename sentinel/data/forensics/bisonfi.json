@@ -1,0 +1,7 @@
+{
+  "protocol":"BisonFi","researchedAt":"2026-04-17T23:00:00Z","researcher":"manual stub",
+  "sources":[],"programs":[],
+  "multisigs":[{"address":"UfSM2ZFRMeurGs1gqrMREjZDyzPweUY9Wt67BMVeo8j","role":"BisonFi single-signer authority","alreadyTracked":true}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Single-signer authority. Same risk profile as Jupiter v6's CvQZZ23q.","gaps":["Program IDs","Migration plan from single signer"],"confidence":"low"
+}

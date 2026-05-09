@@ -1,0 +1,69 @@
+{
+  "resolvedAt": "2026-04-17T18:17:26.741Z",
+  "results": [
+    {
+      "authority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "teamGuess": "Raydium",
+      "programs": 8,
+      "owner": "11111111111111111111111111111111",
+      "kind": "system-owned (likely vault PDA)",
+      "inferredParent": "7PMRcwPChXuwKA5Z5znNf6avJgW454gGGboV1Yt1xGgq (V3)"
+    },
+    {
+      "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "teamGuess": "Meteora",
+      "programs": 3,
+      "owner": "11111111111111111111111111111111",
+      "kind": "system-owned (likely vault PDA)",
+      "inferredParent": "3Eun8CdkJsd5WZC7NdNLUPQCx86cXKtwAK6EFLuWsn5w (V3)"
+    },
+    {
+      "authority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "teamGuess": "Parcl gov",
+      "programs": 3,
+      "owner": "11111111111111111111111111111111",
+      "kind": "system-owned (likely vault PDA)",
+      "inferredParent": "BRwx9yUrdP9aZMxJGgarLCKcNr3iCn7yj1nDAy4jfUUk (V3)"
+    },
+    {
+      "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "teamGuess": "Pyth",
+      "programs": 3,
+      "owner": "11111111111111111111111111111111",
+      "kind": "system-owned (likely vault PDA)",
+      "inferredParent": null
+    },
+    {
+      "authority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "teamGuess": "Magic Eden",
+      "programs": 2,
+      "owner": "11111111111111111111111111111111",
+      "kind": "system-owned (likely vault PDA)",
+      "inferredParent": "D1LUJooB3ywFDqKwkha5Saqy2u7bnCDvu3rKQReByBZT (V4)"
+    },
+    {
+      "authority": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "teamGuess": "Parcl perps",
+      "programs": 2,
+      "owner": "11111111111111111111111111111111",
+      "kind": "system-owned (likely vault PDA)",
+      "inferredParent": "7qCHZqcbLm9VYUCLtFmFFSyDsvuZ5GHhypv7b4JRAEUE (V3)"
+    },
+    {
+      "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "teamGuess": "Sanctum",
+      "programs": 2,
+      "owner": "11111111111111111111111111111111",
+      "kind": "system-owned (likely vault PDA)",
+      "inferredParent": "AApfiPZgV5MoPU691GwhdDhq5sKEMMH1Uh8S4Z9xvP6b (V3)"
+    },
+    {
+      "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "teamGuess": "Tensor",
+      "programs": 2,
+      "owner": "11111111111111111111111111111111",
+      "kind": "system-owned (likely vault PDA)",
+      "inferredParent": "3djJ66VVaG7si2wsh9isspeZX13meHDvwBzuPGCowY4Z (V3)"
+    }
+  ]
+}

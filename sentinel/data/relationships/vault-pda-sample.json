@@ -1,0 +1,155 @@
+[
+  {
+    "vault": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+    "multisig": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+    "threshold": 2,
+    "members": 3,
+    "timeLock": 3600,
+    "configAuthority": "autonomous",
+    "programs": 6
+  },
+  {
+    "vault": "3LhpgDvoA3Rr1B17T6TRijj2JUtoPbR6jdw9frS9hPri",
+    "multisig": "B31U1Ud1qvwh4xxaftFYqGhg95JXbUF5UZt8rh3kEpZQ",
+    "threshold": 8474,
+    "members": 0,
+    "timeLock": 573847019,
+    "configAuthority": "4uQeVj5tqVisLkiGnMYwtmmjqhwMebgKUnD97U7RDP2",
+    "programs": 1
+  },
+  {
+    "vault": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+    "multisig": "GhA3VUaXn6FyLNai42iTL72N3omZJJAsi2dn1n8s3CLX",
+    "threshold": 28575,
+    "members": 0,
+    "timeLock": 1100170114,
+    "configAuthority": "g35TxFqwMx9ZJ88SAf8TrpNv2vNJ5hFXhM77vwcmF4s",
+    "programs": 1
+  },
+  {
+    "vault": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+    "multisig": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+    "threshold": 4,
+    "members": 7,
+    "timeLock": 600,
+    "configAuthority": "autonomous",
+    "programs": 4
+  },
+  {
+    "vault": "Hc8Z5PoKosaLYqiAUJpbg1uQYk3EqJVPnKmLahZxEptU",
+    "multisig": "HWreu7fSb2M4zNfyh3WXTD3As6CwWQPVqRzjDhAv4xqG",
+    "threshold": 3,
+    "members": 4,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 1
+  },
+  {
+    "vault": "MHXv9u9igTfK2aTJu3o9RfA7tfvTuZC7zimgm2dRS5c",
+    "multisig": "9PW3jd26mrmV1SP99P35CTVw6pwouXmFpdRART5ZG8u5",
+    "threshold": 2,
+    "members": 3,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 1
+  },
+  {
+    "vault": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+    "multisig": "CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo",
+    "threshold": 2,
+    "members": 4,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 3
+  },
+  {
+    "vault": "BW6KbcQ6LmnWbjsVGbRpkH9jd87KxErYyXk75Ggz4ZVy",
+    "multisig": "D8nmDFwSRsnT82ZgFkcSGpXCVSBPzaF3LkDPFPvMsV7J",
+    "threshold": 22808,
+    "members": 0,
+    "timeLock": 272671790,
+    "configAuthority": "4uQeVj5tqVitTdAvVR96iMVsvRgAuBwforunCbGY8o8",
+    "programs": 1
+  },
+  {
+    "vault": "7eJiuqfoRMNx2T83jzjEMBFNY6gx7mS5MHJ5e44f3DGC",
+    "multisig": "J78uCVGbEYgUiZh5P646JejWVUmTYm3KkggRCeZ953M4",
+    "threshold": 40832,
+    "members": 0,
+    "timeLock": 1928575945,
+    "configAuthority": "GcdayuLaLys8odQqGP2o75h1KLvvooyZ3FF5fhku51x",
+    "programs": 2
+  },
+  {
+    "vault": "8vNDGweVTPBDKFSuLnnxPVWT33PgiKdCqFPj7KUSer2w",
+    "multisig": "E4yAPnXbxsAMukjeuwbsX9xo2j6fQpeXR9982LiNsJ6e",
+    "threshold": 2,
+    "members": 3,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 1
+  },
+  {
+    "vault": "54ipzfTVyG59fXyvLUAf2vM4cUc7xReqW3VX7c7rGNCX",
+    "multisig": "6SMnNazNLAAZgaJaa8JbbEy3ntMxgVpW37xRyurZCuK3",
+    "threshold": 2,
+    "members": 3,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 1
+  },
+  {
+    "vault": "9tbzqvgZFN6Qj541MyRS3BwapzYHg1YNgFZV186huEsV",
+    "multisig": "DMiM6Ubfdka3Wu71GuXZ1ojnGUvHgs5BKFNHeBwjKgVP",
+    "threshold": 14404,
+    "members": 0,
+    "timeLock": 2813079993,
+    "configAuthority": "g35TxFqwMx9ZnLxdiq7uYdNnShhvS7mtrBsCdQvrc5B",
+    "programs": 1
+  },
+  {
+    "vault": "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda",
+    "multisig": "GPuMML3FeJXTr948CvTwSYANHm74RSW5iUibw5T6vSfa",
+    "threshold": 3,
+    "members": 5,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 1
+  },
+  {
+    "vault": "3JG6ULvZVCrkKtSSskKNJGe8RNZGFe8Ruev9KUhxzK5K",
+    "multisig": "F4f1gdFd4ZjX2F4EzGYPuZphu9HHKDNM7AUARM2sKCwG",
+    "threshold": 3996,
+    "members": 0,
+    "timeLock": 3561651572,
+    "configAuthority": "7sAawX1cAHVq8K3DZNzRHqVyaVZvXEGg9dGsq8ALuqsq",
+    "programs": 3
+  },
+  {
+    "vault": "GmLNjgvz3igugLcB8ggqRgBGKNGjeTCjg8MgARms5H4k",
+    "multisig": "8zeWNgbgxBkpqkzz78sEoWpULHrfPLEL6w1WLpdWMyTM",
+    "threshold": 2,
+    "members": 3,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 1
+  },
+  {
+    "vault": "AMJigTMkCByE3rMk94FkVc55eVPf6SwYnaXF44GXcEK",
+    "multisig": "Dy5RSKp6bAoWRJNwkk4quXiuHuyKjKRUeZYuQux25CV4",
+    "threshold": 1,
+    "members": 2,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 1
+  },
+  {
+    "vault": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+    "multisig": "BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE",
+    "threshold": 2,
+    "members": 3,
+    "timeLock": 0,
+    "configAuthority": "autonomous",
+    "programs": 1
+  }
+]

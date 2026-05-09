@@ -1,0 +1,13 @@
+{
+  "protocol":"Pyth","researchedAt":"2026-04-17T23:00:00Z","researcher":"manual",
+  "sources":[{"kind":"docs","url":"https://docs.pyth.network/price-feeds/core/contract-addresses/solana"}],
+  "programs":[
+    {"id":"rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ","name":"Pyth Solana Receiver","role":"price update receiver from Wormhole guardian network","alreadyTracked":false,"upgradeAuthority":"6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT","upgradeAuthorityKind":"fetched via getAccountInfo on ProgramData PDA"},
+    {"id":"pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT","name":"Pyth Price Feed Program","role":"core oracle program","alreadyTracked":false,"upgradeAuthority":"6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT","upgradeAuthorityKind":"fetched via getAccountInfo on ProgramData PDA"},
+    {"id":"FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH","name":"Pyth Push Oracle","role":"push-based price feeds","alreadyTracked":false,"upgradeAuthority":"6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT","upgradeAuthorityKind":"fetched via getAccountInfo on ProgramData PDA"}
+  ],
+  "multisigs":[],
+  "authorities":[{"address":"6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT","role":"Pyth single upgrade authority controlling all 3 programs","kind":"system-owned PDA, not a Squads multisig - likely Wormhole-style governance derivation","alreadyTracked":false}],
+  "vaultPdas":[],
+  "governanceModel":"Pyth uses Wormhole-derived governance (not Squads). The single authority 6oXTdoj controls all 3 Pyth programs. Different attestation model than tracked DeFi protocols.","gaps":["Identify the Wormhole governance config that controls 6oXTdoj","Decide how to score Wormhole-style governance vs Squads multisigs"],"confidence":"high"
+}

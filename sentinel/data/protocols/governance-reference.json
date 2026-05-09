@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "description": "SolGov governance reference data - deep audit results",
+    "lastAudit": "2026-04-10",
+    "totalProtocols": 33,
+    "totalSigners": 200,
+    "totalTxsScanned": 20000
+  },
+  "nonceAudit": {
+    "date": "2026-04-10",
+    "findings": {
+      "Orca": { "flaggedSigners": 3, "details": [
+        { "signer": "9f4WNuXf", "date": "2025-02-27", "nonceAccount": "GkSisi9X" },
+        { "signer": "F8HnFKCb", "date": "2026-01-07", "nonceAccount": "34ZGitFW" },
+        { "signer": "GBHs346b", "date": "2025-09-09", "nonceAccount": "9bmZuYnM" }
+      ]},
+      "Huma": { "flaggedSigners": 2, "details": [
+        { "signer": "CgUHzq2D", "date": "2026-04-10", "nonceAccount": "3GWidVDd" },
+        { "signer": "G1AonKZA", "date": "2026-04-09", "nonceAccount": "2QY2ZzxX" }
+      ]},
+      "Switchboard": { "flaggedSigners": 1, "details": [
+        { "signer": "EoHK5VNg", "date": "2024-05-13", "nonceAccount": "3M54hZqp" }
+      ]},
+      "Solayer": { "flaggedSigners": 1, "details": [
+        { "signer": "89Srbjbu", "date": "2026-01-12", "nonceAccount": "8BEXH2r7" }
+      ]},
+      "Flash Trade": { "flaggedSigners": 1, "details": [
+        { "signer": "9NXhjBeY", "date": "2025-03-07", "nonceAccount": "2CqBYY2U" }
+      ]},
+      "Marinade": { "flaggedSigners": 1, "details": [
+        { "signer": "GDmSxpPz", "date": "2026-04-02", "nonceAccount": "EWW3qtq4" }
+      ]}
+    },
+    "cleanProtocols": ["Drift", "Pumpfun", "Magic Eden", "Exponent", "Nosana", "Lulo", "Stabble", "Hylo", "Loopscale", "Marginfi", "Kamino", "Jupiter Perps", "Jupiter Lend", "Solstice", "Titan", "Wick", "Sanctum", "Jupiter Agg", "Raydium", "Tensor", "Phoenix DEX", "Meteora", "Parcl"]
+  },
+  "driftPatternScore": {
+    "date": "2026-04-10",
+    "scores": {
+      "Drift": { "score": 3, "flags": ["NEW MS (9d)", "AUTH ACTIVITY", "ZERO TIMELOCK"], "note": "Post-exploit recovery multisig" },
+      "Wick": { "score": 3, "flags": ["NONCE", "CONFIG CHANGE", "AUTH ACTIVITY"], "note": "Has 24h timelock" },
+      "Exponent": { "score": 2, "flags": ["CONFIG CHANGE", "ZERO TIMELOCK"] },
+      "Lulo": { "score": 2, "flags": ["AUTH ACTIVITY", "ZERO TIMELOCK"] },
+      "Stabble": { "score": 2, "flags": ["CONFIG CHANGE", "ZERO TIMELOCK"] },
+      "Loopscale": { "score": 2, "flags": ["NEW MS (10d)", "ZERO TIMELOCK"] },
+      "Orca": { "score": 2, "flags": ["NONCE (3)", "CONFIG CHANGE"], "note": "Has 24h timelock" },
+      "Marginfi": { "score": 2, "flags": ["AUTH ACTIVITY", "ZERO TIMELOCK"] },
+      "Huma": { "score": 2, "flags": ["NONCE (2)", "CONFIG CHANGE"], "note": "Has 12h timelock" },
+      "Switchboard": { "score": 2, "flags": ["NONCE", "ZERO TIMELOCK"] },
+      "Titan": { "score": 2, "flags": ["NEW MS (43d)", "ZERO TIMELOCK"] },
+      "Solayer": { "score": 2, "flags": ["NONCE", "ZERO TIMELOCK"] },
+      "Flash Trade": { "score": 2, "flags": ["NONCE", "CONFIG CHANGE"], "note": "Has 1h timelock" },
+      "Jupiter Perps": { "score": 0, "flags": [] },
+      "Jupiter Lend": { "score": 0, "flags": [] }
+    }
+  },
+  "programAuthorities": {
+    "date": "2026-04-10",
+    "allMatch": true,
+    "mismatches": [],
+    "upgrades": {
+      "Drift": { "lastUpgrade": "2026-04-02", "upgradesLast30d": 3 },
+      "Pumpfun": { "lastUpgrade": "2026-03-05", "upgradesLast30d": 0 },
+      "Magic Eden": { "lastUpgrade": "2025-08-06", "upgradesLast30d": 0 },
+      "Exponent": { "lastUpgrade": "2025-11-12", "upgradesLast30d": 0 },
+      "Nosana": { "lastUpgrade": "2025-07-29", "upgradesLast30d": 0 },
+      "Lulo": { "lastUpgrade": "2026-04-03", "upgradesLast30d": 3 },
+      "Stabble": { "lastUpgrade": "2026-01-23", "upgradesLast30d": 0 },
+      "Orca": { "lastUpgrade": "2026-02-13", "upgradesLast30d": 0 },
+      "Marginfi": { "lastUpgrade": "2026-04-03", "upgradesLast30d": 3 },
+      "Kamino": { "lastUpgrade": "2026-03-26", "upgradesLast30d": 2 },
+      "Jupiter Perps": { "lastUpgrade": "2026-02-11", "upgradesLast30d": 0 },
+      "Sanctum": { "lastUpgrade": "2026-04-08", "upgradesLast30d": 2 },
+      "Raydium": { "lastUpgrade": "2025-09-22", "upgradesLast30d": 0 },
+      "Meteora": { "lastUpgrade": "2025-12-26", "upgradesLast30d": 0 },
+      "Tensor": { "lastUpgrade": "2025-11-23", "upgradesLast30d": 0 },
+      "Switchboard": { "lastUpgrade": "2025-02-06", "upgradesLast30d": 0 },
+      "Pyth": { "lastUpgrade": "2025-03-16", "upgradesLast30d": 0 },
+      "Jito": { "lastUpgrade": "2025-04-17", "upgradesLast30d": 0 }
+    }
+  },
+  "signerBalances": {
+    "date": "2026-04-10",
+    "highBalance": [
+      { "signer": "FnCZoNo6", "sol": 201.42, "protocol": "Nosana" },
+      { "signer": "At3T1WtG", "sol": 40.39, "protocol": "Lulo" },
+      { "signer": "Azrx6Xgi", "sol": 39.82, "protocol": "Marginfi" },
+      { "signer": "LoTy38Ei", "sol": 33.05, "protocol": "Loopscale" },
+      { "signer": "BaNFXTtx", "sol": 18.81, "protocol": "Solayer" },
+      { "signer": "55Th9kAE", "sol": 17.79, "protocol": "Stabble" },
+      { "signer": "3LPh9LN8", "sol": 16.40, "protocol": "Marinade" },
+      { "signer": "ELg5GDPL", "sol": 14.63, "protocol": "Marinade" },
+      { "signer": "GDmSxpPz", "sol": 14.01, "protocol": "Marinade" },
+      { "signer": "8DzsCSvb", "sol": 13.30, "protocol": "Marinade" },
+      { "signer": "DFheUjWj", "sol": 10.83, "protocol": "Kamino" }
+    ],
+    "totalSigners": 197,
+    "crossProtocolOverlap": "None found"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "protocol": "Raydium",
+  "researchedAt": "2026-04-17T21:45:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "github-sdk",
+      "url": "https://github.com/raydium-io/raydium-sdk-v1/blob/master/src/baseInfo/program.ts",
+      "note": "official MAINNET_PROGRAM_ID export"
+    }
+  ],
+  "programs": [
+    {
+      "id": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+      "name": "Raydium AMM V4",
+      "role": "legacy constant-product AMM",
+      "source": "raydium-sdk-v1 program.ts - MAINNET_PROGRAM_ID.AmmV4",
+      "alreadyTracked": true,
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "5quBtoiQqxF9Jv6KYKctB59NT3gtJD2Y65kdnB1Uev3h",
+      "name": "Raydium Stable AMM",
+      "role": "stable-swap AMM",
+      "source": "raydium-sdk-v1 program.ts - AmmStable",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK",
+      "name": "Raydium CLMM",
+      "role": "concentrated-liquidity AMM",
+      "source": "raydium-sdk-v1 program.ts - CLMM",
+      "alreadyTracked": true,
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "routeUGWgWzqBWFcrCfv8tritsqukccJPu3q5GPP3xS",
+      "name": "Raydium Router",
+      "role": "swap routing",
+      "source": "raydium-sdk-v1 program.ts - Router",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q",
+      "name": "Raydium Farm V3",
+      "role": "legacy farming",
+      "source": "raydium-sdk-v1 program.ts - FarmV3",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "9KEPoZmtHUrBbhWN1v1KWLMkkvwY6WLtAVUCPRtRjP4z",
+      "name": "Raydium Farm V5",
+      "role": "farming",
+      "source": "raydium-sdk-v1 program.ts - FarmV5",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "FarmqiPv5eAj3j1GMdMCMUGXqPUvmquZtMy86QH6rzhG",
+      "name": "Raydium Farm V6",
+      "role": "current farming program",
+      "source": "raydium-sdk-v1 program.ts - FarmV6",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "CLaimxFqjHzgTJtAGHU47NPhg6qrc5sCnpC4tBLyABQS",
+      "name": "Raydium UTIL1216 (airdrop / claim)",
+      "role": "token claim / airdrop utility",
+      "source": "raydium-sdk-v1 program.ts - UTIL1216",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm",
+      "role": "Raydium governance (Squads V3)",
+      "threshold": "? (V3, not scanned)",
+      "timelock": "n/a (V3 has no timelock)",
+      "configAuthority": "n/a (V3)",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "threshold + members via V3 layout parsing"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "parentMultisig": "7PMRcwPChXuwKA5Z5znNf6avJgW454gGGboV1Yt1xGgq",
+      "vaultIndex": "unknown",
+      "notes": "Squads V3 - discovered via RPC concentration sweep April 17 2026",
+      "alreadyTracked": false
+    }
+  ],
+  "governanceModel": "Squads V3 multisig. Raydium publishes their program IDs in the public SDK. 8 programs confirmed; upgrade authorities for all of them UNCONFIRMED in local data.",
+  "gaps": [
+    "Upgrade authority chain for every Raydium program - 8 RPC calls needed",
+    "Raydium runs a V3 multisig - we don't parse V3 layouts currently in build-team-inventory. Add V3 support or pull members via Squads V3 SDK.",
+    "Check whether there's a newer Raydium CPMM program (a separate repo `raydium-cp-swap` exists but the deployed mainnet program ID was not visible in the README)"
+  ],
+  "confidence": "high for program list, low for governance chain",
+  "notes": "8 programs across AMM V4, Stable AMM, CLMM, Router, Farm V3/V5/V6, and claim utility. Major gap: we currently only track the governance multisig, not any upgrade-authority vault. Likely the team owns multiple vaults."
+}

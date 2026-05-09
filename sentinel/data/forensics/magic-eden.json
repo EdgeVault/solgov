@@ -1,0 +1,68 @@
+{
+  "protocol": "Magic Eden",
+  "researchedAt": "2026-04-17T22:05:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "github-mmm",
+      "url": "https://github.com/magicoss/mmm"
+    },
+    {
+      "kind": "docs",
+      "url": "https://docs.magiceden.io/reference/mmm"
+    }
+  ],
+  "programs": [
+    {
+      "id": "mmm3XBJg5gk8XJxEKBvdgptZz6SgK4tXvn36sodowMc",
+      "name": "Magic Eden MMM (AMM)",
+      "role": "NFT AMM / collection offers",
+      "source": "magicoss/mmm GitHub README",
+      "alreadyTracked": false,
+      "upgradeAuthority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K",
+      "name": "Magic Eden v2 (M2) marketplace",
+      "role": "primary NFT marketplace",
+      "source": "widely-published Magic Eden address",
+      "alreadyTracked": false,
+      "confidence": "medium",
+      "needsRpcVerify": [
+        "confirm via GitHub"
+      ],
+      "upgradeAuthority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE",
+      "role": "Magic Eden multisig (tracked)",
+      "threshold": "?",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "threshold + members"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "parentMultisig": "D1LUJooB3ywFDqKwkha5Saqy2u7bnCDvu3rKQReByBZT",
+      "vaultIndex": "unknown",
+      "notes": "Squads V4 - Magic Eden program admin multisig - discovered via RPC concentration sweep April 17 2026",
+      "alreadyTracked": false
+    }
+  ],
+  "governanceModel": "Multisig governance; exact threshold not in local monitor-state. MMM is a separate program from M2 marketplace.",
+  "gaps": [
+    "Confirm M2 marketplace program ID via GitHub",
+    "Upgrade authority for MMM and M2 - RPC needed",
+    "Enumerate any additional Magic Eden programs (auction, launchpad, etc.)"
+  ],
+  "confidence": "medium",
+  "notes": "MMM confirmed; M2 is widely-cited but not directly verified in this pass."
+}

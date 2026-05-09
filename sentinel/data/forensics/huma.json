@@ -1,0 +1,9 @@
+{
+  "protocol":"Huma Finance","researchedAt":"2026-04-17T22:26:00Z","researcher":"manual stub",
+  "sources":[{"kind":"docs","url":"https://docs.huma.finance/"}],
+  "programs":[],
+  "multisigs":[{"address":"uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX","role":"Huma multisig (tracked)","threshold":"?","alreadyTracked":true,"needsRpcVerify":["threshold + members"]}],
+  "authorities":[{"address":"Huma8ZB251nwuYxDME4EFir1z8wvYw97Yr3hg9g3qKQL","role":"Huma vanity-prefix team/bootstrap wallet","kind":"plain-wallet","alreadyTracked":true,"source":"derive-bootstrap-wallets.json identified as Huma bootstrap with 60% signer coverage"}],
+  "vaultPdas":[],
+  "governanceModel":"Squads multisig + team bootstrap wallet with vanity prefix.","gaps":["Huma program IDs","Permissionless vs Institutional program separation per dashboard","multisig threshold"],"confidence":"low"
+}

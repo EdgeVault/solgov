@@ -1,0 +1,57 @@
+{
+  "protocol": "Solstice",
+  "researchedAt": "2026-04-17T22:30:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.solstice.finance/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "7FaMyGiTVdjm8dd3PxpjjCX15ibbmuE1zWVFX2PHxYUK",
+      "name": "Solstice program",
+      "role": "USX stablecoin + YieldVault",
+      "alreadyTracked": true,
+      "upgradeAuthority": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf",
+      "role": "Solstice main (tracked)",
+      "threshold": "3/5",
+      "timelock": "86400s (24h)",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    },
+    {
+      "address": "BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE",
+      "role": "Solstice vault-parent",
+      "threshold": "2/3",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false,
+      "notes": "much weaker config than main"
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+      "parentMultisig": "BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE",
+      "vaultIndex": 0,
+      "programsControlled": 1,
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Two multisigs. Main 3/5 with 24h timelock (strong). Vault-parent 2/3 with 0 timelock (weak - this owns the program).",
+  "gaps": [
+    "Why does the program-owner have WEAKER governance than the main multisig? Inverse of best practice.",
+    "Add vault-parent to tracking"
+  ],
+  "confidence": "medium-high",
+  "notes": "Solstice has a notable asymmetry: the main multisig that controls treasury has strong governance (3/5 + 24h TL) but the multisig that owns the actual PROGRAM has weak governance (2/3 + 0s). This means program upgrades have weaker protection than treasury."
+}

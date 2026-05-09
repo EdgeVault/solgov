@@ -1,0 +1,38 @@
+{
+  "protocol": "Exponent",
+  "researchedAt": "2026-04-17T22:26:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.exponent.finance/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+      "name": "Exponent Core",
+      "role": "yield/point protocol",
+      "alreadyTracked": true,
+      "source": "monitor-state.json programAuthorities",
+      "upgradeAuthority": null,
+      "upgradeAuthorityKind": "IMMUTABLE - not upgradeable"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH",
+      "role": "Exponent multisig (tracked)",
+      "threshold": "?",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads multisig. Exponent had a live governance burst Apr 9-11 (3 config changes) per governance-burst scan.",
+  "gaps": [
+    "Exponent threshold + members",
+    "investigate Apr 9-11 config changes - what did they modify?"
+  ],
+  "confidence": "low"
+}

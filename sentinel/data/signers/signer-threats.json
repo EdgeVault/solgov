@@ -1,0 +1,178 @@
+[
+  {
+    "signer": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
+    "protocols": [
+      "Magic Eden"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-10 17:14 UTC",
+    "signature": "4DULfvpJAtxSVa8LCD5e"
+  },
+  {
+    "signer": "89FnbsKH8n6FXCghGUijxh3snqx3e6VXJ7q1fQAHWkQQ",
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-14 04:40 UTC",
+    "signature": "pmpDzKGTLCvhJ7DQ58hF"
+  },
+  {
+    "signer": "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z",
+    "protocols": [
+      "Marginfi"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-03 14:49 UTC",
+    "signature": "rJ4PdG93BCEXzSk8YAdc"
+  },
+  {
+    "signer": "3wLd4AUHQRB9DJrgP8Qwfp5fMh2SyAqj148d7qbUq8Lb",
+    "protocols": [
+      "Titan"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-07 22:25 UTC",
+    "signature": "2QSnLDaeRzpVJ1uqUT7x"
+  },
+  {
+    "signer": "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk",
+    "protocols": [
+      "Titan"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-11 22:23 UTC",
+    "signature": "5FDkUWxvAbcYnmmuBaWt"
+  },
+  {
+    "signer": "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk",
+    "protocols": [
+      "Titan"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-09 18:24 UTC",
+    "signature": "4iua7H9dfbgesxDA7amV"
+  },
+  {
+    "signer": "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw",
+    "protocols": [
+      "Flash Trade"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-08 13:29 UTC",
+    "signature": "JXtJV6L13NmfqqBF3np5"
+  },
+  {
+    "signer": "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw",
+    "protocols": [
+      "Flash Trade"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-08 13:28 UTC",
+    "signature": "4646Hk5dCYRoQBpqmZhZ"
+  },
+  {
+    "signer": "mprGV3VdeBmf7o3dixtfYNgB2cHUU6cjRwTFCzWiEwd",
+    "protocols": [
+      "Helium"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-10 16:17 UTC",
+    "signature": "4jk17EWtTu4xTyR7FvJ8"
+  },
+  {
+    "signer": "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym",
+    "protocols": [
+      "Helium"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-02 21:06 UTC",
+    "signature": "2LasiHfowDLviwRd6nsW"
+  },
+  {
+    "signer": "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb",
+    "protocols": [
+      "Tessera V"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-08 11:09 UTC",
+    "signature": "2NaKV9DZrcN1RoZFHCJe"
+  },
+  {
+    "signer": "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT",
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-10 14:30 UTC",
+    "signature": "4JffsSUb9TaWvdDDMG9T"
+  },
+  {
+    "signer": "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT",
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-09 11:27 UTC",
+    "signature": "8M7YsG55VbfxUk4C8dTW"
+  },
+  {
+    "signer": "9vtZSD8staKHC27aPXFMmc6rHJSrpAYjJ5oZWVDmsE2y",
+    "protocols": [
+      "Carrot"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-12 20:28 UTC",
+    "signature": "4JmsU81jqWKzTynBKxbk"
+  },
+  {
+    "signer": "9vtZSD8staKHC27aPXFMmc6rHJSrpAYjJ5oZWVDmsE2y",
+    "protocols": [
+      "Carrot"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-12 20:28 UTC",
+    "signature": "rzJdZGpsm9R8rocpkan7"
+  },
+  {
+    "signer": "9vtZSD8staKHC27aPXFMmc6rHJSrpAYjJ5oZWVDmsE2y",
+    "protocols": [
+      "Carrot"
+    ],
+    "category": "DEPLOY",
+    "severity": "MEDIUM",
+    "detail": "Signer deployed or upgraded a program",
+    "detectedAt": "2026-04-12 20:28 UTC",
+    "signature": "4zVAPPwB1RQEMoKGyrt6"
+  }
+]

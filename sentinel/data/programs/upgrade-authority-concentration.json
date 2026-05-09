@@ -1,0 +1,400 @@
+{
+  "computedAt": "2026-04-17T18:24:30.192Z",
+  "findings": [
+    {
+      "vault": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "label": "Helium vault 2",
+      "programCount": 24,
+      "programDataAccounts": [
+        "WDHWo6kTfndy2xKzLcze9aVwomp5to8eTaCJktifqUz",
+        "ec5NgrYWhZBjoWracq3WQca6jDEAwDWibgDDSFWrwww",
+        "2KWAhXyZvNQoPCTR1gAKLZYWW4jRefFitvQjRWLhzhMz",
+        "2oRmyQGGzxs9WxkYRUj4Yu9CrWxAwZKW7pNH9jBYvfgs",
+        "3nfjrM9UfPJxsqVqvzf1aa9MptAMnGGDuQGPy9Y1jGWv",
+        "5eD2ns9eqYhRMQVaJo1cExfY1JQme6ybt2ZgjkXLA1cU",
+        "5f7TWpzsBFPKjaoAP5mZ5t2FZCV7ZuA9usZVr5K1PDTz",
+        "5pW4TFoaHszXUHLK6AnLcv3peYTvHiu8ExKeMtGeLho8",
+        "5x63AgNQWkw7hNG5poEhDdQamWeQVwDpPAuwThZiBMR7",
+        "612cWU5D6At4tttf2ryJoC1QWomNEEhGN2cVxv5hWEyu",
+        "7xmHwZCeR34udycMUrMzKsPvA9WcXePh52L1paGSqGf3",
+        "8NSe9xRgDYFjyS2Kx6FZfwkK6udEw19dT6Tdxvvb2q3R",
+        "8td3HJeaXoUpW7y7ghf3b5VPPNq1KFy6Dc7ipzxNM1Kb",
+        "95gFBuAJqWhxnFXNpyJYeXjLACbwqaRfXJYLDAhW5cLo",
+        "9uGEpvoQzzuDGHayfLqSrLdx7hoC4BgTvChGrQGC3Tzc",
+        "A8VEPbBLUdo7LCdpQR6Nvwi8tfU4Q3fCgbgjKu3sY7Ez",
+        "BSbzkBGA333NCuLTvfarqnj54KLJjt5sZWqujy94GLqs",
+        "BfCv4387kNq3osADrM8mw2TE2e39tcmot37EuKuqHu1g",
+        "BvQLZFuj14sorcYWZFq4uZHiCrnfS7oms3bRWURYCLma",
+        "C7AGGjcwxc9iUCt815q7htTJec8JjphKoFLnZ6F6Bvm5",
+        "CtUT6SbdHPxLxLopuhCUd3uYGMZerZPrDP8eKK71tuEZ",
+        "Cx3kWaJhKuNqf1HaQfEzoQdy7NpoQRcj8Epmf4vokEsr",
+        "EJAtq4Cc2jRym8igsmjaLx2XvgZr4kGBGo7Xj9w21Tjf",
+        "FBXYw85yzxyghiyAUpedouWNLWooraC799BUqQ99HgtT"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "label": "Meteora upgrade vault (V3, 3 progs)",
+      "programCount": 15,
+      "programDataAccounts": [
+        "9DaJrXBFQemCwapdEJkTRCe7S9irpvPHG7gk18sRsdR",
+        "2YYscysxJpLRVVtQjjehtCvsqXUZUk2Y9yhnzPQi5rxX",
+        "36CvGf4Db6N8ApGkh1F6PLGXK1SYFFBUiEDkJjPEvDL7",
+        "4RPLBaQZSbED4ooPSidrYtvYRoReeP3NedZwed3YLgTz",
+        "4mj2HFBHyWTcYR2cjMzaekDxkR8CiR7b84kmY2gXpJzU",
+        "5hnEancYxAKq5RVwVFjGUaqXYWKMJhBbiEVvALf3KDYk",
+        "6PuDc6n6kLWyDZsovop14vLmKk6N15wtXiJ51CHADszL",
+        "6gQF2hWghfbUAfBSNVjNxLsULUeEKPAJkjeTkMGJby7o",
+        "7ZuRQYsDwvtdJNCuM46Uw1khmpQtymwmiYxfLWfybY85",
+        "AUh8bm2XsMfex3KjYGcM3G4uBqUNSDw6HEhWaWMYnyPH",
+        "DqD2Le59TDJuSe3Zhk6h8v8ueW395KUGcpYGshRqoAKS",
+        "EHSLhL1F25toWAyL967Vp9ZDvdxNUK2KbJHjHZZkXLC6",
+        "GcKbkDDmBfVQL7ouFvy2Xjer5qVdbRnQoqsSWmfDgQi2",
+        "HUfnSSiJxgspQm6C1rkqv6L3XgVtn7AESApgCQpCXCYh",
+        "HZcJwcJ2njPDxZtpPoKnF8v2w9QAx2rS7TdJPSRkbEhu"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "label": "Raydium upgrade vault (V3, 8 progs)",
+      "programCount": 14,
+      "programDataAccounts": [
+        "HzD2cCXXT3UQNjMMY6kDv9w6gZ9qquSdfoGXrLL3LXx",
+        "4riHch34cRGqSTSpcLXv42TvkLUG6t3JgzvzyCPQE6vg",
+        "68ZYga21EEhp6wcWfCfxxdTfhyYPwKio3SLwf68iuhhR",
+        "88UeaMABMessDkUy9yPRVexgaaHGKGmoNWxQdPSXidVF",
+        "A7ZG7ByDi8DpzT9Ab7CiXhvgYTJQmaDPJkMDoPitaCQV",
+        "Am73KshQKaKVRrB8qbnhAub2rcwWtbhKASDrkmedrJWE",
+        "CQkNjbYLFYc5xdbqLaZNC7KZThzRUa5EscAcHpPpdqs1",
+        "D2QX47Tv2uhNNwFcnLCyJtLMZ4WGmc7eXxvyEmD6zNUh",
+        "D9Kh6CzoNb2gj7EDsP7fNZpbhLq8r9LoLgambqPKoF4z",
+        "DMawCQzbgNTmbzaESc7o6pvL1KAeetY8zA7jNpzntHhU",
+        "G4Cf8MQtyueoLFDxV9BtzyrtXRetmA14JiFj6cqfAodr",
+        "H9vbtL8jBVAdBagXdRAVihGkyWiCuH6RFno5J7GU6sFF",
+        "HvVk1rnRQ1pYRXhmmx1xgSqu948GEfnovREjW5KbELVN",
+        "J2jMHtW52EuEqZMe4tiyjif5XS9EY46jMqUd5ggPD2cd"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "label": "Tensor vault (V3, 2 progs)",
+      "programCount": 13,
+      "programDataAccounts": [
+        "VimoVh3knvQExg1da41FNbY2fnor57HVEFdmtxfcowb",
+        "2EZwMWPsWxXUC4YxmW8C1nMDBv8gRhQcSV4i7NPnVQxF",
+        "2bzb3T2SDsWKJos7JJg3JAweqVRCgjEAzd99ZnuppHmg",
+        "35SrsGjKPKZCvDgT5LaSSGDcSsrGp3uLWTANVaecAnzX",
+        "3Y6bMQqbHfzsiDF82YLddmMVvhFYBDkcERUrw53j5Uqa",
+        "7vPpdWSt8tgGkf2hkpFLhyG6zz616Xvb9TLyeazNAxKv",
+        "9sc3eZckpta5gLLeN9Zvgmk7oSb6z1BbJuwAsQDH9BPH",
+        "B3Pg3ieZ9HLrT4BXKfoWDrApAq9ZprsToUxiupieTZas",
+        "CExoFY3i21XkfSUXbfPDsx9ShD8gn7NVdXfR9cH2NF2w",
+        "CLMB8FqaSWyQ9vCEd6JthUsuZV8iEMZuDGydEbh73oN9",
+        "EN7bDyRGG7DLv1f9DZfPxwiKxcrj6yfeAVY2s5Hxx3XN",
+        "FKDbtRVDvxhzubDub6PKqu9kAAHtNm6VZ1zES55VKkAh",
+        "HTu2ayS6qszsUanPz2WzZ7K6KmFqGnon16V6j68k5JHK"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "label": "Sanctum vault (V3, 2 progs)",
+      "programCount": 12,
+      "programDataAccounts": [
+        "ALmAxhSP7TDWGMHWBLjD9qS71YjqxjN1ba6JLRdzdVy",
+        "26GWfXL2eYH8AtX9b6Uw8PBrjLu98sWvc9wrfxLj4kLF",
+        "3E5A8HNuvJJKYa58TZddiVMnc8ZTsRVw4pmrww3xgcQ5",
+        "3LvZbmj32toBzGoCpYYya2GSPAaWoC6K2YLTBPV3ZxLs",
+        "9Bs1PKmHfKQ57pTUDJZ9pG22tkRLuaeyfAGp5GxRuZkW",
+        "Bq9UFte9zDSUdUzE4JeTRLwejvcoizwUwbNVqi8n5QBx",
+        "Cn5fegqLh8Fmvffisr4Wk3LmuaUgMMzTFfEuidpZFsvV",
+        "D2d3odoQoCeZ3dygmnvYZiUhsGvgskGJpoD9umnBKJz7",
+        "DsrWC93rAjG3jT2YzwuT3MMGp7Jb4bLYGfX8riCBnxGi",
+        "HkuX8A8Q6XQjimK3LP6vfhAZrm4UJgUZTRR7uYbzj3FH",
+        "HxBTMuB7cFBPVWVJjTi9iBF8MPd7mfY1QnrrWfLAySFd",
+        "JCiy5grhSYeceD5FAd9AKQa9p2t7vXe6zC3sUDVjWMrx"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "label": "Pyth upgrade authority (Wormhole-style, 3 progs)",
+      "programCount": 11,
+      "programDataAccounts": [
+        "CmumsQAU6TvqW2VLFVySBjQYKqKDeUPMBVdrxJ2YoK1",
+        "3BBuXtcSiGrp8Q9717NL7yxmB2ZzW1TttFUkJ8kjB7a4",
+        "3TL2YwKrwtn9V291qZ3n4GLKngG7ZuTwapVuvvCh66gJ",
+        "44pm2sLV2xC7pjEk2UxUR3hPPFDbLSykAcPoU9YKrwJe",
+        "72xbspJP8vtJ91Lp7k6mqJXFiPSvpad5BBRrixfAWh8m",
+        "7ac9hrQ4LKEZuGT4mzTFvPdWDCf2MHawh6soycCDWXRp",
+        "8xAeURaAWExxyHUXJSgjsg5r96Ydr3G4cek2if7imQmz",
+        "96QrNCjmh32H9quY9DX4NEH81nECVsbkATBDZeoVbvLV",
+        "AS5KV2ZXJScVLyT2jBqMV8iksS51sW6tHyo7YT18d1WC",
+        "Bvr6VWREUEvwef1VoFJm6sjL4tXmg35N9rbW3YttkMhb",
+        "EyLb5sRd6nNTv59bMfkXdcSpomBMDRr7wJQrrsJuznt8"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "label": "Magic Eden vault (V4, 2 progs)",
+      "programCount": 7,
+      "programDataAccounts": [
+        "378C6ePKR6dMsM2NrfTCrTDjWzQPcK6SwQDSuVYcJoZb",
+        "9CUiFMLNgpve5da8jrYij9jiqu99DghAydDk6wf5Y2YP",
+        "BNs5tC1aerFFn41UguvrU7JWVr4LLfYTWZEw5Co5FvB8",
+        "E3A9ApoufYNVyaNkbGLhzBFPywmjF39vXTQYsHZ4H9eP",
+        "FYPgmagfNtBmH3EJ6kUyduF9sKzxuF6swwoK5A71ZH5Z",
+        "FazvcSvYh7QpbDjEgVNT1fh5sEUAfDXicSJrFU3jb6w1",
+        "HdsQV9jCpy8cbaTAwGK7zYUtQ5ekhWCf5FgZFLhhMVQH"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "label": "Drift BBC5g vault (pre-exploit, 6 programs)",
+      "programCount": 6,
+      "programDataAccounts": [
+        "2cnQci7cy1fm95o7Mv8d4MpY1KCCgF7zPQG1znWqZkKC",
+        "4YwyCK5z8MEK5YwsCoZDFixxFqpQ6JFF98pcMqoAp8dr",
+        "7qtZgwfKf81mBq7f3Y2GgpsJAEtGREzGQ1re8Bbmvuvp",
+        "9n7qsPfdjsNmyPZd7EzAhWuSL2ZQ6ehvhKPdj96pYbpb",
+        "BYMMEXer2aQ8g6FBvoH5Gmp7xggjVK4jBktEsQzELTAK",
+        "FUNZUAcm96zb85A3mm4VRpzbip1RsxjyZ6Wyc8SnCJdW"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "label": "Jupiter Lend vault",
+      "programCount": 6,
+      "programDataAccounts": [
+        "3EgkASqSXVcgD4s3BXR9dU8DGn5usNhNbkakCKYRvkAC",
+        "3zB5SLYJoqDPN21s54MCkLeDPuMKQH9vNCSaZKSWTZZd",
+        "A5jX8nt82Pj5aQyrtooMPkgrfk5myqNRjuxC6urSJKAT",
+        "DagbFF3qaJhybh4S2msH2rA8FraijvULbcAyuXCQJ4qx",
+        "ESoMWjdS6i8pMgc75SN4s1gNotRDtNLox4uCxk6udXqY",
+        "J6Ry5yuy4Vp4kNa1PTGASiHJxZ8x4pgRPaJ18SmnqtW5"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "label": "GMSOL main vault",
+      "programCount": 6,
+      "programDataAccounts": [
+        "6Pm37LKANbf5bKymp6TTAiBy4ybYNLY7XwaMWRKKLZ8S",
+        "8NJ8KU4ajpcQsgYnto7wSpADWayASBoLbaLsr3mAsgKT",
+        "BnRXCFnA7LegobKuHVwqh8hpSYesdUGDDZqVvz2g4CFs",
+        "CSp2sB68THdrJP6N7Au4Y5u89VJ1E1ebaqZ2soHhQvav",
+        "GtBBQFHDfDva4zwLvShrP8UpcTXJZK3sU5Bv8QsMUe66",
+        "Hnxc6ti8MDdArZC1tUb9xZdzEDFySUUrJGyqorZQ9Shk"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "label": "GMSOL vault",
+      "programCount": 6,
+      "programDataAccounts": [
+        "2Vs75qtftuzccb3VbsQ9rF48kJHhXKcEhmfD7xrCgUDi",
+        "AskKDcA3kw5GK9D2KdkFpb1e8kC3TrfgvzeqPZSqY2n4",
+        "B7RgMMPmuawGzv4xssGBc48wnK8hYpvNJTD7s5JRHzTS",
+        "Di6MCjoitm8UNnhDLsEnMssT1avPjkriXnQ2PycLd4yr",
+        "GQHiCfrArYP9SRVJQhxiQ3z6WrKB1MidPjYVFAHKfmom",
+        "HrTAnLzsn2dc7or7qaeXycxbULGmMZKu2mViQbY11rTr"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "label": "Loopscale vault",
+      "programCount": 6,
+      "programDataAccounts": [
+        "kSqvNR39pSQK5kGfpHi6f2prXT4HGndskVP6U6tTx88",
+        "4GJpur1FxHgRDF4zq1LJsL8RrVRfagcU8fpWb2o2UFd2",
+        "CFy65JjJK3XmdB1UcR8qgZ1yFoJ2HfExy96RDhpZRZsf",
+        "EGMmWjEg2DZt4JfhHmqhd7CezRDQY9HwrL9zEubPp7fX",
+        "FtZqbxzGFfYKVv6gaqA1ihzB5UcBtkhowyeJzU42Jy8s",
+        "GWhTuDMo4PkMuwdynT8uREFYtU93wvDxX15gNxaSFA9C"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "label": "Ore vault",
+      "programCount": 4,
+      "programDataAccounts": [
+        "2Kvu78wApwvXQm8XQi9ESFb21AxZYWdXLJ4PgEzSk6uv",
+        "7EXATyheU8mhYLBv9TwSBoi124g6y5SBTYK72j7JCKUA",
+        "9PVAhQc7mVvptNv7PTXwv2x6Cn969cPVqW9ncjsZoXMg",
+        "GXa6JV9AwsccP3hxvKFcZGp4w3MMtf7PJ6HYuTSyokfJ"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "label": "Parcl governance vault (V3, 3 progs)",
+      "programCount": 4,
+      "programDataAccounts": [
+        "8EACiZSTxeuwkF9RSA8dz1TAqg4rtZ6CnjCFbeiFhM8u",
+        "C3QnedtdqM4AdHDauYvnjvjcYGBkx1kh9dbsiQSueNqU",
+        "C9vDZ1qk9pD7Uvv4gZbxqrmn1gTmzyqyy78cftiLyNqn",
+        "DGZ2psHJvUPuoC156JSxakxFUKDkkPN2e55KymkxpVqR"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "label": "Orca vault",
+      "programCount": 3,
+      "programDataAccounts": [
+        "nEuknUvGZK5UVyq3Tf18tcpNtC7dmjPMirrry66SkAs",
+        "7TdF3aLJXvwo24azTD3vBTMzr5ScscQUdHzdfcf41kbD",
+        "CtXfPzz36dH5Ws4UYKZvrQ1Xqzn42ecDW6y8NKuiN8nD"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "vault": "3hiQADryzHeV6gQa8gojLV5EHNAKXdujtTX2u8evVh1Z",
+      "label": "Berrie Dex / unknown vault",
+      "programCount": 2,
+      "programDataAccounts": [
+        "2nshv4xgCYmGvn8Nz1ucDJZfXKCLWwtzrofn87EW6En6",
+        "6KAQneizosCT8ZipkQHieQhBrWJyg1mC122rxTdTJRDP"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "vault": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "label": "Carrot vault",
+      "programCount": 2,
+      "programDataAccounts": [
+        "4Doyk29vFcFqUzn2VditTHwfqY3YMy1HXUARuwTfCuvT",
+        "CiVCR727TAKyt4xAbxsWYjXSXNG3f8a17chhnuvjX15n"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "vault": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "label": "Parcl perps vault (V3, 2 progs)",
+      "programCount": 2,
+      "programDataAccounts": [
+        "2uaEDjBgADsZEtGbrjEkVFVfxSMbEzpn7FkmsDEi5hPg",
+        "31zRxF6h9SukNpGghuHVXApxT3P3G3sef3cfzhWiTLy7"
+      ],
+      "severity": "HIGH"
+    },
+    {
+      "vault": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+      "label": "Drift E44y4Gm vault (recovery, Drift V2)",
+      "programCount": 1,
+      "programDataAccounts": [
+        "7dLgmtcTavcguNoynVimF9ZNVb13FvhXVRfj2HyrDGaP"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5",
+      "label": "LayerZero OFT (devtools vault)",
+      "programCount": 1,
+      "programDataAccounts": [
+        "5EcpgQ1gN2hCDuZjaTc9iXcFLmfU5YiNn9ENYhMGQDeW"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "Gy7pgCryzquDBHkpGkJGBRAyLpdmdqkifjLdKMoS1GEE",
+      "label": "Marginfi vault",
+      "programCount": 1,
+      "programDataAccounts": [
+        "Btvgkx4HZCVKUGofTC74DC7Utb6vtmdsmjC9D8EfwX5G"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY",
+      "label": "Kamino KFarms vault",
+      "programCount": 1,
+      "programDataAccounts": [
+        "5Fz4tY19ihWJAW1j9RNoEQJKSdn5mQHjcVrcZ5BRK5E9"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+      "label": "Helium vault",
+      "programCount": 1,
+      "programDataAccounts": [
+        "CtdTN3od14hyJm7DwmZABPxZBLiuUi7kKrHoNUkSQuMM"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+      "label": "SolvBTC vault",
+      "programCount": 1,
+      "programDataAccounts": [
+        "8UxWrc8vH9zYCovethP4Qj7diqf3nqYrWcj5uYEm3czU"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "9ECeczLtFZDYE3NX6G7uNw5BUGjoJAu1kFyEihA5hMaM",
+      "label": "Ondo Global Markets vault A",
+      "programCount": 1,
+      "programDataAccounts": [
+        "F4F1ZdqwmT4KfCfCnXrqLp9R6Liq4vEqJcs64xVKTKeU"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "5JKhn62nyvAE7aRb5zksXiovDEPX6mAcbdxFsJEdVmbw",
+      "label": "Ondo Global Markets vault B",
+      "programCount": 1,
+      "programDataAccounts": [
+        "FnzFmRhh2SJD5TiCWctSHAwmUysraMPrwtq4LqVsaj71"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda",
+      "label": "Flash Trade vault",
+      "programCount": 1,
+      "programDataAccounts": [
+        "5HYFtYsP3izQdfBjyN85sYjgsuPH4j82HQ2aMANwGK52"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+      "label": "Solstice vault",
+      "programCount": 1,
+      "programDataAccounts": [
+        "geaY9W36prjcuZkiB5YCZwfFp3fjVXrWVuWtqKFJRBs"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "87VfCnQ4d7XuZwriJAK7yADmqzrJQBx9FYMqCwdue5kv",
+      "label": "DefiTuna vault",
+      "programCount": 1,
+      "programDataAccounts": [
+        "FtAx72dC6tg2hmocbzwDzKGXy9oNxvwB7xAi64em7xXP"
+      ],
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+      "label": "LayerZero vault",
+      "programCount": 1,
+      "programDataAccounts": [
+        "8tRWVLwmPccyFNzpkfRGztqg7wyLcaNM4TVJfBrPqY7T"
+      ],
+      "severity": "MONITOR"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "protocol": "Loopscale",
+  "researchedAt": "2026-04-17T22:30:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.loopscale.com/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF",
+      "name": "Loopscale program 1",
+      "alreadyTracked": true,
+      "upgradeAuthority": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "jg82rRko6Hu1KqZ47RR95Jrq1cfqBhaAPXStseajmfQ",
+      "name": "Loopscale program 2",
+      "alreadyTracked": true,
+      "upgradeAuthority": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk",
+      "role": "Loopscale main (tracked)",
+      "threshold": "3/8",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    },
+    {
+      "address": "NG2KqHb4SE1HmqSf1GfJHorKGVNcYfgVSdwPPvn7Lsq",
+      "role": "Loopscale vault-parent",
+      "threshold": "2/5",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "parentMultisig": "NG2KqHb4SE1HmqSf1GfJHorKGVNcYfgVSdwPPvn7Lsq",
+      "vaultIndex": 0,
+      "programsControlled": 2,
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Two multisigs: main 3/8, vault-parent 2/5. Vault-parent owns 2 programs.",
+  "gaps": [
+    "Program role confirmation",
+    "Loopscale full program manifest"
+  ],
+  "confidence": "medium"
+}

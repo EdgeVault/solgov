@@ -1,0 +1,74 @@
+[
+  {
+    "protocol": "Orca",
+    "signer": "FbLXvzaKfV6USGNM...",
+    "createsPercent": 57,
+    "creates": 8,
+    "approvals": 27,
+    "story": "Orca: One signer (FbLXvzaKfV6U...) creates 57% of proposals AND is the top approver. This is rubber-stamp governance - one person effectively controls the decision pipeline."
+  },
+  {
+    "protocol": "Huma Finance",
+    "signer": "4eFYjKnGAiwt6sR8...",
+    "createsPercent": 100,
+    "creates": 9,
+    "approvals": 21,
+    "story": "Huma Finance: One signer (4eFYjKnGAiwt...) creates 100% of proposals AND is the top approver. This is rubber-stamp governance - one person effectively controls the decision pipeline."
+  },
+  {
+    "protocol": "Huma Finance",
+    "signer": "4eFYjKnGAiwt6sR8...",
+    "createsPercent": 100,
+    "creates": 9,
+    "approvals": 21,
+    "story": "Huma Finance: Only ONE person creates all proposals (9 total). No diversity in governance initiation."
+  },
+  {
+    "protocol": "Loopscale",
+    "signer": "CyNKPfqsSLAejjZt...",
+    "createsPercent": 100,
+    "creates": 17,
+    "approvals": 0,
+    "story": "Loopscale: Only ONE person creates all proposals (17 total). No diversity in governance initiation."
+  },
+  {
+    "protocol": "Hylo",
+    "signer": "H5xDGKUoJmmsNZ3b...",
+    "createsPercent": 100,
+    "creates": 5,
+    "approvals": 48,
+    "story": "Hylo: One signer (H5xDGKUoJmms...) creates 100% of proposals AND is the top approver. This is rubber-stamp governance - one person effectively controls the decision pipeline."
+  },
+  {
+    "protocol": "Helium",
+    "signer": "propu8J469CCZuBx...",
+    "createsPercent": 100,
+    "creates": 15,
+    "approvals": 0,
+    "story": "Helium: Only ONE person creates all proposals (15 total). No diversity in governance initiation."
+  },
+  {
+    "protocol": "GMSOL",
+    "signer": "BQ5qnKRmtECLcxVf...",
+    "createsPercent": 100,
+    "creates": 14,
+    "approvals": 14,
+    "story": "GMSOL: One signer (BQ5qnKRmtECL...) creates 100% of proposals AND is the top approver. This is rubber-stamp governance - one person effectively controls the decision pipeline."
+  },
+  {
+    "protocol": "GMSOL",
+    "signer": "BQ5qnKRmtECLcxVf...",
+    "createsPercent": 100,
+    "creates": 14,
+    "approvals": 14,
+    "story": "GMSOL: Only ONE person creates all proposals (14 total). No diversity in governance initiation."
+  },
+  {
+    "protocol": "DefiTuna",
+    "signer": "4naYqyXqJnkQe4JA...",
+    "createsPercent": 100,
+    "creates": 4,
+    "approvals": 52,
+    "story": "DefiTuna: One signer (4naYqyXqJnkQ...) creates 100% of proposals AND is the top approver. This is rubber-stamp governance - one person effectively controls the decision pipeline."
+  }
+]

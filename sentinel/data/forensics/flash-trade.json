@@ -1,0 +1,59 @@
+{
+  "protocol": "Flash Trade",
+  "researchedAt": "2026-04-17T22:26:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.flash.trade/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE",
+      "name": "Flash Trade Perps",
+      "role": "perps DEX",
+      "alreadyTracked": true,
+      "source": "verified-programs-governance.json - vault 2ZgW3Y7o owns it",
+      "upgradeAuthority": "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF",
+      "role": "Flash Trade main multisig (tracked)",
+      "threshold": "3/7",
+      "timelock": "3600s (1h)",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true,
+      "source": "extra-multisigs.json"
+    },
+    {
+      "address": "GPuMML3FeJXTr948CvTwSYANHm74RSW5iUibw5T6vSfa",
+      "role": "Flash Trade second multisig (vault-parent)",
+      "threshold": "3/5",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda",
+      "parentMultisig": "GPuMML3FeJXTr948CvTwSYANHm74RSW5iUibw5T6vSfa",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE"
+      ],
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Two Squads V4 multisigs: main 3/7 1h timelock, second 3/5 0s timelock owning the program. Different timelock governance on the two - second is weaker.",
+  "gaps": [
+    "Flash Trade pool/custody programs (Perps usually has multiple related programs)",
+    "Reason for 2 multisigs (operational vs admin?)"
+  ],
+  "confidence": "medium"
+}

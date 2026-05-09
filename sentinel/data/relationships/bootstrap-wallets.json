@@ -1,0 +1,613 @@
+{
+  "derivedAt": "2026-04-17T14:07:12.631Z",
+  "totalProtocols": 29,
+  "summary": {
+    "high": 3,
+    "medium": 0,
+    "low": 4,
+    "none": 22
+  },
+  "protocols": [
+    {
+      "protocol": "Huma",
+      "signerCount": 5,
+      "coveredSigners": 5,
+      "missingSigners": [],
+      "candidates": [
+        {
+          "funder": "Huma8ZB251nwuYxDME4EFir1z8wvYw97Yr3hg9g3qKQL",
+          "funderName": null,
+          "signersFunded": [
+            "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js",
+            "8W2VmPoB63YsVt9VZd5hJzzu1D396cszDLGWMZZ1GCKu",
+            "EoKrH8Gg1GMqEAgput6W3SGv6WhyC1Mr3eWAnjNJ3d7E"
+          ],
+          "coverage": 0.6
+        }
+      ],
+      "bootstrap": "Huma8ZB251nwuYxDME4EFir1z8wvYw97Yr3hg9g3qKQL",
+      "bootstrapName": null,
+      "bootstrapCoverage": 0.6,
+      "confidence": "high",
+      "cexFunded": [
+        {
+          "signer": "G1AonKZArhAC51Mp3uhJ3Yk1kRVsEwbg9RGTrUoqEPRm",
+          "exchange": "Binance 8"
+        }
+      ]
+    },
+    {
+      "protocol": "Solstice",
+      "signerCount": 5,
+      "coveredSigners": 5,
+      "missingSigners": [],
+      "candidates": [
+        {
+          "funder": "5RabYeYt19sor9RvExkiRvv1T9rWje5hPW7xeYXB6quQ",
+          "funderName": null,
+          "signersFunded": [
+            "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK",
+            "E1iyboRnxBSD8KJncj8mkkzbJu17gr5w6CiTN6q4YoUN",
+            "FoMboHErV2g7GjfQayFCRjWdXg3USZkPJCoeYEgPastv"
+          ],
+          "coverage": 0.6
+        }
+      ],
+      "bootstrap": "5RabYeYt19sor9RvExkiRvv1T9rWje5hPW7xeYXB6quQ",
+      "bootstrapName": null,
+      "bootstrapCoverage": 0.6,
+      "confidence": "high",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Wick",
+      "signerCount": 5,
+      "coveredSigners": 5,
+      "missingSigners": [],
+      "candidates": [
+        {
+          "funder": "CFp5kK1fDwuAdn1vzyK4RqKsfJ9SUd97w6zNVnLJTQHp",
+          "funderName": null,
+          "signersFunded": [
+            "21kF2n1WdJYaTMmwtMfWHydLc3xPjMjRUHBiUcW7iCxM",
+            "28eDFqNQ15VB745zXVSPJVSRZWD7sws2Hy8VHq5pfazu",
+            "6EzEruZ8uKHTRnjQktQsn6U5cimfbUCGGmTEycnmnxPW",
+            "6sY2nhNfW2UoVa9qmLT5h5oNj423JuDa5LKaTwD3JAop",
+            "9RkMtrs93JspVYaDjm1SWWj6zE3xVP5VN26vEMDAVkAf"
+          ],
+          "coverage": 1
+        }
+      ],
+      "bootstrap": "CFp5kK1fDwuAdn1vzyK4RqKsfJ9SUd97w6zNVnLJTQHp",
+      "bootstrapName": null,
+      "bootstrapCoverage": 1,
+      "confidence": "high",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Hylo",
+      "signerCount": 9,
+      "coveredSigners": 9,
+      "missingSigners": [],
+      "candidates": [
+        {
+          "funder": "Dz2vU5QJSVow9WMkFhUTPZpfz5J8vcDuv81MW4Z6E4Jy",
+          "funderName": null,
+          "signersFunded": [
+            "3ChdTfL6iZ1webxcw79wnob1CyZy5FxkCXR7v3j1qRJD",
+            "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe"
+          ],
+          "coverage": 0.2222222222222222
+        }
+      ],
+      "bootstrap": "Dz2vU5QJSVow9WMkFhUTPZpfz5J8vcDuv81MW4Z6E4Jy",
+      "bootstrapName": null,
+      "bootstrapCoverage": 0.2222222222222222,
+      "confidence": "low",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Loopscale",
+      "signerCount": 8,
+      "coveredSigners": 8,
+      "missingSigners": [],
+      "candidates": [
+        {
+          "funder": "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN",
+          "funderName": null,
+          "signersFunded": [
+            "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j",
+            "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs"
+          ],
+          "coverage": 0.25
+        }
+      ],
+      "bootstrap": "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN",
+      "bootstrapName": null,
+      "bootstrapCoverage": 0.25,
+      "confidence": "low",
+      "cexFunded": [
+        {
+          "signer": "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn",
+          "exchange": "Binance 6"
+        }
+      ]
+    },
+    {
+      "protocol": "Orca",
+      "signerCount": 10,
+      "coveredSigners": 10,
+      "missingSigners": [],
+      "candidates": [
+        {
+          "funder": "754rCJJjHcsjMhDVkHuefjV1irgHePeq1QWBrYw7G7rJ",
+          "funderName": null,
+          "signersFunded": [
+            "F8HnFKCbN5H1PnHMVtGSyMv4nn7XxCreMQJPUP7q8qK4",
+            "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa"
+          ],
+          "coverage": 0.2
+        }
+      ],
+      "bootstrap": "754rCJJjHcsjMhDVkHuefjV1irgHePeq1QWBrYw7G7rJ",
+      "bootstrapName": null,
+      "bootstrapCoverage": 0.2,
+      "confidence": "low",
+      "cexFunded": [
+        {
+          "signer": "3HNJ8bKv1tDcc7urfJm51FaF7aVpG6GPwxgfKA8s9U8z",
+          "exchange": "Coinbase Hot Wallet"
+        }
+      ]
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "signerCount": 7,
+      "coveredSigners": 7,
+      "missingSigners": [],
+      "candidates": [
+        {
+          "funder": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+          "funderName": null,
+          "signersFunded": [
+            "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq",
+            "FXQuS5Yug6GBxbNbf4qpNdFonhhCW7x7a4nTFakzgFnK"
+          ],
+          "coverage": 0.2857142857142857
+        }
+      ],
+      "bootstrap": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+      "bootstrapName": null,
+      "bootstrapCoverage": 0.2857142857142857,
+      "confidence": "low",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Drift",
+      "signerCount": 5,
+      "coveredSigners": 4,
+      "missingSigners": [
+        "HC6BxMvDLfefSZE16FRRktLHD7JVFLuLKvNRidGzH7iH"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Pump.fun",
+      "signerCount": 4,
+      "coveredSigners": 4,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "5sFJMw5dC59oKGKA9LgeYQCSmYS6rLeCegxMkcM2Pwby",
+          "exchange": "Kraken Hot Wallet"
+        }
+      ]
+    },
+    {
+      "protocol": "Magic Eden",
+      "signerCount": 6,
+      "coveredSigners": 5,
+      "missingSigners": [
+        "D9on7nU5rmANsXSfa7a9YAU2n54VjAxdPKitpxtvwFQs"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "FoSGKYHTLjL5RzAujxSu356SeUE65VJ2j5TH9buUy2Ze",
+          "exchange": "Coinbase Hot Wallet"
+        }
+      ]
+    },
+    {
+      "protocol": "Exponent",
+      "signerCount": 4,
+      "coveredSigners": 4,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3",
+          "exchange": "Binance 8"
+        }
+      ]
+    },
+    {
+      "protocol": "Nosana",
+      "signerCount": 3,
+      "coveredSigners": 3,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Lulo",
+      "signerCount": 5,
+      "coveredSigners": 3,
+      "missingSigners": [
+        "534w7LUbs4jsNp6qJ1r6vEwiZRqadzT7ZXUyVTCZThK4",
+        "C1twykXr9nKgVEistG3yJk8rtKTnjdhUWrPnQ6TaEkeB"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Stabble",
+      "signerCount": 3,
+      "coveredSigners": 3,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Marginfi",
+      "signerCount": 13,
+      "coveredSigners": 13,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "2owonq2d2LaQNCc4iq8s4848GeRsPQqbRdCReLhdx9mW",
+          "exchange": "Kraken Hot Wallet"
+        },
+        {
+          "signer": "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z",
+          "exchange": "Kraken Hot Wallet"
+        }
+      ]
+    },
+    {
+      "protocol": "Kamino",
+      "signerCount": 10,
+      "coveredSigners": 10,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv",
+          "exchange": "Swissborg Hot Wallet 2"
+        },
+        {
+          "signer": "8g2PMddbKrqpPtd74pWM16xnDwtpKtkDJNDsQ9cWJZAC",
+          "exchange": "Revolut Hot Wallet"
+        },
+        {
+          "signer": "BEUTwDjLNoXvT26J9CZD5A1Fsr9WF2UXdcUVZuy4zQ3d",
+          "exchange": "Coinbase Hot Wallet"
+        },
+        {
+          "signer": "BMGYmN1hG8evD3pvy1Rk41bFUdGGVP5fYJbh2JHMonqK",
+          "exchange": "Swissborg Hot Wallet 2"
+        },
+        {
+          "signer": "HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj",
+          "exchange": "Kraken Hot Wallet"
+        }
+      ]
+    },
+    {
+      "protocol": "Jupiter Perps",
+      "signerCount": 7,
+      "coveredSigners": 7,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "CHRDWWqUs6LyeeoD7pJb3iRfnvYeMfwMUtf2N7zWk7uh",
+          "exchange": "Binance 8"
+        }
+      ]
+    },
+    {
+      "protocol": "Switchboard",
+      "signerCount": 7,
+      "coveredSigners": 7,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+          "exchange": "Binance US Hot Wallet 2"
+        },
+        {
+          "signer": "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP",
+          "exchange": "Binance US Hot Wallet 2"
+        }
+      ]
+    },
+    {
+      "protocol": "Titan",
+      "signerCount": 8,
+      "coveredSigners": 7,
+      "missingSigners": [
+        "2GafqBhxF23cmRHN2cSHHoUcHZ1iDqzEn8Ayrkj34Csn"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "VmroV2xtoj3yP487d2qt9kjCVn4BcphEtvSMjfGpfgN",
+          "exchange": "Deribit Hot Wallet"
+        },
+        {
+          "signer": "EDae3XapMwETGSH4HrggdiKDSpX1bPjaRH2HoEWzkLT2",
+          "exchange": "Kraken Hot Wallet"
+        }
+      ]
+    },
+    {
+      "protocol": "Solayer",
+      "signerCount": 6,
+      "coveredSigners": 5,
+      "missingSigners": [
+        "GjtMGFA81gyP5FRX5skKmwKRT3VV4LdhCJLexwyM4Hjd"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+          "exchange": "FTX 1"
+        },
+        {
+          "signer": "DB75TdZZ3cLgpPATEgXGgJSnH3AG552XeeoB2mf2fsKN",
+          "exchange": "Coinbase Hot Wallet"
+        }
+      ]
+    },
+    {
+      "protocol": "Flash Trade",
+      "signerCount": 7,
+      "coveredSigners": 7,
+      "missingSigners": [],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": [
+        {
+          "signer": "9NXhjBeYjkp4UkTR9xhkr2nHMKwSgxMQZSNZ3syqEuWt",
+          "exchange": "Bybit Hot Wallet 1"
+        }
+      ]
+    },
+    {
+      "protocol": "Sanctum",
+      "signerCount": 11,
+      "coveredSigners": 0,
+      "missingSigners": [
+        "CAkAPXiA99rMM7rop72odftsaq2TjsdWYd5VVoSC5Eo7",
+        "5fDWgBUrNQcnScW96ksESeGLgzSw2xUNHxY65zUsDsVw",
+        "Apv4aSHiQCiRZA71AJrbzv1gyDjw8F4P4ovysjLzYgY3",
+        "HtZpYc7xauRodT8xrMxrKYzFYNebUugjr94jN9HrwCPg",
+        "2AFoXEzBf5RwyUaT8Y7fQ6MKYBzCnXmuLtPbW7B9kR78",
+        "6MZP2PPaBmczZmYyg1BxMDHGqAo25HZAquBzhwMPSNY1",
+        "75AYCWbx9nHQvHgubXWxM5wnhXxNXLeq1Jhpp9hRs29M",
+        "4bnGZL2oLaLPcXkUMFMhnqf4de2YgD98DEALg2GKdUo9",
+        "4wCieA3hWNH3R78aHPEUfce8vAgkcAH7zugJ6ZnCD644",
+        "F9rScNGhj2oXELQpsgAUBwQa9t4Y6PbLVyrLREdP1TS7",
+        "114kXejfrvj55UX742RD4voFo8cKB8sprnN5GNw1JX1"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Jupiter Agg",
+      "signerCount": 8,
+      "coveredSigners": 0,
+      "missingSigners": [
+        "3uEKETFgKZznyAyCCwHxL4CTSqYVREZoevFEqo1tReir",
+        "3zgMHh34bzwnrBGreCHggooidYaSuVPttLTngG46uwej",
+        "HCdbfJkPmzK43bgqVMMuh64so7V4Vu8XoVABsS3QuJF6",
+        "4xiy1ZrK8JrsUT96xYHG8sXgM7PrQeXNEXBSgnqBK2cD",
+        "FMtNYgAgkcRb21sApVftPer5AZzEbAKyS3m8niuSTKJz",
+        "6jfwLneNqmc398Y6nXFAdPyRU6p7t7AkJv1tQhHYNvtF",
+        "137sqWDXSY3mNPX6YyGEtPG3ZRHBnUnY9kXtPefK75Yb",
+        "137sqWDXSY3mNPX6YyGEtPG3ZRHBnUnY9kXtPefK6nHd"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Raydium",
+      "signerCount": 3,
+      "coveredSigners": 0,
+      "missingSigners": [
+        "He658aXxsbzqjgQVgfXLnPUzRvgQMh68x95f9pWkB2i5",
+        "DVFhSFBWKdg6TRtEkXJ4Lm8TPrBV5Z2DZtGVZMNh7mTB",
+        "11VN4qhMpk9nS3mtxdA57QwMLE7iShiNkJsgxmo5uTy"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Tensor",
+      "signerCount": 9,
+      "coveredSigners": 0,
+      "missingSigners": [
+        "FfgxfAvHoFBsd7gG5xQZRhcKcsvzBUv31qEmUfME7gic",
+        "8ss4K8jCJm4dwdKJrJ2hKVsoL5fZMQCFGsk1gHngpzhh",
+        "3k8dvMdu1barAzJzrqqTmSqaCb5wjSgqc6FUZ9ZgA3rV",
+        "22hP9Sifdir3tgZWabFmRrW9Be5KQmShbftGSQR4L42G",
+        "4eUx8PBKP2jmnoFzugtZ9gehXGeNQEE1rqX9BGBXUub5",
+        "5SzEzEgxwFwMXx2ZDk2LzP12TXb9jMNKodmzJUkGjNaZ",
+        "yNuVKb3Y6g4q2aiqYLEVdsKMDThNVcC882shVg7SeZK",
+        "yNuVKb3Y6g4q2aiqYLEVdsKMDThNVcC882shVg7SeZK",
+        "yNuVKb3Y6g4q2aiqYLEVdsKMDThNVcC882shVg7SKfu"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Phoenix DEX",
+      "signerCount": 5,
+      "coveredSigners": 0,
+      "missingSigners": [
+        "AXyhQbniLEM8tSVh2uRgQTfg7eV87iV66S9zoUqBdkeY",
+        "FDNsc9VeXnQPS1T6snFoeQHccyGntgfYkTLxGRjY7btJ",
+        "9JsVLiqmtzZsSU9ShCXouasTTCVuN4yAUXUhqNHiQgKG",
+        "9JsVLiqmtzZsSU9ShCXouasTTCVuN4yAUXUhqNHiQgKG",
+        "9JsVLiqmtzZsSU9ShCXouasTTCVuN4yAUXUhqNHiQMyR"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Meteora",
+      "signerCount": 8,
+      "coveredSigners": 0,
+      "missingSigners": [
+        "4aL77sN81JDt7bfLCqmhDe8e7s347ihYmz1zacGeBabV",
+        "73zRVNZL6XGm2US4MAYR3CBeMi75hbWiTCHPLLa6sz2F",
+        "9bJYaqfcfcvi1KEQAVF9UntMsS6Tc1VSc9zM81ugpygg",
+        "4xiy1ZrK8JrsUT96xYHG8sXgM7PrQeXNEXBSgnqBK36Z",
+        "6BqXX22gxczWCe8ArS3WTkpxrZj3UmQKa7MZADW9jxy8",
+        "578v8wFm6FjRb1Cfa7zPBBxZDmzGD3SDr2BXzNuSTwXj",
+        "5uB2wCDNyRYcAzDKpiERDjrbD5zSWoxsEDKx3y8oi4iH",
+        "5uB2wCDNyRYcAzDKpiERDjrbD5zSWoxsEDKx3y8ohm6o"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Parcl",
+      "signerCount": 5,
+      "coveredSigners": 0,
+      "missingSigners": [
+        "4Wj1ZwaJWgmFhjHsggFRyfiyaB85xceEjmcfhgumZ8bF",
+        "CtrXUTAA7UqDajTGNfnYf7eQs8X4JuyBmtodf6oQyk4e",
+        "G8drWN5snM3LwprfLLQXg9KvZxFzJSiu7TGwAdnFRbMb",
+        "6CEXJtczjVTycp5RLigxqcTETGfm4htktNbhdCq3Qt8t",
+        "FSJWFdvnUkcVgtFDwEVTkojnZjz6bHnEEG8YTiA1giw9"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    },
+    {
+      "protocol": "Marinade",
+      "signerCount": 13,
+      "coveredSigners": 0,
+      "missingSigners": [
+        "8DzsCSvbvBDYxGB4ytNF698zi6Dyo9dUBVRNjZQFHSUt",
+        "3UnpVHnaKtq3v6pBxsueocPBX7FQdsSTHZ8UittTDUpV",
+        "CoxYLqf6zUrkTvWfVSHbxdjswrDEaNnciuGtzWniFzu5",
+        "CZ3CfmeqRcjQ5iAC1iQ5dhMjzpnnzveZZp2SbFKDwUZE",
+        "6PVyHxZjUDEDB36Cz6uGTPBAKSx4gzuyvCE9xeGqdWVS",
+        "AsSxcz9NgbGsvBSJTjcvrJbbs4rNF7AdN7zeboR3o5Xs",
+        "8HVYKgq2PA4SCDuPZSfHBH1aupTBJYPVru6kq3UfuSX9",
+        "ELg5GDPLMKmyo7vTfnYE5aiDEovcCxqhedxp71tQGrFe",
+        "B7wXBXU8kWdBY958hstHKC9NuH2EaHoiY7GEZtWQ4bR8",
+        "GDmSxpPzLkfxxr6dHLNRnCoYVGzvgc41tozkrr4pHTjB",
+        "6zBGXPrrotjM6sQ3dSNbDVh5W7dwJ8h1iqK84MHPBKkY",
+        "3LPh9LN88kxSe3shxLZ2R4jiNmHh2U2F9h9TmVKjc18P",
+        "5ygHFBRddFh7v4PpqquQu2yeRdxWvN1PhyjyzfENdUVh"
+      ],
+      "candidates": [],
+      "bootstrap": null,
+      "bootstrapName": null,
+      "bootstrapCoverage": 0,
+      "confidence": "none",
+      "cexFunded": []
+    }
+  ]
+}

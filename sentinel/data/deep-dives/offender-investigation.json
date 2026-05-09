@@ -1,0 +1,393 @@
+[
+  {
+    "protocol": "DefiTuna",
+    "address": "C31s8y9zXnUbXzejPQ4ZaUj8JdR6j3zseAAcmDr8k51x",
+    "swaps": 131,
+    "riskScore": 9,
+    "categoryMix": {
+      "BASIC": 72,
+      "MEME_MINT": 17,
+      "DEX_AGG": 16,
+      "OTHER": 11,
+      "CNFT": 1
+    },
+    "topPlatforms": {
+      "SYSTEM_PROGRAM": 64,
+      "JUPITER": 15,
+      "SOLANA_PROGRAM_LIBRARY": 8,
+      "DEFITUNA": 8,
+      "UNKNOWN": 3,
+      "OKX_DEX_ROUTER": 1,
+      "BUBBLEGUM": 1
+    },
+    "selfFeePct": 47,
+    "governance": {
+      "approve": 0,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "PERSONAL_DEGEN_TRADING"
+  },
+  {
+    "protocol": "Loopscale",
+    "address": "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn",
+    "swaps": 126,
+    "riskScore": 8,
+    "categoryMix": {
+      "OTHER": 68,
+      "DEX_AGG": 23,
+      "BASIC": 9
+    },
+    "topPlatforms": {
+      "UNKNOWN": 34,
+      "LOOPSCALE": 25,
+      "TITAN": 22,
+      "SYSTEM_PROGRAM": 9,
+      "CIRCLE_CCTP_CORE_V2": 5,
+      "CIRCLE_CCTP_TOKEN_V2": 2,
+      "SWITCHBOARD_ON_DEMAND": 2,
+      "DFLOW": 1
+    },
+    "selfFeePct": 83,
+    "governance": {
+      "approve": 0,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "HEAVY_TRADING"
+  },
+  {
+    "protocol": "Switchboard",
+    "address": "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP",
+    "swaps": 57,
+    "riskScore": 7,
+    "categoryMix": {
+      "BASIC": 46,
+      "DEX_AGG": 24,
+      "LENDING": 16,
+      "GOVERNANCE": 10,
+      "CNFT": 2,
+      "OTHER": 2
+    },
+    "topPlatforms": {
+      "SYSTEM_PROGRAM": 42,
+      "DRIFT": 16,
+      "JUPITER": 11,
+      "TITAN": 10,
+      "SQUADS_V4": 10,
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "BUBBLEGUM": 2,
+      "MAYAN_CIRCLE_FAST_TRANSFER": 2
+    },
+    "selfFeePct": 46,
+    "governance": {
+      "approve": 0,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "HEAVY_TRADING"
+  },
+  {
+    "protocol": "Kamino",
+    "address": "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV",
+    "swaps": 71,
+    "riskScore": 5,
+    "categoryMix": {
+      "OTHER": 53,
+      "BASIC": 35,
+      "LENDING": 10,
+      "CNFT": 1,
+      "DEX_AGG": 1
+    },
+    "topPlatforms": {
+      "KAMINO_LEND": 53,
+      "SYSTEM_PROGRAM": 18,
+      "ASSOCIATED_TOKEN_PROGRAM": 13,
+      "KAMINO_FARMS": 10,
+      "SOLANA_PROGRAM_LIBRARY": 4,
+      "BUBBLEGUM": 1,
+      "JUPITER": 1
+    },
+    "selfFeePct": 79,
+    "governance": {
+      "approve": 0,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "MIXED_USE"
+  },
+  {
+    "protocol": "Jupiter Lend",
+    "address": "GpvnGqPTq4Ga7k5PgxoBA7Yr6HCnsqeeeb8KhczztdRu",
+    "swaps": 25,
+    "riskScore": 5,
+    "categoryMix": {
+      "GOVERNANCE": 73,
+      "BASIC": 18,
+      "OTHER": 6,
+      "CNFT": 3
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 73,
+      "SYSTEM_PROGRAM": 18,
+      "BUBBLEGUM": 3,
+      "KAMINO_LEND": 3,
+      "UNKNOWN": 1,
+      "ADDRESS_LOOKUP_TABLE": 1,
+      "PHANTOM": 1
+    },
+    "selfFeePct": 79,
+    "governance": {
+      "approve": 68,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "GOVERNANCE_HEAVY"
+  },
+  {
+    "protocol": "Marginfi",
+    "address": "6ryqDDCwKFZfSiHQrYRkjTEarbsLjg9TmuFg1RJorBk3",
+    "swaps": 47,
+    "riskScore": 5,
+    "categoryMix": {
+      "GOVERNANCE": 41,
+      "BASIC": 24,
+      "OTHER": 17,
+      "DEX_AGG": 11,
+      "LENDING": 5,
+      "CNFT": 2
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 41,
+      "SYSTEM_PROGRAM": 19,
+      "KAMINO_LEND": 11,
+      "JUPITER": 10,
+      "UNKNOWN": 6,
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "MARGINFI_V2": 5,
+      "BUBBLEGUM": 2
+    },
+    "selfFeePct": 78,
+    "governance": {
+      "approve": 32,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "GOVERNANCE_HEAVY"
+  },
+  {
+    "protocol": "GMSOL Deploy",
+    "address": "66kDYpYtuGkaZF2ho64VgEQuAgBPGjY17HtcTtANtNR8",
+    "swaps": 68,
+    "riskScore": 5,
+    "categoryMix": {
+      "BASIC": 73,
+      "NFT": 23,
+      "DEX_AGG": 2,
+      "OTHER": 1,
+      "CNFT": 1
+    },
+    "topPlatforms": {
+      "SYSTEM_PROGRAM": 70,
+      "MAGIC_EDEN": 21,
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "TENSOR": 2,
+      "OKX_DEX_ROUTER": 2,
+      "SHARKY_FI": 1,
+      "BUBBLEGUM": 1
+    },
+    "selfFeePct": 11,
+    "governance": {
+      "approve": 0,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "MIXED_USE"
+  },
+  {
+    "protocol": "DefiTuna",
+    "address": "9KLgXuQc1VXStEx6gppqe6BhX5jE75hLufkXmRwZmWLL",
+    "swaps": 67,
+    "riskScore": 5,
+    "categoryMix": {
+      "GOVERNANCE": 45,
+      "BASIC": 45,
+      "OTHER": 5,
+      "DEX_AGG": 3,
+      "CNFT": 2
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 45,
+      "SYSTEM_PROGRAM": 39,
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "UNKNOWN": 5,
+      "BUBBLEGUM": 2,
+      "OKX_DEX_ROUTER": 2,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "JUPITER": 1
+    },
+    "selfFeePct": 27,
+    "governance": {
+      "approve": 32,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "GOVERNANCE_HEAVY"
+  },
+  {
+    "protocol": "Stabble",
+    "address": "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN",
+    "swaps": 45,
+    "riskScore": 4,
+    "categoryMix": {
+      "BASIC": 44,
+      "GOVERNANCE": 44,
+      "OTHER": 5,
+      "DEX_AGG": 4,
+      "CNFT": 2,
+      "MEME_MINT": 2,
+      "MEME": 1
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 44,
+      "SYSTEM_PROGRAM": 42,
+      "JUPITER": 4,
+      "UNKNOWN": 4,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "BUBBLEGUM": 2,
+      "PUMP_AMM": 1,
+      "PHANTOM": 1
+    },
+    "selfFeePct": 58,
+    "governance": {
+      "approve": 29,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [
+      "[2026-03-11] SWAP -- "
+    ],
+    "gamblingExamples": [],
+    "verdict": "GOVERNANCE_HEAVY"
+  },
+  {
+    "protocol": "Marginfi",
+    "address": "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu",
+    "swaps": 66,
+    "riskScore": 4,
+    "categoryMix": {
+      "DEX_AGG": 54,
+      "BASIC": 29,
+      "GOVERNANCE": 13,
+      "LENDING": 2,
+      "OTHER": 1,
+      "CNFT": 1
+    },
+    "topPlatforms": {
+      "JUPITER": 32,
+      "SQUADS_V4": 13,
+      "ASSOCIATED_TOKEN_PROGRAM": 13,
+      "DFLOW": 12,
+      "SOLANA_PROGRAM_LIBRARY": 9,
+      "TITAN": 9,
+      "SYSTEM_PROGRAM": 7,
+      "MARGINFI_V2": 2
+    },
+    "selfFeePct": 78,
+    "governance": {
+      "approve": 10,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "GOVERNANCE_HEAVY"
+  },
+  {
+    "protocol": "Loopscale",
+    "address": "26Es6MMrHXXBGPoVd5D5VZwepTHPigaSU5iTSd2hmp1m",
+    "swaps": 37,
+    "riskScore": 3,
+    "categoryMix": {
+      "GOVERNANCE": 78,
+      "BASIC": 19,
+      "DEX_AGG": 1,
+      "CNFT": 1,
+      "AMM": 1
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 78,
+      "SYSTEM_PROGRAM": 19,
+      "JUPITER": 1,
+      "BUBBLEGUM": 1,
+      "ORCA": 1
+    },
+    "selfFeePct": 80,
+    "governance": {
+      "approve": 55,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "GOVERNANCE_HEAVY"
+  },
+  {
+    "protocol": "Marginfi",
+    "address": "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z",
+    "swaps": 38,
+    "riskScore": 3,
+    "categoryMix": {
+      "GOVERNANCE": 86,
+      "BASIC": 9,
+      "DEX_AGG": 3,
+      "CNFT": 1,
+      "OTHER": 1
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 86,
+      "SOLANA_PROGRAM_LIBRARY": 7,
+      "JUPITER": 3,
+      "SYSTEM_PROGRAM": 2,
+      "BUBBLEGUM": 1,
+      "UNKNOWN": 1
+    },
+    "selfFeePct": 57,
+    "governance": {
+      "approve": 61,
+      "reject": 0,
+      "execute": 0,
+      "propose": 0
+    },
+    "memeExamples": [],
+    "gamblingExamples": [],
+    "verdict": "GOVERNANCE_HEAVY"
+  }
+]

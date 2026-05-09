@@ -1,0 +1,49 @@
+{
+  "protocol": "DefiTuna",
+  "researchedAt": "2026-04-17T22:28:00Z",
+  "researcher": "manual stub",
+  "sources": [],
+  "programs": [
+    {
+      "id": "par1tyqusak2f2DXg9RHv78SVHNWXkJLSbtJZQSuWjV",
+      "name": "DefiTuna Parity",
+      "alreadyTracked": true,
+      "upgradeAuthority": "87VfCnQ4d7XuZwriJAK7yADmqzrJQBx9FYMqCwdue5kv",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv",
+      "role": "DefiTuna main (tracked)",
+      "threshold": "2/7",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    },
+    {
+      "address": "5Sjxeibf9PmN2WG23nhfJVEJ8paPKfpK7pQ9oyfQkrZy",
+      "role": "DefiTuna vault-parent",
+      "threshold": "2/3",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "87VfCnQ4d7XuZwriJAK7yADmqzrJQBx9FYMqCwdue5kv",
+      "parentMultisig": "5Sjxeibf9PmN2WG23nhfJVEJ8paPKfpK7pQ9oyfQkrZy",
+      "vaultIndex": 0,
+      "programsControlled": 1,
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Squads V4, main 2/7 (low quorum), vault-parent 2/3.",
+  "gaps": [
+    "Reason for 2/7 main threshold",
+    "Additional programs"
+  ],
+  "confidence": "medium"
+}

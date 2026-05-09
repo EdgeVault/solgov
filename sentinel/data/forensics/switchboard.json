@@ -1,0 +1,69 @@
+{
+  "protocol": "Switchboard",
+  "researchedAt": "2026-04-17T22:22:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.switchboard.xyz/"
+    },
+    {
+      "kind": "github",
+      "url": "https://github.com/switchboard-xyz"
+    }
+  ],
+  "programs": [
+    {
+      "id": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+      "name": "Switchboard V2 (Oracle)",
+      "role": "legacy oracle program",
+      "alreadyTracked": false,
+      "confidence": "medium",
+      "needsRpcVerify": [
+        "confirm ID via docs"
+      ],
+      "upgradeAuthority": "2NvGRFswVx3GXxURNSfjbsWY4iP1ufj8LvAKJWGXSm4D",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv",
+      "name": "Switchboard On-Demand",
+      "role": "oracle pull-based",
+      "alreadyTracked": false,
+      "confidence": "medium",
+      "needsRpcVerify": [
+        "confirm via GitHub"
+      ],
+      "upgradeAuthority": "DREcTwxxuehtUVgnGwDpTcKT9zTK5uDmdLbnRY7cijEx",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "sbattyXrzedoNATfc4L31wC9Mhxsi1BmFhTiN8gDshx",
+      "name": "Switchboard Attestation Service",
+      "role": "verified-build attestation",
+      "alreadyTracked": false,
+      "confidence": "low",
+      "upgradeAuthority": "31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "93RQfY6VHRkqXBCEhMY5u92bCGp428DTzqZUEA2Hjr9h",
+      "role": "Switchboard multisig (tracked)",
+      "threshold": "3/7",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads V4 3/7 0s. Multiple programs (V2 oracle, On-Demand, Attestation, Surge). Program manifest not fully confirmed.",
+  "gaps": [
+    "Fetch docs.switchboard.xyz deployed-addresses page via alternative method",
+    "Upgrade authority chain for each program",
+    "NOTE: Earlier 'Switchboard vault' label on CivjSDKgT vault was WRONG - that's actually Kamino KFarms. Switchboard's real vault PDAs are unknown in local data."
+  ],
+  "confidence": "low"
+}

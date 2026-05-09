@@ -1,0 +1,8 @@
+{
+  "protocol":"Hylo","researchedAt":"2026-04-17T22:26:00Z","researcher":"manual stub",
+  "sources":[{"kind":"docs","url":"https://docs.hylo.so/"}],
+  "programs":[],
+  "multisigs":[{"address":"2z3t2eBz7VL39Q3vEvaemd5mhT9XLoFofEH2cXvwCJvb","role":"Hylo multisig (tracked)","threshold":"?","alreadyTracked":true,"needsRpcVerify":["threshold + members"]}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Squads multisig.","gaps":["Hylo program IDs","threshold + members","governance structure"],"confidence":"low"
+}

@@ -1,0 +1,2534 @@
+{
+  "r21Gamwd9DtyjHeGywsneoQYR39C1VDwrw7tWxHAwh6": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 3,
+    "transferTxs": 8,
+    "otherTxs": 9,
+    "mostActiveHour": 4,
+    "riskScore": 2
+  },
+  "3HNJ8bKv1tDcc7urfJm51FaF7aVpG6GPwxgfKA8s9U8z": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 16,
+    "multisigTxs": 12,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 4,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "4gdsTXsc3Df73LyNXeTa9wS5unJ9DE8cTaJhtKqksD4S": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "6Li1bEptmfD1RT3LaPUde8yMTdn2Fpr9Vf726VdSueL9": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 5,
+    "multisigTxs": 2,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "9f4WNuXfhQsjC2U4tqZ38i4rccey9ys5eeywCmQ9yUAs": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 48,
+    "multisigTxs": 16,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 4,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "AM1tQFm9YCFZaqU69iX6zg5Sy9RQRxGrU6Pp9od22pb4": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 9,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 10,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 11,
+    "defiTxs": 1,
+    "transferTxs": 1,
+    "otherTxs": 7,
+    "mostActiveHour": 14,
+    "riskScore": 1
+  },
+  "F8HnFKCbN5H1PnHMVtGSyMv4nn7XxCreMQJPUP7q8qK4": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 18,
+    "multisigTxs": 16,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 39,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 1,
+    "riskScore": 0
+  },
+  "13GXtbGV8mNfNLDNbVKPrTcHTpfZ4CYrXviRCZmyxQvj": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 23,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 3,
+    "riskScore": 0
+  },
+  "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 25,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 3,
+    "riskScore": 0
+  },
+  "HC6BxMvDLfefSZE16FRRktLHD7JVFLuLKvNRidGzH7iH": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 0,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 33,
+    "multisigTxs": 16,
+    "defiTxs": 1,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 1,
+    "riskScore": 1
+  },
+  "4tbEe4AquJWyMh7f7yE5poFChhsuPbeGh7EHVQCvq2N8": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "5sFJMw5dC59oKGKA9LgeYQCSmYS6rLeCegxMkcM2Pwby": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "7zc8kzBr5wbsQKxYYv9uCMgfcW5zjxLEopvmuf3ig6iw": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "85ckxt7FfpdqjwFm33EA9KR4YFgdBCGFXGur4TbQBK25": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 1,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 19,
+    "mostActiveHour": 6,
+    "riskScore": 0
+  },
+  "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "D9on7nU5rmANsXSfa7a9YAU2n54VjAxdPKitpxtvwFQs": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 0,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "EsmFrjZuXg6SMQu78QWSM4DWxYQCj86r4zeFRhvb4S1z": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 12,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 8,
+    "mostActiveHour": 17,
+    "riskScore": 0
+  },
+  "FoSGKYHTLjL5RzAujxSu356SeUE65VJ2j5TH9buUy2Ze": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 1,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 12,
+    "riskScore": 0
+  },
+  "6vkzAQLAERW5RKHX68ZCDxWxW77T8dMqYUYMXCe6ooMC": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 15,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 8,
+    "transferTxs": 4,
+    "otherTxs": 8,
+    "mostActiveHour": 22,
+    "riskScore": 3
+  },
+  "8g2PMddbKrqpPtd74pWM16xnDwtpKtkDJNDsQ9cWJZAC": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 16,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 4,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "BEUTwDjLNoXvT26J9CZD5A1Fsr9WF2UXdcUVZuy4zQ3d": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 10,
+    "defiTxs": 2,
+    "transferTxs": 0,
+    "otherTxs": 8,
+    "mostActiveHour": 10,
+    "riskScore": 1
+  },
+  "BMGYmN1hG8evD3pvy1Rk41bFUdGGVP5fYJbh2JHMonqK": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "CmJywvWynJAiADsgTkVWu5BJus4ru2SP1PnfBXvThrxZ": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 12,
+    "riskScore": 0
+  },
+  "DFheUjWj6BL9CuF8gAYfF6TgrbrruTTCc3vE6Ajn1gyK": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 7,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 13,
+    "mostActiveHour": 12,
+    "riskScore": 0
+  },
+  "G8fVffcHt3n6DkjSdYj47xWe55QjFsL4P5zhQ9RXFuPa": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 1,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 20,
+    "riskScore": 1
+  },
+  "HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 9,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 11,
+    "mostActiveHour": 8,
+    "riskScore": 0
+  },
+  "3ZR4gMzciDHZudi5e1evdESKZuCQEE9QNHLkMoRsfDxQ": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 22,
+    "multisigTxs": 2,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 18,
+    "mostActiveHour": 12,
+    "riskScore": 0
+  },
+  "89FnbsKH8n6FXCghGUijxh3snqx3e6VXJ7q1fQAHWkQQ": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 4,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 16,
+    "mostActiveHour": 8,
+    "riskScore": 0
+  },
+  "BYidGfUnfoQtqi4nHiuo57Fjreizbej6hawJLnbwJmYr": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 9,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 11,
+    "mostActiveHour": 1,
+    "riskScore": 0
+  },
+  "CHRDWWqUs6LyeeoD7pJb3iRfnvYeMfwMUtf2N7zWk7uh": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 1,
+    "defiTxs": 3,
+    "transferTxs": 0,
+    "otherTxs": 16,
+    "mostActiveHour": 6,
+    "riskScore": 2
+  },
+  "Dg5NLa5JuwfRMkuwZEguD9RpVrcQD3536GxogUv7pLNV": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 1,
+    "defiTxs": 1,
+    "transferTxs": 0,
+    "otherTxs": 18,
+    "mostActiveHour": 6,
+    "riskScore": 1
+  },
+  "EhJqf1p39c8NnH5iuZAJyw778LQua1AhZWxarT5SF8sT": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 13,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 7,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "GGG2JyBtwbPAsYwUQED8GBbj9UMi7NQa3uwN3DmyGNtz": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 20,
+    "mostActiveHour": 6,
+    "riskScore": 0
+  },
+  "jtnVCcNHdMVU6nkJLrNC1wq2XS5rnmKap78iQGGoaXQ": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 6,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 9,
+    "riskScore": 0
+  },
+  "8BR8iAAF9ZnfhLCxmVPzTvF6LcysppKW6SXbjsNKrz9H": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 8,
+    "riskScore": 0
+  },
+  "ABun6mSVAoMvGtZF3dJbseSFL27fXZRWG2FS3ZYuK2QR": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 13,
+    "riskScore": 0
+  },
+  "FHEPdZxbkM896cQcxR68fTXXnLDnm4t5AKM6xbiP1VQ9": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "FXQuS5Yug6GBxbNbf4qpNdFonhhCW7x7a4nTFakzgFnK": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "GpvnGqPTq4Ga7k5PgxoBA7Yr6HCnsqeeeb8KhczztdRu": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 1,
+    "transferTxs": 2,
+    "otherTxs": 2,
+    "mostActiveHour": 12,
+    "riskScore": 1
+  },
+  "ZsGaxkUnULynp4jX5AkYfQGtvacoKf9Axcdowc7s3cA": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 4,
+    "mostActiveHour": 9,
+    "riskScore": 0
+  },
+  "2cVAT3oviEWgaTJkBipmN5KiYpmguzSqJG6hBa4Jfqgj": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "AnWCbbRmFSmb4kW5w8oeBqW3bQ1pip9vncxTzDPgW2er": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 9,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 4,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "HN8obiLBzfKUz87S7bmkWgcu8ysV7otcPUnws5gQU78E": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 3,
+    "multisigTxs": 2,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "5WNNVkahiacGz88kBtZUfVhTFTsp2J4J5n6yEB4q3A3D": {
+    "protocols": [
+      "Nosana"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 12,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 8,
+    "mostActiveHour": 9,
+    "riskScore": 0
+  },
+  "8ywagMXEBdn7RvmqtuY22LbCNDEV8pQwp56sRC2zCudX": {
+    "protocols": [
+      "Nosana"
+    ],
+    "totalTxs": 34,
+    "multisigTxs": 1,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 19,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "FnCZoNo6ki4njeBKW6hWdS64gi3zj5j2aAAkhGbb7cBH": {
+    "protocols": [
+      "Nosana"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 1,
+    "defiTxs": 0,
+    "transferTxs": 10,
+    "otherTxs": 9,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "2dMWrjsnvNQTS6C2BFRYSYbe4GsWR6tdcN7SNmouAYPT": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 36,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "534w7LUbs4jsNp6qJ1r6vEwiZRqadzT7ZXUyVTCZThK4": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 1,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 19,
+    "riskScore": 0
+  },
+  "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 13,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 7,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 1,
+    "defiTxs": 16,
+    "transferTxs": 3,
+    "otherTxs": 0,
+    "mostActiveHour": 1,
+    "riskScore": 3
+  },
+  "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 21,
+    "riskScore": 0
+  },
+  "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 13,
+    "riskScore": 0
+  },
+  "5RKdQsbxNArz8L9SNsmUN2rBY6DVyzc2fhiLorgUNDkT": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 4,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 4,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "8W2VmPoB63YsVt9VZd5hJzzu1D396cszDLGWMZZ1GCKu": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "CgUHzq2Dp4n5g8f7D8a3k4cPhUTogjD5JvoVB9vjRw9C": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 4,
+    "multisigTxs": 3,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 5,
+    "riskScore": 0
+  },
+  "EoKrH8Gg1GMqEAgput6W3SGv6WhyC1Mr3eWAnjNJ3d7E": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 20,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 7,
+    "riskScore": 0
+  },
+  "Ff4UAw6V6CsMDnrhpWB4VzrqFNucL4VxqJR2sNViPEFL": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 0,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "G1AonKZArhAC51Mp3uhJ3Yk1kRVsEwbg9RGTrUoqEPRm": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 10,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 21,
+    "riskScore": 0
+  },
+  "LUKET3JPqzoCMZNLos4MN6yHUzpX2qsgjen4uhS86u9": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 2,
+    "transferTxs": 11,
+    "otherTxs": 7,
+    "mostActiveHour": 19,
+    "riskScore": 1
+  },
+  "LoTy38EiLYg85rWq5okYjNwzQECGbYa6uPcJPj8MHu2": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 5,
+    "transferTxs": 11,
+    "otherTxs": 4,
+    "mostActiveHour": 10,
+    "riskScore": 2
+  },
+  "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 1,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 18,
+    "mostActiveHour": 19,
+    "riskScore": 0
+  },
+  "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 23,
+    "riskScore": 0
+  },
+  "26Es6MMrHXXBGPoVd5D5VZwepTHPigaSU5iTSd2hmp1m": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 19,
+    "riskScore": 0
+  },
+  "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 2,
+    "transferTxs": 10,
+    "otherTxs": 8,
+    "mostActiveHour": 12,
+    "riskScore": 1
+  },
+  "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 6,
+    "otherTxs": 14,
+    "mostActiveHour": 12,
+    "riskScore": 0
+  },
+  "FmoQf6t1fxNhvzJ7iVyoiue5C8JuhkLxpp6it9jAkkua": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 3,
+    "multisigTxs": 2,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "nrEbij8ZuwEw8GvjJqS5JsFx55Gy1LmvBXe5B1jtjpH": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "2r3cVdpCRYNZKyi3r6pquzCEHrBezPdXPSeCaaWWnGMn": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 9,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 11,
+    "mostActiveHour": 17,
+    "riskScore": 0
+  },
+  "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 6,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 14,
+    "mostActiveHour": 13,
+    "riskScore": 0
+  },
+  "8dvWh4YPejYUs9fS296jZ1XAxcKEPtzi6v1NGv4ZJFw6": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 9,
+    "multisigTxs": 4,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 2,
+    "riskScore": 0
+  },
+  "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 5,
+    "defiTxs": 5,
+    "transferTxs": 2,
+    "otherTxs": 8,
+    "mostActiveHour": 20,
+    "riskScore": 2
+  },
+  "E4NGuMwfoTqJKUkzUSWF3rDbMwCR3CCTwFrL4Z3Y7r6X": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 11,
+    "multisigTxs": 1,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 9,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "EoHK5VNgYisSRDcqSkBPoQTGsGroBnNR4xiWWWo8K3g5": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 39,
+    "multisigTxs": 7,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 13,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "DtWpcoMN5LMKmvw4sRXVArExBBDyHNk1mQ7DrbYhGADS": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "E1iyboRnxBSD8KJncj8mkkzbJu17gr5w6CiTN6q4YoUN": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 8,
+    "riskScore": 0
+  },
+  "EBCXuPcvNP39vbVSjadH7YwtKRt47iWK7Xs2yATDhmJ7": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 8,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "FoMboHErV2g7GjfQayFCRjWdXg3USZkPJCoeYEgPastv": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 15,
+    "mostActiveHour": 3,
+    "riskScore": 0
+  },
+  "2n5THJEbrjADhaGbXch6bZQZ3g3zaxnnLgMeWyEqRYrP": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 5,
+    "multisigTxs": 2,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "3ChdTfL6iZ1webxcw79wnob1CyZy5FxkCXR7v3j1qRJD": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 24,
+    "multisigTxs": 13,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 7,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "8TjLVdh5b95Y5Gm6AbJXhmXW9as8QXvTMLVKJZ6pXzzR": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "8YRNf7ZN16oXp9vw6BLMBE5kMcqyE4mpGPzwTgCuVNf8": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 34,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "9rW2KnDiciztjpcf83LjinReaRgZbo2YG9ZCWXZCfVkd": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 16,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 4,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "FH83cpeVPNWS3hTdQzDtwWcJQT3TA7hfAz3T8ojbNqVt": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "FaBArNd8rvbmj4zxQVSZnotcgDq8jGm8i58NCTCbS8sR": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "H5xDGKUoJmmsNZ3brVqHV8EVxaUQdfEKwBzvzJEcrLMn": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "55Th9kAE3FW2ws3xfUu5dxa8Q5NjNrToezpDwW8NhrCB": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 1,
+    "transferTxs": 11,
+    "otherTxs": 8,
+    "mostActiveHour": 20,
+    "riskScore": 1
+  },
+  "BR4ExSPZUMHfWB6kNvYL6AXNbW4NXLzdFnuKs5qSxSR1": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 15,
+    "multisigTxs": 3,
+    "defiTxs": 1,
+    "transferTxs": 0,
+    "otherTxs": 11,
+    "mostActiveHour": 15,
+    "riskScore": 1
+  },
+  "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "2owonq2d2LaQNCc4iq8s4848GeRsPQqbRdCReLhdx9mW": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 19,
+    "riskScore": 0
+  },
+  "57vhVhXzzMB5VDSgkgdeg74vgrFKwTiJY1L9crXsfjGX": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 11,
+    "defiTxs": 2,
+    "transferTxs": 0,
+    "otherTxs": 7,
+    "mostActiveHour": 9,
+    "riskScore": 1
+  },
+  "6cjetC6BA3adY8G54KNsiY3pbXXkipMQEHCymMgxVNhr": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 1,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 18,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "6ryqDDCwKFZfSiHQrYRkjTEarbsLjg9TmuFg1RJorBk3": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 17,
+    "transferTxs": 2,
+    "otherTxs": 1,
+    "mostActiveHour": 16,
+    "riskScore": 3
+  },
+  "9NQozSJM8yy8JxX2DGgXUYvMnQz7CDmB91PnLAeSXaW8": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 4,
+    "otherTxs": 11,
+    "mostActiveHour": 1,
+    "riskScore": 0
+  },
+  "9inNvfZy7Ha5KisZ9CU9cjKBWrVHtEzXzRBD9mSyAnyf": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "A8tPrJkyrJau857rySaCAvkeYGCpGGSxSxEX11VLxZgD": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 4,
+    "transferTxs": 0,
+    "otherTxs": 16,
+    "mostActiveHour": 6,
+    "riskScore": 2
+  },
+  "AfSM5R2A35qGZ9AgULApe3iS5bNDAtPb6WzZJG1UPVen": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 24,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 19,
+    "riskScore": 0
+  },
+  "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 4,
+    "defiTxs": 2,
+    "transferTxs": 10,
+    "otherTxs": 4,
+    "mostActiveHour": 17,
+    "riskScore": 1
+  },
+  "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 16,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 4,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "FAbj8Hm7KGfFoJ8aV9LuW7ATxaqiLLCeQT5kSQ4r4QUE": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 24,
+    "multisigTxs": 0,
+    "defiTxs": 1,
+    "transferTxs": 0,
+    "otherTxs": 19,
+    "mostActiveHour": 0,
+    "riskScore": 1
+  },
+  "FGGC4aPUuWip2CXM8WL4aeefJqmPrh6uNr6NLKtBJaMN": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "VmroV2xtoj3yP487d2qt9kjCVn4BcphEtvSMjfGpfgN": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "2GafqBhxF23cmRHN2cSHHoUcHZ1iDqzEn8Ayrkj34Csn": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 0,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "3TPczDPBfQpA6KiHSwYC51Qwzn1DJApVwqCK88zB69Au": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 3,
+    "riskScore": 0
+  },
+  "3wLd4AUHQRB9DJrgP8Qwfp5fMh2SyAqj148d7qbUq8Lb": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 1,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 18,
+    "riskScore": 1
+  },
+  "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 2,
+    "mostActiveHour": 17,
+    "riskScore": 0
+  },
+  "DGLjmi6goG6yhaknmyurkfLas33BrJ2yuPhNndUsgTQT": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 43,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "EDae3XapMwETGSH4HrggdiKDSpX1bPjaRH2HoEWzkLT2": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 15,
+    "mostActiveHour": 21,
+    "riskScore": 0
+  },
+  "H93FtQBKFib1nUDchwNLRspgVEYpUw17D4Wo2SsXY5HT": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 4,
+    "riskScore": 0
+  },
+  "hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 1,
+    "transferTxs": 6,
+    "otherTxs": 13,
+    "mostActiveHour": 15,
+    "riskScore": 1
+  },
+  "6eAxgG1KoXC6Q4YBdjptFmyfoWKNGYQEKT3sHoX7JWU8": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 1,
+    "defiTxs": 1,
+    "transferTxs": 6,
+    "otherTxs": 12,
+    "mostActiveHour": 2,
+    "riskScore": 1
+  },
+  "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 4,
+    "transferTxs": 7,
+    "otherTxs": 9,
+    "mostActiveHour": 6,
+    "riskScore": 2
+  },
+  "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 16,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 4,
+    "mostActiveHour": 1,
+    "riskScore": 0
+  },
+  "DB75TdZZ3cLgpPATEgXGgJSnH3AG552XeeoB2mf2fsKN": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 43,
+    "multisigTxs": 1,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 19,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "GjtMGFA81gyP5FRX5skKmwKRT3VV4LdhCJLexwyM4Hjd": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 1,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "PURmhzmixwasbbfe3Yy82i12LsPLLymEBBADEu74xES": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 4,
+    "multisigTxs": 3,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "2mNoXT7xpnpR2PVTArDYco5xE4jdk8yuWPTdXgjx6WEv": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 9,
+    "otherTxs": 11,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "5bdzVTJHC5jV6qgzcXPifEi3DsX7krjH9s82FDwGW9ui": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 8,
+    "multisigTxs": 7,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 9,
+    "multisigTxs": 8,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "8RKb8uN1yvtim3vSFsLcAfjiFcRHbqMV9QxYVKV5NSrp": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 28,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 3,
+    "otherTxs": 2,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "9NXhjBeYjkp4UkTR9xhkr2nHMKwSgxMQZSNZ3syqEuWt": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 7,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 13,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "DUDssoE15XShhrJC7jJE3QhyzL7s4TnYogePVzswdR2R": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 6,
+    "multisigTxs": 4,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 1,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "21kF2n1WdJYaTMmwtMfWHydLc3xPjMjRUHBiUcW7iCxM": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 1,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 4,
+    "riskScore": 0
+  },
+  "28eDFqNQ15VB745zXVSPJVSRZWD7sws2Hy8VHq5pfazu": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 7,
+    "multisigTxs": 6,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "6EzEruZ8uKHTRnjQktQsn6U5cimfbUCGGmTEycnmnxPW": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 6,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "6sY2nhNfW2UoVa9qmLT5h5oNj423JuDa5LKaTwD3JAop": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 1,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 4,
+    "riskScore": 0
+  },
+  "9RkMtrs93JspVYaDjm1SWWj6zE3xVP5VN26vEMDAVkAf": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 19,
+    "multisigTxs": 10,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 8,
+    "mostActiveHour": 4,
+    "riskScore": 0
+  },
+  "PV5tfXh295EpmpiYNHsEEEBymZ9325G14LGnUkkJ2EC": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 11,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 9,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "5xmqRUqK33A2oBRxjyG36HgMjjM19NRt8gYEBT9u78s6": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "69YoSiSLEAJrTbZGy7Ry3p4jvJBjJpwn8g8HKcXcCguJ": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 13,
+    "defiTxs": 1,
+    "transferTxs": 4,
+    "otherTxs": 2,
+    "mostActiveHour": 12,
+    "riskScore": 1
+  },
+  "8dk5KyDAttJYT4pa9nSQYqLEK85w7ZbcHZdZjBMHoAhz": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 13,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 6,
+    "mostActiveHour": 13,
+    "riskScore": 0
+  },
+  "96yg1uazqtxT4R4mTKPDcLSfbp3AAJiXJFMKZj28bsSk": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 1,
+    "riskScore": 0
+  },
+  "9TjKHL4YGYKvw7HUEZatSw1mjx83CWq8bwkBYmrNXnnL": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 2,
+    "multisigTxs": 2,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "BYrKMVrru625aQbGuhdz6ojixAYHNLbwFaE4KTFfx3QS": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 10,
+    "multisigTxs": 10,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "CPHXoWwGQ129uoCNpv7Sp8W6Z326s7iB5eGGEZYTfveD": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 0,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "DiNi78eqjYxVdwXiAiran2Fh4sPAbvQA4oDTq2a6mDQe": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 17,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "EVJRoxfqp7N1YbXgypvQfUGFj9bGdFsG9tLrHrsdn3cW": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "GvsR2FpHTHQ4QfC5JTVofGotfzYVbpYUTGNrbnJKC7Wo": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 0,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "J7nrqDcSuL77TPr1Vz7n8RC4VUeN4pXfx6Xx9E4SA59e": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 22,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 20,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "dpLy14g7uez3ryUriDiBL1pNKUoD5bLUpequspK5qsH": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 3,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 17,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "prgmc3JWJSbppz4KbhCHdpXyLFz5yjxdGWGa48MZ3fi": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 23,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 21,
+    "riskScore": 0
+  },
+  "2SG7fCnreQ9wHoqQC7U6pfDN2rYmBqExKuqcGR3StrZW": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 3,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 17,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "4LpE9Lxqb4jYYh8jA8oDhsGDKPNBNkcoXobbAJTa3pWw": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "6kDGqrP4Wwqe5KBa9zTrgUFykVsv4YhZPDEX22kUsDMP": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 11,
+    "defiTxs": 0,
+    "transferTxs": 5,
+    "otherTxs": 4,
+    "mostActiveHour": 3,
+    "riskScore": 0
+  },
+  "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 22,
+    "riskScore": 0
+  },
+  "BaYejjDBVikzBSoHywwX8FwgkHwB6nJpEhJkow2zsL4B": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 7,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 7,
+    "mostActiveHour": 4,
+    "riskScore": 0
+  },
+  "CQ7CNkXxzbtK7pr4UokLKBN6xbCWFXmGSnshEioNagbC": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "EFYHPtUykMMN3S69rofhWSoTZo6v41mrinDKQynBsguv": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 21,
+    "riskScore": 0
+  },
+  "EWK7U4bTqcywrBGFJ2py4BphoNnyVoqzV5XgW2rxT2yR": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "G1oGhierAFZdUfRyECgCWkSKhim2NsJUUYz1rYWuxqRq": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 3,
+    "multisigTxs": 2,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "mprGV3VdeBmf7o3dixtfYNgB2cHUU6cjRwTFCzWiEwd": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 3,
+    "riskScore": 0
+  },
+  "propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 6,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 14,
+    "mostActiveHour": 19,
+    "riskScore": 0
+  },
+  "9SV1SL96d5CJBaoJsDJePujBVgJ7sVpLZXFsktq2WtSn": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 25,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 17,
+    "riskScore": 0
+  },
+  "AWofQNYEnbQniPbyHNiVfrjy3i6PK7xZRUcHVfu7crCs": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 19,
+    "riskScore": 0
+  },
+  "ERd6pJjzWiCsNvuJWtPYvbusUsqxhVjMEnGdqEgXbHCK": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 16,
+    "riskScore": 0
+  },
+  "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "kMTMpo28DPAZAEGzFJUAufMeiRavxkEupnC5sBb2e2g": {
+    "protocols": [
+      "Voltr"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 9,
+    "defiTxs": 0,
+    "transferTxs": 2,
+    "otherTxs": 9,
+    "mostActiveHour": 8,
+    "riskScore": 0
+  },
+  "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n": {
+    "protocols": [
+      "Voltr"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 20,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "AkSsXqekpoWfpMzRwEp55uzDocYocGkL67E1Vz2mZ26e": {
+    "protocols": [
+      "Voltr"
+    ],
+    "totalTxs": 5,
+    "multisigTxs": 3,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 4,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 16,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "7KFLXnrRvRq8shX8MVMUdGFwgPa342B89c2nxvQXHpNi": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 35,
+    "multisigTxs": 10,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 10,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "BC6PeKaLnpu4oeibT94d79zsavgbg4NhwZ185NX76DTz": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 8,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 3,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "Bkg1jdrwjQQPyUq2wydGNNri3k1aEfv6RbftLapCryg8": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 4,
+    "multisigTxs": 3,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "GqUfUruHZgjPjBavqa7aWFoZG1Q5RZUmoUGqLuv6UDCL": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 10,
+    "multisigTxs": 4,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "HrcKsK6VuLwfSbTJrj9KwwCUU86AnS6YSEsMCNTimtL3": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 19,
+    "multisigTxs": 12,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 7,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "HtyNnjau7fdoHZ3LguboYbg9PUr2QnHFLA1yufA1pG2f": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 14,
+    "multisigTxs": 3,
+    "defiTxs": 2,
+    "transferTxs": 0,
+    "otherTxs": 9,
+    "mostActiveHour": 10,
+    "riskScore": 1
+  },
+  "FKy9ETj6y1pHHrZG7Wg6ARahLpjMxvWdTN1CNybseiy": {
+    "protocols": [
+      "LayerZero OFT"
+    ],
+    "totalTxs": 44,
+    "multisigTxs": 11,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 8,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "FW3mAwFdoQoCEKsk3EAoFeZHFPJGFkFieq866yXVnDNx": {
+    "protocols": [
+      "LayerZero OFT"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 19,
+    "mostActiveHour": 11,
+    "riskScore": 0
+  },
+  "2XmSeDwM7sZKPdPoPztbSjasCjejFNEv9ufEShzoThyC": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 7,
+    "riskScore": 0
+  },
+  "71K5nFw3E3xHqECsRWFAMrr6JvTwkvEyb7mLgs3Gy52q": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 3,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 17,
+    "mostActiveHour": 7,
+    "riskScore": 0
+  },
+  "BsLt1EKWx7xBop3DWYg8ZpwGfXXxwEvj3ZYFuEp1DMdD": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 1,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 8,
+    "riskScore": 0
+  },
+  "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 18,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 2,
+    "mostActiveHour": 8,
+    "riskScore": 0
+  },
+  "H2ayWzPpVn6hux2Qmat7oDVcReJwZu31856V2CmNUj3i": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 4,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 16,
+    "mostActiveHour": 3,
+    "riskScore": 0
+  },
+  "29qW1KYZ5KLXGcJJ3TYJ6bpmYhujKUACT8H6dTWr3cDM": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 11,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 8,
+    "mostActiveHour": 9,
+    "riskScore": 0
+  },
+  "5ndGNX8Z1tLhiG1NR8AY4QcqBcN2ha9fBCsccZzYEU6r": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 15,
+    "riskScore": 0
+  },
+  "A78sEHhfKt6x6GUVZNDNdvbgr1EiqjpMQCW88LuyAuQo": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 13,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 7,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 2,
+    "otherTxs": 3,
+    "mostActiveHour": 2,
+    "riskScore": 0
+  },
+  "DaGUge91XiebtdQaiWHXzPMNCUADJPZFPwPjzX4sGF95": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 11,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 9,
+    "mostActiveHour": 3,
+    "riskScore": 0
+  },
+  "EhhdyQpK8pcM75EKQgpu31okQpYAby57CPnPRA7CsWLS": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 15,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 5,
+    "mostActiveHour": 1,
+    "riskScore": 0
+  },
+  "ExAHc3u2KHopmziWyyULWobZ2EAgymEmqQR5fo5T8baM": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT": {
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 5,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "66kDYpYtuGkaZF2ho64VgEQuAgBPGjY17HtcTtANtNR8": {
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 3,
+    "transferTxs": 0,
+    "otherTxs": 17,
+    "mostActiveHour": 0,
+    "riskScore": 2
+  },
+  "Ckw8hHnP2ABcndEQymJ37BENt3gpw6ALwH3wMpYpjXvk": {
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "totalTxs": 36,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 13,
+    "riskScore": 0
+  },
+  "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 12,
+    "defiTxs": 0,
+    "transferTxs": 4,
+    "otherTxs": 4,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  },
+  "A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 19,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "BvQhUYDB4CsrDziuzpUvEy9N4EzYTMy1TASgCatFUHcg": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 3,
+    "multisigTxs": 2,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 1,
+    "mostActiveHour": 17,
+    "riskScore": 0
+  },
+  "HC92UzBW5ENtdQ5DSHxZhuSLGchftNfxmdxD1ooj7JiV": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 0,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "2rqxgifitmi4Gu6CJcYbxwgE4RtLvDs5nEx4tfTxSfKg": {
+    "protocols": [
+      "Carrot"
+    ],
+    "totalTxs": 0,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "9vtZSD8staKHC27aPXFMmc6rHJSrpAYjJ5oZWVDmsE2y": {
+    "protocols": [
+      "Carrot"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 20,
+    "mostActiveHour": 20,
+    "riskScore": 0
+  },
+  "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs": {
+    "protocols": [
+      "Carrot"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 20,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 0,
+    "riskScore": 0
+  },
+  "3rJe7FAeMDxUYkLMYVcBj1ZPX4o8Ukt4h3mWgyS9a6Jy": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 6,
+    "defiTxs": 0,
+    "transferTxs": 14,
+    "otherTxs": 0,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 9,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 11,
+    "mostActiveHour": 10,
+    "riskScore": 0
+  },
+  "9FMXwAQbR7jT149JLcWxXaJHZCg37mh3YHybtYHydT2J": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 14,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 6,
+    "mostActiveHour": 12,
+    "riskScore": 0
+  },
+  "9KLgXuQc1VXStEx6gppqe6BhX5jE75hLufkXmRwZmWLL": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 7,
+    "defiTxs": 0,
+    "transferTxs": 1,
+    "otherTxs": 12,
+    "mostActiveHour": 13,
+    "riskScore": 0
+  },
+  "BkBn8dQ6fFUaGEAaP1HpVzKrqgiUHSWrgPKJxXw6wM98": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 5,
+    "multisigTxs": 5,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 14,
+    "riskScore": 0
+  },
+  "C31s8y9zXnUbXzejPQ4ZaUj8JdR6j3zseAAcmDr8k51x": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 50,
+    "multisigTxs": 0,
+    "defiTxs": 2,
+    "transferTxs": 5,
+    "otherTxs": 13,
+    "mostActiveHour": 15,
+    "riskScore": 1
+  },
+  "ESU3Nb2Xp1YEsKdzVCipqQ1wJHTUgTGDYncwhrUxKKRk": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 12,
+    "multisigTxs": 12,
+    "defiTxs": 0,
+    "transferTxs": 0,
+    "otherTxs": 0,
+    "mostActiveHour": 18,
+    "riskScore": 0
+  }
+}

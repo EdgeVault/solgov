@@ -1,0 +1,68 @@
+{
+  "protocol": "GMSOL",
+  "researchedAt": "2026-04-17T22:28:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "github",
+      "url": "https://github.com/gmsol-labs"
+    }
+  ],
+  "programs": [
+    {
+      "id": "2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc",
+      "name": "GMSOL program 1",
+      "alreadyTracked": true,
+      "upgradeAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo",
+      "name": "GMSOL vanity program",
+      "alreadyTracked": true,
+      "upgradeAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg",
+      "name": "GMSOL program 3",
+      "alreadyTracked": true,
+      "upgradeAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8",
+      "name": "GMSOL LP program",
+      "alreadyTracked": true,
+      "upgradeAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+      "role": "GMSOL main multisig (tracked)",
+      "threshold": "4/7",
+      "timelock": "600s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "parentMultisig": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+      "vaultIndex": 0,
+      "programsControlled": 4,
+      "alreadyTracked": true,
+      "notes": "mislabelled Kamino in solgov-api.ts"
+    }
+  ],
+  "governanceModel": "Squads V4 4/7 10-min timelock, 4 programs.",
+  "gaps": [
+    "Identify each program role",
+    "Relabel vault"
+  ],
+  "confidence": "medium-high"
+}

@@ -1,0 +1,18 @@
+{
+  "upt09d7w": {
+    "protocol": "Drift",
+    "severity": "CRITICAL",
+    "type": "ProgramUpgrade",
+    "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+    "message": "[harness] Upgraded program dRiftyHA...",
+    "timestamp": "2026-05-02T11:34:56.826Z"
+  },
+  "a31l87pw": {
+    "protocol": "Drift",
+    "severity": "CRITICAL",
+    "type": "ProgramUpgrade",
+    "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+    "message": "[harness] Upgraded program dRiftyHA...",
+    "timestamp": "2026-05-02T12:08:28.997Z"
+  }
+}

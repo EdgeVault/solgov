@@ -1,0 +1,26 @@
+{
+  "protocol": "Flash Trade",
+  "programId": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE",
+  "auditedAt": "2026-04-23",
+  "methodology": "Source repo not publicly discoverable via GitHub search. Docs at docs.flash.trade do not disclose matching-engine invariants. Verified build status unclear.",
+  "findings": {
+    "permitsSameOwnerSelfMatch": "unknown",
+    "evidence": {
+      "reason": "Program source not open-sourced at a discoverable repo. IDL may be retrievable on-chain but would only reveal instruction shapes, not maker-taker owner comparison logic."
+    },
+    "hasInsuranceFund": true,
+    "insuranceFundNote": "docs.flash.trade references insurance mechanics but not fully specified publicly",
+    "hasSocialisation": "likely (standard perp pattern)",
+    "residualClaimSurface": "unknown",
+    "classification": "AMBER (closed source, cannot verify structural F7 surface)",
+    "confidence": "low - verdict requires source access or on-chain instruction simulation"
+  },
+  "notes": [
+    "Governance risk already tracked: 3/5 second multisig with 0s timelock controls the program.",
+    "F7 audit blocked by source opacity. Options: (1) reverse-engineer from deployed binary, (2) reach out to Flash Trade team directly, (3) write on-chain probes that simulate self-match and observe behaviour.",
+    "For public dashboard: mark as unverifiable, note that absence of verification is itself a trust consideration."
+  ],
+  "sourceUrls": [
+    "https://docs.flash.trade/"
+  ]
+}

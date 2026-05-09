@@ -1,0 +1,47 @@
+{
+  "protocol": "Phoenix DEX",
+  "researchedAt": "2026-04-17T22:00:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "github",
+      "url": "https://github.com/Ellipsis-Labs/phoenix-v1"
+    },
+    {
+      "kind": "github-cli",
+      "url": "https://github.com/Ellipsis-Labs/phoenix-cli"
+    }
+  ],
+  "programs": [
+    {
+      "id": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+      "name": "Phoenix v1 (on-chain order book)",
+      "role": "central limit order book DEX with atomic settlement",
+      "source": "Ellipsis-Labs/phoenix-v1 + widely-cited address",
+      "alreadyTracked": true,
+      "upgradeAuthority": "8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "6x3BDkL2n7VjBWxRD95EsbQi2R2E4zxrvcz1VA6pihnK",
+      "role": "Phoenix governance (Squads V3)",
+      "threshold": "? (V3)",
+      "timelock": "n/a",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "V3 threshold + members"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads V3 multisig. Phoenix is a single-program protocol. Market accounts are per-pair and have their own authority/successor fields (per earlier research).",
+  "gaps": [
+    "PhoeNiX program upgrade authority - RPC needed",
+    "Each Phoenix market has its own authority + successor field (per our state-admin-layout research in memory). Consider tracking those separately - potentially hundreds of markets."
+  ],
+  "confidence": "high for program, low for governance chain",
+  "notes": "Phoenix is the cleanest architecture of the order-book DEXs but has a per-market admin surface not captured by program-upgrade-authority alone."
+}

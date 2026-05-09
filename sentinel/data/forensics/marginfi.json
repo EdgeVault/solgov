@@ -1,0 +1,81 @@
+{
+  "protocol": "Marginfi",
+  "researchedAt": "2026-04-17T21:25:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "github",
+      "url": "https://github.com/mrgnlabs/marginfi-v2"
+    },
+    {
+      "kind": "anchor-toml",
+      "url": "https://raw.githubusercontent.com/mrgnlabs/marginfi-v2/main/Anchor.toml"
+    },
+    {
+      "kind": "ottersec-verify",
+      "url": "https://verify.osec.io/status/MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+      "note": "is_verified=false as of 2026-04-03. on-chain hash diverges from source - needs investigation"
+    }
+  ],
+  "programs": [
+    {
+      "id": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+      "name": "marginfi v2 mainnet",
+      "role": "core lending program",
+      "source": "Anchor.toml [programs.mainnet]",
+      "upgradeAuthority": "J3oBkTkDXU3TcAggJEa3YeBZE5om5yNAdTtLVNXFD47",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "reconcile on-chain hash vs source hash (OtterSec verify failed)"
+      ]
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "7FCPipJWVbPbdHymVt1gJYwKciakkJz5GahdQySemvHk",
+      "role": "main Marginfi multisig (tracked)",
+      "threshold": "7/13",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "what programs this multisig's vault[0] is upgrade authority for"
+      ]
+    },
+    {
+      "address": "9CiwEGczicmjioXiPsaJV92j4UXG1qMLYLQTxej4U7tr",
+      "role": "owns an unknown program (CAW7771F - not OtterSec-verified). Currently mislabelled as 'Marginfi vault' parent in solgov-api.ts.",
+      "threshold": "4/6",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "confirm this multisig actually belongs to Marginfi (zero signer overlap with main 7FCPipJWV per independence score)"
+      ],
+      "notes": "Independence score between this and the main Marginfi multisig is 100% (zero shared signers). That could mean fully-separated governance OR wrong team attribution. Until CAW7771F is identified, this attribution is UNCONFIRMED."
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "Gy7pgCryzquDBHkpGkJGBRAyLpdmdqkifjLdKMoS1GEE",
+      "parentMultisig": "9CiwEGczicmjioXiPsaJV92j4UXG1qMLYLQTxej4U7tr",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "CAW7771FWrfBFtxAUrSw38fBVtKHns9WW9KCw65vnVsH"
+      ],
+      "alreadyTracked": true,
+      "notes": "label 'Marginfi vault' in solgov-api.ts is suspect - program CAW7771F has no OtterSec verification linking it to mrgnlabs. Could be a different team's program."
+    }
+  ],
+  "governanceModel": "Main Marginfi multisig 7/13 with 0s timelock and autonomous configAuthority. Upgrade authority for MFv2hWf31 program is UNCONFIRMED from local data. The 'Marginfi vault' label in solgov-api.ts attaches to a different multisig (9CiwEGczic, 4/6) controlling an unverified program - could be a second Marginfi multisig or could be a mislabelling.",
+  "gaps": [
+    "MFv2hWf31 upgrade authority - need getAccountInfo(ProgramData) to find the real upgrade authority",
+    "Program CAW7771F identification - OtterSec returns no source attribution; check Solscan labels, Anchor IDL registry, team announcements",
+    "Confirm whether 9CiwEGczic multisig actually belongs to Marginfi (check for signer labels, Solscan attribution, team announcements)",
+    "Marginfi program is NOT OtterSec-verified (last-verified April 3 2026 shows hash divergence); investigate whether source has drifted or verify is stale"
+  ],
+  "confidence": "low",
+  "notes": "Marginfi's Anchor.toml is useful but only lists mainnet MFv2 as the canonical program. The 'Marginfi vault' label in our tracked list is unverified and could be wrong. Targeted RPC needed to confirm MFv2's actual upgrade authority before claiming full governance coverage."
+}

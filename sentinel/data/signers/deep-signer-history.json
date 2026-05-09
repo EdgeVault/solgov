@@ -1,0 +1,3824 @@
+{
+  "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_TRANSACTION": 32,
+      "APPROVE_PROPOSAL": 99,
+      "TRANSFER": 53,
+      "COMPRESSED_NFT_MINT": 2,
+      "CREATE_MULTISIG": 1,
+      "REJECT_PROPOSAL": 1,
+      "ADD_INSTRUCTION": 9,
+      "CREATE_TRANSACTION": 3
+    },
+    "sources": {
+      "SQUADS_MPL": 48,
+      "SQUADS_V4": 125,
+      "SYSTEM_PROGRAM": 25,
+      "BUBBLEGUM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "6vkzAQLAERW5RKHX68ZCDxWxW77T8dMqYUYMXCe6ooMC": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_TRANSACTION": 33,
+      "TRANSFER": 48,
+      "ADD_INSTRUCTION": 23,
+      "CREATE_TRANSACTION": 19,
+      "APPROVE_PROPOSAL": 68,
+      "REJECT_PROPOSAL": 5,
+      "COMPRESSED_NFT_MINT": 1,
+      "CANCEL_PROPOSAL": 1,
+      "CREATE_MULTISIG": 2
+    },
+    "sources": {
+      "SQUADS_MPL": 87,
+      "SYSTEM_PROGRAM": 25,
+      "SQUADS_V4": 87,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "WITHDRAW_UNSTAKED_DEPOSITS": 3,
+      "TRANSFER": 54,
+      "REFRESH_OBLIGATION": 9,
+      "INITIALIZE_USER": 6,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "STAKE": 3,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 54,
+      "INITIALIZE_ACCOUNT": 14,
+      "HARVEST_REWARD": 5,
+      "SWAP": 3,
+      "EXTEND_LOOKUP_TABLE": 1,
+      "COMPRESSED_NFT_MINT": 6,
+      "UNKNOWN": 3,
+      "APPROVE_TRANSACTION": 1,
+      "EXECUTE_INSTRUCTION": 37
+    },
+    "sources": {
+      "KAMINO_FARMS": 17,
+      "SYSTEM_PROGRAM": 44,
+      "KAMINO_LEND": 63,
+      "BUBBLEGUM": 7,
+      "SOLANA_PROGRAM_LIBRARY": 6,
+      "ASSOCIATED_TOKEN_PROGRAM": 14,
+      "JUPITER": 5,
+      "ADDRESS_LOOKUP_TABLE": 1,
+      "DFLOW": 1,
+      "SQUADS_MPL": 41,
+      "SQUADS_V4": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "8g2PMddbKrqpPtd74pWM16xnDwtpKtkDJNDsQ9cWJZAC": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_TRANSACTION": 38,
+      "TRANSFER": 52,
+      "APPROVE_PROPOSAL": 105,
+      "REJECT_PROPOSAL": 4,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 48,
+      "SQUADS_V4": 134,
+      "SYSTEM_PROGRAM": 17,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BEUTwDjLNoXvT26J9CZD5A1Fsr9WF2UXdcUVZuy4zQ3d": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 34,
+      "TRANSFER": 63,
+      "APPROVE_TRANSACTION": 98,
+      "REJECT_TRANSACTION": 4,
+      "CANCEL_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 59,
+      "SYSTEM_PROGRAM": 21,
+      "SQUADS_MPL": 120
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BMGYmN1hG8evD3pvy1Rk41bFUdGGVP5fYJbh2JHMonqK": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 145,
+    "types": {
+      "APPROVE_PROPOSAL": 42,
+      "TRANSFER": 37,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "EXECUTE_VAULT_TRANSACTION": 3,
+      "APPROVE_TRANSACTION": 59
+    },
+    "sources": {
+      "SQUADS_V4": 69,
+      "SYSTEM_PROGRAM": 12,
+      "SQUADS_MPL": 64
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "CmJywvWynJAiADsgTkVWu5BJus4ru2SP1PnfBXvThrxZ": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 123,
+      "TRANSFER": 49,
+      "APPROVE_TRANSACTION": 16,
+      "ADD_INSTRUCTION": 1,
+      "CREATE_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 3,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1
+    },
+    "sources": {
+      "SQUADS_V4": 164,
+      "SYSTEM_PROGRAM": 18,
+      "SQUADS_MPL": 18
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "DFheUjWj6BL9CuF8gAYfF6TgrbrruTTCc3vE6Ajn1gyK": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 49,
+      "APPROVE_PROPOSAL": 60,
+      "APPROVE_TRANSACTION": 76,
+      "REJECT_PROPOSAL": 1,
+      "REJECT_TRANSACTION": 4,
+      "CREATE_TRANSACTION": 6,
+      "ADD_INSTRUCTION": 3,
+      "CANCEL_TRANSACTION": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 46,
+      "SQUADS_V4": 62,
+      "SQUADS_MPL": 92
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "G8fVffcHt3n6DkjSdYj47xWe55QjFsL4P5zhQ9RXFuPa": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 49,
+      "APPROVE_TRANSACTION": 69,
+      "APPROVE_PROPOSAL": 72,
+      "REJECT_PROPOSAL": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "COMPRESSED_NFT_MINT": 1,
+      "CANCEL_PROPOSAL": 1,
+      "CANCEL_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 94,
+      "SQUADS_V4": 89,
+      "BUBBLEGUM": 1,
+      "SYSTEM_PROGRAM": 16
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_TRANSACTION": 60,
+      "TRANSFER": 19,
+      "APPROVE_PROPOSAL": 108,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 8,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_PROPOSAL": 1,
+      "REJECT_TRANSACTION": 3
+    },
+    "sources": {
+      "SQUADS_MPL": 72,
+      "SQUADS_V4": 127,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "2owonq2d2LaQNCc4iq8s4848GeRsPQqbRdCReLhdx9mW": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 155,
+      "EXECUTE_CONFIG_TRANSACTION": 5,
+      "TRANSFER": 34,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_PROPOSAL": 4,
+      "EXECUTE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 180,
+      "SYSTEM_PROGRAM": 19,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 111,
+      "TRANSFER": 67,
+      "REJECT_PROPOSAL": 3,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 9,
+      "UNKNOWN": 2,
+      "SWAP": 6,
+      "EXECUTE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 164,
+      "BUBBLEGUM": 1,
+      "UNKNOWN": 2,
+      "SOLANA_PROGRAM_LIBRARY": 13,
+      "SYSTEM_PROGRAM": 14,
+      "JUPITER": 5,
+      "TITAN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "57vhVhXzzMB5VDSgkgdeg74vgrFKwTiJY1L9crXsfjGX": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 81,
+    "types": {
+      "APPROVE_PROPOSAL": 51,
+      "TRANSFER": 12,
+      "REFRESH_OBLIGATION": 2,
+      "INIT_LENDING_ACCOUNT": 1,
+      "REJECT_PROPOSAL": 1,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 9,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 5
+    },
+    "sources": {
+      "SQUADS_V4": 69,
+      "SYSTEM_PROGRAM": 9,
+      "KAMINO_LEND": 2,
+      "MARGINFI_V2": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "6cjetC6BA3adY8G54KNsiY3pbXXkipMQEHCymMgxVNhr": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "UNKNOWN": 2,
+      "TRANSFER": 148,
+      "APPROVE_TRANSACTION": 20,
+      "APPROVE_PROPOSAL": 10,
+      "COMPRESSED_NFT_MINT": 19,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "UNKNOWN": 2,
+      "SYSTEM_PROGRAM": 129,
+      "SQUADS_MPL": 23,
+      "SOLANA_PROGRAM_LIBRARY": 11,
+      "SQUADS_V4": 16,
+      "BUBBLEGUM": 19
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "6ryqDDCwKFZfSiHQrYRkjTEarbsLjg9TmuFg1RJorBk3": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 50,
+      "SYNC_NATIVE": 1,
+      "TOKEN_MINT": 5,
+      "SWAP": 30,
+      "UNKNOWN": 7,
+      "REFRESH_RESERVES_BATCH": 10,
+      "COMPRESSED_NFT_MINT": 4,
+      "REFRESH_OBLIGATION": 11,
+      "WITHDRAW": 5,
+      "APPROVE_PROPOSAL": 51,
+      "DEPOSIT": 10,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "REJECT_PROPOSAL": 4,
+      "INITIALIZE_ACCOUNT": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "CANCEL_PROPOSAL": 1
+    },
+    "sources": {
+      "SOLANA_PROGRAM_LIBRARY": 6,
+      "SYSTEM_PROGRAM": 34,
+      "UNKNOWN": 6,
+      "JUPITER": 29,
+      "MARGINFI_V2": 21,
+      "OKX_DEX_ROUTER": 1,
+      "KAMINO_LEND": 21,
+      "BUBBLEGUM": 4,
+      "SQUADS_V4": 74,
+      "ASSOCIATED_TOKEN_PROGRAM": 4
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9NQozSJM8yy8JxX2DGgXUYvMnQz7CDmB91PnLAeSXaW8": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 66,
+      "TRANSFER": 124,
+      "COMPRESSED_NFT_MINT": 3,
+      "SWAP": 4,
+      "REJECT_PROPOSAL": 3
+    },
+    "sources": {
+      "SQUADS_V4": 75,
+      "SYSTEM_PROGRAM": 104,
+      "SOLANA_PROGRAM_LIBRARY": 6,
+      "PHANTOM": 8,
+      "BUBBLEGUM": 3,
+      "JUPITER": 1,
+      "OKX_DEX_ROUTER": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9inNvfZy7Ha5KisZ9CU9cjKBWrVHtEzXzRBD9mSyAnyf": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 142,
+      "TRANSFER": 36,
+      "REJECT_PROPOSAL": 4,
+      "ORACLE_UPDATE": 5,
+      "UNKNOWN": 2,
+      "CLOSE_LENDING_ACCOUNT": 3,
+      "WITHDRAW": 2,
+      "FLASH_LOAN_END": 1,
+      "SWAP": 1,
+      "INIT_LENDING_ACCOUNT": 3,
+      "DEPOSIT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 151,
+      "SYSTEM_PROGRAM": 31,
+      "SWITCHBOARD_ON_DEMAND": 5,
+      "UNKNOWN": 2,
+      "MARGINFI_V2": 10,
+      "JUPITER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "A8tPrJkyrJau857rySaCAvkeYGCpGGSxSxEX11VLxZgD": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_TRANSACTION": 114,
+      "TRANSFER": 38,
+      "CANCEL_TRANSACTION": 3,
+      "EXECUTE_TRANSACTION": 13,
+      "REJECT_TRANSACTION": 3,
+      "COMPRESSED_NFT_MINT": 19,
+      "CREATE_TRANSACTION": 10
+    },
+    "sources": {
+      "SQUADS_MPL": 173,
+      "SYSTEM_PROGRAM": 8,
+      "BUBBLEGUM": 19
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "AfSM5R2A35qGZ9AgULApe3iS5bNDAtPb6WzZJG1UPVen": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 24,
+    "types": {
+      "APPROVE_PROPOSAL": 23,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 23,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 185,
+    "types": {
+      "DEPOSIT": 1,
+      "INIT_LENDING_ACCOUNT": 1,
+      "TRANSFER": 38,
+      "APPROVE_PROPOSAL": 47,
+      "SWAP": 66,
+      "UNKNOWN": 16,
+      "INITIALIZE_ACCOUNT": 14,
+      "COMPRESSED_NFT_MINT": 2
+    },
+    "sources": {
+      "MARGINFI_V2": 2,
+      "SYSTEM_PROGRAM": 19,
+      "SOLANA_PROGRAM_LIBRARY": 11,
+      "SQUADS_V4": 55,
+      "TITAN": 28,
+      "UNKNOWN": 4,
+      "JUPITER": 37,
+      "DFLOW": 12,
+      "ASSOCIATED_TOKEN_PROGRAM": 14,
+      "BUBBLEGUM": 2,
+      "OKX_DEX_ROUTER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 69,
+      "TRANSFER": 119,
+      "COMPRESSED_NFT_MINT": 2,
+      "EXECUTE_VAULT_TRANSACTION": 5,
+      "SWAP": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 90,
+      "SYSTEM_PROGRAM": 101,
+      "BUBBLEGUM": 2,
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "JUPITER": 4
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FAbj8Hm7KGfFoJ8aV9LuW7ATxaqiLLCeQT5kSQ4r4QUE": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 23,
+    "types": {
+      "COMPRESSED_NFT_MINT": 2,
+      "APPROVE_TRANSACTION": 13,
+      "TRANSFER": 8
+    },
+    "sources": {
+      "BUBBLEGUM": 2,
+      "SQUADS_MPL": 15,
+      "SYSTEM_PROGRAM": 6
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FGGC4aPUuWip2CXM8WL4aeefJqmPrh6uNr6NLKtBJaMN": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 181,
+    "types": {
+      "APPROVE_PROPOSAL": 121,
+      "TRANSFER": 31,
+      "REJECT_PROPOSAL": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "ORACLE_UPDATE": 2,
+      "REFRESH_RESERVES_BATCH": 2,
+      "FLASH_LOAN_END": 1,
+      "SWAP": 1,
+      "REFRESH_OBLIGATION": 1,
+      "INIT_LENDING_ACCOUNT": 1,
+      "COMPRESSED_NFT_MINT": 2,
+      "APPROVE_TRANSACTION": 13
+    },
+    "sources": {
+      "SQUADS_V4": 143,
+      "SYSTEM_PROGRAM": 12,
+      "SWITCHBOARD_ON_DEMAND": 2,
+      "KAMINO_LEND": 3,
+      "MARGINFI_V2": 2,
+      "JUPITER": 1,
+      "BUBBLEGUM": 2,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "SQUADS_MPL": 14
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "jtnVCcNHdMVU6nkJLrNC1wq2XS5rnmKap78iQGGoaXQ": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 6,
+    "types": {
+      "INITIALIZE_ACCOUNT": 1,
+      "UNKNOWN": 1,
+      "TRANSFER": 4
+    },
+    "sources": {
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "UNKNOWN": 1,
+      "SYSTEM_PROGRAM": 4
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 105,
+      "APPROVE_PROPOSAL": 71,
+      "REJECT_PROPOSAL": 10,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "COMPRESSED_NFT_TRANSFER": 4,
+      "COMPRESSED_NFT_MINT": 1,
+      "SWAP": 5,
+      "CLOSE_ACCOUNT": 1,
+      "UNKNOWN": 2
+    },
+    "sources": {
+      "SQUADS_V4": 149,
+      "SYSTEM_PROGRAM": 35,
+      "BUBBLEGUM": 5,
+      "SOLANA_PROGRAM_LIBRARY": 4,
+      "JUPITER": 7
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "8BR8iAAF9ZnfhLCxmVPzTvF6LcysppKW6SXbjsNKrz9H": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 191,
+      "REJECT_PROPOSAL": 8,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 200
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "ABun6mSVAoMvGtZF3dJbseSFL27fXZRWG2FS3ZYuK2QR": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 157,
+      "EXECUTE_VAULT_TRANSACTION": 5,
+      "REJECT_PROPOSAL": 11,
+      "TRANSFER": 20,
+      "CANCEL_PROPOSAL": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 3
+    },
+    "sources": {
+      "SQUADS_V4": 196,
+      "SYSTEM_PROGRAM": 4
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FHEPdZxbkM896cQcxR68fTXXnLDnm4t5AKM6xbiP1VQ9": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 182,
+      "REJECT_PROPOSAL": 3,
+      "TRANSFER": 11,
+      "CANCEL_PROPOSAL": 4
+    },
+    "sources": {
+      "SQUADS_V4": 191,
+      "SYSTEM_PROGRAM": 9
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FXQuS5Yug6GBxbNbf4qpNdFonhhCW7x7a4nTFakzgFnK": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "REJECT_PROPOSAL": 13,
+      "APPROVE_PROPOSAL": 165,
+      "TRANSFER": 22
+    },
+    "sources": {
+      "SQUADS_V4": 178,
+      "SYSTEM_PROGRAM": 22
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "GpvnGqPTq4Ga7k5PgxoBA7Yr6HCnsqeeeb8KhczztdRu": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 88,
+      "COMPRESSED_NFT_TRANSFER": 3,
+      "TRANSFER": 98,
+      "REJECT_PROPOSAL": 2,
+      "REFRESH_OBLIGATION": 1,
+      "TOKEN_MINT": 1,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 1,
+      "EXTEND_LOOKUP_TABLE": 1,
+      "INIT_USER_METADATA": 1,
+      "INITIALIZE_POSITION": 2,
+      "UNKNOWN": 2
+    },
+    "sources": {
+      "SQUADS_V4": 97,
+      "BUBBLEGUM": 3,
+      "SYSTEM_PROGRAM": 88,
+      "KAMINO_LEND": 3,
+      "UNKNOWN": 2,
+      "ADDRESS_LOOKUP_TABLE": 1,
+      "PHANTOM": 3,
+      "METEORA": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "r21Gamwd9DtyjHeGywsneoQYR39C1VDwrw7tWxHAwh6": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 20,
+      "INIT_POOL_V2": 1,
+      "SWAP": 2,
+      "CREATE": 1,
+      "UNKNOWN": 173,
+      "UPGRADE_PROGRAM_INSTRUCTION": 3
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 17,
+      "ORCA": 5,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "PHANTOM": 1,
+      "PUMP_FUN": 1,
+      "BPF_UPGRADEABLE_LOADER": 3,
+      "UNKNOWN": 171
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "3HNJ8bKv1tDcc7urfJm51FaF7aVpG6GPwxgfKA8s9U8z": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 15,
+    "types": {
+      "TRANSFER": 3,
+      "APPROVE_PROPOSAL": 12
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 3,
+      "SQUADS_V4": 12
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "4gdsTXsc3Df73LyNXeTa9wS5unJ9DE8cTaJhtKqksD4S": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 70,
+    "types": {
+      "APPROVE_PROPOSAL": 42,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "TRANSFER": 21,
+      "SWAP": 1,
+      "REJECT_PROPOSAL": 1,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SQUADS_V4": 60,
+      "SYSTEM_PROGRAM": 8,
+      "DFLOW": 1,
+      "UNKNOWN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "6Li1bEptmfD1RT3LaPUde8yMTdn2Fpr9Vf726VdSueL9": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 5,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 3
+    },
+    "sources": {
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9f4WNuXfhQsjC2U4tqZ38i4rccey9ys5eeywCmQ9yUAs": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 47,
+    "types": {
+      "APPROVE_PROPOSAL": 39,
+      "TRANSFER": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 42,
+      "SYSTEM_PROGRAM": 5
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "AM1tQFm9YCFZaqU69iX6zg5Sy9RQRxGrU6Pp9od22pb4": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 142,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "APPROVE_PROPOSAL": 28,
+      "COMPRESSED_NFT_MINT": 18,
+      "EXECUTE_INSTRUCTION": 1,
+      "REJECT_PROPOSAL": 1,
+      "EXTENSION_EXECUTE": 5,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 131,
+      "SQUADS_V4": 37,
+      "SOLANA_PROGRAM_LIBRARY": 7,
+      "BUBBLEGUM": 18,
+      "MAYAN_CPI": 1,
+      "HAWKSIGHT": 5,
+      "UNKNOWN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 2,
+      "TRANSFER": 10,
+      "APPROVE_PROPOSAL": 3,
+      "INCREASE_LIQUIDITY": 1,
+      "SWAP": 1,
+      "CREATE_VAULT_TRANSACTION": 1,
+      "UNKNOWN": 178,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "UPGRADE_PROGRAM_INSTRUCTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 11,
+      "ORCA": 1,
+      "TITAN": 1,
+      "SYSTEM_PROGRAM": 8,
+      "UNKNOWN": 178,
+      "BPF_UPGRADEABLE_LOADER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "F8HnFKCbN5H1PnHMVtGSyMv4nn7XxCreMQJPUP7q8qK4": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 18,
+    "types": {
+      "APPROVE_PROPOSAL": 10,
+      "TRANSFER": 5,
+      "ADD_BATCH_TRANSACTION": 2,
+      "CREATE_BATCH": 1
+    },
+    "sources": {
+      "SQUADS_V4": 16,
+      "SYSTEM_PROGRAM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 51,
+    "types": {
+      "APPROVE_PROPOSAL": 28,
+      "CREATE_VAULT_TRANSACTION": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "TRANSFER": 9,
+      "ADD_BATCH_TRANSACTION": 2,
+      "CREATE_BATCH": 1,
+      "USE_SPENDING_LIMIT": 3
+    },
+    "sources": {
+      "SQUADS_V4": 49,
+      "SYSTEM_PROGRAM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 38,
+    "types": {
+      "APPROVE_PROPOSAL": 25,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "TRANSFER": 8,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 32,
+      "SYSTEM_PROGRAM": 6
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "4tbEe4AquJWyMh7f7yE5poFChhsuPbeGh7EHVQCvq2N8": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 89,
+      "APPROVE_PROPOSAL": 61,
+      "CREATE_VAULT_TRANSACTION": 45,
+      "CANCEL_PROPOSAL": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "COMPRESSED_NFT_MINT": 1,
+      "SWAP": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 157,
+      "SYSTEM_PROGRAM": 39,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "PHANTOM": 1,
+      "BUBBLEGUM": 1,
+      "JUPITER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "5sFJMw5dC59oKGKA9LgeYQCSmYS6rLeCegxMkcM2Pwby": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 137,
+      "TRANSFER": 59,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 1,
+      "CANCEL_PROPOSAL": 1,
+      "CREATE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 168,
+      "SYSTEM_PROGRAM": 32
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "REJECT_PROPOSAL": 2,
+      "APPROVE_PROPOSAL": 115,
+      "TRANSFER": 79,
+      "CANCEL_PROPOSAL": 4
+    },
+    "sources": {
+      "SQUADS_V4": 152,
+      "SYSTEM_PROGRAM": 48
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "7zc8kzBr5wbsQKxYYv9uCMgfcW5zjxLEopvmuf3ig6iw": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 80,
+      "APPROVE_PROPOSAL": 119,
+      "CANCEL_PROPOSAL": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 27,
+      "SQUADS_V4": 173
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "LUKET3JPqzoCMZNLos4MN6yHUzpX2qsgjen4uhS86u9": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "LOCK_LOAN": 1,
+      "LIQUIDATE_LEDGER": 1,
+      "CREATE_LOAN": 4,
+      "WITHDRAW_COLLATERAL": 5,
+      "REPAY_PRINCIPAL": 2,
+      "TRANSFER": 36,
+      "CLOSE_LOAN": 3,
+      "WITHDRAW_VAULT": 2,
+      "DEPOSIT_VAULT": 3,
+      "UNKNOWN": 143
+    },
+    "sources": {
+      "LOOPSCALE": 21,
+      "SYSTEM_PROGRAM": 36,
+      "UNKNOWN": 143
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "LoTy38EiLYg85rWq5okYjNwzQECGbYa6uPcJPj8MHu2": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "INITIALIZE_ACCOUNT": 1,
+      "SWAP": 8,
+      "WITHDRAW_VAULT": 7,
+      "BORROW_PRINCIPAL": 3,
+      "REFRESH_OBLIGATION": 1,
+      "DEPOSIT_VAULT": 6,
+      "TRANSFER": 133,
+      "CLOSE_STRATEGY": 2,
+      "WITHDRAW_STRATEGY": 4,
+      "CLOSE_LOAN": 6,
+      "CLAIM_VAULT_REWARDS": 5,
+      "WITHDRAW_COLLATERAL": 1,
+      "REPAY_PRINCIPAL": 4,
+      "UPDATE_STRATEGY": 2,
+      "CREATE_STRATEGY": 2,
+      "APPROVE_PROPOSAL": 15
+    },
+    "sources": {
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "TITAN": 8,
+      "LOOPSCALE": 42,
+      "KAMINO_LEND": 1,
+      "SYSTEM_PROGRAM": 26,
+      "SOLANA_PROGRAM_LIBRARY": 70,
+      "SQUADS_V4": 16,
+      "METAPLEX": 36
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "UPDATE_VAULT": 5,
+      "TRANSFER": 66,
+      "CREATE_TIMELOCK": 61,
+      "DEPOSIT_STRATEGY": 1,
+      "WITHDRAW_VAULT": 10,
+      "STAKE_VAULT": 1,
+      "DEPOSIT_VAULT": 2,
+      "WITHDRAW_STRATEGY": 1,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 14,
+      "APPROVE_PROPOSAL": 31,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 1,
+      "CANCEL_PROPOSAL": 1,
+      "SWAP": 2,
+      "CLAIM_VAULT_REWARDS": 3
+    },
+    "sources": {
+      "LOOPSCALE": 84,
+      "PHANTOM": 1,
+      "SQUADS_V4": 74,
+      "SYSTEM_PROGRAM": 35,
+      "SOLANA_PROGRAM_LIBRARY": 4,
+      "TITAN": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 190,
+      "TRANSFER": 8,
+      "WITHDRAW_VAULT": 1,
+      "DEPOSIT_VAULT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 190,
+      "SYSTEM_PROGRAM": 8,
+      "LOOPSCALE": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "26Es6MMrHXXBGPoVd5D5VZwepTHPigaSU5iTSd2hmp1m": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 12,
+      "TRANSFER": 66,
+      "APPROVE_PROPOSAL": 81,
+      "CANCEL_PROPOSAL": 1,
+      "SWAP": 20,
+      "COMPRESSED_NFT_MINT": 4,
+      "REJECT_PROPOSAL": 4,
+      "OPEN_POSITION": 1,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1,
+      "CLOSE_ACCOUNT": 2,
+      "UNKNOWN": 5,
+      "COLLECT_FEES": 1,
+      "DECREASE_LIQUIDITY": 1,
+      "INCREASE_LIQUIDITY": 1
+    },
+    "sources": {
+      "SQUADS_V4": 122,
+      "SYSTEM_PROGRAM": 42,
+      "JUPITER": 19,
+      "BUBBLEGUM": 4,
+      "ORCA": 4,
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "DFLOW": 1,
+      "UNKNOWN": 5
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "DEPOSIT_VAULT": 7,
+      "WITHDRAW_VAULT": 17,
+      "SWAP": 32,
+      "TOKEN_MINT": 4,
+      "UNKNOWN": 78,
+      "CLAIM_VAULT_REWARDS": 13,
+      "RECEIVE_MESSAGE": 8,
+      "DEPOSIT_FOR_BURN": 3,
+      "TRANSFER": 28,
+      "ORACLE_UPDATE": 2,
+      "APPROVE_PROPOSAL": 8
+    },
+    "sources": {
+      "LOOPSCALE": 37,
+      "TITAN": 31,
+      "UNKNOWN": 82,
+      "CIRCLE_CCTP_CORE_V2": 8,
+      "CIRCLE_CCTP_TOKEN_V2": 3,
+      "SYSTEM_PROGRAM": 28,
+      "SWITCHBOARD_ON_DEMAND": 2,
+      "OKX_DEX_ROUTER": 1,
+      "SQUADS_V4": 8
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "REFINANCE_LEDGER": 95,
+      "CLOSE_LOAN": 14,
+      "WITHDRAW_VAULT": 26,
+      "BORROW_PRINCIPAL": 5,
+      "CLAIM_VAULT_REWARDS": 19,
+      "DEPOSIT_VAULT": 14,
+      "WITHDRAW_COLLATERAL": 10,
+      "DEPOSIT_COLLATERAL": 4,
+      "REPAY_PRINCIPAL": 9,
+      "CREATE_LOAN": 2,
+      "LOCK_LOAN": 1,
+      "UPDATE_VAULT": 1
+    },
+    "sources": {
+      "LOOPSCALE": 200
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FmoQf6t1fxNhvzJ7iVyoiue5C8JuhkLxpp6it9jAkkua": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 3,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "2n5THJEbrjADhaGbXch6bZQZ3g3zaxnnLgMeWyEqRYrP": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 5,
+    "types": {
+      "TRANSFER": 3,
+      "CREATE_VAULT_TRANSACTION": 2
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 3,
+      "SQUADS_V4": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "3ChdTfL6iZ1webxcw79wnob1CyZy5FxkCXR7v3j1qRJD": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 24,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 15,
+      "TRANSFER": 2,
+      "COMPRESSED_NFT_MINT": 7
+    },
+    "sources": {
+      "SQUADS_V4": 15,
+      "SYSTEM_PROGRAM": 2,
+      "BUBBLEGUM": 7
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "8TjLVdh5b95Y5Gm6AbJXhmXW9as8QXvTMLVKJZ6pXzzR": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "REJECT_PROPOSAL": 8,
+      "APPROVE_PROPOSAL": 110,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 20,
+      "TRANSFER": 12,
+      "UNKNOWN": 1,
+      "USE_SPENDING_LIMIT": 15,
+      "EXECUTE_VAULT_TRANSACTION": 7,
+      "ADD_BATCH_TRANSACTION": 10,
+      "CREATE_BATCH": 6,
+      "SWAP": 4,
+      "CANCEL_PROPOSAL": 5,
+      "COMPRESSED_NFT_MINT": 1,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 198,
+      "UNKNOWN": 1,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "8YRNf7ZN16oXp9vw6BLMBE5kMcqyE4mpGPzwTgCuVNf8": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 34,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 24,
+      "TRANSFER": 7,
+      "COMPRESSED_NFT_MINT": 3
+    },
+    "sources": {
+      "SQUADS_V4": 24,
+      "SYSTEM_PROGRAM": 7,
+      "BUBBLEGUM": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9rW2KnDiciztjpcf83LjinReaRgZbo2YG9ZCWXZCfVkd": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "USE_SPENDING_LIMIT": 12,
+      "REJECT_PROPOSAL": 6,
+      "APPROVE_PROPOSAL": 49,
+      "TRANSFER": 90,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 8,
+      "SWAP": 3,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 3,
+      "ADD_BATCH_TRANSACTION": 14,
+      "CREATE_BATCH": 3,
+      "CANCEL_PROPOSAL": 2,
+      "INITIALIZE_USER": 2,
+      "UNKNOWN": 2,
+      "APPROVE_TRANSACTION": 3,
+      "TOKEN_MINT": 2,
+      "DECREASE_LIQUIDITY": 1
+    },
+    "sources": {
+      "SQUADS_V4": 117,
+      "SYSTEM_PROGRAM": 65,
+      "SOLANA_PROGRAM_LIBRARY": 4,
+      "TITAN": 2,
+      "PHANTOM": 2,
+      "KAMINO_FARMS": 2,
+      "UNKNOWN": 4,
+      "SQUADS_MPL": 3,
+      "ORCA": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FH83cpeVPNWS3hTdQzDtwWcJQT3TA7hfAz3T8ojbNqVt": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 38,
+      "TRANSFER": 26,
+      "APPROVE_PROPOSAL": 99,
+      "SWAP": 8,
+      "EXECUTE_VAULT_TRANSACTION": 9,
+      "USE_SPENDING_LIMIT": 1,
+      "CANCEL_PROPOSAL": 5,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "REJECT_PROPOSAL": 6,
+      "ADD_BATCH_TRANSACTION": 1,
+      "CREATE_BATCH": 1,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 198,
+      "SYSTEM_PROGRAM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FaBArNd8rvbmj4zxQVSZnotcgDq8jGm8i58NCTCbS8sR": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 64,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 57,
+      "TRANSFER": 7
+    },
+    "sources": {
+      "SQUADS_V4": 57,
+      "SYSTEM_PROGRAM": 7
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "H5xDGKUoJmmsNZ3brVqHV8EVxaUQdfEKwBzvzJEcrLMn": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 37,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 21,
+      "APPROVE_PROPOSAL": 77,
+      "REJECT_PROPOSAL": 4,
+      "USE_SPENDING_LIMIT": 23,
+      "CREATE_VAULT_TRANSACTION": 12,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "SWAP": 3,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 2,
+      "ADD_BATCH_TRANSACTION": 13,
+      "CREATE_BATCH": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 12,
+      "SQUADS_V4": 188
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "USE_SPENDING_LIMIT": 13,
+      "TRANSFER": 97,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 16,
+      "APPROVE_PROPOSAL": 38,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 3,
+      "REJECT_PROPOSAL": 1,
+      "UNKNOWN": 27,
+      "COMPRESSED_NFT_MINT": 1,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "INITIALIZE_ACCOUNT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 93,
+      "SYSTEM_PROGRAM": 73,
+      "BUBBLEGUM": 2,
+      "UNKNOWN": 27,
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "PHANTOM": 1,
+      "ASSOCIATED_TOKEN_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "55Th9kAE3FW2ws3xfUu5dxa8Q5NjNrToezpDwW8NhrCB": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 181,
+    "types": {
+      "CLOSE_ACCOUNT": 4,
+      "TRANSFER": 122,
+      "SWAP": 18,
+      "UNKNOWN": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "APPROVE_PROPOSAL": 12,
+      "COMPRESSED_NFT_MINT": 1,
+      "CANCEL": 10,
+      "TRANSFER_RECIPIENT": 10
+    },
+    "sources": {
+      "SOLANA_PROGRAM_LIBRARY": 6,
+      "SYSTEM_PROGRAM": 109,
+      "OKX_DEX_ROUTER": 13,
+      "DFLOW": 2,
+      "JUPITER": 5,
+      "SQUADS_V4": 24,
+      "BUBBLEGUM": 1,
+      "PHANTOM": 1,
+      "STREAMFLOW_TIMELOCK": 20
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BR4ExSPZUMHfWB6kNvYL6AXNbW4NXLzdFnuKs5qSxSR1": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 13,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 9,
+      "INITIALIZE_ACCOUNT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "SYSTEM_PROGRAM": 9,
+      "ASSOCIATED_TOKEN_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 111,
+      "APPROVE_PROPOSAL": 29,
+      "CANCEL_PROPOSAL": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 7,
+      "COMPRESSED_NFT_MINT": 3,
+      "SWAP": 9,
+      "UNKNOWN": 23,
+      "PLACE_ORDERS": 2,
+      "CLOSE_POSITION": 1,
+      "CLAIM_POSITION_FEE": 1,
+      "INITIALIZE_ACCOUNT": 2,
+      "CLOSE_ACCOUNT": 7,
+      "INITIALIZE_POSITION": 2,
+      "TOKEN_MINT": 2
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 99,
+      "SQUADS_V4": 44,
+      "SOLANA_PROGRAM_LIBRARY": 11,
+      "BUBBLEGUM": 3,
+      "JUPITER": 10,
+      "UNKNOWN": 11,
+      "PUMP_AMM": 1,
+      "PHANTOM": 1,
+      "DRIFT": 13,
+      "METEORA_DAMM_V2": 2,
+      "ASSOCIATED_TOKEN_PROGRAM": 2,
+      "METEORA": 2,
+      "TITAN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 54,
+      "EXECUTE_VAULT_TRANSACTION": 37,
+      "APPROVE_PROPOSAL": 94,
+      "REJECT_PROPOSAL": 2,
+      "CREATE_VAULT_TRANSACTION": 1,
+      "CREATE_MULTISIG": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 6,
+      "UNKNOWN": 2
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 45,
+      "SQUADS_V4": 152,
+      "UNKNOWN": 2,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "DtWpcoMN5LMKmvw4sRXVArExBBDyHNk1mQ7DrbYhGADS": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 92,
+    "types": {
+      "APPROVE_PROPOSAL": 82,
+      "EXECUTE_VAULT_TRANSACTION": 6,
+      "REJECT_PROPOSAL": 2,
+      "TRANSFER": 2
+    },
+    "sources": {
+      "SQUADS_V4": 90,
+      "SYSTEM_PROGRAM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "E1iyboRnxBSD8KJncj8mkkzbJu17gr5w6CiTN6q4YoUN": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 79,
+      "APPROVE_PROPOSAL": 113,
+      "UNKNOWN": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "EXECUTE_VAULT_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 16,
+      "SQUADS_V4": 180,
+      "UNKNOWN": 2,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "EBCXuPcvNP39vbVSjadH7YwtKRt47iWK7Xs2yATDhmJ7": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 8,
+    "types": {
+      "APPROVE_PROPOSAL": 4,
+      "TRANSFER": 3,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 5,
+      "SYSTEM_PROGRAM": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "FoMboHErV2g7GjfQayFCRjWdXg3USZkPJCoeYEgPastv": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 187,
+    "types": {
+      "TRANSFER": 101,
+      "APPROVE_PROPOSAL": 36,
+      "UNKNOWN": 13,
+      "SWAP": 29,
+      "INCREASE_LIQUIDITY": 1,
+      "TOKEN_MINT": 6,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 99,
+      "SQUADS_V4": 36,
+      "UNKNOWN": 17,
+      "OKX": 2,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "JUPITER": 19,
+      "RAYDIUM": 1,
+      "ORCA": 1,
+      "DFLOW": 9,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "ZsGaxkUnULynp4jX5AkYfQGtvacoKf9Axcdowc7s3cA": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "EXECUTE_VAULT_TRANSACTION": 79,
+      "UNKNOWN": 14,
+      "TRANSFER": 76,
+      "APPROVE_PROPOSAL": 11,
+      "APPROVE_TRANSACTION": 8,
+      "ADD_INSTRUCTION": 4,
+      "CREATE_TRANSACTION": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 107,
+      "UNKNOWN": 14,
+      "SOLANA_PROGRAM_LIBRARY": 9,
+      "SYSTEM_PROGRAM": 52,
+      "SQUADS_MPL": 17,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "2cVAT3oviEWgaTJkBipmN5KiYpmguzSqJG6hBa4Jfqgj": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 84,
+      "APPROVE_PROPOSAL": 105,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "CREATE_MULTISIG": 1,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 181,
+      "SYSTEM_PROGRAM": 19
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "AnWCbbRmFSmb4kW5w8oeBqW3bQ1pip9vncxTzDPgW2er": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 10,
+    "types": {
+      "APPROVE_PROPOSAL": 6,
+      "TRANSFER": 4
+    },
+    "sources": {
+      "SQUADS_V4": 6,
+      "SYSTEM_PROGRAM": 4
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "HN8obiLBzfKUz87S7bmkWgcu8ysV7otcPUnws5gQU78E": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 3,
+    "types": {
+      "APPROVE_PROPOSAL": 2,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 125,
+      "TRANSFER": 60,
+      "UNKNOWN": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 7,
+      "CREATE_MULTISIG": 1,
+      "CANCEL_PROPOSAL": 1,
+      "COMPRESSED_NFT_MINT": 3
+    },
+    "sources": {
+      "SQUADS_V4": 185,
+      "SYSTEM_PROGRAM": 9,
+      "UNKNOWN": 3,
+      "BUBBLEGUM": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "VmroV2xtoj3yP487d2qt9kjCVn4BcphEtvSMjfGpfgN": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "REJECT_PROPOSAL": 2,
+      "APPROVE_PROPOSAL": 110,
+      "TRANSFER": 72,
+      "CREATE_VAULT_TRANSACTION": 11,
+      "ADD_BATCH_TRANSACTION": 1,
+      "CREATE_BATCH": 1,
+      "UNKNOWN": 2,
+      "SWAP": 1
+    },
+    "sources": {
+      "SQUADS_V4": 172,
+      "SYSTEM_PROGRAM": 25,
+      "UNKNOWN": 2,
+      "OKX_DEX_ROUTER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "2GafqBhxF23cmRHN2cSHHoUcHZ1iDqzEn8Ayrkj34Csn": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 0,
+    "types": {},
+    "sources": {},
+    "nonces": 0,
+    "bridges": 0
+  },
+  "3TPczDPBfQpA6KiHSwYC51Qwzn1DJApVwqCK88zB69Au": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 97,
+      "TRANSFER": 82,
+      "REJECT_PROPOSAL": 1,
+      "UNKNOWN": 20
+    },
+    "sources": {
+      "SQUADS_V4": 132,
+      "SYSTEM_PROGRAM": 48,
+      "UNKNOWN": 20
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "3wLd4AUHQRB9DJrgP8Qwfp5fMh2SyAqj148d7qbUq8Lb": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 117,
+      "APPROVE_PROPOSAL": 65,
+      "SWAP": 16,
+      "COMPRESSED_NFT_MINT": 2
+    },
+    "sources": {
+      "SQUADS_V4": 92,
+      "SYSTEM_PROGRAM": 91,
+      "TITAN": 15,
+      "BUBBLEGUM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 114,
+      "APPROVE_PROPOSAL": 41,
+      "SWAP": 20,
+      "REJECT_PROPOSAL": 1,
+      "CANCEL_ORDER": 6,
+      "CREATE_ORDER": 9,
+      "UNKNOWN": 1,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 3,
+      "CLOSE_ACCOUNT": 4,
+      "TOKEN_MINT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 66,
+      "SYSTEM_PROGRAM": 87,
+      "TITAN": 18,
+      "SOLANA_PROGRAM_LIBRARY": 7,
+      "TITAN_LIMIT_ORDER": 15,
+      "UNKNOWN": 2,
+      "KAMINO_LEND": 3,
+      "OKX_DEX_ROUTER": 1,
+      "OKX": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "DGLjmi6goG6yhaknmyurkfLas33BrJ2yuPhNndUsgTQT": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 43,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 40,
+      "TRANSFER": 3
+    },
+    "sources": {
+      "SQUADS_V4": 40,
+      "SYSTEM_PROGRAM": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "EDae3XapMwETGSH4HrggdiKDSpX1bPjaRH2HoEWzkLT2": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 16,
+      "TRANSFER": 132,
+      "UNKNOWN": 15,
+      "CLOSE_ACCOUNT": 12,
+      "COMPRESSED_NFT_MINT": 2,
+      "SWAP": 17,
+      "INITIALIZE_ACCOUNT": 6
+    },
+    "sources": {
+      "SQUADS_V4": 24,
+      "SYSTEM_PROGRAM": 123,
+      "UNKNOWN": 12,
+      "SOLANA_PROGRAM_LIBRARY": 13,
+      "BUBBLEGUM": 2,
+      "PUMP_AMM": 2,
+      "RAYDIUM": 8,
+      "ASSOCIATED_TOKEN_PROGRAM": 6,
+      "JUPITER": 9,
+      "DFLOW": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "H93FtQBKFib1nUDchwNLRspgVEYpUw17D4Wo2SsXY5HT": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 152,
+      "TRANSFER": 33,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 1,
+      "CREATE_ORDER": 5,
+      "CANCEL_ORDER": 3,
+      "SWAP": 3,
+      "UNKNOWN": 1,
+      "REJECT_PROPOSAL": 1,
+      "EXECUTE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 165,
+      "SYSTEM_PROGRAM": 22,
+      "KAMINO_LEND": 1,
+      "TITAN_LIMIT_ORDER": 8,
+      "TITAN": 3,
+      "UNKNOWN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "29qW1KYZ5KLXGcJJ3TYJ6bpmYhujKUACT8H6dTWr3cDM": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 108,
+      "TRANSFER": 62,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 13,
+      "INITIALIZE_ACCOUNT": 1,
+      "CREATE_VAULT_TRANSACTION": 9,
+      "REJECT_PROPOSAL": 7
+    },
+    "sources": {
+      "SQUADS_V4": 150,
+      "SYSTEM_PROGRAM": 49,
+      "ASSOCIATED_TOKEN_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "5ndGNX8Z1tLhiG1NR8AY4QcqBcN2ha9fBCsccZzYEU6r": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 130,
+      "TRANSFER": 60,
+      "EXTEND_LOOKUP_TABLE": 2,
+      "CREATE_LOOKUP_TABLE": 1,
+      "REJECT_PROPOSAL": 7
+    },
+    "sources": {
+      "SQUADS_V4": 137,
+      "SYSTEM_PROGRAM": 60,
+      "ADDRESS_LOOKUP_TABLE": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "A78sEHhfKt6x6GUVZNDNdvbgr1EiqjpMQCW88LuyAuQo": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 35,
+      "APPROVE_PROPOSAL": 145,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 7,
+      "REJECT_PROPOSAL": 9,
+      "UNKNOWN": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 35,
+      "SQUADS_V4": 161,
+      "UNKNOWN": 4
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 24,
+      "CREATE_VAULT_TRANSACTION": 22,
+      "TRANSFER": 72,
+      "TOKEN_MINT": 4,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 37,
+      "UNKNOWN": 38,
+      "SET_AUTHORITY": 1,
+      "INITIALIZE_ACCOUNT": 2
+    },
+    "sources": {
+      "SQUADS_V4": 120,
+      "SYSTEM_PROGRAM": 35,
+      "UNKNOWN": 41,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "ASSOCIATED_TOKEN_PROGRAM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "DaGUge91XiebtdQaiWHXzPMNCUADJPZFPwPjzX4sGF95": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 100,
+      "TRANSFER": 27,
+      "UNKNOWN": 18,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 28,
+      "CREATE_VAULT_TRANSACTION": 18,
+      "REJECT_PROPOSAL": 3,
+      "EXTEND_LOOKUP_TABLE": 1,
+      "CREATE_LOOKUP_TABLE": 1,
+      "SWAP": 1,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 2
+    },
+    "sources": {
+      "SQUADS_V4": 167,
+      "SYSTEM_PROGRAM": 12,
+      "UNKNOWN": 18,
+      "ADDRESS_LOOKUP_TABLE": 2,
+      "JUPITER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "EhhdyQpK8pcM75EKQgpu31okQpYAby57CPnPRA7CsWLS": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 144,
+      "TRANSFER": 41,
+      "REJECT_PROPOSAL": 9,
+      "CREATE_VAULT_TRANSACTION": 5,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 1
+    },
+    "sources": {
+      "SQUADS_V4": 160,
+      "SYSTEM_PROGRAM": 40
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "ExAHc3u2KHopmziWyyULWobZ2EAgymEmqQR5fo5T8baM": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 33,
+      "APPROVE_PROPOSAL": 110,
+      "UNKNOWN": 36,
+      "REJECT_PROPOSAL": 11,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 4,
+      "TOKEN_MINT": 2,
+      "SWAP": 2,
+      "CREATE_VAULT_TRANSACTION": 1,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 10,
+      "SQUADS_V4": 149,
+      "UNKNOWN": 38,
+      "JUPITER": 2,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "PV5tfXh295EpmpiYNHsEEEBymZ9325G14LGnUkkJ2EC": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 101,
+      "TRANSFER": 61,
+      "EXECUTE_CONFIG_TRANSACTION": 5,
+      "CREATE_MULTISIG": 1,
+      "REJECT_PROPOSAL": 4,
+      "UNKNOWN": 26,
+      "CANCEL_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 127,
+      "SYSTEM_PROGRAM": 47,
+      "UNKNOWN": 26
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "5xmqRUqK33A2oBRxjyG36HgMjjM19NRt8gYEBT9u78s6": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 196,
+    "types": {
+      "APPROVE_PROPOSAL": 119,
+      "TRANSFER": 54,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 7,
+      "CANCEL_PROPOSAL": 5,
+      "SWAP": 4,
+      "COMPRESSED_NFT_MINT": 4,
+      "CREATE_MULTISIG": 1,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SQUADS_V4": 172,
+      "BUBBLEGUM": 4,
+      "SYSTEM_PROGRAM": 12,
+      "SOLANA_PROGRAM_LIBRARY": 4,
+      "JUPITER": 2,
+      "PHANTOM": 1,
+      "UNKNOWN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "69YoSiSLEAJrTbZGy7Ry3p4jvJBjJpwn8g8HKcXcCguJ": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 102,
+      "APPROVE_PROPOSAL": 30,
+      "CREATE_VAULT_TRANSACTION": 3,
+      "TOKEN_MINT": 16,
+      "REJECT_PROPOSAL": 1,
+      "UNKNOWN": 45,
+      "CANCEL_PROPOSAL": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "EXECUTE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 49,
+      "UNKNOWN": 61,
+      "SYSTEM_PROGRAM": 86,
+      "PHANTOM": 3,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "8dk5KyDAttJYT4pa9nSQYqLEK85w7ZbcHZdZjBMHoAhz": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 89,
+      "TRANSFER": 81,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "REJECT_PROPOSAL": 4,
+      "UNKNOWN": 23
+    },
+    "sources": {
+      "SQUADS_V4": 126,
+      "SYSTEM_PROGRAM": 51,
+      "UNKNOWN": 23
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "96yg1uazqtxT4R4mTKPDcLSfbp3AAJiXJFMKZj28bsSk": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 136,
+    "types": {
+      "APPROVE_PROPOSAL": 63,
+      "TRANSFER": 52,
+      "REJECT_PROPOSAL": 8,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "CANCEL_PROPOSAL": 1,
+      "UNKNOWN": 11
+    },
+    "sources": {
+      "SQUADS_V4": 86,
+      "SYSTEM_PROGRAM": 36,
+      "UNKNOWN": 11,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "PHANTOM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9TjKHL4YGYKvw7HUEZatSw1mjx83CWq8bwkBYmrNXnnL": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 2,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2
+    },
+    "sources": {
+      "SQUADS_V4": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BYrKMVrru625aQbGuhdz6ojixAYHNLbwFaE4KTFfx3QS": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 10,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 10
+    },
+    "sources": {
+      "SQUADS_V4": 10
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "CPHXoWwGQ129uoCNpv7Sp8W6Z326s7iB5eGGEZYTfveD": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 0,
+    "types": {},
+    "sources": {},
+    "nonces": 0,
+    "bridges": 0
+  },
+  "DiNi78eqjYxVdwXiAiran2Fh4sPAbvQA4oDTq2a6mDQe": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 89,
+      "TRANSFER": 97,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "UNKNOWN": 3,
+      "REJECT_PROPOSAL": 5,
+      "CANCEL_PROPOSAL": 1,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "COMPRESSED_NFT_MINT": 1,
+      "INITIALIZE_ACCOUNT": 2
+    },
+    "sources": {
+      "SQUADS_V4": 118,
+      "SYSTEM_PROGRAM": 75,
+      "UNKNOWN": 3,
+      "BUBBLEGUM": 2,
+      "ASSOCIATED_TOKEN_PROGRAM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "EVJRoxfqp7N1YbXgypvQfUGFj9bGdFsG9tLrHrsdn3cW": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 63,
+      "APPROVE_PROPOSAL": 127,
+      "USE_SPENDING_LIMIT": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 25,
+      "SQUADS_V4": 175
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "GvsR2FpHTHQ4QfC5JTVofGotfzYVbpYUTGNrbnJKC7Wo": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 0,
+    "types": {},
+    "sources": {},
+    "nonces": 0,
+    "bridges": 0
+  },
+  "J7nrqDcSuL77TPr1Vz7n8RC4VUeN4pXfx6Xx9E4SA59e": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 20,
+    "types": {
+      "TRANSFER": 11,
+      "APPROVE_PROPOSAL": 9
+    },
+    "sources": {
+      "SQUADS_V4": 14,
+      "SYSTEM_PROGRAM": 6
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 200
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 200
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "dpLy14g7uez3ryUriDiBL1pNKUoD5bLUpequspK5qsH": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 1,
+      "UNKNOWN": 197
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "UNKNOWN": 197
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "prgmc3JWJSbppz4KbhCHdpXyLFz5yjxdGWGa48MZ3fi": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 23,
+    "types": {
+      "ACTIVATE_PROPOSAL": 5,
+      "ADD_BATCH_TRANSACTION": 9,
+      "CREATE_BATCH": 5,
+      "INITIALIZE_ACCOUNT": 1,
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 21,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "2SG7fCnreQ9wHoqQC7U6pfDN2rYmBqExKuqcGR3StrZW": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "EXECUTE_VAULT_TRANSACTION": 3,
+      "UNKNOWN": 192,
+      "EXTEND_LOOKUP_TABLE": 1,
+      "CREATE_LOOKUP_TABLE": 2,
+      "TOKEN_MINT": 2
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "UNKNOWN": 194,
+      "ADDRESS_LOOKUP_TABLE": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "4LpE9Lxqb4jYYh8jA8oDhsGDKPNBNkcoXobbAJTa3pWw": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "REJECT_PROPOSAL": 3,
+      "APPROVE_PROPOSAL": 78,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "USE_SPENDING_LIMIT": 5,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 41,
+      "TRANSFER": 65,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 1,
+      "SWAP": 1
+    },
+    "sources": {
+      "SQUADS_V4": 195,
+      "SYSTEM_PROGRAM": 4,
+      "JUPITER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "6kDGqrP4Wwqe5KBa9zTrgUFykVsv4YhZPDEX22kUsDMP": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 81,
+    "types": {
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "TRANSFER": 3,
+      "SWAP": 1,
+      "WITHDRAW": 1,
+      "APPROVE_PROPOSAL": 40,
+      "CREATE": 1,
+      "COMPRESSED_NFT_MINT": 11,
+      "EXECUTE_VAULT_TRANSACTION": 17,
+      "REJECT_PROPOSAL": 1,
+      "CANCEL_PROPOSAL": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "BUBBLEGUM": 12,
+      "SYSTEM_PROGRAM": 2,
+      "DFLOW": 1,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "STREAMFLOW_TIMELOCK": 2,
+      "SQUADS_V4": 62,
+      "UNKNOWN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 81,
+      "APPROVE_PROPOSAL": 73,
+      "REJECT_PROPOSAL": 4,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 5,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 26,
+      "CREATE_VAULT_TRANSACTION": 2,
+      "USE_SPENDING_LIMIT": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 54,
+      "SQUADS_V4": 146
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BaYejjDBVikzBSoHywwX8FwgkHwB6nJpEhJkow2zsL4B": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 7,
+    "types": {
+      "TRANSFER": 4,
+      "INITIALIZE_ACCOUNT": 1,
+      "COMPRESSED_NFT_MINT": 1,
+      "CREATE": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 4,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "BUBBLEGUM": 1,
+      "ALLDOMAINS_NAME_SERVICE": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "CQ7CNkXxzbtK7pr4UokLKBN6xbCWFXmGSnshEioNagbC": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 135,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 125,
+      "TRANSFER": 6,
+      "INITIALIZE_ACCOUNT": 4
+    },
+    "sources": {
+      "SQUADS_V4": 125,
+      "SYSTEM_PROGRAM": 6,
+      "ASSOCIATED_TOKEN_PROGRAM": 4
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "EFYHPtUykMMN3S69rofhWSoTZo6v41mrinDKQynBsguv": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 155,
+    "types": {
+      "APPROVE_PROPOSAL": 135,
+      "TRANSFER": 14,
+      "REJECT_PROPOSAL": 6
+    },
+    "sources": {
+      "SQUADS_V4": 141,
+      "SYSTEM_PROGRAM": 14
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "EWK7U4bTqcywrBGFJ2py4BphoNnyVoqzV5XgW2rxT2yR": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 132,
+    "types": {
+      "APPROVE_PROPOSAL": 88,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "TRANSFER": 31,
+      "REJECT_PROPOSAL": 2,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 4,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SQUADS_V4": 125,
+      "SYSTEM_PROGRAM": 6,
+      "UNKNOWN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "G1oGhierAFZdUfRyECgCWkSKhim2NsJUUYz1rYWuxqRq": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 3,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 96,
+      "TRANSFER": 91,
+      "TOKEN_MINT": 1,
+      "CANCEL_PROPOSAL": 2,
+      "SWAP": 1,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_PROPOSAL": 2,
+      "COMPRESSED_NFT_TRANSFER": 2,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 4
+    },
+    "sources": {
+      "SQUADS_V4": 151,
+      "SYSTEM_PROGRAM": 42,
+      "UNKNOWN": 1,
+      "JUPITER": 1,
+      "BUBBLEGUM": 3,
+      "SOLANA_PROGRAM_LIBRARY": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 58,
+      "APPROVE_PROPOSAL": 104,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "CANCEL_PROPOSAL": 2,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 29
+    },
+    "sources": {
+      "SQUADS_V4": 191,
+      "SYSTEM_PROGRAM": 8,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BvQhUYDB4CsrDziuzpUvEy9N4EzYTMy1TASgCatFUHcg": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 3,
+    "types": {
+      "TRANSFER": 2,
+      "CREATE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 1,
+      "SQUADS_V4": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "HC92UzBW5ENtdQ5DSHxZhuSLGchftNfxmdxD1ooj7JiV": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 0,
+    "types": {},
+    "sources": {},
+    "nonces": 0,
+    "bridges": 0
+  },
+  "mprGV3VdeBmf7o3dixtfYNgB2cHUU6cjRwTFCzWiEwd": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 73,
+    "types": {
+      "TRANSFER": 21,
+      "APPROVE_PROPOSAL": 34,
+      "REJECT_PROPOSAL": 5,
+      "CANCEL_PROPOSAL": 1,
+      "UNKNOWN": 1,
+      "APPROVE_TRANSACTION": 10,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 53,
+      "SYSTEM_PROGRAM": 8,
+      "UNKNOWN": 1,
+      "SQUADS_MPL": 11
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "COMPRESSED_NFT_MINT": 1,
+      "UNKNOWN": 194,
+      "TRANSFER": 1,
+      "ACTIVATE_PROPOSAL": 1,
+      "ADD_BATCH_TRANSACTION": 1,
+      "CREATE_BATCH": 1,
+      "CREATE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "BUBBLEGUM": 1,
+      "UNKNOWN": 194,
+      "SQUADS_V4": 5
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9SV1SL96d5CJBaoJsDJePujBVgJ7sVpLZXFsktq2WtSn": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 25,
+    "types": {
+      "APPROVE_PROPOSAL": 10,
+      "TRANSFER": 8,
+      "REJECT_PROPOSAL": 7
+    },
+    "sources": {
+      "SQUADS_V4": 22,
+      "SYSTEM_PROGRAM": 3
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "AWofQNYEnbQniPbyHNiVfrjy3i6PK7xZRUcHVfu7crCs": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 52,
+      "TRANSFER": 64,
+      "CANCEL_PROPOSAL": 1,
+      "APPROVE_TRANSACTION": 53,
+      "REJECT_PROPOSAL": 7,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 2,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 7,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "REJECT_TRANSACTION": 6,
+      "EXECUTE_INSTRUCTION": 6
+    },
+    "sources": {
+      "SQUADS_V4": 93,
+      "SYSTEM_PROGRAM": 20,
+      "SQUADS_MPL": 87
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "ERd6pJjzWiCsNvuJWtPYvbusUsqxhVjMEnGdqEgXbHCK": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 42,
+      "TRANSFER": 31,
+      "REJECT_PROPOSAL": 6,
+      "APPROVE_TRANSACTION": 106,
+      "REJECT_TRANSACTION": 2,
+      "EXECUTE_TRANSACTION": 1,
+      "COMPRESSED_NFT_MINT": 12
+    },
+    "sources": {
+      "SQUADS_V4": 59,
+      "SYSTEM_PROGRAM": 7,
+      "SQUADS_MPL": 122,
+      "BUBBLEGUM": 12
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 44,
+      "APPROVE_PROPOSAL": 33,
+      "CANCEL_PROPOSAL": 1,
+      "APPROVE_TRANSACTION": 110,
+      "REJECT_PROPOSAL": 1,
+      "REJECT_TRANSACTION": 7,
+      "CANCEL_TRANSACTION": 3,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 44,
+      "SYSTEM_PROGRAM": 18,
+      "SQUADS_MPL": 137,
+      "BUBBLEGUM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "PURmhzmixwasbbfe3Yy82i12LsPLLymEBBADEu74xES": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 4,
+    "types": {
+      "APPROVE_PROPOSAL": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "2mNoXT7xpnpR2PVTArDYco5xE4jdk8yuWPTdXgjx6WEv": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "CLOSE_POSITION_AND_SWAP": 13,
+      "SWAP_AND_OPEN_POSITION": 16,
+      "TRANSFER": 132,
+      "CLOSE_POSITION": 10,
+      "OPEN_POSITION": 10,
+      "CANCEL_ORDER": 2,
+      "CREATE_ORDER": 3,
+      "APPROVE_PROPOSAL": 1,
+      "INCREASE_POSITION": 7,
+      "COMPRESSED_NFT_MINT": 1,
+      "CLOSE_ACCOUNT": 1,
+      "STAKE_TOKEN": 1,
+      "COLLECT_REWARD": 1,
+      "FILL_ORDER": 1,
+      "ADD_COLLATERAL": 1
+    },
+    "sources": {
+      "FLASH_TRADE": 65,
+      "SYSTEM_PROGRAM": 131,
+      "PHANTOM": 1,
+      "SQUADS_V4": 1,
+      "BUBBLEGUM": 1,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "5bdzVTJHC5jV6qgzcXPifEi3DsX7krjH9s82FDwGW9ui": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 7,
+    "types": {
+      "APPROVE_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 6,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 9,
+    "types": {
+      "TRANSFER": 2,
+      "APPROVE_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SQUADS_V4": 8,
+      "UNKNOWN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "8RKb8uN1yvtim3vSFsLcAfjiFcRHbqMV9QxYVKV5NSrp": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 24,
+    "types": {
+      "CLOSE_POSITION_AND_SWAP": 1,
+      "INCREASE_POSITION": 1,
+      "TRANSFER": 5,
+      "SWAP_AND_OPEN_POSITION": 1,
+      "APPROVE_PROPOSAL": 12,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "UNKNOWN": 1,
+      "SWAP": 1
+    },
+    "sources": {
+      "FLASH_TRADE": 3,
+      "SYSTEM_PROGRAM": 4,
+      "SQUADS_V4": 14,
+      "UNKNOWN": 1,
+      "JUPITER": 1,
+      "PHANTOM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9NXhjBeYjkp4UkTR9xhkr2nHMKwSgxMQZSNZ3syqEuWt": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 50,
+    "types": {
+      "UNKNOWN": 31,
+      "TRANSFER": 11,
+      "APPROVE_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "CREATE_REFERRAL": 1,
+      "SWAP": 1
+    },
+    "sources": {
+      "UNKNOWN": 30,
+      "SQUADS_V4": 8,
+      "SYSTEM_PROGRAM": 9,
+      "FLASH_TRADE": 2,
+      "JUPITER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "DUDssoE15XShhrJC7jJE3QhyzL7s4TnYogePVzswdR2R": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 5,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 2
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "PHANTOM": 1,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "2dMWrjsnvNQTS6C2BFRYSYbe4GsWR6tdcN7SNmouAYPT": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 36,
+    "types": {
+      "APPROVE_PROPOSAL": 28,
+      "TRANSFER": 8
+    },
+    "sources": {
+      "SQUADS_V4": 28,
+      "SYSTEM_PROGRAM": 8
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 10,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "APPROVE_PROPOSAL": 9,
+      "REJECT_PROPOSAL": 4,
+      "UNKNOWN": 175
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 9,
+      "SQUADS_V4": 16,
+      "UNKNOWN": 175
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "UNKNOWN": 6,
+      "APPROVE_PROPOSAL": 7,
+      "REFRESH_OBLIGATION": 166,
+      "TOKEN_MINT": 2,
+      "TRANSFER": 13,
+      "REJECT_PROPOSAL": 4,
+      "INITIALIZE_ACCOUNT": 2
+    },
+    "sources": {
+      "UNKNOWN": 8,
+      "SQUADS_V4": 11,
+      "KAMINO_LEND": 166,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "SYSTEM_PROGRAM": 12,
+      "ASSOCIATED_TOKEN_PROGRAM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 60,
+      "EXECUTE_CONFIG_TRANSACTION": 16,
+      "EXECUTE_VAULT_TRANSACTION": 2,
+      "CANCEL_PROPOSAL": 3,
+      "CREATE_VAULT_TRANSACTION": 26,
+      "TRANSFER": 77,
+      "CREATE_MULTISIG": 4,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 3,
+      "UNKNOWN": 7,
+      "CREATE_LOOKUP_TABLE": 1
+    },
+    "sources": {
+      "SQUADS_V4": 142,
+      "SYSTEM_PROGRAM": 49,
+      "UNKNOWN": 7,
+      "PHANTOM": 1,
+      "ADDRESS_LOOKUP_TABLE": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 83,
+    "types": {
+      "APPROVE_PROPOSAL": 39,
+      "EXECUTE_VAULT_TRANSACTION": 2,
+      "REJECT_PROPOSAL": 4,
+      "CREATE_VAULT_TRANSACTION": 19,
+      "TRANSFER": 16,
+      "USE_SPENDING_LIMIT": 3
+    },
+    "sources": {
+      "SQUADS_V4": 83
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "5RKdQsbxNArz8L9SNsmUN2rBY6DVyzc2fhiLorgUNDkT": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 4,
+    "types": {
+      "TRANSFER": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 4
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "8W2VmPoB63YsVt9VZd5hJzzu1D396cszDLGWMZZ1GCKu": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 108,
+    "types": {
+      "APPROVE_PROPOSAL": 74,
+      "TRANSFER": 14,
+      "CANCEL_PROPOSAL": 4,
+      "REJECT_PROPOSAL": 13,
+      "EXECUTE_VAULT_TRANSACTION": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 106,
+      "SYSTEM_PROGRAM": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "CgUHzq2Dp4n5g8f7D8a3k4cPhUTogjD5JvoVB9vjRw9C": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 4,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "SYSTEM_PROGRAM": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "EoKrH8Gg1GMqEAgput6W3SGv6WhyC1Mr3eWAnjNJ3d7E": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 20,
+    "types": {
+      "TRANSFER": 1,
+      "CREATE_VAULT_TRANSACTION": 19
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 1,
+      "SQUADS_V4": 19
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "Ff4UAw6V6CsMDnrhpWB4VzrqFNucL4VxqJR2sNViPEFL": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 0,
+    "types": {},
+    "sources": {},
+    "nonces": 0,
+    "bridges": 0
+  },
+  "G1AonKZArhAC51Mp3uhJ3Yk1kRVsEwbg9RGTrUoqEPRm": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 10,
+    "types": {
+      "TRANSFER": 5,
+      "APPROVE_PROPOSAL": 4,
+      "CANCEL_PROPOSAL": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 5,
+      "SQUADS_V4": 5
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "3rJe7FAeMDxUYkLMYVcBj1ZPX4o8Ukt4h3mWgyS9a6Jy": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 7,
+      "UNKNOWN": 31,
+      "CLOSE_ACCOUNT": 4,
+      "REJECT_PROPOSAL": 1,
+      "TRANSFER": 155,
+      "SWAP": 2
+    },
+    "sources": {
+      "SQUADS_V4": 8,
+      "UNKNOWN": 31,
+      "SOLANA_PROGRAM_LIBRARY": 6,
+      "SYSTEM_PROGRAM": 152,
+      "DFLOW": 1,
+      "PHANTOM": 1,
+      "OKX_DEX_ROUTER": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 93,
+      "APPROVE_PROPOSAL": 58,
+      "REJECT_PROPOSAL": 18,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 18,
+      "CREATE_VAULT_TRANSACTION": 12,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 66,
+      "SQUADS_V4": 134
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9FMXwAQbR7jT149JLcWxXaJHZCg37mh3YHybtYHydT2J": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 98,
+      "APPROVE_PROPOSAL": 49,
+      "REJECT_PROPOSAL": 15,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 29,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SQUADS_V4": 141,
+      "SYSTEM_PROGRAM": 58,
+      "UNKNOWN": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "9KLgXuQc1VXStEx6gppqe6BhX5jE75hLufkXmRwZmWLL": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "APPROVE_PROPOSAL": 38,
+      "TRANSFER": 128,
+      "REJECT_PROPOSAL": 13,
+      "UNKNOWN": 9,
+      "COMPRESSED_NFT_MINT": 2,
+      "INITIALIZE_ACCOUNT": 1,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "SWAP": 8
+    },
+    "sources": {
+      "SQUADS_V4": 51,
+      "SYSTEM_PROGRAM": 119,
+      "SOLANA_PROGRAM_LIBRARY": 9,
+      "UNKNOWN": 9,
+      "BUBBLEGUM": 3,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "OKX_DEX_ROUTER": 3,
+      "JUPITER": 4,
+      "DFLOW": 1
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "BkBn8dQ6fFUaGEAaP1HpVzKrqgiUHSWrgPKJxXw6wM98": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 5,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 5
+    },
+    "sources": {
+      "SQUADS_V4": 5
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "C31s8y9zXnUbXzejPQ4ZaUj8JdR6j3zseAAcmDr8k51x": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 200,
+    "types": {
+      "TRANSFER": 135,
+      "UNKNOWN": 13,
+      "OPEN_POSITION": 5,
+      "SWAP": 34,
+      "COMPRESSED_NFT_MINT": 2,
+      "CLOSE_POSITION": 3,
+      "COMPOUND_FEES": 5,
+      "CLOSE_ACCOUNT": 2,
+      "INCREASE_LIQUIDITY": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 120,
+      "UNKNOWN": 11,
+      "SOLANA_PROGRAM_LIBRARY": 17,
+      "DEFITUNA": 13,
+      "JUPITER": 33,
+      "OKX_DEX_ROUTER": 1,
+      "BUBBLEGUM": 2,
+      "ORCA": 1,
+      "DFLOW": 2
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "ESU3Nb2Xp1YEsKdzVCipqQ1wJHTUgTGDYncwhrUxKKRk": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 12,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 12
+    },
+    "sources": {
+      "SQUADS_V4": 12
+    },
+    "nonces": 0,
+    "bridges": 0
+  },
+  "DRIFT_13GXtbGV8mNf": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 23,
+    "types": {
+      "APPROVE_PROPOSAL": 11,
+      "TRANSFER": 12
+    },
+    "sources": {
+      "SQUADS_V4": 15,
+      "SYSTEM_PROGRAM": 8
+    },
+    "transactions": [
+      {
+        "date": "2026-04-01T18:27:53.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-01T16:04:16.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 10000 USDC to GYUvtRMa3UTdMrwM9a78ZcouAv7b7t8komeGVdkNn6SG."
+      },
+      {
+        "date": "2026-04-01T16:03:20.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-01T02:48:43.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-03-31T06:40:22.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "37Zk1zJxgHz4CXZE32wdgykufWCTaXW6HHsvuM6WxFiN transferred a total 0.00000502 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-03-31T06:36:26.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "37Zk1zJxgHz4CXZE32wdgykufWCTaXW6HHsvuM6WxFiN transferred a total 0.00000502 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-03-31T06:31:46.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-03-31T06:30:02.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-03-30T12:42:59.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-03-30T12:42:16.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-03-26T16:12:28.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-03-26T16:10:10.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "JATcFT2j762i7CAayBhQCGuKVstxgL3gWwQXKWtSPbj4 transferred a total 0.00000502 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-03-26T16:09:47.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "JATcFT2j762i7CAayBhQCGuKVstxgL3gWwQXKWtSPbj4 transferred a total 0.00000502 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-03-26T16:09:42.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "JATcFT2j762i7CAayBhQCGuKVstxgL3gWwQXKWtSPbj4 transferred a total 0.00000502 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-03-26T16:09:19.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "JATcFT2j762i7CAayBhQCGuKVstxgL3gWwQXKWtSPbj4 transferred a total 0.00000502 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-03-26T16:08:57.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "Multiple native SOL transfers."
+      },
+      {
+        "date": "2026-03-26T16:08:55.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-03-26T16:08:09.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "13GXtbGV8mNfNLDNbVKPrTcHTpfZ4CYrXviRCZmyxQvj transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+      },
+      {
+        "date": "2026-03-26T16:08:06.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-03-26T16:05:26.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "13GXtbGV8mNfNLDNbVKPrTcHTpfZ4CYrXviRCZmyxQvj transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+      }
+    ]
+  },
+  "DRIFT_7TxYEAKSHRuC": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 45,
+    "types": {
+      "APPROVE_PROPOSAL": 22,
+      "TRANSFER": 22,
+      "SWAP": 1
+    },
+    "sources": {
+      "SQUADS_V4": 24,
+      "SYSTEM_PROGRAM": 20,
+      "TITAN": 1
+    },
+    "transactions": [
+      {
+        "date": "2026-04-08T15:41:23.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-08T15:41:01.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "HwBL75xHHKcXSMNcctq3UqWaEJPDWVQz6NazZJNjWaQc transferred 0.01 SOL to 7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh."
+      },
+      {
+        "date": "2026-04-07T18:16:15.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-04T18:34:53.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-03T19:10:34.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-03T19:08:26.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-03T18:06:13.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-03T17:58:18.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-03T17:56:49.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "HwBL75xHHKcXSMNcctq3UqWaEJPDWVQz6NazZJNjWaQc transferred 0.04 SOL to 7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh."
+      },
+      {
+        "date": "2026-04-03T00:34:34.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T22:02:13.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T21:46:12.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh transferred 0.000000001 SOL to 7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh."
+      },
+      {
+        "date": "2026-04-02T03:56:15.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T03:47:15.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T03:46:47.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "HwBL75xHHKcXSMNcctq3UqWaEJPDWVQz6NazZJNjWaQc transferred 0.04 SOL to 7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh."
+      },
+      {
+        "date": "2026-04-02T03:39:34.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T02:49:08.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T02:48:16.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "4G6dsocsQPtBEaimc3bBXnAqRepNJsJzSbtaqBx7W63U transferred 0.015 SOL to 7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh."
+      },
+      {
+        "date": "2026-04-02T01:10:05.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T01:03:28.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      }
+    ]
+  },
+  "DRIFT_8GyLXWePLLwV": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 24,
+    "types": {
+      "APPROVE_PROPOSAL": 14,
+      "TRANSFER": 10
+    },
+    "sources": {
+      "SQUADS_V4": 20,
+      "SYSTEM_PROGRAM": 4
+    },
+    "transactions": [
+      {
+        "date": "2026-04-10T01:45:14.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-07T22:52:54.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-05T13:14:51.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-04T04:21:58.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "6b7QULHdYehnDDyyiN12Pde2GhrEcPcFLMTCaZ6gVr1H transferred a total 0.00000502 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-04-04T03:37:11.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "Hwv66HmsBQrhtbgcWH9xJy62ogZQXPSKUZu8Wr4JvcNG transferred 0.000000001 SOL to 8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z."
+      },
+      {
+        "date": "2026-04-04T03:03:11.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-04T00:54:48.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-04T00:44:25.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-03T22:35:20.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-03T00:55:30.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T23:37:36.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+      },
+      {
+        "date": "2026-04-02T23:37:33.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T04:06:54.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 15595120.84 USDC to dHkm17KBMg4xqe4ZURoyH1u9WycxyzAgbGVutWRLMaf."
+      },
+      {
+        "date": "2026-04-02T04:06:51.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T03:51:57.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 0.00001 USDC to dHkm17KBMg4xqe4ZURoyH1u9WycxyzAgbGVutWRLMaf."
+      },
+      {
+        "date": "2026-04-02T03:51:54.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T03:43:32.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+      },
+      {
+        "date": "2026-04-02T03:43:30.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T03:05:09.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+      },
+      {
+        "date": "2026-04-02T03:05:06.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      }
+    ]
+  },
+  "DRIFT_HC6BxMvDLfef": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 0,
+    "types": {},
+    "sources": {},
+    "transactions": []
+  },
+  "DRIFT_HgjySRE1j9T2": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 32,
+    "types": {
+      "TRANSFER": 16,
+      "APPROVE_PROPOSAL": 15,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 25,
+      "BUBBLEGUM": 1,
+      "SYSTEM_PROGRAM": 6
+    },
+    "transactions": [
+      {
+        "date": "2026-04-08T03:09:25.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 14352.791091478 SOL to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF."
+      },
+      {
+        "date": "2026-04-08T03:09:23.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-06T17:08:36.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 474184.818508 USDC to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF."
+      },
+      {
+        "date": "2026-04-06T17:08:34.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-04T12:18:51.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 1.52 USDC to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF."
+      },
+      {
+        "date": "2026-04-04T12:18:49.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-04T01:57:39.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 1.69 SOL to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF."
+      },
+      {
+        "date": "2026-04-04T01:57:37.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-04T01:27:37.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "Multiple native SOL transfers."
+      },
+      {
+        "date": "2026-04-04T01:27:35.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-04T00:15:54.000Z",
+        "type": "COMPRESSED_NFT_MINT",
+        "source": "BUBBLEGUM",
+        "description": "JUP2z2jNBFVLdwNbFCXLV27tAPy8TWvTfXNJiP83iBj minted a compressed nft."
+      },
+      {
+        "date": "2026-04-04T00:05:52.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 0.42 DRIFT to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF."
+      },
+      {
+        "date": "2026-04-04T00:05:50.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-03T04:46:22.000Z",
+        "type": "TRANSFER",
+        "source": "SQUADS_V4",
+        "description": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 0.000001 SOL to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF."
+      },
+      {
+        "date": "2026-04-03T04:46:18.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T22:17:04.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      },
+      {
+        "date": "2026-04-02T21:18:52.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm transferred a total 0.000005018 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-04-02T21:18:52.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q transferred a total 0.000005018 SOL to multiple accounts."
+      },
+      {
+        "date": "2026-04-02T21:18:52.000Z",
+        "type": "TRANSFER",
+        "source": "SYSTEM_PROGRAM",
+        "description": "HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6 transferred 0.15 SOL to GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo."
+      },
+      {
+        "date": "2026-04-02T03:57:44.000Z",
+        "type": "APPROVE_PROPOSAL",
+        "source": "SQUADS_V4",
+        "description": ""
+      }
+    ]
+  }
+}

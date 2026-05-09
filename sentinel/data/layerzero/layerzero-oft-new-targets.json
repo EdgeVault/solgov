@@ -1,0 +1,583 @@
+[
+  {
+    "symbol": "ALT",
+    "address": "GVkbuvfYEXGJfUZwnVoyzzby3RsatA2Cr56BPp79JUbg",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "Anon",
+    "address": "9McvH6w97oewLmPxqQEoHUAv3u5iYMyQ9AeZZhguYf1T",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "APE",
+    "address": "C1MHyoTJpRTeS9AQCyspNVu2EWAYCZwmJ1jNkEArFP1f",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "APT",
+    "address": "DTDQEQWgBmnnJ7YGVoQrXkkroTEUkYgAfhEVb8CrnkpC",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 8
+  },
+  {
+    "symbol": "ASP",
+    "address": "DJ7vji2BU7RjNgktPAKN4L42CiXTFHEt4Eeeyr5FiTmy",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "ATH",
+    "address": "Dm5BxyMetG3Aq5PaG1BrG7rBYqEMtnkjvPNMExfacVk7",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "AVA",
+    "address": "DKu9kykSfbN5LBfFXtNNDPaX35o4Fv6vJ9FKk7pZpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "BMT",
+    "address": "FQgtfugBdpFN7PZ6NdPrZpVLDBrPGxXesi4gVu3vErhY",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "BOOP",
+    "address": "boopkpWqe68MSxLqBGogs8ZbUDN4GXaLhFwNP7mpP1i",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "BTA",
+    "address": "BatJTTdVgREJDaqkaexb2HYKXFfaF9v2HJT3R9WJZtQp",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "CAKE",
+    "address": "4qQeZ5LwSz6HuupUu8jCtgXyW1mYQcNbFAW1sWZp89HL",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "CAT",
+    "address": "3joMReCCSESngJEpFLoKR2dNcChjSRCDtybQet5uSpse",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "CATTON",
+    "address": "EnYkmHKm13mLnBgpvHJZE2T6rqi8weQXoFuPccW9ZiD5",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "CAW",
+    "address": "CAW777xcHVTQZ4CRwVQGB8CV1BVKPm5bNVxFJHWFKiH8",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 2
+  },
+  {
+    "symbol": "CGPT",
+    "address": "CCDfDXZxzZtkZLuhY48gyKdXc5KywqpR8xEVHHh8ck1G",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "CHILLHOUSE",
+    "address": "GkyPYa7NnCFbduLknCfBfP7p8564X1VZhwZYJ6CZpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "COQ",
+    "address": "coqAhf1TXdRRkuNmGYKb57rmkNbExPuM5uHYBi13uXZ",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 4
+  },
+  {
+    "symbol": "CORN",
+    "address": "ApqLH7ovTBeEjgBMXH8udnBttwR9k5JEv9pNnVQV7Xsa",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "CRYPTO",
+    "address": "4ikwYoNvoGEwtMbziUyYBTz1zRM6nmxspsfw9G7Bpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "CVAI",
+    "address": "8TC4ZJA5cwB5gmLemBfPP95v1Mft82kHGF9a87kepNno",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "DAWAE",
+    "address": "DZSs9nHSr9BBunLNWd6PDstesJ4PBLMFVK1GbZ9urYNZ",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "DEGEN",
+    "address": "A7n89LqW67HJKzJkdWZa2xojuK4N5GBKHz3dfjATCZPz",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "degenai",
+    "address": "Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "ENA",
+    "address": "72QvBVwpxqmheEPfaCwWSWqEFsUy3rhWt6JhQBMNTwD1",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "GGUSD",
+    "address": "GGUSDyBUPFg5RrgWwqEqhXoha85iYGs6cL57SyK4G2Y7",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "GMEE",
+    "address": "J324HJvWdpZoXXzckqs5h9BhhZDnp3vp86tnrDwoGwxC",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "HAPPY",
+    "address": "HAPPYwgFcjEJDzRtfWE6tiHE9zGdzpNky2FvjPHsvvGZ",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "HARD",
+    "address": "2cxr5BU6XVkDm7qaPFby5fBZaFDC1DyQvjjtb1Qkvnxp",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "HOME",
+    "address": "J3umBWqhSjd13sag1E1aUojViWvPYA5dFNyqpKuX3WXj",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "HOSICO",
+    "address": "9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "HUMA",
+    "address": "HUMA1821qVDKta3u2ovmfDQeW2fSQouSKE8fkF44wvGw",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "IMO",
+    "address": "8z5VhoM97qYGZM4UH9VH2BWhKb6Xyf7kB3J55hM4JUNF",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "INTOS",
+    "address": "7YKfh8hFbgHkwtAogfSWjsEGVNH5e1DoFF9Dj31U9CMe",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "ISLAND",
+    "address": "HX6zNkjJ7zy653VoDWzbaYpSg7BrgLfq4i4RA7D5nkkz",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "JitoSOL",
+    "address": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "K",
+    "address": "ERpDpYmuifJUKbaB1Dv9hnJ67RM21Jujmxz18JCeDzbr",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "LA",
+    "address": "4dAfd12qxvcwGWD51UUmLreUvQBqQrvtXiSj88kKN5cf",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "LBTC",
+    "address": "LBTCgU4b3wsFKsPwBn1rRZDx5DoFutM6RPiEt1TPDsY",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 8
+  },
+  {
+    "symbol": "LILY",
+    "address": "Co5WwGeZfpfqGE1tUyAp1SBjcmumoY9sNN99MXRbX98K",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "LYM",
+    "address": "3pYRq2JDB7kgj8VQajbkvxvEp7oYDzvsohL4FmjZiUow",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "MCG",
+    "address": "H1nf1F4eoHtiWiSBwLYAhJvAb7CDFY32eYA64mhL8Rp",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "MD",
+    "address": "C4j7kPx9PqDnfvxe2uycJQRTAeyGwmU4DyGf21Xgpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "MNSRY",
+    "address": "1xdtu7y3LkkrVCAbm5KGKfYzq1qgKhxxk5AaJBqpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "MOFT2",
+    "address": "5qeRviVeyEyVgxB311cZfvhpBv8gciQvbtqnL8iLhhRp",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "NEURAL",
+    "address": "BNC5eVJZixJFykygncDuUK5TpRBsWZuT6eSA99YNh2cZ",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "ORA",
+    "address": "BPYhCMNao2XG4UR771LurHrwUg3rcp76jmg4XFfAacvg",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "ORDER",
+    "address": "ABt79MkRXUsoHuV2CVQT32YMXQhTparKFjmidQxgiQ6E",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 10
+  },
+  {
+    "symbol": "PENGU",
+    "address": "2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "Puff",
+    "address": "2roCYDBxhnSPqwvU37Bp51wLHiqTLoXU1Am3fGGi5zPr",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "PYUSD",
+    "address": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "RBTC",
+    "address": "8yev7nLen2PFN2uYGhzsUbu243wMa9z4ZrCwuXs6DEQw",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "REKT",
+    "address": "vQoYWru2pbUdcVkUrRH74ktQDJgVjRcDvsoDbUzM5n9",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 4
+  },
+  {
+    "symbol": "REVV",
+    "address": "47gsKcJ9QAc97qSRkZE5h3R5pHMVQnmoovhd3niKzYEx",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "RIF",
+    "address": "AAeENcfHbTExuTvs4q7r9Bjax98Dg6BGX3aMph4bTLdK",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "rUSD",
+    "address": "Ejqkht2dyN1BaaEtK92zBKY6S8HbVH8APB5sDK9Rmokt",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "S",
+    "address": "3rQK45d1ojXR7vtvCmeNjKKVycnVWqaVcP3zk1G39RJR",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "SBC",
+    "address": "DBAzBUXaLj1qANCseUPZz4sp9F8d2sc78C4vKjhbTGMA",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "SIMMI",
+    "address": "6Nf3nFbyQ1p1CVQYtEZXfeM89XyvkFPyF2JosxdriH7S",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "SKATE",
+    "address": "9v6BKHg8WWKBPTGqLFQz87RxyaHHDygx8SnZEbBFmns2",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "SOCIAL",
+    "address": "4WS7CeusWMwWGNALHDJtyxvN9yxydoB7pvM6Pwd9F2VA",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "SP",
+    "address": "E8zSHWdtgJ7pST1QPRDYkrKpnVJNoekZgETYm1yieT72",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "SUEDE",
+    "address": "2nCeHpECQvnMfzjU5fDMAKws1vBxMzxvWr6qqLpApump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "sUSDe",
+    "address": "Eh6XEPhSwoLv5wFApukmnaVSHQ6sAnoD9BmgmwQoN2sN",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "T-USDY",
+    "address": "216BNq9D3gUcbTnw4A14NrG6yJkegG11ShHwQhroRgPY",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "UFD",
+    "address": "eL5fUxj2J4CiQsmW85k5FG9DvuQjjUoBHoQBi2Kpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "USDe",
+    "address": "DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "USDG",
+    "address": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "USDtb",
+    "address": "39DrizvVVntnUhKkyy7Nu8v1YDySA1y4R1uBnv4U7zYy",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "USDUC",
+    "address": "CB9dDufT3ZuQXqqSfa1c5kY935TEreyBw9XJXxHKpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "USDY",
+    "address": "A1KLoBrKBde8Ty9qtNQUtq3C2ortoC3u7twggz7sEto6",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "VIRTUAL",
+    "address": "3iQL8BFS2vE7mww4ehAqQHAsbmRNCrPxizWAT2Zfyr9y",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "WAGMI",
+    "address": "Hb4m5r21uoA1rWiNFBJgWN8W52QYbw6UV9jAQDbGNsqH",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "WDMT",
+    "address": "236dqm1gdXTqfw2DGwHVWoTgPAr4QKdWeNMr9fpxFXzr",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "WGC",
+    "address": "8aB8hdzyqjCJdtP1rfdLNX8bGDjjM8S42BZ3j4zNVtRN",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "WILD",
+    "address": "FVvd3s9dZYzsgitkJyWbmycSc8MkYZjyF7oqAEvmSxTZ",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "WOULD",
+    "address": "J1Wpmugrooj1yMyQKrdZ2vwRXG5rhfx3vTnYE39gpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "wsrUSD",
+    "address": "7bxM8cRFZpzonzZtzmrcWHNX1dijrEVU4VkjjtVyBmqE",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "xavier",
+    "address": "69G8CpUVZAxbPMiEBrfCCCH445NwFxH6PzVL693Xpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "XDC",
+    "address": "4xMFSmmRNgtHq7sT74dsJMQBDAhkuE4U8fWWxaGeDuvj",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 9
+  },
+  {
+    "symbol": "Y2K",
+    "address": "8YiB8B43EwDeSx5Jp91VQjgBU4mfCgVvyNahadtzpump",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "YU",
+    "address": "YUYAiJo8KVbnc6Fb6h3MnH2VGND4uGWDH4iLnw7DLEu",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  },
+  {
+    "symbol": "zenBTC",
+    "address": "9hX59xHHnaZXLU6quvm5uGY2iDiT3jczaReHy6A6TYKw",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 8
+  },
+  {
+    "symbol": "ZEREBRO",
+    "address": "8x5VqbHA8D7NkD52uNuS5nnt3PwA8pLD34ymskeSo2Wn",
+    "type": "OFT",
+    "innerToken": null,
+    "localDecimals": 6
+  }
+]

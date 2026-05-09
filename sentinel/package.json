@@ -1,0 +1,49 @@
+{
+  "name": "sentinel",
+  "version": "0.1.0",
+  "description": "Solana Protocol Governance Scanner - detects Drift-pattern vulnerabilities",
+  "main": "dist/index.js",
+  "scripts": {
+    "scan": "ts-node src/index.ts",
+    "scan:dry": "ts-node src/index.ts --dry-run",
+    "scan:safe": "ts-node src/index.ts --safe-mode",
+    "monitor": "ts-node src/monitor.ts",
+    "nonce:deep": "ts-node src/nonce-scan.ts",
+    "warn": "ts-node src/early-warning.ts",
+    "monitor:lite": "ts-node src/monitor-lite.ts",
+    "check:approvals": "ts-node src/approval-check.ts",
+    "check:v3migration": "ts-node src/v3-migration-tracker.ts",
+    "check:nonceban": "ts-node src/nonce-ban-check.ts",
+    "check:cascade": "ts-node src/counterparty-risk.ts",
+    "verify:routing": "ts-node src/defi-routing-verify.ts",
+    "chain-risk": "ts-node src/fetch-chain-risk.ts",
+    "digest": "ts-node src/daily-digest.ts",
+    "triage": "ts-node src/llm-triage.ts",
+    "bot": "ts-node src/solgov-bot.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "solana",
+    "governance",
+    "security",
+    "scanner",
+    "multisig"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.0",
+    "@huma-finance/permissionless-sdk": "^1.0.23",
+    "@solana/web3.js": "^1.91.0",
+    "@sqds/multisig": "^2.1.0",
+    "@sqds/sdk": "^2.0.4",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}

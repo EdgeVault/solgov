@@ -1,0 +1,162 @@
+{
+  "protocol": "Drift",
+  "researchedAt": "2026-04-17T21:00:00Z",
+  "researcher": "manual - established forensic baseline from April 15-17 2026 thread work",
+  "sources": [
+    { "kind": "docs", "url": "https://docs.drift.trade/" },
+    { "kind": "github", "url": "https://github.com/drift-labs/protocol-v2" },
+    { "kind": "post-mortem", "url": "https://drift.foundation/blog/drift-post-mortem-april-2026" },
+    { "kind": "internal-forensics", "path": "sentinel/data/drift-deep-dive.json" },
+    { "kind": "internal-forensics", "path": "sentinel/data/drift-enhanced-timeline.json" }
+  ],
+  "programs": [
+    {
+      "id": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+      "name": "Drift Protocol V2",
+      "role": "core perps/spot trading; State admin + upgrade authority",
+      "upgradeAuthority": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+      "upgradeAuthorityKind": "vault-PDA (E44y4Gm multisig vault[0] post-exploit recovery)",
+      "preExploitUpgradeAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9 (BBC5g vault, moved April 2 2026)",
+      "alreadyTracked": true
+    },
+    {
+      "id": "vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR",
+      "name": "Drift Vaults",
+      "role": "strategy vaults on top of Drift V2",
+      "upgradeAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9 (BBC5g vault)",
+      "alreadyTracked": true
+    },
+    {
+      "id": "dVoTE1AJqkZVoE1mPbWcqYPmEEvAUBksHY2NiM2UJQe",
+      "name": "Drift Stake Voter",
+      "role": "Realms vote plugin",
+      "upgradeAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "alreadyTracked": true
+    },
+    {
+      "id": "DraWMeQX9LfzQQSYoeBwHAgM5JcqFkgrX7GbTfjzVMVL",
+      "name": "Drift Competitions",
+      "role": "insurance fund prize draws",
+      "upgradeAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "alreadyTracked": true
+    },
+    {
+      "id": "J1TnP8zvVxbtF5KFp5xRmWuvG9McnhzmBd9XGfCyuxFP",
+      "name": "Drift JIT Proxy",
+      "role": "just-in-time liquidity proxy",
+      "upgradeAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "alreadyTracked": true
+    },
+    {
+      "id": "G6EoTTTgpkNBtVXo96EQp2m6uwwVh2Kt6YidjkmQqoha",
+      "name": "Drift Oracle Receiver",
+      "role": "oracle data adapter",
+      "upgradeAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "alreadyTracked": true
+    },
+    {
+      "id": "E7HtfkEMhmn9uwL7EFNydcXBWy5WCYN1vFmKKjipEH1x",
+      "name": "Drift Merkle Distributor",
+      "role": "airdrop distribution",
+      "upgradeAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "alreadyTracked": true
+    },
+    {
+      "id": "dammHkt7jmytvbS3nHTxQNEcP59aE57nxwV21YdqEDN",
+      "name": "Drift V1 (DAMM)",
+      "role": "deprecated V1 dynamic AMM, wound down 2025, still has live upgrade authority",
+      "upgradeAuthority": "Er82vnftZhA2YrRZyuGpw1an3Ho585eYCAxNv2U9F2uY vault[0] (historical multisig, still 3/5)",
+      "alreadyTracked": true,
+      "notes": "deprecated program but upgrade authority never moved; residual risk surface"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+      "role": "current recovery, Drift V2 upgrade authority (via vault[0])",
+      "threshold": "3/5",
+      "timelock": "0s",
+      "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP (external, Controlled Multisig)",
+      "source": "on-chain verified",
+      "alreadyTracked": true
+    },
+    {
+      "address": "BBC5gSPh71YB2eUXdCqvkmL6kj6YDkUQJpX997qXUt2Q",
+      "role": "pre-exploit sister multisig; still upgrade authority for 6 Drift programs (Vaults, JIT Proxy, Oracle Receiver, Stake Voter, Competitions, Merkle Distributor)",
+      "threshold": "3/5",
+      "timelock": "0s",
+      "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+      "source": "on-chain verified",
+      "alreadyTracked": false,
+      "notes": "present in extra-multisigs.json but NOT in tracked-multisigs.json - should be added"
+    },
+    {
+      "address": "2LW6PSEjp81xSEttWwXDB6Etb1eKdhYPbFEojYbyhx88",
+      "role": "exploited multisig (March 25 - April 1 2026); admin rotated away",
+      "threshold": "2/5",
+      "timelock": "0s",
+      "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+      "source": "on-chain verified",
+      "alreadyTracked": false,
+      "notes": "inactive admin role but multisig still exists; historical reference for case study"
+    },
+    {
+      "address": "61ApQqLoWVfTuzua9c22SWMj78RGv77x6Z2kzcJVGNjP",
+      "role": "original admin multisig April 2024 - March 2026",
+      "threshold": "2/5",
+      "timelock": "0s",
+      "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+      "alreadyTracked": false
+    },
+    {
+      "address": "Er82vnftZhA2YrRZyuGpw1an3Ho585eYCAxNv2U9F2uY",
+      "role": "historical peer multisig; currently still upgrade authority for Drift V1 DAMM",
+      "threshold": "3/5",
+      "timelock": "0s",
+      "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+      "alreadyTracked": false
+    },
+    {
+      "address": "GMNVGNk8Kso1cjre4Wx7zx2knP4uKLNVtpfay2FEEaAi",
+      "role": "historical peer multisig",
+      "threshold": "3/5",
+      "timelock": "0s",
+      "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+      "alreadyTracked": false
+    }
+  ],
+  "authorities": [
+    {
+      "address": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+      "role": "configAuthority across all 6 Drift multisigs (Controlled Multisig)",
+      "kind": "single external wallet, System-Program-owned",
+      "lastActivity": "dormant ~139 days as of April 17 2026 scan",
+      "alreadyTracked": true,
+      "notes": "can change threshold, members, or timelock on any of the 6 multisigs without a vote; single-key compromise = takeover of entire Drift program suite"
+    }
+  ],
+  "vaultPdas": [
+    {
+      "address": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "parentMultisig": "BBC5gSPh71YB2eUXdCqvkmL6kj6YDkUQJpX997qXUt2Q",
+      "vaultIndex": 0,
+      "programsControlled": 6,
+      "alreadyTracked": true
+    },
+    {
+      "address": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+      "parentMultisig": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+      "vaultIndex": 0,
+      "programsControlled": 1,
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Squads V4. Post-exploit: E44y4Gm 3/5 holds Drift V2 upgrade auth + State admin. BBC5g 3/5 still holds 6 Drift programs. Er82vnft 3/5 still holds Drift V1. 61ApQqLoW, GMNVGNk8, 2LW6PS inactive but extant. All 6 multisigs share one external configAuthority (A1eC8n2t) that is dormant but could change any multisig's config without a vote. Zero timelock on every multisig. Drift announced a new community multisig for relaunch but it is not yet live on-chain.",
+  "gaps": [
+    "BBC5g, Er82vnft, GMNVGNk8, 2LW6PS, 61ApQqLoW - historical multisigs that still hold authority over programs should be added to tracked-multisigs.json as 'Drift (historical <label>)' so Sentinel watches them too",
+    "The announced new community multisig address is not yet public; watch for creation event",
+    "A1eC8n2t configAuthority's last signing history - verify whether any signing activity occurred in the ~139 day dormancy window"
+  ],
+  "confidence": "high",
+  "notes": "Drift is our reference case. Every field here is cross-verified against the April 15-17 published thread and internal forensic scans."
+}

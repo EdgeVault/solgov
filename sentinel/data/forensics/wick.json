@@ -1,0 +1,9 @@
+{
+  "protocol":"Wick","researchedAt":"2026-04-17T22:26:00Z","researcher":"manual stub",
+  "sources":[{"kind":"docs","url":"https://wick.finance/"}],
+  "programs":[],
+  "multisigs":[{"address":"8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA","role":"Wick multisig (tracked)","threshold":"?","alreadyTracked":true,"needsRpcVerify":["threshold + members"]}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Squads multisig.","gaps":["Wick program IDs","threshold","governance model"],"confidence":"low",
+  "notes":"Minimal public presence; bootstrap-wallet analysis flagged Wick as HIGH confidence (5/5 signers funded by same wallet)."
+}

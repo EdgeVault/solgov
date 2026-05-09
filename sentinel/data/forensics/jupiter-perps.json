@@ -1,0 +1,53 @@
+{
+  "protocol": "Jupiter Perps",
+  "researchedAt": "2026-04-17T21:35:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://station.jup.ag/guides/perpetual-exchange/how-it-works"
+    },
+    {
+      "kind": "github",
+      "url": "https://github.com/jup-ag"
+    },
+    {
+      "kind": "idl-repo",
+      "url": "https://github.com/julianfssen/jupiter-perps-anchor-idl-parsing",
+      "note": "community-maintained IDL parsing reference"
+    }
+  ],
+  "programs": [
+    {
+      "id": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+      "name": "Jupiter Perpetuals",
+      "role": "LP-based perps exchange (JLP pool)",
+      "source": "station.jup.ag docs + community IDL repo",
+      "upgradeAuthority": "5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA",
+      "alreadyTracked": true
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm",
+      "role": "Jupiter Perps multisig (tracked)",
+      "threshold": "4/7",
+      "timelock": "86400s (24h)",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "what programs this multisig's vault[0] is upgrade authority for; PERPHjGB probably but unconfirmed"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads V4 with 24-hour timelock and autonomous configAuthority. 4/7 threshold. Multisig is confirmed tracked but no vault PDA in our scan currently attributes the PERPHjGB program to it - that linkage needs RPC verification.",
+  "gaps": [
+    "PERPHjGB upgrade authority - need getAccountInfo(ProgramData) to confirm it maps to AxkJ8oH5aDu4 vault[0]",
+    "Investigate whether Perps uses additional helper programs (liquidation bot, custody manager, etc.) with separate upgrade authorities"
+  ],
+  "confidence": "medium",
+  "notes": "Jupiter's docs don't list program IDs in a single manifest. Main PERPHjGB is well-known but the full governance chain (program → vault → multisig) is not confirmed in local data."
+}

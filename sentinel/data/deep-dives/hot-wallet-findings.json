@@ -1,0 +1,158 @@
+[
+  {
+    "signer": "BQZ9oXc2WyUUtBDa...",
+    "protocols": [
+      "Lulo"
+    ],
+    "swapCount": 0,
+    "defiTxCount": 81,
+    "topSources": [
+      "KAMINO_LEND"
+    ],
+    "riskLevel": "MEDIUM",
+    "story": "Governance signer for Lulo is using their multisig key for DeFi (81 DeFi txs via KAMINO_LEND). Key is exposed beyond governance duties."
+  },
+  {
+    "signer": "7tH1k4PsMu3sNUYJ...",
+    "protocols": [
+      "Kamino"
+    ],
+    "swapCount": 1,
+    "defiTxCount": 64,
+    "topSources": [
+      "KAMINO_LEND",
+      "KAMINO_FARMS",
+      "JUPITER"
+    ],
+    "riskLevel": "MEDIUM",
+    "story": "Governance signer for Kamino is using their multisig key for DeFi (64 DeFi txs via KAMINO_LEND, KAMINO_FARMS, JUPITER). Key is exposed beyond governance duties."
+  },
+  {
+    "signer": "hQi6Cz1BbBNc8dhh...",
+    "protocols": [
+      "Solayer"
+    ],
+    "swapCount": 41,
+    "defiTxCount": 42,
+    "topSources": [
+      "JUPITER",
+      "KAMINO_FARMS"
+    ],
+    "riskLevel": "HIGH",
+    "story": "Governance signer for Solayer is actively swapping tokens (41 swaps). This key is hot and exposed to phishing, malicious approvals, and dApp exploits."
+  },
+  {
+    "signer": "AnGdBvg8VmVHq7zy...",
+    "protocols": [
+      "Marginfi"
+    ],
+    "swapCount": 43,
+    "defiTxCount": 34,
+    "topSources": [
+      "JUPITER",
+      "MARGINFI_V2"
+    ],
+    "riskLevel": "HIGH",
+    "story": "Governance signer for Marginfi is actively swapping tokens (43 swaps). This key is hot and exposed to phishing, malicious approvals, and dApp exploits."
+  },
+  {
+    "signer": "AaGvHGXZHeAPLCU2...",
+    "protocols": [
+      "Switchboard"
+    ],
+    "swapCount": 24,
+    "defiTxCount": 27,
+    "topSources": [
+      "DRIFT",
+      "JUPITER"
+    ],
+    "riskLevel": "HIGH",
+    "story": "Governance signer for Switchboard is actively swapping tokens (24 swaps). This key is hot and exposed to phishing, malicious approvals, and dApp exploits."
+  },
+  {
+    "signer": "6ryqDDCwKFZfSiHQ...",
+    "protocols": [
+      "Marginfi"
+    ],
+    "swapCount": 11,
+    "defiTxCount": 26,
+    "topSources": [
+      "KAMINO_LEND",
+      "JUPITER",
+      "MARGINFI_V2"
+    ],
+    "riskLevel": "HIGH",
+    "story": "Governance signer for Marginfi is actively swapping tokens (11 swaps). This key is hot and exposed to phishing, malicious approvals, and dApp exploits."
+  },
+  {
+    "signer": "C31s8y9zXnUbXzej...",
+    "protocols": [
+      "DefiTuna"
+    ],
+    "swapCount": 18,
+    "defiTxCount": 17,
+    "topSources": [
+      "JUPITER"
+    ],
+    "riskLevel": "HIGH",
+    "story": "Governance signer for DefiTuna is actively swapping tokens (18 swaps). This key is hot and exposed to phishing, malicious approvals, and dApp exploits."
+  },
+  {
+    "signer": "89SrbjbuNyqSqAAL...",
+    "protocols": [
+      "Solayer"
+    ],
+    "swapCount": 8,
+    "defiTxCount": 13,
+    "topSources": [
+      "JUPITER",
+      "KAMINO_FARMS",
+      "ORCA"
+    ],
+    "riskLevel": "MEDIUM",
+    "story": "Governance signer for Solayer is using their multisig key for DeFi (13 DeFi txs via JUPITER, KAMINO_FARMS, ORCA). Key is exposed beyond governance duties."
+  },
+  {
+    "signer": "FnCZoNo6ki4njeBK...",
+    "protocols": [
+      "Nosana"
+    ],
+    "swapCount": 0,
+    "defiTxCount": 10,
+    "topSources": [
+      "RAYDIUM"
+    ],
+    "riskLevel": "MEDIUM",
+    "story": "Governance signer for Nosana is using their multisig key for DeFi (10 DeFi txs via RAYDIUM). Key is exposed beyond governance duties."
+  },
+  {
+    "signer": "FoMboHErV2g7GjfQ...",
+    "protocols": [
+      "Solstice"
+    ],
+    "swapCount": 7,
+    "defiTxCount": 6,
+    "topSources": [
+      "JUPITER",
+      "RAYDIUM",
+      "ORCA"
+    ],
+    "riskLevel": "MEDIUM",
+    "story": "Governance signer for Solstice is using their multisig key for DeFi (6 DeFi txs via JUPITER, RAYDIUM, ORCA). Key is exposed beyond governance duties."
+  },
+  {
+    "signer": "FGGC4aPUuWip2CXM...",
+    "protocols": [
+      "Marginfi"
+    ],
+    "swapCount": 1,
+    "defiTxCount": 6,
+    "topSources": [
+      "KAMINO_LEND",
+      "MARGINFI_V2",
+      "JUPITER"
+    ],
+    "riskLevel": "MEDIUM",
+    "story": "Governance signer for Marginfi is using their multisig key for DeFi (6 DeFi txs via KAMINO_LEND, MARGINFI_V2, JUPITER). Key is exposed beyond governance duties."
+  }
+]

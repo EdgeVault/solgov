@@ -1,0 +1,50 @@
+{
+  "protocol": "Jupiter Agg",
+  "researchedAt": "2026-04-17T21:35:00Z",
+  "researcher": "manual",
+  "sources": [
+    { "kind": "docs", "url": "https://station.jup.ag/" },
+    { "kind": "github", "url": "https://github.com/jup-ag" }
+  ],
+  "programs": [
+    {
+      "id": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+      "name": "Jupiter Aggregator v6 (Swap)",
+      "role": "swap router",
+      "source": "station.jup.ag docs (widely published)",
+      "upgradeAuthority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "upgradeAuthorityKind": "plain wallet (single key, NOT a multisig) - confirmed in solgov-api.ts ADDRESS_TO_PROTOCOL as 'Jupiter v6 (upgrade auth)'",
+      "alreadyTracked": true,
+      "notes": "Jupiter v6 upgrade authority is a SINGLE KEY, not multisig-controlled. This is an intentional design choice by Jupiter (acknowledged publicly). Different risk profile from their Perps/Lend products."
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "7ZyDFzet6sKgZLN4D89JLfo7chu2n7nYdkFt5RCFk8Sf",
+      "role": "Jupiter Agg governance multisig (Squads V3, tracked)",
+      "threshold": "4/8",
+      "timelock": "0s",
+      "configAuthority": "(Squads V3 - no configAuthority concept)",
+      "alreadyTracked": true,
+      "notes": "V3 multisig - different risk surface from V4. No timelocks available in V3. May not be the program upgrade authority - that is CvQZZ23q (plain wallet)."
+    }
+  ],
+  "authorities": [
+    {
+      "address": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "role": "Jupiter v6 swap program upgrade authority",
+      "kind": "plain-wallet single-key",
+      "alreadyTracked": true,
+      "notes": "Not a multisig. Single-signer upgrade authority on a program routing ~50% of Solana DEX volume. Material governance risk and a public fact - Jupiter has discussed plans to move this to a multisig."
+    }
+  ],
+  "vaultPdas": [],
+  "governanceModel": "Split: the v6 swap program (JUP6LkbZ) has a plain-wallet upgrade authority (CvQZZ23q). The governance multisig (7ZyDFzet6s, Squads V3 4/8) is separate and handles other operational authorities, but is NOT the program upgrade authority.",
+  "gaps": [
+    "Enumerate what the Squads V3 multisig 7ZyDFzet6s actually controls (if anything distinct from program upgrade auth)",
+    "Identify any additional Jupiter programs (DCA, Limit Order) and their upgrade authorities",
+    "Confirm CvQZZ23q is still a plain wallet vs having been migrated to a multisig recently"
+  ],
+  "confidence": "high",
+  "notes": "This is already well-understood. The plain-wallet upgrade authority on the aggregator is a widely-cited governance risk and was called out in the April 15 thread."
+}

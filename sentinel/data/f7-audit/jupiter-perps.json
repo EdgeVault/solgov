@@ -1,0 +1,28 @@
+{
+  "protocol": "Jupiter Perps",
+  "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+  "auditedAt": "2026-04-23",
+  "methodology": "Architectural review based on public documentation (station.jup.ag) and widely-documented JLP pool model. Program source is not publicly accessible at a standard GitHub repo.",
+  "findings": {
+    "permitsSameOwnerSelfMatch": "n/a - no maker/taker matching surface",
+    "evidence": {
+      "architecturalNote": "Jupiter Perps is a pool-based perpetual DEX. Traders open positions against the JLP (Jupiter Liquidity Provider) pool, not against other traders. There is no maker/taker matching step - every trade is user-vs-pool. This means the F7 'self-match bypassing haircut' attack surface does not exist here by construction.",
+      "lossModel": "Trader losses flow to JLP holders collectively (pool absorbs). Trader wins drain the pool. There is no 'residual claim' surface that a winning trader can capture beyond their own position PnL."
+    },
+    "hasInsuranceFund": false,
+    "hasSocialisation": "yes, but via pool drawdown distributed across ALL JLP holders",
+    "socialisationNote": "Because socialisation is across ALL LPs (every JLP holder), the F7 pattern 'I cause my own loss to absorb and claim my own residual' does not produce attacker gain - they would be diluting themselves alongside every other LP proportionally.",
+    "residualClaimSurface": "none (no haircut residual concept)",
+    "classification": "GREEN (architecturally immune by pool model)",
+    "confidence": "high - structural, not dependent on specific code paths"
+  },
+  "notes": [
+    "Pool-based perps (GMX-v1 style) are a different threat model from order-matched perps (Percolator, Drift). F7 is specific to order-matched designs with haircut residual accounting.",
+    "Jupiter Perps may have OTHER vulnerabilities specific to pool-absorption dynamics (e.g. oracle manipulation during large LP withdrawals) but they're not F7-class.",
+    "Closed-source program limits deeper audit. Architectural classification is defensible based on publicly documented model."
+  ],
+  "sourceUrls": [
+    "https://station.jup.ag/guides/perpetual-exchange",
+    "https://jup.ag/perps-earn"
+  ]
+}

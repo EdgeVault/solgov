@@ -1,0 +1,1912 @@
+{
+  "address": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+  "sample": [
+    {
+      "sig": "5nAHRrq89uJSzJHjZ4mzBpQ3i985Hz4owP5KxmkWnAaRe7ZcsznEx5P9CRsuamyyvhcKZxuDFzMpiF5uq47RdFws",
+      "ts": 1776112524,
+      "date": "2026-04-13T20:35:24.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.744709
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "43HkJWkPymsQm8FjcixJcjqXfn2EzxdxxhK37pLdof41"
+      ]
+    },
+    {
+      "sig": "5LZJH5H8uS6nGyRidoh3DaXrvSR3WwusmKKorGQEs4CHvyc1AGEEnSPChwfwDpEh5U4v1nsR9Q8kXK8gVVJikWzg",
+      "ts": 1776079027,
+      "date": "2026-04-13T11:17:07.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.726733
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "ENb5qZErXh7s46PEkTiS9BcWtSaf4K5UrvaAEZ7FNxS4"
+      ]
+    },
+    {
+      "sig": "5VgMhzXi7j8NqSHkeNPEqxz192aWoxYDi5FPWX1K7L9XUx9uR9MgfY78n5vXmAUGzhNJvLVait3d8dPWYMjrAygK",
+      "ts": 1775804988,
+      "date": "2026-04-10T07:09:48.000Z",
+      "type": "TOKEN_MINT",
+      "source": "UNKNOWN",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB minted 2 tokens.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "6YveMQ3uPgQmCJfUYr9UW4Dm5cyfwyfQa6Joeru2YFkU",
+          "amount": 256496.52425
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 257729.79774
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "C8b4M6hWccNAoxLZxXnLNGMooeNpgaJAuP1bZnLwYoTi"
+      ]
+    },
+    {
+      "sig": "2Vx5zvLZLA4CmMv9jGUw4JjMBwAyUYni5CnTqhRhrmJrx8Su28BbmKKPHsMfa3CRVF1BonfvKz3xgTw9pqynJmpv",
+      "ts": 1775801972,
+      "date": "2026-04-10T06:19:32.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "QVtWcAX3R7Cr51VhAxFSYntoCAmTQzK8Hf4R1TrKNQ4 transferred a total 0.000080005 SOL to multiple accounts.",
+      "feePayer": "QVtWcAX3R7Cr51VhAxFSYntoCAmTQzK8Hf4R1TrKNQ4",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.000010001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2JjysUPyK2XLGPPebKdmTuPKeKM1EAAXQW9zXGg9MZtF5u8PAYhQ3fhpmN6cNsdUFaBXxbnTrsi5FKx4D7N65Pb",
+      "ts": 1775801970,
+      "date": "2026-04-10T06:19:30.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2cDK82GXTPm8tboTu27eWZR2XxAWyAorc51k2WVjR3cfDZqtXZuE7E67WqfihduXqfrkVRpyH3MVP5vhG15CRNp",
+      "ts": 1775801966,
+      "date": "2026-04-10T06:19:26.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kK8novRCAScwtPzqq1xy32GD4KXWUR3EW27mAZe2T9k transferred 0.0001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kK8novRCAScwtPzqq1xy32GD4KXWUR3EW27mAZe2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.0001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5EmnmjQ7o3gNDDci8SG8YUohPUVjkGByGLP8rehhnG5m6tdwWry2dxLAPqdqmrsP6AtsauHnJjbVjLnr9nHHseHY",
+      "ts": 1775801169,
+      "date": "2026-04-10T06:06:09.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5PbtMfcaN7Dy7nucRBfmvUBRrBQBZm8K4dRatH2SdCMs5g9mm1FR8w3oTAu5jo6SRnHqKq39k3xBMtG2C8LCrqHi",
+      "ts": 1775801153,
+      "date": "2026-04-10T06:05:53.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 112000 USDC to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 112000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k"
+      ]
+    },
+    {
+      "sig": "XsDypwqBQ8VHiBaKiUR5AoXxmKaN4srn3tGFYSfdSvYgYHRCwKrcwQio2tWTJuC58o3AbioVzCC2JWi7vJnkqXU",
+      "ts": 1775801122,
+      "date": "2026-04-10T06:05:22.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB swapped 42.498 SOL for 11471.856322 USDC",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 11471.856322
+        },
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 3546.01867
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 137.502
+        },
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 42.498
+        }
+      ],
+      "solIn": 0.00203928,
+      "solOut": 180.00203928,
+      "counterparties": [
+        "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+        "GMCJvYGf5Ex2ARiMquaBDqU6iKM8uiEQkB8jCnoNfHpC"
+      ]
+    },
+    {
+      "sig": "5vYVPjkmG5TqMdKiKvin8gvPNVnJfyBU6wphtmPZuE3hcs2zZeYEYjD5qvvUm3FuDfiL7WpvCmAcMA4xqx8hap8A",
+      "ts": 1775801087,
+      "date": "2026-04-10T06:04:47.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "CreQJ2t94QK5dsxUZGXfPJ8Nx7wA9LHr5chxjSMkbNft",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 354087.36492
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 4247,
+      "counterparties": [
+        "CreQJ2t94QK5dsxUZGXfPJ8Nx7wA9LHr5chxjSMkbNft"
+      ]
+    },
+    {
+      "sig": "35VLLFaeweAtdBiiSQ84VGPQt7GNBZ7uEcdfCKP42A9XpPR7gAZsBHiXiTy2gycVDKdTgQ9RHVatVfJfWsaNz8Q3",
+      "ts": 1775801002,
+      "date": "2026-04-10T06:03:22.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "QVtWcAX3R7Cr51VhAxFSYntoCAmTQzK8Hf4R1TrKNQ4 transferred a total 0.000080005 SOL to multiple accounts.",
+      "feePayer": "QVtWcAX3R7Cr51VhAxFSYntoCAmTQzK8Hf4R1TrKNQ4",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.000010001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5whCYsDYxR6B2gyW2AePrVGwpK7TPE69amFH5NjozFPspCwCKEDk5xCeJggPsgy3YACsLa2MjvFA1TvUUJQE9Z6w",
+      "ts": 1775800990,
+      "date": "2026-04-10T06:03:10.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5ZpsnqHddQwEz1n1EV4NPvAGNKBw2rqAhkK9KDQXCEw86FNMsSP1HgkdLtygHTmE35zYFTn3z59NDEJYdRAou9rq",
+      "ts": 1775800974,
+      "date": "2026-04-10T06:02:54.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 118 SOL to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 118,
+      "counterparties": []
+    },
+    {
+      "sig": "245gk5c6Hhe8NzN3nHdxr5Gemgo9y1qPoMzsz6PFJkg3bW8Lz5qjo5R8zZjb7fN4N5FjjPCKKL269sENXx2NwoeJ",
+      "ts": 1775800944,
+      "date": "2026-04-10T06:02:24.000Z",
+      "type": "COMPRESSED_NFT_MINT",
+      "source": "BUBBLEGUM",
+      "desc": "JUP2z2jNBFVLdwNbFCXLV27tAPy8TWvTfXNJiP83iBj minted a compressed nft.",
+      "feePayer": "JUP2z2jNBFVLdwNbFCXLV27tAPy8TWvTfXNJiP83iBj",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "t54g4YZybgstFarUam8MHvDF9dAZLbqJh5WsG2YfLDowW4qVxLs6ykRLHM3FVZfkmjsju3bjcPyLY18kxixE5YZ",
+      "ts": 1775800943,
+      "date": "2026-04-10T06:02:23.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "HRsViqvsDNa2CL2XdpMPXMPQK6b3tPCEc75p43iuMFyb transferred a total 0.000005018 SOL to multiple accounts.",
+      "feePayer": "HRsViqvsDNa2CL2XdpMPXMPQK6b3tPCEc75p43iuMFyb",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "3hs75GSwR6LiEvXgR29nLa5ure4hv9thuk1Zx9A38SaFp1tmsd5eUAUViVsyqbbN4goHiibKFvjscifwgpnLwNvE",
+      "ts": 1775800943,
+      "date": "2026-04-10T06:02:23.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "Cj6rXsJJhDzm2G8pYZVybLPzZGtrf4M8ZJcqdTcFcWdK transferred a total 0.000005018 SOL to multiple accounts.",
+      "feePayer": "Cj6rXsJJhDzm2G8pYZVybLPzZGtrf4M8ZJcqdTcFcWdK",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "26T9Uujb4bKyB3TWWX9xSkmBNP9C2ufD6XLp5h7YiEZyLmRZJFC3cg6xqKqg6jPBKrhyLqYTjKQEtKdjNPYWHnY4",
+      "ts": 1775800939,
+      "date": "2026-04-10T06:02:19.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB swapped 1252.9766 mSOL for 1239.956144945 SOL",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 1715.951876455
+        },
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 1578.877446974
+        },
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 1239.956144945
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 1252.9766
+        },
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 1153.9179
+        },
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 906.1055
+        }
+      ],
+      "solIn": 4534.787507654,
+      "solOut": 0.00203928,
+      "counterparties": [
+        "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3",
+        "E1mBVQyt7BHK8SaBSfME7usYxx94T4DtHEjbUpEBhZx",
+        "EHBeyyQwD6MLa48fdxSjEaMHLur6BrcGtVcJ5c66AvaC",
+        "3wyaMbE5af1pDHpKfgQQDt4ojqdNhmnHWByhcKzDGEcd",
+        "8p1VKP45hhqq5iZG5fNGoi7ucme8nFLeChoDWNy7rWFm"
+      ]
+    },
+    {
+      "sig": "4RNHxiXx57K8i9t34shR2bzB97Q4eFuyf565gdVSZFhNjrHQJB1uFDCarihgTwd91LCKF5gKCuWFsTXwqFU2VGTq",
+      "ts": 1775796101,
+      "date": "2026-04-10T04:41:41.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.743953
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "DA3FqKsiK7pYNmPZq1kzN24mPKL4uBG7hBEFgeQv27j4"
+      ]
+    },
+    {
+      "sig": "2jN7EbXWCckVSSYz3YKZpJRTbdaLCmDSD92ETgfpiPexZG36DstxgDXKzSmkpqCdKQM3JJFW12uuUQm5Kzp3i6rE",
+      "ts": 1775624139,
+      "date": "2026-04-08T04:55:39.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.748501
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "73rKyrvt4gNA856ppVrW4xgXsGHcrDSu9sDW2eha571y"
+      ]
+    },
+    {
+      "sig": "5hN3RDHo5UwveazumwDqhvkaNJTChEVvXBVfVBFogAjAhLmaQsJEVXNBVdmX79G4RUqpiEKQPxCuSPGRSsUudTCf",
+      "ts": 1775455056,
+      "date": "2026-04-06T05:57:36.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.719871
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "FFZfpCY7CHpLxd9qrEYVYZfXSgmFonjmMqDuMkLyqCkv"
+      ]
+    },
+    {
+      "sig": "2PSV1vkQoDCdJYuCZrjfJGmTaoTujz4r1rct7rKZiFJpXc8n1EyntFggMQKwKPLFpczFg6oNYGaTLeQhVvLfdvG7",
+      "ts": 1775287471,
+      "date": "2026-04-04T07:24:31.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.560039
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "3aiy3Z2e1sjPYoYfyZJVFc4xtP4NjgsXKuNehZjcxipN"
+      ]
+    },
+    {
+      "sig": "neGSE5F5B8ampQdBSTuWJw4d3MDULDiSgfz6Rne2h7b2hpwjyuDsFaNbmkeCn1Lza1LNZ13ZdjYm5GU9Q8hpWJZ",
+      "ts": 1775133673,
+      "date": "2026-04-02T12:41:13.000Z",
+      "type": "TRANSFER",
+      "source": "PHANTOM",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 99.728587 6YveMQ3uPgQmCJfUYr9UW4Dm5cyfwyfQa6Joeru2YFkU to 7cp9bArUmdeK9iPD9VUVtLC7Mq8CGiuK6SsX4rUtATSR.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "6YveMQ3uPgQmCJfUYr9UW4Dm5cyfwyfQa6Joeru2YFkU",
+          "amount": 99.728587
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0.00203928,
+      "counterparties": [
+        "7cp9bArUmdeK9iPD9VUVtLC7Mq8CGiuK6SsX4rUtATSR"
+      ]
+    },
+    {
+      "sig": "54HyUAnEDRj2EF7Am6d2hpanksHzknEqEVryxcuJi534tzP2svpcBz2WsvwRvioUHxvf3bo1MqJwUoU3p6aa2uEt",
+      "ts": 1775133359,
+      "date": "2026-04-02T12:35:59.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "7cptTqKj5jNHXnHAQyZ65nL6Vs3suLQhyuvnEmRLDjSR transferred 0.000005 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "7cptTqKj5jNHXnHAQyZ65nL6Vs3suLQhyuvnEmRLDjSR",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.000005,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5hgaweJQcPJsfXxwzvysPk8MwWDyYHaz5K4uVAhs4eqqsWU75K1AvYkBiU6gCUL2uygKfk4ibd9JwZ9zcLPryji5",
+      "ts": 1775133353,
+      "date": "2026-04-02T12:35:53.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "7cpkAWC89ynP74LEpvBqiGJmR7dYamKBox8ADBZ2BJSR transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "7cpkAWC89ynP74LEpvBqiGJmR7dYamKBox8ADBZ2BJSR",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5nkUugwsCRVCQSoGQUxuSRG44sjE7AsGfR58n191gtfaGLibegY1hvEubeyZkKLA8fBReYcSdss7aae8kGpYxkX9",
+      "ts": 1775133343,
+      "date": "2026-04-02T12:35:43.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2WCaFrdRSHZTLbuKtsftg9kdC68ZgzCLtiaboKbfPBiS531uLotvFFepW3QCXutsA8SkCAdpbbpX1g2esk71BjTe",
+      "ts": 1775133343,
+      "date": "2026-04-02T12:35:43.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "3tLLgEywGLCN6Qmg2uyE93y9c9dMyuWLGRTgpjSRFVLVPH9UvX5fpxmHmDYqE3YKkjMm31qQ3xuZj5Gcbjuf8yHA",
+      "ts": 1775133343,
+      "date": "2026-04-02T12:35:43.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2Qr73hwDPsF4maxL7YYG45sdnAWNr4AHeqG7gA5WtDerDBDxqPSSSu5WnWFYpMGQg8srokMeaaaFGtTNaL4GcRYL",
+      "ts": 1775133339,
+      "date": "2026-04-02T12:35:39.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "3sZQf1ZuhuThJe7iFXhe7Q9ZRePkvaWc7YgThSefheRGZTvgZeaTc9tfVhQeX8DGaZTRm3rctbeqGojJZMgcuWi2",
+      "ts": 1775133339,
+      "date": "2026-04-02T12:35:39.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "Qr8zGTYn2bLpN4CoUTJgQU4K19vg5VqgnxFvsFiHzENkPyi18kHREofvY4AvfNVNvZ7EMKbn2u26XMGMVfhEHss",
+      "ts": 1775133339,
+      "date": "2026-04-02T12:35:39.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5m6NovKVZei9jJVS7EcG4ib45FMm75P6YvsdzVDSu6yMsddy2zEfGPieu9C8zeskMVXsxTeLK3vc3gF8ijYwSUCH",
+      "ts": 1775133337,
+      "date": "2026-04-02T12:35:37.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "3er6QLUG5BLWfFTvgC2AUvPVfJxWxnnF13P3P84N6ZTevwwoudz4u4bKhKpX1ei1XgYNBsCyDCv7GKeW3wdBVk13",
+      "ts": 1775133336,
+      "date": "2026-04-02T12:35:36.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "CCyYKtnsnkkktZw9KuUrdRWZ4qv9rn3pcNB3LouFMY5Q",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5z8vUL9NUAKRHkJYy4DM3eHLwUa2BESDdU4Pzws9D9yrQyExwKQQquV4EU27TC1rhQ5Wkm2WWksxWniH1hmU4ae",
+      "ts": 1775133336,
+      "date": "2026-04-02T12:35:36.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm transferred a total 0.000005016 SOL to multiple accounts.",
+      "feePayer": "8HvfGdKrgy5iiG9MjR7cQQmfjPNUT2iE7kqH83bJgaPm",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "3pbuQ5Hp3K9DA7kz2MDkgAQkzpDN3EKGAhWhb8HS3YzjLUbSLB41V7pKmzE6pPJAJfw7Mmc5sSRRQ4ovbgdDQXKi",
+      "ts": 1775133331,
+      "date": "2026-04-02T12:35:31.000Z",
+      "type": "TRANSFER",
+      "source": "PHANTOM",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 401 MNDE to 7cp9bArUmdeK9iPD9VUVtLC7Mq8CGiuK6SsX4rUtATSR.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+          "amount": 401
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0.00203928,
+      "counterparties": [
+        "7cp9bArUmdeK9iPD9VUVtLC7Mq8CGiuK6SsX4rUtATSR"
+      ]
+    },
+    {
+      "sig": "5N2bqJWPBdRmhX3CQjq222LK2nLhAZ1h3BVYqJQ6YxnKj4gKGimbHWcPNNY7b1o7mJKm8QBJxVh7UsSFMymNo5sd",
+      "ts": 1775133228,
+      "date": "2026-04-02T12:33:48.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 0.03 SOL to 7cp9bArUmdeK9iPD9VUVtLC7Mq8CGiuK6SsX4rUtATSR.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0.03,
+      "counterparties": []
+    },
+    {
+      "sig": "5ysNkgi2nvPRWfwZ4zvFEocp1A4Bj9nizXisuyV9oiFaUH28GRYCz75RXsgX2crj4aeqgumFsYZL5pPd17Xf9GmR",
+      "ts": 1775112929,
+      "date": "2026-04-02T06:55:29.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.476181
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "85PS7HVY5etzwUTK1mqf22TXnRkfo98HDvrw4nPisEbg"
+      ]
+    },
+    {
+      "sig": "2YNsiVY2CAcDCnpdYLcDXtQ7ndSYfhAMUyd8gV1bhmM7VWhWRiWWRPNnBS7km6rMeYY9jWJDewZ5a58XbY4GnG6k",
+      "ts": 1775039475,
+      "date": "2026-04-01T10:31:15.000Z",
+      "type": "INITIALIZE_USER",
+      "source": "KAMINO_FARMS",
+      "desc": "",
+      "feePayer": "farmen1RiKqjaRatgch9DNeWrLMskFXcraYjMgQjHyG",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5YUvzmavWoEvAzDPJTSqrAybjMAYWidoMzsBZpUvUPNoCoyJKub8zGh2Abq4r27ZHg6vnfP4wRpJTi6Coz5bdvYH",
+      "ts": 1775039460,
+      "date": "2026-04-01T10:31:00.000Z",
+      "type": "INITIALIZE_USER",
+      "source": "KAMINO_FARMS",
+      "desc": "",
+      "feePayer": "farmen1RiKqjaRatgch9DNeWrLMskFXcraYjMgQjHyG",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "HxxPe1bLtbaF2FKzDxbs7oBEwNbM4WGigxbyyMRaDKoo6h9zM7bUx1x1boAYHinVT2DrPrVaKmbHVGssggau986",
+      "ts": 1775039445,
+      "date": "2026-04-01T10:30:45.000Z",
+      "type": "INITIALIZE_USER",
+      "source": "KAMINO_FARMS",
+      "desc": "",
+      "feePayer": "farmen1RiKqjaRatgch9DNeWrLMskFXcraYjMgQjHyG",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "37Em9LrrQJeQ1cgk6b9ywzpKCR9zBFaMVMy6Y6EB8WymNDQ5FxF4EzkUTn26QvWui9nYyEoyv8Z5KTTBmXZ9EjTz",
+      "ts": 1775039343,
+      "date": "2026-04-01T10:29:03.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "8igtGP7KNnzuEfevBxBpdtr3U6YCFz2B4kvYq4hJ63pt transferred 0.030524924 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "8igtGP7KNnzuEfevBxBpdtr3U6YCFz2B4kvYq4hJ63pt",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.030524924,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "ApkeEJxTNtTuvNVcMW43mnc6Tx7LM1tGqqHJgMbh6NKcELrnRMf4hcU5XyVo8EhCQ9jJ6GHACqFvv5HKameGhJh",
+      "ts": 1775039342,
+      "date": "2026-04-01T10:29:02.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "8igtGP7KNnzuEfevBxBpdtr3U6YCFz2B4kvYq4hJ63pt transferred 400.29343853 MNDE to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "8igtGP7KNnzuEfevBxBpdtr3U6YCFz2B4kvYq4hJ63pt",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+          "amount": 400.29343853
+        },
+        {
+          "mint": "6YveMQ3uPgQmCJfUYr9UW4Dm5cyfwyfQa6Joeru2YFkU",
+          "amount": 99.728587
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "8igtGP7KNnzuEfevBxBpdtr3U6YCFz2B4kvYq4hJ63pt"
+      ]
+    },
+    {
+      "sig": "BUm4McVAqe19PL7jiN97fdKyYYMnHsDqVXePUtR8oivTeHTKNJBzLuTzKqbUBFu8JVTpXkd6owb8jmUPJDDz4Q6",
+      "ts": 1774932601,
+      "date": "2026-03-31T04:50:01.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.465268
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "A86fdX4UY4hT2YBiUzjNJ1hDhFJQNtTay7wTUwz5DHRn"
+      ]
+    },
+    {
+      "sig": "2VUixyy94xSFHJBJGPSu63vZtfJGraTbWyZQHEV7PtnTgzQZ2EnjjU8VtpNXaEDj8oesLwxpdX3xDpSSf3NRy6sf",
+      "ts": 1774774563,
+      "date": "2026-03-29T08:56:03.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.458485
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "2Uet4PSySQKS7it7gdaYQ1iscUrzXoHHMFfv2sfxsQAo"
+      ]
+    },
+    {
+      "sig": "63QZiwfcZwng4LcoN8h2yYnrjFDrWJNvxWeA73a1Ngh8MtvdTavwF5KhhQJWd3iRV8ReASzVA3w6SmWNBaadRsYM",
+      "ts": 1774636609,
+      "date": "2026-03-27T18:36:49.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "r4yMDHekDk3SrW39uYGHxWyXMiwY8UHFYrztxZtzsL8",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "s1r4ehFEF8pGWq1zYx7ymBUDqABG1TFtbeT32TUPVbACdDUjEEuvbUtmgq43Zh2s76asAgLnjWYFXARQFAJz9wN",
+      "ts": 1774590588,
+      "date": "2026-03-27T05:49:48.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.248957
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "5YNB7npHcRkLKJrHtRHvGTBGPNjaks3Jho9dfsLrKvVW"
+      ]
+    },
+    {
+      "sig": "2GWR1CmUMLuEGnYNnjsfJr1bHWcGNhF9wDfcNjasKhKwLUrgg4DaeGT8Wfp22hXyaVGWknjXLDigNb1xGpEZxNEm",
+      "ts": 1774426723,
+      "date": "2026-03-25T08:18:43.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.267737
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "BWrSo8VciuthE32QzzxTYfxxJ7pAWPrfhuBGR3dc1X3s"
+      ]
+    },
+    {
+      "sig": "2F6LHXwmDPYwF4Fxa7q7DiTVe4Fh51NBXq7a2yh6GXMZdHL23pektxKN6CgzRebJV9YAoqiRbTZoKb4T9U9m7Ch2",
+      "ts": 1774253664,
+      "date": "2026-03-23T08:14:24.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.25777
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "EbPrsbe3owuatL5JbBgjYdjgoywuMQjumqHGmsmysyqk"
+      ]
+    },
+    {
+      "sig": "5zVyHzmbGm4NCfFnpfcV9RurneGUGpsKe3Q13VzZeEGKxZoTGnuV33XhPn9GX7Mk4Gy1ngBoMRhcHjRzT4nWRjji",
+      "ts": 1774077790,
+      "date": "2026-03-21T07:23:10.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.257563
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "6xXAZfbnHgzCxU6wEHZfy1jxQghgiPworddZJYQCqZR7"
+      ]
+    },
+    {
+      "sig": "5Zo59SbU8v15f11WNmu2gMuFsTgixKSvSUEusaGR2bkhpw8B5AzcQarbFmPietfwT39kGDVuHjWYmkcWnsamNdZD",
+      "ts": 1773919515,
+      "date": "2026-03-19T11:25:15.000Z",
+      "type": "UNKNOWN",
+      "source": "UNKNOWN",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.263053
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "6Cng8qjiStmtfbZktTKjYYRPsRZTkapgWMJhEwUJLx2Q"
+      ]
+    },
+    {
+      "sig": "5k4AcGYt9VQmAFgJJaSGYJLTPs6WETHZZnntNgPeYzauPK9RH7mNZvkUZHAsYa821W4c6VNB9SjB1v8pyDA3azvS",
+      "ts": 1773213646,
+      "date": "2026-03-11T07:20:46.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "c7EEWLWtHqV2rQ4aXM6DB7yXtyqCYYB1az52ybHev5JzbbW6a5iEgxdfjQzMQAHNJcJCMxRkXxRvyDVytrUFjDg",
+      "ts": 1773213631,
+      "date": "2026-03-11T07:20:31.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 145 SOL to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 145,
+      "counterparties": []
+    },
+    {
+      "sig": "4nJK6g7FhM2ochCsQU3bVDNZRd8hFWNjQFPP9sS2RBDAyoZUNvuHp7x2co8mEUtPaUC9G3aEakWLXmRnPMQZDnZt",
+      "ts": 1773213547,
+      "date": "2026-03-11T07:19:07.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5V5tWmXbgbLJFjqBebPVE3EfJkN9rJ9vNz7AQZrqEkTK transferred a total 0.00000502 SOL to multiple accounts.",
+      "feePayer": "5V5tWmXbgbLJFjqBebPVE3EfJkN9rJ9vNz7AQZrqEkTK",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4AqsME7kwJYzxtQ9cHR2CBkG3HkUccr7dvYPqncP9yE3vkKQrmvSnZVGE9soLT3t45bPVSGazypgqb7dWDJZh46L",
+      "ts": 1773213527,
+      "date": "2026-03-11T07:18:47.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "CEz58zHG4Fw5VF4GZJfoH2LmHkxL9rHDmRrntxxXRi5w transferred a total 0.00000502 SOL to multiple accounts.",
+      "feePayer": "CEz58zHG4Fw5VF4GZJfoH2LmHkxL9rHDmRrntxxXRi5w",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "SWWADXRpue9E3uGF7r4SrSFXbBJYTkVKxa8PBuo32qWopjCxUjTHhY3PRr5h9wb9ihRRpKKEtGBnQaqM67DVcXn",
+      "ts": 1773213526,
+      "date": "2026-03-11T07:18:46.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "266AbGvLgRTzv2sdNpPCc15nLVMhLQK1KLqcPQ2nzR2d transferred a total 0.460005018 SOL to multiple accounts.",
+      "feePayer": "266AbGvLgRTzv2sdNpPCc15nLVMhLQK1KLqcPQ2nzR2d",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5uVz9DGsnrovJW9eExj2h4EiXp9qW726iYKoa1Coa3xj9R6NreGgQJKvdCyyecF4arJDJ9x6CcHkXjxRf4XQirNE",
+      "ts": 1773213526,
+      "date": "2026-03-11T07:18:46.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "BytNze9KukgdxEbVMZi56QB9X3azqxrRj9ssCzUps4qr transferred a total 0.430005018 SOL to multiple accounts.",
+      "feePayer": "BytNze9KukgdxEbVMZi56QB9X3azqxrRj9ssCzUps4qr",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5G5tn2sqpJh1vWcXr8STjjCshuvxc83TqXdngjfXCucm42KbytW4c3W2jJHAatSSJzHDBxc7cUDdfc8R8qbcP4Z3",
+      "ts": 1773213526,
+      "date": "2026-03-11T07:18:46.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "266AbGvLgRTzv2sdNpPCc15nLVMhLQK1KLqcPQ2nzR2d transferred a total 0.410005018 SOL to multiple accounts.",
+      "feePayer": "266AbGvLgRTzv2sdNpPCc15nLVMhLQK1KLqcPQ2nzR2d",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2CBpJCi2ujRXruQ3axpQYHrLYWZJoNzK2wVVH6LxMiqn4gft8p7EeKxy8uDF9LsdFPztYg5wzARp4meHkaQCKH1d",
+      "ts": 1773213526,
+      "date": "2026-03-11T07:18:46.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "BytNze9KukgdxEbVMZi56QB9X3azqxrRj9ssCzUps4qr transferred a total 0.480005018 SOL to multiple accounts.",
+      "feePayer": "BytNze9KukgdxEbVMZi56QB9X3azqxrRj9ssCzUps4qr",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2yoPz3Rx3Nd6PCAqNiHXF9Ux9wgSwHrMFQeLKUUjNea8B4Ke8P2NocHaNNXw4WqTt72VKAEAMwHzEbd8Pcs8XxYX",
+      "ts": 1773213526,
+      "date": "2026-03-11T07:18:46.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "BytNze9KukgdxEbVMZi56QB9X3azqxrRj9ssCzUps4qr transferred a total 0.420005018 SOL to multiple accounts.",
+      "feePayer": "BytNze9KukgdxEbVMZi56QB9X3azqxrRj9ssCzUps4qr",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4CpLLAtJLwTgZzwE4FCuH6VbXN63vnxidmyvMMZRq8aQ7GsMdmtt3qbuxZeEGTuNQC4P4KWsDV2CGRsFWrbBzTpt",
+      "ts": 1773213524,
+      "date": "2026-03-11T07:18:44.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB swapped 52.756 mSOL for 61.172993743 SOL",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 71.926209906
+        },
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 16.871695525
+        },
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 61.172993743
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 52.756
+        },
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 12.375
+        },
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 44.869
+        }
+      ],
+      "solIn": 149.972938454,
+      "solOut": 0.00203928,
+      "counterparties": [
+        "6W1R5uXBCE1RmejWegQMT5dCqHopVRfNNfk3LsnhSYG3",
+        "4xZYFLR2eyo2vrfsGuJZEPsgZafamE9fFPJ5wYJDW6nU",
+        "8p1VKP45hhqq5iZG5fNGoi7ucme8nFLeChoDWNy7rWFm",
+        "FERjPVNEa7Udq8CEv68h6tPL46Tq7ieE49HrE2wea3XT",
+        "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3"
+      ]
+    },
+    {
+      "sig": "5BsHSwYc5r4xgoKFY8A581iATcmvLnUpEZPbG771nr1dCDMZYo2Rze2eCN7KWZAoy4Krkj51fahaYyL38KpbsMbq",
+      "ts": 1773213037,
+      "date": "2026-03-11T07:10:37.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2Q3L6Zecjk6edY2H1yengCCt7PxoCV12eEBcPwVejysTWdDMmcLUfCXhH4ccNkxouPAExm1GfqZ28fmRSjVrNYuL",
+      "ts": 1773213022,
+      "date": "2026-03-11T07:10:22.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 1500000 MNDE to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+          "amount": 1500000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k"
+      ]
+    },
+    {
+      "sig": "5W7eW1tsMKRufT2z6aJ7GqXM8fW3aKxH2NeDy1VgEmbWrtgN2bnsa8xqGQQ48zZatzeYp6P6rTPw7bYryMPfr5p8",
+      "ts": 1772742122,
+      "date": "2026-03-05T20:22:02.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5i1zgQ3qL8YkkukeTwvPNrgRqcGTErTnFbyTeKR6yQWSH6AWGH6Ka9Y71NrGukDPuEJ1jwdHexwBVMVn2QJwLuR9",
+      "ts": 1772742104,
+      "date": "2026-03-05T20:21:44.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 368000 USDC to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 368000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k"
+      ]
+    },
+    {
+      "sig": "3SwEjLUGURb8bgvEkDVKsyt1nPtDXrRPTi4n2D79FqA1LVgMBXocYYE2xFN2pdtQdftJ9cGmC7BFESU9zE4uXD4R",
+      "ts": 1772742078,
+      "date": "2026-03-05T20:21:18.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB swapped 2911 mSOL for 353387.839081 USDC",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 353387.839081
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 2911
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "3CgvbiM3op4vjrrjH2zcrQUwsqh5veNVRjFCB9N6sRoD",
+        "E1mBVQyt7BHK8SaBSfME7usYxx94T4DtHEjbUpEBhZx",
+        "EHBeyyQwD6MLa48fdxSjEaMHLur6BrcGtVcJ5c66AvaC",
+        "3wyaMbE5af1pDHpKfgQQDt4ojqdNhmnHWByhcKzDGEcd",
+        "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3"
+      ]
+    },
+    {
+      "sig": "44H4xmMuWyiWcsP1kSxztnAbQCmaRmJNA3BfeYReXgLLHoFoKo7p4ofuEuSbYkXdYCLitqSdRfayGaSbFaBGNZ4X",
+      "ts": 1772729157,
+      "date": "2026-03-05T16:45:57.000Z",
+      "type": "INITIALIZE_ACCOUNT",
+      "source": "ASSOCIATED_TOKEN_PROGRAM",
+      "desc": "",
+      "feePayer": "RcFeEvSe7bEjudMLbwRyVsLquo3vEWUU2rYt92Ki1Nf",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+          "amount": 0.000217
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "Bggxa3xgYgdofNXVuEM6Yqha9rKw9rKBo7CzvbcJe3iT"
+      ]
+    },
+    {
+      "sig": "56GRqfVNJx2vLHcGRCMsUzV1RKdesPKMc14RrXe8fQcFDauqtaWomywqqPubKemmpjBPtcLRVhMvkRgbR8mnhYQj",
+      "ts": 1772164816,
+      "date": "2026-02-27T04:00:16.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "2cywSMdktMG4SZNyCvwt1KaK4Ktw4r9sZuRPJ2ja4va4 transferred a total 0.000005017 SOL to multiple accounts.",
+      "feePayer": "2cywSMdktMG4SZNyCvwt1KaK4Ktw4r9sZuRPJ2ja4va4",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "19wbpzN1nustJMY4CTNdXyAHkJe4M7A41G51Hu1gLyGnQc2eCBuJLLfvoJaGgqU1DiJfd3VKwLKEgHM7gaMauTL",
+      "ts": 1770743484,
+      "date": "2026-02-10T17:11:24.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "65UEUp5oHyc3tnqwg4Bfr8ZHTD5xeGWqMn3h1AaxtKyzXSCpHsVGcLxxpS1BhF9cxGWtKBouMXQ8xQ3FQxQWDXxD",
+      "ts": 1770743476,
+      "date": "2026-02-10T17:11:16.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kK8novRCAScwtPzqq1xy32GD4KXWUR3EW27mAZe2T9k transferred 0.0001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kK8novRCAScwtPzqq1xy32GD4KXWUR3EW27mAZe2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.0001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4BjkwYphHoh9RLLRuJfM6jJ1fJ2igTubgA7r9JyhMWdzPbXCycNsR9de8F8QfhdGjB7oLAdeJitAy4rBrsycvgh6",
+      "ts": 1770743457,
+      "date": "2026-02-10T17:10:57.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "sVyxeJ7vHy5WfS9HZYYs5tnyxAH3hBzQDNcgsRi41QhEi86XgfZWk1kmEnCwHo7PPN3gdp8Y8thQ4c9ewaFLBYT",
+      "ts": 1770743439,
+      "date": "2026-02-10T17:10:39.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 320 SOL to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 320,
+      "counterparties": []
+    },
+    {
+      "sig": "aZixacTaTBKuFU13Yd938KX8L7qHdbt3Pc8YyKceijrfJnJAr1eu1jkvzX2CoAyMAmN8JQw2xR5Td4ZN52ZEoBb",
+      "ts": 1770743414,
+      "date": "2026-02-10T17:10:14.000Z",
+      "type": "COMPRESSED_NFT_MINT",
+      "source": "BUBBLEGUM",
+      "desc": "PUMP1ZXumHdqaQNqBRfkXPk94YwG9uRuLUJBP4Aw6b3 minted a compressed nft.",
+      "feePayer": "PUMP1ZXumHdqaQNqBRfkXPk94YwG9uRuLUJBP4Aw6b3",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2hh798afLCwNYSSrtB8bhbDxHgT9CTQbfHHyyntATXaf6sXfKXT7UKJ5VnqJruK52t7hKcYSQTRgbCs5ZoiwNFKx",
+      "ts": 1770743403,
+      "date": "2026-02-10T17:10:03.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB swapped 124.44 mSOL for 106.733544245 SOL",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 168.790596325
+        },
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 50.001257276
+        },
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "amount": 106.733544245
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 124.44
+        },
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 36.864
+        },
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 78.696
+        }
+      ],
+      "solIn": 325.527437126,
+      "solOut": 0.00203928,
+      "counterparties": [
+        "8p1VKP45hhqq5iZG5fNGoi7ucme8nFLeChoDWNy7rWFm",
+        "FERjPVNEa7Udq8CEv68h6tPL46Tq7ieE49HrE2wea3XT",
+        "3wyaMbE5af1pDHpKfgQQDt4ojqdNhmnHWByhcKzDGEcd",
+        "EHBeyyQwD6MLa48fdxSjEaMHLur6BrcGtVcJ5c66AvaC",
+        "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3"
+      ]
+    },
+    {
+      "sig": "48qZQhdNVsKxjg31PapJMNsi7fwvwG1W8sNxzRoM3mDA3jtLi6ZSjTVUgwMgjkexMZagjyYULEGiDMVDGqsHpWbn",
+      "ts": 1770743379,
+      "date": "2026-02-10T17:09:39.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5kGJYoLsUgyU7HEFyAesuUWvQ7ncw1DqzWpxyY7B5Mu4REyoKiEYFsD4MdjTBq5v7WV3qmHedjoDK9QBTsxAUiWD",
+      "ts": 1770743363,
+      "date": "2026-02-10T17:09:23.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 500000 USDC to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 500000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k"
+      ]
+    },
+    {
+      "sig": "4p5VF6AhWMonveZ17RqwryL1YVBGboVDKY7cZqBrbJ96cMJMYpDXBeiJPpoYMgv5nnHk6dnLPumo3AmdTaA2vPyC",
+      "ts": 1770743336,
+      "date": "2026-02-10T17:08:56.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "7KRQisUtGCec7KjBswkr8tkZF7ep7oKtNkU3bgy2ooDc transferred a total 0.000005018 SOL to multiple accounts.",
+      "feePayer": "7KRQisUtGCec7KjBswkr8tkZF7ep7oKtNkU3bgy2ooDc",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2oc6c7SeaMSaAYa6v5faR3ASRgWPi4462zRTRkX86LiM5YdxuxWbYaHd637gq4g9B8apDawnbuSgzH87jcauSsGC",
+      "ts": 1770743336,
+      "date": "2026-02-10T17:08:56.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "DUvgikgCHZWn2UB9Am3FxFoCokyfBBL29t7fjBMuXSW7 transferred a total 0.000005018 SOL to multiple accounts.",
+      "feePayer": "DUvgikgCHZWn2UB9Am3FxFoCokyfBBL29t7fjBMuXSW7",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2Uchww8osVYDuDQwejb6czu4LvNGASX2rrSEYhdFTtgnSTioHgj3YNw9XqSEDyRx81vYnH19c9adDutZFPLegv4Q",
+      "ts": 1770743336,
+      "date": "2026-02-10T17:08:56.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "DUvgikgCHZWn2UB9Am3FxFoCokyfBBL29t7fjBMuXSW7 transferred a total 0.000005018 SOL to multiple accounts.",
+      "feePayer": "DUvgikgCHZWn2UB9Am3FxFoCokyfBBL29t7fjBMuXSW7",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4wNXdM7X5fMdqfNHYe46LpXtZ9xnZP12PHH2qPPuUi1W4xeKuNbZggN9EusDtmXY5YtDK346TfMfecXQQWBiSJvh",
+      "ts": 1770743336,
+      "date": "2026-02-10T17:08:56.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "7KRQisUtGCec7KjBswkr8tkZF7ep7oKtNkU3bgy2ooDc transferred a total 0.000005018 SOL to multiple accounts.",
+      "feePayer": "7KRQisUtGCec7KjBswkr8tkZF7ep7oKtNkU3bgy2ooDc",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2PGtd2XbkNCR9x7Qo3xgWi2JYHVpasK7QqdfM76dTHz86WVHQ4sURsmUUxmXaWovhmzC35Q8YXEPAR8C9gexFyRu",
+      "ts": 1770743330,
+      "date": "2026-02-10T17:08:50.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB swapped 4500 mSOL for 514344.688147 USDC",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 514344.688147
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 4500
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "69yhtoJR4JYPPABZcSNkzuqbaFbwHsCkja1sP1Q2aVT5",
+        "E1mBVQyt7BHK8SaBSfME7usYxx94T4DtHEjbUpEBhZx",
+        "EHBeyyQwD6MLa48fdxSjEaMHLur6BrcGtVcJ5c66AvaC",
+        "3wyaMbE5af1pDHpKfgQQDt4ojqdNhmnHWByhcKzDGEcd",
+        "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3"
+      ]
+    },
+    {
+      "sig": "27hsdt19DFoRBJ8zTheFPvy6XnUVTyjcNvY842zaxPesEadSQeKVcC7hupSjihtRdn2cJuhFF7hJjcyUHTSzankX",
+      "ts": 1770604504,
+      "date": "2026-02-09T02:35:04.000Z",
+      "type": "COMPRESSED_NFT_TRANSFER",
+      "source": "BUBBLEGUM",
+      "desc": "JUPs5LZpsq5RYoRGBdqbbMpusdFxUUKLop4n9r7LSsh transferred a compressed nft.",
+      "feePayer": "JUPs5LZpsq5RYoRGBdqbbMpusdFxUUKLop4n9r7LSsh",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "5n6AwXXTr3kAAmJmSUZasAF92xVYJ6PVnScqMxV3qH7vXqfTLvtHm5oPD8MMqN72izbBdTHiZUHceVWDuzBtUZxq",
+      "ts": 1766583890,
+      "date": "2025-12-24T13:44:50.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "BrBT7RQNR8uGXY8PKiNFXVV63KeFZFFzUWmjx9pjmbur transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "BrBT7RQNR8uGXY8PKiNFXVV63KeFZFFzUWmjx9pjmbur",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "2Pf6LSdU7Vq33SXDW4NfDMH5gCMBLPtt6gGFXXubMuqJZd9p92pUGoqS9Um8APxodtfdFGbbEimuqah2EZnXr7Ji",
+      "ts": 1766583868,
+      "date": "2025-12-24T13:44:28.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 12000000 MNDE to BrBTM61YFAAYJwCxxYuDv2nej5vNx2wjDJEWLcVjmbur.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+          "amount": 12000000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "BrBTM61YFAAYJwCxxYuDv2nej5vNx2wjDJEWLcVjmbur"
+      ]
+    },
+    {
+      "sig": "uDzeofT86u5YZo1AueD3ADUudoDQTXhnrwdf4rLF4XALtcWf6hCKvGJYo5uncoJst5m68jnpcbPY5PznwCj5W93",
+      "ts": 1765195619,
+      "date": "2025-12-08T12:06:59.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "9oAeNguyv1YNwQhWi2qw43hyLp6yycX3AwVKAJz5mjTn transferred a total 0.000005845 SOL to multiple accounts.",
+      "feePayer": "9oAeNguyv1YNwQhWi2qw43hyLp6yycX3AwVKAJz5mjTn",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "L51BDHerPQShYeEQjf2sg1GdtYHHtmsZWMxWMuoZVBMP7zDeP5SyBsgTtYhdtVJnphdjQaHqw43HjWtpH9TPxpW",
+      "ts": 1765176122,
+      "date": "2025-12-08T06:42:02.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "6P5K4wmGUc1VXGUSHrPWCBxsdiiNHEXNrv1GZt6J7f8KSNbuZuye4BiGWJsqth3jxGtX9a4nNrctJp9A187uUpq",
+      "ts": 1765176114,
+      "date": "2025-12-08T06:41:54.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 800000 MNDE to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+          "amount": 800000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k"
+      ]
+    },
+    {
+      "sig": "65RqNrghC2FqLFPBMneYFuGq3MgeiuT3j8djXnwi1sKFhVk6nxJF2NhJfg4KNY92wWJ2QBLkgpbVNdU4Vf4Tztc7",
+      "ts": 1765135868,
+      "date": "2025-12-07T19:31:08.000Z",
+      "type": "INCREASE_LIQUIDITY",
+      "source": "ORCA",
+      "desc": "",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+          "amount": 10956000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0.010366475,
+      "counterparties": [
+        "BVXNG6BrL2Tn3NmppnMeXHjBHTaQSnSnLE99JKwZSWPg"
+      ]
+    },
+    {
+      "sig": "51qfWua2ax3YxnFzz7a4aoCS32bHSSrpfVzsiTbjSKFdpqKqEAnQMQwwtXVjk8z45tLi6RJXBriVdcQTYBcsp3Bi",
+      "ts": 1765135743,
+      "date": "2025-12-07T19:29:03.000Z",
+      "type": "DECREASE_LIQUIDITY",
+      "source": "ORCA",
+      "desc": "",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+          "amount": 11582274.300096633
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0.000003417,
+      "counterparties": [
+        "3dvV75ULxUzuyg57ZwQiay5xfNNdxT6Y98LA11vQyneF"
+      ]
+    },
+    {
+      "sig": "2aMXwDTb5y7aiqYTRPeqj2KczpJanK4hNBiaTDTm5mZfGQq2zyDhDfGJQRrCwm7q6tGZvWhg1PxoyX9rzmnidHcC",
+      "ts": 1765135031,
+      "date": "2025-12-07T19:17:11.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "MCqPB2fBZZisBEkuTpU7jdTAemrn5zdLEiTrLH886oozcgh8rSqfH3TtwhWFd7TpQQZSCV6uvhKuRbxLiTfufhY",
+      "ts": 1765135021,
+      "date": "2025-12-07T19:17:01.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 772000 USDC to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 772000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k"
+      ]
+    },
+    {
+      "sig": "3BCNRF3pojLe5pNXS2N8Xz8tGFyDbzmWrrXhZpVTcXTjjugVnpUqB7w6gSAVTEQUT59mg9pTzK4kiUQdfPbhtXt3",
+      "ts": 1765134927,
+      "date": "2025-12-07T19:15:27.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB swapped 3200 mSOL for 582557.186095 USDC",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 582557.186095
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 3200
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "GP8StUXNYSZjPikyRsvkTbvRV1GBxMErb59cpeCJnDf1",
+        "8ekCy2jHHUbW2yeNGFWYJT9Hm9FW7SvZcZK66dSZCDiF",
+        "8p1VKP45hhqq5iZG5fNGoi7ucme8nFLeChoDWNy7rWFm",
+        "FERjPVNEa7Udq8CEv68h6tPL46Tq7ieE49HrE2wea3XT",
+        "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3"
+      ]
+    },
+    {
+      "sig": "3hsodgsmKGgLGCxe8JSRQsaLTZRLPeEeEtpukBNjVBsGgXvEJ34485GxRLMyAEoVHfUH5U7zhyzqmbqZvUHRoaLn",
+      "ts": 1765134899,
+      "date": "2025-12-07T19:14:59.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "777nncaHveq8MVxa8jmT5nLhAAdXWuZx99duykuhXgiD transferred a total 0.000005018 SOL to multiple accounts.",
+      "feePayer": "777nncaHveq8MVxa8jmT5nLhAAdXWuZx99duykuhXgiD",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "38146QfucyoHipXyEgM7Aypk62tzubMW64RvSPLJiMrDrhinzr2LSbnx8C1TWUK8WV49dYSYg4oy2QqbN54QBYwC",
+      "ts": 1765134899,
+      "date": "2025-12-07T19:14:59.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "7778L6qSdPgddf6ppVp1CbWzUbBu2V7d5FoFePa726uu transferred a total 0.000005018 SOL to multiple accounts.",
+      "feePayer": "7778L6qSdPgddf6ppVp1CbWzUbBu2V7d5FoFePa726uu",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4r3XTWNVJe9nqc84ELpAnN8CicwJsaTg5c9mTytyT7p6hyVD5G2niBpMHLrCSuHBJBwZgLHa1azE36V2HYRUDUJP",
+      "ts": 1765134892,
+      "date": "2025-12-07T19:14:52.000Z",
+      "type": "SWAP",
+      "source": "JUPITER",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB swapped 1000 mSOL for 182046.713638 USDC",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [
+        {
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "amount": 182046.713638
+        }
+      ],
+      "tokensOut": [
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 1000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "7iWnBRRhBCiNXXPhqiGzvvBkKrvFSWqqmxRyu9VyYBxE",
+        "8ekCy2jHHUbW2yeNGFWYJT9Hm9FW7SvZcZK66dSZCDiF",
+        "E1mBVQyt7BHK8SaBSfME7usYxx94T4DtHEjbUpEBhZx",
+        "EHBeyyQwD6MLa48fdxSjEaMHLur6BrcGtVcJ5c66AvaC",
+        "3wyaMbE5af1pDHpKfgQQDt4ojqdNhmnHWByhcKzDGEcd"
+      ]
+    },
+    {
+      "sig": "23PGbM3KzNk1AcYPrWtQ1kWCLCSw9C1nQTGowfeHFrAWbJn5aUyJr2tyYJiXZLfP6xK5STLHAz3MjzoAEprEtkUr",
+      "ts": 1765134761,
+      "date": "2025-12-07T19:12:41.000Z",
+      "type": "TRANSFER",
+      "source": "SQUADS_V4",
+      "desc": "BDQa7n9v85ngnZZ3gL5cprMDpiPdeZvsrfb9SFhPRafa transferred 4200 mSOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "BoYakS9dGZ2iA5SDYrXMpELpdPFkrur1XHgFytv8mErP",
+      "paidByOther": true,
+      "tokensIn": [
+        {
+          "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+          "amount": 4200
+        }
+      ],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "BDQa7n9v85ngnZZ3gL5cprMDpiPdeZvsrfb9SFhPRafa"
+      ]
+    },
+    {
+      "sig": "2gbp9szm8WzaYqegWGNtJ4wsUvWWwCFSv2WsHRQpR2K1YeupFHUBfY2PMSYPcQbb2gHwSAjmYSptRpyDSdeq6mGH",
+      "ts": 1763623459,
+      "date": "2025-11-20T07:24:19.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k transferred 0.00001 SOL to 89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB.",
+      "feePayer": "5kk8qAZFb1fH1vfNDJ3xHbCfBjavBbo5oc7PZyZS2T9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4eJqRysMqhMkunkhvUcpc2taPUw6vNqtvQE6EdUDysDBfsN8LcYf6YwqmSbxgFhDTR5uc65GKPfBwH2NYMwH6H8b",
+      "ts": 1763623450,
+      "date": "2025-11-20T07:24:10.000Z",
+      "type": "TRANSFER",
+      "source": "SOLANA_PROGRAM_LIBRARY",
+      "desc": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB transferred 100000 MNDE to 5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k.",
+      "feePayer": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+      "paidByOther": false,
+      "tokensIn": [],
+      "tokensOut": [
+        {
+          "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+          "amount": 100000
+        }
+      ],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": [
+        "5kk89ePYJoXfebzVJ1a29her5oPhm97RE98EZhN92T9k"
+      ]
+    },
+    {
+      "sig": "277tR5GRzqHegjBoEiJqwcc1qiTFsQJ6yeErZFrzGu1CqSbGFKAdyGUJX23q4sWTUtyjRYDR8Zk9FS85yPihfmKz",
+      "ts": 1763547095,
+      "date": "2025-11-19T10:11:35.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "CE3V43KdXAvt5eMrPuP3FQDvnzAivocGuc4mgAArBAMx transferred a total 0.00000502 SOL to multiple accounts.",
+      "feePayer": "CE3V43KdXAvt5eMrPuP3FQDvnzAivocGuc4mgAArBAMx",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "3b4BZ6Ty9xp7mApAkLv3zgsxnc8Z3ugj9WVre52QqEfrSrNyPShGud92BTrxxLXyUT9b7tP5AYw2zEnbMQC1zaq2",
+      "ts": 1763547085,
+      "date": "2025-11-19T10:11:25.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "EZvp2MfKaqZ14D95EMSECXfGqduScMCSUzpKSxBcNTzM transferred a total 0.00000502 SOL to multiple accounts.",
+      "feePayer": "EZvp2MfKaqZ14D95EMSECXfGqduScMCSUzpKSxBcNTzM",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 1e-9,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "4hGLyky5oZPxkZg4RLFpxH1b7khDUkpiuXQ4hZbFajGgYhzoSgkaD2cb8qdH8uQQAgCj7QRY2A9r44SCh2Bs2UZx",
+      "ts": 1763546951,
+      "date": "2025-11-19T10:09:11.000Z",
+      "type": "COMPRESSED_NFT_MINT",
+      "source": "BUBBLEGUM",
+      "desc": "AyrVJaWH2hLMYVfhdNtuxqFcA8cKCNuve7TiHE8mk4Sy minted a compressed nft.",
+      "feePayer": "AyrVJaWH2hLMYVfhdNtuxqFcA8cKCNuve7TiHE8mk4Sy",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0,
+      "solOut": 0,
+      "counterparties": []
+    },
+    {
+      "sig": "298cwAmmNU7SQhwP2QQjKebd9HRubm9cy8BuRVjnSVhBtKkkTtB2Sg6svvKcpAnnjtDxEQ14qUxjov8yk5qqjF16",
+      "ts": 1762775250,
+      "date": "2025-11-10T11:47:30.000Z",
+      "type": "TRANSFER",
+      "source": "SYSTEM_PROGRAM",
+      "desc": "5kk1pfMr1b7bvnHtuU2tZQeVm3NApHEsDGnAe4rNbu9k transferred a total 0.00095 SOL to multiple accounts.",
+      "feePayer": "5kk1pfMr1b7bvnHtuU2tZQeVm3NApHEsDGnAe4rNbu9k",
+      "paidByOther": true,
+      "tokensIn": [],
+      "tokensOut": [],
+      "solIn": 0.00001,
+      "solOut": 0,
+      "counterparties": []
+    }
+  ]
+}

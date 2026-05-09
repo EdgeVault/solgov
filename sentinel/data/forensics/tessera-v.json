@@ -1,0 +1,7 @@
+{
+  "protocol":"Tessera V","researchedAt":"2026-04-17T22:28:00Z","researcher":"manual stub",
+  "sources":[],"programs":[],
+  "multisigs":[{"address":"3JW5VWy76TBT5NBbdyrWU6i3fz8XecDko7viGeFSKw7e","role":"Tessera V multisig (tracked)","threshold":"4/7","timelock":"0s","configAuthority":"autonomous","alreadyTracked":true}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Squads V4 4/7, 0 timelock.","gaps":["Tessera V program IDs","product description"],"confidence":"low"
+}

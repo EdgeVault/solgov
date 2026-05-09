@@ -1,0 +1,41 @@
+{
+  "protocol": "SPL Stake Pool",
+  "researchedAt": "2026-04-17T22:20:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "github",
+      "url": "https://github.com/solana-program/stake-pool"
+    }
+  ],
+  "programs": [
+    {
+      "id": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy",
+      "name": "SPL Stake Pool",
+      "role": "canonical Solana Labs stake-pool program",
+      "alreadyTracked": false,
+      "confidence": "high",
+      "upgradeAuthority": "dPpFfahSWhm5M2RB3nVaHsXfnh9ooz5bWtR3WeUguDH",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "3yqoHFE4nBGchuVH5rJuZMFvsmnaDTuLLdvGPDUEJcbW",
+      "role": "SPL Stake Pool governance (Squads V3, tracked)",
+      "threshold": "?",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "V3 threshold + members"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Canonical Solana Labs program. Shared across many LSTs. Upgrade authority typically Solana Foundation or multisig.",
+  "gaps": [
+    "Confirm exact upgrade authority (Solana Foundation historically)",
+    "Map all LSTs using this program (Jito, Marinade native, BlazeStake, etc.)"
+  ],
+  "confidence": "medium"
+}

@@ -1,0 +1,2478 @@
+{
+  "Drift": {
+    "Protocol V2": {
+      "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+      "programDataAccount": "7dLgmtcTavcguNoynVimF9ZNVb13FvhXVRfj2HyrDGaP",
+      "authorityChanges": [
+        {
+          "slot": 184259418,
+          "blockTime": 1679594130,
+          "oldAuth": "Fqo8WncpiP55ExPhuWLzMbm1cuYuJpXjhQPnd8ak3Pyn",
+          "newAuth": "x7qKwkdCQVq84imUPhSkKq7nv87pKpfnZEQshdA5bo2",
+          "sig": "5ZQpMUHga1PbSRMWBMjFW9ZGDQN9VeZxnroxxEjRb53FEz5yKNRiBfRZFYad9ToaRPoRva79MZdugKMshNtSSapc",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 265790056,
+          "blockTime": 1715716164,
+          "oldAuth": "x7qKwkdCQVq84imUPhSkKq7nv87pKpfnZEQshdA5bo2",
+          "newAuth": "FdtiepBtP98oU2uPNgAzUoGwggUDdRXwJH2KJo3oUaix",
+          "sig": "61VZDjuwHpKS5KBb1RHa16PD5epYVQfCJ51zAGvde7vSMyrMHZiPjbNSipjQWuf8pZnpCpSQFc8SWD9kExWhcxc4",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 409693214,
+          "blockTime": 1774804620,
+          "oldAuth": "FdtiepBtP98oU2uPNgAzUoGwggUDdRXwJH2KJo3oUaix",
+          "newAuth": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+          "sig": "3F6RcBQxFAse8ZWkz6PUdx3dDzA6BTMS2PM7o6ebEFW1v1q1Wkkkt496sw4jqzzLe6sEta2MfDjdaGKzjECufnLV",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 410431943,
+          "blockTime": 1775093980,
+          "oldAuth": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+          "newAuth": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+          "sig": "34RTi6ZbWPfDJuwzJLCV57cA81Xv7Tguyt3egjecfZqyhao23MGWLkAGtbapKr3MdgRMrFUsSLtSejMir3kaC6Wa",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:34:24.125Z"
+    },
+    "Vaults": {
+      "programId": "vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR",
+      "programDataAccount": "2cnQci7cy1fm95o7Mv8d4MpY1KCCgF7zPQG1znWqZkKC",
+      "authorityChanges": [
+        {
+          "slot": 220581918,
+          "blockTime": 1696024600,
+          "oldAuth": "Fqo8WncpiP55ExPhuWLzMbm1cuYuJpXjhQPnd8ak3Pyn",
+          "newAuth": "x7qKwkdCQVq84imUPhSkKq7nv87pKpfnZEQshdA5bo2",
+          "sig": "JqWSFwNPN3irrsvnRLezVe9jEQF4qGttCcUKUUZoLCUmYZcYY9in23A4tGLxeJSexB6kni75p3mU2HumTm3zVPE",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 265791936,
+          "blockTime": 1715717019,
+          "oldAuth": "x7qKwkdCQVq84imUPhSkKq7nv87pKpfnZEQshdA5bo2",
+          "newAuth": "FdtiepBtP98oU2uPNgAzUoGwggUDdRXwJH2KJo3oUaix",
+          "sig": "2ABU4jHmiMMAXBn5ACgQ4NaQEaDt1HjE3fLmLweUEm1nLCMzEBEV6Tim6Y9TthLwAcUhr6GTwZ87HgmDNqDpSUsG",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 409693214,
+          "blockTime": 1774804620,
+          "oldAuth": "FdtiepBtP98oU2uPNgAzUoGwggUDdRXwJH2KJo3oUaix",
+          "newAuth": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+          "sig": "3F6RcBQxFAse8ZWkz6PUdx3dDzA6BTMS2PM7o6ebEFW1v1q1Wkkkt496sw4jqzzLe6sEta2MfDjdaGKzjECufnLV",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:34:26.522Z"
+    }
+  },
+  "Orca": {
+    "Whirlpools": {
+      "programId": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+      "programDataAccount": "CtXfPzz36dH5Ws4UYKZvrQ1Xqzn42ecDW6y8NKuiN8nD",
+      "authorityChanges": [
+        {
+          "slot": 126288837,
+          "blockTime": 1648035610,
+          "oldAuth": "3Pi4tc4SxZyKZivKxWnYfGNxeqFJJxPc8xRw1VnvXpbb",
+          "newAuth": "8DzsCSvbvBDYxGB4ytNF698zi6Dyo9dUBVRNjZQFHSUt",
+          "sig": "2kcR9ZP519KXvivxstkpfYnPey2ZeqXzDyBHPcmRPwEaWzYbzEcfGnFo1uWhiobuxMmo6ZASLtcSPfKZUYtFW5Xf",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 127483623,
+          "blockTime": 1648690884,
+          "oldAuth": "8DzsCSvbvBDYxGB4ytNF698zi6Dyo9dUBVRNjZQFHSUt",
+          "newAuth": "3Pi4tc4SxZyKZivKxWnYfGNxeqFJJxPc8xRw1VnvXpbb",
+          "sig": "3eBF1XuPavG37BNNY74RfUQ4LLCsce5PF4obBke27XSr9Qpq68wBh7jfDcNnBbX25QQvG5msXRNrc3dAqn2DAbrb",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 127483884,
+          "blockTime": 1648691025,
+          "oldAuth": "3Pi4tc4SxZyKZivKxWnYfGNxeqFJJxPc8xRw1VnvXpbb",
+          "newAuth": "8DzsCSvbvBDYxGB4ytNF698zi6Dyo9dUBVRNjZQFHSUt",
+          "sig": "tDYrxvuWUhykYabNUXoh3aHJZnZ9ZrjUvmT3UXka3R4Ve2fbMCqXaHgxuw4kPhGipmBLMwxtixLc7dTMkHbezBU",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 151627051,
+          "blockTime": 1663732530,
+          "oldAuth": "8DzsCSvbvBDYxGB4ytNF698zi6Dyo9dUBVRNjZQFHSUt",
+          "newAuth": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+          "sig": "4YuLinbNTRLAFPW5G5Xb3Azr8TnDVL2qAifKGA2Yu8AAVYRRR3G2BijuaR7cj45CtqZhA2Sz2ABkNCSsPFA9zPLT",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 323488852,
+          "blockTime": 1740681197,
+          "oldAuth": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+          "newAuth": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+          "sig": "2QWMzyc22gsTRDaqoivkSz4wpr7E2MVt7aS6xF9NbgAgsCEzUcs83tsTQGhvFw57mjCJvx581pRTbxLHEGDAmJsd",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:33:34.780Z"
+    },
+    "Token Swap V2": {
+      "programId": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+      "programDataAccount": "DrrJDyBzyuyYAzkkjd6Vu9ZzaDLsKRf4RPXyRE7Uk2A8",
+      "authorityChanges": [
+        {
+          "slot": 97677454,
+          "blockTime": 1632249323,
+          "oldAuth": "2YM8LrJGRtsDcWeqsjX2EQwJfhArxyDdtDzgt7vrwwbV",
+          "newAuth": "8DzsCSvbvBDYxGB4ytNF698zi6Dyo9dUBVRNjZQFHSUt",
+          "sig": "Fb4dwXPCwDB1Wp33BYYRVrSJd7ccBHcbjf6M5vNkV6S7k4teShXMXdFEEJgY8PpAGuzitfzzTWK1QmfyBWoDeeG",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 151627085,
+          "blockTime": 1663732547,
+          "oldAuth": "8DzsCSvbvBDYxGB4ytNF698zi6Dyo9dUBVRNjZQFHSUt",
+          "newAuth": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+          "sig": "4SQCa94pti2Rdfjuvx5AKwxTpkPvg89oQ4uT9zYXT8qLCWgpzvs7tRNxMJ3AuVEu8TGkRbGVuYZmRtwiFG7rw4xk",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:33:35.697Z"
+    }
+  },
+  "Project 0": {
+    "Lending V2": {
+      "programId": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+      "programDataAccount": "4Q8u2ny8YYgytJEncwZQfVWbd5axZtfgDxYKHehvPQR7",
+      "authorityChanges": [
+        {
+          "slot": 178156284,
+          "blockTime": 1676598238,
+          "oldAuth": "Hp1yii82hSj6pfJxrLaCbcaCfJnryDx58uHSR7Dxp34A",
+          "newAuth": "3HGdGLrnK9DsnHi1mCrUMLGfQHcu6xUrXhMY14GYjqvM",
+          "sig": "2qJ91dEAb9tbud53x8G2277x7kti7CFFBnqRKHKjM6VF17AviRiFw15mKhWXGXhsAa7MzpUHCEewLn6hm6tQrnLp",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 324826471,
+          "blockTime": 1741211078,
+          "oldAuth": "3HGdGLrnK9DsnHi1mCrUMLGfQHcu6xUrXhMY14GYjqvM",
+          "newAuth": "J3oBkTkDXU3TcAggJEa3YeBZE5om5yNAdTtLVNXFD47",
+          "sig": "9TwhgzD4RST7n2Bh9pLQXtL5u9mEbG2nTQBLdzyrUq3o7xHtnTeGFaQSN34pjhSDEzVrrvNpGwAdrLqgL63bHui",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:34:41.808Z"
+    },
+    "LIP": {
+      "programId": "LipsxuAkFkwa4RKNzn51wAsW7Dedzt1RNHMkTkDEZUW",
+      "programDataAccount": "8EZnD5MqfJvYiwG2rvgFpjyDwyrGNjJiKFwjGCSFM1TM",
+      "authorityChanges": [
+        {
+          "slot": 178155840,
+          "blockTime": 1676598003,
+          "oldAuth": "G7RSDYwQ5GZL8jKPRvRoHHGNY5vHuQcEx8TPNARPrC6e",
+          "newAuth": "3HGdGLrnK9DsnHi1mCrUMLGfQHcu6xUrXhMY14GYjqvM",
+          "sig": "F1tVSY5wXodKCaDgDRmZ9cMLwefhgmjrw8d2UJrxHT6YaXphBVxvJfi8D5MjKdkUJi6AaZoQqeyhC89k54Tjwg4",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:34:43.647Z"
+    }
+  },
+  "Kamino": {
+    "kLend": {
+      "programId": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+      "programDataAccount": "9uSbGW1y9H5Av6H5TKxQ1wnFApSq2t3oEpfF2YfjDQGA",
+      "authorityChanges": [
+        {
+          "slot": 182751904,
+          "blockTime": 1678897745,
+          "oldAuth": "ELgAxEgaGCBxNcfLMqNSbBaYDWmHeirf6k439zrM2wmx",
+          "newAuth": "A9rQoX1sictAQkyXxaZA8nz674xutHwoqpK2mwLyexCZ",
+          "sig": "rSuWFzo33bVLgB32AL72KbQRtXizdkUJW83wVx3Br54shBtgZZrweSHAj5zmiZVVCSAjSDcs57uHDtZah2yjbqh",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 224666515,
+          "blockTime": 1697721686,
+          "oldAuth": "A9rQoX1sictAQkyXxaZA8nz674xutHwoqpK2mwLyexCZ",
+          "newAuth": "ELgAxEgaGCBxNcfLMqNSbBaYDWmHeirf6k439zrM2wmx",
+          "sig": "3Sai3FzGFMX2pHYYmYHqFMqGto52DyQp4fYcwhaz6nah87CrwacJdYx2dGRM53qzQe8np7qVkDiDSj96eiUAkt9a",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 224672514,
+          "blockTime": 1697724157,
+          "oldAuth": "ELgAxEgaGCBxNcfLMqNSbBaYDWmHeirf6k439zrM2wmx",
+          "newAuth": "A9rQoX1sictAQkyXxaZA8nz674xutHwoqpK2mwLyexCZ",
+          "sig": "4nnN9kuRe9PSn5n1Avcb5CxXNdrPfNWXommMDQ3LUGFETg8eV83WWoHFrL9hgZPvcrH6cb9EUcv3ANMJ5Fz88E3T",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 335789505,
+          "blockTime": 1745577658,
+          "oldAuth": "A9rQoX1sictAQkyXxaZA8nz674xutHwoqpK2mwLyexCZ",
+          "newAuth": "GzFgdRJXmawPhGeBsyRCDLx4jAKPsvbUqoqitzppkzkW",
+          "sig": "4tHwhfmz68K7dyfv2BJjm2YzifHXQASSkWVWPqxf5zkUSepqMDdzw4oU9Tuvw6wQQmpDXdkDLC3a8RcPYbzvPJFN",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:35:00.859Z"
+    },
+    "Liquidity": {
+      "programId": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc",
+      "programDataAccount": "8n11WGJCXqRe5pB4gBTo71YxyiZxEYm47r3LfdQiHYAj",
+      "authorityChanges": [
+        {
+          "slot": 165067395,
+          "blockTime": 1670247602,
+          "oldAuth": "BabJ4KTDUDqaBRWLFza3Ek3zEcjXaPDmeRGRwusQyLPS",
+          "newAuth": "E35i5qn7872eEmBt15e5VGhziUBzCTm43XCSWvDoQNNv",
+          "sig": "3XbecLU9UxkEi9dXWnihnL7Mz7LBMaovHpyYAvogUanKrG4KsVtpmbSp4YBWYo4MgpY3P4wwWRv6EvLgaW2PGMKG",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 410779677,
+          "blockTime": 1775230352,
+          "oldAuth": "E35i5qn7872eEmBt15e5VGhziUBzCTm43XCSWvDoQNNv",
+          "newAuth": "3pAxu6C9ykZvyyzdknZvmz6CbWGZPTjRevjk4PRF5ib7",
+          "sig": "3TQ9bZGnomACaVmrqGMRUuomueNtyV23tNxoouBNnCbc7j6wtQLKUcQEeJTS7LDmWA85qR7CfudZZuhep2Afrs86",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:35:41.216Z"
+    }
+  },
+  "Jupiter Perps": {
+    "Perpetuals": {
+      "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+      "programDataAccount": "C258LjtN8Q928yz2nJe5kwQycckGfWBSrhZBP2mTpLQt",
+      "authorityChanges": [
+        {
+          "slot": 225047408,
+          "blockTime": 1697879340,
+          "oldAuth": "mQBipzeneXqnAkWNL8raGvrj2c8dJv87LXs2Hn7BeXk",
+          "newAuth": "HVSZJ2juJnMxd6yCNarTL56YmgUqzfUiwM7y7LtTXKHR",
+          "sig": "2NR8VknNPqyw5VNoPBVxXpFzsnNKBQ7maqpjq73YgeBn8S8xoLoBbsKUra7KBjpxz5GNeBjPAtoe15dEqfsdSsj",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 293045720,
+          "blockTime": 1727771642,
+          "oldAuth": "HVSZJ2juJnMxd6yCNarTL56YmgUqzfUiwM7y7LtTXKHR",
+          "newAuth": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+          "sig": "2B8J4WEaVrkPQiYpLki2uMqLWuMCA8a3ccyUWBL5WMG6xqQgWb4gqYghupt2dsCSBgj3Hd8Ur4PgYgEAgkJYFe4h",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 399483202,
+          "blockTime": 1770789592,
+          "oldAuth": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+          "newAuth": "5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx",
+          "sig": "UYRvx1Wgjpg5Nn8irzwHkfRXPXDmLVB9nnLWtbq3TZYC5e17gSg2xbb4YX447ZNyRXmaW6BQikm1PKG6Km2MzUr",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:35:57.739Z"
+    }
+  },
+  "Jupiter Lend": {
+    "Liquidity": {
+      "programId": "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC",
+      "programDataAccount": "J6Ry5yuy4Vp4kNa1PTGASiHJxZ8x4pgRPaJ18SmnqtW5",
+      "authorityChanges": [
+        {
+          "slot": 358112746,
+          "blockTime": 1754428968,
+          "oldAuth": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+          "newAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "sig": "hfAe6UvT47jr8y3NaBnEM87P7QxWEadztkARrh8hJSLw2NSj4qoLLjQRrjDwumcTnhYFXYvJAvhNG8UyzwxZcy2",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 362864556,
+          "blockTime": 1756302335,
+          "oldAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "newAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "sig": "5cnwK6WrLFsWu2HwUX9PAuTHEDcRbiGdy43kNjG2ButYxrAemGTksZKrxKGsAJbQtkjjhTu52csu1MDJCsXnsVfX",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 384592304,
+          "blockTime": 1764917680,
+          "oldAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "newAuth": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+          "sig": "3VLCeKXzyV7W5K4dnNbLqnqfAWYMNGxuh9E9sLeejTBF4fwkLKfR6isQJwWPq1zYS3pYK2eHnBKLG7nyLSpcx7df",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:36:04.801Z"
+    },
+    "Lending": {
+      "programId": "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9",
+      "programDataAccount": "3zB5SLYJoqDPN21s54MCkLeDPuMKQH9vNCSaZKSWTZZd",
+      "authorityChanges": [
+        {
+          "slot": 358112808,
+          "blockTime": 1754428992,
+          "oldAuth": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+          "newAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "sig": "3pKo1X8UkJa4vptR3BUQYkE2YZam5wKRrUAQTiGWsbXfS72fV3wZ8DP7pgfXGyb1wN17GL8fJ2bkVB6JTfi5A2Pa",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 362864215,
+          "blockTime": 1756302202,
+          "oldAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "newAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "sig": "5u7utTvUiq2DLihFA3LRVznT8yABjZFBiohxYzRErogk9hJXMTfbcycPf21jAtajksPoDKM378vzjsixybhpKC6K",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 384592420,
+          "blockTime": 1764917725,
+          "oldAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "newAuth": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+          "sig": "3p2UVSyXYETXp1rZ9X1AXHC2YgqJnLqAGhwA1Ew5YCMenkc5uz3s1PWkuVcEukUpAWnrdqvzQNrQdnYz6LEXKrPL",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:36:08.639Z"
+    },
+    "Reward Rate": {
+      "programId": "jup7TthsMgcR9Y3L277b8Eo9uboVSmu1utkuXHNUKar",
+      "programDataAccount": "DagbFF3qaJhybh4S2msH2rA8FraijvULbcAyuXCQJ4qx",
+      "authorityChanges": [
+        {
+          "slot": 358112672,
+          "blockTime": 1754428939,
+          "oldAuth": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+          "newAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "sig": "2pgajFytjzaCapjdJKQhekMrwdQfEehirZRNYrxZbCvWo95TgqQ1vcCSXTEAEVyKzRVonHsfWU6jTrgEfFuRMbtC",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 362864458,
+          "blockTime": 1756302296,
+          "oldAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "newAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "sig": "4pvtfWMMs6CPyTjaCz5Lra32fqvZQKoLZ7n3NaWSYUZf7ECvJ9UGHtdwHL4HcX2rvBHRtusEEvNQFkMeW49PoDM8",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 384591803,
+          "blockTime": 1764917484,
+          "oldAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "newAuth": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+          "sig": "26zcgfsHJUgeJfBj6pfNYvn6eKPHVjXVBAiCQLgVGCSjQncDkF6RPs7g4iiqYPe3Xxq3NTxtXdzD37FCacWoNdG4",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:36:11.911Z"
+    },
+    "Vaults": {
+      "programId": "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi",
+      "programDataAccount": "3EgkASqSXVcgD4s3BXR9dU8DGn5usNhNbkakCKYRvkAC",
+      "authorityChanges": [
+        {
+          "slot": 358112888,
+          "blockTime": 1754429024,
+          "oldAuth": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+          "newAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "sig": "2vQK2uLfrRcydNHX1RWKM2yCfaTA1DN4pVaVaVpwKSux3qqSfeiKcn4zZTr8SSCQvbGy1CXaf9eQXjMfChC4wpBk",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 362864508,
+          "blockTime": 1756302317,
+          "oldAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "newAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "sig": "56ndxTUsCySecrEX44JXbM6BdHgb4vENRJ8o32PRVCah91L42KQuQto1QVQhBYq3xdTtZ9Pca3s4bfZW68tb435c",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 384592493,
+          "blockTime": 1764917754,
+          "oldAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "newAuth": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+          "sig": "52sfNBi9jetdUNHs6M5f6D17xnMhr6ZTMhjT8njrxRVUBALh4J5qSjVi621TYiNZwRqtcusJ7rPB1wi5QW3Qg5Nj",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:36:18.860Z"
+    },
+    "Oracle": {
+      "programId": "jupnw4B6Eqs7ft6rxpzYLJZYSnrpRgPcr589n5Kv4oc",
+      "programDataAccount": "A5jX8nt82Pj5aQyrtooMPkgrfk5myqNRjuxC6urSJKAT",
+      "authorityChanges": [
+        {
+          "slot": 357892339,
+          "blockTime": 1754341359,
+          "oldAuth": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+          "newAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "sig": "yuypgmLimvZuPZwj6uPdGQkHvht1Qx3A2KU1NEZBxCRc928w4Nt2JBtAGrhdjQb7rjdqesbYukPpuYLKBuAEvTX",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 362864001,
+          "blockTime": 1756302119,
+          "oldAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "newAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "sig": "5X4j4GsxiFzY1w3mKV2tDLyaN1YK1ppaAVLd76FF8e5BzUuAv8aYQEh8cmbJdGFHerk1VMnjuRXgUEHAzP3BgAyb",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 384591952,
+          "blockTime": 1764917541,
+          "oldAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "newAuth": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+          "sig": "i8w894i8Vx7Ta3G62LEgBTxb67hPhA4QEpzYFLN5BykXMnR2nvw6R3iFkymG9DQtVPRc3z7WH2YCde7xfQqBbwF",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:36:25.851Z"
+    },
+    "Flashloan": {
+      "programId": "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS",
+      "programDataAccount": "ESoMWjdS6i8pMgc75SN4s1gNotRDtNLox4uCxk6udXqY",
+      "authorityChanges": [
+        {
+          "slot": 361357917,
+          "blockTime": 1755708899,
+          "oldAuth": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+          "newAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "sig": "Lu5Qc2xQmYbkezMkEWK8AtWtYVphrenUhNiHNmKknuC3dnDrJrhrmBUoYAqzEQaZibBDy35BM27Jbg5QvSRe4E8",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 362860090,
+          "blockTime": 1756300585,
+          "oldAuth": "3H8C6yYTXUcN9RRRDmcLDt3e4aZLYRRX4x2HbEjTqQAA",
+          "newAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "sig": "5mLa4mDCZqt8iJkoNjhgJQisKJEr6iejk2EmRL4PFNmmFvpGiWm7X3Fv76nqDiiGz8qtmVgpV6YX4NVKxGuuwSvH",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 384592158,
+          "blockTime": 1764917622,
+          "oldAuth": "HqPrpa4ESBDnRHRWaiYtjv4xe93wvCS9NNZtDwR89cVa",
+          "newAuth": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+          "sig": "fXkhFrjvGit99u34kEF7qs5jt4F75UAqoGaLEAy98e2wK4JSFrchSJJGVDeHFBF9rQKUKXMXvmJMDL9M9Nwr5i9",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T08:36:29.483Z"
+    }
+  },
+  "Magic Eden": {
+    "AMM": {
+      "programId": "mmm3XBJg5gk8XJxEKBvdgptZz6SgK4tXvn36sodowMc",
+      "programDataAccount": "E3A9ApoufYNVyaNkbGLhzBFPywmjF39vXTQYsHZ4H9eP",
+      "authorityChanges": [
+        {
+          "slot": 362563823,
+          "blockTime": 1756183902,
+          "oldAuth": "A3yMwydHtAWfrT2n1yzY249M5JB6n9aD4PkDmfMpY9Lt",
+          "newAuth": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+          "sig": "56SvTxUa1cddqcvF2mLJbtR2Gytej9hAd2RdnSjE9LUyP8r411uiJDwZRYsqvXn4pNxTmn9N69nNL9btaR7uj3WV",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:23:20.922Z"
+    }
+  },
+  "Exponent": {
+    "Core": {
+      "programId": "ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7",
+      "programDataAccount": "BA7Hr379x6GD59VrFtW7zaYnuY64deZEkngHK93qrK7u",
+      "authorityChanges": [
+        {
+          "slot": 301051772,
+          "blockTime": 1731458482,
+          "oldAuth": "54wDjERCT4NCnJMsTMui481KoBi5diVyid9Rs1u7SNBJ",
+          "newAuth": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+          "sig": "5iwnCJFVszfqNd6odqnkJxGMrguvUgdzopCXn7G6XK261iYUfxotnZFcQSGioNaZebHVYZbvKL9vUKt5PXLwSJuv",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 302265674,
+          "blockTime": 1731989835,
+          "oldAuth": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+          "newAuth": "Ep31aXAZaPbui4sr5XJRG2ani4JjDZZdZLqyvpTXMZvh",
+          "sig": "39wdpBMS94unnD8RhZeQGFmZEorHuDvFrcpXvzzjKFGcTL1grHn6CyNSeUWoudiTFCcB7ts11VSNStpuAuwKV5S8",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 302265788,
+          "blockTime": 1731989888,
+          "oldAuth": "Ep31aXAZaPbui4sr5XJRG2ani4JjDZZdZLqyvpTXMZvh",
+          "newAuth": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+          "sig": "5xC3CcuY1QRNP24GxvVbsbZWqWA2d5sMUvJ7sLEVu4RggTd6W7anyLkFXGNwvJmodBdvGqUYsXa7EFsVPbCAci9H",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:23:32.596Z"
+    }
+  },
+  "Huma Finance": {
+    "Permissionless": {
+      "programId": "HumaXepHnjaRCpjYTokxY4UtaJcmx41prQ8cxGmFC5fn",
+      "programDataAccount": "TBMC1J7B6Q2qZxeozxmfAkk4gDBiVQ34nm5KEBFUtzy",
+      "authorityChanges": [
+        {
+          "slot": 331399536,
+          "blockTime": 1743833418,
+          "oldAuth": "Huma8ZB251nwuYxDME4EFir1z8wvYw97Yr3hg9g3qKQL",
+          "newAuth": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+          "sig": "2TVFgFVQhDmipnfVigTqnHd2enZ4q24a91hAVMG6nVbjpNeuvUgMxxZdvfxSj2rQPXH4N9KWC7TTiVRL56tsCwR7",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:23:34.113Z"
+    },
+    "Institutional": {
+      "programId": "EVQ4s1b6N1vmWFDv8PRNc77kufBP8HcrSNWXQAhRsJq9",
+      "programDataAccount": "Du3J6xVp5ied1wkMMNqCNMF6ntmTvXbZYCHKeupvvmvY",
+      "authorityChanges": [
+        {
+          "slot": 331473676,
+          "blockTime": 1743863002,
+          "oldAuth": "Huma8ZB251nwuYxDME4EFir1z8wvYw97Yr3hg9g3qKQL",
+          "newAuth": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+          "sig": "2r122Z7sayi18pH4GqL6E4xwGKqfhYTaemzio8CBmaguCSSLeqyR2dhbCAXb2U5ygVRW3dyjbmHnwdHnzbHYSeP5",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:23:35.918Z"
+    }
+  },
+  "Solstice": {
+    "USX": {
+      "programId": "USXyiSTsPEWz55pSK7sZoUL79ntoVGQbaTDT57tH6bx",
+      "programDataAccount": "3P5mNf86DSd2CNu1DToPBxbvqQL4V2kNwAQjErCwZxMq",
+      "authorityChanges": [
+        {
+          "slot": 347966512,
+          "blockTime": 1750396131,
+          "oldAuth": "5RabYeYt19sor9RvExkiRvv1T9rWje5hPW7xeYXB6quQ",
+          "newAuth": "BzMuMbtah9bqN4HERkPo2PsVoaQKD2xfvYq1xfDCFwEb",
+          "sig": "5p83PgGHoq2ASUGV5DHsTsDarjsiuySiMvSqYgr64dh86btxEP32LJjfEvSm6cAYEuA8w2yaZ7Sff1sK1hqKiaNP",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:23:38.814Z"
+    },
+    "YieldVault": {
+      "programId": "eUSXyKoZ6aGejYVbnp3wtWQ1E8zuokLAJPecPxxtgG3",
+      "programDataAccount": "BVDochYTcRGvCYmmdtsiX9qT63fy5dmGSB5hNgxMTbJY",
+      "authorityChanges": [
+        {
+          "slot": 348908544,
+          "blockTime": 1750775242,
+          "oldAuth": "5RabYeYt19sor9RvExkiRvv1T9rWje5hPW7xeYXB6quQ",
+          "newAuth": "CYr14TrXD5MAertRqcR58KirPz7XoHGZjfBsfn5M2voh",
+          "sig": "3P1ku99rpcsHu4rnnq8MDrmpNAgKH4tL9dBrnD3EsP21Fv7W2TJWjwz351TnJdFuRFtzk4JSUgsWQUDK9Bo48uPv",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:23:39.885Z"
+    }
+  },
+  "Pumpfun + PumpSwap": {
+    "Bonding Curve": {
+      "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "programDataAccount": "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu",
+      "authorityChanges": [
+        {
+          "slot": 266338496,
+          "blockTime": 1715958005,
+          "oldAuth": "DCpJReAfonSrgohiQbTmKKbjbqVofspFRHz9yQikzooP",
+          "newAuth": "91wY7FWQ94vGrhAPJ1uq9WFVeUcDvHRVGarzY9A9yxMj",
+          "sig": "2jGYKUd4bgeiCHUdEQ1xnj66gaweEubxj1HTgu7G3ts5nuNZoy2ZujSNKhLA4YQF5nCj17nTeoyCPbt3P9LP74R1",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 267696614,
+          "blockTime": 1716560998,
+          "oldAuth": "91wY7FWQ94vGrhAPJ1uq9WFVeUcDvHRVGarzY9A9yxMj",
+          "newAuth": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+          "sig": "4429WYZ95ZscPLz11a8NnyWuGQoE4CnRythHiTWrQMKbAP5Na2SeLmBunnEUnwaZMRAjXjAGQw4m9pBoLCYaNmq2",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:23:57.185Z"
+    },
+    "PumpSwap": {
+      "programId": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+      "programDataAccount": "6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc",
+      "authorityChanges": [
+        {
+          "slot": 321945798,
+          "blockTime": 1740070385,
+          "oldAuth": "CnC6mjiE9siqYmR8dCqQGJmK8jVfo2KsPycQZy2kFyf1",
+          "newAuth": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+          "sig": "3Nd6jctRDBPJsu125vNevm1xcBP7bGPQkDnMc63DCAkUqzbyK8jL97AU4R4CS5TgYJp2i1arVCzvcfDwuSmoSGQg",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:24:03.295Z"
+    }
+  },
+  "Lulo": {
+    "FlexLend": {
+      "programId": "FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q",
+      "programDataAccount": "4J4gnmewDAkpAKhwAXytopGHztWyHKBzpbJFRYht1YxY",
+      "authorityChanges": [
+        {
+          "slot": 293894976,
+          "blockTime": 1728153819,
+          "oldAuth": "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh",
+          "newAuth": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs",
+          "sig": "2MqNoY6VRNM2U5Z2UvzgQBSqCKhGVwrfQB7JA7hZrQo6efFryZbFzDewCAuuvN8b8TGfVA2aZYCGqprpi8sPxLDk",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:24:33.690Z"
+    }
+  },
+  "Nosana": {
+    "Jobs": {
+      "programId": "nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM",
+      "programDataAccount": "7MfLnSgjBq6wf6MMCn25qzPmfe5pAYnn5zicKSPLCf8v",
+      "authorityChanges": [
+        {
+          "slot": 183112537,
+          "blockTime": 1679067157,
+          "oldAuth": "nosP9DVJQVuRqub7JLf3K5Z2pwx3612egECNqCueE9m",
+          "newAuth": "BnSjXUGSyLMA2x2xAexp3BnmCvk4xnhUkeygozpYiNeD",
+          "sig": "58aDH2oHQJuTZdVmvysFHxvbea6Sm6Fwop7LKjHwLdVrb2veex5soAJgv8nNGVKPV1v6B7SxmhjRGHu2DnPyFkZ6",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 234537506,
+          "blockTime": 1701957221,
+          "oldAuth": "BnSjXUGSyLMA2x2xAexp3BnmCvk4xnhUkeygozpYiNeD",
+          "newAuth": "nosP9DVJQVuRqub7JLf3K5Z2pwx3612egECNqCueE9m",
+          "sig": "3nUBEzYgSvLB7oUs11XvrK98G5ooiJdfgASM2vh1KSJ1GQpPQ8b2t9ozEL619RnFJUvc4fdDNMrKzk5b7N8eDtvG",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 305564008,
+          "blockTime": 1733404077,
+          "oldAuth": "nosP9DVJQVuRqub7JLf3K5Z2pwx3612egECNqCueE9m",
+          "newAuth": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+          "sig": "2WegUBdkf4qbZMjmDUFe5mpDo14hfeXQZprozcTBoRxj3WR7QqtZ5ZYEcZKsHfZKPVPngtS8WnDU435P2obfspcL",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:24:43.630Z"
+    },
+    "Staking": {
+      "programId": "nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE",
+      "programDataAccount": "FB9Am2Zg3AgvQaAy3gwBK8h1J8ryixjexV3jhLbcP2i8",
+      "authorityChanges": [
+        {
+          "slot": 305564266,
+          "blockTime": 1733404185,
+          "oldAuth": "nosP9DVJQVuRqub7JLf3K5Z2pwx3612egECNqCueE9m",
+          "newAuth": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+          "sig": "2CxCbVaHBJWJLNVP1Pfnb6HEFwf3L8MNSxxKDwW5wVHgZvv5Y5KTAf4CVkeMcSeThVKfHkg9xeiyvVfaTFE7h2Rn",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:24:47.695Z"
+    },
+    "Rewards": {
+      "programId": "nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp",
+      "programDataAccount": "7gjhKMvMLoLiuHY2pshwyQsSEFzkGfdUBJfBwQYwQepZ",
+      "authorityChanges": [
+        {
+          "slot": 305564184,
+          "blockTime": 1733404152,
+          "oldAuth": "nosP9DVJQVuRqub7JLf3K5Z2pwx3612egECNqCueE9m",
+          "newAuth": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+          "sig": "2yNWYvwobCqnAkHwBEYuCkn9aQ5W3bjhXZkrR18W6Dfmjei2vzWRtCk1rUwVgcEXrbjpf4sWpn6qt7Kqp74CbNAc",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:24:50.372Z"
+    },
+    "Nodes": {
+      "programId": "nosNeZR64wiEhQc5j251bsP4WqDabT6hmz4PHyoHLGD",
+      "programDataAccount": "DPrxoMvwqaf4TULmGcWMAsUkHWLkTNamWFFbVmENzZA9",
+      "authorityChanges": [
+        {
+          "slot": 305561124,
+          "blockTime": 1733402847,
+          "oldAuth": "nosP9DVJQVuRqub7JLf3K5Z2pwx3612egECNqCueE9m",
+          "newAuth": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+          "sig": "63LHNcbXTqJtXE1wMQEgfPoXCTofFyvKhoHuZ6jMa4WfmzE2rhxNzKm47R1fieCts7D8fRJcL4JWDqmgMx39BbKZ",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:24:52.262Z"
+    }
+  },
+  "Switchboard": {
+    "Oracle V2": {
+      "programId": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+      "programDataAccount": "7nYabs9dUhvxYwdTnrWVBL9MYviKSfrEbdWCUbcnwkpF",
+      "authorityChanges": [
+        {
+          "slot": 174568068,
+          "blockTime": 1674777959,
+          "oldAuth": "31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc",
+          "newAuth": "2NvGRFswVx3GXxURNSfjbsWY4iP1ufj8LvAKJWGXSm4D",
+          "sig": "2V6NMvLRosLdFcx8SQSV3JHMCJxvUoe3ShyxSNiFDtziEXbBJoFd7q3ULgPQHPzFvL8812zjZzt2CFXtDDUVkfQi",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:25:02.412Z"
+    },
+    "Attestation": {
+      "programId": "sbattyXrzedoNATfc4L31wC9Mhxsi1BmFhTiN8gDshx",
+      "programDataAccount": "BzqtGXZPiDSinP4xMFgPf6FLgSa6iPufK4m4JJFgMnTK",
+      "authorityChanges": [],
+      "scannedAt": "2026-05-08T10:25:06.057Z"
+    },
+    "On-Demand": {
+      "programId": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv",
+      "programDataAccount": "EW3AZYxoQrYWBvTmrCmiDpm6oBCNpAqN2kekDjuYFmsB",
+      "authorityChanges": [
+        {
+          "slot": 282347172,
+          "blockTime": 1723132799,
+          "oldAuth": "31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc",
+          "newAuth": "DREcTwxxuehtUVgnGwDpTcKT9zTK5uDmdLbnRY7cijEx",
+          "sig": "4BiPia5Tzj5csSamVVbPdFDUBxB8Nij7kDjyJK5neGwLHYDPrtkGeyGto6i78aQP9qd1Xus9aWYrFNZESok9U2B4",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:25:18.860Z"
+    }
+  },
+  "Stabble": {
+    "Stable Swap": {
+      "programId": "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ",
+      "programDataAccount": "5CkCpgrfyjami8wBK9oVSF8EsQEAdHp5RPR4f9wuYEVS",
+      "authorityChanges": [
+        {
+          "slot": 274118256,
+          "blockTime": 1719407011,
+          "oldAuth": "4MRegdxXAHMQUwryjzqoAUYpohoZ97f5KJa4GDXwDDJv",
+          "newAuth": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP",
+          "sig": "HGc22YfpcsZySqdh2YC7FNkzpyN5VeAPqHXcaFDvPFbwsrpnGHpzEVLZ3L5m7mekKRe1tcYk2QmfFRcJn22VFUY",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:25:26.733Z"
+    }
+  },
+  "Sanctum": {
+    "Infinity": {
+      "programId": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+      "programDataAccount": "ALmAxhSP7TDWGMHWBLjD9qS71YjqxjN1ba6JLRdzdVy",
+      "authorityChanges": [
+        {
+          "slot": 96509590,
+          "blockTime": 1631605636,
+          "oldAuth": "Fqpj2CzVauUdT69yvnQZeWUJUG1s2ycVQVNXehYAfoop",
+          "newAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "sig": "P7p5A3JzadwjHnXcNYMEWWAmGr3oNSfAPbeLuuwNYTNJQXDuxv5yr73jPbkhNoJ5QFHg9Lpm44YXHrBegfqCX1N",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 96509827,
+          "blockTime": 1631605764,
+          "oldAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "newAuth": "CNcHyQPr26e9Ja97AdE19ERjT6Z2cvXDzab7x8TFHrgv",
+          "sig": "59LgsVDmfvudTP1ioQtZXSXs2Q1EEfJcWZYzbkfG1iJAehVpfmYFwVn8eGP2VnQYdN3B4jfYs5ZC44uzKTapsAgH",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 252120406,
+          "blockTime": 1709591696,
+          "oldAuth": "CNcHyQPr26e9Ja97AdE19ERjT6Z2cvXDzab7x8TFHrgv",
+          "newAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "sig": "pia3k6eSa6jrt3Accm8EPy143kL1aVvhoR41hwctuyRwr26A2qnZtDZDEu4zv3PFS5K7LFUkMGDhnJekkUQcJRp",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 254566409,
+          "blockTime": 1710611581,
+          "oldAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "newAuth": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+          "sig": "4rn7mbaGDkXaRLkC2s1VqMkUjwwKr9JzJGMPTXoMefYJDbPCbKVam1Xr37xmNEkikecBerhLUpbBG1XufpDwnLay",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:25:53.588Z"
+    },
+    "Unstake": {
+      "programId": "unpXTU2Ndrc7WWNyEhQWe4udTzSibLPi25SXv2xbCHQ",
+      "programDataAccount": "9Bs1PKmHfKQ57pTUDJZ9pG22tkRLuaeyfAGp5GxRuZkW",
+      "authorityChanges": [
+        {
+          "slot": 141238652,
+          "blockTime": 1657604767,
+          "oldAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "newAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "sig": "38iZoE43HdAqhwvErgjMuK3hWvjuxcvC4iSZChwt1oXuPrAzPYbyfJFqJKN1eKapEViTWepVuWcbmpmMwabDmNTG",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 141238960,
+          "blockTime": 1657604971,
+          "oldAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "newAuth": "4e3CRid3ugjAFRjSnmbbLie1CaeU41CBYhk4saKQgwBB",
+          "sig": "2HPphrPmo5W68SRm2PLeYxyyrdxfm2JEnXFBmtmCGHxfJgdaHi6ERTp8UpcZFfMzapYKLBvA5eMX5zSjPdQe5jDJ",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 207790914,
+          "blockTime": 1690449749,
+          "oldAuth": "4e3CRid3ugjAFRjSnmbbLie1CaeU41CBYhk4saKQgwBB",
+          "newAuth": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+          "sig": "2cuKWnimUUu3Kmj1yb9QSnERw3QKfgGXQ5vMXRuAzqh7zeAw9X3pyrbi9mAxbPfguNgc5uGRx5pCLD47EmaeJSww",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:25:56.865Z"
+    },
+    "Router": {
+      "programId": "stkitrT1Uoy18Dk1fTrgPw8W6MVzoCfYoAFT4MLsmhq",
+      "programDataAccount": "7EEWx5mzzsYjU1GK2Y5eP3ngQGaRit8wJhmkkoQMnouA",
+      "authorityChanges": [
+        {
+          "slot": 174285080,
+          "blockTime": 1674633494,
+          "oldAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "newAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "sig": "393y4EBVZT8HKuy2oHBUoXuHrDnaqsHPez5NK3wWxk4G9C1vbwYoyDvyMk1QV2SosF8DDneJa6pen6gzfGE7A9Ay",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 205066966,
+          "blockTime": 1689230050,
+          "oldAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "newAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "sig": "55gtwrH2y7VvygzR6Ra3g6xsPGtpGbLZVV7Wq5LfUBbA4d7Y1Z5RY5MiEZpKDnu6dYmXGz2G9roBHLJrKB8rMSib",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 205082856,
+          "blockTime": 1689236954,
+          "oldAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "newAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "sig": "5Wy4NRR7hp7LJL8x8W2D54opVGwAAJtt3EzqgAFfGeNWECQjbUrpUHEXupvZm6rqYQmsMzEAjSXV5Jsp7nmbyFGG",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 206388567,
+          "blockTime": 1689826771,
+          "oldAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "newAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "sig": "3WcqVU89jwj5e2hBsLhZ9dRF6k34bxu3gVANy3Lwh7AHE3s3QfZhpNZCHrp7E7P6e6dkfQ8dcvyUdJkqA6t5P3Qv",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 206389395,
+          "blockTime": 1689827133,
+          "oldAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "newAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "sig": "ZVhddDmvsQRJ3earTnkySs1dhcNuLvH46BhsnAJDtG9266hTSj18cjgBV3jgXkgzUC8nkGV946mhhvSeHhMf1nZ",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 243534044,
+          "blockTime": 1705983642,
+          "oldAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "newAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "sig": "sVLKbSFUiKExXKT29LkX6TkGqcTfopMYVpD255EGid6L2tFt3A3mJRQvgvyu2bf3zk6WRpSrf5PSJUAnYhiQui6",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 243538690,
+          "blockTime": 1705985575,
+          "oldAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "newAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "sig": "4UXLPtAL2gtxUUscFEnZN3vYUmXmVgQEMkGqUdkAjxs8Kr3ADZe7d4wsSAtNUFx2AYsu12LdHNavQ3Yx2qDHQPdt",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 246887592,
+          "blockTime": 1707404973,
+          "oldAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "newAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "sig": "4ksFfNUQKrmttr92GKGEW8VcC44qPSaTBnwam7jDuzRncjsU8hyNcdGc6DPJBrsbYGrrWJAMZLBvgkNRKm7sy4Nv",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 246888174,
+          "blockTime": 1707405213,
+          "oldAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "newAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "sig": "2dprZYnfJgu6KTbZ1QjEV5mHyDZ2v4TpDikXZZ4q5HvJdHaUTht4Riz2pphe5tf5GxUwZ1cznZDczRg7ZWmXW6F3",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 257408636,
+          "blockTime": 1711829144,
+          "oldAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "newAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "sig": "4QnARjUAguATyHe8zaHDphJGzmgGKVwne62sBkik7VCE8rhKgjXiyhfY1wHgWHPJvRk2xTS3bdtGnwCapPZZXTfD",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 257414288,
+          "blockTime": 1711831657,
+          "oldAuth": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
+          "newAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "sig": "Y9yrtbHqChk6AvtaiE4SopG6CbdAk1h2FbUy1c3wo3eePSMuPasAUoCktbZhb8w5vRewWUftYdr2ZDMrKU4FPWP",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 290850285,
+          "blockTime": 1726798639,
+          "oldAuth": "HanXbAh9AngpUuzxJVH3FoQ9mEu3qPHQ62u6JtuoR7VS",
+          "newAuth": "CK9cEJT7K7oRrMCcEbBQRGqHLGpxKXWnKvW7nHSDMHD1",
+          "sig": "2vSNsvtcedzvqZPhyCuu2LPEhCpUgu9k3dDY92RSJ2ybMXyUZf4BQsEehPBb2JgaN8URCqqHMgSvo29fkP7sVTYa",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 290854320,
+          "blockTime": 1726800338,
+          "oldAuth": "CK9cEJT7K7oRrMCcEbBQRGqHLGpxKXWnKvW7nHSDMHD1",
+          "newAuth": "8VE2uJkoheDbJd9rCyKzfXmiMqAS4o1B3XGshEh86BGk",
+          "sig": "5w8ZAk3wwqkSQLXTLZVLRkm9DPYAXE8YaDRCG8tM3WHaGAi4R8N9PKbce9uxkCGeQNZsA8eitmN5oQiUDP8vMEgH",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:26:01.620Z"
+    }
+  },
+  "Jupiter Agg": {
+    "Aggregator V6": {
+      "programId": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+      "programDataAccount": "4Ec7ZxZS6Sbdg5UGSLHbAnM7GQHp2eFd4KYWRexAipQT",
+      "authorityChanges": [
+        {
+          "slot": 209238128,
+          "blockTime": 1691083063,
+          "oldAuth": "9u9iZBWqGsp5hXBxkVZtBTuLSGNAG9gEQLgpuVw39ASg",
+          "newAuth": "9hdBK7FUzv4NjZbtYfm39F5utJyFsmCwbF9Mow5Pr1sN",
+          "sig": "2jAYvjW83Fj8Fahj7S9a1YPGsge2W3nSZePQ6qhM96v3vths4txtr6eRZRAvJwr4RAKSdYsRCfKCVVBiL1iqWTyE",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 293050228,
+          "blockTime": 1727773715,
+          "oldAuth": "9hdBK7FUzv4NjZbtYfm39F5utJyFsmCwbF9Mow5Pr1sN",
+          "newAuth": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+          "sig": "3irhcbrV6ynoJrE92cuhNEy3An635EZFbZaAVdpmjtdfgCcktHYbtAnSiAqpR9fsXpRHkUZg4K4d8Wbvq1eJYeHg",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:26:27.878Z"
+    },
+    "DCA": {
+      "programId": "DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M",
+      "programDataAccount": "CzZ4TUscQKuLkyn6RKdoQF27aUPuztEeYoNpLRXSypMM",
+      "authorityChanges": [
+        {
+          "slot": 201231254,
+          "blockTime": 1687519663,
+          "oldAuth": "BFQ2te7ERN319HA87mn6NJ9oxMUvNxyifqEhUWHFTie9",
+          "newAuth": "9hdBK7FUzv4NjZbtYfm39F5utJyFsmCwbF9Mow5Pr1sN",
+          "sig": "2VRemRqCv4pGYjyY9wxNtbjhAWsU78WFPrBotVaUb7KAEfc8jPoDkTieP5HAbJUdGmMzGANB2jxrXBHdUXxmAMat",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 293047584,
+          "blockTime": 1727772495,
+          "oldAuth": "9hdBK7FUzv4NjZbtYfm39F5utJyFsmCwbF9Mow5Pr1sN",
+          "newAuth": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+          "sig": "2foAY4A5r3ypjAJbNMKdPzgQG24n8UAbV4CH3CgVxqPQdN3ADFMiZTsejSskVvjbZJnMQjLepXCFYuWpcJGRzScJ",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:26:42.505Z"
+    },
+    "Limit Orders": {
+      "programId": "jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu",
+      "programDataAccount": "7Z7y8khwGdvtscy2hAVVGUCyp2emSo2TM776otrtstQv",
+      "authorityChanges": [
+        {
+          "slot": 196779680,
+          "blockTime": 1685436439,
+          "oldAuth": "mQBipzeneXqnAkWNL8raGvrj2c8dJv87LXs2Hn7BeXk",
+          "newAuth": "9hdBK7FUzv4NjZbtYfm39F5utJyFsmCwbF9Mow5Pr1sN",
+          "sig": "5U7zFZh7mTn6dktpu925oSWqb1gEo8WgW4y2rjatptQyYtyKr5LNK5BArepbXQm7ghufZGnW4t7Z9AKWp4YYcKx1",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 290479832,
+          "blockTime": 1726636022,
+          "oldAuth": "9hdBK7FUzv4NjZbtYfm39F5utJyFsmCwbF9Mow5Pr1sN",
+          "newAuth": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+          "sig": "2kA4fWBfKvkG4w9Td1CZQdRamquTaAPGSkcTaTt8wp1D8NYiWcUFDYto7woctucFnZszeHovD3xE6sKogPiefn8x",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:26:52.475Z"
+    }
+  },
+  "Raydium": {
+    "AMM V4": {
+      "programId": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+      "programDataAccount": "A7ZG7ByDi8DpzT9Ab7CiXhvgYTJQmaDPJkMDoPitaCQV",
+      "authorityChanges": [
+        {
+          "slot": 107299006,
+          "blockTime": 1637137053,
+          "oldAuth": "BE3G2F5jKygsSNbPFKHHTxvKpuFXSumASeGweLcei6G3",
+          "newAuth": "UpAuc9FHwjtssLfQSuiCDahnmtUTBHf6eWTkRubh5ty",
+          "sig": "SNe8iExyFbw1DCZQc45R348cZJCaMrGyKoC6amEo895TtgushGxHdpstdSEZnTjFR7o6ArEgJrBjtinKN7dKufA",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 150762038,
+          "blockTime": 1663234544,
+          "oldAuth": "UpAuc9FHwjtssLfQSuiCDahnmtUTBHf6eWTkRubh5ty",
+          "newAuth": "8aSRiwajnkCP3ZhWTqTGJBy82ELo3Rt1CoEk5Hyjiqiy",
+          "sig": "51XHyahJjErkeJV9FpsDVxGsfFj744Nfda16LD9fJELenb2YU25AyrSBtM1yiUHM6T3t7ceNM3jCUmpBW1Ze3QSA",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 160992764,
+          "blockTime": 1668431968,
+          "oldAuth": "8aSRiwajnkCP3ZhWTqTGJBy82ELo3Rt1CoEk5Hyjiqiy",
+          "newAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "sig": "67YRh5912fzsC8ZUGPvpFvi9rEVoQm2SUceMpAT1sqHcQdGbGJoxzELtHkew34UAvAWeoYQetzq1q5HufWYpoh8E",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 414868623,
+          "blockTime": 1776844451,
+          "oldAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "newAuth": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+          "sig": "47duNiTeT3BhyfKtRBUFGGJ1oEj7n1MHkhGqVM3T6EKa8cmQNkTNSYT86FHBoAH2pAtqxcrhjg5AtiVyFVQnn1fr",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:27:33.303Z"
+    },
+    "CP-Swap": {
+      "programId": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+      "programDataAccount": "DMawCQzbgNTmbzaESc7o6pvL1KAeetY8zA7jNpzntHhU",
+      "authorityChanges": [
+        {
+          "slot": 259681436,
+          "blockTime": 1712908971,
+          "oldAuth": "BufAu6GLFYcjpbZXBDU8462ttsR5cmFDinSk2JSAj1kh",
+          "newAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "sig": "38kL83d3AxdyqoCL6CQX8FLKcMB35EorqbncHN8ykCNkCZhdro8wHTPwXjEAjMvJLe5mGQLXWupiYUq8WsFCMrsy",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 414868203,
+          "blockTime": 1776844283,
+          "oldAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "newAuth": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+          "sig": "2Kow359hiiMY3m91ddSvZR2iANr37xf9RpZEmaUBWbC5S6LiADtnSdDD8Zro1VA2WVTngzg7WwKzKnqt1SvLqRop",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:27:47.609Z"
+    },
+    "LaunchLab": {
+      "programId": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+      "programDataAccount": "D2QX47Tv2uhNNwFcnLCyJtLMZ4WGmc7eXxvyEmD6zNUh",
+      "authorityChanges": [
+        {
+          "slot": 333628894,
+          "blockTime": 1744721409,
+          "oldAuth": "BufAu6GLFYcjpbZXBDU8462ttsR5cmFDinSk2JSAj1kh",
+          "newAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "sig": "3q7DwVLBLpvJSWJGgnG57TM6qNECkaizNy7bAy8nwoHsNwnC6HN4ZmzitQLaTzsRrscfZPTRUYGaUzGw1iWqv8VG",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 414867673,
+          "blockTime": 1776844074,
+          "oldAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "newAuth": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+          "sig": "5MocJCsoVEhzHYAC8gXQFj4E26LB9uhqmHASobc6pfA3YLTaCLbP1muPU1CLxrvXmgpqPDpkMYDLi7hN3MMau3A4",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:27:52.689Z"
+    },
+    "Staking": {
+      "programId": "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q",
+      "programDataAccount": "68ZYga21EEhp6wcWfCfxxdTfhyYPwKio3SLwf68iuhhR",
+      "authorityChanges": [
+        {
+          "slot": 150763729,
+          "blockTime": 1663235438,
+          "oldAuth": "G1Y1oLPnHnndErCydT1GVGLiMuB51THQiRfrDVCH4Hsx",
+          "newAuth": "8aSRiwajnkCP3ZhWTqTGJBy82ELo3Rt1CoEk5Hyjiqiy",
+          "sig": "2zVdkra1jord1NiCKtwMCX2jsLrw6xY2dZcP85Dgo1nmtK7gywcuvjJdPFy1eqoGax17ihcuaRL4NHbezhoZdHNa",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 160986032,
+          "blockTime": 1668428847,
+          "oldAuth": "8aSRiwajnkCP3ZhWTqTGJBy82ELo3Rt1CoEk5Hyjiqiy",
+          "newAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "sig": "5VUt5vMq4GvcvJgkb3NDBy4XVFBiBJ7xH4ScRfDq5fb2p9owmwLYYa32hyVnmZHhZRgCPgbe4X5Rpp8woKzXasbj",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 160986455,
+          "blockTime": 1668429038,
+          "oldAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "newAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "sig": "4Q29bj6g5FTDqgBqJyVz9Bw26jMxGsEn1RET38WsVNtVRdT7LGZq4nWVWTjpNiXqiZ6M7dbg3BvSDNgv231L73ab",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 414869133,
+          "blockTime": 1776844652,
+          "oldAuth": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+          "newAuth": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+          "sig": "4axywZzxbhPij8J9WFXdZpNQ2RT1XANxsp8WdVAj7UChxzZNu1fJm38eWqZazEBAcJDze43ZnTKTYamhsuv2WddT",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:27:59.025Z"
+    }
+  },
+  "Tensor": {
+    "Marketplace": {
+      "programId": "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp",
+      "programDataAccount": "FKDbtRVDvxhzubDub6PKqu9kAAHtNm6VZ1zES55VKkAh",
+      "authorityChanges": [
+        {
+          "slot": 196501468,
+          "blockTime": 1685307726,
+          "oldAuth": "CsuafJ4VM8v2NvBVrWyc3pEHrTtJXrSzmMacLdnwPqbj",
+          "newAuth": "99cmWwQMqMFzMPx85rvZYKwusGSjZUDsu6mqYV4iisiz",
+          "sig": "3pHiwPE828hwgYts8NrReK763FeA49RFRuWizNcULQHbb4s49R5SWBFXAcoA6GYuwKWKRtDR5B5poLTsuP8FA9DB",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 244542614,
+          "blockTime": 1706403094,
+          "oldAuth": "99cmWwQMqMFzMPx85rvZYKwusGSjZUDsu6mqYV4iisiz",
+          "newAuth": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+          "sig": "2Uf56FN9UYpsEefbj3HjRzg61tyrQhQJMd1NfT49mkMMhRDFz7Goh4FMBxxn6MjqQPt88AyP5Vk9nZsDtu2BZUVa",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:28:09.560Z"
+    },
+    "AMM": {
+      "programId": "TAMM6ub33ij1mbetoMyVBLeKY5iP41i4UPUJQGkhfsg",
+      "programDataAccount": "9sc3eZckpta5gLLeN9Zvgmk7oSb6z1BbJuwAsQDH9BPH",
+      "authorityChanges": [
+        {
+          "slot": 295315194,
+          "blockTime": 1728792143,
+          "oldAuth": "DFM8EyFKbqkZP2gN823gymVpxaXPCZhBeAY4nHTz8oyX",
+          "newAuth": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+          "sig": "52WUSrA7GxoCcBCMvdJA1Vj8GShmbSU6XcyVujaTxj1s3ew3wSNmPF7N8eK7QUQHvTWRpd5xoBmMLZv2uHkPvbb3",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T10:28:10.927Z"
+    }
+  },
+  "Phoenix DEX": {
+    "CLOB V1": {
+      "programId": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+      "programDataAccount": "2myyNegEA6pjAHmmEsJC6JdYhW51gwxQW7ZCTWvwaKTk",
+      "authorityChanges": [
+        {
+          "slot": 177963571,
+          "blockTime": 1676496499,
+          "oldAuth": "Exz3KLbVKw8RFFNkn6pLTqQxYoXW5frnTptFuvHupTPy",
+          "newAuth": "8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq",
+          "sig": "24X8mirXfYq2yktXSWFowAHhCpfDSJ5xsD3h9zdXQbnu8uUaAJgY6j8Rt23fXsPhUonbHPnKsxXXSiLJhHmPhT6d",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T11:01:43.628Z"
+    }
+  },
+  "Meteora": {
+    "DLMM": {
+      "programId": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "programDataAccount": "HZcJwcJ2njPDxZtpPoKnF8v2w9QAx2rS7TdJPSRkbEhu",
+      "authorityChanges": [
+        {
+          "slot": 238081652,
+          "blockTime": 1703572588,
+          "oldAuth": "5unTfT2kssBuNvHPY6LbJfJpLqEcdMxGYLWHwShaeTLi",
+          "newAuth": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+          "sig": "26MCw83KJQb5QtwBMhWeANQ6U3AwxdBS3LaBG2T2xpvcF5xajzcnjJMdQzgZL9XDLwaxSWcUW6GU2LUqEWnrYwMV",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T11:01:54.199Z"
+    },
+    "Dynamic AMM": {
+      "programId": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB",
+      "programDataAccount": "36CvGf4Db6N8ApGkh1F6PLGXK1SYFFBUiEDkJjPEvDL7",
+      "authorityChanges": [
+        {
+          "slot": 148339320,
+          "blockTime": 1661856327,
+          "oldAuth": "5unTfT2kssBuNvHPY6LbJfJpLqEcdMxGYLWHwShaeTLi",
+          "newAuth": "AjzdN42CFVii2NVRm7BHioaea43RWo3angEr4vXvvrWJ",
+          "sig": "3sje2HNfCFCGE8Fa31NaV7asD2qSjRy3rmXBZrHkzQsFZuV988mLExoFHvgHXuELwhuC6MzphDCqK4oA3ZuGamKs",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 194736332,
+          "blockTime": 1684480627,
+          "oldAuth": "AjzdN42CFVii2NVRm7BHioaea43RWo3angEr4vXvvrWJ",
+          "newAuth": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+          "sig": "3EuBf6ZaG1SNPFStYSbftwvw7mAYzUNtPKqqHyx2nBLKkRNRxtTk6zVERg8KAa8jnjXLoQMeZFYZxNVgLDAjGzub",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T11:02:01.335Z"
+    },
+    "DAMM V2": {
+      "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "programDataAccount": "AUh8bm2XsMfex3KjYGcM3G4uBqUNSDw6HEhWaWMYnyPH",
+      "authorityChanges": [
+        {
+          "slot": 333579024,
+          "blockTime": 1744701555,
+          "oldAuth": "DHLXnJdACTY83yKwnUkeoDjqi4QBbsYGa1v8tJL76ViX",
+          "newAuth": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+          "sig": "4Fc4TYhBhtjuV5aKp8C9gNvPtMSnQzoQPrP39MreQDRA4cWpxzsyNCSaj9dqApXtyS1efqYmy2cfwzznACytsvdg",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T11:02:04.828Z"
+    },
+    "Dynamic Vault": {
+      "programId": "24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi",
+      "programDataAccount": "9DaJrXBFQemCwapdEJkTRCe7S9irpvPHG7gk18sRsdR",
+      "authorityChanges": [
+        {
+          "slot": 148333224,
+          "blockTime": 1661852914,
+          "oldAuth": "DHLXnJdACTY83yKwnUkeoDjqi4QBbsYGa1v8tJL76ViX",
+          "newAuth": "BULRqL3U2jPgwvz6HYCyBVq9BMtK94Y1Nz98KQop23aD",
+          "sig": "2GXjwAfyLykSfgkL5zhSasfbCz4nSzY86zCQ41ZTKsGT8crHF93fAhSidSzseJEUKJHCafiNjwbHB6sy9CHbJvXz",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 148333252,
+          "blockTime": 1661852933,
+          "oldAuth": "BULRqL3U2jPgwvz6HYCyBVq9BMtK94Y1Nz98KQop23aD",
+          "newAuth": "CLPokG5S3kMu6fcXAbhEpJrKoYPzLPAteYv41oDKajMu",
+          "sig": "2zuzZa3xC5swC6Xj68uHykTcv1DrY4v6UZD8b4R6Qav4xvCScywBsCgoP54HJdLx9UMyVt62xwkae4SmakRahgJh",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 194736772,
+          "blockTime": 1684480836,
+          "oldAuth": "CLPokG5S3kMu6fcXAbhEpJrKoYPzLPAteYv41oDKajMu",
+          "newAuth": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+          "sig": "3BcqrJhVqGR8wGf8ziUMpsw4HHESeYXse9Pk3V8c7NdpJh7ikK8TKdf2K6EqisPXEg3K3HNYAzdQgqFWcAswJ3pS",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T11:02:11.834Z"
+    }
+  },
+  "Pyth": {
+    "Legacy Oracle": {
+      "programId": "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH",
+      "programDataAccount": "72xbspJP8vtJ91Lp7k6mqJXFiPSvpad5BBRrixfAWh8m",
+      "authorityChanges": [
+        {
+          "slot": 176720316,
+          "blockTime": 1675870901,
+          "oldAuth": "ERNVcTG8sGynQjy6BKr3qotMusv3Zo1pJsbGdBgy9eQQ",
+          "newAuth": "GEpQ6rtWSW5LjZDZw8ikZFMnf3zsu14qhidQwsSvpJtW",
+          "sig": "5GJE6mHcAwYNfueANDbmB2g4hNhKQgGPnGrbtNQHm3rg2uXPWBqQhY5XYnnhg81fvxYFyYXaw9W8jUCNpDCx52GF",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 176781132,
+          "blockTime": 1675901607,
+          "oldAuth": "GEpQ6rtWSW5LjZDZw8ikZFMnf3zsu14qhidQwsSvpJtW",
+          "newAuth": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+          "sig": "SJsALdUX1e2cfu2KJSZHxwpC5q3z6yHMipYHjXwUo2EHJ9J5GFevVmyZzqyQmzYqcmw55oXKxeCR8jLS9V4MVHg",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:30.645Z"
+    },
+    "Pull Oracle": {
+      "programId": "rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ",
+      "programDataAccount": "96QrNCjmh32H9quY9DX4NEH81nECVsbkATBDZeoVbvLV",
+      "authorityChanges": [
+        {
+          "slot": 254413210,
+          "blockTime": 1710545767,
+          "oldAuth": "opsLibxVY7Vz5eYMmSfX8cLFCFVYTtH6fr6MiifMpA7",
+          "newAuth": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+          "sig": "5CyoofgB6rC4RxRuiMXCX6jVkm1zZUB5cwsgf3DW88HYBx8svAWJ9WSSD8XV4gsEny74dzMGhRCpMCvCaYNyfqZx",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:32.219Z"
+    },
+    "Push Oracle": {
+      "programId": "pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT",
+      "programDataAccount": "8xAeURaAWExxyHUXJSgjsg5r96Ydr3G4cek2if7imQmz",
+      "authorityChanges": [
+        {
+          "slot": 259230399,
+          "blockTime": 1712687322,
+          "oldAuth": "ACzP6RC98vcBk9oTeAwcH1o5HJvtBzU59b5nqdwc7Cxy",
+          "newAuth": "E5KR7yfb9UyVB6ZhmhQki1rM1eBcxHvyGKFZakAC5uc",
+          "sig": "5WRZiidQLT7BJ3maF8Hff2inqN6PHKZYB7KNXoDKLVuwKehcTRQs1j1V7XLFv2iHVyVgGYkx1fyKyHtww9BC1v8C",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 261075440,
+          "blockTime": 1713544023,
+          "oldAuth": "E5KR7yfb9UyVB6ZhmhQki1rM1eBcxHvyGKFZakAC5uc",
+          "newAuth": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+          "sig": "3t4Z8CJJjxrXzGaPnDqZwqXKbjXwZkHb3q7JTdA8RC8LsXcMZLhKDuVM8yBSrM5WXudh2o9KBm4MB9PqhrTrKgvg",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:34.128Z"
+    }
+  },
+  "Jito": {
+    "Vault": {
+      "programId": "Vau1t6sLNxnzB7ZDsef8TLbPLfyZMYXH8WTNqUdm9g8",
+      "programDataAccount": "96nH6npzmaAWpmraLaN2F55h27TMEtJrsjo881dCc2Dt",
+      "authorityChanges": [
+        {
+          "slot": 297824811,
+          "blockTime": 1729955774,
+          "oldAuth": "4fjG85wkJiYeSESftV16FDu6vNKXVZJGcSpdz7Lhhj1g",
+          "newAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "sig": "2KnWFPiZ4eUDLb1JHz1H5Y1NNAb5YKr6E7zugf6hTAquEKQ4ygiJpnxZf6NYhYtrwr4SEzE4XHTvexdn913qeq1z",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 299507313,
+          "blockTime": 1730745987,
+          "oldAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "newAuth": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+          "sig": "2pjHV4BiwNizzr7w8BmbsJzFZLuvGjxX9AxhqskjE8ShAYqX9dH4VxXxjC5rLymRNLj95WvdvBemYt1iJpUgueEv",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:36.265Z"
+    },
+    "Restaking": {
+      "programId": "RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q",
+      "programDataAccount": "6dZLGyEGeTK9aApdGaH7oFMKaNpZNepAjwR34HomiBu7",
+      "authorityChanges": [
+        {
+          "slot": 297824840,
+          "blockTime": 1729955788,
+          "oldAuth": "4fjG85wkJiYeSESftV16FDu6vNKXVZJGcSpdz7Lhhj1g",
+          "newAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "sig": "ubyThopuCs8UWjaM8rGJcfmjQeyFr98huKjpScPVwaKTewyoVU4cD24uzEryXH7Z59DfQD4midUhTffj7B4aLQJ",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 299486555,
+          "blockTime": 1730736193,
+          "oldAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "newAuth": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+          "sig": "ieAu4U8vs9zJG45tdHLuEA1V8hdgH4bUFgC2oH9SEBV2KTtTccwdTnY8SSWgjvyRV8UgezmcQoRYtoHWp6tQgsG",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:37.861Z"
+    },
+    "Steward": {
+      "programId": "Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8",
+      "programDataAccount": "7ycbHcvn2nJmFQ54UbGAuFcHvGQ7uF1ETusiGv1QTMvQ",
+      "authorityChanges": [
+        {
+          "slot": 280432572,
+          "blockTime": 1722295164,
+          "oldAuth": "aaaDerwdMyzNkoX1aSoTi3UtFe2W45vh5wCgQNhsjF8",
+          "newAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "sig": "1ysxdtvfyeZcPxAjnZnFY6Tv6uEb92p5x9NDW5LRDSmX2cMR1QAUASfxj6JkiuQXrtGpUrcFNNsf128MjvRG8aK",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 321268092,
+          "blockTime": 1739801857,
+          "oldAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "newAuth": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+          "sig": "4cgayFgAiGJeGiYfY5yDjoHPJDaN5EcHKWW8zZpyrJDiqCfomNvSJ1TyKGArgVHvr5utC8WJrMXkn5UD5yf9DHat",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:41.466Z"
+    },
+    "Tip Payment": {
+      "programId": "T1pyyaTNZsKv2WcRAB8oVnk93mLJw2XzjtVYqCsaHqt",
+      "programDataAccount": "7ny6X1Rq883geHEhDSLpCvQDZzbygPZEYXFhTKkyoCRF",
+      "authorityChanges": [
+        {
+          "slot": 156112368,
+          "blockTime": 1666145433,
+          "oldAuth": "4nyJqezdiazpgvgRCAH3512UgHeFAshHHVRx7Jw9ywLx",
+          "newAuth": "BuxGAw2bxBAWUynBQvjvSetB98nJtaY4yTDs3BSMXGGg",
+          "sig": "4XoBpQXoLGCxw8rviv8mCYWxC4SkY63XRDfKuzgBYdCeCF69GxukfgTSQ8GJHACkb64fuC7pzUdkCiKdSiyRUzss",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 157591160,
+          "blockTime": 1666819486,
+          "oldAuth": "BuxGAw2bxBAWUynBQvjvSetB98nJtaY4yTDs3BSMXGGg",
+          "newAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "sig": "246g2pD1XRs5VGtYXCLUsMXRS3tY4YCprMjA3Tz9Bjd1vRrVqe5q5QW2jFd1ZUh7Dvgh2eb2Z7JNvxn97xAYsKFv",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 233993385,
+          "blockTime": 1701714578,
+          "oldAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "newAuth": "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+          "sig": "9jMbd8TUfgB9nqqesFtk6iRMdLYgFyVFGYJ3DzVEXMtRP2J4fdddPpH9MiNsYCNE8hCD32pDVrfehPYo1wiH7dq",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:43.376Z"
+    },
+    "Tip Distribution": {
+      "programId": "4R3gSG8BpU4t19KYj8CfnbtRpnT8gtk4dvTHxVRwc2r7",
+      "programDataAccount": "2Ph7k7bbrQXf1nm9g5CV73D26HFFemRHJnGYzVmSmVoS",
+      "authorityChanges": [
+        {
+          "slot": 157358733,
+          "blockTime": 1666713333,
+          "oldAuth": "CYgW93QqEhh8KweHmKo5iytM5A26pJGrmgYsD3j1bvPn",
+          "newAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "sig": "4tQ2BGiJcgVbBxSDLiYUgpcLP7AVp7YRQrYvKnZZ6g3w3Bt7KHTXn6EdKCo284dGn9q3iLkLtTmrCmFoirHuywfP",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 233991473,
+          "blockTime": 1701713781,
+          "oldAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "newAuth": "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+          "sig": "4ytWv1whTg4DQa6JRRAA5NdwbgusPj7FdWj5mwaFTJw5iXDSXkK3QHH3ePnAY4WY32sPRpAetRwsYWz1Fv6FkErc",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:46.654Z"
+    },
+    "Validator History": {
+      "programId": "HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa",
+      "programDataAccount": "A54TJzmBSCBvZ2oKRpX86y8ewNzTWewYtvJSRR8U25hg",
+      "authorityChanges": [
+        {
+          "slot": 280260176,
+          "blockTime": 1722216663,
+          "oldAuth": "CRnkKQTxctQ7LHVN3yssdgJyEksBJeBrDdwZAxBtsJoZ",
+          "newAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "sig": "kv3BYd5iYtNdcW6jWBUPgKNkx1D66RsHGZVyXNf1NfWRtZ6CCgz8so36T9ypdrirvVM4XBJnHKWNBhU4CkJWkAs",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 320702179,
+          "blockTime": 1739577526,
+          "oldAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "newAuth": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+          "sig": "5xtKhkMUPrbfaKQHs9sJiWfyM4LAoBDDmBr2aLfnaDyy3J9cHnp7qqMM4fYLyqURaVDgLsAZmoqiKASunQerUca1",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 410390453,
+          "blockTime": 1775077727,
+          "oldAuth": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+          "newAuth": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+          "sig": "QHEkYoU8gzDxNPJTeiyFPue7kZCkwgh3icK3LkBixQ33BEYMqEdNhMbdMfjYS4JZbKPdb9SBEUhk8ZxW4eHwbBg",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:52.684Z"
+    }
+  },
+  "Zebec": {
+    "Streaming": {
+      "programId": "zbcKGdAmXfthXY3rEPBzexVByT2cqRqCZb9NwWdGQ2T",
+      "programDataAccount": "5WZptw8nX59K27Yir1N71dyzrYXVN3bjbmNZaz2eJGEm",
+      "authorityChanges": [
+        {
+          "slot": 172801340,
+          "blockTime": 1673878480,
+          "oldAuth": "5j2V6qBBt7S6guRhP6Jg4nUeYUhYmySoZAyLS7uTdREt",
+          "newAuth": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+          "sig": "396EyrgLoVkzUWPVNEY1oFodUCe8d4ZCYpFgZDr9RCWhxikby786eEPHThWu219q2nADawUHt5FAuArehdpUJgyh",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:53.229Z"
+    },
+    "Multisig Helper": {
+      "programId": "b6ZPysThkApNx2YDiGsPUiYPE7Ub1kTRdCWp7gBkzbr",
+      "programDataAccount": "BKg2qeJAHAUjHHHNm2LEHAZK1D8k9ifZvmJqmB88aAoZ",
+      "authorityChanges": [
+        {
+          "slot": 172801604,
+          "blockTime": 1673878618,
+          "oldAuth": "5j2V6qBBt7S6guRhP6Jg4nUeYUhYmySoZAyLS7uTdREt",
+          "newAuth": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+          "sig": "4sAHYRDYzEWX5pUG7QgEZX6g3WNLsAnw533mLj7XT8VMWuqjWMFGgu9kcdZUe6rL8TYrTnvUNtbk4Tu439M8R5yR",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:55.886Z"
+    },
+    "SDK/V1": {
+      "programId": "AknC341xog56SrnoK6j3mUvaD1Y7tYayx1sxUGpeYWdX",
+      "programDataAccount": "75s6TQFHyrgAxpqeEhDxGFfhHfBmfXQAEFvx4bX2kN7P",
+      "authorityChanges": [
+        {
+          "slot": 172801020,
+          "blockTime": 1673878314,
+          "oldAuth": "5iJU6rd338dS1BgjNybTJ4L4i131vSZmG3oYRjGUWJQH",
+          "newAuth": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+          "sig": "5qJT3JgeHSYRLcULfTSGWa5XCrjUW9sCS3iMvwkKo35GGwScDr94udcs778PCWhFvWWQnhyE4e4REPGedmeEsByi",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:07:58.018Z"
+    }
+  },
+  "Wick": {
+    "Wick": {
+      "programId": "wickHYqFr8NayYurE8M4oT8F4ZrYUwzaFoiXctCDSmF",
+      "programDataAccount": "6oHchcrnavsLAb8rcGYxFNu1D9sJ9ZtVs9VJ9b18KRA8",
+      "authorityChanges": [
+        {
+          "slot": 410684084,
+          "blockTime": 1775192796,
+          "oldAuth": "m6FA2eQjpybM5SDmTYgE3mizBnhcMgBBuEDMaxBc9hk",
+          "newAuth": "3bAHFKgJx7mHeyo2VmDCGp4QmKxTbPdtF5MfPF16R19P",
+          "sig": "3VdykXChzAXLzMASVGT9GG4kgw8oN5h7HYi3VpCd7SStdwBKMLphtH241tuHHui7QRr8xVX1sBs1epNFEYS5UqgX",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:07.511Z"
+    }
+  },
+  "Onre Finance": {
+    "Core": {
+      "programId": "onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe",
+      "programDataAccount": "91o8wFyxszM4DeQ5R6X6wJdyn9e8VRnsreVBTLb7Yrpg",
+      "authorityChanges": [
+        {
+          "slot": 392969974,
+          "blockTime": 1768207246,
+          "oldAuth": "onREP1E8Yk7p83fRFeApZSTN1vCzdfZKzS46dWErsre",
+          "newAuth": "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5",
+          "sig": "joiPnbsd5hyDoFkDrByHbJb6KEVYfMGi8GYfZPtRo6zpGgW3UQB7gKBFbLkaaUAbAE6uBRYCEm9WwDhvNDdrtWe",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 414651496,
+          "blockTime": 1776758421,
+          "oldAuth": "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5",
+          "newAuth": "FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f",
+          "sig": "3R6jxDEj9HuZKde1A7TeBaxTjzHiG6nuyJZZH1QWn1gAgwssnNfNz4rGfXGJRUvBNn1GW9KrLa213y7vpcDu275R",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:10.719Z"
+    }
+  },
+  "MetaDAO": {
+    "Futarchy": {
+      "programId": "FUTARELBfJfQ8RDGhg1wdhddq1odMAJUePHFuBYfUxKq",
+      "programDataAccount": "CRg8Tgn3N6StCd7fy8hrWodXVZUX4qNiJkcTRa2CRq1T",
+      "authorityChanges": [
+        {
+          "slot": 368888436,
+          "blockTime": 1758692714,
+          "oldAuth": "613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY",
+          "newAuth": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+          "sig": "zckTkiipF8PCSiCEJAndjoDz5K6pgeEjx9AXZ62mKszPDbv4qUqUZMYsPnerE3sH1PZo5fSm9djk4ZEH6spGBDg",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:17.690Z"
+    },
+    "Autocrat": {
+      "programId": "auToUr3CQza3D4qreT6Std2MTomfzvrEeCC5qh7ivW5",
+      "programDataAccount": "8EEkYyj5LsedGscM6d2NDpchZqg4WKxkqPNAEtEJicRV",
+      "authorityChanges": [
+        {
+          "slot": 353526837,
+          "blockTime": 1752607587,
+          "oldAuth": "613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY",
+          "newAuth": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+          "sig": "Jf6ZJLuVFFGWVdKnLZ9F2kt5z9ELhqYJ2DmdAfdPvCpzsvt4ejtwkZVoSALVtLioN3CCps6QHvFv9d2tr9pGE68",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:20.282Z"
+    },
+    "AMM": {
+      "programId": "AMMJdEiCCa8mdugg6JPF7gFirmmxisTfDJoSNSUi5zDJ",
+      "programDataAccount": "BtQRh2MbMsK79wkH6ZEgSpG94U2wtdvQc7PtUkgmKNuq",
+      "authorityChanges": [
+        {
+          "slot": 353526884,
+          "blockTime": 1752607606,
+          "oldAuth": "613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY",
+          "newAuth": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+          "sig": "47BPGmfc1gjg3Fc9u7nSth5fN8BBd92sqWaZRXn1nK625BLvup6TCR5rk3wZsv7cyZgvkpvfkfCaRrEY5KhL2FUP",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:21.853Z"
+    }
+  },
+  "Helium": {
+    "Entity Manager": {
+      "programId": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
+      "programDataAccount": "8td3HJeaXoUpW7y7ghf3b5VPPNq1KFy6Dc7ipzxNM1Kb",
+      "authorityChanges": [
+        {
+          "slot": 189534378,
+          "blockTime": 1682019801,
+          "oldAuth": "hprdnjkbziK8NqhThmAn5Gu4XqrBbctX8du4PfJdgvW",
+          "newAuth": "89oNwxpAssUhCHcMYd5zNrqGcGtW5kdPTfazTnNnRqst",
+          "sig": "4UAfpuaLMk76vjrYRb3AUJ1Kt1qkzz8GSvH9jTuSctynq6exhMsnogAaGewyGwW7rqjJqMztBGdNx7J1bRpWb4hB",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 374009970,
+          "blockTime": 1760721575,
+          "oldAuth": "89oNwxpAssUhCHcMYd5zNrqGcGtW5kdPTfazTnNnRqst",
+          "newAuth": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+          "sig": "32k9tE1ELaG3aa1XYTV3ECS41ofpdvZFHY4R22hhytUMmSxGGxkdHtwsCZtqEpgtuhhVSJf1HMRjpCGHX33cptMJ",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:29.563Z"
+    }
+  },
+  "Voltr": {
+    "Vaults": {
+      "programId": "aVoLTRCRt3NnnchvLYH6rMYehJHwM5m45RmLBZq7PGz",
+      "programDataAccount": "8eX632HkSE6TT2bhiiM6BJZmj2njGwEhiyqLhJUrgL7J",
+      "authorityChanges": [
+        {
+          "slot": 343718908,
+          "blockTime": 1748709184,
+          "oldAuth": "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n",
+          "newAuth": "kMTMpo28DPAZAEGzFJUAufMeiRavxkEupnC5sBb2e2g",
+          "sig": "2Gq3NBv385UBPdUbVsdMa8MSsX5HTyFKK7fPiDy2Sp22omXTfdgZL6zfgpcQ1G3nr9fVT2kKkYW3VaCRaz73sMN5",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 405001078,
+          "blockTime": 1772960043,
+          "oldAuth": "kMTMpo28DPAZAEGzFJUAufMeiRavxkEupnC5sBb2e2g",
+          "newAuth": "7p4d84NuXbuDhaAq9H3Yp3vpBSDLQWousp1a4jBVoBgU",
+          "sig": "52wX8YoYx3xnjthYkcTBFe3u3pgFEHewzuPENMWofr1jFrZFupXWwBbpr4EADRVngLiZ7W6obJkDjYTrucd5J6vh",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:34.874Z"
+    }
+  },
+  "Tessera V": {
+    "AMM": {
+      "programId": "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH",
+      "programDataAccount": "BzSXM6KLDpHQQChzr7Fdgbzwp8r8zRYWFFrHK2uZmDYV",
+      "authorityChanges": [
+        {
+          "slot": 346288205,
+          "blockTime": 1749723820,
+          "oldAuth": "82Sw4k7bP2X9Qz8axs2FjTDY6wAM7B6qo56GiZS4bdnX",
+          "newAuth": "7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK",
+          "sig": "61r9i93XqEvfrKotZSgwLcpkfLiYFULjeTUsR3X57CkEm9RD5dux7ae3F6vLMjpz8H6Kte42Zvnkuqa3x6ogZ5Ge",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:38.547Z"
+    }
+  },
+  "deBridge": {
+    "Main": {
+      "programId": "DEbrdGj3HsRsAzx6uH4MKyREKxVAfBydijLUF3ygsFfh",
+      "programDataAccount": "GYBEocT8UmP2ipoBk6up5gndpxRMuKKV9NrbvHrfmMmU",
+      "authorityChanges": [
+        {
+          "slot": 137523071,
+          "blockTime": 1655213767,
+          "oldAuth": "5MgAaNomDg4Y88v7gJ7LSWAyoLpDfcfbXZGQQnFddjJT",
+          "newAuth": "5MgAaNomDg4Y88v7gJ7LSWAyoLpDfcfbXZGQQnFddjJT",
+          "sig": "ERZko6rfy6bLHDWLgUjugGwTYuwecZfA3p4CGZ9FTBKaHodyFLUHXQFSv9a81LBg3iL6rz3KXLQnChhNUigGb83",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 142045040,
+          "blockTime": 1658116208,
+          "oldAuth": "5MgAaNomDg4Y88v7gJ7LSWAyoLpDfcfbXZGQQnFddjJT",
+          "newAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "sig": "s2H82DzdETvLdMVEKKZnX6frTWsPQ1JUgfJ1xMqixjQtcho2rdWgqtkvaPYNBv1MyJu6YMbZ5ezxVAEe5bPgvnj",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 144507633,
+          "blockTime": 1659614320,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "9r5AYYwGVqENziaNZjkxFiDXWYmDBJPHGBxuLcQjf5BJ",
+          "sig": "4jP1XPQRH2xcPqMEMhn3tizQnSDixJCNzuRw9ktbkJpFrWbbSv7TZyV4xQCXTKEUjn5Q2irJLt9Fd8V4ZxQwMjC2",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 144507849,
+          "blockTime": 1659614426,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "9r5AYYwGVqENziaNZjkxFiDXWYmDBJPHGBxuLcQjf5BJ",
+          "sig": "9LwZDrnVbDYTWYGbck7n92dwXHAxAdDsc3cGymcfhXD5nQwMkUcNBkqopVDfHomvSG5UCbp4tz1nU9EBgkgGnZA",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 166852088,
+          "blockTime": 1671032422,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "5zJJ9CmNAMdk2snRAzdaCbd7VWc2a9onmd199wHL8R2T",
+          "sig": "ySBG2CyA1GvanmvRanBGEwgeJERzT7m2pVJUZwCJBMqqXKDCVh6mbQnvJDyMRHFu2tkJFasnNCEAx8Av4UnWXBE",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 166852304,
+          "blockTime": 1671032517,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "5zJJ9CmNAMdk2snRAzdaCbd7VWc2a9onmd199wHL8R2T",
+          "sig": "25r4Xf4UHTZchex6haZQZnVKTGJL8UjRJ8DJZU4y8yDmi9ouLaYGQeSqZCKruTb2PfKUEPHXe2FGgvAK2R8qo2fy",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 200676016,
+          "blockTime": 1687266994,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "6jsPpRq6AXBqsyvHvkVaTugxvtAeTopuHjAUjwaobXoR",
+          "sig": "5ts34zCYBZ81fN1MiptbsSmzzm7tU5Pg6LsrsUnAuaLPv6HmDmhBf3mFnZseXgenmWrwPJGKaKmGk4LowEGjbV7t",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 200676247,
+          "blockTime": 1687267103,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "6jsPpRq6AXBqsyvHvkVaTugxvtAeTopuHjAUjwaobXoR",
+          "sig": "4bADDz6DL5qAg9tTCVJH81WkfARbLieKNCZxSvsuXDeN9KPJuQxRauQberA2UpJSD9qP7icP8KjAE8WgfKR964bS",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 246261138,
+          "blockTime": 1707125730,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "8wEN59YEDHNH1i78gVC5HRAdDAZ2a7DdvVFa9tr9Ts2h",
+          "sig": "5YPdX42tyxvEoKVocPUGjvVbyrzoGz4qxc41e8zp2kVqk7Fhf5UJYMGk1SN4iikgp6jon1pNNqtrJfYgjfmaz9XV",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 246261415,
+          "blockTime": 1707125849,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "8wEN59YEDHNH1i78gVC5HRAdDAZ2a7DdvVFa9tr9Ts2h",
+          "sig": "469CtaFcbkBo9vkXEywU2G73zo8NDASFRTKUGF1MwAUkGKsXjT7nAxGg4VnBg4N7iUdXJnVwHaNMj3WNFe1Sd9Zt",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 304931314,
+          "blockTime": 1733135379,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "C8uQjAZBXjbHfkNN4eb4evbe9MghbyjmLtZVJucW1FWV",
+          "sig": "2o2mGFyvCwJQZVYnNyZEjtKwm6AGZKPFhwcgc38SytC3N8K6WtX47FWZr6WtXLsfu7cY5YHQfbmH4KkH9BSSoGEQ",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 304933432,
+          "blockTime": 1733136278,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "C8uQjAZBXjbHfkNN4eb4evbe9MghbyjmLtZVJucW1FWV",
+          "sig": "6575tSHDaQdRp8iWXJmY7QCreR3BaQT91zFUgwHQGJ8dHmx6eqiKjn4Pphv5DGqXt7FMA3rgY4QSwqDMceFZxFE8",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:41.886Z"
+    },
+    "Settings": {
+      "programId": "DeSetTwWhjZq6Pz9Kfdo1KoS5NqtsM6G8ERbX4SSCSft",
+      "programDataAccount": "CXu6cHMF9cx2Z2BWQLxSdjXcMPasTwwCvKtkqy3uypht",
+      "authorityChanges": [
+        {
+          "slot": 137520483,
+          "blockTime": 1655211831,
+          "oldAuth": "5MgAaNomDg4Y88v7gJ7LSWAyoLpDfcfbXZGQQnFddjJT",
+          "newAuth": "5MgAaNomDg4Y88v7gJ7LSWAyoLpDfcfbXZGQQnFddjJT",
+          "sig": "5AapYv8U1giCFtH18s4h8yMUkCRMBhzqE1qnYARSoXegaGn1Mw4n6yqS6N3r4hZ5XxBiZfBzaenp41suddFf3wqf",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 142044748,
+          "blockTime": 1658116019,
+          "oldAuth": "5MgAaNomDg4Y88v7gJ7LSWAyoLpDfcfbXZGQQnFddjJT",
+          "newAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "sig": "GRgXKHtCBwFSWtxux2sQkQ4XNozHM6xsFmLmoDZjJfpbqwRQevUjDVvsCDc5qGznR9mKqcvGgtBVtPfNHtWWgyc",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 144510309,
+          "blockTime": 1659615728,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "5geBjKBMr4DnnDCKwJFNA6J3tmtQFwtkVqB6KpHYTa1v",
+          "sig": "2HGXFwVLZNiKsJdioCYustjKKvb8FMw7sqfUC5tQhaVHSpvJgnD2xpwSuDziL6oCpUqqeFxzz4wQpc6sqTtnGhyo",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 144510491,
+          "blockTime": 1659615825,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "5geBjKBMr4DnnDCKwJFNA6J3tmtQFwtkVqB6KpHYTa1v",
+          "sig": "koQK3VbDwy5UongiYHt5ZnTbX5eRaGEeWi1tvhutsiNCbN2yjQRUg8YYrmVhs1e1XStGcEnFS3tFzfdwwqf7rZK",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 145651231,
+          "blockTime": 1660300841,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "4rfSzt7CYcGCKHAfxbbWmgGKYG68qGNP27Qs4rrrgkH6",
+          "sig": "3boFdiJQj48h2b2A7dTo5a2JZEMXdE5NyRbPSRboEV6MNzKtTX7LbcXEeyW7QvhxuT1uiDn9qvPsstxbvkTfoqdE",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 145651428,
+          "blockTime": 1660300953,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "4rfSzt7CYcGCKHAfxbbWmgGKYG68qGNP27Qs4rrrgkH6",
+          "sig": "rjMZN2egpRzdxkVCJJtqSCgt76mcR5hgcqLsWTMADuJHd3F2B9u1eJwikkX2BicnANHoFWgm2BBqKSLseN66RPz",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 166851963,
+          "blockTime": 1671032366,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "3vqNrkdj4kcWoz7QLvgCPE6dtmk4EPG7UEDBF1AoVyjC",
+          "sig": "2i4G2n1yy7kg1tfzKDuBTZdrpwv97nWrKmFpgCmTKXqV1Z1dmRg6jz1wQyHH1f3nzSq8N3UjyNiWXt3Ndn6wZ3P7",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 166852180,
+          "blockTime": 1671032463,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "3vqNrkdj4kcWoz7QLvgCPE6dtmk4EPG7UEDBF1AoVyjC",
+          "sig": "3LmyWmFMHqmNd8ZTG19KyHdWpyzfc1qZtvFUmEy8yRk54m8uf5zKYhEbZ5urU1U8jCe4iwPrvuefBEJczQtSxNtw",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 200675956,
+          "blockTime": 1687266967,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "AMrv3SM9whjhnCTyyUdkkR3NHbjSeccA2rDKnUCKhqLw",
+          "sig": "3YGNPKgUGkiZSm5wq5NdUc9kUY4TapcHZ8HwbWnjKLnMHEg1X1HLkjkzhS7j4u7VYha7tiKJvWx9zfosFkFFg55K",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 200676166,
+          "blockTime": 1687267066,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "AMrv3SM9whjhnCTyyUdkkR3NHbjSeccA2rDKnUCKhqLw",
+          "sig": "5z2yV3Dny1v2cd7J64ojhvRmMKRXYKrvWMu5AvWRmaxYNR8GS6kDZU1TPC4wd1cmAKDwhzfkcUmSGUXoqjb5USwL",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 248491586,
+          "blockTime": 1708071050,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "95U1rYuuNaynnEYhbVugnHLuLhKcSVQZLqt5ar1HU3s",
+          "sig": "4h2vB1U9mTyN2bKRiekscK99R9Affk3RTo2Fej2PHFqGDxM9XNRiNjnVNAUMT4XgcdUH7f4G727ShYPP6BBK9mdM",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 248491865,
+          "blockTime": 1708071171,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "95U1rYuuNaynnEYhbVugnHLuLhKcSVQZLqt5ar1HU3s",
+          "sig": "2NTUWssSUrw2i3LopQ8e1PLUT7E7aX6FNXfo9hi1DqrR8XwAfgmS9Kb2dcxbuWbtRRWiMrqtrxX6i8pZdSqbLRdp",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 304120204,
+          "blockTime": 1732792220,
+          "oldAuth": "59nDeUXx1mQhpdhrDJ7SDRVs8ogV1tnbT3jAwbp9WBsC",
+          "newAuth": "Hg1usAVm1ayUhD18oNjYMehYcTkEVqayAm1R3W36Ut6w",
+          "sig": "45kT9whG5Y3esugbB6KvFvixFfjsBn2ModxVDGGHQatjRVkkbvx4xTp3L3LdY9htxqPhkfeCevQ1P42DqVYA8dE3",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 304121464,
+          "blockTime": 1732792757,
+          "oldAuth": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+          "newAuth": "Hg1usAVm1ayUhD18oNjYMehYcTkEVqayAm1R3W36Ut6w",
+          "sig": "5H9pgLcgV71KUk5xbDuviYuWTftcx81rGfkhwdqgBvRYJEQA6uviZu8jPV5JsWfhaRj5W6P2FHNWqHr9b5JxCX9",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:08:45.848Z"
+    }
+  },
+  "BisonFi": {
+    "AMM": {
+      "programId": "BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi",
+      "programDataAccount": "42snJ7ip4zKKsip3EtaMoBo8wzoRsQJSzgUSFXAVJFfG",
+      "authorityChanges": [],
+      "scannedAt": "2026-05-08T15:09:06.183Z"
+    }
+  },
+  "HumidiFi": {
+    "AMM": {
+      "programId": "9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp",
+      "programDataAccount": "G9S64i58RRWJA28vZiNhnP56Ux4Ef7hfMgHNREnZZSom",
+      "authorityChanges": [],
+      "scannedAt": "2026-05-08T15:09:25.700Z"
+    }
+  },
+  "Photon": {
+    "Trading Bot": {
+      "programId": "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW",
+      "programDataAccount": "DK8oc3En2hhwRFUTSebjZTL6s7ACkUvaGmuasV1ZbZnK",
+      "authorityChanges": [],
+      "scannedAt": "2026-05-08T15:09:35.518Z"
+    }
+  },
+  "LayerZero OFT": {
+    "OFT": {
+      "programId": "219m42qCuVirVvWs5GnkuX4aWFx5pX6D9RSTE1vsV5WS",
+      "programDataAccount": "8tRWVLwmPccyFNzpkfRGztqg7wyLcaNM4TVJfBrPqY7T",
+      "authorityChanges": [
+        {
+          "slot": 396536734,
+          "blockTime": 1769625622,
+          "oldAuth": "FW3mAwFdoQoCEKsk3EAoFeZHFPJGFkFieq866yXVnDNx",
+          "newAuth": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+          "sig": "56yuuwEjGtmrWWNzQoLthPySvdMxuhtrpwPZezZSPn6tExd3RayA3Q8NmgZdhmtTJWJxLiQk6qNpXpEg9zterxKe",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:22:12.427Z"
+    }
+  },
+  "SolvBTC": {
+    "Solv Protocol": {
+      "programId": "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz",
+      "programDataAccount": "8UxWrc8vH9zYCovethP4Qj7diqf3nqYrWcj5uYEm3czU",
+      "authorityChanges": [
+        {
+          "slot": 376937599,
+          "blockTime": 1761886652,
+          "oldAuth": "71K5nFw3E3xHqECsRWFAMrr6JvTwkvEyb7mLgs3Gy52q",
+          "newAuth": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+          "sig": "2x2YY6B56P3qKHqCmJ4EVBDnZUQc6dBDGEKjw4Qb95KiEh67HKJK7X2kiznfXwE9RPoMG1rXk3TDnmGzx2fNJ1t4",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:22:13.619Z"
+    }
+  },
+  "GMSOL": {
+    "Core": {
+      "programId": "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo",
+      "programDataAccount": "CSp2sB68THdrJP6N7Au4Y5u89VJ1E1ebaqZ2soHhQvav",
+      "authorityChanges": [
+        {
+          "slot": 319990392,
+          "blockTime": 1739295394,
+          "oldAuth": "FQNU5wn6fVdnPnSZyHL3PmCJsNLTi4Cf8dKU7f3MQjXj",
+          "newAuth": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+          "sig": "1i3EVBDF5X7vN4nxM4akPmow3wfzwfWJkuf7P1Xzu641sqHxzDirCMSWqqz4BoK44NousaBdWdYAeawPCbrUBQc",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:22:17.307Z"
+    },
+    "Exchange": {
+      "programId": "GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg",
+      "programDataAccount": "GtBBQFHDfDva4zwLvShrP8UpcTXJZK3sU5Bv8QsMUe66",
+      "authorityChanges": [
+        {
+          "slot": 319990590,
+          "blockTime": 1739295472,
+          "oldAuth": "FQNU5wn6fVdnPnSZyHL3PmCJsNLTi4Cf8dKU7f3MQjXj",
+          "newAuth": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+          "sig": "zaSALycrknbCCqWMQR6vfSKaZUHEXf4vV3AMgieEzGtgSbf1R95MwGwZdkcj1NsLCyvxHxa44uNNKjpzHWGD6uP",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:22:19.446Z"
+    },
+    "LP Manager": {
+      "programId": "LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8",
+      "programDataAccount": "6Pm37LKANbf5bKymp6TTAiBy4ybYNLY7XwaMWRKKLZ8S",
+      "authorityChanges": [
+        {
+          "slot": 374627505,
+          "blockTime": 1760967256,
+          "oldAuth": "bufJNUUY87ou7UdQ1P48kZKnznyTyDtAxx3c1uKQWtB",
+          "newAuth": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+          "sig": "4jXwB7StG7mfwJaPPgwMU4kmQmccH5BMDc3GNG2CgRvaXfFrfTiEU5LfR5NkG3riZgbWtw4DtzGR52brRXxNLBeF",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:22:20.318Z"
+    },
+    "Router": {
+      "programId": "2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc",
+      "programDataAccount": "Hnxc6ti8MDdArZC1tUb9xZdzEDFySUUrJGyqorZQ9Shk",
+      "authorityChanges": [
+        {
+          "slot": 348433908,
+          "blockTime": 1750584218,
+          "oldAuth": "9oXC72uXBAWewWmD76bqzevzd2DUTseoKpEfSqTpv9cL",
+          "newAuth": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+          "sig": "4qtVoUqFSBgCW9U2twh3XcqXULG4nCjpqLzoFm6bAfwgTQ7t6X8m3cwGoY98L2ygTGkagBqqqtiBUhztotbNWJyZ",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:22:20.989Z"
+    }
+  },
+  "Ore": {
+    "Ore V3": {
+      "programId": "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv",
+      "programDataAccount": "GXa6JV9AwsccP3hxvKFcZGp4w3MMtf7PJ6HYuTSyokfJ",
+      "authorityChanges": [
+        {
+          "slot": 377899792,
+          "blockTime": 1762272726,
+          "oldAuth": "EqbHxJd7UJDjDnZtbbgjo4egidbNgvSjttn1NHmF4aos",
+          "newAuth": "7eyKjpFyTszL1JB1g3BAi7UucCQfKHPThX56ehZ9kxAh",
+          "sig": "3eE562PJiYkfWL9xsq8Jdp3CZbiZTLA8E9J9fgSRX3mXS7NR53npuKzjuninADnLSLth2BLu5kuxoo5ekcBMiJ3D",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 412121041,
+          "blockTime": 1775757959,
+          "oldAuth": "7eyKjpFyTszL1JB1g3BAi7UucCQfKHPThX56ehZ9kxAh",
+          "newAuth": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+          "sig": "4ya5oeLub74ZPRq8uKsqijT88SwbjULyePR3L7f3QRRLL4AKZPT2mjobB5wZVFUYj83UKqCN2yYmHrkmkQm4bvnc",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:23:46.841Z"
+    }
+  },
+  "GMSOL Deploy": {
+    "Deploy 1": {
+      "programId": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH",
+      "programDataAccount": "AskKDcA3kw5GK9D2KdkFpb1e8kC3TrfgvzeqPZSqY2n4",
+      "authorityChanges": [
+        {
+          "slot": 408751394,
+          "blockTime": 1774436255,
+          "oldAuth": "23g7xmrtXA6LSWopQcAUgiptGUArSLEMakBKcY1S59YR",
+          "newAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "sig": "3jocxvswjxtirFFAHe4WqWZSQ8uQFsiKFu5c4U42dQjvHSJ73Z5bcMY23o9vYFqvWNoRQQU39tuQuLQVwtHY3yKM",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 416292746,
+          "blockTime": 1777408513,
+          "oldAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "newAuth": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+          "sig": "4RHWNYnxuR91a6xke2gWbcqCjMrCXAiSQbm6J2LU4JjX4sihakwuAwaYihpUJ7vwYBmuzZfSBuMsBwHX6gi2PuBT",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:23:48.206Z"
+    },
+    "Deploy 2": {
+      "programId": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj",
+      "programDataAccount": "2Vs75qtftuzccb3VbsQ9rF48kJHhXKcEhmfD7xrCgUDi",
+      "authorityChanges": [
+        {
+          "slot": 408751386,
+          "blockTime": 1774436252,
+          "oldAuth": "23g7xmrtXA6LSWopQcAUgiptGUArSLEMakBKcY1S59YR",
+          "newAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "sig": "4QTPczoVZo5GBLwGbbJBir7pnTUfoB4wC6XGEbEvCcKxyMdc4EJLwQQ5drCLPVAE7LJXs3uSTahmJjVQQJLRgY2v",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 416292746,
+          "blockTime": 1777408513,
+          "oldAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "newAuth": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+          "sig": "4RHWNYnxuR91a6xke2gWbcqCjMrCXAiSQbm6J2LU4JjX4sihakwuAwaYihpUJ7vwYBmuzZfSBuMsBwHX6gi2PuBT",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:23:49.771Z"
+    },
+    "Deploy 3": {
+      "programId": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2",
+      "programDataAccount": "GQHiCfrArYP9SRVJQhxiQ3z6WrKB1MidPjYVFAHKfmom",
+      "authorityChanges": [
+        {
+          "slot": 408751392,
+          "blockTime": 1774436254,
+          "oldAuth": "23g7xmrtXA6LSWopQcAUgiptGUArSLEMakBKcY1S59YR",
+          "newAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "sig": "5Qz5YcK8mr98UBYBUwBQhrCv69CNaAQhUXypW1J9fmp3tnUSqX6bXfefiwfaKxLCAismJgYK3qABC6kArEXmibxV",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 416292746,
+          "blockTime": 1777408513,
+          "oldAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "newAuth": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+          "sig": "4RHWNYnxuR91a6xke2gWbcqCjMrCXAiSQbm6J2LU4JjX4sihakwuAwaYihpUJ7vwYBmuzZfSBuMsBwHX6gi2PuBT",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:23:51.843Z"
+    },
+    "Deploy 4": {
+      "programId": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR",
+      "programDataAccount": "Di6MCjoitm8UNnhDLsEnMssT1avPjkriXnQ2PycLd4yr",
+      "authorityChanges": [
+        {
+          "slot": 408751382,
+          "blockTime": 1774436251,
+          "oldAuth": "23g7xmrtXA6LSWopQcAUgiptGUArSLEMakBKcY1S59YR",
+          "newAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "sig": "3WAYtBQkzBcSHWxFbLA1CbKm7ewxHXXxFSDGZxJmRThCU2Z62jytatD5KRgpan9qrj61AC3RKHVhJwEw9inVadCx",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 416292746,
+          "blockTime": 1777408513,
+          "oldAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "newAuth": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+          "sig": "4RHWNYnxuR91a6xke2gWbcqCjMrCXAiSQbm6J2LU4JjX4sihakwuAwaYihpUJ7vwYBmuzZfSBuMsBwHX6gi2PuBT",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:23:53.547Z"
+    },
+    "Deploy 5": {
+      "programId": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ",
+      "programDataAccount": "B7RgMMPmuawGzv4xssGBc48wnK8hYpvNJTD7s5JRHzTS",
+      "authorityChanges": [
+        {
+          "slot": 408751395,
+          "blockTime": 1774436256,
+          "oldAuth": "23g7xmrtXA6LSWopQcAUgiptGUArSLEMakBKcY1S59YR",
+          "newAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "sig": "Wu2dKvm6i42oEgeaWY4MuwyZ5fCm4bMfe2ZM9FN9k2EM5zL1iPqmZQsMMybQrnJX8zKe17sSsGg2kcwXP9zahYo",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 416292746,
+          "blockTime": 1777408513,
+          "oldAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "newAuth": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+          "sig": "4RHWNYnxuR91a6xke2gWbcqCjMrCXAiSQbm6J2LU4JjX4sihakwuAwaYihpUJ7vwYBmuzZfSBuMsBwHX6gi2PuBT",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:23:55.437Z"
+    },
+    "Deploy 6": {
+      "programId": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd",
+      "programDataAccount": "HrTAnLzsn2dc7or7qaeXycxbULGmMZKu2mViQbY11rTr",
+      "authorityChanges": [
+        {
+          "slot": 408751384,
+          "blockTime": 1774436252,
+          "oldAuth": "23g7xmrtXA6LSWopQcAUgiptGUArSLEMakBKcY1S59YR",
+          "newAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "sig": "3QCAxE5vE132qVkWRKbreNcV3fqxjhuHZV4EMnBJLi92mNsvWiBENZ1SruiNxeG7uJL2wjRqbYqWmjyjM24VMPgK",
+          "instruction": "SetAuthority"
+        },
+        {
+          "slot": 416292746,
+          "blockTime": 1777408513,
+          "oldAuth": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+          "newAuth": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+          "sig": "4RHWNYnxuR91a6xke2gWbcqCjMrCXAiSQbm6J2LU4JjX4sihakwuAwaYihpUJ7vwYBmuzZfSBuMsBwHX6gi2PuBT",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:23:56.857Z"
+    }
+  },
+  "Carrot": {
+    "Carrot": {
+      "programId": "CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s",
+      "programDataAccount": "D4hrynDhmPDbFBK9UvHo2CbeXs6FMkj6Rn2dwP8PxWdR",
+      "authorityChanges": [
+        {
+          "slot": 296002500,
+          "blockTime": 1729108752,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "3UC1Hh8DR445gyitKKDQjZs8Hrz5jWjKXNB52vcMNiA4orXtLQodRtDDN1Y59S5XxYGif7A56NxjGDRDgDUZFDDB",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 300052689,
+          "blockTime": 1731006758,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "64VFByEESjUzdjESv9arPyMFFj6ha6t9WTSjc2R2zPfYuGkrubeYgaYiRk2cVKkFEjoNqQY1mXHwXbyJZLByEDbN",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 300059492,
+          "blockTime": 1731009996,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "5bTnN9LAmcgiDaYCSEb6HH3xHXyeiXESJ8RoJxktFYnDAJcZJpyQUbmZ9Z3Mmu5cHHpLgS12G49M3yRM9AXqmUs8",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 301391513,
+          "blockTime": 1731606450,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "3bWbpu7DzoWyYm5KsiYaFDamn27jbBp7JWDMeRr8hRk9N4vBBFFj5pH8yLKBnebYJSrwCceKrQeVu74yDuaCKLvy",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 301392140,
+          "blockTime": 1731606732,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "3xitJQCnqF4j9zB4xH3GET3tKAa1XPLs2Q1R2vzFNoSpRmnkLkfSfnz3nDvRRXaGpDhjsXSAf6w5E7sCR33NEQD3",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 301603835,
+          "blockTime": 1731699395,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "3SDs3tmMNYzFUWySAhpkoYHZd1tSJ8a9GGXwZui1axJv83JdCHwxP6BHZFnDzakw7a6bqeTRNs7yZRBkbiHZ5x7D",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 302418483,
+          "blockTime": 1732056867,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "5sMAyKJsqGAJ79CP11MgynjS8h8y785bJBvXpjU8rX8mkYeTZBDUCD7Xg9ZW2gJtyh1VK87ZUDtCLK5hE6aTHKPA",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 302988724,
+          "blockTime": 1732303120,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "UEHpTKKeZ3HmKgsYQmwTJ1ziqxa2Kfpxm7ws6qaQ9P4ABDWNDpQ3CwCcKnEqSofcB6DSccoDzWskdTKZSqSdifw",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 302989960,
+          "blockTime": 1732303663,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "knYfc3GAPMdLWfZ9PMDDrriVrHVoczEy1qwrvtWDwdVmeMXcBRznYHGfS9Jj1MHdrWsW1gpz47UJom93t1dedhT",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 303015776,
+          "blockTime": 1732314819,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "2giFuD28k4Xg2V6Vsc9PZoL8iHjsL3EzJK1Xrq3q5yNG5cRqF67XuVpHBh64grqtQC4yygxYBK4UQ2n6AKs1BwfC",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 303050468,
+          "blockTime": 1732329728,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "2fQkqF7pCUXfyBWhMRYmRBTQm2BHK44vtz1EAtSVkRnFrvGz6rb8TxSbc2uRqTUH7bJVHTa7FE2tev95p9U2PjYw",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 309368764,
+          "blockTime": 1734986178,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "2hZY4qx38fYGAatG4pvhWUNJeKE6irgngzLFGivrqA2xTYuDnzw2jKXZr67avPwEqudso9CGkdcrmf899zovVyLj",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 309369974,
+          "blockTime": 1734986694,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "5D3xHQ4AFQSSQHenGqhQKzw2wqyvEgTVsHFPi3PhFWyPWHvKF2eAWqNKTqc1cwvFwdboeBk8mFvP5eWddUhV99YV",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 309374245,
+          "blockTime": 1734988510,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "vcY455VAWWas2BrhK4tznvytqVV7FYMVMDjEQq7yV7ekNMv9c75wNzax4pKnRPbdzsR7cvtKACNCduA6nRVXspm",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 309374470,
+          "blockTime": 1734988605,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "3Hqedro5Rq5TB5hpNwJ8GX6ujiN1RhBjZ5QDqBVLwy13hqsQYti1mJ9h2oDRBdhZohk6upKeyiQNAGSuFK99Fhmy",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 309376964,
+          "blockTime": 1734989667,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "2A4M78QjBvXgjoRzmv2tLtEzc7W47PqLW4yFAdXoBCLwEw4iJn11qwyTe3TuvCepgBg6VJcGnfH6Nsv7p7ttY53Z",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 309378539,
+          "blockTime": 1734990320,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "5sBjH7qVAkpCQdBSk2LK2zE3RaUiBkc2Am14r43E5AV5nEzxkQfPZP18UvdztkjVwQqbDAUNmUvdo3cyURaLiZpf",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 315913128,
+          "blockTime": 1737661562,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "PxDLaF3YaBv65dh3eQJqUqPYSDboovrCsLRFjwL1F3MYEqeE1mB1P5qrWBeQ4dtbqEq8BXpt91eAu1jNURwbmgQ",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 315922808,
+          "blockTime": 1737665506,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "6Ad6xMybNKeX4pFPwZYHzyr2zgfK5eJGstBpyvCtZjG1KFmErksU2eL7uyUX2JaWpq3QSjcuTJVmnsB6eAjUviG",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 326122253,
+          "blockTime": 1741725570,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "uGCW9nr2XH9jqkw5NEeE6Bu9idWK9cFAZKWBVNRQ2w7Qg5HBcMFEeKuTknVMkoUAUt64ivdgheztnfYm7vyhk3Z",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 326122906,
+          "blockTime": 1741725828,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "5GesTPzksTQTcHzqk6VY56Lqa5YJRCG72MjWELpGjhLS4thRdfjk39QjctQJpgWMd69kUU94hHr7gAtCDt5oyjKg",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 332190135,
+          "blockTime": 1744148756,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "UzakHFGjtzNYiZ2kdVCciXuZPLbX8nqygLoNxUZ9drPYUip3jExs7n4ZUCgWp5MYi4hYJQbH2J4ix9fPjKTtaEK",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 332191788,
+          "blockTime": 1744149419,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "4THqEiMjRen9pnCYK44ZmF8AvB8GsKcPFJcePkU7Q6WPXWeLUmiaZ5fg2rzz8LHMHYTbPYZuZDm5E8gvpUkWMH47",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 332329742,
+          "blockTime": 1744204205,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "5o9MfFP8AbG5gNRgKAdXWBVdZNFpqZaM4nVK5msugMVkfZhtvDjxYSUXdsj1wjw1X7JCBgfCLW254Nvq4y7qgUDj",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 332330488,
+          "blockTime": 1744204497,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "4CSBr7aymEy5DQSsq1hnZuK9dNdFBhjgVrWfGnxM5TTrWqofGwLsX5gPnX1d2nY1NyFdRLvH9Nmr4V4HhxWCMQPU",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 332334884,
+          "blockTime": 1744206253,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "zszrspLfWovGNyxBmuVPgmgsEpvhzoSKVKyjmLWDELMcq9zMWqjbT7zewSARG9PyH4pnrsQBhhtHYaw6rU3HDEc",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 332335716,
+          "blockTime": 1744206588,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "5oegEywmcAfqgmHaY1BdhgGF5qgxJc5wE4sjynzm48GsJahms3a7kbUEBCWTTTb4x7Xx9Yi6JQqL7jCgdVSSCvan",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 335829464,
+          "blockTime": 1745593504,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "sig": "3yPtefWkF1W8tsFyrYiZnBwuoZdtTHEaVP77z6xuyXx1VzWKieJiX4dSEz8kJAXf4rF62MMdWnG6otxkbEz8hiHK",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 335831644,
+          "blockTime": 1745594368,
+          "oldAuth": "2iixqPCGLzapipCaGpT6sE3MCkwc6bsCd2Awq3gLjMsX",
+          "newAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "sig": "4ktTMMj7KUMebveqmN8RP3m5wvdHVtLXfaau9QCfpqfhd83rwAVXP1osrPtskfy12dbRna7mSRCNw3g2CA2Lo9YX",
+          "instruction": "SetAuthorityChecked"
+        },
+        {
+          "slot": 339552799,
+          "blockTime": 1747064164,
+          "oldAuth": "4eQgRs4orYH2XL5qVChBvB2hBHErC1BYLZSuj8YqcpgU",
+          "newAuth": "3eUEKYy7bPqtZ3KyUvCgpXV55v8TfN4xE85NickX6SUM",
+          "sig": "wiKGmZQpKKApm6Di5T1oj6i8PLiYgVLVmWsFEuyQ5fPbRBetD9nNCocG8dzgm2jCUR9sFhFZBJHVWPuWE1YJv28",
+          "instruction": "SetAuthority"
+        }
+      ],
+      "scannedAt": "2026-05-08T15:24:19.652Z"
+    }
+  }
+}

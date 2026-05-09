@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.solgov.app",
+    "sha256_cert_fingerprints": ["DC:C1:1E:EA:08:81:14:FE:C3:6C:E1:E8:A6:0A:00:F4:A6:57:B0:D6:B6:7A:D2:B6:A2:8F:F4:83:CF:DE:30:E7"]
+  }
+}]

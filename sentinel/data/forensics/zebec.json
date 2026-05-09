@@ -1,0 +1,5 @@
+{
+  "protocol":"Zebec","researchedAt":"2026-04-17T23:00:00Z","researcher":"manual stub",
+  "sources":[],"programs":[],"multisigs":[],"authorities":[],"vaultPdas":[],
+  "governanceModel":"Zebec - token streaming / payroll. No multisig tracked.","gaps":["Program IDs","Governance model","Add to tracked list"],"confidence":"low"
+}

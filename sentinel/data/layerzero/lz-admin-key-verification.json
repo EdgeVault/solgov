@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-04-20T14:31:58.370Z",
+  "target": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+  "accountInfo": {
+    "owner": "11111111111111111111111111111111",
+    "dataLen": 0,
+    "lamports": 33957520546
+  },
+  "signerCount": 9,
+  "readonlyCount": 1,
+  "programsSignedFor": [
+    [
+      "ComputeBudget111111111111111111111111111111",
+      9
+    ],
+    [
+      "6doghB248px58JSSwG4qejQ46kFMW4AMj7vzJnWZHNZn",
+      2
+    ],
+    [
+      "76y77prsiCMvXMjuoZ5VRrhG5qYBrUMYTE5WgHqgjEn6",
+      4
+    ],
+    [
+      "7a4WjyR8VZ7yZz5XJAKm39BUGn5iT9CKcv2pmG9tdXVH",
+      2
+    ],
+    [
+      "HtEYV4xB4wvsj5fgTkcfuChYpvGYzgzwvNhgDZQNh7wW",
+      1
+    ]
+  ],
+  "sampleSignatures": [
+    {
+      "signature": "2ZNv2MjUbmk3mZ2mbfF5Zt5a1KQeZCtHNgvV3Ntz6uPf7H68DUDiVUoJ7wiTVvQsFQCoERoJLQfhDaBt4HD3aKUa",
+      "blockTime": 1774544257,
+      "signerRole": "writable-non-signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "11111111111111111111111111111111"
+      ]
+    },
+    {
+      "signature": "p9Lbos57PEBQ4cv5GDN3s4WkzJeJWd6qsNFKAAskxhxLpJQsfEEzoFvsdB2GzsyRhcqZ58AxCjj6k751YRN33dz",
+      "blockTime": 1774544224,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "6doghB248px58JSSwG4qejQ46kFMW4AMj7vzJnWZHNZn"
+      ]
+    },
+    {
+      "signature": "2yMeDNqT6GpJSGdQyswSW5ic8oD7BpTQSWAA8Yfbzbo9cYVnYBtGJQ9BE6fdz7qkoVdZAq7t6kckHicb2kxS6PTF",
+      "blockTime": 1774544222,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "76y77prsiCMvXMjuoZ5VRrhG5qYBrUMYTE5WgHqgjEn6"
+      ]
+    },
+    {
+      "signature": "44aTPVPYLYnjK2EbdcotYQv77FA1fnh6wSVrf46yftNG6AdfLp4dXMKbX2CPWxzRzukw6mSN1yCq5ptCLwtfZy9T",
+      "blockTime": 1774544220,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "76y77prsiCMvXMjuoZ5VRrhG5qYBrUMYTE5WgHqgjEn6"
+      ]
+    },
+    {
+      "signature": "EQr9Gex51bJeEt3g2oShC4dBdrqV3AedkpnAs6Sj7VUmfte7QfeVAd2mdfEFyZNMVjAH7qM1jcAXa5f27yKPmUr",
+      "blockTime": 1774544217,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "7a4WjyR8VZ7yZz5XJAKm39BUGn5iT9CKcv2pmG9tdXVH"
+      ]
+    },
+    {
+      "signature": "5SQr7i6qXCXbCeNR2yqg4VvEYZjTLR2uUhRzrpVW6vUhJcNaGQcSk4ypK4weMbpoXTvskUo8ZKy87DZ3UTQc1F3G",
+      "blockTime": 1772561258,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "6doghB248px58JSSwG4qejQ46kFMW4AMj7vzJnWZHNZn"
+      ]
+    },
+    {
+      "signature": "35k162ETDxEQQH1279cC8HBqhGSNc4m5WSiip1Tmt9rcVjqqDx7EhFEWbtBhPTgQsRkS2h9FXVu8MftkcDzikV47",
+      "blockTime": 1772561256,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "76y77prsiCMvXMjuoZ5VRrhG5qYBrUMYTE5WgHqgjEn6"
+      ]
+    },
+    {
+      "signature": "5569HASksJpX8wDKwzyyodSkM8p9CEHhSCLqDX4fhUZoQh227gJWDzSvpDPzGVBsFw1jwXmY6dDenXZ7kP6qByGQ",
+      "blockTime": 1772561252,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "76y77prsiCMvXMjuoZ5VRrhG5qYBrUMYTE5WgHqgjEn6"
+      ]
+    },
+    {
+      "signature": "2RUE5JfW232PegxCTCfRtXQvDVw2PhPdPEs5xms89drrCzfwdPhinM81r4u6sZtCVWeNnh6Udq5kssSZxTnc4Vdd",
+      "blockTime": 1772561244,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "7a4WjyR8VZ7yZz5XJAKm39BUGn5iT9CKcv2pmG9tdXVH"
+      ]
+    },
+    {
+      "signature": "2iF2NQg2xNN6jbepy4iGyY9muAUYTNpPGvQpYMomyovCfWFRiewGfCWbsCBaJ4FdYp6jLZnkYN9KDz3z2c1ttEpm",
+      "blockTime": 1771607008,
+      "signerRole": "signer",
+      "programs": [
+        "ComputeBudget111111111111111111111111111111",
+        "HtEYV4xB4wvsj5fgTkcfuChYpvGYzgzwvNhgDZQNh7wW"
+      ]
+    }
+  ]
+}

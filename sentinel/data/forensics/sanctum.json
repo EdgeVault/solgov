@@ -1,0 +1,68 @@
+{
+  "protocol": "Sanctum",
+  "researchedAt": "2026-04-17T22:00:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://learn.sanctum.so/docs/for-developers/deployed-programs",
+      "note": "403 via WebFetch; partial info via WebSearch"
+    },
+    {
+      "kind": "github",
+      "url": "https://github.com/igneous-labs"
+    }
+  ],
+  "programs": [
+    {
+      "id": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+      "name": "Sanctum S Controller (Infinity pool controller)",
+      "role": "S / Infinity multi-LST pool controller",
+      "source": "Sanctum docs via search result",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "confirm ID"
+      ],
+      "upgradeAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "f1tUoNEKrDp1oeGn4zxr7bh41eN6VcfHjfrL3ZqQday",
+      "name": "Sanctum Flat Fee Pricing",
+      "role": "LST swap pricing module",
+      "source": "Sanctum docs via search result",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "confirm ID"
+      ],
+      "upgradeAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "AApfiPZgV5MoPU691GwhdDhq5sKEMMH1Uh8S4Z9xvP6b",
+      "role": "Sanctum governance (Squads V3, tracked)",
+      "threshold": "? (V3)",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "parentMultisig": "AApfiPZgV5MoPU691GwhdDhq5sKEMMH1Uh8S4Z9xvP6b",
+      "vaultIndex": "unknown",
+      "notes": "Squads V3 - uses tracked Sanctum multisig - discovered via RPC concentration sweep April 17 2026",
+      "alreadyTracked": false
+    }
+  ],
+  "governanceModel": "Squads V3. Multi-program protocol (S Controller, Flat Fee Pricing, Router, Unstake, SPL Stake Pool fork, per-LST vault programs). Governance chain per program not in local data.",
+  "gaps": [
+    "Fetch `learn.sanctum.so/docs/for-developers/deployed-programs` via a different method (WebFetch blocked) to enumerate ALL Sanctum programs (Router, Unstake, per-LST vault programs)",
+    "Upgrade authority for every Sanctum program - RPC needed",
+    "Sanctum operates a SPL-Stake-Pool fork under igneous-labs/sanctum-spl-stake-pool - identify that program's address"
+  ],
+  "confidence": "low",
+  "notes": "Docs page was blocked (403). Only confirmed 2 program IDs via search metadata. Sanctum has more programs than this captures - flagged as gap."
+}

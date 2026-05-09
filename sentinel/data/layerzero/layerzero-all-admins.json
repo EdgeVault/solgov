@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-04-20T14:26:30.269Z",
+  "results": [
+    {
+      "program": "Endpoint",
+      "programId": "76y77prsiCMvXMjuoZ5VRrhG5qYBrUMYTE5WgHqgjEn6",
+      "upgradeAuthority": "4QMpxbFQpupw6QzteuYnjgnfaP6BGZx4fW3PZTfBzTuY",
+      "authorityType": "plain-keypair",
+      "authorityDetails": "System Program owner, 0 bytes"
+    },
+    {
+      "program": "ULN (MessageLib)",
+      "programId": "7a4WjyR8VZ7yZz5XJAKm39BUGn5iT9CKcv2pmG9tdXVH",
+      "upgradeAuthority": "IMMUTABLE"
+    },
+    {
+      "program": "DVN (standard)",
+      "programId": "HtEYV4xB4wvsj5fgTkcfuChYpvGYzgzwvNhgDZQNh7wW",
+      "upgradeAuthority": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "authorityType": "plain-keypair",
+      "authorityDetails": "System Program owner, 0 bytes"
+    },
+    {
+      "program": "Executor",
+      "programId": "6doghB248px58JSSwG4qejQ46kFMW4AMj7vzJnWZHNZn",
+      "upgradeAuthority": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "authorityType": "plain-keypair",
+      "authorityDetails": "System Program owner, 0 bytes"
+    },
+    {
+      "program": "Pricefeed",
+      "programId": "8ahPGPjEbpgGaZx2NV1iG5Shj7TDwvsjkEDcGWjt94TP",
+      "upgradeAuthority": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "authorityType": "plain-keypair",
+      "authorityDetails": "System Program owner, 0 bytes"
+    },
+    {
+      "program": "Blocked-MessageLib",
+      "programId": "2XrYqmhBMPJgDsb4SVbjV1PnJBprurd5bzRCkHwiFCJB",
+      "upgradeAuthority": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "authorityType": "plain-keypair",
+      "authorityDetails": "System Program owner, 0 bytes"
+    },
+    {
+      "program": "OFT standard",
+      "programId": "HRPXLCqspQocTjfcX4rvAPaY9q6Gwb1rrD3xXWrfJWdW",
+      "upgradeAuthority": "GrvPpMeeYmT7hzfSp1UUatma2orhUE6mg7NWjRKvhmwZ",
+      "authorityType": "plain-keypair",
+      "authorityDetails": "System Program owner, 0 bytes"
+    },
+    {
+      "program": "Endpoint (admin)",
+      "address": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "type": "plain-keypair",
+      "details": "System Program owner, 0 bytes"
+    },
+    {
+      "program": "ULN (admin)",
+      "address": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "type": "plain-keypair",
+      "details": "System Program owner, 0 bytes"
+    }
+  ],
+  "authorityActivity": [
+    {
+      "address": "4QMpxbFQpupw6QzteuYnjgnfaP6BGZx4fW3PZTfBzTuY",
+      "sigCount": 7,
+      "firstActive": "2024-07-30",
+      "lastActive": "2024-11-12"
+    },
+    {
+      "address": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "sigCount": 1000,
+      "firstActive": "2025-12-17",
+      "lastActive": "2026-03-26"
+    },
+    {
+      "address": "GrvPpMeeYmT7hzfSp1UUatma2orhUE6mg7NWjRKvhmwZ",
+      "sigCount": 1000,
+      "firstActive": "2026-03-01",
+      "lastActive": "2026-04-20"
+    }
+  ],
+  "shared": [
+    {
+      "key": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "programs": [
+        "DVN (standard)",
+        "Executor",
+        "Pricefeed",
+        "Blocked-MessageLib",
+        "Endpoint (admin)",
+        "ULN (admin)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "protocol": "deBridge",
+  "researchedAt": "2026-04-23T16:00:00Z",
+  "researcher": "on-chain trace - full upgrade-authority chain walked via Helius RPC",
+  "sources": [
+    { "kind": "on-chain", "note": "Program upgrade authority traced via ProgramData ledger + recent upgrade transactions" },
+    { "kind": "on-chain", "note": "Squads V4 vault PDA derivation verified by findProgramAddressSync against the multisig pubkey + vault index 0" },
+    { "kind": "on-chain", "note": "Multisig threshold and members read via @sqds/multisig SDK Multisig.fromAccountAddress" }
+  ],
+  "programs": [
+    {
+      "id": "DEbrdGj3HsRsAzx6uH4MKyREKxVAfBydijLUF3ygsFfh",
+      "name": "deBridge Main",
+      "role": "Cross-chain messaging core program on Solana",
+      "upgradeAuthority": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+      "upgradeAuthorityKind": "PDA (off-curve, controlled by custom governance program BRTbg)",
+      "alreadyTracked": true
+    },
+    {
+      "id": "DeSetTwWhjZq6Pz9Kfdo1KoS5NqtsM6G8ERbX4SSCSft",
+      "name": "deBridge Settings",
+      "role": "Settings / configuration program",
+      "upgradeAuthority": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+      "upgradeAuthorityKind": "PDA (shared with Main, same governance chain)"
+    },
+    {
+      "id": "BRTbgHnC2AWfumCBU6ExthDie912RiDyiS3uXgMPQPQN",
+      "name": "deBridge custom governance program",
+      "role": "invoke_signs on BCTmaw to authorise program upgrades on deBridge Main + Settings",
+      "upgradeAuthority": "6EhmrJSgwCwRrF6aBAQ3ZJV3fWcJJbZLwQwyk96azAhj",
+      "upgradeAuthorityKind": "PDA (off-curve, Squads V4 vault[0] of FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap)"
+    },
+    {
+      "id": "F3uCCi2NQSJHkEJHjGjA5ZTwypBLtzMPYBvnBfnofAyj",
+      "name": "deBridge governance helper program",
+      "role": "auxiliary program invoked alongside BRTbg during upgrades",
+      "upgradeAuthority": "6EhmrJSgwCwRrF6aBAQ3ZJV3fWcJJbZLwQwyk96azAhj",
+      "upgradeAuthorityKind": "PDA (shared with BRTbg, same Squads V4 vault)"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap",
+      "role": "Squads V4 multisig, ultimate authority over deBridge program upgrades",
+      "threshold": "2/3",
+      "timelock": "0s",
+      "configAuthority": "11111111111111111111111111111111 (none, autonomous)",
+      "members": [
+        { "key": "Bz3gbcQUFL3VHWKez4AoGCmk94wyLp5Qhk7YDr3TBhD6", "permissions": "Full (Initiate+Vote+Execute)" },
+        { "key": "D1Y199Axzm459WuwzYCErmvipaYbw9rW77H1mcNaJZuf", "permissions": "Full (Initiate+Vote+Execute)" },
+        { "key": "EWJFBLoybGfEphK1bf2EyDVDEUmSM6TekkQSGeBHyFU7", "permissions": "Full (Initiate+Vote+Execute)" }
+      ],
+      "vaultPdaIndex0": "6EhmrJSgwCwRrF6aBAQ3ZJV3fWcJJbZLwQwyk96azAhj",
+      "alreadyTracked": false,
+      "note": "This multisig was not previously tracked. deBridge was erroneously classified as Single Signer 1/1 because the surface-level upgrade authority BCTmaw was treated as an EOA; it is actually a PDA two layers deep inside a custom governance program chain."
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+      "kind": "off-curve PDA",
+      "controlledBy": "custom program BRTbgHnC2AWfumCBU6ExthDie912RiDyiS3uXgMPQPQN via invoke_signed",
+      "role": "stored upgrade authority of deBridge Main and Settings programs"
+    },
+    {
+      "address": "6EhmrJSgwCwRrF6aBAQ3ZJV3fWcJJbZLwQwyk96azAhj",
+      "kind": "Squads V4 vault PDA (vault index 0)",
+      "parentMultisig": "FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap",
+      "role": "stored upgrade authority of BRTbg and F3uCC custom programs"
+    }
+  ],
+  "governanceModel": "Three-layer governance: deBridge program to PDA BCTmaw to custom governance program BRTbg to PDA 6EhmrJS (Squads V4 vault) to Squads V4 multisig (2/3, no timelock). Real threshold for program upgrade is 2 of 3 Squads V4 signers.",
+  "prevClassification": "Single Signer 1/1 - incorrect. The surface-level authority address is a PDA, not an EOA. Corrected 2026-04-23 after manual sanity check prompted by community feedback.",
+  "gaps": [
+    "Members' personal identities and team roles are unlabelled",
+    "Custom governance program BRTbg source / IDL not independently verified; practical assumption is that any approval by the Squads multisig can trigger an upgrade",
+    "Cross-chain 12-node validator network governance (EVM-side) is separate and not covered by this trace"
+  ],
+  "confidence": "high"
+}

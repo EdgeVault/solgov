@@ -1,0 +1,154 @@
+{
+  "computedAt": "2026-04-17T15:31:56.272Z",
+  "vault": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+  "owningMultisig": {
+    "address": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+    "threshold": 3,
+    "memberCount": 6,
+    "members": [
+      "mprGV3VdeBmf7o3dixtfYNgB2cHUU6cjRwTFCzWiEwd",
+      "propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz",
+      "9SV1SL96d5CJBaoJsDJePujBVgJ7sVpLZXFsktq2WtSn",
+      "AWofQNYEnbQniPbyHNiVfrjy3i6PK7xZRUcHVfu7crCs",
+      "ERd6pJjzWiCsNvuJWtPYvbusUsqxhVjMEnGdqEgXbHCK",
+      "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym"
+    ],
+    "timeLock": 0,
+    "configAuthority": "autonomous"
+  },
+  "programCount": 24,
+  "programs": [
+    {
+      "programData": "WDHWo6kTfndy2xKzLcze9aVwomp5to8eTaCJktifqUz",
+      "programId": "mfanLprNnaiP4RX9Zz1BMcDosYHCqnG24H1fMEbi9Gn",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "ec5NgrYWhZBjoWracq3WQca6jDEAwDWibgDDSFWrwww",
+      "programId": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT",
+      "name": "Data Credits"
+    },
+    {
+      "programData": "2KWAhXyZvNQoPCTR1gAKLZYWW4jRefFitvQjRWLhzhMz",
+      "programId": "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "2oRmyQGGzxs9WxkYRUj4Yu9CrWxAwZKW7pNH9jBYvfgs",
+      "programId": "nprx42sXf5rpVnwBWEdRg1d8tuCWsTuVLys1pRWwE6p",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "3nfjrM9UfPJxsqVqvzf1aa9MptAMnGGDuQGPy9Y1jGWv",
+      "programId": "1atrmQs3eq1N2FEYWu6tyTXbCjP4uQwExpjtnhXtS8h",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "5eD2ns9eqYhRMQVaJo1cExfY1JQme6ybt2ZgjkXLA1cU",
+      "programId": "tuktukUrfhXT6ZT77QTU8RQtvgL967uRuVagWF57zVA",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "5f7TWpzsBFPKjaoAP5mZ5t2FZCV7ZuA9usZVr5K1PDTz",
+      "programId": "cronAjRZnJn3MTP3B9kE62NWDrjSuAPVXf9c4hu4grM",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "5pW4TFoaHszXUHLK6AnLcv3peYTvHiu8ExKeMtGeLho8",
+      "programId": "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR",
+      "name": "Helium Sub DAOs (HSD)"
+    },
+    {
+      "programData": "5x63AgNQWkw7hNG5poEhDdQamWeQVwDpPAuwThZiBMR7",
+      "programId": "treaf4wWBBty3fHdyBpo35Mz84M8k3heKXmjmi9vFt5",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "612cWU5D6At4tttf2ryJoC1QWomNEEhGN2cVxv5hWEyu",
+      "programId": "topqqzQZroCyRrgyM5zVq6xkFDVnfF13iixSjajydgU",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "7xmHwZCeR34udycMUrMzKsPvA9WcXePh52L1paGSqGf3",
+      "programId": "memMa1HG4odAFmUbGWfPwS1WWfK95k99F2YTkGvyxZr",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "8NSe9xRgDYFjyS2Kx6FZfwkK6udEw19dT6Tdxvvb2q3R",
+      "programId": "noEmmgLmQdk6DLiPV8CSwQv3qQDyGEhz9m5A4zhtByv",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "8td3HJeaXoUpW7y7ghf3b5VPPNq1KFy6Dc7ipzxNM1Kb",
+      "programId": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
+      "name": "Helium Entity Manager"
+    },
+    {
+      "programData": "95gFBuAJqWhxnFXNpyJYeXjLACbwqaRfXJYLDAhW5cLo",
+      "programId": "orgdXvHVLkWgBYerptASkAwkZAE563CJUu717dMNx5f",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "9uGEpvoQzzuDGHayfLqSrLdx7hoC4BgTvChGrQGC3Tzc",
+      "programId": "hvsrNC3NKbcryqDs2DocYHZ9yPKEVzdSjQG6RVtK1s8",
+      "name": "Helium Voter Stake Registry"
+    },
+    {
+      "programData": "A8VEPbBLUdo7LCdpQR6Nvwi8tfU4Q3fCgbgjKu3sY7Ez",
+      "programId": "stcfiqW3fwD9QCd8Bqr1NBLrs7dftZHBQe7RiMMA4aM",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "BSbzkBGA333NCuLTvfarqnj54KLJjt5sZWqujy94GLqs",
+      "programId": "porcSnvH9pvcYPmQ65Y8qcZSRxQBiBBQX7UV5nmBegy",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "BfCv4387kNq3osADrM8mw2TE2e39tcmot37EuKuqHu1g",
+      "programId": "hexbnKYoA2GercNNhHUCCfrTRWrHjT6ujKPXTa5NPqJ",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "BvQLZFuj14sorcYWZFq4uZHiCrnfS7oms3bRWURYCLma",
+      "programId": "circAbx64bbsscPbQzZAUvuXpHqrCe6fLMzc2uKXz9g",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "C7AGGjcwxc9iUCt815q7htTJec8JjphKoFLnZ6F6Bvm5",
+      "programId": "hcrLPFgFUY6sCUKzqLWxXx5bntDiDCrAZVcrXfx9AHu",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "CtUT6SbdHPxLxLopuhCUd3uYGMZerZPrDP8eKK71tuEZ",
+      "programId": "we1cGnTxTkDP9Sk49dw1d3T7ik7V2NfnY4qDGCDHXfC",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "Cx3kWaJhKuNqf1HaQfEzoQdy7NpoQRcj8Epmf4vokEsr",
+      "programId": "fanqeMu3fw8R4LwKNbahPtYXJsyLL6NXyfe2BqzhfB6",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "EJAtq4Cc2jRym8igsmjaLx2XvgZr4kGBGo7Xj9w21Tjf",
+      "programId": "rorcfdX4h9m9swCKgcypaHJ8NGYVANBpmV9EHn3cYrF",
+      "name": "(unknown)"
+    },
+    {
+      "programData": "FBXYw85yzxyghiyAUpedouWNLWooraC799BUqQ99HgtT",
+      "programId": "1azyuavdMyvsivtNxPoz6SucD18eDHeXzFCUPq5XU7w",
+      "name": "(unknown)"
+    }
+  ],
+  "vault1Comparison": {
+    "address": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+    "programCount": 1,
+    "programs": [
+      "omnixgS8fnqHfCcTGKWj6JtKjzpJZ1Y5y9pyFkQDkYE"
+    ]
+  },
+  "classification": {
+    "identified": 4,
+    "financiallyCritical": 2,
+    "governanceInfrastructure": 3
+  }
+}

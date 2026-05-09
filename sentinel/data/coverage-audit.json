@@ -1,0 +1,947 @@
+{
+  "generatedAt": "2026-05-08T08:34:58.924Z",
+  "summary": {
+    "protocolsTracked": 50,
+    "programsListedInProtocolsTs": 94,
+    "programsInConcentrationScan": 155,
+    "multisigsInRegistry": 63,
+    "protocolsWithCoverageGap": 10,
+    "protocolsWithSplitAuthority": 8,
+    "looseMultisigCount": 22,
+    "looseVaultCount": 14
+  },
+  "byProtocol": [
+    {
+      "protocol": "Orca",
+      "version": "Squads V4",
+      "multisigAddress": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+      "authorityAddress": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "programsListed": 2,
+      "concentrationScan": {
+        "label": "Orca vault",
+        "severity": "HIGH",
+        "programDataAccountCount": 3
+      },
+      "coverageGapPrograms": 1,
+      "splitAuthority": true,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+        "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG"
+      ]
+    },
+    {
+      "protocol": "Drift",
+      "version": "Squads V4",
+      "multisigAddress": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+      "authorityAddress": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+      "programsListed": 2,
+      "concentrationScan": {
+        "label": "Drift E44y4Gm vault (recovery, Drift V2)",
+        "severity": "MONITOR",
+        "programDataAccountCount": 1
+      },
+      "coverageGapPrograms": 0,
+      "splitAuthority": true,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+        "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9"
+      ]
+    },
+    {
+      "protocol": "Project 0",
+      "version": "Squads V4",
+      "multisigAddress": "7FCPipJWVbPbdHymVt1gJYwKciakkJz5GahdQySemvHk",
+      "authorityAddress": "J3oBkTkDXU3TcAggJEa3YeBZE5om5yNAdTtLVNXFD47",
+      "programsListed": 2,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": true,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "J3oBkTkDXU3TcAggJEa3YeBZE5om5yNAdTtLVNXFD47",
+        "3HGdGLrnK9DsnHi1mCrUMLGfQHcu6xUrXhMY14GYjqvM"
+      ]
+    },
+    {
+      "protocol": "Kamino",
+      "version": "Squads V4",
+      "multisigAddress": "6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM",
+      "authorityAddress": "GzFgdRJXmawPhGeBsyRCDLx4jAKPsvbUqoqitzppkzkW",
+      "programsListed": 2,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": true,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "GzFgdRJXmawPhGeBsyRCDLx4jAKPsvbUqoqitzppkzkW",
+        "3pAxu6C9ykZvyyzdknZvmz6CbWGZPTjRevjk4PRF5ib7"
+      ]
+    },
+    {
+      "protocol": "Jupiter Perps",
+      "version": "Squads V4",
+      "multisigAddress": "AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm",
+      "authorityAddress": "5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx"
+      ]
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "version": "Squads V4",
+      "multisigAddress": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+      "authorityAddress": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "programsListed": 6,
+      "concentrationScan": {
+        "label": "Jupiter Lend vault",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 6
+      },
+      "coverageGapPrograms": 0,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ"
+      ]
+    },
+    {
+      "protocol": "Magic Eden",
+      "version": "Squads V4",
+      "multisigAddress": "J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE",
+      "authorityAddress": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "programsListed": 2,
+      "concentrationScan": {
+        "label": "Magic Eden vault (V4, 2 progs)",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 7
+      },
+      "coverageGapPrograms": 5,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb"
+      ]
+    },
+    {
+      "protocol": "Hylo",
+      "version": "Squads V4",
+      "multisigAddress": "2z3t2eBz7VL39Q3vEvaemd5mhT9XLoFofEH2cXvwCJvb",
+      "authorityAddress": "DLkcqeNNX8nRQgD87DN7LjHkcLQd9K2wuqaCbhkERJxL",
+      "programsListed": 0,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": []
+    },
+    {
+      "protocol": "Loopscale",
+      "version": "Squads V4",
+      "multisigAddress": "C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk",
+      "authorityAddress": "DwBXwJDZ4Av4miT62sEssWJUinkzwkmPPB4Fg3fKEfft",
+      "programsListed": 0,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": []
+    },
+    {
+      "protocol": "Exponent",
+      "version": "Squads V4",
+      "multisigAddress": "51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH",
+      "authorityAddress": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP"
+      ]
+    },
+    {
+      "protocol": "Huma Finance",
+      "version": "Squads V4",
+      "multisigAddress": "uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX",
+      "authorityAddress": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+      "programsListed": 2,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF"
+      ]
+    },
+    {
+      "protocol": "Solstice",
+      "version": "Squads V4",
+      "multisigAddress": "AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf",
+      "authorityAddress": "BzMuMbtah9bqN4HERkPo2PsVoaQKD2xfvYq1xfDCFwEb",
+      "programsListed": 2,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": true,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "BzMuMbtah9bqN4HERkPo2PsVoaQKD2xfvYq1xfDCFwEb",
+        "CYr14TrXD5MAertRqcR58KirPz7XoHGZjfBsfn5M2voh"
+      ]
+    },
+    {
+      "protocol": "Pumpfun + PumpSwap",
+      "version": "Squads V4",
+      "multisigAddress": "2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW",
+      "authorityAddress": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "programsListed": 2,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8"
+      ]
+    },
+    {
+      "protocol": "Lulo",
+      "version": "Squads V4",
+      "multisigAddress": "8Sr4rQJL2aQT3EL97mbrk1T9VMw4pCS2mxMPp2QBzHQq",
+      "authorityAddress": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs"
+      ]
+    },
+    {
+      "protocol": "Nosana",
+      "version": "Squads V4",
+      "multisigAddress": "ktKWwDt5J8NFMi5jQNRRBDKAhimU5tnrGCcXuYJmxqE",
+      "authorityAddress": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "programsListed": 4,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9"
+      ]
+    },
+    {
+      "protocol": "Switchboard",
+      "version": "Squads V4",
+      "multisigAddress": "93RQfY6VHRkqXBCEhMY5u92bCGp428DTzqZUEA2Hjr9h",
+      "authorityAddress": "DREcTwxxuehtUVgnGwDpTcKT9zTK5uDmdLbnRY7cijEx",
+      "programsListed": 3,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": true,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "2NvGRFswVx3GXxURNSfjbsWY4iP1ufj8LvAKJWGXSm4D",
+        "31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc",
+        "DREcTwxxuehtUVgnGwDpTcKT9zTK5uDmdLbnRY7cijEx"
+      ]
+    },
+    {
+      "protocol": "Stabble",
+      "version": "Squads V4",
+      "multisigAddress": "AFRN2ECAY1YTbfkXD7yvoc1iaxYdt5BdyyqyPRsrHaK2",
+      "authorityAddress": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP"
+      ]
+    },
+    {
+      "protocol": "Titan",
+      "version": "Squads V4",
+      "multisigAddress": "F1WZezmt2J1dSsXrQWrS2Umn9CYzPPR2eP3sunZrMX29",
+      "authorityAddress": "H92mY1R6CYDPpHjisrE3C7xqfgp7751f2R13aRoT4SbB",
+      "programsListed": 0,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": []
+    },
+    {
+      "protocol": "Solayer",
+      "version": "Squads V4",
+      "multisigAddress": "5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp",
+      "authorityAddress": "GcYvLKKEWpxQMqFe9HUcDJYMGvXt7kwf8gfBvjnW4wnm",
+      "programsListed": 0,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": []
+    },
+    {
+      "protocol": "Flash Trade",
+      "version": "Squads V4",
+      "multisigAddress": "Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF",
+      "authorityAddress": "dhfZwJfdesv7fNW3nngCSjeGbx9zWUusLtfPaWbVKvo",
+      "programsListed": 0,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": []
+    },
+    {
+      "protocol": "Sanctum",
+      "version": "Squads V3",
+      "multisigAddress": "AApfiPZgV5MoPU691GwhdDhq5sKEMMH1Uh8S4Z9xvP6b",
+      "authorityAddress": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "programsListed": 3,
+      "concentrationScan": {
+        "label": "Sanctum vault (V3, 2 progs)",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 12
+      },
+      "coverageGapPrograms": 9,
+      "splitAuthority": true,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+        "8VE2uJkoheDbJd9rCyKzfXmiMqAS4o1B3XGshEh86BGk"
+      ]
+    },
+    {
+      "protocol": "Jupiter Agg",
+      "version": "Squads V3",
+      "multisigAddress": "7ZyDFzet6sKgZLN4D89JLfo7chu2n7nYdkFt5RCFk8Sf",
+      "authorityAddress": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "programsListed": 3,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ"
+      ]
+    },
+    {
+      "protocol": "Raydium",
+      "version": "Squads V4",
+      "multisigAddress": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "authorityAddress": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "programsListed": 5,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK"
+      ]
+    },
+    {
+      "protocol": "Tensor",
+      "version": "Squads V3",
+      "multisigAddress": "3djJ66VVaG7si2wsh9isspeZX13meHDvwBzuPGCowY4Z",
+      "authorityAddress": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "programsListed": 3,
+      "concentrationScan": {
+        "label": "Tensor vault (V3, 2 progs)",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 13
+      },
+      "coverageGapPrograms": 10,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv"
+      ]
+    },
+    {
+      "protocol": "Phoenix DEX",
+      "version": "Squads V3",
+      "multisigAddress": "6x3BDkL2n7VjBWxRD95EsbQi2R2E4zxrvcz1VA6pihnK",
+      "authorityAddress": "8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq"
+      ]
+    },
+    {
+      "protocol": "Meteora",
+      "version": "Squads V3",
+      "multisigAddress": "CoEsykatDegLB7pcMJia79JSriDdi71nPnjgeSfw623k",
+      "authorityAddress": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "programsListed": 4,
+      "concentrationScan": {
+        "label": "Meteora upgrade vault (V3, 3 progs)",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 15
+      },
+      "coverageGapPrograms": 11,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd"
+      ]
+    },
+    {
+      "protocol": "Parcl",
+      "version": "Squads V3",
+      "multisigAddress": "7qCHZqcbLm9VYUCLtFmFFSyDsvuZ5GHhypv7b4JRAEUE",
+      "authorityAddress": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "programsListed": 0,
+      "concentrationScan": {
+        "label": "Parcl perps vault (V3, 2 progs)",
+        "severity": "HIGH",
+        "programDataAccountCount": 2
+      },
+      "coverageGapPrograms": 2,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": []
+    },
+    {
+      "protocol": "Marinade",
+      "version": "Serum Multisig",
+      "multisigAddress": "magrsHFQxkkioAy45VWnZnFBBdKVdy2ZiRoRGYT9Wed",
+      "authorityAddress": "551FBXSXdhcRDDkdcb3ThDRg84Mwe5Zs6YjJ1EEoyzBp",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "551FBXSXdhcRDDkdcb3ThDRg84Mwe5Zs6YjJ1EEoyzBp"
+      ]
+    },
+    {
+      "protocol": "Pyth",
+      "version": "Wormhole",
+      "multisigAddress": "Pythian Council multisig (Wormhole GuardianSet: 13/19 for cross-chain)",
+      "authorityAddress": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "programsListed": 3,
+      "concentrationScan": {
+        "label": "Pyth upgrade authority (Wormhole-style, 3 progs)",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 11
+      },
+      "coverageGapPrograms": 8,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT"
+      ]
+    },
+    {
+      "protocol": "Jito",
+      "version": "Realms DAO",
+      "multisigAddress": "DAO-governed, not a standard multisig",
+      "authorityAddress": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+      "programsListed": 6,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": true,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+        "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+        "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6"
+      ]
+    },
+    {
+      "protocol": "Save (Solend)",
+      "version": "Single Signer",
+      "multisigAddress": "N/A.single EOA wallet",
+      "authorityAddress": "RY93CZYe5g6drtG7W9PmHRPzaBLZ1uwihTzayQTmJfh",
+      "programsListed": 0,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": []
+    },
+    {
+      "protocol": "Zebec",
+      "version": "Single Signer",
+      "multisigAddress": "N/A.single EOA wallet",
+      "authorityAddress": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+      "programsListed": 3,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h"
+      ]
+    },
+    {
+      "protocol": "Wick",
+      "version": "Squads V4",
+      "multisigAddress": "8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA",
+      "authorityAddress": "3bAHFKgJx7mHeyo2VmDCGp4QmKxTbPdtF5MfPF16R19P",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "3bAHFKgJx7mHeyo2VmDCGp4QmKxTbPdtF5MfPF16R19P"
+      ]
+    },
+    {
+      "protocol": "Onre Finance",
+      "version": "Squads V4",
+      "multisigAddress": "922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR",
+      "authorityAddress": "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f"
+      ]
+    },
+    {
+      "protocol": "MetaDAO",
+      "version": "Squads V4",
+      "multisigAddress": "8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH",
+      "authorityAddress": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "programsListed": 3,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf"
+      ]
+    },
+    {
+      "protocol": "Helium",
+      "version": "Squads V4",
+      "multisigAddress": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+      "authorityAddress": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "programsListed": 1,
+      "concentrationScan": {
+        "label": "Helium vault 2",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 24
+      },
+      "coverageGapPrograms": 23,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U"
+      ]
+    },
+    {
+      "protocol": "Voltr",
+      "version": "Squads V4",
+      "multisigAddress": "5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH",
+      "authorityAddress": "7p4d84NuXbuDhaAq9H3Yp3vpBSDLQWousp1a4jBVoBgU",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "7p4d84NuXbuDhaAq9H3Yp3vpBSDLQWousp1a4jBVoBgU"
+      ]
+    },
+    {
+      "protocol": "Tessera V",
+      "version": "Squads V4",
+      "multisigAddress": "3JW5VWy76TBT5NBbdyrWU6i3fz8XecDko7viGeFSKw7e",
+      "authorityAddress": "7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK"
+      ]
+    },
+    {
+      "protocol": "deBridge",
+      "version": "Squads V4",
+      "multisigAddress": "FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap",
+      "authorityAddress": "6EhmrJSgwCwRrF6aBAQ3ZJV3fWcJJbZLwQwyk96azAhj",
+      "programsListed": 2,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": false,
+      "distinctProgramAuthorities": [
+        "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x"
+      ]
+    },
+    {
+      "protocol": "BisonFi",
+      "version": "Single Signer",
+      "multisigAddress": "",
+      "authorityAddress": "UfSM2ZFRMeurGs1gqrMREjZDyzPweUY9Wt67BMVeo8j",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "UfSM2ZFRMeurGs1gqrMREjZDyzPweUY9Wt67BMVeo8j"
+      ]
+    },
+    {
+      "protocol": "HumidiFi",
+      "version": "Single Signer",
+      "multisigAddress": "",
+      "authorityAddress": "4p1FfVusdT83PxejTPLEz6ZQ4keN9LVEkKhzSt6PJ5zw",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "4p1FfVusdT83PxejTPLEz6ZQ4keN9LVEkKhzSt6PJ5zw"
+      ]
+    },
+    {
+      "protocol": "Photon",
+      "version": "Single Signer",
+      "multisigAddress": "",
+      "authorityAddress": "9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6"
+      ]
+    },
+    {
+      "protocol": "SPL Stake Pool",
+      "version": "Squads V3",
+      "multisigAddress": "3yqoHFE4nBGchuVH5rJuZMFvsmnaDTuLLdvGPDUEJcbW",
+      "authorityAddress": "dPpFfahSWhm5M2RB3nVaHsXfnh9ooz5bWtR3WeUguDH",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "dPpFfahSWhm5M2RB3nVaHsXfnh9ooz5bWtR3WeUguDH"
+      ]
+    },
+    {
+      "protocol": "LayerZero OFT",
+      "version": "Squads V4",
+      "multisigAddress": "9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN",
+      "authorityAddress": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+      "programsListed": 1,
+      "concentrationScan": {
+        "label": "LayerZero vault",
+        "severity": "MONITOR",
+        "programDataAccountCount": 1
+      },
+      "coverageGapPrograms": 0,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31"
+      ]
+    },
+    {
+      "protocol": "SolvBTC",
+      "version": "Squads V4",
+      "multisigAddress": "HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE",
+      "authorityAddress": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+      "programsListed": 1,
+      "concentrationScan": {
+        "label": "SolvBTC vault",
+        "severity": "MONITOR",
+        "programDataAccountCount": 1
+      },
+      "coverageGapPrograms": 0,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM"
+      ]
+    },
+    {
+      "protocol": "GMSOL",
+      "version": "Squads V4",
+      "multisigAddress": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+      "authorityAddress": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "programsListed": 4,
+      "concentrationScan": {
+        "label": "GMSOL main vault",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 6
+      },
+      "coverageGapPrograms": 2,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA"
+      ]
+    },
+    {
+      "protocol": "Ore",
+      "version": "Squads V4",
+      "multisigAddress": "CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo",
+      "authorityAddress": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "programsListed": 1,
+      "concentrationScan": {
+        "label": "Ore vault",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 4
+      },
+      "coverageGapPrograms": 3,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV"
+      ]
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "version": "Squads V4",
+      "multisigAddress": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+      "authorityAddress": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "programsListed": 6,
+      "concentrationScan": {
+        "label": "GMSOL vault",
+        "severity": "CRITICAL",
+        "programDataAccountCount": 6
+      },
+      "coverageGapPrograms": 0,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ"
+      ]
+    },
+    {
+      "protocol": "Carrot",
+      "version": "Squads V4",
+      "multisigAddress": "BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon",
+      "authorityAddress": "3eUEKYy7bPqtZ3KyUvCgpXV55v8TfN4xE85NickX6SUM",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "3eUEKYy7bPqtZ3KyUvCgpXV55v8TfN4xE85NickX6SUM"
+      ]
+    },
+    {
+      "protocol": "DefiTuna",
+      "version": "Squads V4",
+      "multisigAddress": "7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv",
+      "authorityAddress": "FWFrrwQ3kd91FEBD17paLUNmWwCYwpxg9bQCXGAcq7jx",
+      "programsListed": 1,
+      "concentrationScan": null,
+      "coverageGapPrograms": null,
+      "splitAuthority": false,
+      "authorityMatchesAllPrograms": true,
+      "distinctProgramAuthorities": [
+        "FWFrrwQ3kd91FEBD17paLUNmWwCYwpxg9bQCXGAcq7jx"
+      ]
+    }
+  ],
+  "looseMultisigs": [
+    {
+      "label": "Raydium",
+      "address": "EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm"
+    },
+    {
+      "label": "Drift (historical BBC5g)",
+      "address": "BBC5gSPh71YB2eUXdCqvkmL6kj6YDkUQJpX997qXUt2Q"
+    },
+    {
+      "label": "Drift (historical Er82vnft)",
+      "address": "Er82vnftZhA2YrRZyuGpw1an3Ho585eYCAxNv2U9F2uY"
+    },
+    {
+      "label": "Drift (historical 2LW6PS exploited)",
+      "address": "2LW6PSEjp81xSEttWwXDB6Etb1eKdhYPbFEojYbyhx88"
+    },
+    {
+      "label": "Drift (historical 61ApQqLoW)",
+      "address": "61ApQqLoWVfTuzua9c22SWMj78RGv77x6Z2kzcJVGNjP"
+    },
+    {
+      "label": "Drift (historical GMNVGNk8)",
+      "address": "GMNVGNk8Kso1cjre4Wx7zx2knP4uKLNVtpfay2FEEaAi"
+    },
+    {
+      "label": "Kamino KFarms",
+      "address": "5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk"
+    },
+    {
+      "label": "Marginfi (program admin)",
+      "address": "9CiwEGczicmjioXiPsaJV92j4UXG1qMLYLQTxej4U7tr"
+    },
+    {
+      "label": "Helium (Omnix admin)",
+      "address": "1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz"
+    },
+    {
+      "label": "Loopscale (program admin)",
+      "address": "NG2KqHb4SE1HmqSf1GfJHorKGVNcYfgVSdwPPvn7Lsq"
+    },
+    {
+      "label": "LayerZero OFT (devtools admin)",
+      "address": "HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC"
+    },
+    {
+      "label": "Berrie Dex (program admin)",
+      "address": "9dUjjx2Vi7GbBtuxN8N71MEFuD6Yn3QTtwLTYYjvZnLr"
+    },
+    {
+      "label": "Solstice (program admin)",
+      "address": "BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE"
+    },
+    {
+      "label": "Carrot (program admin)",
+      "address": "DrFv23CkTxu84aAYCK7cvUP3zBvFGz2ruuCXuuyPZWbV"
+    },
+    {
+      "label": "Flash Trade (program admin)",
+      "address": "GPuMML3FeJXTr948CvTwSYANHm74RSW5iUibw5T6vSfa"
+    },
+    {
+      "label": "Ondo Global Markets (admin)",
+      "address": "EfMUASGwCsPBafiPi8rwdZfUJSUt7pxAoxayR39PVpMr"
+    },
+    {
+      "label": "Ondo Global Markets (1/8 keeper)",
+      "address": "DK37X6PNtzS4oiJAWgJ364NkUq6us3gf4u7GVRdezqvW"
+    },
+    {
+      "label": "DefiTuna (program admin)",
+      "address": "5Sjxeibf9PmN2WG23nhfJVEJ8paPKfpK7pQ9oyfQkrZy"
+    },
+    {
+      "label": "Raydium (program admin V3)",
+      "address": "7PMRcwPChXuwKA5Z5znNf6avJgW454gGGboV1Yt1xGgq"
+    },
+    {
+      "label": "Meteora (program admin V3)",
+      "address": "3Eun8CdkJsd5WZC7NdNLUPQCx86cXKtwAK6EFLuWsn5w"
+    },
+    {
+      "label": "Parcl (governance V3)",
+      "address": "BRwx9yUrdP9aZMxJGgarLCKcNr3iCn7yj1nDAy4jfUUk"
+    },
+    {
+      "label": "Magic Eden (program admin)",
+      "address": "D1LUJooB3ywFDqKwkha5Saqy2u7bnCDvu3rKQReByBZT"
+    }
+  ],
+  "looseVaults": [
+    {
+      "vault": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "label": "Raydium upgrade vault (V3, 8 progs)",
+      "programCount": 14,
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "label": "Loopscale vault",
+      "programCount": 6,
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "label": "Parcl governance vault (V3, 3 progs)",
+      "programCount": 4,
+      "severity": "CRITICAL"
+    },
+    {
+      "vault": "3hiQADryzHeV6gQa8gojLV5EHNAKXdujtTX2u8evVh1Z",
+      "label": "Berrie Dex / unknown vault",
+      "programCount": 2,
+      "severity": "HIGH"
+    },
+    {
+      "vault": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "label": "Carrot vault",
+      "programCount": 2,
+      "severity": "HIGH"
+    },
+    {
+      "vault": "G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5",
+      "label": "LayerZero OFT (devtools vault)",
+      "programCount": 1,
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "Gy7pgCryzquDBHkpGkJGBRAyLpdmdqkifjLdKMoS1GEE",
+      "label": "Marginfi vault",
+      "programCount": 1,
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY",
+      "label": "Kamino KFarms vault",
+      "programCount": 1,
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+      "label": "Helium vault",
+      "programCount": 1,
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "9ECeczLtFZDYE3NX6G7uNw5BUGjoJAu1kFyEihA5hMaM",
+      "label": "Ondo Global Markets vault A",
+      "programCount": 1,
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "5JKhn62nyvAE7aRb5zksXiovDEPX6mAcbdxFsJEdVmbw",
+      "label": "Ondo Global Markets vault B",
+      "programCount": 1,
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda",
+      "label": "Flash Trade vault",
+      "programCount": 1,
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+      "label": "Solstice vault",
+      "programCount": 1,
+      "severity": "MONITOR"
+    },
+    {
+      "vault": "87VfCnQ4d7XuZwriJAK7yADmqzrJQBx9FYMqCwdue5kv",
+      "label": "DefiTuna vault",
+      "programCount": 1,
+      "severity": "MONITOR"
+    }
+  ]
+}

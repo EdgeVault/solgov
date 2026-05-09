@@ -1,0 +1,13 @@
+{
+  "computedAt": "2026-04-17T15:18:11.135Z",
+  "findings": [
+    {
+      "protocol": "Drift",
+      "multisig": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+      "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+      "lastSignatureTs": 1764457651,
+      "dormantDays": 139,
+      "severity": "MONITOR"
+    }
+  ]
+}

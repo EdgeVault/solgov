@@ -1,0 +1,19 @@
+{
+  "protocol":"LayerZero OFT","researchedAt":"2026-04-17T22:24:00Z","researcher":"manual",
+  "sources":[{"kind":"github","url":"https://github.com/LayerZero-Labs/devtools"},{"kind":"ottersec","url":"https://verify.osec.io/status/A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN","note":"confirms A8W6AL4 is a LayerZero program"}],
+  "programs":[
+    {"id":"A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN","name":"LayerZero devtools program","role":"unknown specific role","source":"OtterSec verified from LayerZero-Labs/devtools","upgradeAuthority":"G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5","upgradeAuthorityKind":"vault-PDA of HB3boZwyCU multisig (4/6, currently mislabelled 'Kamino kLend vault' in solgov-api.ts)","alreadyTracked":true}
+  ],
+  "multisigs":[
+    {"address":"9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN","role":"LayerZero OFT main multisig (tracked)","threshold":"1/2","timelock":"0s","configAuthority":"autonomous","alreadyTracked":true,"notes":"1/2 threshold - single signer can execute"},
+    {"address":"HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC","role":"LayerZero OFT vault-parent multisig (owns A8W6AL4 program). Previously mislabelled as 'Kamino kLend' in solgov-api.ts.","threshold":"4/6","timelock":"0s","configAuthority":"autonomous","alreadyTracked":false}
+  ],
+  "authorities":[],
+  "vaultPdas":[
+    {"address":"6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31","parentMultisig":"9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN","vaultIndex":0,"programsControlled":["219m42qCuVirVvWs5GnkuX4aWFx5pX6D9RSTE1vsV5WS"],"alreadyTracked":true},
+    {"address":"G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5","parentMultisig":"HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC","vaultIndex":0,"programsControlled":["A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN"],"alreadyTracked":true,"notes":"currently mislabelled 'Kamino kLend vault' in solgov-api.ts"}
+  ],
+  "governanceModel":"Two multisigs - 1/2 main (very weak threshold) and 4/6 for program upgrades. 1/2 threshold means any single key can move vault assets on the main multisig.",
+  "gaps":["Identify what program 219m42qC is (owned by 9XnbnSv main multisig)","Fix mislabel in solgov-api.ts","Investigate why main is 1/2 threshold - operational wallet vs admin?"],
+  "confidence":"medium-high"
+}

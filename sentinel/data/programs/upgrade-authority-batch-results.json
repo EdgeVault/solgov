@@ -1,0 +1,642 @@
+{
+  "fetchedAt": "2026-04-17T17:51:58.352Z",
+  "results": [
+    {
+      "programId": "Fk1RpqsfeWt8KnFCTW9NQVdVxYvxuqjGn6iPB9wrmM8h",
+      "protocol": "Carrot",
+      "programName": "Carrot program 1",
+      "upgradeAuthority": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "status": "ok"
+    },
+    {
+      "programId": "JAZWcGrpSWNPTBj8QtJ9UyQqhJCDhG9GJkDeMf5NQBiq",
+      "protocol": "Carrot",
+      "programName": "Carrot program 2",
+      "upgradeAuthority": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "status": "ok"
+    },
+    {
+      "programId": "dbg5GfCZ7KKHsHbS5hPZk1kfT1SxbwQBQWHQjTJPZcK",
+      "protocol": "deBridge",
+      "programName": "deBridge Gate",
+      "upgradeAuthority": null,
+      "status": "immutable"
+    },
+    {
+      "programId": "par1tyqusak2f2DXg9RHv78SVHNWXkJLSbtJZQSuWjV",
+      "protocol": "DefiTuna",
+      "programName": "DefiTuna Parity",
+      "upgradeAuthority": "87VfCnQ4d7XuZwriJAK7yADmqzrJQBx9FYMqCwdue5kv",
+      "status": "ok"
+    },
+    {
+      "programId": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+      "protocol": "Exponent",
+      "programName": "Exponent Core",
+      "upgradeAuthority": null,
+      "status": "immutable"
+    },
+    {
+      "programId": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE",
+      "protocol": "Flash Trade",
+      "programName": "Flash Trade Perps",
+      "upgradeAuthority": "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda",
+      "status": "ok"
+    },
+    {
+      "programId": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH",
+      "protocol": "GMSOL Deploy",
+      "programName": "GMSOL Deploy program 1",
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "status": "ok"
+    },
+    {
+      "programId": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj",
+      "protocol": "GMSOL Deploy",
+      "programName": "GMSOL Deploy program 2",
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "status": "ok"
+    },
+    {
+      "programId": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2",
+      "protocol": "GMSOL Deploy",
+      "programName": "GMSOL Deploy program 3",
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "status": "ok"
+    },
+    {
+      "programId": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR",
+      "protocol": "GMSOL Deploy",
+      "programName": "GMSOL Deploy program 4",
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "status": "ok"
+    },
+    {
+      "programId": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ",
+      "protocol": "GMSOL Deploy",
+      "programName": "GMSOL Deploy program 5",
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "status": "ok"
+    },
+    {
+      "programId": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd",
+      "protocol": "GMSOL Deploy",
+      "programName": "GMSOL Deploy program 6",
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "status": "ok"
+    },
+    {
+      "programId": "2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc",
+      "protocol": "GMSOL",
+      "programName": "GMSOL program 1",
+      "upgradeAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "status": "ok"
+    },
+    {
+      "programId": "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo",
+      "protocol": "GMSOL",
+      "programName": "GMSOL vanity program",
+      "upgradeAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "status": "ok"
+    },
+    {
+      "programId": "GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg",
+      "protocol": "GMSOL",
+      "programName": "GMSOL program 3",
+      "upgradeAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "status": "ok"
+    },
+    {
+      "programId": "LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8",
+      "protocol": "GMSOL",
+      "programName": "GMSOL LP program",
+      "upgradeAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "status": "ok"
+    },
+    {
+      "programId": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT",
+      "protocol": "Helium",
+      "programName": "Helium Data Credits",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "ok"
+    },
+    {
+      "programId": "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR",
+      "protocol": "Helium",
+      "programName": "Helium Sub DAOs (HSD)",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "ok"
+    },
+    {
+      "programId": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
+      "protocol": "Helium",
+      "programName": "Helium Entity Manager",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "ok"
+    },
+    {
+      "programId": "hvsrNC3NKbcryqDs2DocYHZ9yPKEVzdSjQG6RVtK1s8",
+      "protocol": "Helium",
+      "programName": "Helium Voter Stake Registry",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "ok"
+    },
+    {
+      "programId": "tuktukUrfhXT6ZT77QTU8RQtvgL967uRuVagWF57zVA",
+      "protocol": "Helium",
+      "programName": "Tuktuk (job scheduler)",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "ok"
+    },
+    {
+      "programId": "noEmmgLmQdk6DLiPV8CSwQv3qQDyGEhz9m5A4zhtByv",
+      "protocol": "Helium",
+      "programName": "No Emit",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "ok"
+    },
+    {
+      "programId": "1azyuavdMyvsivtNxPoz6SucD18eDHeXzFCUPq5XU7w",
+      "protocol": "Helium",
+      "programName": "Lazy Distributor",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "ok"
+    },
+    {
+      "programId": "omnixgS8fnqHfCcTGKWj6JtKjzpJZ1Y5y9pyFkQDkYE",
+      "protocol": "Helium",
+      "programName": "Helium Omnix (omnichain)",
+      "upgradeAuthority": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+      "status": "ok"
+    },
+    {
+      "programId": "jtosTCarg1Mtoz3jJvzBqJMJSxYa22wSqMmtShdBcGK",
+      "protocol": "Jito",
+      "programName": "Jito Restaking / Vault",
+      "upgradeAuthority": null,
+      "status": "immutable"
+    },
+    {
+      "programId": "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9",
+      "protocol": "Jupiter Lend",
+      "programName": "Jupiter Lend - Lending",
+      "upgradeAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "ok"
+    },
+    {
+      "programId": "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC",
+      "protocol": "Jupiter Lend",
+      "programName": "Jupiter Lend - Liquidity",
+      "upgradeAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "ok"
+    },
+    {
+      "programId": "jup7TthsMgcR9Y3L277b8Eo9uboVSmu1utkuXHNUKar",
+      "protocol": "Jupiter Lend",
+      "programName": "Jupiter Lend - Rewards Rate Model",
+      "upgradeAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "ok"
+    },
+    {
+      "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+      "protocol": "Jupiter Perps",
+      "programName": "Jupiter Perpetuals",
+      "upgradeAuthority": "5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx",
+      "status": "ok"
+    },
+    {
+      "programId": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+      "protocol": "Kamino",
+      "programName": "Kamino Lending (kLend) mainnet",
+      "upgradeAuthority": "GzFgdRJXmawPhGeBsyRCDLx4jAKPsvbUqoqitzppkzkW",
+      "status": "ok"
+    },
+    {
+      "programId": "SLendK7ySfcEzyaFqy93gDnD3RtrpXJcnRwb6zFHJSh",
+      "protocol": "Kamino",
+      "programName": "Kamino Lending staging",
+      "upgradeAuthority": "BxdLNhoRXVs45wTVAZBrYQUkxbex5zXFCaJtsuRpoqMj",
+      "status": "ok"
+    },
+    {
+      "programId": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc",
+      "protocol": "Kamino",
+      "programName": "Kamino Liquidity (kliquidity)",
+      "upgradeAuthority": "3pAxu6C9ykZvyyzdknZvmz6CbWGZPTjRevjk4PRF5ib7",
+      "status": "ok"
+    },
+    {
+      "programId": "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF",
+      "protocol": "Loopscale",
+      "programName": "Loopscale program 1",
+      "upgradeAuthority": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "status": "ok"
+    },
+    {
+      "programId": "jg82rRko6Hu1KqZ47RR95Jrq1cfqBhaAPXStseajmfQ",
+      "protocol": "Loopscale",
+      "programName": "Loopscale program 2",
+      "upgradeAuthority": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "status": "ok"
+    },
+    {
+      "programId": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs",
+      "protocol": "Lulo",
+      "programName": "Lulo FlexLend",
+      "upgradeAuthority": null,
+      "status": "immutable"
+    },
+    {
+      "programId": "mmm3XBJg5gk8XJxEKBvdgptZz6SgK4tXvn36sodowMc",
+      "protocol": "Magic Eden",
+      "programName": "Magic Eden MMM (AMM)",
+      "upgradeAuthority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "status": "ok"
+    },
+    {
+      "programId": "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K",
+      "protocol": "Magic Eden",
+      "programName": "Magic Eden v2 (M2) marketplace",
+      "upgradeAuthority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "status": "ok"
+    },
+    {
+      "programId": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+      "protocol": "Marginfi",
+      "programName": "marginfi v2 mainnet",
+      "upgradeAuthority": "J3oBkTkDXU3TcAggJEa3YeBZE5om5yNAdTtLVNXFD47",
+      "status": "ok"
+    },
+    {
+      "programId": "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD",
+      "protocol": "Marinade",
+      "programName": "Marinade Liquid Staking",
+      "upgradeAuthority": "551FBXSXdhcRDDkdcb3ThDRg84Mwe5Zs6YjJ1EEoyzBp",
+      "status": "ok"
+    },
+    {
+      "programId": "mnspJQyF1KdDEs5c6YJPocYdY1esBgVQFufM2dY9oDk",
+      "protocol": "Marinade",
+      "programName": "Native Staking Proxy",
+      "upgradeAuthority": "6YAju4nd4t7kyuHV6NvVpMepMk11DgWyYjKVJUak2EEm",
+      "status": "ok"
+    },
+    {
+      "programId": "GovMaiHfpVPw8BAM1mbdzgmSZYDw2tdP32J2fapoQoYs",
+      "protocol": "Marinade",
+      "programName": "Marinade Council (SPL Governance Realms)",
+      "upgradeAuthority": "6egAu2HDLcSgeUYmiBvNLgp7Bd4nPk16gX9MvWuJpeX2",
+      "status": "ok"
+    },
+    {
+      "programId": "MR2LqxoSbw831bNy68utpu5n4YqBH3AzDmddkgk9LQv",
+      "protocol": "Marinade",
+      "programName": "Liquid Staking Referral",
+      "upgradeAuthority": "6XQFdWeogb5C8c1KsSCkK6rzzxLxzxsPQqoXge9oJ9xR",
+      "status": "ok"
+    },
+    {
+      "programId": "dstK1PDHNoKN9MdmftRzsEbXP5T1FTBiQBm1Ee3meVd",
+      "protocol": "Marinade",
+      "programName": "Directed Stake",
+      "upgradeAuthority": "2aQP7NGhktKR92EsHKSoRzcw5FfcZ8oBWgyoGdB3ouww",
+      "status": "ok"
+    },
+    {
+      "programId": "tokdh9ZbWPxkFzqsKqeAwLDk6J6a8NBZtQanVuuENxa",
+      "protocol": "Marinade",
+      "programName": "Tokadapt",
+      "upgradeAuthority": "CWRgRr4udD66JbVtS9u2Gu7LHBi5m6SM3ytvmWobThEQ",
+      "status": "ok"
+    },
+    {
+      "programId": "tovt1VkTE2T4caWoeFP6a2xSFoew5mNpd7FWidyyMuk",
+      "protocol": "Marinade",
+      "programName": "Escrow-Relocker (Tribeca Plug-in)",
+      "upgradeAuthority": "AEej7Lywu8EzMznXnxhb1493yCVnmLNXaCKYfUNvQQaJ",
+      "status": "ok"
+    },
+    {
+      "programId": "va12L6Z9fa5aGJ7gxtJuQZ928nySAk5UetjcGPve3Nu",
+      "protocol": "Marinade",
+      "programName": "Validator Gauges",
+      "upgradeAuthority": "CLydpgqZty5HQq1uMtbXpH1vtmN7erhdBSPbn12NGLmb",
+      "status": "ok"
+    },
+    {
+      "programId": "LigadctxNRkZied3WuhX525vUhDkuhXNK5DyeijeDnh",
+      "protocol": "Marinade",
+      "programName": "Liquidity Gauges",
+      "upgradeAuthority": "3cBS14yanCZPRKgdCLnmxHWXFfGjW8bid5zxj7UPqWW5",
+      "status": "ok"
+    },
+    {
+      "programId": "VoteMBhDCqGLRgYpp9o7DGyq81KNmwjXQRAHStjtJsS",
+      "protocol": "Marinade",
+      "programName": "Voter Stake Registry (SPL Gov Plugin)",
+      "upgradeAuthority": "2w6ny74cU6yRxkD6ZACh5M1JznLQ1KB6AUsB7zo2NBHX",
+      "status": "ok"
+    },
+    {
+      "programId": "autoQP9RmUNkzzKRXsMkWicDVZ3h29vvyMDcAYjCxxg",
+      "protocol": "MetaDAO",
+      "programName": "MetaDAO Autocrat",
+      "upgradeAuthority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "status": "ok"
+    },
+    {
+      "programId": "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs",
+      "protocol": "MetaDAO",
+      "programName": "MetaDAO Proposals",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "ok"
+    },
+    {
+      "programId": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "protocol": "Meteora",
+      "programName": "Meteora DLMM",
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "status": "ok"
+    },
+    {
+      "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "protocol": "Meteora",
+      "programName": "Meteora DAMM v2",
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "status": "ok"
+    },
+    {
+      "programId": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB",
+      "protocol": "Meteora",
+      "programName": "Meteora DAMM v1 / Dynamic AMM legacy",
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "status": "ok"
+    },
+    {
+      "programId": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "protocol": "Nosana",
+      "programName": "Nosana Jobs",
+      "upgradeAuthority": null,
+      "status": "immutable"
+    },
+    {
+      "programId": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+      "protocol": "Orca",
+      "programName": "Orca Token Swap v2 (legacy AMM)",
+      "upgradeAuthority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+      "status": "ok"
+    },
+    {
+      "programId": "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv",
+      "protocol": "Ore",
+      "programName": "Ore V3",
+      "upgradeAuthority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "status": "ok"
+    },
+    {
+      "programId": "3jSkUuYBoJzQPMEzTvkDFXCZUBksPamrVhrnHR9igu2X",
+      "protocol": "Ore",
+      "programName": "Ore aux",
+      "upgradeAuthority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "status": "ok"
+    },
+    {
+      "programId": "LStwN2E5Uw6MCtuxHRLhy8RY9hxqW2XRpLzettb696y",
+      "protocol": "Ore",
+      "programName": "Ore LST-like",
+      "upgradeAuthority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "status": "ok"
+    },
+    {
+      "programId": "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y",
+      "protocol": "Parcl",
+      "programName": "Parcl v3",
+      "upgradeAuthority": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "status": "ok"
+    },
+    {
+      "programId": "PaRCLKPpkfHQfXTruT8yhEUx5oRNH8z8erBnzEerc8a",
+      "protocol": "Parcl",
+      "programName": "Parcl Pyth oracle adapter",
+      "upgradeAuthority": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "status": "ok"
+    },
+    {
+      "programId": "Di9ZVJeJrRZdQEWzAFYmfjukjR5dUQb7KMaDmv34rNJg",
+      "protocol": "Parcl",
+      "programName": "Parcl SPL Governance",
+      "upgradeAuthority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "status": "ok"
+    },
+    {
+      "programId": "2gWf5xLAzZaKX9tQj9vuXsaxTWtzTZDFRn21J3zjNVgu",
+      "protocol": "Parcl",
+      "programName": "Parcl Staking",
+      "upgradeAuthority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "status": "ok"
+    },
+    {
+      "programId": "5tu3xkmLfud5BAwSuQke4WSjoHcQ52SbrPwX9es8j6Ve",
+      "protocol": "Parcl",
+      "programName": "Parcl Merkle Distributor",
+      "upgradeAuthority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "status": "ok"
+    },
+    {
+      "programId": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+      "protocol": "Phoenix DEX",
+      "programName": "Phoenix v1 (on-chain order book)",
+      "upgradeAuthority": "8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq",
+      "status": "ok"
+    },
+    {
+      "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "protocol": "Pumpfun",
+      "programName": "Pump AMM",
+      "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "status": "ok"
+    },
+    {
+      "programId": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "protocol": "Pumpfun",
+      "programName": "Pumpfun Bonding Curve",
+      "upgradeAuthority": null,
+      "status": "immutable"
+    },
+    {
+      "programId": "rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ",
+      "protocol": "Pyth",
+      "programName": "Pyth Receiver / Oracle Receiver",
+      "upgradeAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "status": "ok"
+    },
+    {
+      "programId": "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH",
+      "protocol": "Pyth",
+      "programName": "Pyth Push Oracle",
+      "upgradeAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "status": "ok"
+    },
+    {
+      "programId": "pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT",
+      "protocol": "Pyth",
+      "programName": "Pyth core program",
+      "upgradeAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "status": "ok"
+    },
+    {
+      "programId": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+      "protocol": "Raydium",
+      "programName": "Raydium AMM V4",
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "status": "ok"
+    },
+    {
+      "programId": "5quBtoiQqxF9Jv6KYKctB59NT3gtJD2Y65kdnB1Uev3h",
+      "protocol": "Raydium",
+      "programName": "Raydium Stable AMM",
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "status": "ok"
+    },
+    {
+      "programId": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK",
+      "protocol": "Raydium",
+      "programName": "Raydium CLMM",
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "status": "ok"
+    },
+    {
+      "programId": "routeUGWgWzqBWFcrCfv8tritsqukccJPu3q5GPP3xS",
+      "protocol": "Raydium",
+      "programName": "Raydium Router",
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "status": "ok"
+    },
+    {
+      "programId": "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q",
+      "protocol": "Raydium",
+      "programName": "Raydium Farm V3",
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "status": "ok"
+    },
+    {
+      "programId": "9KEPoZmtHUrBbhWN1v1KWLMkkvwY6WLtAVUCPRtRjP4z",
+      "protocol": "Raydium",
+      "programName": "Raydium Farm V5",
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "status": "ok"
+    },
+    {
+      "programId": "FarmqiPv5eAj3j1GMdMCMUGXqPUvmquZtMy86QH6rzhG",
+      "protocol": "Raydium",
+      "programName": "Raydium Farm V6",
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "status": "ok"
+    },
+    {
+      "programId": "CLaimxFqjHzgTJtAGHU47NPhg6qrc5sCnpC4tBLyABQS",
+      "protocol": "Raydium",
+      "programName": "Raydium UTIL1216 (airdrop / claim)",
+      "upgradeAuthority": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "status": "ok"
+    },
+    {
+      "programId": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+      "protocol": "Sanctum",
+      "programName": "Sanctum S Controller (Infinity pool controller)",
+      "upgradeAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "ok"
+    },
+    {
+      "programId": "f1tUoNEKrDp1oeGn4zxr7bh41eN6VcfHjfrL3ZqQday",
+      "protocol": "Sanctum",
+      "programName": "Sanctum Flat Fee Pricing",
+      "upgradeAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "ok"
+    },
+    {
+      "programId": "So1endDq2YkqhipRh3WViPa8hdiSpxWy6z3Z6tMCpAo",
+      "protocol": "Save (Solend)",
+      "programName": "Solend / Save",
+      "upgradeAuthority": "RY93CZYe5g6drtG7W9PmHRPzaBLZ1uwihTzayQTmJfh",
+      "status": "ok"
+    },
+    {
+      "programId": "sSo1iU21jBrU9VaJ8PJib1MtorefUV4fzC9GURa2KNn",
+      "protocol": "Solayer",
+      "programName": "Solayer Pool (sSOL)",
+      "upgradeAuthority": "GcYvLKKEWpxQMqFe9HUcDJYMGvXt7kwf8gfBvjnW4wnm",
+      "status": "ok"
+    },
+    {
+      "programId": "7FaMyGiTVdjm8dd3PxpjjCX15ibbmuE1zWVFX2PHxYUK",
+      "protocol": "Solstice",
+      "programName": "Solstice program",
+      "upgradeAuthority": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+      "status": "ok"
+    },
+    {
+      "programId": "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz",
+      "protocol": "SolvBTC",
+      "programName": "SolvBTC program",
+      "upgradeAuthority": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+      "status": "ok"
+    },
+    {
+      "programId": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy",
+      "protocol": "SPL Stake Pool",
+      "programName": "SPL Stake Pool",
+      "upgradeAuthority": "dPpFfahSWhm5M2RB3nVaHsXfnh9ooz5bWtR3WeUguDH",
+      "status": "ok"
+    },
+    {
+      "programId": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP",
+      "protocol": "Stabble",
+      "programName": "Stabble Stable Swap",
+      "upgradeAuthority": null,
+      "status": "immutable"
+    },
+    {
+      "programId": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+      "protocol": "Switchboard",
+      "programName": "Switchboard V2 (Oracle)",
+      "upgradeAuthority": "2NvGRFswVx3GXxURNSfjbsWY4iP1ufj8LvAKJWGXSm4D",
+      "status": "ok"
+    },
+    {
+      "programId": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv",
+      "protocol": "Switchboard",
+      "programName": "Switchboard On-Demand",
+      "upgradeAuthority": "DREcTwxxuehtUVgnGwDpTcKT9zTK5uDmdLbnRY7cijEx",
+      "status": "ok"
+    },
+    {
+      "programId": "sbattyXrzedoNATfc4L31wC9Mhxsi1BmFhTiN8gDshx",
+      "protocol": "Switchboard",
+      "programName": "Switchboard Attestation Service",
+      "upgradeAuthority": "31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc",
+      "status": "ok"
+    },
+    {
+      "programId": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN",
+      "protocol": "Tensor",
+      "programName": "TensorSwap",
+      "upgradeAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "status": "ok"
+    },
+    {
+      "programId": "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp",
+      "protocol": "Tensor",
+      "programName": "Tensor cNFT marketplace (TComp)",
+      "upgradeAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "status": "ok"
+    },
+    {
+      "programId": "TLoCKic2wGJm7VhZKumih4Lz35StYnLr8NqVWuULBYz",
+      "protocol": "Tensor",
+      "programName": "TLock (Tensorians)",
+      "upgradeAuthority": null,
+      "status": "immutable"
+    }
+  ]
+}

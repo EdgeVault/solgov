@@ -1,0 +1,50 @@
+{
+  "protocol": "Pumpfun",
+  "researchedAt": "2026-04-17T22:24:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.pump.fun/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "name": "Pump AMM",
+      "role": "post-graduation AMM",
+      "alreadyTracked": true,
+      "source": "solgov-api.ts PROGRAM_ID_TO_NAME",
+      "upgradeAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "name": "Pumpfun Bonding Curve",
+      "role": "token bonding curve launcher",
+      "alreadyTracked": true,
+      "source": "monitor-state.json programAuthorities Pump.fun",
+      "upgradeAuthority": null,
+      "upgradeAuthorityKind": "IMMUTABLE - not upgradeable"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW",
+      "role": "Pumpfun multisig (tracked)",
+      "threshold": "3/4",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true,
+      "source": "extra-multisigs.json"
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads V4 3/4 threshold - extremely low (need 3 of 4 signers but one compromise reduces to 2/3 attack margin). Two programs confirmed.",
+  "gaps": [
+    "Upgrade authority for both programs",
+    "Confirm PumpSwap is same program as Pump AMM (6EF8) vs a separate program"
+  ],
+  "confidence": "medium"
+}

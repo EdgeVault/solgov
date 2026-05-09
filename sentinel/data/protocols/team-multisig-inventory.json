@@ -1,0 +1,177 @@
+{
+  "computedAt": "2026-04-17T16:12:02.955Z",
+  "teamsWithMultipleTrackedMultisigs": [
+    {
+      "prefix": "Jupiter",
+      "multisigs": [
+        "Jupiter Perps",
+        "Jupiter Lend",
+        "Jupiter Agg"
+      ]
+    },
+    {
+      "prefix": "GMSOL",
+      "multisigs": [
+        "GMSOL",
+        "GMSOL Deploy"
+      ]
+    }
+  ],
+  "vaultAttribution": [
+    {
+      "vault": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "label": "Drift (BBC5g vault, pre-exploit)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+      "label": "Drift (E44y4Gm vault, recovery)",
+      "derivedFromMultisig": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+      "derivedFromProtocol": "Drift",
+      "vaultIndex": 0
+    },
+    {
+      "vault": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "label": "Jupiter Lend (vault)",
+      "derivedFromMultisig": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+      "derivedFromProtocol": "Jupiter Lend",
+      "vaultIndex": 0
+    },
+    {
+      "vault": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "label": "Orca (vault)",
+      "derivedFromMultisig": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+      "derivedFromProtocol": "Orca",
+      "vaultIndex": 0
+    },
+    {
+      "vault": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "label": "Kamino (vault)",
+      "derivedFromMultisig": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+      "derivedFromProtocol": "GMSOL",
+      "vaultIndex": 0
+    },
+    {
+      "vault": "G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5",
+      "label": "Kamino kLend (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "Gy7pgCryzquDBHkpGkJGBRAyLpdmdqkifjLdKMoS1GEE",
+      "label": "Marginfi (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY",
+      "label": "Switchboard (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+      "label": "Helium (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "label": "Helium (vault 2)",
+      "derivedFromMultisig": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+      "derivedFromProtocol": "Helium",
+      "vaultIndex": 0
+    },
+    {
+      "vault": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+      "label": "SolvBTC (vault)",
+      "derivedFromMultisig": "HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE",
+      "derivedFromProtocol": "SolvBTC",
+      "vaultIndex": 0
+    },
+    {
+      "vault": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "label": "GMSOL (vault)",
+      "derivedFromMultisig": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+      "derivedFromProtocol": "GMSOL Deploy",
+      "vaultIndex": 0
+    },
+    {
+      "vault": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "label": "Ore (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "9ECeczLtFZDYE3NX6G7uNw5BUGjoJAu1kFyEihA5hMaM",
+      "label": "Meteora (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "label": "Loopscale (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "5JKhn62nyvAE7aRb5zksXiovDEPX6mAcbdxFsJEdVmbw",
+      "label": "Parcl (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "3hiQADryzHeV6gQa8gojLV5EHNAKXdujtTX2u8evVh1Z",
+      "label": "Solayer (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda",
+      "label": "Flash Trade (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+      "label": "Solstice (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "label": "Carrot (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "87VfCnQ4d7XuZwriJAK7yADmqzrJQBx9FYMqCwdue5kv",
+      "label": "DefiTuna (vault)",
+      "derivedFromMultisig": null,
+      "derivedFromProtocol": null,
+      "vaultIndex": null
+    },
+    {
+      "vault": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+      "label": "LayerZero (vault)",
+      "derivedFromMultisig": "9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN",
+      "derivedFromProtocol": "LayerZero OFT",
+      "vaultIndex": 0
+    }
+  ],
+  "gap": "14 vault PDAs belong to multisigs not in tracked-multisigs.json - their parent multisigs should be added for full coverage."
+}

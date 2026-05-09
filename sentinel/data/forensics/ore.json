@@ -1,0 +1,60 @@
+{
+  "protocol": "Ore",
+  "researchedAt": "2026-04-17T22:28:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "github",
+      "url": "https://github.com/regolith-labs/ore"
+    }
+  ],
+  "programs": [
+    {
+      "id": "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv",
+      "name": "Ore V3",
+      "role": "proof-of-work mining",
+      "alreadyTracked": true,
+      "upgradeAuthority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "3jSkUuYBoJzQPMEzTvkDFXCZUBksPamrVhrnHR9igu2X",
+      "name": "Ore aux",
+      "alreadyTracked": true,
+      "upgradeAuthority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "LStwN2E5Uw6MCtuxHRLhy8RY9hxqW2XRpLzettb696y",
+      "name": "Ore LST-like",
+      "alreadyTracked": true,
+      "upgradeAuthority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo",
+      "role": "Ore multisig (tracked)",
+      "threshold": "2/4",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "parentMultisig": "CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo",
+      "vaultIndex": 0,
+      "programsControlled": 3,
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Squads V4 2/4 0 timelock, 3 programs.",
+  "gaps": [
+    "Identify aux/LST program roles"
+  ],
+  "confidence": "medium"
+}

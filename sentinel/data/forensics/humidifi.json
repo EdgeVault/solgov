@@ -1,0 +1,7 @@
+{
+  "protocol":"HumidiFi","researchedAt":"2026-04-17T23:00:00Z","researcher":"manual stub",
+  "sources":[],"programs":[],
+  "multisigs":[{"address":"4p1FfVusdT83PxejTPLEz6ZQ4keN9LVEkKhzSt6PJ5zw","role":"HumidiFi single-signer authority","alreadyTracked":true}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Single-signer authority.","gaps":["Program IDs","Governance model"],"confidence":"low"
+}

@@ -1,0 +1,195 @@
+[
+  {
+    "protocol": "Orca",
+    "multisig": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+    "flaggedNonce": 3,
+    "signingEvents": 63,
+    "uniqueSigners": 6,
+    "totalGaps": 57,
+    "violations": 16,
+    "violationPct": 28,
+    "minGap": 7,
+    "nonceMentions": 0,
+    "violationSamples": [
+      {
+        "signer": "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY",
+        "gap": 38,
+        "date": "2026-02-04T16:35"
+      },
+      {
+        "signer": "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY",
+        "gap": 49,
+        "date": "2026-02-04T18:32"
+      },
+      {
+        "signer": "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY",
+        "gap": 38,
+        "date": "2026-03-17T22:30"
+      },
+      {
+        "signer": "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY",
+        "gap": 19,
+        "date": "2026-03-17T22:54"
+      },
+      {
+        "signer": "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa",
+        "gap": 70,
+        "date": "2025-12-05T01:02"
+      }
+    ]
+  },
+  {
+    "protocol": "Huma Finance",
+    "multisig": "uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX",
+    "flaggedNonce": 2,
+    "signingEvents": 86,
+    "uniqueSigners": 6,
+    "totalGaps": 80,
+    "violations": 21,
+    "violationPct": 26,
+    "minGap": 2,
+    "nonceMentions": 0,
+    "violationSamples": [
+      {
+        "signer": "8W2VmPoB63YsVt9VZd5hJzzu1D396cszDLGWMZZ1GCKu",
+        "gap": 115,
+        "date": "2025-04-10T03:58"
+      },
+      {
+        "signer": "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js",
+        "gap": 63,
+        "date": "2025-04-10T04:00"
+      },
+      {
+        "signer": "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js",
+        "gap": 15,
+        "date": "2026-04-09T21:04"
+      },
+      {
+        "signer": "G1AonKZArhAC51Mp3uhJ3Yk1kRVsEwbg9RGTrUoqEPRm",
+        "gap": 105,
+        "date": "2026-04-09T21:24"
+      },
+      {
+        "signer": "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z",
+        "gap": 37,
+        "date": "2025-04-10T05:37"
+      }
+    ]
+  },
+  {
+    "protocol": "Switchboard",
+    "multisig": "93RQfY6VHRkqXBCEhMY5u92bCGp428DTzqZUEA2Hjr9h",
+    "flaggedNonce": 1,
+    "signingEvents": 124,
+    "uniqueSigners": 7,
+    "totalGaps": 117,
+    "violations": 11,
+    "violationPct": 9,
+    "minGap": 7,
+    "nonceMentions": 0,
+    "violationSamples": [
+      {
+        "signer": "EoHK5VNgYisSRDcqSkBPoQTGsGroBnNR4xiWWWo8K3g5",
+        "gap": 38,
+        "date": "2025-03-04T20:29"
+      },
+      {
+        "signer": "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+        "gap": 24,
+        "date": "2024-04-02T19:36"
+      },
+      {
+        "signer": "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+        "gap": 30,
+        "date": "2024-04-02T19:36"
+      },
+      {
+        "signer": "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+        "gap": 61,
+        "date": "2024-04-02T19:37"
+      },
+      {
+        "signer": "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+        "gap": 116,
+        "date": "2024-04-02T19:39"
+      }
+    ]
+  },
+  {
+    "protocol": "Solayer",
+    "multisig": "5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp",
+    "flaggedNonce": 1,
+    "signingEvents": 30,
+    "uniqueSigners": 5,
+    "totalGaps": 25,
+    "violations": 2,
+    "violationPct": 8,
+    "minGap": 39,
+    "nonceMentions": 0,
+    "violationSamples": [
+      {
+        "signer": "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf",
+        "gap": 39,
+        "date": "2024-05-14T21:57"
+      },
+      {
+        "signer": "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf",
+        "gap": 77,
+        "date": "2024-05-15T16:58"
+      }
+    ]
+  },
+  {
+    "protocol": "Flash Trade",
+    "multisig": "Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF",
+    "flaggedNonce": 1,
+    "signingEvents": 200,
+    "uniqueSigners": 11,
+    "totalGaps": 189,
+    "violations": 21,
+    "violationPct": 11,
+    "minGap": 7,
+    "nonceMentions": 0,
+    "violationSamples": [
+      {
+        "signer": "5bdzVTJHC5jV6qgzcXPifEi3DsX7krjH9s82FDwGW9ui",
+        "gap": 81,
+        "date": "2026-04-02T14:43"
+      },
+      {
+        "signer": "5bdzVTJHC5jV6qgzcXPifEi3DsX7krjH9s82FDwGW9ui",
+        "gap": 9,
+        "date": "2026-04-08T12:28"
+      },
+      {
+        "signer": "8RKb8uN1yvtim3vSFsLcAfjiFcRHbqMV9QxYVKV5NSrp",
+        "gap": 100,
+        "date": "2026-04-02T14:35"
+      },
+      {
+        "signer": "8RKb8uN1yvtim3vSFsLcAfjiFcRHbqMV9QxYVKV5NSrp",
+        "gap": 24,
+        "date": "2026-04-02T14:42"
+      },
+      {
+        "signer": "8RKb8uN1yvtim3vSFsLcAfjiFcRHbqMV9QxYVKV5NSrp",
+        "gap": 101,
+        "date": "2026-04-02T14:44"
+      }
+    ]
+  },
+  {
+    "protocol": "Marinade",
+    "multisig": "magrsHFQxkkioAy45VWnZnFBBdKVdy2ZiRoRGYT9Wed",
+    "flaggedNonce": 1,
+    "signingEvents": 0,
+    "uniqueSigners": 0,
+    "totalGaps": 0,
+    "violations": 0,
+    "violationPct": 0,
+    "minGap": null,
+    "nonceMentions": 0,
+    "violationSamples": []
+  }
+]

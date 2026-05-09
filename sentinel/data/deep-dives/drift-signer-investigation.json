@@ -1,0 +1,106 @@
+[
+  {
+    "address": "13GXtbGV8mNfNLDNbVKPrTcHTpfZ4CYrXviRCZmyxQvj",
+    "window": {
+      "from": 1774540093,
+      "to": 1775068073
+    },
+    "selfFees": 15,
+    "totalTxs": 23,
+    "governance": {
+      "approve": 11,
+      "execute": 0,
+      "reject": 0,
+      "propose": 0
+    },
+    "categoryMix": {
+      "GOVERNANCE": 15,
+      "BASIC": 8
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 15,
+      "SYSTEM_PROGRAM": 8
+    },
+    "memeSamples": [],
+    "nftSamples": []
+  },
+  {
+    "address": "7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh",
+    "window": {
+      "from": 1773763048,
+      "to": 1775662883
+    },
+    "selfFees": 32,
+    "totalTxs": 45,
+    "governance": {
+      "approve": 22,
+      "execute": 0,
+      "reject": 0,
+      "propose": 0
+    },
+    "categoryMix": {
+      "GOVERNANCE": 24,
+      "BASIC": 20,
+      "DEX_AGG": 1
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 24,
+      "SYSTEM_PROGRAM": 20,
+      "TITAN": 1
+    },
+    "memeSamples": [],
+    "nftSamples": []
+  },
+  {
+    "address": "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z",
+    "window": {
+      "from": 1775092456,
+      "to": 1775785514
+    },
+    "selfFees": 20,
+    "totalTxs": 24,
+    "governance": {
+      "approve": 14,
+      "execute": 0,
+      "reject": 0,
+      "propose": 0
+    },
+    "categoryMix": {
+      "GOVERNANCE": 20,
+      "BASIC": 4
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 20,
+      "SYSTEM_PROGRAM": 4
+    },
+    "memeSamples": [],
+    "nftSamples": []
+  },
+  {
+    "address": "HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6",
+    "window": {
+      "from": 1775067953,
+      "to": 1775617765
+    },
+    "selfFees": 26,
+    "totalTxs": 32,
+    "governance": {
+      "approve": 15,
+      "execute": 0,
+      "reject": 0,
+      "propose": 0
+    },
+    "categoryMix": {
+      "GOVERNANCE": 25,
+      "BASIC": 6,
+      "CNFT": 1
+    },
+    "topPlatforms": {
+      "SQUADS_V4": 25,
+      "SYSTEM_PROGRAM": 6,
+      "BUBBLEGUM": 1
+    },
+    "memeSamples": [],
+    "nftSamples": []
+  }
+]

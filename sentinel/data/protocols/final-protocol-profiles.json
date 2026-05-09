@@ -1,0 +1,4365 @@
+{
+  "Drift": {
+    "address": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+    "totalTxs": 55,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 4,
+    "activeSigners": 4,
+    "ghostSigners": 0,
+    "ghostSignerAddrs": [],
+    "types": {
+      "APPROVE_PROPOSAL": 41,
+      "TRANSFER": 13,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 55
+    },
+    "topFeePayers": [
+      {
+        "address": "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z",
+        "count": 20,
+        "pct": 36
+      },
+      {
+        "address": "HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6",
+        "count": 20,
+        "pct": 36
+      },
+      {
+        "address": "7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh",
+        "count": 14,
+        "pct": 25
+      },
+      {
+        "address": "MK6bTjdEsvrBGjbm4s2UmeBKL6yRp1UeiUoXKyAzgf2",
+        "count": 1,
+        "pct": 2
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 67,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      7,
+      9,
+      2,
+      15,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0,
+      1,
+      0,
+      3,
+      3,
+      2,
+      0,
+      0,
+      4,
+      2
+    ],
+    "monthDistribution": {
+      "2026-04": 55
+    },
+    "firstTx": 1775090511,
+    "lastTx": 1775785514,
+    "avgExecTimeH": 0
+  },
+  "Pumpfun": {
+    "address": "2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW",
+    "totalTxs": 294,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 13,
+    "activeSigners": 4,
+    "ghostSigners": 9,
+    "ghostSignerAddrs": [
+      "Hc2vsrdknaVuSypGNyMDuzR3FN3yWVcSuFALT6j2Cq71",
+      "Hzd5B6kyJLQ29XDQep9H9yRfzqns2K4hXjCvNe9tePhL",
+      "6bJZGQsPSFPVaoPqy8SkeCa1Hq9yD5PScKU4hNXNtCZD",
+      "EQSKAi9srRDwKSPPH1f5JW41uyNKm8255CyMTAPLWXnk",
+      "mveQ2LeVFwW3kN9Hc7PAwB5rwdUymZm8GdzRRQDQg1u"
+    ],
+    "types": {
+      "REJECT_PROPOSAL": 12,
+      "APPROVE_PROPOSAL": 178,
+      "EXECUTE_CONFIG_TRANSACTION": 15,
+      "TRANSFER": 72,
+      "CANCEL_PROPOSAL": 14,
+      "COMPRESSED_NFT_MINT": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 287,
+      "BUBBLEGUM": 2,
+      "SYSTEM_PROGRAM": 4,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "topFeePayers": [
+      {
+        "address": "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz",
+        "count": 103,
+        "pct": 35
+      },
+      {
+        "address": "5sFJMw5dC59oKGKA9LgeYQCSmYS6rLeCegxMkcM2Pwby",
+        "count": 65,
+        "pct": 22
+      },
+      {
+        "address": "7zc8kzBr5wbsQKxYYv9uCMgfcW5zjxLEopvmuf3ig6iw",
+        "count": 37,
+        "pct": 13
+      },
+      {
+        "address": "4zJkeipCFGvfcJvKm4TY57ED9uEdL3sBRvs8TPdZKG5Q",
+        "count": 32,
+        "pct": 11
+      },
+      {
+        "address": "4tbEe4AquJWyMh7f7yE5poFChhsuPbeGh7EHVQCvq2N8",
+        "count": 31,
+        "pct": 11
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 5,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      4,
+      0,
+      5,
+      1,
+      5,
+      1,
+      0,
+      0,
+      0,
+      0,
+      10,
+      17,
+      33,
+      9,
+      39,
+      22,
+      26,
+      14,
+      20,
+      25,
+      36,
+      14,
+      7,
+      6
+    ],
+    "monthDistribution": {
+      "2026-04": 7,
+      "2026-03": 9,
+      "2026-02": 18,
+      "2026-01": 19,
+      "2025-12": 19,
+      "2025-11": 38,
+      "2025-10": 12,
+      "2025-09": 32,
+      "2025-08": 43,
+      "2025-07": 16,
+      "2025-06": 3,
+      "2025-05": 34,
+      "2025-03": 15,
+      "2025-02": 20,
+      "2025-01": 2,
+      "2024-05": 7
+    },
+    "firstTx": 1716557776,
+    "lastTx": 1775604170,
+    "avgExecTimeH": 0
+  },
+  "Magic Eden": {
+    "address": "J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE",
+    "totalTxs": 158,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 5,
+    "activeSigners": 2,
+    "ghostSigners": 3,
+    "ghostSignerAddrs": [
+      "EsmFrjZuXg6SMQu78QWSM4DWxYQCj86r4zeFRhvb4S1z",
+      "BMnGjNohJCZjYvixZsQAVGvZewNYRJLirxj3yNdHyKqt",
+      "85ckxt7FfpdqjwFm33EA9KR4YFgdBCGFXGur4TbQBK25"
+    ],
+    "types": {
+      "TRANSFER": 43,
+      "APPROVE_PROPOSAL": 100,
+      "EXECUTE_CONFIG_TRANSACTION": 12,
+      "EXECUTE_VAULT_TRANSACTION": 1,
+      "CREATE_VAULT_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 158
+    },
+    "topFeePayers": [
+      {
+        "address": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
+        "count": 65,
+        "pct": 41
+      },
+      {
+        "address": "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b",
+        "count": 46,
+        "pct": 29
+      },
+      {
+        "address": "EsmFrjZuXg6SMQu78QWSM4DWxYQCj86r4zeFRhvb4S1z",
+        "count": 24,
+        "pct": 15
+      },
+      {
+        "address": "BMnGjNohJCZjYvixZsQAVGvZewNYRJLirxj3yNdHyKqt",
+        "count": 22,
+        "pct": 14
+      },
+      {
+        "address": "85ckxt7FfpdqjwFm33EA9KR4YFgdBCGFXGur4TbQBK25",
+        "count": 1,
+        "pct": 1
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 19,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      15,
+      0,
+      0,
+      3,
+      9,
+      3,
+      1,
+      3,
+      20,
+      7,
+      9,
+      11,
+      4,
+      1,
+      6,
+      10,
+      2,
+      19,
+      3,
+      16,
+      9,
+      2,
+      0,
+      5
+    ],
+    "monthDistribution": {
+      "2026-04": 4,
+      "2026-01": 15,
+      "2025-12": 21,
+      "2025-11": 6,
+      "2025-10": 15,
+      "2025-09": 20,
+      "2025-08": 6,
+      "2025-07": 9,
+      "2024-12": 34,
+      "2024-11": 28
+    },
+    "firstTx": 1732109058,
+    "lastTx": 1775841241,
+    "avgExecTimeH": 0
+  },
+  "Exponent": {
+    "address": "51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH",
+    "totalTxs": 476,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 5,
+    "activeSigners": 4,
+    "ghostSigners": 1,
+    "ghostSignerAddrs": [
+      "2nmLnVDNgrxpL2TuqmuqSywTcZ4yzCfzrfA6C7bRi5rb"
+    ],
+    "types": {
+      "TRANSFER": 128,
+      "APPROVE_PROPOSAL": 327,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 8,
+      "REJECT_PROPOSAL": 3,
+      "CANCEL_PROPOSAL": 5,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 476
+    },
+    "topFeePayers": [
+      {
+        "address": "2cVAT3oviEWgaTJkBipmN5KiYpmguzSqJG6hBa4Jfqgj",
+        "count": 245,
+        "pct": 51
+      },
+      {
+        "address": "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3",
+        "count": 211,
+        "pct": 44
+      },
+      {
+        "address": "2nmLnVDNgrxpL2TuqmuqSywTcZ4yzCfzrfA6C7bRi5rb",
+        "count": 12,
+        "pct": 3
+      },
+      {
+        "address": "AnWCbbRmFSmb4kW5w8oeBqW3bQ1pip9vncxTzDPgW2er",
+        "count": 6,
+        "pct": 1
+      },
+      {
+        "address": "HN8obiLBzfKUz87S7bmkWgcu8ysV7otcPUnws5gQU78E",
+        "count": 2,
+        "pct": 0
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 5,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      6,
+      1,
+      0,
+      1,
+      12,
+      2,
+      2,
+      12,
+      15,
+      25,
+      52,
+      45,
+      34,
+      47,
+      24,
+      34,
+      30,
+      42,
+      24,
+      29,
+      21,
+      8,
+      7,
+      3
+    ],
+    "monthDistribution": {
+      "2026-04": 40,
+      "2026-03": 3,
+      "2026-01": 37,
+      "2025-12": 2,
+      "2025-11": 19,
+      "2025-10": 19,
+      "2025-09": 12,
+      "2025-08": 19,
+      "2025-07": 5,
+      "2025-06": 7,
+      "2025-05": 4,
+      "2025-04": 24,
+      "2025-03": 67,
+      "2025-02": 44,
+      "2025-01": 105,
+      "2024-12": 47,
+      "2024-11": 22
+    },
+    "firstTx": 1731256991,
+    "lastTx": 1776175584,
+    "avgExecTimeH": 0
+  },
+  "Nosana": {
+    "address": "ktKWwDt5J8NFMi5jQNRRBDKAhimU5tnrGCcXuYJmxqE",
+    "totalTxs": 206,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 4,
+    "activeSigners": 0,
+    "ghostSigners": 4,
+    "ghostSignerAddrs": [
+      "5WNNVkahiacGz88kBtZUfVhTFTsp2J4J5n6yEB4q3A3D",
+      "FnCZoNo6ki4njeBKW6hWdS64gi3zj5j2aAAkhGbb7cBH",
+      "yozJyT6EJ4zEr54ct7FGR3SnYNZTJxuD2Z2hVvSV7gy",
+      "Cu57v344d4QZRPCYAPsy8Fbz1C4LXCFUPmq1Cbq9mXR6"
+    ],
+    "types": {
+      "TRANSFER": 63,
+      "APPROVE_PROPOSAL": 137,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "REJECT_PROPOSAL": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 206
+    },
+    "topFeePayers": [
+      {
+        "address": "5WNNVkahiacGz88kBtZUfVhTFTsp2J4J5n6yEB4q3A3D",
+        "count": 125,
+        "pct": 61
+      },
+      {
+        "address": "FnCZoNo6ki4njeBKW6hWdS64gi3zj5j2aAAkhGbb7cBH",
+        "count": 72,
+        "pct": 35
+      },
+      {
+        "address": "yozJyT6EJ4zEr54ct7FGR3SnYNZTJxuD2Z2hVvSV7gy",
+        "count": 7,
+        "pct": 3
+      },
+      {
+        "address": "Cu57v344d4QZRPCYAPsy8Fbz1C4LXCFUPmq1Cbq9mXR6",
+        "count": 2,
+        "pct": 1
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 0,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      41,
+      131,
+      2,
+      3,
+      7,
+      16,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2025-07": 3,
+      "2025-02": 3,
+      "2024-12": 198,
+      "2023-11": 2
+    },
+    "firstTx": 1701091094,
+    "lastTx": 1753780052,
+    "avgExecTimeH": 0
+  },
+  "Lulo": {
+    "address": "8Sr4rQJL2aQT3EL97mbrk1T9VMw4pCS2mxMPp2QBzHQq",
+    "totalTxs": 408,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 6,
+    "activeSigners": 3,
+    "ghostSigners": 3,
+    "ghostSignerAddrs": [
+      "54dSAqfu2hQRehP6LavWrUvQLeDMwdq3detjN1bgmYbw",
+      "EkLxVvPnM8kfdmELVoB8mcmDH8YsBfLPeXeBvf4efLXw",
+      "C1twykXr9nKgVEistG3yJk8rtKTnjdhUWrPnQ6TaEkeB"
+    ],
+    "types": {
+      "EXECUTE_CONFIG_TRANSACTION": 14,
+      "APPROVE_PROPOSAL": 243,
+      "REJECT_PROPOSAL": 9,
+      "TRANSFER": 98,
+      "CANCEL_PROPOSAL": 3,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 6,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 12,
+      "CREATE_VAULT_TRANSACTION": 22,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 408
+    },
+    "topFeePayers": [
+      {
+        "address": "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh",
+        "count": 226,
+        "pct": 55
+      },
+      {
+        "address": "54dSAqfu2hQRehP6LavWrUvQLeDMwdq3detjN1bgmYbw",
+        "count": 60,
+        "pct": 15
+      },
+      {
+        "address": "EkLxVvPnM8kfdmELVoB8mcmDH8YsBfLPeXeBvf4efLXw",
+        "count": 57,
+        "pct": 14
+      },
+      {
+        "address": "2dMWrjsnvNQTS6C2BFRYSYbe4GsWR6tdcN7SNmouAYPT",
+        "count": 28,
+        "pct": 7
+      },
+      {
+        "address": "C1twykXr9nKgVEistG3yJk8rtKTnjdhUWrPnQ6TaEkeB",
+        "count": 22,
+        "pct": 5
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 1,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      6,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3,
+      18,
+      52,
+      26,
+      31,
+      35,
+      46,
+      79,
+      66,
+      23,
+      9,
+      13,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 28,
+      "2026-03": 18,
+      "2026-02": 6,
+      "2026-01": 12,
+      "2025-12": 6,
+      "2025-11": 12,
+      "2025-10": 18,
+      "2025-09": 3,
+      "2025-08": 3,
+      "2025-07": 9,
+      "2025-06": 65,
+      "2025-05": 15,
+      "2025-04": 6,
+      "2025-03": 9,
+      "2025-02": 6,
+      "2025-01": 21,
+      "2024-12": 27,
+      "2024-11": 60,
+      "2024-10": 59,
+      "2024-08": 3,
+      "2024-07": 19,
+      "2024-05": 3
+    },
+    "firstTx": 1716404389,
+    "lastTx": 1776171801,
+    "avgExecTimeH": 0
+  },
+  "Stabble": {
+    "address": "AFRN2ECAY1YTbfkXD7yvoc1iaxYdt5BdyyqyPRsrHaK2",
+    "totalTxs": 1010,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 9,
+    "activeSigners": 6,
+    "ghostSigners": 3,
+    "ghostSignerAddrs": [
+      "4MRegdxXAHMQUwryjzqoAUYpohoZ97f5KJa4GDXwDDJv",
+      "FG16puugZaBnWuVbVn3ZcdYaQuv6qTW3i4gEWvLCVFZ3",
+      "Ckv3LBKVMfqEza2Tooxk6RsiytzqNL2MTs6kzmqNbsEa"
+    ],
+    "types": {
+      "APPROVE_PROPOSAL": 617,
+      "CANCEL_PROPOSAL": 5,
+      "TRANSFER": 277,
+      "EXECUTE_CONFIG_TRANSACTION": 17,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 77,
+      "REJECT_PROPOSAL": 12,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 4,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 1010
+    },
+    "topFeePayers": [
+      {
+        "address": "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB",
+        "count": 497,
+        "pct": 49
+      },
+      {
+        "address": "4MRegdxXAHMQUwryjzqoAUYpohoZ97f5KJa4GDXwDDJv",
+        "count": 341,
+        "pct": 34
+      },
+      {
+        "address": "3kXrf8w8Z6EjLJU4S8dAkpRL2von8z7Eh3kJnFrmo7Z2",
+        "count": 65,
+        "pct": 6
+      },
+      {
+        "address": "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN",
+        "count": 47,
+        "pct": 5
+      },
+      {
+        "address": "Ckv3LBKVMfqEza2Tooxk6RsiytzqNL2MTs6kzmqNbsEa",
+        "count": 34,
+        "pct": 3
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 2,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      3,
+      1,
+      1,
+      5,
+      1,
+      5,
+      16,
+      40,
+      99,
+      118,
+      52,
+      48,
+      73,
+      55,
+      74,
+      65,
+      55,
+      57,
+      54,
+      48,
+      48,
+      59,
+      22,
+      11
+    ],
+    "monthDistribution": {
+      "2026-04": 24,
+      "2026-03": 24,
+      "2026-01": 8,
+      "2025-12": 11,
+      "2025-11": 37,
+      "2025-10": 16,
+      "2025-09": 54,
+      "2025-08": 29,
+      "2025-07": 9,
+      "2025-06": 63,
+      "2025-05": 51,
+      "2025-04": 61,
+      "2025-03": 38,
+      "2025-02": 30,
+      "2025-01": 144,
+      "2024-12": 65,
+      "2024-11": 165,
+      "2024-10": 145,
+      "2024-09": 10,
+      "2024-08": 6,
+      "2024-07": 12,
+      "2024-06": 8
+    },
+    "firstTx": 1717573697,
+    "lastTx": 1775730848,
+    "avgExecTimeH": 0
+  },
+  "Hylo": {
+    "address": "2z3t2eBz7VL39Q3vEvaemd5mhT9XLoFofEH2cXvwCJvb",
+    "totalTxs": 1466,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 10,
+    "activeSigners": 2,
+    "ghostSigners": 8,
+    "ghostSignerAddrs": [
+      "FH83cpeVPNWS3hTdQzDtwWcJQT3TA7hfAz3T8ojbNqVt",
+      "8TjLVdh5b95Y5Gm6AbJXhmXW9as8QXvTMLVKJZ6pXzzR",
+      "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe",
+      "9rW2KnDiciztjpcf83LjinReaRgZbo2YG9ZCWXZCfVkd",
+      "FaBArNd8rvbmj4zxQVSZnotcgDq8jGm8i58NCTCbS8sR"
+    ],
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 184,
+      "TRANSFER": 173,
+      "APPROVE_PROPOSAL": 730,
+      "REJECT_PROPOSAL": 51,
+      "USE_SPENDING_LIMIT": 75,
+      "CREATE_VAULT_TRANSACTION": 98,
+      "EXECUTE_VAULT_TRANSACTION": 36,
+      "SWAP": 16,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 10,
+      "ADD_BATCH_TRANSACTION": 33,
+      "CREATE_BATCH": 13,
+      "CANCEL_PROPOSAL": 21,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 13,
+      "EXECUTE_CONFIG_TRANSACTION": 12,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 1466
+    },
+    "topFeePayers": [
+      {
+        "address": "H5xDGKUoJmmsNZ3brVqHV8EVxaUQdfEKwBzvzJEcrLMn",
+        "count": 717,
+        "pct": 49
+      },
+      {
+        "address": "FH83cpeVPNWS3hTdQzDtwWcJQT3TA7hfAz3T8ojbNqVt",
+        "count": 199,
+        "pct": 14
+      },
+      {
+        "address": "8TjLVdh5b95Y5Gm6AbJXhmXW9as8QXvTMLVKJZ6pXzzR",
+        "count": 175,
+        "pct": 12
+      },
+      {
+        "address": "9rW2KnDiciztjpcf83LjinReaRgZbo2YG9ZCWXZCfVkd",
+        "count": 173,
+        "pct": 12
+      },
+      {
+        "address": "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe",
+        "count": 138,
+        "pct": 9
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 8,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      47,
+      27,
+      12,
+      7,
+      11,
+      13,
+      16,
+      7,
+      23,
+      5,
+      45,
+      25,
+      30,
+      24,
+      52,
+      136,
+      241,
+      77,
+      150,
+      126,
+      55,
+      180,
+      91,
+      66
+    ],
+    "monthDistribution": {
+      "2026-04": 39,
+      "2026-03": 69,
+      "2026-02": 68,
+      "2026-01": 150,
+      "2025-12": 62,
+      "2025-11": 92,
+      "2025-10": 121,
+      "2025-09": 85,
+      "2025-08": 159,
+      "2025-07": 38,
+      "2025-06": 55,
+      "2025-05": 15,
+      "2025-04": 17,
+      "2025-03": 44,
+      "2025-02": 22,
+      "2025-01": 43,
+      "2024-12": 55,
+      "2024-11": 20,
+      "2024-10": 48,
+      "2024-09": 26,
+      "2024-08": 65,
+      "2024-07": 49,
+      "2024-06": 22,
+      "2024-04": 33,
+      "2024-03": 31,
+      "2024-02": 38
+    },
+    "firstTx": 1707334555,
+    "lastTx": 1776003448,
+    "avgExecTimeH": 0
+  },
+  "Loopscale": {
+    "address": "C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk",
+    "totalTxs": 4010,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 9,
+    "activeSigners": 6,
+    "ghostSigners": 3,
+    "ghostSignerAddrs": [
+      "EdEsqYQ5qpssY2s4y1fkKkefqUopU5epVuCdUBaBgHkL",
+      "LUKET3JPqzoCMZNLos4MN6yHUzpX2qsgjen4uhS86u9",
+      "FmoQf6t1fxNhvzJ7iVyoiue5C8JuhkLxpp6it9jAkkua"
+    ],
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 446,
+      "TRANSFER": 738,
+      "APPROVE_PROPOSAL": 2029,
+      "CREATE_VAULT_TRANSACTION": 705,
+      "REJECT_PROPOSAL": 63,
+      "CANCEL_PROPOSAL": 5,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 8,
+      "USE_SPENDING_LIMIT": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 11,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 4010
+    },
+    "topFeePayers": [
+      {
+        "address": "LoTy38EiLYg85rWq5okYjNwzQECGbYa6uPcJPj8MHu2",
+        "count": 1229,
+        "pct": 31
+      },
+      {
+        "address": "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN",
+        "count": 891,
+        "pct": 22
+      },
+      {
+        "address": "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs",
+        "count": 674,
+        "pct": 17
+      },
+      {
+        "address": "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn",
+        "count": 649,
+        "pct": 16
+      },
+      {
+        "address": "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j",
+        "count": 279,
+        "pct": 7
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 12,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      306,
+      46,
+      6,
+      70,
+      63,
+      0,
+      17,
+      1,
+      7,
+      29,
+      0,
+      3,
+      16,
+      151,
+      191,
+      169,
+      288,
+      486,
+      276,
+      466,
+      167,
+      284,
+      705,
+      263
+    ],
+    "monthDistribution": {
+      "2026-04": 114,
+      "2026-03": 514,
+      "2026-02": 233,
+      "2026-01": 745,
+      "2025-12": 103,
+      "2025-11": 469,
+      "2025-10": 527,
+      "2025-09": 102,
+      "2025-08": 89,
+      "2025-07": 548,
+      "2025-06": 170,
+      "2025-05": 186,
+      "2025-04": 99,
+      "2025-03": 91,
+      "2025-02": 20
+    },
+    "firstTx": 1740607346,
+    "lastTx": 1775796272,
+    "avgExecTimeH": 0
+  },
+  "Orca": {
+    "address": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+    "totalTxs": 1321,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 13,
+    "activeSigners": 2,
+    "ghostSigners": 11,
+    "ghostSignerAddrs": [
+      "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa",
+      "F8HnFKCbN5H1PnHMVtGSyMv4nn7XxCreMQJPUP7q8qK4",
+      "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C",
+      "4gdsTXsc3Df73LyNXeTa9wS5unJ9DE8cTaJhtKqksD4S",
+      "9f4WNuXfhQsjC2U4tqZ38i4rccey9ys5eeywCmQ9yUAs"
+    ],
+    "types": {
+      "USE_SPENDING_LIMIT": 1032,
+      "APPROVE_PROPOSAL": 181,
+      "CREATE_VAULT_TRANSACTION": 30,
+      "EXECUTE_CONFIG_TRANSACTION": 22,
+      "CREATE_CONFIG_TRANSACTION": 7,
+      "TRANSFER": 39,
+      "ADD_BATCH_TRANSACTION": 2,
+      "CREATE_BATCH": 1,
+      "REJECT_PROPOSAL": 5,
+      "EXECUTE_VAULT_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 1321
+    },
+    "topFeePayers": [
+      {
+        "address": "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C",
+        "count": 1048,
+        "pct": 79
+      },
+      {
+        "address": "AM1tQFm9YCFZaqU69iX6zg5Sy9RQRxGrU6Pp9od22pb4",
+        "count": 52,
+        "pct": 4
+      },
+      {
+        "address": "4gdsTXsc3Df73LyNXeTa9wS5unJ9DE8cTaJhtKqksD4S",
+        "count": 51,
+        "pct": 4
+      },
+      {
+        "address": "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY",
+        "count": 48,
+        "pct": 4
+      },
+      {
+        "address": "9f4WNuXfhQsjC2U4tqZ38i4rccey9ys5eeywCmQ9yUAs",
+        "count": 35,
+        "pct": 3
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 23,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      55,
+      59,
+      54,
+      44,
+      48,
+      47,
+      47,
+      45,
+      43,
+      44,
+      49,
+      46,
+      47,
+      61,
+      58,
+      65,
+      70,
+      68,
+      60,
+      65,
+      64,
+      58,
+      67,
+      57
+    ],
+    "monthDistribution": {
+      "2026-04": 10,
+      "2026-03": 13,
+      "2026-02": 20,
+      "2026-01": 28,
+      "2025-12": 65,
+      "2025-11": 726,
+      "2025-10": 276,
+      "2025-09": 57,
+      "2025-08": 20,
+      "2025-07": 5,
+      "2025-06": 10,
+      "2025-05": 6,
+      "2025-04": 43,
+      "2025-03": 1,
+      "2025-02": 5,
+      "2025-01": 9,
+      "2024-12": 27
+    },
+    "firstTx": 1733781626,
+    "lastTx": 1775437989,
+    "avgExecTimeH": 0
+  },
+  "Marginfi": {
+    "address": "7FCPipJWVbPbdHymVt1gJYwKciakkJz5GahdQySemvHk",
+    "totalTxs": 680,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 18,
+    "activeSigners": 13,
+    "ghostSigners": 5,
+    "ghostSignerAddrs": [
+      "2tV8B4gFq2i5oia9habQU5kjJydpDAMMxTxQ8BjiL7Xg",
+      "FwZqfdL6RAmccn1URCqyZcDTj6knvaa8X4fQvHyi4GBw",
+      "D1n46mu2nvgALakgEkv3GugFaHDieXgskb6xh1wPcGWH",
+      "CDsQTFR2SgwiSmvNP3dcmAFPp329zxUTba3xRkk6dhZs",
+      "3kpqxZVxG8FHWJyDePmcVsVYvdcybQooLbFkk72NTaY7"
+    ],
+    "types": {
+      "APPROVE_PROPOSAL": 566,
+      "TRANSFER": 53,
+      "REJECT_PROPOSAL": 18,
+      "EXECUTE_CONFIG_TRANSACTION": 26,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 9,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 5,
+      "EXECUTE_VAULT_TRANSACTION": 1,
+      "CANCEL_PROPOSAL": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 680
+    },
+    "topFeePayers": [
+      {
+        "address": "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z",
+        "count": 108,
+        "pct": 16
+      },
+      {
+        "address": "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R",
+        "count": 87,
+        "pct": 13
+      },
+      {
+        "address": "2owonq2d2LaQNCc4iq8s4848GeRsPQqbRdCReLhdx9mW",
+        "count": 65,
+        "pct": 10
+      },
+      {
+        "address": "9wZsFehHe8VExVuQqe75PrG3ZFBsD5dPfR6FQazLdgCh",
+        "count": 56,
+        "pct": 8
+      },
+      {
+        "address": "9NQozSJM8yy8JxX2DGgXUYvMnQz7CDmB91PnLAeSXaW8",
+        "count": 53,
+        "pct": 8
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 6,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      14,
+      9,
+      12,
+      5,
+      0,
+      4,
+      3,
+      7,
+      7,
+      17,
+      4,
+      15,
+      20,
+      39,
+      66,
+      38,
+      48,
+      70,
+      68,
+      73,
+      57,
+      48,
+      45,
+      11
+    ],
+    "monthDistribution": {
+      "2026-04": 27,
+      "2026-03": 24,
+      "2026-02": 4,
+      "2026-01": 78,
+      "2025-12": 77,
+      "2025-11": 84,
+      "2025-10": 29,
+      "2025-09": 40,
+      "2025-08": 98,
+      "2025-07": 114,
+      "2025-06": 8,
+      "2025-05": 8,
+      "2025-04": 27,
+      "2025-03": 34,
+      "2025-02": 28
+    },
+    "firstTx": 1739380439,
+    "lastTx": 1775849338,
+    "avgExecTimeH": 0
+  },
+  "Kamino": {
+    "address": "6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM",
+    "totalTxs": 291,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 7,
+    "activeSigners": 7,
+    "ghostSigners": 0,
+    "ghostSignerAddrs": [],
+    "types": {
+      "APPROVE_PROPOSAL": 236,
+      "TRANSFER": 40,
+      "EXECUTE_CONFIG_TRANSACTION": 13,
+      "EXECUTE_VAULT_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 291
+    },
+    "topFeePayers": [
+      {
+        "address": "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv",
+        "count": 96,
+        "pct": 33
+      },
+      {
+        "address": "6vkzAQLAERW5RKHX68ZCDxWxW77T8dMqYUYMXCe6ooMC",
+        "count": 56,
+        "pct": 19
+      },
+      {
+        "address": "HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj",
+        "count": 42,
+        "pct": 14
+      },
+      {
+        "address": "8g2PMddbKrqpPtd74pWM16xnDwtpKtkDJNDsQ9cWJZAC",
+        "count": 33,
+        "pct": 11
+      },
+      {
+        "address": "CmJywvWynJAiADsgTkVWu5BJus4ru2SP1PnfBXvThrxZ",
+        "count": 30,
+        "pct": 10
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 0,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      10,
+      39,
+      38,
+      35,
+      13,
+      15,
+      20,
+      24,
+      34,
+      23,
+      10,
+      4,
+      5,
+      12,
+      6,
+      2
+    ],
+    "monthDistribution": {
+      "2026-04": 12,
+      "2026-03": 57,
+      "2026-02": 53,
+      "2026-01": 10,
+      "2025-12": 10,
+      "2025-11": 60,
+      "2025-10": 21,
+      "2025-09": 1,
+      "2025-08": 13,
+      "2025-07": 5,
+      "2025-06": 10,
+      "2025-04": 39
+    },
+    "firstTx": 1744729380,
+    "lastTx": 1776161728,
+    "avgExecTimeH": 0
+  },
+  "Jupiter Perps": {
+    "address": "AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm",
+    "totalTxs": 16,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 6,
+    "activeSigners": 6,
+    "ghostSigners": 0,
+    "ghostSignerAddrs": [],
+    "types": {
+      "TRANSFER": 1,
+      "APPROVE_PROPOSAL": 12,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 16
+    },
+    "topFeePayers": [
+      {
+        "address": "89FnbsKH8n6FXCghGUijxh3snqx3e6VXJ7q1fQAHWkQQ",
+        "count": 5,
+        "pct": 31
+      },
+      {
+        "address": "EhJqf1p39c8NnH5iuZAJyw778LQua1AhZWxarT5SF8sT",
+        "count": 4,
+        "pct": 25
+      },
+      {
+        "address": "CHRDWWqUs6LyeeoD7pJb3iRfnvYeMfwMUtf2N7zWk7uh",
+        "count": 2,
+        "pct": 13
+      },
+      {
+        "address": "GGG2JyBtwbPAsYwUQED8GBbj9UMi7NQa3uwN3DmyGNtz",
+        "count": 2,
+        "pct": 13
+      },
+      {
+        "address": "3ZR4gMzciDHZudi5e1evdESKZuCQEE9QNHLkMoRsfDxQ",
+        "count": 2,
+        "pct": 13
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 19,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      4,
+      0,
+      3,
+      0,
+      1,
+      2,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 5,
+      "2026-02": 11
+    },
+    "firstTx": 1770187505,
+    "lastTx": 1776141641,
+    "avgExecTimeH": 0
+  },
+  "Jupiter Lend": {
+    "address": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+    "totalTxs": 132,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 8,
+    "activeSigners": 5,
+    "ghostSigners": 3,
+    "ghostSignerAddrs": [
+      "4Sqa9kDfuLQcEs6C8M4NHEUTY7MuXy5YVnjVKfjA4Jqp",
+      "GpvnGqPTq4Ga7k5PgxoBA7Yr6HCnsqeeeb8KhczztdRu",
+      "4uqVay6tZVGjTfqRRegj6vYW1uCaLjFreiVqNbBiDGKZ"
+    ],
+    "types": {
+      "TRANSFER": 11,
+      "APPROVE_PROPOSAL": 106,
+      "EXECUTE_CONFIG_TRANSACTION": 14,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 132
+    },
+    "topFeePayers": [
+      {
+        "address": "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq",
+        "count": 40,
+        "pct": 30
+      },
+      {
+        "address": "ABun6mSVAoMvGtZF3dJbseSFL27fXZRWG2FS3ZYuK2QR",
+        "count": 29,
+        "pct": 22
+      },
+      {
+        "address": "FHEPdZxbkM896cQcxR68fTXXnLDnm4t5AKM6xbiP1VQ9",
+        "count": 19,
+        "pct": 14
+      },
+      {
+        "address": "8BR8iAAF9ZnfhLCxmVPzTvF6LcysppKW6SXbjsNKrz9H",
+        "count": 18,
+        "pct": 14
+      },
+      {
+        "address": "FXQuS5Yug6GBxbNbf4qpNdFonhhCW7x7a4nTFakzgFnK",
+        "count": 18,
+        "pct": 14
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 11,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      1,
+      4,
+      3,
+      0,
+      7,
+      2,
+      3,
+      9,
+      8,
+      5,
+      8,
+      12,
+      16,
+      23,
+      5,
+      7,
+      7,
+      6,
+      3,
+      3,
+      0,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2026-03": 15,
+      "2026-02": 21,
+      "2026-01": 31,
+      "2025-12": 34,
+      "2025-10": 31
+    },
+    "firstTx": 1759974599,
+    "lastTx": 1773999683,
+    "avgExecTimeH": 0
+  },
+  "Huma": {
+    "address": "uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX",
+    "totalTxs": 168,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 7,
+    "activeSigners": 5,
+    "ghostSigners": 2,
+    "ghostSignerAddrs": [
+      "EdEsqYQ5qpssY2s4y1fkKkefqUopU5epVuCdUBaBgHkL",
+      "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z"
+    ],
+    "types": {
+      "APPROVE_PROPOSAL": 86,
+      "EXECUTE_CONFIG_TRANSACTION": 11,
+      "EXECUTE_VAULT_TRANSACTION": 8,
+      "CANCEL_PROPOSAL": 4,
+      "TRANSFER": 18,
+      "USE_SPENDING_LIMIT": 9,
+      "REJECT_PROPOSAL": 7,
+      "CREATE_VAULT_TRANSACTION": 24,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 168
+    },
+    "topFeePayers": [
+      {
+        "address": "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z",
+        "count": 81,
+        "pct": 48
+      },
+      {
+        "address": "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js",
+        "count": 52,
+        "pct": 31
+      },
+      {
+        "address": "8W2VmPoB63YsVt9VZd5hJzzu1D396cszDLGWMZZ1GCKu",
+        "count": 11,
+        "pct": 7
+      },
+      {
+        "address": "3AJp6KTKkiaTzH6cGx8iwdZv8x672U2Ce8JZSvaCtAtc",
+        "count": 10,
+        "pct": 6
+      },
+      {
+        "address": "EdEsqYQ5qpssY2s4y1fkKkefqUopU5epVuCdUBaBgHkL",
+        "count": 6,
+        "pct": 4
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 33,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      1,
+      2,
+      10,
+      10,
+      33,
+      5,
+      43,
+      0,
+      0,
+      0,
+      4,
+      1,
+      13,
+      9,
+      5,
+      1,
+      1,
+      0,
+      0,
+      1,
+      11,
+      1,
+      17
+    ],
+    "monthDistribution": {
+      "2026-04": 33,
+      "2026-03": 9,
+      "2026-01": 3,
+      "2025-10": 1,
+      "2025-09": 1,
+      "2025-08": 1,
+      "2025-07": 1,
+      "2025-06": 1,
+      "2025-05": 30,
+      "2025-04": 87,
+      "2025-03": 1
+    },
+    "firstTx": 1742442202,
+    "lastTx": 1776103114,
+    "avgExecTimeH": 0
+  },
+  "Solstice": {
+    "address": "AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf",
+    "totalTxs": 559,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 7,
+    "activeSigners": 5,
+    "ghostSigners": 2,
+    "ghostSignerAddrs": [
+      "F88ycRguETJyjeh64Z67xMCeTcMQqGGLzyfEbCmBaFa2",
+      "5RabYeYt19sor9RvExkiRvv1T9rWje5hPW7xeYXB6quQ"
+    ],
+    "types": {
+      "EXECUTE_VAULT_TRANSACTION": 146,
+      "APPROVE_PROPOSAL": 372,
+      "CREATE_VAULT_TRANSACTION": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 22,
+      "TRANSFER": 5,
+      "REJECT_PROPOSAL": 5,
+      "CREATE_CONFIG_TRANSACTION": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 559
+    },
+    "topFeePayers": [
+      {
+        "address": "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK",
+        "count": 251,
+        "pct": 45
+      },
+      {
+        "address": "E1iyboRnxBSD8KJncj8mkkzbJu17gr5w6CiTN6q4YoUN",
+        "count": 144,
+        "pct": 26
+      },
+      {
+        "address": "F88ycRguETJyjeh64Z67xMCeTcMQqGGLzyfEbCmBaFa2",
+        "count": 44,
+        "pct": 8
+      },
+      {
+        "address": "5RabYeYt19sor9RvExkiRvv1T9rWje5hPW7xeYXB6quQ",
+        "count": 42,
+        "pct": 8
+      },
+      {
+        "address": "DtWpcoMN5LMKmvw4sRXVArExBBDyHNk1mQ7DrbYhGADS",
+        "count": 38,
+        "pct": 7
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 16,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      5,
+      12,
+      6,
+      16,
+      18,
+      32,
+      42,
+      12,
+      50,
+      37,
+      20,
+      25,
+      66,
+      41,
+      57,
+      39,
+      34,
+      19,
+      3,
+      4,
+      4,
+      2,
+      1,
+      14
+    ],
+    "monthDistribution": {
+      "2026-04": 18,
+      "2026-03": 25,
+      "2026-02": 58,
+      "2026-01": 15,
+      "2025-12": 27,
+      "2025-11": 27,
+      "2025-10": 53,
+      "2025-09": 61,
+      "2025-08": 63,
+      "2025-07": 168,
+      "2025-06": 44
+    },
+    "firstTx": 1750312163,
+    "lastTx": 1776171336,
+    "avgExecTimeH": 0
+  },
+  "Switchboard": {
+    "address": "93RQfY6VHRkqXBCEhMY5u92bCGp428DTzqZUEA2Hjr9h",
+    "totalTxs": 170,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 7,
+    "activeSigners": 0,
+    "ghostSigners": 7,
+    "ghostSignerAddrs": [
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+      "EoHK5VNgYisSRDcqSkBPoQTGsGroBnNR4xiWWWo8K3g5",
+      "E4NGuMwfoTqJKUkzUSWF3rDbMwCR3CCTwFrL4Z3Y7r6X",
+      "8dvWh4YPejYUs9fS296jZ1XAxcKEPtzi6v1NGv4ZJFw6",
+      "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP"
+    ],
+    "types": {
+      "TRANSFER": 28,
+      "APPROVE_PROPOSAL": 124,
+      "CANCEL_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 7,
+      "REJECT_PROPOSAL": 5,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 170
+    },
+    "topFeePayers": [
+      {
+        "address": "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+        "count": 89,
+        "pct": 52
+      },
+      {
+        "address": "nrEbij8ZuwEw8GvjJqS5JsFx55Gy1LmvBXe5B1jtjpH",
+        "count": 27,
+        "pct": 16
+      },
+      {
+        "address": "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP",
+        "count": 25,
+        "pct": 15
+      },
+      {
+        "address": "2r3cVdpCRYNZKyi3r6pquzCEHrBezPdXPSeCaaWWnGMn",
+        "count": 14,
+        "pct": 8
+      },
+      {
+        "address": "EoHK5VNgYisSRDcqSkBPoQTGsGroBnNR4xiWWWo8K3g5",
+        "count": 10,
+        "pct": 6
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 4,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      1,
+      1,
+      1,
+      3,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      4,
+      6,
+      0,
+      9,
+      23,
+      4,
+      10,
+      15,
+      28,
+      26,
+      15,
+      18,
+      1
+    ],
+    "monthDistribution": {
+      "2025-09": 12,
+      "2025-08": 19,
+      "2025-06": 8,
+      "2025-05": 13,
+      "2025-04": 12,
+      "2025-03": 44,
+      "2025-02": 9,
+      "2024-12": 10,
+      "2024-11": 11,
+      "2024-10": 8,
+      "2024-09": 9,
+      "2024-08": 5,
+      "2024-04": 10
+    },
+    "firstTx": 1712086470,
+    "lastTx": 1757332385,
+    "avgExecTimeH": 0
+  },
+  "Titan": {
+    "address": "F1WZezmt2J1dSsXrQWrS2Umn9CYzPPR2eP3sunZrMX29",
+    "totalTxs": 1279,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 9,
+    "activeSigners": 7,
+    "ghostSigners": 2,
+    "ghostSignerAddrs": [
+      "DGLjmi6goG6yhaknmyurkfLas33BrJ2yuPhNndUsgTQT",
+      "ERJbeHWDiFxBtgYNpdSxdugkGmzzH6NVpJdbiQdx1Pqy"
+    ],
+    "types": {
+      "REJECT_PROPOSAL": 18,
+      "APPROVE_PROPOSAL": 886,
+      "TRANSFER": 265,
+      "CREATE_VAULT_TRANSACTION": 51,
+      "ADD_BATCH_TRANSACTION": 11,
+      "CREATE_BATCH": 11,
+      "USE_SPENDING_LIMIT": 15,
+      "SWAP": 1,
+      "EXECUTE_VAULT_TRANSACTION": 10,
+      "CANCEL_PROPOSAL": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 6,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 1279
+    },
+    "topFeePayers": [
+      {
+        "address": "H93FtQBKFib1nUDchwNLRspgVEYpUw17D4Wo2SsXY5HT",
+        "count": 298,
+        "pct": 23
+      },
+      {
+        "address": "VmroV2xtoj3yP487d2qt9kjCVn4BcphEtvSMjfGpfgN",
+        "count": 269,
+        "pct": 21
+      },
+      {
+        "address": "3wLd4AUHQRB9DJrgP8Qwfp5fMh2SyAqj148d7qbUq8Lb",
+        "count": 220,
+        "pct": 17
+      },
+      {
+        "address": "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk",
+        "count": 206,
+        "pct": 16
+      },
+      {
+        "address": "3TPczDPBfQpA6KiHSwYC51Qwzn1DJApVwqCK88zB69Au",
+        "count": 193,
+        "pct": 15
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 25,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      76,
+      51,
+      88,
+      39,
+      41,
+      24,
+      6,
+      7,
+      11,
+      1,
+      8,
+      13,
+      30,
+      57,
+      126,
+      146,
+      89,
+      66,
+      66,
+      56,
+      55,
+      79,
+      99,
+      45
+    ],
+    "monthDistribution": {
+      "2026-04": 67,
+      "2026-03": 99,
+      "2026-02": 109,
+      "2026-01": 42,
+      "2025-12": 83,
+      "2025-11": 74,
+      "2025-10": 77,
+      "2025-09": 97,
+      "2025-08": 107,
+      "2025-07": 101,
+      "2025-06": 37,
+      "2025-05": 47,
+      "2025-04": 46,
+      "2025-03": 44,
+      "2025-02": 37,
+      "2025-01": 13,
+      "2024-12": 102,
+      "2024-11": 64,
+      "2024-10": 28,
+      "2024-09": 5
+    },
+    "firstTx": 1727470442,
+    "lastTx": 1776096218,
+    "avgExecTimeH": 0
+  },
+  "Solayer": {
+    "address": "5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp",
+    "totalTxs": 47,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 6,
+    "activeSigners": 0,
+    "ghostSigners": 6,
+    "ghostSignerAddrs": [
+      "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf",
+      "DB75TdZZ3cLgpPATEgXGgJSnH3AG552XeeoB2mf2fsKN",
+      "6eAxgG1KoXC6Q4YBdjptFmyfoWKNGYQEKT3sHoX7JWU8",
+      "CusYdBturGtGHLD8QiQdDuotq28cNnKiPzvaVRjfPr6N",
+      "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB"
+    ],
+    "types": {
+      "EXECUTE_CONFIG_TRANSACTION": 6,
+      "APPROVE_PROPOSAL": 30,
+      "TRANSFER": 7,
+      "REJECT_PROPOSAL": 3,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 46,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "topFeePayers": [
+      {
+        "address": "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf",
+        "count": 26,
+        "pct": 55
+      },
+      {
+        "address": "6eAxgG1KoXC6Q4YBdjptFmyfoWKNGYQEKT3sHoX7JWU8",
+        "count": 12,
+        "pct": 26
+      },
+      {
+        "address": "DB75TdZZ3cLgpPATEgXGgJSnH3AG552XeeoB2mf2fsKN",
+        "count": 5,
+        "pct": 11
+      },
+      {
+        "address": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+        "count": 2,
+        "pct": 4
+      },
+      {
+        "address": "CusYdBturGtGHLD8QiQdDuotq28cNnKiPzvaVRjfPr6N",
+        "count": 1,
+        "pct": 2
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 30,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      2,
+      2,
+      1,
+      5,
+      4,
+      0,
+      5,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      6,
+      0,
+      1,
+      2,
+      3,
+      5,
+      3,
+      2
+    ],
+    "monthDistribution": {
+      "2025-10": 1,
+      "2025-09": 3,
+      "2025-01": 1,
+      "2024-11": 4,
+      "2024-09": 4,
+      "2024-08": 8,
+      "2024-07": 14,
+      "2024-05": 11,
+      "2024-03": 1
+    },
+    "firstTx": 1711873125,
+    "lastTx": 1760729865,
+    "avgExecTimeH": 0
+  },
+  "Flash Trade": {
+    "address": "Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF",
+    "totalTxs": 274,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 11,
+    "activeSigners": 11,
+    "ghostSigners": 0,
+    "ghostSignerAddrs": [],
+    "types": {
+      "TRANSFER": 58,
+      "APPROVE_PROPOSAL": 200,
+      "EXECUTE_CONFIG_TRANSACTION": 13,
+      "REJECT_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 274
+    },
+    "topFeePayers": [
+      {
+        "address": "JwV3M6PvMykzYeQznSeZA7WdwTvyaXCC4dFWoKvSYZS",
+        "count": 78,
+        "pct": 28
+      },
+      {
+        "address": "9woYpYDW8HcpY1KUvKToXPbK9nKyvz56bjU3MUFpZR5C",
+        "count": 76,
+        "pct": 28
+      },
+      {
+        "address": "5Arakn7JSt3sPkXdWvy1887Bjd2d755b57BTEwBR7cW3",
+        "count": 45,
+        "pct": 16
+      },
+      {
+        "address": "CgiBdhAK4PDeU3zhzEqaLzVBTopR3hfMasgh2xF7fDft",
+        "count": 20,
+        "pct": 7
+      },
+      {
+        "address": "9erjj6n8Hkrv9dVK1CjJatSNfCgUP6EbQ2hRbrsokRuL",
+        "count": 19,
+        "pct": 7
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 2,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      3,
+      1,
+      5,
+      6,
+      10,
+      23,
+      36,
+      44,
+      13,
+      77,
+      7,
+      1,
+      12,
+      3,
+      12,
+      0,
+      17,
+      2,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 77,
+      "2026-03": 25,
+      "2026-02": 41,
+      "2026-01": 25,
+      "2025-12": 12,
+      "2025-11": 24,
+      "2025-10": 9,
+      "2025-09": 18,
+      "2025-08": 15,
+      "2025-07": 19,
+      "2025-06": 6,
+      "2025-05": 3
+    },
+    "firstTx": 1748259741,
+    "lastTx": 1775654966,
+    "avgExecTimeH": 0
+  },
+  "Wick": {
+    "address": "8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA",
+    "totalTxs": 11,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 3,
+    "activeSigners": 3,
+    "ghostSigners": 0,
+    "ghostSignerAddrs": [],
+    "types": {
+      "CANCEL_PROPOSAL": 3,
+      "APPROVE_PROPOSAL": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 11
+    },
+    "topFeePayers": [
+      {
+        "address": "9RkMtrs93JspVYaDjm1SWWj6zE3xVP5VN26vEMDAVkAf",
+        "count": 4,
+        "pct": 36
+      },
+      {
+        "address": "28eDFqNQ15VB745zXVSPJVSRZWD7sws2Hy8VHq5pfazu",
+        "count": 4,
+        "pct": 36
+      },
+      {
+        "address": "6EzEruZ8uKHTRnjQktQsn6U5cimfbUCGGmTEycnmnxPW",
+        "count": 3,
+        "pct": 27
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 18,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 11
+    },
+    "firstTx": 1775192489,
+    "lastTx": 1775907990,
+    "avgExecTimeH": 0
+  },
+  "Onre Finance": {
+    "address": "922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR",
+    "totalTxs": 1298,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 8,
+    "activeSigners": 2,
+    "ghostSigners": 6,
+    "ghostSignerAddrs": [
+      "7PrRjV1nLyoMJ8XSFXVAdnMeb6mmz9fr45mNuvnfWA7E",
+      "DiNi78eqjYxVdwXiAiran2Fh4sPAbvQA4oDTq2a6mDQe",
+      "PV5tfXh295EpmpiYNHsEEEBymZ9325G14LGnUkkJ2EC",
+      "8dk5KyDAttJYT4pa9nSQYqLEK85w7ZbcHZdZjBMHoAhz",
+      "DN7tZKmnymL3JjdhDrCsB69Bdp3iB75KhDQcZQo4WVZd"
+    ],
+    "types": {
+      "TRANSFER": 235,
+      "APPROVE_PROPOSAL": 894,
+      "USE_SPENDING_LIMIT": 48,
+      "EXECUTE_CONFIG_TRANSACTION": 36,
+      "CREATE_VAULT_TRANSACTION": 12,
+      "REJECT_PROPOSAL": 53,
+      "CANCEL_PROPOSAL": 14,
+      "SWAP": 2,
+      "EXECUTE_VAULT_TRANSACTION": 3,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 1298
+    },
+    "topFeePayers": [
+      {
+        "address": "EVJRoxfqp7N1YbXgypvQfUGFj9bGdFsG9tLrHrsdn3cW",
+        "count": 1246,
+        "pct": 96
+      },
+      {
+        "address": "PV5tfXh295EpmpiYNHsEEEBymZ9325G14LGnUkkJ2EC",
+        "count": 16,
+        "pct": 1
+      },
+      {
+        "address": "EdEsqYQ5qpssY2s4y1fkKkefqUopU5epVuCdUBaBgHkL",
+        "count": 11,
+        "pct": 1
+      },
+      {
+        "address": "DN7tZKmnymL3JjdhDrCsB69Bdp3iB75KhDQcZQo4WVZd",
+        "count": 10,
+        "pct": 1
+      },
+      {
+        "address": "DiNi78eqjYxVdwXiAiran2Fh4sPAbvQA4oDTq2a6mDQe",
+        "count": 6,
+        "pct": 0
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 4,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      8,
+      37,
+      0,
+      0,
+      0,
+      5,
+      7,
+      23,
+      48,
+      22,
+      48,
+      47,
+      71,
+      127,
+      121,
+      130,
+      237,
+      98,
+      109,
+      90,
+      50,
+      19,
+      1,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 115,
+      "2026-03": 86,
+      "2026-02": 170,
+      "2026-01": 121,
+      "2025-12": 150,
+      "2025-11": 200,
+      "2025-10": 121,
+      "2025-09": 39,
+      "2025-08": 82,
+      "2025-07": 45,
+      "2025-06": 29,
+      "2025-05": 61,
+      "2025-04": 71,
+      "2025-03": 7,
+      "2025-02": 1
+    },
+    "firstTx": 1739456437,
+    "lastTx": 1776099138,
+    "avgExecTimeH": 0
+  },
+  "MetaDAO": {
+    "address": "8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH",
+    "totalTxs": 1885,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 15,
+    "activeSigners": 10,
+    "ghostSigners": 5,
+    "ghostSignerAddrs": [
+      "613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY",
+      "2SG7fCnreQ9wHoqQC7U6pfDN2rYmBqExKuqcGR3StrZW",
+      "G1oGhierAFZdUfRyECgCWkSKhim2NsJUUYz1rYWuxqRq",
+      "65U66fcYuNfqN12vzateJhZ4bgDuxFWN9gMwraeQKByg",
+      "6kDGqrP4Wwqe5KBa9zTrgUFykVsv4YhZPDEX22kUsDMP"
+    ],
+    "types": {
+      "APPROVE_PROPOSAL": 998,
+      "REJECT_PROPOSAL": 35,
+      "ACTIVATE_PROPOSAL": 5,
+      "ADD_BATCH_TRANSACTION": 29,
+      "CREATE_BATCH": 12,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 20,
+      "USE_SPENDING_LIMIT": 28,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 46,
+      "TRANSFER": 471,
+      "CREATE_VAULT_TRANSACTION": 222,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 1,
+      "CREATE_PROPOSAL": 4,
+      "EXECUTE_VAULT_TRANSACTION": 2,
+      "CANCEL_PROPOSAL": 4,
+      "SWAP": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 1885
+    },
+    "topFeePayers": [
+      {
+        "address": "4LpE9Lxqb4jYYh8jA8oDhsGDKPNBNkcoXobbAJTa3pWw",
+        "count": 776,
+        "pct": 41
+      },
+      {
+        "address": "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK",
+        "count": 222,
+        "pct": 12
+      },
+      {
+        "address": "613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY",
+        "count": 209,
+        "pct": 11
+      },
+      {
+        "address": "BF8hxzzR4KuVxfsyAUFyy26E6y2GhsSZgBoUQrygwof1",
+        "count": 151,
+        "pct": 8
+      },
+      {
+        "address": "EFYHPtUykMMN3S69rofhWSoTZo6v41mrinDKQynBsguv",
+        "count": 139,
+        "pct": 7
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 22,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      137,
+      77,
+      77,
+      35,
+      37,
+      53,
+      14,
+      10,
+      6,
+      5,
+      4,
+      4,
+      14,
+      26,
+      28,
+      78,
+      110,
+      111,
+      175,
+      143,
+      259,
+      286,
+      96,
+      100
+    ],
+    "monthDistribution": {
+      "2026-04": 35,
+      "2026-03": 103,
+      "2026-02": 139,
+      "2026-01": 616,
+      "2025-12": 109,
+      "2025-11": 27,
+      "2025-10": 111,
+      "2025-09": 46,
+      "2025-08": 41,
+      "2025-07": 44,
+      "2025-06": 16,
+      "2025-05": 21,
+      "2025-04": 23,
+      "2025-03": 70,
+      "2025-02": 23,
+      "2025-01": 30,
+      "2024-12": 25,
+      "2024-11": 11,
+      "2024-10": 63,
+      "2024-09": 16,
+      "2024-08": 242,
+      "2024-07": 18,
+      "2024-06": 15,
+      "2024-05": 23,
+      "2024-04": 18
+    },
+    "firstTx": 1711962999,
+    "lastTx": 1776116637,
+    "avgExecTimeH": 0
+  },
+  "Helium": {
+    "address": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+    "totalTxs": 465,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 8,
+    "activeSigners": 6,
+    "ghostSigners": 2,
+    "ghostSignerAddrs": [
+      "3XvnBF1RGiEiQC51vPuXMXzHexb4VR12mzHZsxpTE8tB",
+      "hprdnjkbziK8NqhThmAn5Gu4XqrBbctX8du4PfJdgvW"
+    ],
+    "types": {
+      "TRANSFER": 63,
+      "APPROVE_PROPOSAL": 187,
+      "ACTIVATE_PROPOSAL": 35,
+      "ADD_BATCH_TRANSACTION": 58,
+      "CREATE_BATCH": 43,
+      "CREATE_VAULT_TRANSACTION": 31,
+      "REJECT_PROPOSAL": 27,
+      "CANCEL_PROPOSAL": 4,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 2,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 7,
+      "EXECUTE_CONFIG_TRANSACTION": 6,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 465
+    },
+    "topFeePayers": [
+      {
+        "address": "propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz",
+        "count": 161,
+        "pct": 35
+      },
+      {
+        "address": "AWofQNYEnbQniPbyHNiVfrjy3i6PK7xZRUcHVfu7crCs",
+        "count": 93,
+        "pct": 20
+      },
+      {
+        "address": "ERd6pJjzWiCsNvuJWtPYvbusUsqxhVjMEnGdqEgXbHCK",
+        "count": 59,
+        "pct": 13
+      },
+      {
+        "address": "mprGV3VdeBmf7o3dixtfYNgB2cHUU6cjRwTFCzWiEwd",
+        "count": 53,
+        "pct": 11
+      },
+      {
+        "address": "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym",
+        "count": 44,
+        "pct": 9
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 11,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      17,
+      16,
+      7,
+      8,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      7,
+      54,
+      84,
+      66,
+      37,
+      76,
+      45,
+      35,
+      9
+    ],
+    "monthDistribution": {
+      "2026-04": 17,
+      "2026-03": 35,
+      "2026-02": 29,
+      "2026-01": 39,
+      "2025-12": 84,
+      "2025-11": 177,
+      "2025-10": 84
+    },
+    "firstTx": 1760476959,
+    "lastTx": 1775837857,
+    "avgExecTimeH": 0
+  },
+  "Voltr": {
+    "address": "5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH",
+    "totalTxs": 45,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 4,
+    "activeSigners": 4,
+    "ghostSigners": 0,
+    "ghostSignerAddrs": [],
+    "types": {
+      "APPROVE_PROPOSAL": 30,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "TRANSFER": 11,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 45
+    },
+    "topFeePayers": [
+      {
+        "address": "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n",
+        "count": 28,
+        "pct": 62
+      },
+      {
+        "address": "kMTMpo28DPAZAEGzFJUAufMeiRavxkEupnC5sBb2e2g",
+        "count": 10,
+        "pct": 22
+      },
+      {
+        "address": "6hAtgoStE4pakkV1yqgBBnvG6vCVKm8C7YBPo7ik1PA9",
+        "count": 4,
+        "pct": 9
+      },
+      {
+        "address": "AkSsXqekpoWfpMzRwEp55uzDocYocGkL67E1Vz2mZ26e",
+        "count": 3,
+        "pct": 7
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 27,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      1,
+      2,
+      1,
+      0,
+      8,
+      0,
+      0,
+      3,
+      9,
+      6,
+      0,
+      0,
+      0,
+      0,
+      14,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 17,
+      "2026-03": 28
+    },
+    "firstTx": 1772932905,
+    "lastTx": 1776177584,
+    "avgExecTimeH": 0
+  },
+  "Tessera V": {
+    "address": "3JW5VWy76TBT5NBbdyrWU6i3fz8XecDko7viGeFSKw7e",
+    "totalTxs": 88,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 8,
+    "activeSigners": 4,
+    "ghostSigners": 4,
+    "ghostSignerAddrs": [
+      "Bkg1jdrwjQQPyUq2wydGNNri3k1aEfv6RbftLapCryg8",
+      "GqUfUruHZgjPjBavqa7aWFoZG1Q5RZUmoUGqLuv6UDCL",
+      "BC6PeKaLnpu4oeibT94d79zsavgbg4NhwZ185NX76DTz",
+      "8Fy62Ju2XVUg3XNpAjav1y8sTWKS6TKJSEZYSag2MezV"
+    ],
+    "types": {
+      "TRANSFER": 12,
+      "APPROVE_PROPOSAL": 65,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "REJECT_PROPOSAL": 8,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 88
+    },
+    "topFeePayers": [
+      {
+        "address": "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb",
+        "count": 31,
+        "pct": 35
+      },
+      {
+        "address": "7KFLXnrRvRq8shX8MVMUdGFwgPa342B89c2nxvQXHpNi",
+        "count": 20,
+        "pct": 23
+      },
+      {
+        "address": "HrcKsK6VuLwfSbTJrj9KwwCUU86AnS6YSEsMCNTimtL3",
+        "count": 12,
+        "pct": 14
+      },
+      {
+        "address": "8Fy62Ju2XVUg3XNpAjav1y8sTWKS6TKJSEZYSag2MezV",
+        "count": 10,
+        "pct": 11
+      },
+      {
+        "address": "BC6PeKaLnpu4oeibT94d79zsavgbg4NhwZ185NX76DTz",
+        "count": 5,
+        "pct": 6
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 3,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      4,
+      9,
+      47,
+      22,
+      0,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 5,
+      "2026-01": 10,
+      "2025-11": 30,
+      "2025-10": 5,
+      "2025-09": 5,
+      "2025-08": 5,
+      "2025-07": 15,
+      "2025-06": 13
+    },
+    "firstTx": 1749723695,
+    "lastTx": 1775646545,
+    "avgExecTimeH": 0
+  },
+  "LayerZero OFT": {
+    "address": "9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN",
+    "totalTxs": 24,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 2,
+    "activeSigners": 2,
+    "ghostSigners": 0,
+    "ghostSignerAddrs": [],
+    "types": {
+      "TRANSFER": 4,
+      "APPROVE_PROPOSAL": 10,
+      "CANCEL_PROPOSAL": 1,
+      "CREATE_VAULT_TRANSACTION": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 24
+    },
+    "topFeePayers": [
+      {
+        "address": "FKy9ETj6y1pHHrZG7Wg6ARahLpjMxvWdTN1CNybseiy",
+        "count": 18,
+        "pct": 75
+      },
+      {
+        "address": "FW3mAwFdoQoCEKsk3EAoFeZHFPJGFkFieq866yXVnDNx",
+        "count": 6,
+        "pct": 25
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 42,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      7,
+      5,
+      0,
+      0,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2026-01": 24
+    },
+    "firstTx": 1769386605,
+    "lastTx": 1769703213,
+    "avgExecTimeH": 0
+  },
+  "SolvBTC": {
+    "address": "HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE",
+    "totalTxs": 79,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 4,
+    "activeSigners": 0,
+    "ghostSigners": 4,
+    "ghostSignerAddrs": [
+      "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6",
+      "2XmSeDwM7sZKPdPoPztbSjasCjejFNEv9ufEShzoThyC",
+      "H2ayWzPpVn6hux2Qmat7oDVcReJwZu31856V2CmNUj3i",
+      "71K5nFw3E3xHqECsRWFAMrr6JvTwkvEyb7mLgs3Gy52q"
+    ],
+    "types": {
+      "APPROVE_PROPOSAL": 48,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "TRANSFER": 12,
+      "CREATE_VAULT_TRANSACTION": 11,
+      "CREATE_PROPOSAL": 2,
+      "REJECT_PROPOSAL": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 79
+    },
+    "topFeePayers": [
+      {
+        "address": "71K5nFw3E3xHqECsRWFAMrr6JvTwkvEyb7mLgs3Gy52q",
+        "count": 30,
+        "pct": 38
+      },
+      {
+        "address": "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6",
+        "count": 21,
+        "pct": 27
+      },
+      {
+        "address": "H2ayWzPpVn6hux2Qmat7oDVcReJwZu31856V2CmNUj3i",
+        "count": 16,
+        "pct": 20
+      },
+      {
+        "address": "2XmSeDwM7sZKPdPoPztbSjasCjejFNEv9ufEShzoThyC",
+        "count": 12,
+        "pct": 15
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 15,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      0,
+      2,
+      0,
+      9,
+      1,
+      24,
+      38,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2026-01": 6,
+      "2025-11": 35,
+      "2025-10": 38
+    },
+    "firstTx": 1761810001,
+    "lastTx": 1767687987,
+    "avgExecTimeH": 0
+  },
+  "GMSOL": {
+    "address": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+    "totalTxs": 4862,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 11,
+    "activeSigners": 6,
+    "ghostSigners": 5,
+    "ghostSignerAddrs": [
+      "6XMz2MYMWqif4T9W5RyvzAqkuC3poxrydiQKU7BV5DeK",
+      "CZ7aZpMYbZGjQL9zeso3HtpcQxfX3dh7j78mCLd5ye95",
+      "ExAHc3u2KHopmziWyyULWobZ2EAgymEmqQR5fo5T8baM",
+      "EdEsqYQ5qpssY2s4y1fkKkefqUopU5epVuCdUBaBgHkL",
+      "FQNU5wn6fVdnPnSZyHL3PmCJsNLTi4Cf8dKU7f3MQjXj"
+    ],
+    "types": {
+      "APPROVE_PROPOSAL": 2694,
+      "CREATE_VAULT_TRANSACTION": 687,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 491,
+      "TRANSFER": 709,
+      "REJECT_PROPOSAL": 232,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 11,
+      "EXECUTE_CONFIG_TRANSACTION": 11,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 5,
+      "ADD_BATCH_TRANSACTION": 12,
+      "CREATE_BATCH": 5,
+      "USE_SPENDING_LIMIT": 2,
+      "CANCEL_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 4862
+    },
+    "topFeePayers": [
+      {
+        "address": "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2",
+        "count": 2065,
+        "pct": 42
+      },
+      {
+        "address": "29qW1KYZ5KLXGcJJ3TYJ6bpmYhujKUACT8H6dTWr3cDM",
+        "count": 895,
+        "pct": 18
+      },
+      {
+        "address": "5ndGNX8Z1tLhiG1NR8AY4QcqBcN2ha9fBCsccZzYEU6r",
+        "count": 579,
+        "pct": 12
+      },
+      {
+        "address": "EhhdyQpK8pcM75EKQgpu31okQpYAby57CPnPRA7CsWLS",
+        "count": 412,
+        "pct": 8
+      },
+      {
+        "address": "DaGUge91XiebtdQaiWHXzPMNCUADJPZFPwPjzX4sGF95",
+        "count": 377,
+        "pct": 8
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 34,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      33,
+      136,
+      410,
+      384,
+      348,
+      346,
+      257,
+      253,
+      265,
+      341,
+      237,
+      189,
+      310,
+      345,
+      456,
+      372,
+      131,
+      27,
+      0,
+      6,
+      0,
+      0,
+      0,
+      16
+    ],
+    "monthDistribution": {
+      "2026-04": 74,
+      "2026-03": 93,
+      "2026-02": 421,
+      "2026-01": 679,
+      "2025-12": 223,
+      "2025-11": 66,
+      "2025-10": 285,
+      "2025-09": 297,
+      "2025-08": 706,
+      "2025-07": 591,
+      "2025-06": 46,
+      "2025-05": 9,
+      "2025-04": 290,
+      "2025-03": 661,
+      "2025-02": 379,
+      "2025-01": 42
+    },
+    "firstTx": 1737653191,
+    "lastTx": 1776071148,
+    "avgExecTimeH": 0
+  },
+  "Ore": {
+    "address": "CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo",
+    "totalTxs": 1141,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 3,
+    "activeSigners": 2,
+    "ghostSigners": 1,
+    "ghostSignerAddrs": [
+      "BvQhUYDB4CsrDziuzpUvEy9N4EzYTMy1TASgCatFUHcg"
+    ],
+    "types": {
+      "TRANSFER": 347,
+      "APPROVE_PROPOSAL": 714,
+      "CANCEL_PROPOSAL": 10,
+      "REJECT_PROPOSAL": 12,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 53,
+      "CREATE_VAULT_TRANSACTION": 1,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 1141
+    },
+    "topFeePayers": [
+      {
+        "address": "A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13",
+        "count": 581,
+        "pct": 51
+      },
+      {
+        "address": "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR",
+        "count": 559,
+        "pct": 49
+      },
+      {
+        "address": "BvQhUYDB4CsrDziuzpUvEy9N4EzYTMy1TASgCatFUHcg",
+        "count": 1,
+        "pct": 0
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 13,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      92,
+      18,
+      18,
+      9,
+      3,
+      3,
+      10,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      25,
+      114,
+      177,
+      171,
+      120,
+      74,
+      102,
+      101,
+      104
+    ],
+    "monthDistribution": {
+      "2026-04": 149,
+      "2026-03": 42,
+      "2026-02": 159,
+      "2026-01": 264,
+      "2025-12": 280,
+      "2025-11": 240,
+      "2025-10": 7
+    },
+    "firstTx": 1761002131,
+    "lastTx": 1775767108,
+    "avgExecTimeH": 0
+  },
+  "GMSOL Deploy": {
+    "address": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+    "totalTxs": 46,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 2,
+    "activeSigners": 2,
+    "ghostSigners": 0,
+    "ghostSignerAddrs": [],
+    "types": {
+      "TRANSFER": 5,
+      "APPROVE_PROPOSAL": 17,
+      "CREATE_PROPOSAL": 9,
+      "CREATE_VAULT_TRANSACTION": 9,
+      "EXECUTE_VAULT_TRANSACTION": 3,
+      "REJECT_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 46
+    },
+    "topFeePayers": [
+      {
+        "address": "23g7xmrtXA6LSWopQcAUgiptGUArSLEMakBKcY1S59YR",
+        "count": 32,
+        "pct": 70
+      },
+      {
+        "address": "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT",
+        "count": 14,
+        "pct": 30
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 0,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      1,
+      0,
+      8,
+      1,
+      9,
+      5,
+      0,
+      6,
+      5,
+      5,
+      1,
+      0,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 20,
+      "2026-03": 26
+    },
+    "firstTx": 1774436216,
+    "lastTx": 1775831429,
+    "avgExecTimeH": 0
+  },
+  "Carrot": {
+    "address": "BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon",
+    "totalTxs": 251,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 2,
+    "activeSigners": 0,
+    "ghostSigners": 2,
+    "ghostSignerAddrs": [
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs",
+      "9vtZSD8staKHC27aPXFMmc6rHJSrpAYjJ5oZWVDmsE2y"
+    ],
+    "types": {
+      "TRANSFER": 73,
+      "APPROVE_PROPOSAL": 160,
+      "REJECT_PROPOSAL": 13,
+      "CANCEL_PROPOSAL": 4,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 251
+    },
+    "topFeePayers": [
+      {
+        "address": "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs",
+        "count": 149,
+        "pct": 59
+      },
+      {
+        "address": "9vtZSD8staKHC27aPXFMmc6rHJSrpAYjJ5oZWVDmsE2y",
+        "count": 102,
+        "pct": 41
+      }
+    ],
+    "isRubberStamp": true,
+    "configChanges": 0,
+    "offHoursPct": 18,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      12,
+      10,
+      5,
+      12,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      9,
+      3,
+      15,
+      24,
+      25,
+      24,
+      38,
+      9,
+      16,
+      24,
+      11,
+      8,
+      0
+    ],
+    "monthDistribution": {
+      "2026-01": 49,
+      "2025-12": 21,
+      "2025-11": 21,
+      "2025-10": 33,
+      "2025-09": 17,
+      "2025-07": 9,
+      "2025-06": 12,
+      "2025-05": 46,
+      "2025-04": 43
+    },
+    "firstTx": 1743796947,
+    "lastTx": 1768249429,
+    "avgExecTimeH": 0
+  },
+  "DefiTuna": {
+    "address": "7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv",
+    "totalTxs": 571,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 6,
+    "activeSigners": 4,
+    "ghostSigners": 2,
+    "ghostSignerAddrs": [
+      "9KLgXuQc1VXStEx6gppqe6BhX5jE75hLufkXmRwZmWLL",
+      "GDQwSd61KVRXixKprx8jMCD3v5C69n3CWTtgBXdjSAjQ"
+    ],
+    "types": {
+      "TRANSFER": 142,
+      "APPROVE_PROPOSAL": 323,
+      "USE_SPENDING_LIMIT": 8,
+      "REJECT_PROPOSAL": 36,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 29,
+      "CREATE_VAULT_TRANSACTION": 17,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 8,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "CANCEL_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 571
+    },
+    "topFeePayers": [
+      {
+        "address": "9FMXwAQbR7jT149JLcWxXaJHZCg37mh3YHybtYHydT2J",
+        "count": 221,
+        "pct": 39
+      },
+      {
+        "address": "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak",
+        "count": 180,
+        "pct": 32
+      },
+      {
+        "address": "9KLgXuQc1VXStEx6gppqe6BhX5jE75hLufkXmRwZmWLL",
+        "count": 124,
+        "pct": 22
+      },
+      {
+        "address": "GDQwSd61KVRXixKprx8jMCD3v5C69n3CWTtgBXdjSAjQ",
+        "count": 30,
+        "pct": 5
+      },
+      {
+        "address": "EdEsqYQ5qpssY2s4y1fkKkefqUopU5epVuCdUBaBgHkL",
+        "count": 8,
+        "pct": 1
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 0,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      4,
+      23,
+      40,
+      34,
+      44,
+      47,
+      34,
+      37,
+      36,
+      37,
+      44,
+      48,
+      44,
+      68,
+      19,
+      11,
+      0
+    ],
+    "monthDistribution": {
+      "2026-04": 25,
+      "2026-03": 22,
+      "2026-02": 139,
+      "2026-01": 4,
+      "2025-12": 18,
+      "2025-11": 34,
+      "2025-10": 37,
+      "2025-09": 48,
+      "2025-08": 31,
+      "2025-07": 57,
+      "2025-06": 15,
+      "2025-05": 18,
+      "2025-04": 6,
+      "2025-03": 42,
+      "2025-02": 18,
+      "2025-01": 30,
+      "2024-12": 27
+    },
+    "firstTx": 1734113749,
+    "lastTx": 1776161155,
+    "avgExecTimeH": 0
+  },
+  "Sanctum": {
+    "address": "AApfiPZgV5MoPU691GwhdDhq5sKEMMH1Uh8S4Z9xvP6b",
+    "totalTxs": 175,
+    "approvals": 99,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 15,
+    "proposals": 1,
+    "rejectionRate": 0,
+    "uniqueSigners": 12,
+    "activeSigners": 7,
+    "ghostSigners": 5,
+    "ghostSignerAddrs": [
+      "CoxYLqf6zUrkTvWfVSHbxdjswrDEaNnciuGtzWniFzu5",
+      "3LPh9LN88kxSe3shxLZ2R4jiNmHh2U2F9h9TmVKjc18P",
+      "4vK6sVXQNkiEY1wyqx9Q44JxMGRHS9XJ6NoavaZwzGLE",
+      "8DB8LpzxSyVirKzr1dPr5k653BDu9eaj4zii16uxVixt",
+      "6XFxHLqXvUvBtJm7g63KDDWTW9kpBj5BZqAzBdHQfsK6"
+    ],
+    "types": {
+      "TRANSFER": 21,
+      "APPROVE_TRANSACTION": 99,
+      "CREATE_TRANSACTION": 1,
+      "UNKNOWN": 38,
+      "EXECUTE_TRANSACTION": 15,
+      "CREATE": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 124,
+      "SYSTEM_PROGRAM": 13,
+      "UNKNOWN": 38
+    },
+    "topFeePayers": [
+      {
+        "address": "nigmAPDCZMVDW4wneBBcc6wjY6Ufjv7iLJc2mRvs8PS",
+        "count": 73,
+        "pct": 42
+      },
+      {
+        "address": "6XFxHLqXvUvBtJm7g63KDDWTW9kpBj5BZqAzBdHQfsK6",
+        "count": 28,
+        "pct": 16
+      },
+      {
+        "address": "8DB8LpzxSyVirKzr1dPr5k653BDu9eaj4zii16uxVixt",
+        "count": 13,
+        "pct": 7
+      },
+      {
+        "address": "4vK6sVXQNkiEY1wyqx9Q44JxMGRHS9XJ6NoavaZwzGLE",
+        "count": 12,
+        "pct": 7
+      },
+      {
+        "address": "7zND8YAtCYehNoa1JrfDLQZi44xJkEuPWK5b4CkiuFpo",
+        "count": 10,
+        "pct": 6
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 19,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      6,
+      2,
+      1,
+      8,
+      0,
+      16,
+      33,
+      15,
+      3,
+      22,
+      2,
+      7,
+      1,
+      5,
+      10,
+      4,
+      7,
+      9,
+      7,
+      3,
+      6,
+      0,
+      2,
+      6
+    ],
+    "monthDistribution": {
+      "2026-04": 9,
+      "2026-03": 10,
+      "2025-10": 19,
+      "2024-09": 8,
+      "2024-07": 8,
+      "2024-05": 11,
+      "2024-04": 7,
+      "2024-03": 8,
+      "2024-02": 7,
+      "2024-01": 1,
+      "2023-09": 37,
+      "2023-08": 32,
+      "2023-07": 18
+    },
+    "firstTx": 1690448110,
+    "lastTx": 1775664782,
+    "avgExecTimeH": 0
+  },
+  "Jupiter Agg": {
+    "address": "7ZyDFzet6sKgZLN4D89JLfo7chu2n7nYdkFt5RCFk8Sf",
+    "totalTxs": 1140,
+    "approvals": 592,
+    "rejections": 57,
+    "cancellations": 23,
+    "executions": 0,
+    "proposals": 7,
+    "rejectionRate": 8.8,
+    "uniqueSigners": 11,
+    "activeSigners": 6,
+    "ghostSigners": 5,
+    "ghostSignerAddrs": [
+      "2MgqMXdwSf3bRZ6S8uKJSffZAaoZBhD2mjst3phJXE7p",
+      "BYidGfUnfoQtqi4nHiuo57Fjreizbej6hawJLnbwJmYr",
+      "BssAxGv8zAoYkTb459m9fUitH1cHZdZXtPCsLdE71R1r",
+      "2DaiuPdiix9sDNFFCPKJRoNLB95T3KQ4EusDRvfbHXiU",
+      "AV21VdAZL75ueY6u2BJ62zf1qiSouEkVUTAJMWmXLf24"
+    ],
+    "types": {
+      "APPROVE_TRANSACTION": 592,
+      "TRANSFER": 451,
+      "CANCEL_TRANSACTION": 23,
+      "REJECT_TRANSACTION": 57,
+      "ADD_INSTRUCTION": 8,
+      "CREATE_TRANSACTION": 7,
+      "UNKNOWN": 1,
+      "CREATE": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 823,
+      "SYSTEM_PROGRAM": 316,
+      "UNKNOWN": 1
+    },
+    "topFeePayers": [
+      {
+        "address": "CHRDWWqUs6LyeeoD7pJb3iRfnvYeMfwMUtf2N7zWk7uh",
+        "count": 357,
+        "pct": 31
+      },
+      {
+        "address": "89FnbsKH8n6FXCghGUijxh3snqx3e6VXJ7q1fQAHWkQQ",
+        "count": 269,
+        "pct": 24
+      },
+      {
+        "address": "GGG2JyBtwbPAsYwUQED8GBbj9UMi7NQa3uwN3DmyGNtz",
+        "count": 198,
+        "pct": 17
+      },
+      {
+        "address": "BYidGfUnfoQtqi4nHiuo57Fjreizbej6hawJLnbwJmYr",
+        "count": 116,
+        "pct": 10
+      },
+      {
+        "address": "Dg5NLa5JuwfRMkuwZEguD9RpVrcQD3536GxogUv7pLNV",
+        "count": 115,
+        "pct": 10
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 19,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      10,
+      12,
+      21,
+      42,
+      63,
+      64,
+      119,
+      129,
+      119,
+      148,
+      111,
+      72,
+      29,
+      30,
+      47,
+      38,
+      26,
+      15,
+      13,
+      6,
+      1,
+      3,
+      16,
+      6
+    ],
+    "monthDistribution": {
+      "2026-04": 16,
+      "2026-03": 48,
+      "2026-02": 38,
+      "2026-01": 42,
+      "2025-12": 51,
+      "2025-11": 69,
+      "2025-10": 42,
+      "2025-09": 51,
+      "2025-08": 104,
+      "2025-07": 31,
+      "2025-06": 42,
+      "2025-05": 53,
+      "2025-04": 71,
+      "2025-03": 58,
+      "2025-02": 125,
+      "2025-01": 46,
+      "2024-12": 49,
+      "2024-11": 85,
+      "2024-10": 91,
+      "2024-09": 19,
+      "2024-08": 7,
+      "2024-02": 2
+    },
+    "firstTx": 1708317642,
+    "lastTx": 1776165531,
+    "avgExecTimeH": 0
+  },
+  "Raydium": {
+    "address": "EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm",
+    "totalTxs": 3649,
+    "approvals": 1293,
+    "rejections": 28,
+    "cancellations": 39,
+    "executions": 189,
+    "proposals": 318,
+    "rejectionRate": 2.1,
+    "uniqueSigners": 3,
+    "activeSigners": 2,
+    "ghostSigners": 1,
+    "ghostSignerAddrs": [
+      "Cth8ZMqNPTrUhKuLJdkK6tHt5hfPoRKzn29FqMtrK7cf"
+    ],
+    "types": {
+      "TRANSFER": 699,
+      "APPROVE_TRANSACTION": 1293,
+      "CREATE_TRANSACTION": 318,
+      "ADD_INSTRUCTION": 508,
+      "UPDATE_CONFIG": 2,
+      "CREATE_CONFIG": 3,
+      "CANCEL_TRANSACTION": 39,
+      "REJECT_TRANSACTION": 28,
+      "EXECUTE_INSTRUCTION": 187,
+      "EXECUTE_TRANSACTION": 189,
+      "UNKNOWN": 383
+    },
+    "sources": {
+      "SQUADS_MPL": 2900,
+      "SYSTEM_PROGRAM": 366,
+      "UNKNOWN": 383
+    },
+    "topFeePayers": [
+      {
+        "address": "6KTbnuxCsDsJywdtDLqtgS9DD3q5pBTkRMsYev2q249v",
+        "count": 1850,
+        "pct": 51
+      },
+      {
+        "address": "8aSRiwajnkCP3ZhWTqTGJBy82ELo3Rt1CoEk5Hyjiqiy",
+        "count": 1763,
+        "pct": 48
+      },
+      {
+        "address": "Cth8ZMqNPTrUhKuLJdkK6tHt5hfPoRKzn29FqMtrK7cf",
+        "count": 36,
+        "pct": 1
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 5,
+    "offHoursPct": 17,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      13,
+      24,
+      75,
+      217,
+      64,
+      230,
+      311,
+      413,
+      353,
+      301,
+      234,
+      198,
+      433,
+      300,
+      191,
+      92,
+      131,
+      25,
+      10,
+      10,
+      4,
+      0,
+      14,
+      6
+    ],
+    "monthDistribution": {
+      "2026-04": 18,
+      "2026-03": 100,
+      "2026-02": 17,
+      "2026-01": 96,
+      "2025-12": 55,
+      "2025-11": 28,
+      "2025-10": 38,
+      "2025-09": 43,
+      "2025-08": 95,
+      "2025-07": 89,
+      "2025-06": 84,
+      "2025-05": 115,
+      "2025-04": 121,
+      "2025-03": 40,
+      "2025-02": 68,
+      "2025-01": 142,
+      "2024-12": 71,
+      "2024-11": 40,
+      "2024-10": 82,
+      "2024-09": 21,
+      "2024-08": 73,
+      "2024-07": 55,
+      "2024-06": 62,
+      "2024-05": 124,
+      "2024-04": 168,
+      "2024-03": 39,
+      "2024-02": 46,
+      "2024-01": 69,
+      "2023-12": 142,
+      "2023-11": 52,
+      "2023-10": 20,
+      "2023-09": 22,
+      "2023-08": 52,
+      "2023-07": 22,
+      "2023-06": 14,
+      "2023-05": 60,
+      "2023-04": 57,
+      "2023-03": 49,
+      "2023-02": 276,
+      "2023-01": 599,
+      "2022-12": 229,
+      "2022-11": 56
+    },
+    "firstTx": 1668428259,
+    "lastTx": 1775804892,
+    "avgExecTimeH": 0
+  },
+  "Tensor": {
+    "address": "3djJ66VVaG7si2wsh9isspeZX13meHDvwBzuPGCowY4Z",
+    "totalTxs": 748,
+    "approvals": 332,
+    "rejections": 17,
+    "cancellations": 6,
+    "executions": 37,
+    "proposals": 1,
+    "rejectionRate": 4.9,
+    "uniqueSigners": 6,
+    "activeSigners": 0,
+    "ghostSigners": 6,
+    "ghostSignerAddrs": [
+      "22hKELaD2xT7gNYqrTTyftkjxpsCrswSFcvpouV4USNV",
+      "92qdQb4MV24jFu7Q2VihGVKUf1A8XoypB2TX4zQSVdEo",
+      "CqyT5mdas3FKRamFUxTUdfD9ToNdd9SvNd3u8zbcr7fJ",
+      "Hhnqp3wuAWsPbnLL6jrHCWkYKcYGSw9VmMCcWVbM7BS8",
+      "GDeyXa47cZAmFN5WUUAHZEkPajPtTARiYSqSDjsUJzdi"
+    ],
+    "types": {
+      "TRANSFER": 238,
+      "APPROVE_TRANSACTION": 332,
+      "EXECUTE_TRANSACTION": 37,
+      "UNKNOWN": 116,
+      "REJECT_TRANSACTION": 17,
+      "CANCEL_TRANSACTION": 6,
+      "CREATE_TRANSACTION": 1,
+      "CREATE": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 477,
+      "SYSTEM_PROGRAM": 155,
+      "UNKNOWN": 116
+    },
+    "topFeePayers": [
+      {
+        "address": "92qdQb4MV24jFu7Q2VihGVKUf1A8XoypB2TX4zQSVdEo",
+        "count": 338,
+        "pct": 45
+      },
+      {
+        "address": "CqyT5mdas3FKRamFUxTUdfD9ToNdd9SvNd3u8zbcr7fJ",
+        "count": 247,
+        "pct": 33
+      },
+      {
+        "address": "CvssTB5Be1nUxFhyp19e1BneMm3qLo1gPcWm1RLioyiR",
+        "count": 105,
+        "pct": 14
+      },
+      {
+        "address": "22hKELaD2xT7gNYqrTTyftkjxpsCrswSFcvpouV4USNV",
+        "count": 54,
+        "pct": 7
+      },
+      {
+        "address": "Hhnqp3wuAWsPbnLL6jrHCWkYKcYGSw9VmMCcWVbM7BS8",
+        "count": 2,
+        "pct": 0
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 35,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      39,
+      64,
+      61,
+      61,
+      21,
+      14,
+      9,
+      14,
+      14,
+      25,
+      2,
+      3,
+      6,
+      8,
+      40,
+      24,
+      38,
+      20,
+      65,
+      24,
+      50,
+      44,
+      54,
+      48
+    ],
+    "monthDistribution": {
+      "2025-12": 9,
+      "2025-11": 59,
+      "2025-10": 32,
+      "2025-07": 36,
+      "2025-06": 6,
+      "2025-05": 42,
+      "2025-04": 24,
+      "2025-02": 26,
+      "2025-01": 18,
+      "2024-12": 11,
+      "2024-11": 22,
+      "2024-10": 46,
+      "2024-09": 6,
+      "2024-07": 12,
+      "2024-06": 36,
+      "2024-05": 12,
+      "2024-04": 128,
+      "2024-03": 57,
+      "2024-02": 91,
+      "2024-01": 75
+    },
+    "firstTx": 1706393257,
+    "lastTx": 1767065826,
+    "avgExecTimeH": 0
+  },
+  "Phoenix DEX": {
+    "address": "6x3BDkL2n7VjBWxRD95EsbQi2R2E4zxrvcz1VA6pihnK",
+    "totalTxs": 111,
+    "approvals": 50,
+    "rejections": 2,
+    "cancellations": 0,
+    "executions": 11,
+    "proposals": 1,
+    "rejectionRate": 3.8,
+    "uniqueSigners": 6,
+    "activeSigners": 4,
+    "ghostSigners": 2,
+    "ghostSignerAddrs": [
+      "Exz3KLbVKw8RFFNkn6pLTqQxYoXW5frnTptFuvHupTPy",
+      "2Hwmox2Qd84ZxPhKUGkTs7KUpjzYHWfHWbPT1kWvMf5b"
+    ],
+    "types": {
+      "TRANSFER": 10,
+      "APPROVE_TRANSACTION": 50,
+      "EXECUTE_TRANSACTION": 11,
+      "UNKNOWN": 35,
+      "REJECT_TRANSACTION": 2,
+      "ADD_INSTRUCTION": 1,
+      "CREATE_TRANSACTION": 1,
+      "CREATE": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 70,
+      "SYSTEM_PROGRAM": 6,
+      "UNKNOWN": 35
+    },
+    "topFeePayers": [
+      {
+        "address": "Exz3KLbVKw8RFFNkn6pLTqQxYoXW5frnTptFuvHupTPy",
+        "count": 52,
+        "pct": 47
+      },
+      {
+        "address": "777bk8FJnY11hyaWG5odBpzD4oJ5kHQhrb57s16BFRUm",
+        "count": 26,
+        "pct": 23
+      },
+      {
+        "address": "HDssbweGxefXxnw6y9DzPzX2XGhDYSRPFrekM3hXguJX",
+        "count": 14,
+        "pct": 13
+      },
+      {
+        "address": "8JkToMSDA5qo6Q4ZCM5u697cAmnimVNrwUXXB9Dz9AzA",
+        "count": 11,
+        "pct": 10
+      },
+      {
+        "address": "rah35AmfuiVJg5nZGx9hBzRefuupovsSWNJYE9UPkgh",
+        "count": 7,
+        "pct": 6
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 2,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      6,
+      1,
+      2,
+      0,
+      10,
+      24,
+      29,
+      25,
+      4,
+      7
+    ],
+    "monthDistribution": {
+      "2026-03": 14,
+      "2025-06": 10,
+      "2024-01": 8,
+      "2023-11": 8,
+      "2023-07": 7,
+      "2023-06": 7,
+      "2023-05": 8,
+      "2023-03": 14,
+      "2023-02": 35
+    },
+    "firstTx": 1676495400,
+    "lastTx": 1774551500,
+    "avgExecTimeH": 0
+  },
+  "Meteora": {
+    "address": "CoEsykatDegLB7pcMJia79JSriDdi71nPnjgeSfw623k",
+    "totalTxs": 1514,
+    "approvals": 786,
+    "rejections": 19,
+    "cancellations": 3,
+    "executions": 71,
+    "proposals": 2,
+    "rejectionRate": 2.4,
+    "uniqueSigners": 12,
+    "activeSigners": 5,
+    "ghostSigners": 7,
+    "ghostSignerAddrs": [
+      "HDYFVeXXCDn5YB2QCsSrPAhCijjEw75tjPk4q4UzyHXv",
+      "7sYecjSokstySrPw5L6kGUw9ejrYmizNJmGdDnN4GNP5",
+      "E78rpWqVwE4ZBXtNAj21kqUnPJ5B9QPaRUBThPStWZ9w",
+      "ChSAh3XXTxpp5n2EmgSCm6vVvVPoD1L9VrK3mcQkYz7m",
+      "By9GjtyaV2oSrWkw4FuxNwRh62jW5iHKhMPFVWZHmtEt"
+    ],
+    "types": {
+      "TRANSFER": 463,
+      "APPROVE_TRANSACTION": 786,
+      "REJECT_TRANSACTION": 19,
+      "CREATE_TRANSACTION": 2,
+      "CANCEL_TRANSACTION": 3,
+      "EXECUTE_TRANSACTION": 71,
+      "UNKNOWN": 164,
+      "ACTIVATE_TRANSACTION": 1,
+      "ADD_INSTRUCTION": 4,
+      "CREATE": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 311,
+      "SQUADS_MPL": 1039,
+      "UNKNOWN": 164
+    },
+    "topFeePayers": [
+      {
+        "address": "5unTfT2kssBuNvHPY6LbJfJpLqEcdMxGYLWHwShaeTLi",
+        "count": 454,
+        "pct": 30
+      },
+      {
+        "address": "BULRqL3U2jPgwvz6HYCyBVq9BMtK94Y1Nz98KQop23aD",
+        "count": 312,
+        "pct": 21
+      },
+      {
+        "address": "GaQiRh5oWQjcfBj7kYjp1PH5yYgnWnNPwZD9sgdg2JBd",
+        "count": 279,
+        "pct": 18
+      },
+      {
+        "address": "HDYFVeXXCDn5YB2QCsSrPAhCijjEw75tjPk4q4UzyHXv",
+        "count": 111,
+        "pct": 7
+      },
+      {
+        "address": "ChSAh3XXTxpp5n2EmgSCm6vVvVPoD1L9VrK3mcQkYz7m",
+        "count": 97,
+        "pct": 6
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 41,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      19,
+      45,
+      160,
+      148,
+      127,
+      121,
+      159,
+      153,
+      135,
+      119,
+      88,
+      32,
+      15,
+      44,
+      31,
+      40,
+      19,
+      20,
+      7,
+      0,
+      6,
+      3,
+      19,
+      4
+    ],
+    "monthDistribution": {
+      "2026-04": 4,
+      "2026-03": 21,
+      "2026-02": 26,
+      "2026-01": 43,
+      "2025-12": 40,
+      "2025-11": 25,
+      "2025-10": 47,
+      "2025-09": 5,
+      "2025-08": 26,
+      "2025-07": 42,
+      "2025-06": 30,
+      "2025-05": 28,
+      "2025-04": 18,
+      "2025-03": 62,
+      "2025-02": 20,
+      "2025-01": 21,
+      "2024-12": 31,
+      "2024-11": 68,
+      "2024-10": 63,
+      "2024-09": 29,
+      "2024-08": 89,
+      "2024-07": 81,
+      "2024-06": 49,
+      "2024-05": 124,
+      "2024-04": 65,
+      "2024-03": 39,
+      "2024-02": 67,
+      "2024-01": 186,
+      "2023-12": 56,
+      "2023-11": 12,
+      "2023-10": 34,
+      "2023-08": 1,
+      "2023-07": 6,
+      "2023-06": 10,
+      "2023-05": 37,
+      "2023-01": 9
+    },
+    "firstTx": 1674705070,
+    "lastTx": 1775125363,
+    "avgExecTimeH": 0
+  },
+  "Parcl": {
+    "address": "7qCHZqcbLm9VYUCLtFmFFSyDsvuZ5GHhypv7b4JRAEUE",
+    "totalTxs": 3743,
+    "approvals": 913,
+    "rejections": 31,
+    "cancellations": 18,
+    "executions": 159,
+    "proposals": 488,
+    "rejectionRate": 3.3,
+    "uniqueSigners": 7,
+    "activeSigners": 3,
+    "ghostSigners": 4,
+    "ghostSignerAddrs": [
+      "HimFWjTi1n5e8yszT67dkWNgGjTSxRPQ6dN5ervUgtey",
+      "81DSiTgfBjXyjsArvMW4crmwL1CL7QMKshfPf3DhfQCm",
+      "3Ps2fbKUjH7HCb7aRrVSbAegmQkrrnKZ4zQCWn5WNeQN",
+      "F9JUNm6a6S7K1pC8DUJ8VQQXH5ArNBDYHwQgnm6Vjdin"
+    ],
+    "types": {
+      "TRANSFER": 437,
+      "APPROVE_TRANSACTION": 913,
+      "CREATE_TRANSACTION": 488,
+      "ADD_INSTRUCTION": 1426,
+      "REJECT_TRANSACTION": 31,
+      "CANCEL_TRANSACTION": 18,
+      "EXECUTE_INSTRUCTION": 108,
+      "EXECUTE_TRANSACTION": 159,
+      "UNKNOWN": 162,
+      "CREATE": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 3413,
+      "SYSTEM_PROGRAM": 168,
+      "UNKNOWN": 162
+    },
+    "topFeePayers": [
+      {
+        "address": "81DSiTgfBjXyjsArvMW4crmwL1CL7QMKshfPf3DhfQCm",
+        "count": 2272,
+        "pct": 61
+      },
+      {
+        "address": "3n634FuJq8tnE1ASXFQ7nbzqZPR1byDRSrWnFAmGWFnZ",
+        "count": 590,
+        "pct": 16
+      },
+      {
+        "address": "3Ps2fbKUjH7HCb7aRrVSbAegmQkrrnKZ4zQCWn5WNeQN",
+        "count": 349,
+        "pct": 9
+      },
+      {
+        "address": "HimFWjTi1n5e8yszT67dkWNgGjTSxRPQ6dN5ervUgtey",
+        "count": 307,
+        "pct": 8
+      },
+      {
+        "address": "5q4bTKhsThxkM9v7yUtYxxN2vJ6ckSArBaG1v8J4zSPJ",
+        "count": 188,
+        "pct": 5
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 8,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      121,
+      85,
+      70,
+      28,
+      0,
+      11,
+      7,
+      0,
+      0,
+      0,
+      1,
+      0,
+      6,
+      13,
+      13,
+      210,
+      351,
+      399,
+      428,
+      452,
+      608,
+      404,
+      350,
+      186
+    ],
+    "monthDistribution": {
+      "2026-04": 17,
+      "2026-03": 4,
+      "2025-12": 40,
+      "2025-10": 9,
+      "2025-08": 310,
+      "2025-06": 9,
+      "2025-05": 410,
+      "2025-04": 118,
+      "2025-03": 47,
+      "2025-02": 279,
+      "2025-01": 35,
+      "2024-11": 5,
+      "2024-10": 78,
+      "2024-09": 42,
+      "2024-08": 199,
+      "2024-07": 10,
+      "2024-06": 42,
+      "2024-05": 158,
+      "2024-04": 534,
+      "2024-03": 592,
+      "2024-02": 310,
+      "2024-01": 273,
+      "2023-12": 222
+    },
+    "firstTx": 1702234009,
+    "lastTx": 1776121290,
+    "avgExecTimeH": 0
+  },
+  "Marinade": {
+    "address": "magrsHFQxkkioAy45VWnZnFBBdKVdy2ZiRoRGYT9Wed",
+    "totalTxs": 53,
+    "approvals": 0,
+    "rejections": 0,
+    "cancellations": 0,
+    "executions": 0,
+    "proposals": 0,
+    "rejectionRate": 0,
+    "uniqueSigners": 12,
+    "activeSigners": 0,
+    "ghostSigners": 12,
+    "ghostSignerAddrs": [
+      "AsSxcz9NgbGsvBSJTjcvrJbbs4rNF7AdN7zeboR3o5Xs",
+      "GDmSxpPzLkfxxr6dHLNRnCoYVGzvgc41tozkrr4pHTjB",
+      "6PVyHxZjUDEDB36Cz6uGTPBAKSx4gzuyvCE9xeGqdWVS",
+      "6zBGXPrrotjM6sQ3dSNbDVh5W7dwJ8h1iqK84MHPBKkY",
+      "CZ3CfmeqRcjQ5iAC1iQ5dhMjzpnnzveZZp2SbFKDwUZE"
+    ],
+    "types": {
+      "UNKNOWN": 53
+    },
+    "sources": {
+      "UNKNOWN": 53
+    },
+    "topFeePayers": [
+      {
+        "address": "ELg5GDPLMKmyo7vTfnYE5aiDEovcCxqhedxp71tQGrFe",
+        "count": 13,
+        "pct": 25
+      },
+      {
+        "address": "AsSxcz9NgbGsvBSJTjcvrJbbs4rNF7AdN7zeboR3o5Xs",
+        "count": 10,
+        "pct": 19
+      },
+      {
+        "address": "6PVyHxZjUDEDB36Cz6uGTPBAKSx4gzuyvCE9xeGqdWVS",
+        "count": 6,
+        "pct": 11
+      },
+      {
+        "address": "CoxYLqf6zUrkTvWfVSHbxdjswrDEaNnciuGtzWniFzu5",
+        "count": 5,
+        "pct": 9
+      },
+      {
+        "address": "Fnx3FrU31FpCndRCRfbyrjyUxNaeNdGEspeKotenePs8",
+        "count": 5,
+        "pct": 9
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 4,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      6,
+      4,
+      5,
+      3,
+      1,
+      3,
+      3,
+      5,
+      4,
+      2,
+      0,
+      2,
+      0
+    ],
+    "monthDistribution": {
+      "2023-11": 10,
+      "2023-10": 2,
+      "2022-11": 7,
+      "2022-08": 7,
+      "2022-05": 11,
+      "2022-01": 7,
+      "2021-10": 8,
+      "2021-09": 1
+    },
+    "firstTx": 1631812895,
+    "lastTx": 1699956930,
+    "avgExecTimeH": 0
+  },
+  "SPL Stake Pool": {
+    "address": "3yqoHFE4nBGchuVH5rJuZMFvsmnaDTuLLdvGPDUEJcbW",
+    "totalTxs": 85,
+    "approvals": 56,
+    "rejections": 0,
+    "cancellations": 4,
+    "executions": 4,
+    "proposals": 2,
+    "rejectionRate": 0,
+    "uniqueSigners": 10,
+    "activeSigners": 0,
+    "ghostSigners": 10,
+    "ghostSignerAddrs": [
+      "7zND8YAtCYehNoa1JrfDLQZi44xJkEuPWK5b4CkiuFpo",
+      "2JLq2HWYLws938d3vZwS2r8Qex1FJJeXoF2KViPCZoyv",
+      "2TGXpEX5wYAwKvENSPqWK8DiuN6L7si2FHKB9SWx2eyn",
+      "38XhwqCgQGdeNeXyHQ94Jrdsoup71G6ioiYuvimXwH3z",
+      "87NzWWHLaFXVG5v6rqVNShz79ChTNWd4yJkvENKxZCtD"
+    ],
+    "types": {
+      "TRANSFER": 10,
+      "APPROVE_TRANSACTION": 56,
+      "CREATE_TRANSACTION": 2,
+      "CANCEL_TRANSACTION": 4,
+      "EXECUTE_TRANSACTION": 4,
+      "UNKNOWN": 8,
+      "CREATE": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 71,
+      "SYSTEM_PROGRAM": 6,
+      "UNKNOWN": 8
+    },
+    "topFeePayers": [
+      {
+        "address": "7zND8YAtCYehNoa1JrfDLQZi44xJkEuPWK5b4CkiuFpo",
+        "count": 21,
+        "pct": 25
+      },
+      {
+        "address": "4vK6sVXQNkiEY1wyqx9Q44JxMGRHS9XJ6NoavaZwzGLE",
+        "count": 14,
+        "pct": 16
+      },
+      {
+        "address": "2TGXpEX5wYAwKvENSPqWK8DiuN6L7si2FHKB9SWx2eyn",
+        "count": 12,
+        "pct": 14
+      },
+      {
+        "address": "38XhwqCgQGdeNeXyHQ94Jrdsoup71G6ioiYuvimXwH3z",
+        "count": 12,
+        "pct": 14
+      },
+      {
+        "address": "64nG4kYQqfhzputDFhTHFHQHiggJwAEGY2L5EfFQreMK",
+        "count": 10,
+        "pct": 12
+      }
+    ],
+    "isRubberStamp": false,
+    "configChanges": 0,
+    "offHoursPct": 24,
+    "automatedIndicator": false,
+    "hourDistribution": [
+      5,
+      0,
+      5,
+      7,
+      1,
+      2,
+      0,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      4,
+      5,
+      3,
+      8,
+      17,
+      2,
+      3,
+      5,
+      3,
+      0,
+      3
+    ],
+    "monthDistribution": {
+      "2025-09": 25,
+      "2025-07": 2,
+      "2025-06": 12,
+      "2023-12": 12,
+      "2023-10": 34
+    },
+    "firstTx": 1696439044,
+    "lastTx": 1759275579,
+    "avgExecTimeH": 0
+  }
+}

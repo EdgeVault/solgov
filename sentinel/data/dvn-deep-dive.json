@@ -1,0 +1,270 @@
+{
+  "generatedAt": "2026-04-29T08:00:02.844Z",
+  "rows": [
+    {
+      "name": "LayerZero Labs",
+      "dvnConfig": "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+      "ownerProgram": "HtEYV4xB4wvsj5fgTkcfuChYpvGYzgzwvNhgDZQNh7wW",
+      "upgradeAuthority": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "upgradeClass": "plain-keypair",
+      "quorum": 2,
+      "signerCount": 3,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Nethermind",
+      "dvnConfig": "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab",
+      "ownerProgram": "4fs6aL12L18K5giDy9Dgxgrb3aNRYiuRV2a7JPPj3e7F",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Google",
+      "dvnConfig": "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+      "ownerProgram": "D5mVdHmD21yPS3p4utgp54wTUPqt7d7qCXt4oqCYsaBo",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 2,
+      "signerCount": 3,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Horizen",
+      "dvnConfig": "HR9NQKK1ynW9NzgdM37dU5CBtqRHTukmbMKS7qkwSkHX",
+      "ownerProgram": "4Z436PCb83Ft9dMRtwZ2mK7ZQtqVhbFEC3BYna9qB7B9",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 2,
+      "signerCount": 2,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Deutsche Telekom",
+      "dvnConfig": "FxFxe8j7e2xgpP9bw8LUehmz7DoQXaNFadJMEUKwBcRs",
+      "ownerProgram": "FAAWGvgG5KNinoW4UJDF2MMU33DXeUb16tqapAgNbowR",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Luganodes",
+      "dvnConfig": "41QAdzUraTcvk1P2B6fcs5nQ4EeEKEGnQy5EPpCQ5AdX",
+      "ownerProgram": "QvorCTciEhpzwCVUCcLcbGFp15rpwFSsdQzHkgGBGHA",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Frax",
+      "dvnConfig": "6YB63FDuyYLt5gnJeiVmYRE4c6tFid5SrBZzMLQFfexm",
+      "ownerProgram": "3f8coqkajiMZC4dyrSs4JHH5xt8m9ceZJZe7d7VVCC3e",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 2,
+      "signerCount": 3,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-27"
+    },
+    {
+      "name": "Ondo",
+      "dvnConfig": "D1A8NPP4S5RX5jFLprNQGytLFCrV9ZiaFykLmat4WGA7",
+      "ownerProgram": "BzEhK3gW6C1uJfRR8Uu2xjKPyYiQGRfR8tr6UNdb6u1k",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-27"
+    },
+    {
+      "name": "Ondo Staging",
+      "dvnConfig": "4npJTMgVbLn2jAiLGg7pNEBv4RjQ5HScjLeSQPZAdJdq",
+      "ownerProgram": "GZPWZ44QJZ4pKArayYDUwP3R18gk4jBELE3ke7gU2zeS",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-22"
+    },
+    {
+      "name": "Canary",
+      "dvnConfig": "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+      "ownerProgram": "5KAALa8AEEKnW6p6AacdnqNDmGMpfhwR7AEyWs1gUvsT",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "USDT0",
+      "dvnConfig": "JBt34GkVns6VSoP2dCPpViW28eqE4GNgKaoZPRP63wZs",
+      "ownerProgram": "3T7waVnx1W54ZA7XuRmXngoua4hEkRXciNL8stBJAUR4",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 1,
+      "signerCount": 2,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Brale",
+      "dvnConfig": "4EsNicsBtbNE2ZQqB24DVjjqgKh1sWjSKNcdxEgD5d8b",
+      "ownerProgram": "BsVNDmb6UckcSEJUbbrM4m7tu75FXx6RKSdpZPztHrvW",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 15,
+      "lastConfigUpdate": "2026-01-15"
+    },
+    {
+      "name": "Wyoming",
+      "dvnConfig": "6bdMfqghzhFpMsbrfy6qiyXnGkYGcamn3WYxeKx8Muik",
+      "ownerProgram": "5cqUFgEWjk78u6n9ZCnw7b6qXPemiYWsmiYowHLzpR75",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-16"
+    },
+    {
+      "name": "MantleCross",
+      "dvnConfig": "AKPKvgSvx4XocG7rMBv3qycKpZWaSCE4gZUCaTZp3J5W",
+      "ownerProgram": "HXfAKVgs3kPvmLVDmBCfU9b1fMXW7XXXNdkDAgVorUH3",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 2,
+      "signerCount": 2,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-11"
+    },
+    {
+      "name": "P2P",
+      "dvnConfig": "29EKzmCscUg8mf4f5uskwMqvu2SXM8hKF1gWi1cCBoKT",
+      "ownerProgram": "68C5DkFUS2BJwvjhi25s6WgJK5oi6f1TrDXPDvLK6c1b",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "B-Harvest",
+      "dvnConfig": "F8tr3GMivioYFEvJAR2WW5CKjPtgMQtM5CEuSjjVkjWL",
+      "ownerProgram": "DTNFmiLYqCPQXAQ38fCS59fr6wRWT1G1eb2Xr4R9tts6",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 4,
+      "lastConfigUpdate": "2025-12-11"
+    },
+    {
+      "name": "Nansen",
+      "dvnConfig": "Fn8yyjaLbqw9FZyyLaTkb8o8RWp3vztxNChtPxcV1cLV",
+      "ownerProgram": "8Hi6A4afZQrYjJrKFGqaLfWroMUrCqSonrwVhopxSVnW",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Paxos",
+      "dvnConfig": "4HxXbLv37XrivKukEbofybpHr7C8HUGJzd4B5T9USpGh",
+      "ownerProgram": "2riPXyzsFhSasZTxbEeWuuvHu4P5c49x4ARJQ4wgLiTF",
+      "upgradeAuthority": "IMMUTABLE",
+      "upgradeClass": "IMMUTABLE",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-29"
+    },
+    {
+      "name": "Worldpay",
+      "dvnConfig": "SzcKuPbuMGwMqd9pWTRQDEyL3qZT8YJU4Q5DY9M2aee",
+      "ownerProgram": "CHRnLFhstvA4y8GftZ7guMkwpx2UXwFB8hytCcvYZ7ju",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 1,
+      "lastConfigUpdate": "2026-02-13"
+    },
+    {
+      "name": "Mantle Bank",
+      "dvnConfig": "GfG8FCkhxmkgXd2yZQbogUV669jX5t9RK87jL2bWBkKK",
+      "ownerProgram": "DzEfSvmnZEWStNydXgAkZJCqJr3L5XgvTUxWEScTXehP",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 2,
+      "signerCount": 2,
+      "recentSigCount": 16,
+      "lastConfigUpdate": "2026-04-24"
+    },
+    {
+      "name": "Fidelity",
+      "dvnConfig": "AQGjhJcqEVZP5WHd3NhidpbL743eiTti2Mxgc6XZeKPV",
+      "ownerProgram": "GbCW2Gg621DMyRR2XDLuLZgNXAXBh12njiYLvdCFQ5wy",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 100,
+      "lastConfigUpdate": "2026-04-24"
+    },
+    {
+      "name": "P-OPS",
+      "dvnConfig": "CratyHhkQXbRAgck3sooXFYbBADsCtjoxhjVbPKAAhK2",
+      "ownerProgram": "GJdzhEGLsZMMhA21fE2uWsydjJZEvoauYYneR8sV4WaA",
+      "upgradeAuthority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "upgradeClass": "plain-keypair",
+      "quorum": 1,
+      "signerCount": 1,
+      "recentSigCount": 18,
+      "lastConfigUpdate": "2025-09-02"
+    }
+  ],
+  "byAuth": [
+    {
+      "authority": "HktSDu56oc42jxL6sWwUgbyJsq6v59d8VJtguK7wof5R",
+      "dvns": [
+        "LayerZero Labs"
+      ]
+    },
+    {
+      "authority": "HXZkRhn29UBKX8iRdHjwBfnNvkt6cw9WwGZZe1xLuwfo",
+      "dvns": [
+        "Frax",
+        "USDT0",
+        "Brale",
+        "Wyoming",
+        "MantleCross",
+        "B-Harvest",
+        "Worldpay",
+        "Mantle Bank",
+        "Fidelity",
+        "P-OPS"
+      ]
+    }
+  ]
+}

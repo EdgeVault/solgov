@@ -1,0 +1,8 @@
+{
+  "protocol":"Titan","researchedAt":"2026-04-17T22:30:00Z","researcher":"manual stub",
+  "sources":[],
+  "programs":[],
+  "multisigs":[{"address":"F1WZezmt2J1dSsXrQWrS2Umn9CYzPPR2eP3sunZrMX29","role":"Titan multisig (tracked)","threshold":"?","alreadyTracked":true}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Squads multisig.","gaps":["Titan program IDs","threshold","governance structure"],"confidence":"low"
+}

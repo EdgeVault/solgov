@@ -1,0 +1,81 @@
+[
+  {
+    "timestamp": "2026-04-23T13:03:58.258Z",
+    "pattern": "F7_STAGING",
+    "severity": "MONITOR",
+    "feePayer": "ANC8uGeSzWcSz6fhtbNpX5uonetj4DGUBBoEDfJsaSnm",
+    "relatedSigs": [
+      "5GwhQjHVkTLrLWAvX7bWQrFqQ9naPXv3XSQGWfcR7dAQnFdwus4ZMTgK9uNuQTYiwxKgrKAco8nSeznFcw31pq8N",
+      "4EJWNpJWX6qToPPJ24YUH9enmBcGfs7tq1hXXs59ABogRY9tv8Hp8PM52AzrvfSnixiL9pXKwDvzwnLL5VYcZeZ8"
+    ],
+    "reasoning": "Same fee-payer ran InitUser and InitLP within 0s. Matches setup shape for an F7-style self-trade, though could also be a legitimate LP deployer.",
+    "alertFired": false
+  },
+  {
+    "timestamp": "2026-04-23T13:03:58.258Z",
+    "pattern": "F7_STAGING",
+    "severity": "MONITOR",
+    "feePayer": "FnAitDGgeauTLuko2hgAPLUaauLe3WeHdhSnEtZAPetd",
+    "relatedSigs": [
+      "48tFXCLUYZn27PR8YzG1dXqupdNBpFn42BEuzYhfW5jUGqtJa63mXQNAyXiVAhjar2rDfuPSeHto8YUVogUjiu1J",
+      "2mt2PvhGBUUEioV2zW2RL2FzVLN2KHLWguQWxtEaDFSedyLowUWNX7S1pS4X8qvgGtYqKJ6v2VDHM4b7YV9BR6x1"
+    ],
+    "reasoning": "Same fee-payer ran InitUser and InitLP within 0s. Matches setup shape for an F7-style self-trade, though could also be a legitimate LP deployer.",
+    "alertFired": false
+  },
+  {
+    "timestamp": "2026-04-23T13:03:58.258Z",
+    "pattern": "THIRD_PARTY_MATCHER",
+    "severity": "MONITOR",
+    "feePayer": "ANC8uGeSzWcSz6fhtbNpX5uonetj4DGUBBoEDfJsaSnm",
+    "relatedSigs": [
+      "3aTdPz1XJi6aSuc3b8hTmjKyZAmzmBMd2ZAzQhpnT6gknaYatFuSbZpwYrHf2Fe1fYwp2RfybNnTGUEarWPnGD3x"
+    ],
+    "reasoning": "InitLP observed on the live slab. The deployed market has no matcher configured by default, so an InitLP represents a third-party matcher or LP operator going live. Could be legitimate or adversary.",
+    "alertFired": false
+  },
+  {
+    "timestamp": "2026-04-23T13:03:58.258Z",
+    "pattern": "THIRD_PARTY_MATCHER",
+    "severity": "MONITOR",
+    "feePayer": "ANC8uGeSzWcSz6fhtbNpX5uonetj4DGUBBoEDfJsaSnm",
+    "relatedSigs": [
+      "4EJWNpJWX6qToPPJ24YUH9enmBcGfs7tq1hXXs59ABogRY9tv8Hp8PM52AzrvfSnixiL9pXKwDvzwnLL5VYcZeZ8"
+    ],
+    "reasoning": "InitLP observed on the live slab. The deployed market has no matcher configured by default, so an InitLP represents a third-party matcher or LP operator going live. Could be legitimate or adversary.",
+    "alertFired": false
+  },
+  {
+    "timestamp": "2026-04-23T13:03:58.258Z",
+    "pattern": "THIRD_PARTY_MATCHER",
+    "severity": "MONITOR",
+    "feePayer": "FnAitDGgeauTLuko2hgAPLUaauLe3WeHdhSnEtZAPetd",
+    "relatedSigs": [
+      "59GQ6e7eTyJmbxHe7jsfae2iSXFsBVrDFLXYBDxspbS6WnMB4ULhNCRT9BWZaCc23rFxuCEFA7pWqMzsYno9Ys69"
+    ],
+    "reasoning": "InitLP observed on the live slab. The deployed market has no matcher configured by default, so an InitLP represents a third-party matcher or LP operator going live. Could be legitimate or adversary.",
+    "alertFired": false
+  },
+  {
+    "timestamp": "2026-04-23T13:03:58.258Z",
+    "pattern": "THIRD_PARTY_MATCHER",
+    "severity": "MONITOR",
+    "feePayer": "FnAitDGgeauTLuko2hgAPLUaauLe3WeHdhSnEtZAPetd",
+    "relatedSigs": [
+      "2mt2PvhGBUUEioV2zW2RL2FzVLN2KHLWguQWxtEaDFSedyLowUWNX7S1pS4X8qvgGtYqKJ6v2VDHM4b7YV9BR6x1"
+    ],
+    "reasoning": "InitLP observed on the live slab. The deployed market has no matcher configured by default, so an InitLP represents a third-party matcher or LP operator going live. Could be legitimate or adversary.",
+    "alertFired": false
+  },
+  {
+    "timestamp": "2026-04-23T13:03:58.258Z",
+    "pattern": "UNUSUAL_TOPUP",
+    "severity": "MONITOR",
+    "feePayer": "7HVHrEBG46fcucmP4DF1KrUCQkVqBxrFL7PwkvJBk8dA",
+    "relatedSigs": [
+      "2gnktfUopDgrFikd8b9zwDGsiwe8Ae5HFLoaf97wubXKRBR7zaREHezALqABFFkRLZ7PeqWzYHo9nF22T7YxqjQR"
+    ],
+    "reasoning": "TopUpInsurance from a fee-payer with no prior slab interaction in recent history. Could be front-running a drain with padding, could also be community-sourced insurance.",
+    "alertFired": false
+  }
+]

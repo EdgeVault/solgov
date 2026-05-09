@@ -1,0 +1,67 @@
+{
+  "protocol": "Orca",
+  "researchedAt": "2026-04-17T21:45:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "anchor-toml",
+      "url": "https://raw.githubusercontent.com/orca-so/whirlpools/main/Anchor.toml"
+    },
+    {
+      "kind": "verified-programs-governance",
+      "path": "sentinel/data/verified-programs-governance.json"
+    }
+  ],
+  "programs": [
+    {
+      "id": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+      "name": "Orca Whirlpools (CLMM)",
+      "role": "concentrated-liquidity AMM",
+      "source": "orca-so/whirlpools Anchor.toml",
+      "upgradeAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "upgradeAuthorityKind": "vault-PDA of BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF (Orca 3/10 multisig, 24h timelock)",
+      "alreadyTracked": true
+    },
+    {
+      "id": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+      "name": "Orca Token Swap v2 (legacy AMM)",
+      "role": "legacy constant-product AMM",
+      "source": "widely-published Orca address; predecessor to Whirlpools",
+      "upgradeAuthority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "upgradeAuthority - might be immutable or owned by the same BQsDWkL multisig"
+      ],
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+      "role": "Orca main multisig",
+      "threshold": "3/10",
+      "timelock": "86400s (24h)",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "parentMultisig": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc"
+      ],
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Single Squads V4 multisig 3/10 with 24h timelock (one of the longest among tracked protocols) and autonomous configAuthority. Whirlpools upgrade authority chain is fully confirmed.",
+  "gaps": [
+    "Orca Token Swap v2 legacy program upgrade authority - verify whether it's immutable, owned by the same multisig, or orphaned",
+    "Any Orca auxiliary programs (farm rewards, position NFT metadata, position NFT update authority) not enumerated here"
+  ],
+  "confidence": "high",
+  "notes": "Orca's governance is among the cleanest in the tracked set: single multisig, long timelock, autonomous CA. Whirlpools is the flagship; legacy token-swap-v2 is a small residual surface."
+}

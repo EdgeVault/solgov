@@ -1,0 +1,56 @@
+{
+  "protocol": "Carrot",
+  "researchedAt": "2026-04-17T22:28:00Z",
+  "researcher": "manual stub",
+  "sources": [],
+  "programs": [
+    {
+      "id": "Fk1RpqsfeWt8KnFCTW9NQVdVxYvxuqjGn6iPB9wrmM8h",
+      "name": "Carrot program 1",
+      "alreadyTracked": true,
+      "upgradeAuthority": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "JAZWcGrpSWNPTBj8QtJ9UyQqhJCDhG9GJkDeMf5NQBiq",
+      "name": "Carrot program 2",
+      "alreadyTracked": true,
+      "upgradeAuthority": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon",
+      "role": "Carrot main (tracked)",
+      "threshold": "2/3",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    },
+    {
+      "address": "DrFv23CkTxu84aAYCK7cvUP3zBvFGz2ruuCXuuyPZWbV",
+      "role": "Carrot vault-parent",
+      "threshold": "2/2",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false,
+      "notes": "2/2 = no redundancy"
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "parentMultisig": "DrFv23CkTxu84aAYCK7cvUP3zBvFGz2ruuCXuuyPZWbV",
+      "vaultIndex": 0,
+      "programsControlled": 2,
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "2 multisigs, main 2/3, vault-parent 2/2.",
+  "gaps": [
+    "Confirm program IDs via Carrot docs"
+  ],
+  "confidence": "medium"
+}

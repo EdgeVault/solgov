@@ -1,0 +1,42 @@
+{
+  "protocol": "Lulo",
+  "researchedAt": "2026-04-17T22:24:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.flexlend.fi/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs",
+      "name": "Lulo FlexLend",
+      "role": "lending aggregator",
+      "alreadyTracked": true,
+      "source": "monitor-state.json programAuthorities Lulo",
+      "upgradeAuthority": null,
+      "upgradeAuthorityKind": "IMMUTABLE - not upgradeable"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "8Sr4rQJL2aQT3EL97mbrk1T9VMw4pCS2mxMPp2QBzHQq",
+      "role": "Lulo multisig (tracked)",
+      "threshold": "?",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "threshold + members"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads multisig. One program confirmed.",
+  "gaps": [
+    "threshold + members",
+    "upgrade authority of FP1Agta",
+    "Additional Lulo programs (if any)"
+  ],
+  "confidence": "low"
+}

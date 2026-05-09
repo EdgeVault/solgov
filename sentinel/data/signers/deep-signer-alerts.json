@@ -1,0 +1,12 @@
+[
+  {
+    "signer": "propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz",
+    "protocols": [
+      "Helium"
+    ],
+    "category": "HIGH_ACTIVITY_HIGH_BALANCE",
+    "severity": "MEDIUM",
+    "detail": "87.1 SOL with 100 txs in 30 days",
+    "detectedAt": "2026-04-14 12:01 UTC"
+  }
+]

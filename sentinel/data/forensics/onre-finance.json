@@ -1,0 +1,8 @@
+{
+  "protocol":"Onre Finance","researchedAt":"2026-04-17T22:26:00Z","researcher":"manual stub",
+  "sources":[{"kind":"docs","url":"https://docs.onre.io/"}],
+  "programs":[],
+  "multisigs":[{"address":"922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR","role":"Onre multisig (tracked)","threshold":"4/12","timelock":"0s","configAuthority":"autonomous","alreadyTracked":true,"source":"extra-multisigs.json"}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Squads V4 4/12, 0 timelock, autonomous.","gaps":["Onre program IDs","what the multisig's vault controls"],"confidence":"low"
+}

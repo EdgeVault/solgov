@@ -1,0 +1,84 @@
+{
+  "protocol": "Jupiter Lend",
+  "researchedAt": "2026-04-17T21:35:00Z",
+  "researcher": "manual - discovered via Marginfi Anchor.toml + local scan data",
+  "sources": [
+    {
+      "kind": "anchor-toml",
+      "url": "https://raw.githubusercontent.com/mrgnlabs/marginfi-v2/main/Anchor.toml",
+      "note": "references Jupiter Lend programs as local deps"
+    },
+    {
+      "kind": "verified-programs-governance",
+      "path": "sentinel/data/verified-programs-governance.json"
+    }
+  ],
+  "programs": [
+    {
+      "id": "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS",
+      "name": "Jupiter Lend program (unnamed in docs)",
+      "role": "lending (exact role unclear)",
+      "source": "verified-programs-governance.json - Jupiter Lend vault 4MsgBB5V owns this program",
+      "upgradeAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "upgradeAuthorityKind": "vault-PDA of J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+      "alreadyTracked": true
+    },
+    {
+      "id": "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9",
+      "name": "Jupiter Lend - Lending",
+      "role": "lending core",
+      "source": "Marginfi Anchor.toml [programs.localnet] - juplend_lending",
+      "upgradeAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "alreadyTracked": false,
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC",
+      "name": "Jupiter Lend - Liquidity",
+      "role": "liquidity management",
+      "source": "Marginfi Anchor.toml - juplend_liquidity",
+      "upgradeAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "alreadyTracked": false,
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "jup7TthsMgcR9Y3L277b8Eo9uboVSmu1utkuXHNUKar",
+      "name": "Jupiter Lend - Rewards Rate Model",
+      "role": "reward rate curve",
+      "source": "Marginfi Anchor.toml - juplend_rewards_rate_model",
+      "upgradeAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "alreadyTracked": false,
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+      "role": "Jupiter Lend multisig (tracked)",
+      "threshold": "4/7",
+      "timelock": "43200s (12h)",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "parentMultisig": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS"
+      ],
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Squads V4, 4/7 threshold with 12h timelock, autonomous configAuthority. Multisig vault[0] confirmed owner of jupgfSgf. Three other Jupiter Lend programs identified via cross-reference (Marginfi Anchor.toml) but their upgrade authorities are not in local scan data.",
+  "gaps": [
+    "jup3YeL8, jupeiUmn, jup7Tths upgrade authorities - need getAccountInfo(ProgramData) for each",
+    "Verify whether J3mJ3wz6 vault[0] also owns some of those (would be typical pattern)",
+    "Ask Jupiter team directly for their official program address manifest if not found in docs"
+  ],
+  "confidence": "medium",
+  "notes": "Jupiter Lend has 4 programs confirmed across sources. Only 1 has a confirmed upgrade authority chain in local data. The other 3 almost certainly land under the same multisig but need RPC verification."
+}

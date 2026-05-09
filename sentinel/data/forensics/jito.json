@@ -1,0 +1,15 @@
+{
+  "protocol":"Jito","researchedAt":"2026-04-17T23:00:00Z","researcher":"manual",
+  "sources":[{"kind":"docs","url":"https://www.jito.network/docs/restaking/jito-restaking-overview/"},{"kind":"github","url":"https://github.com/jito-foundation"}],
+  "programs":[
+    {"id":"RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q","name":"Jito Restaking","role":"NCN + Operator registry","alreadyTracked":false,"needsRpcVerify":["upgradeAuthority"]},
+    {"id":"Vau1t6sLNxnzB7ZDsef8TLbPLfyZMYXH8WTNqUdm9g8","name":"Jito Vault","role":"restaking vault program","alreadyTracked":false,"needsRpcVerify":["upgradeAuthority"]},
+    {"id":"jitoTipRouter","name":"Jito TipRouter (NCN)","role":"MEV tip distribution","alreadyTracked":false,"needsRpcVerify":["confirm exact program ID"]},
+    {"id":"jitoSOL_stake_pool","name":"JitoSOL Stake Pool","role":"liquid staking - uses SPL Stake Pool program","alreadyTracked":false,"needsRpcVerify":["confirm - likely uses SPoo1Ku8 SPL stake pool program"]}
+  ],
+  "multisigs":[],
+  "authorities":[],
+  "vaultPdas":[],
+  "governanceModel":"Jito Foundation. Multiple programs across staking, restaking, MEV. Not currently in tracked-multisigs.json.",
+  "gaps":["Add Jito multisig to tracked list","Upgrade authorities for all 4 programs","Confirm TipRouter exact ID"],"confidence":"low"
+}

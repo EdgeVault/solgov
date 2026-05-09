@@ -1,0 +1,427 @@
+[
+  {
+    "address": "hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc",
+    "protocols": [
+      "Solayer"
+    ],
+    "swaps": 157,
+    "bridges": 0,
+    "lending": 8,
+    "defiProtocols": [
+      "JUPITER",
+      "DFLOW",
+      "RAYDIUM",
+      "MARGINFI_V2",
+      "STREAMFLOW_TIMELOCK"
+    ],
+    "riskScore": 10,
+    "totalDefi": 165
+  },
+  {
+    "address": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
+    "protocols": [
+      "Solayer"
+    ],
+    "swaps": 87,
+    "bridges": 0,
+    "lending": 110,
+    "defiProtocols": [
+      "JUPITER",
+      "STAKE_PROGRAM",
+      "DFLOW",
+      "PUMP_AMM"
+    ],
+    "riskScore": 10,
+    "totalDefi": 197
+  },
+  {
+    "address": "C31s8y9zXnUbXzejPQ4ZaUj8JdR6j3zseAAcmDr8k51x",
+    "protocols": [
+      "DefiTuna"
+    ],
+    "swaps": 131,
+    "bridges": 0,
+    "lending": 1,
+    "defiProtocols": [
+      "JUPITER",
+      "OKX_DEX_ROUTER",
+      "PUMP_AMM",
+      "DFLOW",
+      "DEFITUNA"
+    ],
+    "riskScore": 9,
+    "totalDefi": 132
+  },
+  {
+    "address": "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn",
+    "protocols": [
+      "Loopscale"
+    ],
+    "swaps": 126,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "TITAN",
+      "OKX_DEX_ROUTER",
+      "JUPITER"
+    ],
+    "riskScore": 8,
+    "totalDefi": 126
+  },
+  {
+    "address": "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP",
+    "protocols": [
+      "Switchboard"
+    ],
+    "swaps": 57,
+    "bridges": 2,
+    "lending": 0,
+    "defiProtocols": [
+      "TITAN",
+      "OKX_DEX_ROUTER",
+      "DFLOW",
+      "JUPITER",
+      "OKX"
+    ],
+    "riskScore": 7,
+    "totalDefi": 59
+  },
+  {
+    "address": "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV",
+    "protocols": [
+      "Kamino"
+    ],
+    "swaps": 71,
+    "bridges": 0,
+    "lending": 7,
+    "defiProtocols": [
+      "JUPITER",
+      "DFLOW",
+      "PHOENIX",
+      "STREAMFLOW_TIMELOCK",
+      "ORCA"
+    ],
+    "riskScore": 5,
+    "totalDefi": 78
+  },
+  {
+    "address": "GpvnGqPTq4Ga7k5PgxoBA7Yr6HCnsqeeeb8KhczztdRu",
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "swaps": 25,
+    "bridges": 3,
+    "lending": 0,
+    "defiProtocols": [
+      "JUPITER",
+      "OKX"
+    ],
+    "riskScore": 5,
+    "totalDefi": 28
+  },
+  {
+    "address": "6ryqDDCwKFZfSiHQrYRkjTEarbsLjg9TmuFg1RJorBk3",
+    "protocols": [
+      "Marginfi"
+    ],
+    "swaps": 47,
+    "bridges": 0,
+    "lending": 26,
+    "defiProtocols": [
+      "JUPITER",
+      "OKX_DEX_ROUTER",
+      "MARGINFI_V2",
+      "DFLOW"
+    ],
+    "riskScore": 5,
+    "totalDefi": 73
+  },
+  {
+    "address": "66kDYpYtuGkaZF2ho64VgEQuAgBPGjY17HtcTtANtNR8",
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "swaps": 68,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "OKX_DEX_ROUTER",
+      "TITAN",
+      "DFLOW",
+      "JUPITER"
+    ],
+    "riskScore": 5,
+    "totalDefi": 68
+  },
+  {
+    "address": "9KLgXuQc1VXStEx6gppqe6BhX5jE75hLufkXmRwZmWLL",
+    "protocols": [
+      "DefiTuna"
+    ],
+    "swaps": 67,
+    "bridges": 0,
+    "lending": 2,
+    "defiProtocols": [
+      "OKX_DEX_ROUTER",
+      "JUPITER",
+      "DFLOW",
+      "DEFITUNA",
+      "TITAN"
+    ],
+    "riskScore": 5,
+    "totalDefi": 69
+  },
+  {
+    "address": "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN",
+    "protocols": [
+      "Stabble"
+    ],
+    "swaps": 45,
+    "bridges": 0,
+    "lending": 15,
+    "defiProtocols": [
+      "JUPITER",
+      "PUMP_AMM",
+      "TITAN",
+      "DEFITUNA",
+      "METEORA_DAMM_V2",
+      "OKX",
+      "CARROT",
+      "DFLOW"
+    ],
+    "riskScore": 4,
+    "totalDefi": 60
+  },
+  {
+    "address": "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu",
+    "protocols": [
+      "Marginfi"
+    ],
+    "swaps": 66,
+    "bridges": 0,
+    "lending": 1,
+    "defiProtocols": [
+      "MARGINFI_V2",
+      "TITAN",
+      "JUPITER",
+      "OKX_DEX_ROUTER"
+    ],
+    "riskScore": 4,
+    "totalDefi": 67
+  },
+  {
+    "address": "26Es6MMrHXXBGPoVd5D5VZwepTHPigaSU5iTSd2hmp1m",
+    "protocols": [
+      "Loopscale"
+    ],
+    "swaps": 37,
+    "bridges": 0,
+    "lending": 1,
+    "defiProtocols": [
+      "JUPITER",
+      "DFLOW",
+      "METEORA_DAMM_V2"
+    ],
+    "riskScore": 3,
+    "totalDefi": 38
+  },
+  {
+    "address": "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z",
+    "protocols": [
+      "Marginfi"
+    ],
+    "swaps": 38,
+    "bridges": 0,
+    "lending": 1,
+    "defiProtocols": [
+      "JUPITER",
+      "TITAN",
+      "MARGINFI_V2"
+    ],
+    "riskScore": 3,
+    "totalDefi": 39
+  },
+  {
+    "address": "LoTy38EiLYg85rWq5okYjNwzQECGbYa6uPcJPj8MHu2",
+    "protocols": [
+      "Loopscale"
+    ],
+    "swaps": 23,
+    "bridges": 0,
+    "lending": 1,
+    "defiProtocols": [
+      "TITAN",
+      "JUPITER",
+      "SQUADS_V4",
+      "STAKE_PROGRAM"
+    ],
+    "riskScore": 2,
+    "totalDefi": 25
+  },
+  {
+    "address": "FoMboHErV2g7GjfQayFCRjWdXg3USZkPJCoeYEgPastv",
+    "protocols": [
+      "Solstice"
+    ],
+    "swaps": 29,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "OKX",
+      "JUPITER",
+      "DFLOW"
+    ],
+    "riskScore": 2,
+    "totalDefi": 29
+  },
+  {
+    "address": "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk",
+    "protocols": [
+      "Titan"
+    ],
+    "swaps": 30,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "TITAN",
+      "OKX_DEX_ROUTER",
+      "OKX",
+      "DFLOW",
+      "JUPITER",
+      "RAYDIUM",
+      "PUMP_AMM"
+    ],
+    "riskScore": 2,
+    "totalDefi": 30
+  },
+  {
+    "address": "EDae3XapMwETGSH4HrggdiKDSpX1bPjaRH2HoEWzkLT2",
+    "protocols": [
+      "Titan"
+    ],
+    "swaps": 26,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "PUMP_AMM",
+      "RAYDIUM",
+      "JUPITER",
+      "DFLOW"
+    ],
+    "riskScore": 2,
+    "totalDefi": 26
+  },
+  {
+    "address": "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+    "protocols": [
+      "Switchboard"
+    ],
+    "swaps": 16,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "OKX_DEX_ROUTER",
+      "PUMP_AMM",
+      "JUPITER",
+      "DFLOW",
+      "OKX",
+      "METEORA"
+    ],
+    "riskScore": 1,
+    "totalDefi": 16
+  },
+  {
+    "address": "FH83cpeVPNWS3hTdQzDtwWcJQT3TA7hfAz3T8ojbNqVt",
+    "protocols": [
+      "Hylo"
+    ],
+    "swaps": 11,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "SQUADS_V4",
+      "JUPITER"
+    ],
+    "riskScore": 1,
+    "totalDefi": 11
+  },
+  {
+    "address": "H5xDGKUoJmmsNZ3brVqHV8EVxaUQdfEKwBzvzJEcrLMn",
+    "protocols": [
+      "Hylo"
+    ],
+    "swaps": 14,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "SQUADS_V4"
+    ],
+    "riskScore": 1,
+    "totalDefi": 14
+  },
+  {
+    "address": "55Th9kAE3FW2ws3xfUu5dxa8Q5NjNrToezpDwW8NhrCB",
+    "protocols": [
+      "Stabble"
+    ],
+    "swaps": 18,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "OKX_DEX_ROUTER",
+      "JUPITER"
+    ],
+    "riskScore": 1,
+    "totalDefi": 18
+  },
+  {
+    "address": "3wLd4AUHQRB9DJrgP8Qwfp5fMh2SyAqj148d7qbUq8Lb",
+    "protocols": [
+      "Titan"
+    ],
+    "swaps": 22,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "TITAN",
+      "SQUADS_V4",
+      "PUMP_AMM",
+      "PUMP_FUN",
+      "RAYDIUM"
+    ],
+    "riskScore": 1,
+    "totalDefi": 22
+  },
+  {
+    "address": "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT",
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "swaps": 17,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "DFLOW",
+      "OKX_DEX_ROUTER",
+      "JUPITER",
+      "OKX"
+    ],
+    "riskScore": 1,
+    "totalDefi": 17
+  },
+  {
+    "address": "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR",
+    "protocols": [
+      "Ore"
+    ],
+    "swaps": 11,
+    "bridges": 0,
+    "lending": 0,
+    "defiProtocols": [
+      "JUPITER",
+      "TITAN"
+    ],
+    "riskScore": 1,
+    "totalDefi": 11
+  }
+]

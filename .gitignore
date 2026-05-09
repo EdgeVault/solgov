@@ -1,0 +1,96 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*/.env
+**/.env
+
+# Logs
+*.log
+logs/
+**/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# AI tooling (Claude Code harness, agents skills) - local-only
+.claude/
+.agents/
+skills-lock.json
+
+# Markdown is local-only by default. Only the top-level README is public.
+*.md
+!README.md
+
+# Local-only working dirs and assets
+submission/
+publishing/
+solgov-dapp/
+dashboard/
+*.keystore
+*.apk
+*.aab
+*.idsig
+frontier-CSK.png
+
+# Temp / scratch
+tmp/
+*.tmp
+c:/tmp/
+
+# Vercel
+.vercel/
+
+# Helius / sentinel runtime caches
+sentinel/data/percolator-*.json
+sentinel/data/pending-triage.json
+sentinel/data/bot-subscriptions.json
+sentinel/data/yieldbay-cache.json
+sentinel/data/daily-integrity-prev.json
+
+# Operational scripts and logs (operator-only, not part of public product)
+sentinel/scripts/
+
+# Sentinel scratch / forensics tooling (one-off scripts used during development).
+# Production daemons and helpers are whitelisted with ! below.
+sentinel/src/*.ts
+!sentinel/src/solgov-api.ts
+!sentinel/src/solgov-bot.ts
+!sentinel/src/solgov-listener.ts
+!sentinel/src/solgov-monitor.ts
+!sentinel/src/activity-log.ts
+!sentinel/src/subscriptions.ts
+!sentinel/src/llm-client.ts
+!sentinel/src/llm-tools.ts
+!sentinel/src/llm-triage.ts
+!sentinel/src/user-tracked-multisigs.ts
+!sentinel/src/webhook-registry.ts
+!sentinel/src/test-public-alerts.ts
+!sentinel/src/index.ts
+
+# Investigation reports (forensics scratch, not part of the product)
+sentinel/src/investigations/
+
+# Sentinel src-level dev README + PowerShell scratch
+sentinel/src/README.md
+sentinel/src/*.ps1

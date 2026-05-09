@@ -1,0 +1,466 @@
+[
+  {
+    "name": "Switchboard Oracle Signer (Drift trader)",
+    "protocol": "Switchboard",
+    "signer": "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP",
+    "balance": 0.09060865,
+    "totalTxs": 500,
+    "swaps": 41,
+    "bridges": 2,
+    "approvals": 16,
+    "types": {
+      "COMPRESSED_NFT_MINT": 16,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "TRANSFER": 133,
+      "SWAP": 41,
+      "EXECUTE_VAULT_TRANSACTION": 14,
+      "UNKNOWN": 215,
+      "INITIALIZE_ACCOUNT": 7,
+      "CLOSE_ACCOUNT": 3,
+      "TOKEN_MINT": 1,
+      "PLACE_ORDERS": 63,
+      "SETTLE_PNL": 2,
+      "CANCEL_ALL_ORDERS": 1,
+      "APPROVE_PROPOSAL": 2,
+      "PLACE_AND_TAKE_PERP_ORDER": 1
+    },
+    "sources": {
+      "BUBBLEGUM": 17,
+      "SYSTEM_PROGRAM": 129,
+      "TITAN": 10,
+      "SQUADS_V4": 16,
+      "SOLANA_PROGRAM_LIBRARY": 7,
+      "MAYAN_CIRCLE_FAST_TRANSFER": 2,
+      "OKX_DEX_ROUTER": 2,
+      "DFLOW": 1,
+      "ASSOCIATED_TOKEN_PROGRAM": 7,
+      "DRIFT": 276,
+      "JUPITER": 27,
+      "UNKNOWN": 5,
+      "OKX": 1
+    },
+    "risks": [
+      "HIGH: 41 swaps - key is a hot wallet",
+      "HIGH: Bridge activity detected - cross-chain exposure",
+      "MEDIUM: Interacts with 13 different protocols - wide attack surface"
+    ],
+    "recentSwaps": [
+      {
+        "date": "2026-02-23 20:11:02",
+        "source": "TITAN",
+        "description": "",
+        "signature": "W48Ca24cAQWi7WjtY7B5QD8e5jiWHH"
+      },
+      {
+        "date": "2026-02-05 15:40:42",
+        "source": "TITAN",
+        "description": "",
+        "signature": "5FbkbAMXfvhfupbLBWMCfua2TAnaFN"
+      },
+      {
+        "date": "2026-01-31 17:51:13",
+        "source": "TITAN",
+        "description": "",
+        "signature": "4PJctxV8KoSEGH8dvViaoHekYoMD5p"
+      },
+      {
+        "date": "2026-01-31 15:02:23",
+        "source": "TITAN",
+        "description": "",
+        "signature": "VGasmt9KA6Wn19tDgueaPAoYV4Ks3e"
+      },
+      {
+        "date": "2026-01-29 16:05:37",
+        "source": "TITAN",
+        "description": "",
+        "signature": "q1kJEXLqTBbUGgE67SeW88nnHBvwHQ"
+      }
+    ],
+    "recentBridges": [
+      {
+        "date": "2025-11-24 20:47:02",
+        "source": "MAYAN_CIRCLE_FAST_TRANSFER",
+        "description": ""
+      },
+      {
+        "date": "2025-11-24 16:56:23",
+        "source": "MAYAN_CIRCLE_FAST_TRANSFER",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Switchboard Signer 2 (Drift)",
+    "protocol": "Switchboard",
+    "signer": "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+    "balance": 0.699117823,
+    "totalTxs": 500,
+    "swaps": 10,
+    "bridges": 0,
+    "approvals": 18,
+    "types": {
+      "APPROVE_PROPOSAL": 17,
+      "TRANSFER": 422,
+      "INITIALIZE_ACCOUNT": 14,
+      "CLOSE_ACCOUNT": 3,
+      "CLOSE_POSITION": 1,
+      "UNKNOWN": 15,
+      "SWAP": 10,
+      "OPEN_POSITION": 1,
+      "ORACLE_UPDATE": 7,
+      "INITIALIZE_POSITION": 1,
+      "COMPRESSED_NFT_MINT": 7,
+      "CANCEL_PROPOSAL": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 24,
+      "SYSTEM_PROGRAM": 394,
+      "SOLANA_PROGRAM_LIBRARY": 20,
+      "ASSOCIATED_TOKEN_PROGRAM": 14,
+      "METEORA_DAMM_V2": 2,
+      "DRIFT": 3,
+      "OKX_DEX_ROUTER": 1,
+      "UNKNOWN": 8,
+      "PUMP_AMM": 4,
+      "JUPITER": 1,
+      "PHANTOM": 6,
+      "SWITCHBOARD_ON_DEMAND": 11,
+      "METEORA": 1,
+      "DFLOW": 1,
+      "OKX": 3,
+      "BUBBLEGUM": 7
+    },
+    "risks": [
+      "MEDIUM: Interacts with 16 different protocols - wide attack surface"
+    ],
+    "recentSwaps": [
+      {
+        "date": "2025-12-03 13:51:03",
+        "source": "OKX_DEX_ROUTER",
+        "description": "",
+        "signature": "mLof9KufZUgeogjSWmYkqsqRv1h78G"
+      },
+      {
+        "date": "2025-10-15 16:10:57",
+        "source": "PUMP_AMM",
+        "description": "",
+        "signature": "4VCBfhJ4jBRQLEW1J4SVyq6SeyrKNz"
+      },
+      {
+        "date": "2025-10-15 16:10:02",
+        "source": "JUPITER",
+        "description": "",
+        "signature": "52yCm8UxFCZxUaau17LjCrSTkTe818"
+      },
+      {
+        "date": "2025-10-07 15:22:22",
+        "source": "PUMP_AMM",
+        "description": "",
+        "signature": "2HvErY6PyQPo15uQQmnKcViqR5sUXi"
+      },
+      {
+        "date": "2025-10-07 15:22:03",
+        "source": "PUMP_AMM",
+        "description": "",
+        "signature": "5M65hiu8TPdBXSuzP1zRiSgbGRy93W"
+      }
+    ],
+    "recentBridges": []
+  },
+  {
+    "name": "Lulo Signer (Kamino farmer)",
+    "protocol": "Lulo",
+    "signer": "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk",
+    "balance": 0.365883807,
+    "totalTxs": 500,
+    "swaps": 4,
+    "bridges": 0,
+    "approvals": 11,
+    "types": {
+      "APPROVE_PROPOSAL": 11,
+      "REFRESH_OBLIGATION": 352,
+      "TOKEN_MINT": 2,
+      "TRANSFER": 84,
+      "UNKNOWN": 24,
+      "REJECT_PROPOSAL": 4,
+      "INITIALIZE_ACCOUNT": 9,
+      "SWAP": 4,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 4,
+      "COMPRESSED_NFT_MINT": 1,
+      "EXTEND_LOOKUP_TABLE": 4,
+      "INIT_USER_METADATA": 1
+    },
+    "sources": {
+      "SQUADS_V4": 16,
+      "KAMINO_LEND": 357,
+      "UNKNOWN": 21,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "SYSTEM_PROGRAM": 79,
+      "ASSOCIATED_TOKEN_PROGRAM": 9,
+      "DRIFT": 5,
+      "JUPITER": 4,
+      "BUBBLEGUM": 1,
+      "PHANTOM": 2,
+      "ADDRESS_LOOKUP_TABLE": 4
+    },
+    "risks": [
+      "MEDIUM: Interacts with 11 different protocols - wide attack surface"
+    ],
+    "recentSwaps": [
+      {
+        "date": "2026-01-20 21:00:54",
+        "source": "JUPITER",
+        "description": "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk swapped 49.982879 CASHx9KJUStyftLFWGvEVf59SGeG9sh5FfcnZMVPCASH for 49.987702 USDC",
+        "signature": "2sSf3f7N4rixZaRaX2eED99gEdSYrj"
+      },
+      {
+        "date": "2026-01-19 20:03:41",
+        "source": "JUPITER",
+        "description": "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk swapped 50 USDC for 50.002472 CASHx9KJUStyftLFWGvEVf59SGeG9sh5FfcnZMVPCASH",
+        "signature": "Z6GUrrVdx9v7Z6vgMGSuoeNr76gNAa"
+      },
+      {
+        "date": "2026-01-06 10:08:40",
+        "source": "JUPITER",
+        "description": "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk swapped 0.00008 SOL for 55.070992 USDS",
+        "signature": "3K6DSzNfQVPr8tCpefzTDAAxXYywat"
+      },
+      {
+        "date": "2026-01-06 10:08:22",
+        "source": "JUPITER",
+        "description": "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk swapped 52.795399 USDC for 52.79081 USDS",
+        "signature": "49ajedsWwKt2rjWTQsLmAF2xt4ogLb"
+      }
+    ],
+    "recentBridges": []
+  },
+  {
+    "name": "Marginfi Signer 1 (heavy swapper)",
+    "protocol": "Marginfi",
+    "signer": "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu",
+    "balance": 3.444549244,
+    "totalTxs": 185,
+    "swaps": 66,
+    "bridges": 0,
+    "approvals": 47,
+    "types": {
+      "DEPOSIT": 1,
+      "INIT_LENDING_ACCOUNT": 1,
+      "TRANSFER": 38,
+      "APPROVE_PROPOSAL": 47,
+      "SWAP": 66,
+      "UNKNOWN": 16,
+      "INITIALIZE_ACCOUNT": 14,
+      "COMPRESSED_NFT_MINT": 2
+    },
+    "sources": {
+      "MARGINFI_V2": 2,
+      "SYSTEM_PROGRAM": 19,
+      "SOLANA_PROGRAM_LIBRARY": 11,
+      "SQUADS_V4": 55,
+      "TITAN": 28,
+      "UNKNOWN": 4,
+      "JUPITER": 37,
+      "DFLOW": 12,
+      "ASSOCIATED_TOKEN_PROGRAM": 14,
+      "BUBBLEGUM": 2,
+      "OKX_DEX_ROUTER": 1
+    },
+    "risks": [
+      "HIGH: 66 swaps - key is a hot wallet",
+      "MEDIUM: Interacts with 11 different protocols - wide attack surface"
+    ],
+    "recentSwaps": [
+      {
+        "date": "2026-04-04 17:23:37",
+        "source": "TITAN",
+        "description": "",
+        "signature": "2wvhTv8s83yxqkQrv46GdwXWpLnETp"
+      },
+      {
+        "date": "2026-04-04 17:10:46",
+        "source": "JUPITER",
+        "description": "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu swapped 1191.87 mSOL for 131691.052838 USDC",
+        "signature": "5rnNiftQd2pWPWWJqy6b9N9Bwdo9aF"
+      },
+      {
+        "date": "2026-04-04 17:10:31",
+        "source": "JUPITER",
+        "description": "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu swapped 478.69 bSo13r4TkiE4KumL71LsHTPpL2euBYLFx6h9HP3piy1 for 49679.008113 USDC",
+        "signature": "2bzAuJPqerZwATSYNP7Gf2SHLbTbPs"
+      },
+      {
+        "date": "2026-04-04 17:10:07",
+        "source": "JUPITER",
+        "description": "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu swapped 387.29 INF for 44152.124926 USDC",
+        "signature": "67TAzuGyCiueJno7JeZSpoZ94pE6cF"
+      },
+      {
+        "date": "2026-04-04 17:09:52",
+        "source": "JUPITER",
+        "description": "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu swapped 492.41 corvusSOL for 40276.946925 USDC",
+        "signature": "5svwB9idmdTAUMi4ykHZxjyp1gsFpd"
+      }
+    ],
+    "recentBridges": []
+  },
+  {
+    "name": "Solayer Signer (41 swaps)",
+    "protocol": "Solayer",
+    "signer": "hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc",
+    "balance": 0.299168553,
+    "totalTxs": 500,
+    "swaps": 119,
+    "bridges": 0,
+    "approvals": 0,
+    "types": {
+      "TRANSFER": 189,
+      "COMPRESSED_NFT_TRANSFER": 2,
+      "INITIALIZE_USER": 1,
+      "INITIALIZE_ACCOUNT": 120,
+      "SWAP": 119,
+      "UNKNOWN": 16,
+      "COMPRESSED_NFT_MINT": 33,
+      "REFRESH_OBLIGATION": 7,
+      "STAKE": 1,
+      "CLOSE_ACCOUNT": 1,
+      "DEPOSIT_RESERVE_LIQUIDITY_AND_OBLIGATION_COLLATERAL": 2,
+      "BORROW_OBLIGATION_LIQUIDITY": 1,
+      "WITHDRAW_OBLIGATION_COLLATERAL_AND_REDEEM_RESERVE_COLLATERAL": 2,
+      "APPROVE": 1,
+      "WITHDRAW": 4,
+      "REPAY_LOAN": 1
+    },
+    "sources": {
+      "SOLANA_PROGRAM_LIBRARY": 30,
+      "SYSTEM_PROGRAM": 156,
+      "BUBBLEGUM": 35,
+      "KAMINO_FARMS": 2,
+      "PHANTOM": 5,
+      "ASSOCIATED_TOKEN_PROGRAM": 120,
+      "JUPITER": 121,
+      "UNKNOWN": 10,
+      "KAMINO_LEND": 12,
+      "DFLOW": 1,
+      "RAYDIUM": 3,
+      "MARGINFI_V2": 5
+    },
+    "risks": [
+      "HIGH: 119 swaps - key is a hot wallet",
+      "MEDIUM: Interacts with 12 different protocols - wide attack surface"
+    ],
+    "recentSwaps": [
+      {
+        "date": "2026-01-01 03:54:27",
+        "source": "JUPITER",
+        "description": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838329 USDC for 2743.432936 KMNO",
+        "signature": "2Dw3JvbhTDCXDrs9BhTXnsVEwfRZVp"
+      },
+      {
+        "date": "2026-01-01 03:49:21",
+        "source": "JUPITER",
+        "description": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2744.649381 KMNO",
+        "signature": "2mzRGgi13VyUke49pDikvHHE3RSQxF"
+      },
+      {
+        "date": "2026-01-01 03:44:24",
+        "source": "JUPITER",
+        "description": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2738.93639 KMNO",
+        "signature": "63tqcjEybypd3WrT6CDntPoHyfPug4"
+      },
+      {
+        "date": "2026-01-01 03:39:22",
+        "source": "JUPITER",
+        "description": "JD38n7ynKYcgPpF7k1BhXEeREu1KqptU93fVGy3S624k swapped 155.838338 USDC for 2741.904412 KMNO",
+        "signature": "3Vwd79EBeKfauukFjCyEPFUEZFiW64"
+      },
+      {
+        "date": "2026-01-01 03:34:22",
+        "source": "JUPITER",
+        "description": "JD25qVdtd65FoiXNmR89JjmoJdYk9sjYQeSTZAALFiMy swapped 155.838338 USDC for 2742.353421 KMNO",
+        "signature": "25d5M6CfG9uxyZCLpiW2Bb4fdKUw2t"
+      }
+    ],
+    "recentBridges": []
+  },
+  {
+    "name": "Kamino Signer (self-dealing)",
+    "protocol": "Kamino",
+    "signer": "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV",
+    "balance": 1.1463468,
+    "totalTxs": 500,
+    "swaps": 8,
+    "bridges": 0,
+    "approvals": 0,
+    "types": {
+      "WITHDRAW_UNSTAKED_DEPOSITS": 4,
+      "TRANSFER": 142,
+      "REFRESH_OBLIGATION": 13,
+      "INITIALIZE_USER": 7,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "STAKE": 3,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 54,
+      "INITIALIZE_ACCOUNT": 15,
+      "HARVEST_REWARD": 7,
+      "SWAP": 8,
+      "EXTEND_LOOKUP_TABLE": 1,
+      "COMPRESSED_NFT_MINT": 15,
+      "UNKNOWN": 5,
+      "APPROVE_TRANSACTION": 75,
+      "EXECUTE_INSTRUCTION": 137,
+      "WITHDRAW_OBLIGATION_COLLATERAL_AND_REDEEM_RESERVE_COLLATERAL": 7,
+      "DEPOSIT_RESERVE_LIQUIDITY_AND_OBLIGATION_COLLATERAL": 6
+    },
+    "sources": {
+      "KAMINO_FARMS": 21,
+      "SYSTEM_PROGRAM": 111,
+      "KAMINO_LEND": 80,
+      "BUBBLEGUM": 16,
+      "SOLANA_PROGRAM_LIBRARY": 15,
+      "ASSOCIATED_TOKEN_PROGRAM": 15,
+      "JUPITER": 10,
+      "ADDRESS_LOOKUP_TABLE": 1,
+      "DFLOW": 1,
+      "SQUADS_MPL": 227,
+      "SQUADS_V4": 1,
+      "UNKNOWN": 2
+    },
+    "risks": [
+      "MEDIUM: Interacts with 12 different protocols - wide attack surface"
+    ],
+    "recentSwaps": [
+      {
+        "date": "2025-12-25 21:26:53",
+        "source": "JUPITER",
+        "description": "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV swapped 415608.357221 USDC for 412287.051058 PRIME",
+        "signature": "yVHqZTmGyV4Tk1npuR1ebw12vrge5u"
+      },
+      {
+        "date": "2025-12-25 20:29:34",
+        "source": "JUPITER",
+        "description": "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV swapped 224583.283063 USDC for 222795.838085 PRIME",
+        "signature": "4ytTt3DScCbtL1QaovE374SmDbcVTo"
+      },
+      {
+        "date": "2025-12-25 20:23:40",
+        "source": "DFLOW",
+        "description": "",
+        "signature": "3ou4r6nrShxE6JA9CWdPtXiiZEDhyJ"
+      },
+      {
+        "date": "2025-02-06 11:28:20",
+        "source": "JUPITER",
+        "description": "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV swapped 1630729.253921 2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo for 1630377.664292 USDC",
+        "signature": "4XM9WrjL8EX5okPGskPAV7g8bWHJB9"
+      },
+      {
+        "date": "2024-12-22 01:31:21",
+        "source": "JUPITER",
+        "description": "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV swapped 1616897.416179 2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo for 1616478.695273 USDC",
+        "signature": "5Az5Sa8YAitoNL9Pew6bxLiqoCw2vn"
+      }
+    ],
+    "recentBridges": []
+  }
+]

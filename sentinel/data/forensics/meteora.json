@@ -1,0 +1,102 @@
+{
+  "protocol": "Meteora",
+  "researchedAt": "2026-04-17T22:00:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "github",
+      "url": "https://github.com/MeteoraAg"
+    },
+    {
+      "kind": "github-damm-v2",
+      "url": "https://github.com/MeteoraAg/damm-v2"
+    },
+    {
+      "kind": "github-dlmm-sdk",
+      "url": "https://github.com/MeteoraAg/dlmm-sdk"
+    }
+  ],
+  "programs": [
+    {
+      "id": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "name": "Meteora DLMM",
+      "role": "dynamic bin-based liquidity AMM",
+      "source": "MeteoraAg/dlmm-sdk",
+      "alreadyTracked": true,
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "name": "Meteora DAMM v2",
+      "role": "dynamic constant-product AMM",
+      "source": "MeteoraAg/damm-v2",
+      "alreadyTracked": false,
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB",
+      "name": "Meteora DAMM v1 / Dynamic AMM legacy",
+      "role": "predecessor to DAMM v2",
+      "source": "MeteoraAg legacy SDK references (low confidence on ID)",
+      "alreadyTracked": false,
+      "confidence": "low",
+      "needsRpcVerify": [
+        "confirm ID via GitHub Anchor.toml"
+      ],
+      "upgradeAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "CoEsykatDegLB7pcMJia79JSriDdi71nPnjgeSfw623k",
+      "role": "Meteora main multisig (tracked)",
+      "threshold": "4/8",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    },
+    {
+      "address": "EfMUASGwCsPBafiPi8rwdZfUJSUt7pxAoxayR39PVpMr",
+      "role": "second Meteora multisig (owns vault 9ECeczLt controlling unknown program XzTT4XB8)",
+      "threshold": "4/7",
+      "timelock": "7200s (2h)",
+      "configAuthority": "autonomous",
+      "source": "verified-programs-governance.json + extra-multisigs.json",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "confirm this belongs to Meteora team - program XzTT4XB8m7sLD2xi6snefSasaswsKCxx5Tifjondogm has no OtterSec attribution"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "9ECeczLtFZDYE3NX6G7uNw5BUGjoJAu1kFyEihA5hMaM",
+      "parentMultisig": "EfMUASGwCsPBafiPi8rwdZfUJSUt7pxAoxayR39PVpMr",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "XzTT4XB8m7sLD2xi6snefSasaswsKCxx5Tifjondogm"
+      ],
+      "alreadyTracked": true,
+      "notes": "label 'Meteora vault' in solgov-api.ts is UNCONFIRMED - program XzTT4XB8 has no OtterSec verification"
+    },
+    {
+      "address": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "parentMultisig": "3Eun8CdkJsd5WZC7NdNLUPQCx86cXKtwAK6EFLuWsn5w",
+      "vaultIndex": "unknown",
+      "notes": "Squads V3 - REAL Meteora upgrade vault - discovered via RPC concentration sweep April 17 2026",
+      "alreadyTracked": false
+    }
+  ],
+  "governanceModel": "Main multisig 4/8 0s timelock, second multisig 4/7 with 2h timelock. DLMM and DAMM v2 are the main programs; upgrade authorities not in local data.",
+  "gaps": [
+    "LBUZKhRx (DLMM) and cpamdpZC (DAMM v2) upgrade authorities - RPC needed",
+    "Meteora DAMM v1 exact program ID - find via GitHub Anchor.toml",
+    "Confirm EfMUASGwCs actually belongs to Meteora (program XzTT4XB8 unverified)"
+  ],
+  "confidence": "medium",
+  "notes": "Meteora docs.meteora.ag returned 404 on contract-addresses page. Program IDs pulled from official GitHub SDKs. Second multisig attribution unconfirmed."
+}

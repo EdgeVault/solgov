@@ -1,0 +1,29 @@
+{
+  "protocol": "Drift V2",
+  "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+  "auditedAt": "2026-04-23",
+  "methodology": "Manual review of programs/drift/src/controller/orders.rs on the protocol-v2 master branch. Searched for same-owner / self-trade / self-match rejection at the fill path.",
+  "findings": {
+    "permitsSameOwnerSelfMatch": true,
+    "evidence": {
+      "file": "programs/drift/src/controller/orders.rs",
+      "function": "fulfill_perp_order_with_match",
+      "codeExcerpt": "let maker_stats = if maker.authority == user.authority {\n    None\n} else {\n    Some(makers_and_referrer_stats.get_ref_mut(&maker.authority)?)\n};",
+      "interpretation": "Drift handles the same-authority-on-both-sides case by skipping maker_stats lookup, not by rejecting the fill. Self-trades are structurally permitted."
+    },
+    "hasInsuranceFund": true,
+    "hasSocialisation": true,
+    "socialisationNote": "Insurance Fund + ADL queue are core protocol features. Lost $270M+ in the April 2026 exploit via a related but different attack vector (durable nonce, not F7). Socialisation via ADL is documented.",
+    "residualClaimSurface": "TBD - need to trace whether a same-owner pair can claim their own socialised counterparty loss",
+    "classification": "RED (permits self-match, has insurance, residual-claim surface not yet disproven)",
+    "confidence": "high on self-match permission, medium on overall F7-class exposure pending residual-claim trace"
+  },
+  "notes": [
+    "Drift has been under heavy scrutiny since April 2026. Any F7-class vulnerability would likely be detected quickly by the team.",
+    "The specific F7 attack requires: (1) self-match allowed, (2) insurance absorbs bankrupt side, (3) winning side can claim a residual that grew by the absorbed amount. Item 1 confirmed. Items 2 and 3 need further trace.",
+    "Recommended: private disclosure DM to Drift before any publication."
+  ],
+  "sourceUrls": [
+    "https://github.com/drift-labs/protocol-v2/blob/master/programs/drift/src/controller/orders.rs"
+  ]
+}

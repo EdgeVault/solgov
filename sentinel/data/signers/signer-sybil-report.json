@@ -1,0 +1,204 @@
+[
+  {
+    "funder": "2AQdpHJ2JpcEgPiATUXjQxA8QmafFegfQwSLWSprPicm",
+    "funderName": "Coinbase Hot Wallet",
+    "wallets": [
+      "3HNJ8bKv1tDcc7urfJm51FaF7aVpG6GPwxgfKA8s9U8z",
+      "FoSGKYHTLjL5RzAujxSu356SeUE65VJ2j5TH9buUy2Ze",
+      "8dk5KyDAttJYT4pa9nSQYqLEK85w7ZbcHZdZjBMHoAhz"
+    ],
+    "count": 3
+  },
+  {
+    "funder": "754rCJJjHcsjMhDVkHuefjV1irgHePeq1QWBrYw7G7rJ",
+    "funderName": null,
+    "wallets": [
+      "F8HnFKCbN5H1PnHMVtGSyMv4nn7XxCreMQJPUP7q8qK4",
+      "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "FWznbcNXWQuHTawe9RxvQ2LdCENssh12dsznf4RiouN5",
+    "funderName": "Kraken Hot Wallet",
+    "wallets": [
+      "5sFJMw5dC59oKGKA9LgeYQCSmYS6rLeCegxMkcM2Pwby",
+      "HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj",
+      "2owonq2d2LaQNCc4iq8s4848GeRsPQqbRdCReLhdx9mW",
+      "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z",
+      "EDae3XapMwETGSH4HrggdiKDSpX1bPjaRH2HoEWzkLT2"
+    ],
+    "count": 5
+  },
+  {
+    "funder": "2XxP4kS2vfkiMvpLpGNxry3fPUYimsuAmSbqL1KnuwZ8",
+    "funderName": "Swissborg Hot Wallet 2",
+    "wallets": [
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv",
+      "BMGYmN1hG8evD3pvy1Rk41bFUdGGVP5fYJbh2JHMonqK"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
+    "funderName": "Binance 8",
+    "wallets": [
+      "CHRDWWqUs6LyeeoD7pJb3iRfnvYeMfwMUtf2N7zWk7uh",
+      "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3",
+      "CgUHzq2Dp4n5g8f7D8a3k4cPhUTogjD5JvoVB9vjRw9C",
+      "G1AonKZArhAC51Mp3uhJ3Yk1kRVsEwbg9RGTrUoqEPRm",
+      "2XmSeDwM7sZKPdPoPztbSjasCjejFNEv9ufEShzoThyC",
+      "71K5nFw3E3xHqECsRWFAMrr6JvTwkvEyb7mLgs3Gy52q"
+    ],
+    "count": 6
+  },
+  {
+    "funder": "HYbxGkNvEwvZ14RzJHPB9h3dWfXjxwAEhkyzJRHx1hBf",
+    "funderName": null,
+    "wallets": [
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq",
+      "FXQuS5Yug6GBxbNbf4qpNdFonhhCW7x7a4nTFakzgFnK"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "Huma8ZB251nwuYxDME4EFir1z8wvYw97Yr3hg9g3qKQL",
+    "funderName": null,
+    "wallets": [
+      "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js",
+      "8W2VmPoB63YsVt9VZd5hJzzu1D396cszDLGWMZZ1GCKu",
+      "EoKrH8Gg1GMqEAgput6W3SGv6WhyC1Mr3eWAnjNJ3d7E"
+    ],
+    "count": 3
+  },
+  {
+    "funder": "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN",
+    "funderName": null,
+    "wallets": [
+      "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j",
+      "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "Amf2mf2Ciap5wYAEKDtGoQHfHPWaKbyFYhutMK46hTRF",
+    "funderName": "Binance US Hot Wallet 2",
+    "wallets": [
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr",
+      "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "5RabYeYt19sor9RvExkiRvv1T9rWje5hPW7xeYXB6quQ",
+    "funderName": null,
+    "wallets": [
+      "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK",
+      "E1iyboRnxBSD8KJncj8mkkzbJu17gr5w6CiTN6q4YoUN",
+      "FoMboHErV2g7GjfQayFCRjWdXg3USZkPJCoeYEgPastv"
+    ],
+    "count": 3
+  },
+  {
+    "funder": "Dz2vU5QJSVow9WMkFhUTPZpfz5J8vcDuv81MW4Z6E4Jy",
+    "funderName": null,
+    "wallets": [
+      "3ChdTfL6iZ1webxcw79wnob1CyZy5FxkCXR7v3j1qRJD",
+      "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "AF8VuwCncKd5ZBnLYYnMjqh4vLch8mjqE75sFe5ZjRFW",
+    "funderName": "PrivacyCash Relayer",
+    "wallets": [
+      "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw",
+      "EWK7U4bTqcywrBGFJ2py4BphoNnyVoqzV5XgW2rxT2yR"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "CFp5kK1fDwuAdn1vzyK4RqKsfJ9SUd97w6zNVnLJTQHp",
+    "funderName": null,
+    "wallets": [
+      "21kF2n1WdJYaTMmwtMfWHydLc3xPjMjRUHBiUcW7iCxM",
+      "28eDFqNQ15VB745zXVSPJVSRZWD7sws2Hy8VHq5pfazu",
+      "6EzEruZ8uKHTRnjQktQsn6U5cimfbUCGGmTEycnmnxPW",
+      "6sY2nhNfW2UoVa9qmLT5h5oNj423JuDa5LKaTwD3JAop",
+      "9RkMtrs93JspVYaDjm1SWWj6zE3xVP5VN26vEMDAVkAf"
+    ],
+    "count": 5
+  },
+  {
+    "funder": "DN7tZKmnymL3JjdhDrCsB69Bdp3iB75KhDQcZQo4WVZd",
+    "funderName": null,
+    "wallets": [
+      "DiNi78eqjYxVdwXiAiran2Fh4sPAbvQA4oDTq2a6mDQe",
+      "EVJRoxfqp7N1YbXgypvQfUGFj9bGdFsG9tLrHrsdn3cW"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "8Cwx4yR2sFAC5Pdx2NgGHxCk1gJrtSTxJoyqVonqndhq",
+    "funderName": null,
+    "wallets": [
+      "prgmc3JWJSbppz4KbhCHdpXyLFz5yjxdGWGa48MZ3fi",
+      "CQ7CNkXxzbtK7pr4UokLKBN6xbCWFXmGSnshEioNagbC",
+      "EFYHPtUykMMN3S69rofhWSoTZo6v41mrinDKQynBsguv",
+      "G1oGhierAFZdUfRyECgCWkSKhim2NsJUUYz1rYWuxqRq"
+    ],
+    "count": 4
+  },
+  {
+    "funder": "hprdnjkbziK8NqhThmAn5Gu4XqrBbctX8du4PfJdgvW",
+    "funderName": null,
+    "wallets": [
+      "propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz",
+      "AWofQNYEnbQniPbyHNiVfrjy3i6PK7xZRUcHVfu7crCs",
+      "ERd6pJjzWiCsNvuJWtPYvbusUsqxhVjMEnGdqEgXbHCK"
+    ],
+    "count": 3
+  },
+  {
+    "funder": "KhAnPuamQYXzWqGrbLm6zJCAVPrTUENaHYWuxxvy8F6",
+    "funderName": null,
+    "wallets": [
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n",
+      "6hAtgoStE4pakkV1yqgBBnvG6vCVKm8C7YBPo7ik1PA9"
+    ],
+    "count": 2
+  },
+  {
+    "funder": "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb",
+    "funderName": null,
+    "wallets": [
+      "7KFLXnrRvRq8shX8MVMUdGFwgPa342B89c2nxvQXHpNi",
+      "BC6PeKaLnpu4oeibT94d79zsavgbg4NhwZ185NX76DTz",
+      "Bkg1jdrwjQQPyUq2wydGNNri3k1aEfv6RbftLapCryg8",
+      "GqUfUruHZgjPjBavqa7aWFoZG1Q5RZUmoUGqLuv6UDCL",
+      "HrcKsK6VuLwfSbTJrj9KwwCUU86AnS6YSEsMCNTimtL3",
+      "HtyNnjau7fdoHZ3LguboYbg9PUr2QnHFLA1yufA1pG2f"
+    ],
+    "count": 6
+  },
+  {
+    "funder": "4GPKuefrRBqcE2MopKus2jcPrzLZoDfwzS3XbFHaLozJ",
+    "funderName": null,
+    "wallets": [
+      "5ndGNX8Z1tLhiG1NR8AY4QcqBcN2ha9fBCsccZzYEU6r",
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2",
+      "DaGUge91XiebtdQaiWHXzPMNCUADJPZFPwPjzX4sGF95",
+      "ExAHc3u2KHopmziWyyULWobZ2EAgymEmqQR5fo5T8baM"
+    ],
+    "count": 4
+  },
+  {
+    "funder": "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR",
+    "funderName": null,
+    "wallets": [
+      "A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13",
+      "BvQhUYDB4CsrDziuzpUvEy9N4EzYTMy1TASgCatFUHcg"
+    ],
+    "count": 2
+  }
+]

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SolGov API · Reference</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    html, body { margin: 0; padding: 0; background: #0a0a0f; color: #e5e7eb; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif; }
+    body { min-height: 100vh; }
+
+    .topbar {
+      background: #0a0a0f;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar a { color: #9ca3af; text-decoration: none; font-size: 12px; transition: color 0.15s; }
+    .topbar a:hover { color: #fff; }
+    .topbar .title { font-size: 18px; font-weight: 600; color: #fff; letter-spacing: -0.01em; }
+    .topbar .subtitle { font-size: 11px; color: #6b7280; margin-top: 2px; letter-spacing: 0.02em; }
+    .topbar .left { display: flex; flex-direction: column; }
+    .topbar .right { display: flex; gap: 16px; align-items: center; }
+
+    /* Scalar dark theme tuned to solgov */
+    .light-mode, .dark-mode {
+      --scalar-color-1: #e5e7eb;
+      --scalar-color-2: #9ca3af;
+      --scalar-color-3: #6b7280;
+      --scalar-color-accent: #ffffff;
+
+      --scalar-background-1: #0a0a0f;
+      --scalar-background-2: #111118;
+      --scalar-background-3: #1a1a22;
+      --scalar-background-accent: rgba(255,255,255,0.04);
+
+      --scalar-border-color: rgba(255,255,255,0.08);
+      --scalar-code-language-color-supersede: #e5e7eb;
+
+      --scalar-button-1: #ffffff;
+      --scalar-button-1-color: #0a0a0f;
+      --scalar-button-1-hover: #e5e7eb;
+
+      --scalar-color-green: #34d399;
+      --scalar-color-red: #f87171;
+      --scalar-color-yellow: #fbbf24;
+      --scalar-color-blue: #60a5fa;
+      --scalar-color-orange: #fb923c;
+      --scalar-color-purple: #a78bfa;
+
+      --scalar-font: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+      --scalar-font-code: 'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+
+      --scalar-radius: 4px;
+      --scalar-radius-lg: 6px;
+      --scalar-radius-xl: 8px;
+    }
+
+    .scalar-api-reference { background: #0a0a0f; }
+    .scalar-card { border-color: rgba(255,255,255,0.06) !important; }
+    .scalar-api-client__send-request-button { background: #ffffff !important; color: #0a0a0f !important; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="left">
+      <span class="title">solgov API</span>
+      <span class="subtitle">OpenAPI 3.1 · 11 endpoints · live</span>
+    </div>
+    <div class="right">
+      <a href="/">← back to dashboard</a>
+    </div>
+  </div>
+  <script
+    id="api-reference"
+    data-url="/api/openapi.json"
+    data-configuration='{"theme":"none","darkMode":true,"hideDarkModeToggle":true,"layout":"modern","hiddenClients":["nodejs-undici","nodejs-native"],"defaultHttpClient":{"targetKey":"shell","clientKey":"curl"},"metaData":{"title":"solgov API"}}'
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+</body>
+</html>

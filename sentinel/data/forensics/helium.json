@@ -1,0 +1,138 @@
+{
+  "protocol": "Helium",
+  "researchedAt": "2026-04-17T22:22:00Z",
+  "researcher": "manual - references sentinel/data/helium-vault-verification.json",
+  "sources": [
+    {
+      "kind": "github",
+      "url": "https://github.com/helium-foundation"
+    },
+    {
+      "kind": "internal-verification",
+      "path": "sentinel/data/helium-vault-verification.json"
+    }
+  ],
+  "programs": [
+    {
+      "id": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT",
+      "name": "Helium Data Credits",
+      "role": "DC mint + issuance",
+      "alreadyTracked": true,
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR",
+      "name": "Helium Sub DAOs (HSD)",
+      "role": "sub-DAO governance",
+      "alreadyTracked": true,
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
+      "name": "Helium Entity Manager",
+      "role": "IoT/Mobile entity registration",
+      "alreadyTracked": true,
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "hvsrNC3NKbcryqDs2DocYHZ9yPKEVzdSjQG6RVtK1s8",
+      "name": "Helium Voter Stake Registry",
+      "role": "VSR",
+      "alreadyTracked": true,
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "tuktukUrfhXT6ZT77QTU8RQtvgL967uRuVagWF57zVA",
+      "name": "Tuktuk (job scheduler)",
+      "role": "cron/scheduler",
+      "alreadyTracked": true,
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "noEmmgLmQdk6DLiPV8CSwQv3qQDyGEhz9m5A4zhtByv",
+      "name": "No Emit",
+      "role": "governance mechanism",
+      "alreadyTracked": true,
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "1azyuavdMyvsivtNxPoz6SucD18eDHeXzFCUPq5XU7w",
+      "name": "Lazy Distributor",
+      "role": "rewards distribution",
+      "alreadyTracked": true,
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "omnixgS8fnqHfCcTGKWj6JtKjzpJZ1Y5y9pyFkQDkYE",
+      "name": "Helium Omnix (omnichain)",
+      "role": "omnichain bridge",
+      "alreadyTracked": true,
+      "upgradeAuthority": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "(16 more)",
+      "name": "See helium-vault-verification.json for full 24-program list",
+      "role": "various",
+      "alreadyTracked": true
+    },
+    {
+      "id": "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs",
+      "name": "Helium Modular Governance",
+      "role": "governance/proposals framework",
+      "source": "OtterSec verifies as helium/modular-governance",
+      "upgradeAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "upgradeAuthorityKind": "vault[0] of Helium main multisig FXyzyVsmPRu",
+      "alreadyTracked": true
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+      "role": "Helium main multisig (owns vault 2, 24 programs)",
+      "threshold": "3/6",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    },
+    {
+      "address": "1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz",
+      "role": "Helium second multisig (owns vault 1, 1 program)",
+      "threshold": "3/9",
+      "timelock": "10800s (3h)",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "parentMultisig": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+      "vaultIndex": 0,
+      "programsControlled": 24,
+      "alreadyTracked": true
+    },
+    {
+      "address": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+      "parentMultisig": "1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz",
+      "vaultIndex": 0,
+      "programsControlled": 1,
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Two Squads V4 multisigs. Vault 2 owns 24 programs (24 = largest concentration tracked) - owned by 3/6 multisig with 0 timelock. Vault 1 owns 1 program (Omnix) - owned by 3/9 multisig with 3h timelock. See helium-vault-verification.json for full program map.",
+  "gaps": [
+    "Resolve remaining 16 unnamed Helium programs via their vanity prefixes",
+    "Upgrade authority confirmation for each of the 24 programs",
+    "Why does the second multisig (3/9) have BETTER governance (3h timelock) than the main one (0 timelock)?"
+  ],
+  "confidence": "medium-high (program list partial but solid on the 8 identified; governance structure confirmed)"
+}

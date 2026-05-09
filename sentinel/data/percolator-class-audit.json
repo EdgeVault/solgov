@@ -1,0 +1,1561 @@
+[
+  {
+    "protocol": "Drift",
+    "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "drift-labs/protocol-v2",
+    "architectureCategory": "matched-order perps with insurance fund and ADL",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_rejected",
+      "evidence": {
+        "file": "programs/drift/src/controller/orders.rs",
+        "function": "fulfill_perp_order_with_match",
+        "excerpt": "let mut maker_stats = if maker.authority == user.authority {\n    None\n} else {\n    Some(makers_and_referrer_stats.get_ref_mut(&maker.authority)?)\n};",
+        "interpretation": "The public source handles the same-authority case by skipping the maker_stats lookup. No code path returns an error when maker.authority == user.authority. Same conditional-skip pattern also appears at fulfill_perp_order_with_amm and get_referrer in the same file."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "pinned_nonzero",
+      "evidence": {
+        "file": "programs/drift/src/math/oracle.rs + programs/drift/src/state/perp_market.rs",
+        "function": "oracle_validity / get_max_confidence_interval_multiplier",
+        "excerpt": "let is_conf_too_large = conf_pct_of_price.gt(&valid_oracle_guard_rails\n    .confidence_interval_max_size\n    .safe_mul(max_confidence_interval_multiplier)?);\n...\nlet is_oracle_price_too_volatile = (oracle_price.max(last_oracle_twap))\n    .safe_div(last_oracle_twap.min(oracle_price).max(1))?\n    .gt(&valid_oracle_guard_rails.too_volatile_ratio);",
+        "interpretation": "Per-tier confidence multipliers plus a too_volatile_ratio against the oracle TWAP. ContractTier A/B ~2%, C ~4%, Speculative ~20%, HighlySpeculative/Isolated ~100%. Circuit breaker is present and non-zero by design."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "pinned",
+      "evidence": {
+        "file": "programs/drift/src/instructions/constraints.rs",
+        "function": "valid_oracle_for_perp_market / valid_oracle_for_spot_market",
+        "excerpt": "validate!(\n    market.load()?.amm.oracle.eq(oracle.key),\n    ErrorCode::InvalidOracle,\n    \"not valid_oracle_for_perp_market\"\n)?",
+        "interpretation": "PerpMarket stores pub oracle: Pubkey on the AMM sub-struct. The validate! macro compares market.amm.oracle against the passed AccountInfo key. Equivalent check exists for spot markets."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Matching Q1 result carried over from sentinel/data/f7-audit/drift-v2.json; confirmed by independent re-read of the same file.",
+      "Drift lost $270M+ in April 2026 to a durable-nonce attack; that specific incident was unrelated to these three structural questions."
+    ]
+  },
+  {
+    "protocol": "Project 0",
+    "programId": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "mrgnlabs/marginfi-v2",
+    "architectureCategory": "pool-based lending with per-bank oracle-driven liquidation",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Marginfi is pool-based lending. Borrow and repay flows hit bank share accounting, not a matched order book. No maker/taker surface exists in programs/marginfi/src/instructions/."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "pinned_nonzero",
+      "evidence": {
+        "file": "programs/marginfi/src/state/price.rs",
+        "function": "Pyth Push adapter + Switchboard Pull adapter confidence check",
+        "excerpt": "let oracle_max_confidence = if oracle_max_confidence > 0 {\n    I80F48::from_num(oracle_max_confidence)\n} else {\n    // The default max confidence is 10%\n    U32_MAX_DIV_10\n};\n...\nif conf_interval > max_conf {\n    return err!(MarginfiError::OracleMaxConfidenceExceeded);\n}\n// Additionally:\nlet capped_conf_interval = price\n    .checked_mul(MAX_CONF_INTERVAL)\n    .ok_or_else(math_error!())?;",
+        "interpretation": "Per-bank oracle_max_confidence configurable, with a default of 10% and a hard universal cap of 5% via MAX_CONF_INTERVAL. Non-zero default, bounded from above."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "pinned",
+      "evidence": {
+        "file": "programs/marginfi/src/state/price.rs + type-crate/src/types/bank_config.rs",
+        "function": "check_primary_oracle_key",
+        "excerpt": "require_keys_eq!(\n    *account_info.key,\n    bank_config.oracle_keys[0],\n    MarginfiError::WrongOracleAccountKeys\n);",
+        "interpretation": "BankConfig stores oracle_keys: [Pubkey; MAX_ORACLE_KEYS]. check_primary_oracle_key compares the passed AccountInfo key against bank_config.oracle_keys[0], called from the liquidate / health-check entry point."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "Phoenix DEX",
+    "programId": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "Ellipsis-Labs/phoenix-v1",
+    "architectureCategory": "matched-order spot DEX, no liquidation engine, no oracle consumption",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_rejected",
+      "evidence": {
+        "file": "src/state/markets/fifo.rs",
+        "function": "match_order",
+        "excerpt": "if trader_index == current_trader_index as u64 {\n    match inflight_order.self_trade_behavior {\n        SelfTradeBehavior::Abort => return None,\n        SelfTradeBehavior::CancelProvide => { ... }\n        SelfTradeBehavior::DecrementTake => { ... }\n    }\n    continue;\n}",
+        "interpretation": "Self-trade behaviour is caller-selectable via the SelfTradeBehavior enum. Abort returns early from the match loop (no fill); CancelProvide and DecrementTake mutate the order instead. There is no protocol-level hard rejection of same-owner matches."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Phoenix is a spot DEX. Grep for oracle / pyth / switchboard in src/program/processor/new_order.rs and src/state/markets/fifo.rs returns no matches. Pricing is limit-order ticks supplied by the taker."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed by the matching engine. The pubkey-pinning question does not arise."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Spot orderbook, no haircut-residual accounting. F7-style residual claim surface does not exist by construction."
+    ]
+  },
+  {
+    "protocol": "Loopscale",
+    "programId": "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "matched-orderbook lending (per docs); program source not public",
+    "Q1_sameOwnerRejection": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "No core program source published. Orgs loopscale/, LoopscaleLabs/, and a palindrome-eng/loopscale-client client-side crate were searched. LoopscaleLabs/audits contains third-party audit reports but not program source. No same-owner rejection can be confirmed or ruled out from public artefacts."
+      },
+      "confidence": "low"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Closed source. Docs at docs.loopscale.com do not specify oracle guard-rail parameters."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Closed source. Pubkey-pinning in the liquidation path cannot be verified externally."
+      },
+      "confidence": "low"
+    },
+    "notes": [
+      "Third-party audit PDFs exist under LoopscaleLabs/audits (O'Shield 2025-02, Highland 2025-07, Adevar 2025-08). A reader with those reports could answer Q2/Q3 directly."
+    ]
+  },
+  {
+    "protocol": "Jupiter Perps",
+    "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "pool-based perps (JLP pool counter-party)",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Pool-based model. All trades settle against the JLP pool collectively, not maker against taker. There is no matched-order fill step where same-owner rejection would apply."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public. Public docs at station.jup.ag do not disclose oracle circuit breaker parameters."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public. Cannot verify whether the oracle AccountInfo is compared against a pinned pubkey or only owner + feed_id."
+      },
+      "confidence": "low"
+    },
+    "notes": [
+      "Existing note in sentinel/data/f7-audit/jupiter-perps.json classifies the protocol as architecturally outside the F7 haircut-residual shape."
+    ]
+  },
+  {
+    "protocol": "Flash Trade",
+    "programId": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "pool-based perps (per public docs)",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Public docs describe a pool-LP model similar to Jupiter Perps. No maker/taker matching surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public. Oracle guard-rails cannot be verified externally."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    },
+    "notes": [
+      "3/5 second Squads multisig with 0s timelock is tracked separately on solgov.xyz; orthogonal to the three questions in this audit."
+    ]
+  },
+  {
+    "protocol": "Exponent",
+    "programId": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "yield and points markets, not a matched-order perpetual venue; Core program is immutable",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Not a matched-order perp. Users take leveraged positions on yield or points against a market-maker / pool, not against each other."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public. Docs do not specify oracle parameters."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    },
+    "notes": [
+      "Exponent Core is immutable. Any property present or absent in the deployed bytecode is permanent."
+    ]
+  },
+  {
+    "protocol": "Kamino",
+    "programId": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "Kamino-Finance/klend",
+    "architectureCategory": "pool-based lending (Solend fork lineage) with oracle liquidation",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Pool-based lending, no maker/taker match."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "pinned_nonzero",
+      "evidence": {
+        "interpretation": "Kamino inherits the Solend oracle pattern with staleness age and confidence interval checks on Pyth reads; public source at Kamino-Finance/klend exposes the reserve oracle config. A line-level excerpt was not pulled in this audit; classification is architectural with medium confidence."
+      },
+      "confidence": "medium"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "pinned",
+      "evidence": {
+        "interpretation": "Reserve config carries the pyth_oracle and switchboard_oracle pubkeys at reserve creation time; liquidation loads the reserve and validates the passed oracle key against the stored one. Classification is architectural with medium confidence; not line-verified in this audit."
+      },
+      "confidence": "medium"
+    }
+  },
+  {
+    "protocol": "Jupiter Lend",
+    "programId": "jupLwhaMNTafSYHTp6mPvsKxQbA5BSGxRt2jFYYGuGQ",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "pool-based lending, program source not public",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Pool-based lending, no matched orders."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "Save (Solend)",
+    "programId": "So1endDq2YkqhipRh3WViPa8hdiSpxWy6z3Z6tMCpAo",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "solendprotocol/solana-program-library",
+    "architectureCategory": "pool-based lending with oracle liquidation (original Solend lineage)",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Pool-based lending, no matched orders."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "pinned_nonzero",
+      "evidence": {
+        "interpretation": "Reserve config enforces stale_price_slot tolerance and Pyth confidence interval bounds. Architectural classification; not line-verified in this audit."
+      },
+      "confidence": "medium"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "pinned",
+      "evidence": {
+        "interpretation": "Reserve struct stores pyth_oracle and switchboard_oracle pubkeys. Liquidation path loads the reserve and compares against the passed AccountInfo key. Architectural classification; not line-verified in this audit."
+      },
+      "confidence": "medium"
+    }
+  },
+  {
+    "protocol": "Huma Finance",
+    "programId": "HUMAqvdPMvr31UZ4Hy1qyzY4QtKpQd8MrUC8sfzBJkCv",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "partial",
+    "sourceRepo": "huma-finance (partial SDK + V1 contract references; Solana program source partial)",
+    "architectureCategory": "RWA invoice and receivables lending",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "RWA lending, no matched-order surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Solana program source not fully open. Oracle usage limited to specific pool adapters; not line-verified."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Solana program source not fully open."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "Lulo",
+    "programId": "LU1oM9BfKpUEjDNDxE3CWXqWE29GZ1A2rwzqBCuSwBB",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "yield router (FlexLend) across external lending venues",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Routing aggregator, not a matched venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Lulo routes capital to external lending pools; oracle guard-rails live in the downstream protocols (Kamino, Save, Marginfi, etc.), not in Lulo itself."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Lulo itself does not consume price oracles for liquidation; downstream venues do."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "Carrot",
+    "programId": "CARRoT9pTQQYQW3dLKnjtk3THXvePTFFBP3mjShqscLE",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "yield aggregator / automated strategy",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Strategy product, not a matched-order venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "DefiTuna",
+    "programId": "tuna1Y3CWrDFMsp1yC5R5Uj4ZCTn9aP7T8KtmKaz8qG",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "yield / strategy product",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Strategy product, not a matched-order venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "Voltr",
+    "programId": "Voltr4M7z2XKWcEFmWYg3D9prBaYupLgFiFWNMkSQBa",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "partial",
+    "sourceRepo": null,
+    "architectureCategory": "vault strategy aggregator",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Vault product, not a matched-order venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source partial / not fully open."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source partial / not fully open."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "Hylo",
+    "programId": "2z3t2eBz7VL39Q3vEvaemd5mhT9XLoFofEH2cXvwCJvb",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "stablecoin / mint-redeem",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Not a matched-order venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "Solstice",
+    "programId": "SoLSTiceXYq8d2FJeLhSeCoD5fg7tZctuFWZWDhUYBP",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "partial",
+    "sourceRepo": null,
+    "architectureCategory": "RWA yield deposit product",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Deposit product, not a matched-order venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source partial / not fully open."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source partial / not fully open."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "SolvBTC",
+    "programId": "svbtcRWM2c3eVZq2V4bFDCQwJEYkTgYb2P4kZRCQQHr",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "BTC-backed deposit token",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Not a matched-order venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Program source not public."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "Orca",
+    "programId": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "orca-so/whirlpools",
+    "architectureCategory": "spot AMM / swap, no liquidation engine",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Swap / AMM, no maker-taker matching-with-haircut surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "AMM prices are derived from the pool invariant; no external oracle gates swaps."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed by the swap path."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "CLMM + token-swap v2, no oracle dependency for liquidation."
+    ]
+  },
+  {
+    "protocol": "Raydium",
+    "programId": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "raydium-io/raydium-clmm",
+    "architectureCategory": "spot AMM / swap, no liquidation engine",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Swap / AMM, no maker-taker matching-with-haircut surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "AMM prices are derived from the pool invariant; no external oracle gates swaps."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed by the swap path."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "CPMM and CLMM, no oracle dependency."
+    ]
+  },
+  {
+    "protocol": "Meteora",
+    "programId": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "MeteoraAg/dlmm-sdk",
+    "architectureCategory": "spot AMM / swap, no liquidation engine",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Swap / AMM, no maker-taker matching-with-haircut surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "AMM prices are derived from the pool invariant; no external oracle gates swaps."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed by the swap path."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "DLMM and DAMM, no oracle dependency for fill."
+    ]
+  },
+  {
+    "protocol": "Stabble",
+    "programId": "swaPpA9LAaLfeLi3a68M4DiczbdN7AZ4k68FTvr8BXu",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "spot AMM / swap, no liquidation engine",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Swap / AMM, no maker-taker matching-with-haircut surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "AMM prices are derived from the pool invariant; no external oracle gates swaps."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed by the swap path."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Stable-asset AMM."
+    ]
+  },
+  {
+    "protocol": "HumidiFi",
+    "programId": "4p1FfVusdT83PxejTPLEz6ZQ4keN9LVEkKhzSt6PJ5zw",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "spot AMM / swap, no liquidation engine",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Swap / AMM, no maker-taker matching-with-haircut surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "AMM prices are derived from the pool invariant; no external oracle gates swaps."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed by the swap path."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "AMM-style swap, closed source."
+    ]
+  },
+  {
+    "protocol": "Pumpfun + PumpSwap",
+    "programId": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "spot AMM / swap, no liquidation engine",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Swap / AMM, no maker-taker matching-with-haircut surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "AMM prices are derived from the pool invariant; no external oracle gates swaps."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed by the swap path."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Memecoin bonding curve + swap."
+    ]
+  },
+  {
+    "protocol": "Jupiter Agg",
+    "programId": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "router / aggregator / trading UI",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Routes user swaps to external venues; no own matching or liquidation."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Router does not consume price oracles itself; downstream venues may."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Router does not consume price oracles itself."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Swap router, no venue state."
+    ]
+  },
+  {
+    "protocol": "Titan",
+    "programId": "H92mY1R6CYDPpHjisrE3C7xqfgp7751f2R13aRoT4SbB",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "router / aggregator / trading UI",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Routes user swaps to external venues; no own matching or liquidation."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Router does not consume price oracles itself; downstream venues may."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Router does not consume price oracles itself."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Aggregator."
+    ]
+  },
+  {
+    "protocol": "Photon",
+    "programId": "9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "router / aggregator / trading UI",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Routes user swaps to external venues; no own matching or liquidation."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Router does not consume price oracles itself; downstream venues may."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Router does not consume price oracles itself."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Trading UI / router, closed source."
+    ]
+  },
+  {
+    "protocol": "Wick",
+    "programId": "3bAHFKgJx7mHeyo2VmDCGp4QmKxTbPdtF5MfPF16R19P",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "router / aggregator / trading UI",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Routes user swaps to external venues; no own matching or liquidation."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Router does not consume price oracles itself; downstream venues may."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Router does not consume price oracles itself."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Trading tool, closed source."
+    ]
+  },
+  {
+    "protocol": "Magic Eden",
+    "programId": "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "NFT marketplace (MMM AMM + M2 escrow)",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "NFT marketplace, not a matched-order perp."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "Tensor",
+    "programId": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "NFT marketplace",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "NFT marketplace."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "Marinade",
+    "programId": "MarBmsSgKXdrN1egZf5sqe1TMThczhVBpN6aUWWCocc",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "marinade-finance/liquid-staking-program",
+    "architectureCategory": "liquid staking / stake pool",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Stake pool, no matched-order surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Deposits and withdrawals are priced from pool share accounting; no external price oracle gates the stake-unstake path."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "LST, deposit / withdraw, no oracle-driven liquidation."
+    ]
+  },
+  {
+    "protocol": "Jito",
+    "programId": "Jito4APyf642JPZPx3hGc6WWJ8zPKtRbRs4P815Awbb",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "jito-foundation/jito-solana",
+    "architectureCategory": "liquid staking / stake pool",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Stake pool, no matched-order surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Deposits and withdrawals are priced from pool share accounting; no external price oracle gates the stake-unstake path."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "LST + MEV tips; no oracle-driven liquidation."
+    ]
+  },
+  {
+    "protocol": "Sanctum",
+    "programId": "SanctumS2cK1M7kY4xbWwW3gmjGLMYz8WShZ7ZQQzMzi",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "liquid staking / stake pool",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Stake pool, no matched-order surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Deposits and withdrawals are priced from pool share accounting; no external price oracle gates the stake-unstake path."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "LST pool orchestrator."
+    ]
+  },
+  {
+    "protocol": "Solayer",
+    "programId": "sSo1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "liquid staking / stake pool",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Stake pool, no matched-order surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Deposits and withdrawals are priced from pool share accounting; no external price oracle gates the stake-unstake path."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "LST + restaking."
+    ]
+  },
+  {
+    "protocol": "SPL Stake Pool",
+    "programId": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "solana-labs/solana-program-library",
+    "architectureCategory": "liquid staking / stake pool",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Stake pool, no matched-order surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Deposits and withdrawals are priced from pool share accounting; no external price oracle gates the stake-unstake path."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Canonical stake-pool primitive."
+    ]
+  },
+  {
+    "protocol": "Pyth",
+    "programId": "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "pyth-network/pyth-client",
+    "architectureCategory": "oracle network (supplier, not consumer)",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Oracle network, not a trade venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Oracle supplier; guard-rails are enforced by consumers, not the supplier."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Oracle supplier; consumers pin or do not pin the pubkey on their side."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "Switchboard",
+    "programId": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "switchboard-xyz/switchboard-v2",
+    "architectureCategory": "oracle network (supplier, not consumer)",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Oracle network, not a trade venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Oracle supplier; guard-rails are enforced by consumers, not the supplier."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Oracle supplier; consumers pin or do not pin the pubkey on their side."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "deBridge",
+    "programId": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "debridge-finance/debridge-contracts",
+    "architectureCategory": "cross-chain bridge / messaging",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Bridge / messaging, not a trade venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Bridge validation is via DVN / attestation, not price oracles."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "LayerZero OFT",
+    "programId": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "open",
+    "sourceRepo": "LayerZero-Labs/devtools",
+    "architectureCategory": "cross-chain bridge / messaging",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Bridge / messaging, not a trade venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "Bridge validation is via DVN / attestation, not price oracles."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "GMSOL",
+    "programId": "gmsoLkjX3rWDgwGtbwuKtN1qQkCqnmfp1dnWVG5ixPg",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "partial",
+    "sourceRepo": "gmsol-labs",
+    "architectureCategory": "GMX-style pool-based perps on Solana",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Pool-based perps, no matched-order surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Source partial; oracle guard-rails not line-verified in this audit."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Source partial; pubkey pinning not line-verified in this audit."
+      },
+      "confidence": "low"
+    }
+  },
+  {
+    "protocol": "GMSOL Deploy",
+    "programId": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "deployment / upgrade helper for GMSOL",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Deployment helper, not a trade venue."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    }
+  },
+  {
+    "protocol": "MetaDAO",
+    "programId": "meta3cxKzFBmWYRCsXeZHK1m8qgD3gSkEEe6b5WyPkC",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "DAO launch / futarchy",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Governance tooling, not a trade venue."
+    ]
+  },
+  {
+    "protocol": "Helium",
+    "programId": "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "DePIN",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Wireless network governance, not a trade venue."
+    ]
+  },
+  {
+    "protocol": "Nosana",
+    "programId": "nosa1k1b1c4XkvgthHtaZxE8Wb2VGeWjEWrUXCNfiwgC",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "DePIN compute marketplace",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Job scheduling, not a trade venue."
+    ]
+  },
+  {
+    "protocol": "Tessera V",
+    "programId": "7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "Unknown / early-stage",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Limited public documentation."
+    ]
+  },
+  {
+    "protocol": "BisonFi",
+    "programId": "UfSM2ZFRMeurGs1gqrMREjZDyzPweUY9Wt67BMVeo8j",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "Unknown / early-stage",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Limited public documentation."
+    ]
+  },
+  {
+    "protocol": "Parcl",
+    "programId": "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8k",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "Real-estate index perps",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Source status partial; oracle consumption not line-verified in this audit."
+      },
+      "confidence": "low"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "unverifiable",
+      "evidence": {
+        "interpretation": "Source status partial; pubkey pinning not line-verified in this audit."
+      },
+      "confidence": "low"
+    },
+    "notes": [
+      "Index-priced perps; may use oracle. Source status partial; not line-verified."
+    ]
+  },
+  {
+    "protocol": "Zebec",
+    "programId": "zbcKGdAmXfthXY3rEPBzexVByT2cqRqCZb9NwWdGQ2T",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "payroll / streaming",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Token streaming, not a trade venue."
+    ]
+  },
+  {
+    "protocol": "Onre Finance",
+    "programId": "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "RWA deposit",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "Deposit product, not a matched-order venue."
+    ]
+  },
+  {
+    "protocol": "Ore",
+    "programId": "oreV2ZymfyeXgNgBdqMkumTqqAprVqgBWQfoYkrtKWQ",
+    "auditedAt": "2026-04-23T13:16:03.360Z",
+    "sourceStatus": "closed",
+    "sourceRepo": null,
+    "architectureCategory": "proof-of-work mining",
+    "Q1_sameOwnerRejection": {
+      "answer": "not_applicable",
+      "evidence": {
+        "interpretation": "Architecture does not expose a matched-order fill surface."
+      },
+      "confidence": "high"
+    },
+    "Q2_oracleCircuitBreaker": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "Q3_oraclePubkeyPinned": {
+      "answer": "no_oracle_used",
+      "evidence": {
+        "interpretation": "No price oracle consumed."
+      },
+      "confidence": "high"
+    },
+    "notes": [
+      "PoW token issuance, no trade venue."
+    ]
+  }
+]

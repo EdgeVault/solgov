@@ -1,0 +1,210 @@
+[
+  {
+    "category": "NEW_MULTISIG",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Drift"
+    ],
+    "detail": "Multisig created 12 days ago (2026-04-02)"
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Drift"
+    ],
+    "detail": "Signer HC6BxMvDLfef... has 0 SOL (role: Full). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "CONTROLLED_CONFIG",
+    "severity": "CRITICAL",
+    "protocols": [
+      "Drift"
+    ],
+    "detail": "Non-autonomous configAuthority: A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP. Single key can bypass multisig."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Magic Eden"
+    ],
+    "detail": "Signer D9on7nU5rmAN... has 0 SOL (role: Full). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Huma Finance"
+    ],
+    "detail": "Signer Ff4UAw6V6CsM... has 0 SOL (role: Full). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "NEW_MULTISIG",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Loopscale"
+    ],
+    "detail": "Multisig created 9 days ago (2026-04-05)"
+  },
+  {
+    "category": "NEW_MULTISIG",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Titan"
+    ],
+    "detail": "Multisig created 18 days ago (2026-03-27)"
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Titan"
+    ],
+    "detail": "Signer 2GafqBhxF23c... has 0 SOL (role: P). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Solayer"
+    ],
+    "detail": "Signer GjtMGFA81gyP... has 0 SOL (role: Full). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "NEW_MULTISIG",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Wick"
+    ],
+    "detail": "Multisig created 11 days ago (2026-04-03)"
+  },
+  {
+    "category": "NEW_MULTISIG",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Onre Finance"
+    ],
+    "detail": "Multisig created 12 days ago (2026-04-02)"
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Onre Finance"
+    ],
+    "detail": "Signer 9TjKHL4YGYKv... has 0 SOL (role: P). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Onre Finance"
+    ],
+    "detail": "Signer BYrKMVrru625... has 0 SOL (role: P). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Onre Finance"
+    ],
+    "detail": "Signer CPHXoWwGQ129... has 0 SOL (role: P). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Onre Finance"
+    ],
+    "detail": "Signer GvsR2FpHTHQ4... has 0 SOL (role: P). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "THRESHOLD_ONE",
+    "severity": "CRITICAL",
+    "protocols": [
+      "LayerZero OFT"
+    ],
+    "detail": "Threshold is 1/2. Single key controls everything."
+  },
+  {
+    "category": "NEW_MULTISIG",
+    "severity": "MEDIUM",
+    "protocols": [
+      "GMSOL"
+    ],
+    "detail": "Multisig created 22 days ago (2026-03-23)"
+  },
+  {
+    "category": "NEW_MULTISIG",
+    "severity": "MEDIUM",
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "detail": "Multisig created 20 days ago (2026-03-25)"
+  },
+  {
+    "category": "NEW_MULTISIG",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Ore"
+    ],
+    "detail": "Multisig created 11 days ago (2026-04-03)"
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Ore"
+    ],
+    "detail": "Signer HC92UzBW5ENt... has 0 SOL (role: Full). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "Carrot"
+    ],
+    "detail": "Signer 2rqxgifitmi4... has 0 SOL (role: Full). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "DefiTuna"
+    ],
+    "detail": "Signer BkBn8dQ6fFUa... has 0 SOL (role: P). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "ZERO_BALANCE_SIGNER",
+    "severity": "INFO",
+    "protocols": [
+      "DefiTuna"
+    ],
+    "detail": "Signer ESU3Nb2Xp1YE... has 0 SOL (role: P). Cannot pay fees for emergency transactions."
+  },
+  {
+    "category": "CENTRALIZED_GAS",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Orca"
+    ],
+    "detail": "FbLXvzaKfV6U... pays 90% of tx fees (9/10 txs). Single gas wallet dependency."
+  },
+  {
+    "category": "CENTRALIZED_GAS",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Loopscale"
+    ],
+    "detail": "bs1PuRvB9rBB... pays 100% of tx fees (10/10 txs). Single gas wallet dependency."
+  },
+  {
+    "category": "CENTRALIZED_GAS",
+    "severity": "MEDIUM",
+    "protocols": [
+      "Hylo"
+    ],
+    "detail": "H5xDGKUoJmms... pays 100% of tx fees (10/10 txs). Single gas wallet dependency."
+  }
+]

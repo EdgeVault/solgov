@@ -1,0 +1,10 @@
+{
+  "protocol":"Voltr","researchedAt":"2026-04-17T22:24:00Z","researcher":"manual stub",
+  "sources":[{"kind":"docs","url":"https://docs.voltr.xyz/"}],
+  "programs":[{"id":"(unknown)","name":"Voltr Yield Vaults","role":"vault aggregator","alreadyTracked":false,"needsRpcVerify":["program ID from docs"]}],
+  "multisigs":[{"address":"5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH","role":"Voltr multisig (tracked)","threshold":"3/5","timelock":"28800s (8h)","configAuthority":"autonomous","alreadyTracked":true,"source":"extra-multisigs.json"}],
+  "authorities":[],"vaultPdas":[],
+  "governanceModel":"Squads V4 3/5, 8h timelock, autonomous. One of the better timelock configs in the tracked set.",
+  "gaps":["Voltr program ID - not in local data","What programs does the multisig's vault actually control?"],
+  "confidence":"low"
+}

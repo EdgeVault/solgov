@@ -1,0 +1,71 @@
+{
+  "protocol": "Solayer",
+  "researchedAt": "2026-04-17T22:20:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.solayer.org/"
+    },
+    {
+      "kind": "github",
+      "url": "https://github.com/solayer-labs"
+    }
+  ],
+  "programs": [
+    {
+      "id": "sSo1iU21jBrU9VaJ8PJib1MtorefUV4fzC9GURa2KNn",
+      "name": "Solayer Pool (sSOL)",
+      "role": "deposit/withdraw manager",
+      "alreadyTracked": false,
+      "confidence": "medium",
+      "needsRpcVerify": [
+        "confirm via GitHub"
+      ],
+      "upgradeAuthority": "GcYvLKKEWpxQMqFe9HUcDJYMGvXt7kwf8gfBvjnW4wnm",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp",
+      "role": "Solayer main multisig (tracked)",
+      "threshold": "3/6",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    },
+    {
+      "address": "9dUjjx2Vi7GbBtuxN8N71MEFuD6Yn3QTtwLTYYjvZnLr",
+      "role": "Solayer vault multisig (discovered via extra-multisigs)",
+      "threshold": "2/4",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "confirm this belongs to Solayer via program attribution"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "3hiQADryzHeV6gQa8gojLV5EHNAKXdujtTX2u8evVh1Z",
+      "parentMultisig": "9dUjjx2Vi7GbBtuxN8N71MEFuD6Yn3QTtwLTYYjvZnLr",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "8Hcd5Kmi47JhgNr1GVYfAbMyXfwYo5T7UUYhGeEu8qPr",
+        "EP1N2w7ijCboXHJS6mfysTWu2vQohP933ny2cHovSxfU"
+      ],
+      "alreadyTracked": true,
+      "notes": "programs need OtterSec verification to confirm they're Solayer's"
+    }
+  ],
+  "governanceModel": "Two Squads V4 multisigs. Restaking + Endogenous AVS.",
+  "gaps": [
+    "Full program manifest (Solayer has multiple programs: pool, EndoAVS, sUSD, restaking)",
+    "OtterSec verification on the 2 programs owned by 9dUjjx2Vi7 vault to confirm Solayer attribution",
+    "Upgrade authority for sSo1iU21"
+  ],
+  "confidence": "medium"
+}

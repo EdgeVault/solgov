@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/webhook",
+      "destination": "https://api.solgov.xyz/webhook"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "https://api.solgov.xyz/api/$1"
+    },
+    {
+      "source": "/((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

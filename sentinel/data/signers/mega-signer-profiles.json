@@ -1,0 +1,5492 @@
+{
+  "r21Gamwd9DtyjHeGywsneoQYR39C1VDwrw7tWxHAwh6": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 18,
+      "INIT_POOL_V2": 1,
+      "SWAP": 2,
+      "CREATE": 1,
+      "UNKNOWN": 76,
+      "UPGRADE_PROGRAM_INSTRUCTION": 2
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 15,
+      "ORCA": 5,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "PHANTOM": 1,
+      "PUMP_FUN": 1,
+      "BPF_UPGRADEABLE_LOADER": 2,
+      "UNKNOWN": 74
+    },
+    "swapCount": 2,
+    "nftCount": 0,
+    "defiTxCount": 5,
+    "balance": 3.946525354,
+    "peakHour": 13,
+    "hourSpread": 9,
+    "riskScore": 1
+  },
+  "3HNJ8bKv1tDcc7urfJm51FaF7aVpG6GPwxgfKA8s9U8z": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 15,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 3,
+      "APPROVE_PROPOSAL": 12
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 3,
+      "SQUADS_V4": 12
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.990671227,
+    "peakHour": 18,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "4gdsTXsc3Df73LyNXeTa9wS5unJ9DE8cTaJhtKqksD4S": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 70,
+    "recentTxs90d": 9,
+    "types": {
+      "APPROVE_PROPOSAL": 42,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "TRANSFER": 21,
+      "SWAP": 1,
+      "REJECT_PROPOSAL": 1,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SQUADS_V4": 60,
+      "SYSTEM_PROGRAM": 8,
+      "DFLOW": 1,
+      "UNKNOWN": 1
+    },
+    "swapCount": 1,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.948790747,
+    "peakHour": 22,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "6Li1bEptmfD1RT3LaPUde8yMTdn2Fpr9Vf726VdSueL9": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 5,
+    "recentTxs90d": 0,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 3
+    },
+    "sources": {
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.092358782,
+    "peakHour": 15,
+    "hourSpread": 2,
+    "riskScore": 0
+  },
+  "9f4WNuXfhQsjC2U4tqZ38i4rccey9ys5eeywCmQ9yUAs": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 47,
+    "recentTxs90d": 7,
+    "types": {
+      "APPROVE_PROPOSAL": 39,
+      "TRANSFER": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 42,
+      "SYSTEM_PROGRAM": 5
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.161603841,
+    "peakHour": 20,
+    "hourSpread": 16,
+    "riskScore": 0
+  },
+  "AM1tQFm9YCFZaqU69iX6zg5Sy9RQRxGrU6Pp9od22pb4": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 1,
+    "types": {
+      "TRANSFER": 80,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "APPROVE_PROPOSAL": 13,
+      "COMPRESSED_NFT_MINT": 4,
+      "EXECUTE_INSTRUCTION": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 75,
+      "SQUADS_V4": 15,
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "BUBBLEGUM": 4,
+      "MAYAN_CPI": 1
+    },
+    "swapCount": 0,
+    "nftCount": 4,
+    "defiTxCount": 0,
+    "balance": 0.281671186,
+    "peakHour": 17,
+    "hourSpread": 19,
+    "riskScore": 0
+  },
+  "BWyVTPPRW7A5kpHM3tNgPhRz6JekR9sL8iFx2o4X1w9C": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 2,
+      "TRANSFER": 8,
+      "APPROVE_PROPOSAL": 3,
+      "INCREASE_LIQUIDITY": 1,
+      "SWAP": 1,
+      "CREATE_VAULT_TRANSACTION": 1,
+      "UNKNOWN": 80,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "UPGRADE_PROGRAM_INSTRUCTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 11,
+      "ORCA": 1,
+      "SYSTEM_PROGRAM": 6,
+      "TITAN": 1,
+      "UNKNOWN": 80,
+      "BPF_UPGRADEABLE_LOADER": 1
+    },
+    "swapCount": 1,
+    "nftCount": 0,
+    "defiTxCount": 1,
+    "balance": 2.239761518,
+    "peakHour": 18,
+    "hourSpread": 7,
+    "riskScore": 1
+  },
+  "F8HnFKCbN5H1PnHMVtGSyMv4nn7XxCreMQJPUP7q8qK4": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 18,
+    "recentTxs90d": 14,
+    "types": {
+      "APPROVE_PROPOSAL": 10,
+      "TRANSFER": 5,
+      "ADD_BATCH_TRANSACTION": 2,
+      "CREATE_BATCH": 1
+    },
+    "sources": {
+      "SQUADS_V4": 16,
+      "SYSTEM_PROGRAM": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.499784072,
+    "peakHour": 0,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 51,
+    "recentTxs90d": 50,
+    "types": {
+      "APPROVE_PROPOSAL": 28,
+      "CREATE_VAULT_TRANSACTION": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "TRANSFER": 9,
+      "ADD_BATCH_TRANSACTION": 2,
+      "CREATE_BATCH": 1,
+      "USE_SPENDING_LIMIT": 3
+    },
+    "sources": {
+      "SQUADS_V4": 49,
+      "SYSTEM_PROGRAM": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.246561537,
+    "peakHour": 16,
+    "hourSpread": 15,
+    "riskScore": 0
+  },
+  "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa": {
+    "protocols": [
+      "Orca"
+    ],
+    "totalTxs": 38,
+    "recentTxs90d": 4,
+    "types": {
+      "APPROVE_PROPOSAL": 25,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "TRANSFER": 8,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 32,
+      "SYSTEM_PROGRAM": 6
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.41791163,
+    "peakHour": 17,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "13GXtbGV8mNfNLDNbVKPrTcHTpfZ4CYrXviRCZmyxQvj": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 23,
+    "recentTxs90d": 23,
+    "types": {
+      "APPROVE_PROPOSAL": 11,
+      "TRANSFER": 12
+    },
+    "sources": {
+      "SQUADS_V4": 15,
+      "SYSTEM_PROGRAM": 8
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.598300757,
+    "peakHour": 16,
+    "hourSpread": 6,
+    "riskScore": 0
+  },
+  "7TxYEAKSHRuCs1QpxssoeuaewqdQzHf93EKQP7bNYYxh": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 45,
+    "recentTxs90d": 45,
+    "types": {
+      "APPROVE_PROPOSAL": 22,
+      "TRANSFER": 22,
+      "SWAP": 1
+    },
+    "sources": {
+      "SQUADS_V4": 24,
+      "SYSTEM_PROGRAM": 20,
+      "TITAN": 1
+    },
+    "swapCount": 1,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.004359575,
+    "peakHour": 13,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 24,
+    "recentTxs90d": 24,
+    "types": {
+      "APPROVE_PROPOSAL": 14,
+      "TRANSFER": 10
+    },
+    "sources": {
+      "SQUADS_V4": 20,
+      "SYSTEM_PROGRAM": 4
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.297706453,
+    "peakHour": 3,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "HC6BxMvDLfefSZE16FRRktLHD7JVFLuLKvNRidGzH7iH": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6": {
+    "protocols": [
+      "Drift"
+    ],
+    "totalTxs": 32,
+    "recentTxs90d": 32,
+    "types": {
+      "TRANSFER": 16,
+      "APPROVE_PROPOSAL": 15,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 25,
+      "BUBBLEGUM": 1,
+      "SYSTEM_PROGRAM": 6
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.048823938,
+    "peakHour": 1,
+    "hourSpread": 10,
+    "riskScore": 0
+  },
+  "4tbEe4AquJWyMh7f7yE5poFChhsuPbeGh7EHVQCvq2N8": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 35,
+      "APPROVE_PROPOSAL": 35,
+      "CREATE_VAULT_TRANSACTION": 30
+    },
+    "sources": {
+      "SQUADS_V4": 94,
+      "SYSTEM_PROGRAM": 6
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 6.243358882,
+    "peakHour": 20,
+    "hourSpread": 8,
+    "riskScore": 0
+  },
+  "5sFJMw5dC59oKGKA9LgeYQCSmYS6rLeCegxMkcM2Pwby": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 80,
+      "TRANSFER": 18,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 83,
+      "SYSTEM_PROGRAM": 17
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.103510243,
+    "peakHour": 20,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "REJECT_PROPOSAL": 2,
+      "APPROVE_PROPOSAL": 67,
+      "TRANSFER": 31
+    },
+    "sources": {
+      "SQUADS_V4": 82,
+      "SYSTEM_PROGRAM": 18
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 3.201952564,
+    "peakHour": 16,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "7zc8kzBr5wbsQKxYYv9uCMgfcW5zjxLEopvmuf3ig6iw": {
+    "protocols": [
+      "Pumpfun"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 45,
+      "APPROVE_PROPOSAL": 55
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 14,
+      "SQUADS_V4": 86
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 1.265039232,
+    "peakHour": 21,
+    "hourSpread": 6,
+    "riskScore": 0
+  },
+  "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 62,
+    "recentTxs90d": 11,
+    "types": {
+      "APPROVE_PROPOSAL": 31,
+      "TRANSFER": 25,
+      "UNKNOWN": 6
+    },
+    "sources": {
+      "SQUADS_V4": 46,
+      "SYSTEM_PROGRAM": 10,
+      "UNKNOWN": 6
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.034965971,
+    "peakHour": 8,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "85ckxt7FfpdqjwFm33EA9KR4YFgdBCGFXGur4TbQBK25": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 26,
+      "UNKNOWN": 74
+    },
+    "sources": {
+      "SQUADS_V4": 1,
+      "SYSTEM_PROGRAM": 25,
+      "UNKNOWN": 74
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 11.067810767,
+    "peakHour": 6,
+    "hourSpread": 2,
+    "riskScore": 0
+  },
+  "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 13,
+    "types": {
+      "TRANSFER": 39,
+      "APPROVE_PROPOSAL": 46,
+      "EXECUTE_CONFIG_TRANSACTION": 8,
+      "UNKNOWN": 7
+    },
+    "sources": {
+      "SQUADS_V4": 70,
+      "SYSTEM_PROGRAM": 23,
+      "UNKNOWN": 7
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.014434444,
+    "peakHour": 8,
+    "hourSpread": 18,
+    "riskScore": 0
+  },
+  "D9on7nU5rmANsXSfa7a9YAU2n54VjAxdPKitpxtvwFQs": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "EsmFrjZuXg6SMQu78QWSM4DWxYQCj86r4zeFRhvb4S1z": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 16,
+    "types": {
+      "APPROVE_PROPOSAL": 57,
+      "TRANSFER": 38,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "REJECT_PROPOSAL": 3
+    },
+    "sources": {
+      "SQUADS_V4": 74,
+      "SYSTEM_PROGRAM": 23,
+      "SOLANA_PROGRAM_LIBRARY": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 2.033413095,
+    "peakHour": 17,
+    "hourSpread": 20,
+    "riskScore": 0
+  },
+  "FoSGKYHTLjL5RzAujxSu356SeUE65VJ2j5TH9buUy2Ze": {
+    "protocols": [
+      "Magic Eden"
+    ],
+    "totalTxs": 1,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.030175015,
+    "peakHour": 22,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_TRANSACTION": 19,
+      "APPROVE_PROPOSAL": 51,
+      "TRANSFER": 28,
+      "COMPRESSED_NFT_MINT": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 23,
+      "SQUADS_V4": 62,
+      "SYSTEM_PROGRAM": 14,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.598042091,
+    "peakHour": 14,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "6vkzAQLAERW5RKHX68ZCDxWxW77T8dMqYUYMXCe6ooMC": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_TRANSACTION": 15,
+      "TRANSFER": 28,
+      "ADD_INSTRUCTION": 10,
+      "CREATE_TRANSACTION": 10,
+      "APPROVE_PROPOSAL": 33,
+      "REJECT_PROPOSAL": 3,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 40,
+      "SYSTEM_PROGRAM": 12,
+      "SQUADS_V4": 47,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 1.673769648,
+    "peakHour": 15,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "7tH1k4PsMu3sNUYJxD5ezxhAmYYXyVVZz5c3dbaxcvUV": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 9,
+    "types": {
+      "WITHDRAW_UNSTAKED_DEPOSITS": 3,
+      "TRANSFER": 22,
+      "REFRESH_OBLIGATION": 4,
+      "INITIALIZE_USER": 1,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "STAKE": 1,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 49,
+      "INITIALIZE_ACCOUNT": 13,
+      "HARVEST_REWARD": 5,
+      "SWAP": 1
+    },
+    "sources": {
+      "KAMINO_FARMS": 10,
+      "SYSTEM_PROGRAM": 18,
+      "KAMINO_LEND": 53,
+      "BUBBLEGUM": 1,
+      "SOLANA_PROGRAM_LIBRARY": 4,
+      "ASSOCIATED_TOKEN_PROGRAM": 13,
+      "JUPITER": 1
+    },
+    "swapCount": 1,
+    "nftCount": 1,
+    "defiTxCount": 64,
+    "balance": 1.1463468,
+    "peakHour": 14,
+    "hourSpread": 8,
+    "riskScore": 3
+  },
+  "8g2PMddbKrqpPtd74pWM16xnDwtpKtkDJNDsQ9cWJZAC": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_TRANSACTION": 18,
+      "TRANSFER": 25,
+      "APPROVE_PROPOSAL": 52,
+      "REJECT_PROPOSAL": 4,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 20,
+      "SQUADS_V4": 70,
+      "SYSTEM_PROGRAM": 9,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.177654191,
+    "peakHour": 14,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "BEUTwDjLNoXvT26J9CZD5A1Fsr9WF2UXdcUVZuy4zQ3d": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 22,
+      "TRANSFER": 51,
+      "APPROVE_TRANSACTION": 24,
+      "REJECT_TRANSACTION": 3
+    },
+    "sources": {
+      "SQUADS_V4": 44,
+      "SYSTEM_PROGRAM": 19,
+      "SQUADS_MPL": 37
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.919665773,
+    "peakHour": 10,
+    "hourSpread": 8,
+    "riskScore": 0
+  },
+  "BMGYmN1hG8evD3pvy1Rk41bFUdGGVP5fYJbh2JHMonqK": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 83,
+    "types": {
+      "APPROVE_PROPOSAL": 42,
+      "TRANSFER": 34,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "EXECUTE_VAULT_TRANSACTION": 3,
+      "APPROVE_TRANSACTION": 17
+    },
+    "sources": {
+      "SQUADS_V4": 69,
+      "SYSTEM_PROGRAM": 11,
+      "SQUADS_MPL": 20
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.224769383,
+    "peakHour": 22,
+    "hourSpread": 16,
+    "riskScore": 0
+  },
+  "CmJywvWynJAiADsgTkVWu5BJus4ru2SP1PnfBXvThrxZ": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 64,
+      "TRANSFER": 21,
+      "APPROVE_TRANSACTION": 11,
+      "ADD_INSTRUCTION": 1,
+      "CREATE_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 82,
+      "SYSTEM_PROGRAM": 5,
+      "SQUADS_MPL": 13
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.900217023,
+    "peakHour": 11,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "DFheUjWj6BL9CuF8gAYfF6TgrbrruTTCc3vE6Ajn1gyK": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 20,
+      "APPROVE_PROPOSAL": 31,
+      "APPROVE_TRANSACTION": 36,
+      "REJECT_PROPOSAL": 1,
+      "REJECT_TRANSACTION": 3,
+      "CREATE_TRANSACTION": 6,
+      "ADD_INSTRUCTION": 3
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 18,
+      "SQUADS_V4": 32,
+      "SQUADS_MPL": 50
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 10.829216646,
+    "peakHour": 14,
+    "hourSpread": 15,
+    "riskScore": 0
+  },
+  "G8fVffcHt3n6DkjSdYj47xWe55QjFsL4P5zhQ9RXFuPa": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 25,
+      "APPROVE_TRANSACTION": 9,
+      "APPROVE_PROPOSAL": 58,
+      "REJECT_PROPOSAL": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "COMPRESSED_NFT_MINT": 1,
+      "CANCEL_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 16,
+      "SQUADS_V4": 73,
+      "BUBBLEGUM": 1,
+      "SYSTEM_PROGRAM": 10
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.535081067,
+    "peakHour": 20,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj": {
+    "protocols": [
+      "Kamino"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_TRANSACTION": 26,
+      "TRANSFER": 12,
+      "APPROVE_PROPOSAL": 57,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 4,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 28,
+      "SQUADS_V4": 71,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.066695761,
+    "peakHour": 8,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "3ZR4gMzciDHZudi5e1evdESKZuCQEE9QNHLkMoRsfDxQ": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 22,
+    "recentTxs90d": 19,
+    "types": {
+      "APPROVE_TRANSACTION": 16,
+      "CANCEL_TRANSACTION": 2,
+      "APPROVE_PROPOSAL": 2,
+      "REJECT_TRANSACTION": 1,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 19,
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.097767867,
+    "peakHour": 12,
+    "hourSpread": 10,
+    "riskScore": 0
+  },
+  "89FnbsKH8n6FXCghGUijxh3snqx3e6VXJ7q1fQAHWkQQ": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 45,
+    "types": {
+      "APPROVE_TRANSACTION": 29,
+      "TRANSFER": 32,
+      "APPROVE_PROPOSAL": 29,
+      "CANCEL_TRANSACTION": 2,
+      "REJECT_TRANSACTION": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "UNKNOWN": 1,
+      "ADD_INSTRUCTION": 1,
+      "CREATE_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_MPL": 41,
+      "SQUADS_V4": 37,
+      "SYSTEM_PROGRAM": 21,
+      "UNKNOWN": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.475827701,
+    "peakHour": 8,
+    "hourSpread": 16,
+    "riskScore": 0
+  },
+  "BYidGfUnfoQtqi4nHiuo57Fjreizbej6hawJLnbwJmYr": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 3,
+    "types": {
+      "TRANSFER": 17,
+      "APPROVE_PROPOSAL": 25,
+      "APPROVE_TRANSACTION": 55,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_TRANSACTION": 2
+    },
+    "sources": {
+      "SQUADS_V4": 33,
+      "SQUADS_MPL": 57,
+      "SYSTEM_PROGRAM": 9,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.727692732,
+    "peakHour": 1,
+    "hourSpread": 20,
+    "riskScore": 0
+  },
+  "CHRDWWqUs6LyeeoD7pJb3iRfnvYeMfwMUtf2N7zWk7uh": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 74,
+    "types": {
+      "TRANSFER": 61,
+      "APPROVE_TRANSACTION": 25,
+      "APPROVE_PROPOSAL": 7,
+      "CANCEL_TRANSACTION": 4,
+      "REJECT_TRANSACTION": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 46,
+      "SQUADS_MPL": 42,
+      "SQUADS_V4": 11,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 1.027448796,
+    "peakHour": 11,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "Dg5NLa5JuwfRMkuwZEguD9RpVrcQD3536GxogUv7pLNV": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 13,
+    "types": {
+      "TRANSFER": 17,
+      "APPROVE_TRANSACTION": 67,
+      "INITIALIZE_ACCOUNT": 1,
+      "APPROVE_PROPOSAL": 10,
+      "REJECT_TRANSACTION": 5
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 14,
+      "SQUADS_MPL": 75,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "SQUADS_V4": 10
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 3.324317956,
+    "peakHour": 6,
+    "hourSpread": 19,
+    "riskScore": 0
+  },
+  "EhJqf1p39c8NnH5iuZAJyw778LQua1AhZWxarT5SF8sT": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 52,
+      "TRANSFER": 46,
+      "CANCEL_PROPOSAL": 1,
+      "APPROVE_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 65,
+      "SYSTEM_PROGRAM": 34,
+      "SQUADS_MPL": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.443171076,
+    "peakHour": 14,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "GGG2JyBtwbPAsYwUQED8GBbj9UMi7NQa3uwN3DmyGNtz": {
+    "protocols": [
+      "Jupiter Perps"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 91,
+    "types": {
+      "UNKNOWN": 48,
+      "TRANSFER": 25,
+      "APPROVE_PROPOSAL": 9,
+      "CANCEL_TRANSACTION": 2,
+      "APPROVE_TRANSACTION": 15,
+      "REJECT_TRANSACTION": 1
+    },
+    "sources": {
+      "UNKNOWN": 48,
+      "SYSTEM_PROGRAM": 19,
+      "SQUADS_V4": 9,
+      "SQUADS_MPL": 22,
+      "SOLANA_PROGRAM_LIBRARY": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.067368087,
+    "peakHour": 8,
+    "hourSpread": 16,
+    "riskScore": 0
+  },
+  "jtnVCcNHdMVU6nkJLrNC1wq2XS5rnmKap78iQGGoaXQ": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 6,
+    "recentTxs90d": 6,
+    "types": {
+      "INITIALIZE_ACCOUNT": 1,
+      "UNKNOWN": 1,
+      "TRANSFER": 4
+    },
+    "sources": {
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "UNKNOWN": 1,
+      "SYSTEM_PROGRAM": 4
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.99797072,
+    "peakHour": 18,
+    "hourSpread": 2,
+    "riskScore": 0
+  },
+  "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 51,
+      "APPROVE_PROPOSAL": 39,
+      "REJECT_PROPOSAL": 9,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 85,
+      "SYSTEM_PROGRAM": 15
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.030469156,
+    "peakHour": 12,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "8BR8iAAF9ZnfhLCxmVPzTvF6LcysppKW6SXbjsNKrz9H": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 94,
+      "REJECT_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 100
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.013510261,
+    "peakHour": 10,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "ABun6mSVAoMvGtZF3dJbseSFL27fXZRWG2FS3ZYuK2QR": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 73,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "REJECT_PROPOSAL": 8,
+      "TRANSFER": 15
+    },
+    "sources": {
+      "SQUADS_V4": 96,
+      "SYSTEM_PROGRAM": 4
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.713004294,
+    "peakHour": 10,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "FHEPdZxbkM896cQcxR68fTXXnLDnm4t5AKM6xbiP1VQ9": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 88,
+      "REJECT_PROPOSAL": 3,
+      "TRANSFER": 9
+    },
+    "sources": {
+      "SQUADS_V4": 91,
+      "SYSTEM_PROGRAM": 9
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.250087488,
+    "peakHour": 13,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "FXQuS5Yug6GBxbNbf4qpNdFonhhCW7x7a4nTFakzgFnK": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "REJECT_PROPOSAL": 13,
+      "APPROVE_PROPOSAL": 71,
+      "TRANSFER": 16
+    },
+    "sources": {
+      "SQUADS_V4": 84,
+      "SYSTEM_PROGRAM": 16
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.429621626,
+    "peakHour": 14,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "GpvnGqPTq4Ga7k5PgxoBA7Yr6HCnsqeeeb8KhczztdRu": {
+    "protocols": [
+      "Jupiter Lend"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 33,
+    "types": {
+      "APPROVE_PROPOSAL": 68,
+      "COMPRESSED_NFT_TRANSFER": 3,
+      "TRANSFER": 22,
+      "REJECT_PROPOSAL": 2,
+      "REFRESH_OBLIGATION": 1,
+      "TOKEN_MINT": 1,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 1,
+      "EXTEND_LOOKUP_TABLE": 1,
+      "INIT_USER_METADATA": 1
+    },
+    "sources": {
+      "SQUADS_V4": 73,
+      "BUBBLEGUM": 3,
+      "SYSTEM_PROGRAM": 18,
+      "KAMINO_LEND": 3,
+      "UNKNOWN": 1,
+      "ADDRESS_LOOKUP_TABLE": 1,
+      "PHANTOM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 3,
+    "defiTxCount": 3,
+    "balance": 7.731463218,
+    "peakHour": 14,
+    "hourSpread": 18,
+    "riskScore": 1
+  },
+  "ZsGaxkUnULynp4jX5AkYfQGtvacoKf9Axcdowc7s3cA": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 18,
+    "types": {
+      "EXECUTE_VAULT_TRANSACTION": 35,
+      "UNKNOWN": 8,
+      "TRANSFER": 40,
+      "APPROVE_PROPOSAL": 7,
+      "APPROVE_TRANSACTION": 5,
+      "ADD_INSTRUCTION": 2,
+      "CREATE_TRANSACTION": 3
+    },
+    "sources": {
+      "SQUADS_V4": 49,
+      "UNKNOWN": 8,
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "SYSTEM_PROGRAM": 27,
+      "SQUADS_MPL": 11
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.927167778,
+    "peakHour": 9,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "2cVAT3oviEWgaTJkBipmN5KiYpmguzSqJG6hBa4Jfqgj": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 44,
+      "APPROVE_PROPOSAL": 47,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 90,
+      "SYSTEM_PROGRAM": 10
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.014746044,
+    "peakHour": 0,
+    "hourSpread": 16,
+    "riskScore": 0
+  },
+  "AnWCbbRmFSmb4kW5w8oeBqW3bQ1pip9vncxTzDPgW2er": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 10,
+    "recentTxs90d": 10,
+    "types": {
+      "APPROVE_PROPOSAL": 6,
+      "TRANSFER": 4
+    },
+    "sources": {
+      "SQUADS_V4": 6,
+      "SYSTEM_PROGRAM": 4
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.199364498,
+    "peakHour": 10,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "HN8obiLBzfKUz87S7bmkWgcu8ysV7otcPUnws5gQU78E": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 3,
+    "recentTxs90d": 3,
+    "types": {
+      "APPROVE_PROPOSAL": 2,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.099784948,
+    "peakHour": 10,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3": {
+    "protocols": [
+      "Exponent"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 33,
+    "types": {
+      "APPROVE_PROPOSAL": 67,
+      "TRANSFER": 30,
+      "UNKNOWN": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 89,
+      "SYSTEM_PROGRAM": 9,
+      "UNKNOWN": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.050288263,
+    "peakHour": 17,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "5WNNVkahiacGz88kBtZUfVhTFTsp2J4J5n6yEB4q3A3D": {
+    "protocols": [
+      "Nosana"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 46,
+      "APPROVE_PROPOSAL": 46,
+      "UNKNOWN": 3,
+      "COMPRESSED_NFT_MINT": 5
+    },
+    "sources": {
+      "SQUADS_V4": 91,
+      "UNKNOWN": 3,
+      "BUBBLEGUM": 5,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 5,
+    "defiTxCount": 0,
+    "balance": 0.163664309,
+    "peakHour": 10,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "8ywagMXEBdn7RvmqtuY22LbCNDEV8pQwp56sRC2zCudX": {
+    "protocols": [
+      "Nosana"
+    ],
+    "totalTxs": 34,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 5,
+      "UNKNOWN": 17,
+      "APPROVE_PROPOSAL": 1,
+      "SET_AUTHORITY": 2,
+      "TOKEN_MINT": 9
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 5,
+      "UNKNOWN": 17,
+      "SQUADS_V4": 1,
+      "SOLANA_PROGRAM_LIBRARY": 11
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.094849663,
+    "peakHour": 10,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "FnCZoNo6ki4njeBKW6hWdS64gi3zj5j2aAAkhGbb7cBH": {
+    "protocols": [
+      "Nosana"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 29,
+      "WITHDRAW_LIQUIDITY": 5,
+      "UNKNOWN": 6,
+      "CLOSE_ACCOUNT": 5,
+      "APPROVE_PROPOSAL": 53,
+      "COMPRESSED_NFT_MINT": 2
+    },
+    "sources": {
+      "SOLANA_PROGRAM_LIBRARY": 7,
+      "RAYDIUM": 10,
+      "SYSTEM_PROGRAM": 21,
+      "SQUADS_V4": 59,
+      "UNKNOWN": 1,
+      "BUBBLEGUM": 2
+    },
+    "swapCount": 0,
+    "nftCount": 2,
+    "defiTxCount": 10,
+    "balance": 201.423000366,
+    "peakHour": 10,
+    "hourSpread": 11,
+    "riskScore": 2
+  },
+  "2dMWrjsnvNQTS6C2BFRYSYbe4GsWR6tdcN7SNmouAYPT": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 36,
+    "recentTxs90d": 7,
+    "types": {
+      "APPROVE_PROPOSAL": 28,
+      "TRANSFER": 8
+    },
+    "sources": {
+      "SQUADS_V4": 28,
+      "SYSTEM_PROGRAM": 8
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.154998624,
+    "peakHour": 19,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 10,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "APPROVE_PROPOSAL": 9,
+      "REJECT_PROPOSAL": 4,
+      "UNKNOWN": 75
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 9,
+      "SQUADS_V4": 16,
+      "UNKNOWN": 75
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 40.383597301,
+    "peakHour": 17,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "BQZ9oXc2WyUUtBDakLXc1YnFCDZt8gBS1WyxLfA7JUpk": {
+    "protocols": [
+      "Lulo"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "UNKNOWN": 2,
+      "APPROVE_PROPOSAL": 6,
+      "REFRESH_OBLIGATION": 80,
+      "TOKEN_MINT": 2,
+      "TRANSFER": 6,
+      "REJECT_PROPOSAL": 4
+    },
+    "sources": {
+      "UNKNOWN": 4,
+      "SQUADS_V4": 10,
+      "KAMINO_LEND": 80,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "SYSTEM_PROGRAM": 5
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 80,
+    "balance": 0.364467487,
+    "peakHour": 18,
+    "hourSpread": 24,
+    "riskScore": 3
+  },
+  "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 29,
+      "EXECUTE_CONFIG_TRANSACTION": 15,
+      "EXECUTE_VAULT_TRANSACTION": 2,
+      "CANCEL_PROPOSAL": 2,
+      "CREATE_VAULT_TRANSACTION": 14,
+      "TRANSFER": 35,
+      "CREATE_MULTISIG": 2,
+      "CREATE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 72,
+      "SYSTEM_PROGRAM": 28
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.073929355,
+    "peakHour": 3,
+    "hourSpread": 19,
+    "riskScore": 0
+  },
+  "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 83,
+    "recentTxs90d": 0,
+    "types": {
+      "APPROVE_PROPOSAL": 39,
+      "EXECUTE_VAULT_TRANSACTION": 2,
+      "REJECT_PROPOSAL": 4,
+      "CREATE_VAULT_TRANSACTION": 19,
+      "TRANSFER": 16,
+      "USE_SPENDING_LIMIT": 3
+    },
+    "sources": {
+      "SQUADS_V4": 83
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.001,
+    "peakHour": 7,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "5RKdQsbxNArz8L9SNsmUN2rBY6DVyzc2fhiLorgUNDkT": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 4,
+    "recentTxs90d": 4,
+    "types": {
+      "TRANSFER": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 4
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.099990001,
+    "peakHour": 14,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "8W2VmPoB63YsVt9VZd5hJzzu1D396cszDLGWMZZ1GCKu": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 18,
+    "types": {
+      "APPROVE_PROPOSAL": 69,
+      "TRANSFER": 12,
+      "CANCEL_PROPOSAL": 4,
+      "REJECT_PROPOSAL": 13,
+      "EXECUTE_VAULT_TRANSACTION": 2
+    },
+    "sources": {
+      "SQUADS_V4": 99,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.025812513,
+    "peakHour": 22,
+    "hourSpread": 15,
+    "riskScore": 0
+  },
+  "CgUHzq2Dp4n5g8f7D8a3k4cPhUTogjD5JvoVB9vjRw9C": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 4,
+    "recentTxs90d": 4,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.198679,
+    "peakHour": 5,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "EoKrH8Gg1GMqEAgput6W3SGv6WhyC1Mr3eWAnjNJ3d7E": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 20,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 1,
+      "CREATE_VAULT_TRANSACTION": 19
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 1,
+      "SQUADS_V4": 19
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.1,
+    "peakHour": 7,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "Ff4UAw6V6CsMDnrhpWB4VzrqFNucL4VxqJR2sNViPEFL": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "G1AonKZArhAC51Mp3uhJ3Yk1kRVsEwbg9RGTrUoqEPRm": {
+    "protocols": [
+      "Huma Finance"
+    ],
+    "totalTxs": 10,
+    "recentTxs90d": 10,
+    "types": {
+      "TRANSFER": 5,
+      "APPROVE_PROPOSAL": 4,
+      "CANCEL_PROPOSAL": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 5,
+      "SQUADS_V4": 5
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.198222423,
+    "peakHour": 21,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "LUKET3JPqzoCMZNLos4MN6yHUzpX2qsgjen4uhS86u9": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "LOCK_LOAN": 1,
+      "LIQUIDATE_LEDGER": 1,
+      "CREATE_LOAN": 4,
+      "WITHDRAW_COLLATERAL": 5,
+      "REPAY_PRINCIPAL": 2,
+      "TRANSFER": 16,
+      "CLOSE_LOAN": 3,
+      "WITHDRAW_VAULT": 2,
+      "DEPOSIT_VAULT": 3,
+      "UNKNOWN": 63
+    },
+    "sources": {
+      "LOOPSCALE": 21,
+      "SYSTEM_PROGRAM": 16,
+      "UNKNOWN": 63
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.252732248,
+    "peakHour": 17,
+    "hourSpread": 8,
+    "riskScore": 0
+  },
+  "LoTy38EiLYg85rWq5okYjNwzQECGbYa6uPcJPj8MHu2": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "DEPOSIT_VAULT": 6,
+      "TRANSFER": 43,
+      "CLOSE_STRATEGY": 2,
+      "WITHDRAW_STRATEGY": 4,
+      "SWAP": 5,
+      "CLOSE_LOAN": 6,
+      "CLAIM_VAULT_REWARDS": 5,
+      "WITHDRAW_COLLATERAL": 1,
+      "REPAY_PRINCIPAL": 4,
+      "WITHDRAW_VAULT": 5,
+      "UPDATE_STRATEGY": 2,
+      "CREATE_STRATEGY": 2,
+      "APPROVE_PROPOSAL": 15
+    },
+    "sources": {
+      "LOOPSCALE": 37,
+      "SYSTEM_PROGRAM": 26,
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "TITAN": 5,
+      "SQUADS_V4": 16,
+      "METAPLEX": 11
+    },
+    "swapCount": 5,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.303307408,
+    "peakHour": 16,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "UPDATE_VAULT": 4,
+      "TRANSFER": 33,
+      "CREATE_TIMELOCK": 37,
+      "DEPOSIT_STRATEGY": 1,
+      "WITHDRAW_VAULT": 1,
+      "STAKE_VAULT": 1,
+      "DEPOSIT_VAULT": 1,
+      "WITHDRAW_STRATEGY": 1,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 14,
+      "APPROVE_PROPOSAL": 7
+    },
+    "sources": {
+      "LOOPSCALE": 46,
+      "PHANTOM": 1,
+      "SQUADS_V4": 36,
+      "SYSTEM_PROGRAM": 17
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.226581201,
+    "peakHour": 4,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 94,
+      "TRANSFER": 6
+    },
+    "sources": {
+      "SQUADS_V4": 94,
+      "SYSTEM_PROGRAM": 6
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.076677756,
+    "peakHour": 22,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "26Es6MMrHXXBGPoVd5D5VZwepTHPigaSU5iTSd2hmp1m": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 23,
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 9,
+      "TRANSFER": 31,
+      "APPROVE_PROPOSAL": 55,
+      "CANCEL_PROPOSAL": 1,
+      "SWAP": 1,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_PROPOSAL": 1,
+      "OPEN_POSITION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 78,
+      "SYSTEM_PROGRAM": 19,
+      "JUPITER": 1,
+      "BUBBLEGUM": 1,
+      "ORCA": 1
+    },
+    "swapCount": 1,
+    "nftCount": 1,
+    "defiTxCount": 2,
+    "balance": 0.012231756,
+    "peakHour": 19,
+    "hourSpread": 14,
+    "riskScore": 1
+  },
+  "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "DEPOSIT_VAULT": 3,
+      "WITHDRAW_VAULT": 10,
+      "SWAP": 21,
+      "TOKEN_MINT": 4,
+      "UNKNOWN": 41,
+      "CLAIM_VAULT_REWARDS": 8,
+      "RECEIVE_MESSAGE": 5,
+      "DEPOSIT_FOR_BURN": 2,
+      "TRANSFER": 4,
+      "ORACLE_UPDATE": 2
+    },
+    "sources": {
+      "LOOPSCALE": 21,
+      "TITAN": 21,
+      "UNKNOWN": 45,
+      "CIRCLE_CCTP_CORE_V2": 5,
+      "CIRCLE_CCTP_TOKEN_V2": 2,
+      "SYSTEM_PROGRAM": 4,
+      "SWITCHBOARD_ON_DEMAND": 2
+    },
+    "swapCount": 21,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.019430857,
+    "peakHour": 13,
+    "hourSpread": 9,
+    "riskScore": 3
+  },
+  "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "REFINANCE_LEDGER": 46,
+      "WITHDRAW_VAULT": 15,
+      "CLAIM_VAULT_REWARDS": 10,
+      "DEPOSIT_VAULT": 9,
+      "WITHDRAW_COLLATERAL": 7,
+      "CLOSE_LOAN": 6,
+      "DEPOSIT_COLLATERAL": 2,
+      "REPAY_PRINCIPAL": 5
+    },
+    "sources": {
+      "LOOPSCALE": 100
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 3.809476858,
+    "peakHour": 15,
+    "hourSpread": 2,
+    "riskScore": 0
+  },
+  "FmoQf6t1fxNhvzJ7iVyoiue5C8JuhkLxpp6it9jAkkua": {
+    "protocols": [
+      "Loopscale"
+    ],
+    "totalTxs": 3,
+    "recentTxs90d": 0,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.239049655,
+    "peakHour": 22,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "nrEbij8ZuwEw8GvjJqS5JsFx55Gy1LmvBXe5B1jtjpH": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 47,
+    "recentTxs90d": 0,
+    "types": {
+      "APPROVE_PROPOSAL": 24,
+      "TRANSFER": 15,
+      "COMPRESSED_NFT_MINT": 1,
+      "UNKNOWN": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "CANCEL_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 27,
+      "SYSTEM_PROGRAM": 15,
+      "BUBBLEGUM": 1,
+      "SWITCHBOARD_ON_DEMAND": 4
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.06646683,
+    "peakHour": 15,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "2r3cVdpCRYNZKyi3r6pquzCEHrBezPdXPSeCaaWWnGMn": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 73,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 28,
+      "APPROVE_PROPOSAL": 13,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "SWAP": 2,
+      "ORACLE_UPDATE": 8,
+      "COMPRESSED_NFT_MINT": 15,
+      "INITIALIZE_ACCOUNT": 1,
+      "CLOSE_ACCOUNT": 1,
+      "STAKE_SOL": 1,
+      "UNKNOWN": 3
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 27,
+      "SQUADS_V4": 14,
+      "JUPITER": 2,
+      "SWITCHBOARD_ON_DEMAND": 8,
+      "BUBBLEGUM": 15,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "STAKE_PROGRAM": 1,
+      "UNKNOWN": 3
+    },
+    "swapCount": 2,
+    "nftCount": 15,
+    "defiTxCount": 2,
+    "balance": 0.001742655,
+    "peakHour": 17,
+    "hourSpread": 16,
+    "riskScore": 1
+  },
+  "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 45,
+    "types": {
+      "APPROVE_PROPOSAL": 8,
+      "TRANSFER": 77,
+      "INITIALIZE_ACCOUNT": 2,
+      "CLOSE_ACCOUNT": 3,
+      "CLOSE_POSITION": 1,
+      "UNKNOWN": 6,
+      "SWAP": 2,
+      "OPEN_POSITION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 8,
+      "SYSTEM_PROGRAM": 72,
+      "SOLANA_PROGRAM_LIBRARY": 8,
+      "ASSOCIATED_TOKEN_PROGRAM": 2,
+      "METEORA_DAMM_V2": 2,
+      "DRIFT": 3,
+      "OKX_DEX_ROUTER": 1,
+      "UNKNOWN": 3,
+      "PUMP_AMM": 1
+    },
+    "swapCount": 2,
+    "nftCount": 0,
+    "defiTxCount": 5,
+    "balance": 0.699117823,
+    "peakHour": 13,
+    "hourSpread": 10,
+    "riskScore": 1
+  },
+  "8dvWh4YPejYUs9fS296jZ1XAxcKEPtzi6v1NGv4ZJFw6": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 9,
+    "recentTxs90d": 3,
+    "types": {
+      "TRANSFER": 5,
+      "APPROVE_PROPOSAL": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 5,
+      "SQUADS_V4": 4
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.003994796,
+    "peakHour": 2,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "AaGvHGXZHeAPLCU2LwYtxoKy1qopJicFtRsNX26Uu5iP": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 13,
+    "types": {
+      "COMPRESSED_NFT_MINT": 1,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "TRANSFER": 44,
+      "SWAP": 24,
+      "EXECUTE_VAULT_TRANSACTION": 10,
+      "UNKNOWN": 18,
+      "INITIALIZE_ACCOUNT": 1,
+      "CLOSE_ACCOUNT": 1
+    },
+    "sources": {
+      "BUBBLEGUM": 2,
+      "SYSTEM_PROGRAM": 42,
+      "TITAN": 10,
+      "SQUADS_V4": 10,
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "MAYAN_CIRCLE_FAST_TRANSFER": 2,
+      "OKX_DEX_ROUTER": 2,
+      "DFLOW": 1,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "DRIFT": 16,
+      "JUPITER": 11
+    },
+    "swapCount": 24,
+    "nftCount": 2,
+    "defiTxCount": 27,
+    "balance": 0.09060865,
+    "peakHour": 0,
+    "hourSpread": 16,
+    "riskScore": 3
+  },
+  "E4NGuMwfoTqJKUkzUSWF3rDbMwCR3CCTwFrL4Z3Y7r6X": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 11,
+    "recentTxs90d": 0,
+    "types": {
+      "APPROVE_PROPOSAL": 1,
+      "COMPRESSED_NFT_MINT": 1,
+      "TRANSFER": 9
+    },
+    "sources": {
+      "SQUADS_V4": 1,
+      "BUBBLEGUM": 1,
+      "SYSTEM_PROGRAM": 8,
+      "PHANTOM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.029894186,
+    "peakHour": 10,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "EoHK5VNgYisSRDcqSkBPoQTGsGroBnNR4xiWWWo8K3g5": {
+    "protocols": [
+      "Switchboard"
+    ],
+    "totalTxs": 36,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 25,
+      "UNKNOWN": 1,
+      "APPROVE_PROPOSAL": 10
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 25,
+      "UNKNOWN": 1,
+      "SQUADS_V4": 10
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.189612849,
+    "peakHour": 11,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 26,
+      "EXECUTE_VAULT_TRANSACTION": 20,
+      "APPROVE_PROPOSAL": 46,
+      "REJECT_PROPOSAL": 1,
+      "CREATE_VAULT_TRANSACTION": 1,
+      "CREATE_MULTISIG": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 18,
+      "SQUADS_V4": 81,
+      "UNKNOWN": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.056795732,
+    "peakHour": 14,
+    "hourSpread": 16,
+    "riskScore": 0
+  },
+  "DtWpcoMN5LMKmvw4sRXVArExBBDyHNk1mQ7DrbYhGADS": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 92,
+    "recentTxs90d": 16,
+    "types": {
+      "APPROVE_PROPOSAL": 82,
+      "EXECUTE_VAULT_TRANSACTION": 6,
+      "REJECT_PROPOSAL": 2,
+      "TRANSFER": 2
+    },
+    "sources": {
+      "SQUADS_V4": 90,
+      "SYSTEM_PROGRAM": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.031348561,
+    "peakHour": 16,
+    "hourSpread": 18,
+    "riskScore": 0
+  },
+  "E1iyboRnxBSD8KJncj8mkkzbJu17gr5w6CiTN6q4YoUN": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 34,
+      "APPROVE_PROPOSAL": 59,
+      "UNKNOWN": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "EXECUTE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 13,
+      "SQUADS_V4": 83,
+      "UNKNOWN": 2,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.406020647,
+    "peakHour": 10,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "EBCXuPcvNP39vbVSjadH7YwtKRt47iWK7Xs2yATDhmJ7": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 8,
+    "recentTxs90d": 3,
+    "types": {
+      "APPROVE_PROPOSAL": 4,
+      "TRANSFER": 3,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 5,
+      "SYSTEM_PROGRAM": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.350613459,
+    "peakHour": 20,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "FoMboHErV2g7GjfQayFCRjWdXg3USZkPJCoeYEgPastv": {
+    "protocols": [
+      "Solstice"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 43,
+    "types": {
+      "TRANSFER": 59,
+      "APPROVE_PROPOSAL": 28,
+      "UNKNOWN": 5,
+      "SWAP": 7,
+      "INCREASE_LIQUIDITY": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 57,
+      "SQUADS_V4": 28,
+      "UNKNOWN": 4,
+      "OKX": 2,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "JUPITER": 4,
+      "RAYDIUM": 1,
+      "ORCA": 1,
+      "DFLOW": 1
+    },
+    "swapCount": 7,
+    "nftCount": 0,
+    "defiTxCount": 6,
+    "balance": 0.035997439,
+    "peakHour": 8,
+    "hourSpread": 16,
+    "riskScore": 2
+  },
+  "2n5THJEbrjADhaGbXch6bZQZ3g3zaxnnLgMeWyEqRYrP": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 5,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 3,
+      "CREATE_VAULT_TRANSACTION": 2
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 3,
+      "SQUADS_V4": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.000995,
+    "peakHour": 20,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "3ChdTfL6iZ1webxcw79wnob1CyZy5FxkCXR7v3j1qRJD": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 24,
+    "recentTxs90d": 0,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 15,
+      "TRANSFER": 2,
+      "COMPRESSED_NFT_MINT": 7
+    },
+    "sources": {
+      "SQUADS_V4": 15,
+      "SYSTEM_PROGRAM": 2,
+      "BUBBLEGUM": 7
+    },
+    "swapCount": 0,
+    "nftCount": 7,
+    "defiTxCount": 0,
+    "balance": 0.044862311,
+    "peakHour": 22,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "8TjLVdh5b95Y5Gm6AbJXhmXW9as8QXvTMLVKJZ6pXzzR": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 72,
+    "types": {
+      "REJECT_PROPOSAL": 3,
+      "APPROVE_PROPOSAL": 46,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 10,
+      "TRANSFER": 6,
+      "UNKNOWN": 1,
+      "USE_SPENDING_LIMIT": 12,
+      "EXECUTE_VAULT_TRANSACTION": 2,
+      "ADD_BATCH_TRANSACTION": 10,
+      "CREATE_BATCH": 6,
+      "SWAP": 3,
+      "CANCEL_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 99,
+      "UNKNOWN": 1
+    },
+    "swapCount": 3,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.003810433,
+    "peakHour": 16,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "8YRNf7ZN16oXp9vw6BLMBE5kMcqyE4mpGPzwTgCuVNf8": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 34,
+    "recentTxs90d": 4,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 24,
+      "TRANSFER": 7,
+      "COMPRESSED_NFT_MINT": 3
+    },
+    "sources": {
+      "SQUADS_V4": 24,
+      "SYSTEM_PROGRAM": 7,
+      "BUBBLEGUM": 3
+    },
+    "swapCount": 0,
+    "nftCount": 3,
+    "defiTxCount": 0,
+    "balance": 0.052569902,
+    "peakHour": 21,
+    "hourSpread": 10,
+    "riskScore": 0
+  },
+  "9rW2KnDiciztjpcf83LjinReaRgZbo2YG9ZCWXZCfVkd": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "USE_SPENDING_LIMIT": 8,
+      "REJECT_PROPOSAL": 2,
+      "APPROVE_PROPOSAL": 25,
+      "TRANSFER": 45,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 4,
+      "SWAP": 2,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 2,
+      "ADD_BATCH_TRANSACTION": 10,
+      "CREATE_BATCH": 2
+    },
+    "sources": {
+      "SQUADS_V4": 67,
+      "SYSTEM_PROGRAM": 31,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "TITAN": 1
+    },
+    "swapCount": 2,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.297381807,
+    "peakHour": 16,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "FH83cpeVPNWS3hTdQzDtwWcJQT3TA7hfAz3T8ojbNqVt": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 59,
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 20,
+      "TRANSFER": 12,
+      "APPROVE_PROPOSAL": 55,
+      "SWAP": 6,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "USE_SPENDING_LIMIT": 1,
+      "CANCEL_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 99,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 6,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.01,
+    "peakHour": 16,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "FaBArNd8rvbmj4zxQVSZnotcgDq8jGm8i58NCTCbS8sR": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 64,
+    "recentTxs90d": 17,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 57,
+      "TRANSFER": 7
+    },
+    "sources": {
+      "SQUADS_V4": 57,
+      "SYSTEM_PROGRAM": 7
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.098170956,
+    "peakHour": 16,
+    "hourSpread": 10,
+    "riskScore": 0
+  },
+  "H5xDGKUoJmmsNZ3brVqHV8EVxaUQdfEKwBzvzJEcrLMn": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 21,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 14,
+      "APPROVE_PROPOSAL": 43,
+      "REJECT_PROPOSAL": 2,
+      "USE_SPENDING_LIMIT": 13,
+      "CREATE_VAULT_TRANSACTION": 4,
+      "EXECUTE_VAULT_TRANSACTION": 2,
+      "SWAP": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 10,
+      "SQUADS_V4": 90
+    },
+    "swapCount": 1,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.830480637,
+    "peakHour": 16,
+    "hourSpread": 15,
+    "riskScore": 0
+  },
+  "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe": {
+    "protocols": [
+      "Hylo"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 42,
+    "types": {
+      "USE_SPENDING_LIMIT": 13,
+      "TRANSFER": 55,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 8,
+      "APPROVE_PROPOSAL": 16,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 3,
+      "REJECT_PROPOSAL": 1,
+      "UNKNOWN": 3
+    },
+    "sources": {
+      "SQUADS_V4": 53,
+      "SYSTEM_PROGRAM": 43,
+      "BUBBLEGUM": 1,
+      "UNKNOWN": 3
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.730233298,
+    "peakHour": 10,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "55Th9kAE3FW2ws3xfUu5dxa8Q5NjNrToezpDwW8NhrCB": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "CLOSE_ACCOUNT": 4,
+      "TRANSFER": 77,
+      "SWAP": 8,
+      "UNKNOWN": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "APPROVE_PROPOSAL": 7
+    },
+    "sources": {
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "SYSTEM_PROGRAM": 71,
+      "OKX_DEX_ROUTER": 6,
+      "DFLOW": 2,
+      "JUPITER": 2,
+      "SQUADS_V4": 14
+    },
+    "swapCount": 8,
+    "nftCount": 0,
+    "defiTxCount": 2,
+    "balance": 17.78549969,
+    "peakHour": 16,
+    "hourSpread": 6,
+    "riskScore": 1
+  },
+  "BR4ExSPZUMHfWB6kNvYL6AXNbW4NXLzdFnuKs5qSxSR1": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 13,
+    "recentTxs90d": 13,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 9,
+      "INITIALIZE_ACCOUNT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "SYSTEM_PROGRAM": 9,
+      "ASSOCIATED_TOKEN_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.124270087,
+    "peakHour": 15,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN": {
+    "protocols": [
+      "Stabble"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 52,
+      "APPROVE_PROPOSAL": 29,
+      "CANCEL_PROPOSAL": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 7,
+      "COMPRESSED_NFT_MINT": 2,
+      "SWAP": 5,
+      "UNKNOWN": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 42,
+      "SQUADS_V4": 44,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "BUBBLEGUM": 2,
+      "JUPITER": 4,
+      "UNKNOWN": 4,
+      "PUMP_AMM": 1,
+      "PHANTOM": 1
+    },
+    "swapCount": 5,
+    "nftCount": 2,
+    "defiTxCount": 4,
+    "balance": 0.248960446,
+    "peakHour": 10,
+    "hourSpread": 8,
+    "riskScore": 1
+  },
+  "2owonq2d2LaQNCc4iq8s4848GeRsPQqbRdCReLhdx9mW": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 98,
+    "types": {
+      "APPROVE_PROPOSAL": 82,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "TRANSFER": 12,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 91,
+      "SYSTEM_PROGRAM": 8,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.377748843,
+    "peakHour": 19,
+    "hourSpread": 16,
+    "riskScore": 0
+  },
+  "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 57,
+    "types": {
+      "APPROVE_PROPOSAL": 61,
+      "TRANSFER": 25,
+      "REJECT_PROPOSAL": 3,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 5,
+      "UNKNOWN": 1,
+      "SWAP": 3,
+      "EXECUTE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 86,
+      "BUBBLEGUM": 1,
+      "UNKNOWN": 1,
+      "SOLANA_PROGRAM_LIBRARY": 7,
+      "SYSTEM_PROGRAM": 2,
+      "JUPITER": 3
+    },
+    "swapCount": 3,
+    "nftCount": 1,
+    "defiTxCount": 3,
+    "balance": 0.063204846,
+    "peakHour": 17,
+    "hourSpread": 13,
+    "riskScore": 1
+  },
+  "57vhVhXzzMB5VDSgkgdeg74vgrFKwTiJY1L9crXsfjGX": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 81,
+    "recentTxs90d": 81,
+    "types": {
+      "APPROVE_PROPOSAL": 51,
+      "TRANSFER": 12,
+      "REFRESH_OBLIGATION": 2,
+      "INIT_LENDING_ACCOUNT": 1,
+      "REJECT_PROPOSAL": 1,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 9,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 5
+    },
+    "sources": {
+      "SQUADS_V4": 69,
+      "SYSTEM_PROGRAM": 9,
+      "KAMINO_LEND": 2,
+      "MARGINFI_V2": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 3,
+    "balance": 0.175326398,
+    "peakHour": 9,
+    "hourSpread": 19,
+    "riskScore": 1
+  },
+  "6cjetC6BA3adY8G54KNsiY3pbXXkipMQEHCymMgxVNhr": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 1,
+    "types": {
+      "UNKNOWN": 2,
+      "TRANSFER": 57,
+      "APPROVE_TRANSACTION": 18,
+      "APPROVE_PROPOSAL": 4,
+      "COMPRESSED_NFT_MINT": 19
+    },
+    "sources": {
+      "UNKNOWN": 2,
+      "SYSTEM_PROGRAM": 54,
+      "SQUADS_MPL": 19,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "SQUADS_V4": 4,
+      "BUBBLEGUM": 19
+    },
+    "swapCount": 0,
+    "nftCount": 19,
+    "defiTxCount": 0,
+    "balance": 0.832422863,
+    "peakHour": 16,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "6ryqDDCwKFZfSiHQrYRkjTEarbsLjg9TmuFg1RJorBk3": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 27,
+      "SYNC_NATIVE": 1,
+      "TOKEN_MINT": 5,
+      "SWAP": 11,
+      "UNKNOWN": 3,
+      "REFRESH_RESERVES_BATCH": 3,
+      "COMPRESSED_NFT_MINT": 2,
+      "REFRESH_OBLIGATION": 8,
+      "WITHDRAW": 1,
+      "APPROVE_PROPOSAL": 32,
+      "DEPOSIT": 2,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "SYSTEM_PROGRAM": 19,
+      "UNKNOWN": 6,
+      "JUPITER": 10,
+      "MARGINFI_V2": 5,
+      "OKX_DEX_ROUTER": 1,
+      "KAMINO_LEND": 11,
+      "BUBBLEGUM": 2,
+      "SQUADS_V4": 41
+    },
+    "swapCount": 11,
+    "nftCount": 2,
+    "defiTxCount": 26,
+    "balance": 0.571039747,
+    "peakHour": 15,
+    "hourSpread": 13,
+    "riskScore": 3
+  },
+  "9NQozSJM8yy8JxX2DGgXUYvMnQz7CDmB91PnLAeSXaW8": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 38,
+      "TRANSFER": 56,
+      "COMPRESSED_NFT_MINT": 2,
+      "SWAP": 4
+    },
+    "sources": {
+      "SQUADS_V4": 43,
+      "SYSTEM_PROGRAM": 38,
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "PHANTOM": 8,
+      "BUBBLEGUM": 2,
+      "JUPITER": 1,
+      "OKX_DEX_ROUTER": 3
+    },
+    "swapCount": 4,
+    "nftCount": 2,
+    "defiTxCount": 1,
+    "balance": 0.529342578,
+    "peakHour": 1,
+    "hourSpread": 15,
+    "riskScore": 1
+  },
+  "9inNvfZy7Ha5KisZ9CU9cjKBWrVHtEzXzRBD9mSyAnyf": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 79,
+    "types": {
+      "APPROVE_PROPOSAL": 78,
+      "TRANSFER": 16,
+      "REJECT_PROPOSAL": 4,
+      "ORACLE_UPDATE": 1,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SQUADS_V4": 87,
+      "SYSTEM_PROGRAM": 11,
+      "SWITCHBOARD_ON_DEMAND": 1,
+      "UNKNOWN": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.278346773,
+    "peakHour": 15,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "A8tPrJkyrJau857rySaCAvkeYGCpGGSxSxEX11VLxZgD": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 0,
+    "types": {
+      "APPROVE_TRANSACTION": 59,
+      "TRANSFER": 37,
+      "CANCEL_TRANSACTION": 1,
+      "EXECUTE_TRANSACTION": 3
+    },
+    "sources": {
+      "SQUADS_MPL": 92,
+      "SYSTEM_PROGRAM": 8
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.718260419,
+    "peakHour": 3,
+    "hourSpread": 17,
+    "riskScore": 0
+  },
+  "AfSM5R2A35qGZ9AgULApe3iS5bNDAtPb6WzZJG1UPVen": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 24,
+    "recentTxs90d": 23,
+    "types": {
+      "APPROVE_PROPOSAL": 23,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 23,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.027524447,
+    "peakHour": 19,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "AnGdBvg8VmVHq7zyUYmC7mgjZ5pW6odwFsh6eharbzLu": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "DEPOSIT": 1,
+      "INIT_LENDING_ACCOUNT": 1,
+      "TRANSFER": 18,
+      "APPROVE_PROPOSAL": 10,
+      "SWAP": 43,
+      "UNKNOWN": 13,
+      "INITIALIZE_ACCOUNT": 13,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "MARGINFI_V2": 2,
+      "SYSTEM_PROGRAM": 6,
+      "SOLANA_PROGRAM_LIBRARY": 9,
+      "SQUADS_V4": 13,
+      "TITAN": 10,
+      "UNKNOWN": 1,
+      "JUPITER": 32,
+      "DFLOW": 12,
+      "ASSOCIATED_TOKEN_PROGRAM": 13,
+      "BUBBLEGUM": 1,
+      "OKX_DEX_ROUTER": 1
+    },
+    "swapCount": 43,
+    "nftCount": 1,
+    "defiTxCount": 34,
+    "balance": 3.444549244,
+    "peakHour": 16,
+    "hourSpread": 7,
+    "riskScore": 3
+  },
+  "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 39,
+      "TRANSFER": 55,
+      "COMPRESSED_NFT_MINT": 1,
+      "EXECUTE_VAULT_TRANSACTION": 5
+    },
+    "sources": {
+      "SQUADS_V4": 58,
+      "SYSTEM_PROGRAM": 41,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 39.788241248,
+    "peakHour": 21,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "FAbj8Hm7KGfFoJ8aV9LuW7ATxaqiLLCeQT5kSQ4r4QUE": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 23,
+    "recentTxs90d": 0,
+    "types": {
+      "COMPRESSED_NFT_MINT": 2,
+      "APPROVE_TRANSACTION": 13,
+      "TRANSFER": 8
+    },
+    "sources": {
+      "BUBBLEGUM": 2,
+      "SQUADS_MPL": 15,
+      "SYSTEM_PROGRAM": 6
+    },
+    "swapCount": 0,
+    "nftCount": 2,
+    "defiTxCount": 0,
+    "balance": 0.498411652,
+    "peakHour": 0,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "FGGC4aPUuWip2CXM8WL4aeefJqmPrh6uNr6NLKtBJaMN": {
+    "protocols": [
+      "Marginfi"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 45,
+    "types": {
+      "APPROVE_PROPOSAL": 69,
+      "TRANSFER": 16,
+      "REJECT_PROPOSAL": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "ORACLE_UPDATE": 2,
+      "REFRESH_RESERVES_BATCH": 2,
+      "FLASH_LOAN_END": 1,
+      "SWAP": 1,
+      "REFRESH_OBLIGATION": 1,
+      "INIT_LENDING_ACCOUNT": 1,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 83,
+      "SYSTEM_PROGRAM": 8,
+      "SWITCHBOARD_ON_DEMAND": 2,
+      "KAMINO_LEND": 3,
+      "MARGINFI_V2": 2,
+      "JUPITER": 1,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 1,
+    "nftCount": 1,
+    "defiTxCount": 6,
+    "balance": 0.048911908,
+    "peakHour": 9,
+    "hourSpread": 18,
+    "riskScore": 2
+  },
+  "VmroV2xtoj3yP487d2qt9kjCVn4BcphEtvSMjfGpfgN": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "REJECT_PROPOSAL": 2,
+      "APPROVE_PROPOSAL": 47,
+      "TRANSFER": 39,
+      "CREATE_VAULT_TRANSACTION": 10,
+      "ADD_BATCH_TRANSACTION": 1,
+      "CREATE_BATCH": 1
+    },
+    "sources": {
+      "SQUADS_V4": 90,
+      "SYSTEM_PROGRAM": 10
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.878744329,
+    "peakHour": 15,
+    "hourSpread": 19,
+    "riskScore": 0
+  },
+  "2GafqBhxF23cmRHN2cSHHoUcHZ1iDqzEn8Ayrkj34Csn": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "3TPczDPBfQpA6KiHSwYC51Qwzn1DJApVwqCK88zB69Au": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 83,
+    "types": {
+      "APPROVE_PROPOSAL": 51,
+      "TRANSFER": 48,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 62,
+      "SYSTEM_PROGRAM": 38
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.128552422,
+    "peakHour": 15,
+    "hourSpread": 18,
+    "riskScore": 0
+  },
+  "3wLd4AUHQRB9DJrgP8Qwfp5fMh2SyAqj148d7qbUq8Lb": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 90,
+    "types": {
+      "TRANSFER": 55,
+      "APPROVE_PROPOSAL": 38,
+      "SWAP": 7
+    },
+    "sources": {
+      "SQUADS_V4": 50,
+      "SYSTEM_PROGRAM": 44,
+      "TITAN": 6
+    },
+    "swapCount": 7,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.303181766,
+    "peakHour": 16,
+    "hourSpread": 19,
+    "riskScore": 0
+  },
+  "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 54,
+    "types": {
+      "TRANSFER": 46,
+      "APPROVE_PROPOSAL": 30,
+      "SWAP": 7,
+      "REJECT_PROPOSAL": 1,
+      "CANCEL_ORDER": 6,
+      "CREATE_ORDER": 7,
+      "UNKNOWN": 1,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 2
+    },
+    "sources": {
+      "SQUADS_V4": 44,
+      "SYSTEM_PROGRAM": 30,
+      "TITAN": 7,
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "TITAN_LIMIT_ORDER": 13,
+      "UNKNOWN": 1,
+      "KAMINO_LEND": 2
+    },
+    "swapCount": 7,
+    "nftCount": 0,
+    "defiTxCount": 2,
+    "balance": 0.039733324,
+    "peakHour": 16,
+    "hourSpread": 18,
+    "riskScore": 1
+  },
+  "DGLjmi6goG6yhaknmyurkfLas33BrJ2yuPhNndUsgTQT": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 43,
+    "recentTxs90d": 0,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 40,
+      "TRANSFER": 3
+    },
+    "sources": {
+      "SQUADS_V4": 40,
+      "SYSTEM_PROGRAM": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.048309372,
+    "peakHour": 14,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "EDae3XapMwETGSH4HrggdiKDSpX1bPjaRH2HoEWzkLT2": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 7,
+    "types": {
+      "APPROVE_PROPOSAL": 15,
+      "TRANSFER": 66,
+      "UNKNOWN": 10,
+      "CLOSE_ACCOUNT": 5,
+      "COMPRESSED_NFT_MINT": 1,
+      "SWAP": 3
+    },
+    "sources": {
+      "SQUADS_V4": 22,
+      "SYSTEM_PROGRAM": 59,
+      "UNKNOWN": 10,
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "BUBBLEGUM": 1,
+      "PUMP_AMM": 2,
+      "RAYDIUM": 1
+    },
+    "swapCount": 3,
+    "nftCount": 1,
+    "defiTxCount": 1,
+    "balance": 0.500183935,
+    "peakHour": 21,
+    "hourSpread": 16,
+    "riskScore": 1
+  },
+  "H93FtQBKFib1nUDchwNLRspgVEYpUw17D4Wo2SsXY5HT": {
+    "protocols": [
+      "Titan"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 74,
+    "types": {
+      "APPROVE_PROPOSAL": 68,
+      "TRANSFER": 20,
+      "FLASH_REPAY_RESERVE_LIQUIDITY": 1,
+      "CREATE_ORDER": 5,
+      "CANCEL_ORDER": 3,
+      "SWAP": 3
+    },
+    "sources": {
+      "SQUADS_V4": 72,
+      "SYSTEM_PROGRAM": 16,
+      "KAMINO_LEND": 1,
+      "TITAN_LIMIT_ORDER": 8,
+      "TITAN": 3
+    },
+    "swapCount": 3,
+    "nftCount": 0,
+    "defiTxCount": 1,
+    "balance": 0.390698959,
+    "peakHour": 22,
+    "hourSpread": 18,
+    "riskScore": 1
+  },
+  "hQi6Cz1BbBNc8dhhWhHzGshrNg8XrTCLq9u2woxtaJc": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 16,
+    "types": {
+      "TRANSFER": 17,
+      "COMPRESSED_NFT_TRANSFER": 2,
+      "INITIALIZE_USER": 1,
+      "INITIALIZE_ACCOUNT": 39,
+      "SWAP": 41
+    },
+    "sources": {
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "SYSTEM_PROGRAM": 12,
+      "BUBBLEGUM": 2,
+      "KAMINO_FARMS": 1,
+      "PHANTOM": 2,
+      "ASSOCIATED_TOKEN_PROGRAM": 39,
+      "JUPITER": 41
+    },
+    "swapCount": 41,
+    "nftCount": 2,
+    "defiTxCount": 42,
+    "balance": 0.299168553,
+    "peakHour": 1,
+    "hourSpread": 16,
+    "riskScore": 3
+  },
+  "6eAxgG1KoXC6Q4YBdjptFmyfoWKNGYQEKT3sHoX7JWU8": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 91,
+      "APPROVE_PROPOSAL": 1,
+      "COMPRESSED_NFT_MINT": 3,
+      "SWAP": 3,
+      "UNKNOWN": 2
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 72,
+      "SOLANA_PROGRAM_LIBRARY": 19,
+      "SQUADS_V4": 1,
+      "BUBBLEGUM": 3,
+      "JUPITER": 3,
+      "UNKNOWN": 2
+    },
+    "swapCount": 3,
+    "nftCount": 3,
+    "defiTxCount": 3,
+    "balance": 0.78686862,
+    "peakHour": 16,
+    "hourSpread": 17,
+    "riskScore": 1
+  },
+  "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 80,
+    "types": {
+      "UNKNOWN": 15,
+      "TOKEN_MINT": 1,
+      "TRANSFER": 65,
+      "SWAP": 8,
+      "INITIALIZE_ACCOUNT": 2,
+      "COMPRESSED_NFT_MINT": 3,
+      "INITIALIZE_USER": 3,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "INCREASE_LIQUIDITY": 1,
+      "DECREASE_LIQUIDITY": 1
+    },
+    "sources": {
+      "UNKNOWN": 16,
+      "SYSTEM_PROGRAM": 53,
+      "SOLANA_PROGRAM_LIBRARY": 9,
+      "JUPITER": 8,
+      "ASSOCIATED_TOKEN_PROGRAM": 2,
+      "BUBBLEGUM": 4,
+      "PHANTOM": 2,
+      "KAMINO_FARMS": 3,
+      "ORCA": 2,
+      "SQUADS_V4": 1
+    },
+    "swapCount": 8,
+    "nftCount": 4,
+    "defiTxCount": 13,
+    "balance": 0.751685507,
+    "peakHour": 6,
+    "hourSpread": 15,
+    "riskScore": 3
+  },
+  "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 1,
+    "types": {
+      "COMPRESSED_NFT_MINT": 3,
+      "TRANSFER": 70,
+      "APPROVE_PROPOSAL": 21,
+      "REJECT_PROPOSAL": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "UNKNOWN": 4
+    },
+    "sources": {
+      "BUBBLEGUM": 3,
+      "SQUADS_V4": 28,
+      "SYSTEM_PROGRAM": 64,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "UNKNOWN": 4
+    },
+    "swapCount": 0,
+    "nftCount": 3,
+    "defiTxCount": 0,
+    "balance": 18.812864374,
+    "peakHour": 1,
+    "hourSpread": 22,
+    "riskScore": 0
+  },
+  "DB75TdZZ3cLgpPATEgXGgJSnH3AG552XeeoB2mf2fsKN": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 43,
+    "recentTxs90d": 2,
+    "types": {
+      "UNKNOWN": 18,
+      "TRANSFER": 16,
+      "APPROVE_PROPOSAL": 6,
+      "APPROVE": 2,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "UNKNOWN": 18,
+      "SYSTEM_PROGRAM": 13,
+      "SQUADS_V4": 6,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "SQUADS_MPL": 2,
+      "BUBBLEGUM": 1,
+      "COINBASE": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 9.993057042,
+    "peakHour": 11,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "GjtMGFA81gyP5FRX5skKmwKRT3VV4LdhCJLexwyM4Hjd": {
+    "protocols": [
+      "Solayer"
+    ],
+    "totalTxs": 1,
+    "recentTxs90d": 0,
+    "types": {
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "UNKNOWN": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 20,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "PURmhzmixwasbbfe3Yy82i12LsPLLymEBBADEu74xES": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 4,
+    "recentTxs90d": 4,
+    "types": {
+      "APPROVE_PROPOSAL": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.242101912,
+    "peakHour": 14,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "2mNoXT7xpnpR2PVTArDYco5xE4jdk8yuWPTdXgjx6WEv": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "CLOSE_POSITION_AND_SWAP": 9,
+      "SWAP_AND_OPEN_POSITION": 11,
+      "TRANSFER": 51,
+      "CLOSE_POSITION": 7,
+      "OPEN_POSITION": 9,
+      "CANCEL_ORDER": 2,
+      "CREATE_ORDER": 2,
+      "APPROVE_PROPOSAL": 1,
+      "INCREASE_POSITION": 4,
+      "COMPRESSED_NFT_MINT": 1,
+      "CLOSE_ACCOUNT": 1,
+      "STAKE_TOKEN": 1,
+      "COLLECT_REWARD": 1
+    },
+    "sources": {
+      "FLASH_TRADE": 46,
+      "SYSTEM_PROGRAM": 50,
+      "PHANTOM": 1,
+      "SQUADS_V4": 1,
+      "BUBBLEGUM": 1,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.070233965,
+    "peakHour": 13,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "5bdzVTJHC5jV6qgzcXPifEi3DsX7krjH9s82FDwGW9ui": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 7,
+    "recentTxs90d": 7,
+    "types": {
+      "APPROVE_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 6,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.099332001,
+    "peakHour": 14,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 9,
+    "recentTxs90d": 9,
+    "types": {
+      "TRANSFER": 2,
+      "APPROVE_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "SQUADS_V4": 8,
+      "UNKNOWN": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.264223988,
+    "peakHour": 0,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "8RKb8uN1yvtim3vSFsLcAfjiFcRHbqMV9QxYVKV5NSrp": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 24,
+    "recentTxs90d": 24,
+    "types": {
+      "CLOSE_POSITION_AND_SWAP": 1,
+      "INCREASE_POSITION": 1,
+      "TRANSFER": 5,
+      "SWAP_AND_OPEN_POSITION": 1,
+      "APPROVE_PROPOSAL": 12,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "UNKNOWN": 1,
+      "SWAP": 1
+    },
+    "sources": {
+      "FLASH_TRADE": 3,
+      "SYSTEM_PROGRAM": 4,
+      "SQUADS_V4": 14,
+      "UNKNOWN": 1,
+      "JUPITER": 1,
+      "PHANTOM": 1
+    },
+    "swapCount": 1,
+    "nftCount": 0,
+    "defiTxCount": 1,
+    "balance": 3.252094382,
+    "peakHour": 14,
+    "hourSpread": 5,
+    "riskScore": 1
+  },
+  "9NXhjBeYjkp4UkTR9xhkr2nHMKwSgxMQZSNZ3syqEuWt": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 50,
+    "recentTxs90d": 24,
+    "types": {
+      "UNKNOWN": 31,
+      "TRANSFER": 11,
+      "APPROVE_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "CREATE_REFERRAL": 1,
+      "SWAP": 1
+    },
+    "sources": {
+      "UNKNOWN": 30,
+      "SQUADS_V4": 8,
+      "SYSTEM_PROGRAM": 9,
+      "FLASH_TRADE": 2,
+      "JUPITER": 1
+    },
+    "swapCount": 1,
+    "nftCount": 0,
+    "defiTxCount": 1,
+    "balance": 0.051561742,
+    "peakHour": 10,
+    "hourSpread": 14,
+    "riskScore": 1
+  },
+  "DUDssoE15XShhrJC7jJE3QhyzL7s4TnYogePVzswdR2R": {
+    "protocols": [
+      "Flash Trade"
+    ],
+    "totalTxs": 5,
+    "recentTxs90d": 5,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 2
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "PHANTOM": 1,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.190560804,
+    "peakHour": 10,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "21kF2n1WdJYaTMmwtMfWHydLc3xPjMjRUHBiUcW7iCxM": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 1,
+    "recentTxs90d": 1,
+    "types": {
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.1,
+    "peakHour": 4,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "28eDFqNQ15VB745zXVSPJVSRZWD7sws2Hy8VHq5pfazu": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 7,
+    "recentTxs90d": 7,
+    "types": {
+      "APPROVE_PROPOSAL": 4,
+      "CANCEL_PROPOSAL": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 6,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.083390854,
+    "peakHour": 11,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "6EzEruZ8uKHTRnjQktQsn6U5cimfbUCGGmTEycnmnxPW": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 6,
+    "recentTxs90d": 6,
+    "types": {
+      "CANCEL_PROPOSAL": 1,
+      "APPROVE_PROPOSAL": 4,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 5,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.09945,
+    "peakHour": 11,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "6sY2nhNfW2UoVa9qmLT5h5oNj423JuDa5LKaTwD3JAop": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 1,
+    "recentTxs90d": 1,
+    "types": {
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.1,
+    "peakHour": 4,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "9RkMtrs93JspVYaDjm1SWWj6zE3xVP5VN26vEMDAVkAf": {
+    "protocols": [
+      "Wick"
+    ],
+    "totalTxs": 17,
+    "recentTxs90d": 17,
+    "types": {
+      "CANCEL_PROPOSAL": 1,
+      "TRANSFER": 10,
+      "APPROVE_PROPOSAL": 4,
+      "CREATE_MULTISIG": 2
+    },
+    "sources": {
+      "SQUADS_V4": 9,
+      "SYSTEM_PROGRAM": 8
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.076195273,
+    "peakHour": 5,
+    "hourSpread": 6,
+    "riskScore": 0
+  },
+  "PV5tfXh295EpmpiYNHsEEEBymZ9325G14LGnUkkJ2EC": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 33,
+    "types": {
+      "APPROVE_PROPOSAL": 57,
+      "TRANSFER": 40,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 70,
+      "SYSTEM_PROGRAM": 30
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.030315294,
+    "peakHour": 16,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "5xmqRUqK33A2oBRxjyG36HgMjjM19NRt8gYEBT9u78s6": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 70,
+      "TRANSFER": 21,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "REJECT_PROPOSAL": 5,
+      "CANCEL_PROPOSAL": 1,
+      "SWAP": 1,
+      "COMPRESSED_NFT_MINT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 99,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 1,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 1.752084795,
+    "peakHour": 16,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "69YoSiSLEAJrTbZGy7Ry3p4jvJBjJpwn8g8HKcXcCguJ": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 53,
+      "APPROVE_PROPOSAL": 17,
+      "CREATE_VAULT_TRANSACTION": 3,
+      "TOKEN_MINT": 8,
+      "REJECT_PROPOSAL": 1,
+      "UNKNOWN": 15,
+      "CANCEL_PROPOSAL": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "EXECUTE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 33,
+      "UNKNOWN": 23,
+      "SYSTEM_PROGRAM": 44
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.594535795,
+    "peakHour": 10,
+    "hourSpread": 10,
+    "riskScore": 0
+  },
+  "8dk5KyDAttJYT4pa9nSQYqLEK85w7ZbcHZdZjBMHoAhz": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 58,
+    "types": {
+      "APPROVE_PROPOSAL": 45,
+      "TRANSFER": 51,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 61,
+      "SYSTEM_PROGRAM": 39
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.049477569,
+    "peakHour": 17,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "96yg1uazqtxT4R4mTKPDcLSfbp3AAJiXJFMKZj28bsSk": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 57,
+    "types": {
+      "APPROVE_PROPOSAL": 53,
+      "TRANSFER": 39,
+      "REJECT_PROPOSAL": 7,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 73,
+      "SYSTEM_PROGRAM": 27
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.0043418,
+    "peakHour": 16,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "9TjKHL4YGYKvw7HUEZatSw1mjx83CWq8bwkBYmrNXnnL": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 2,
+    "recentTxs90d": 0,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2
+    },
+    "sources": {
+      "SQUADS_V4": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 16,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "BYrKMVrru625aQbGuhdz6ojixAYHNLbwFaE4KTFfx3QS": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 10,
+    "recentTxs90d": 3,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 10
+    },
+    "sources": {
+      "SQUADS_V4": 10
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 18,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "CPHXoWwGQ129uoCNpv7Sp8W6Z326s7iB5eGGEZYTfveD": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "DiNi78eqjYxVdwXiAiran2Fh4sPAbvQA4oDTq2a6mDQe": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 55,
+      "TRANSFER": 34,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "UNKNOWN": 3,
+      "REJECT_PROPOSAL": 5,
+      "CANCEL_PROPOSAL": 1,
+      "COMPRESSED_NFT_TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 75,
+      "SYSTEM_PROGRAM": 21,
+      "UNKNOWN": 3,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.380212862,
+    "peakHour": 16,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "EVJRoxfqp7N1YbXgypvQfUGFj9bGdFsG9tLrHrsdn3cW": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 26,
+      "APPROVE_PROPOSAL": 67,
+      "USE_SPENDING_LIMIT": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 4
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 9,
+      "SQUADS_V4": 91
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.177023784,
+    "peakHour": 16,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "GvsR2FpHTHQ4QfC5JTVofGotfzYVbpYUTGNrbnJKC7Wo": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "J7nrqDcSuL77TPr1Vz7n8RC4VUeN4pXfx6Xx9E4SA59e": {
+    "protocols": [
+      "Onre Finance"
+    ],
+    "totalTxs": 20,
+    "recentTxs90d": 20,
+    "types": {
+      "TRANSFER": 11,
+      "APPROVE_PROPOSAL": 9
+    },
+    "sources": {
+      "SQUADS_V4": 14,
+      "SYSTEM_PROGRAM": 6
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.049093477,
+    "peakHour": 16,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 100
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 100
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 3.211751412,
+    "peakHour": 20,
+    "hourSpread": 24,
+    "riskScore": 0
+  },
+  "dpLy14g7uez3ryUriDiBL1pNKUoD5bLUpequspK5qsH": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 1,
+      "UNKNOWN": 97
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "UNKNOWN": 97
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 18.818632659,
+    "peakHour": 16,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "prgmc3JWJSbppz4KbhCHdpXyLFz5yjxdGWGa48MZ3fi": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 23,
+    "recentTxs90d": 23,
+    "types": {
+      "ACTIVATE_PROPOSAL": 5,
+      "ADD_BATCH_TRANSACTION": 9,
+      "CREATE_BATCH": 5,
+      "INITIALIZE_ACCOUNT": 1,
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 21,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.06672144,
+    "peakHour": 21,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "2SG7fCnreQ9wHoqQC7U6pfDN2rYmBqExKuqcGR3StrZW": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "EXECUTE_VAULT_TRANSACTION": 3,
+      "UNKNOWN": 92,
+      "EXTEND_LOOKUP_TABLE": 1,
+      "CREATE_LOOKUP_TABLE": 2,
+      "TOKEN_MINT": 2
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "UNKNOWN": 94,
+      "ADDRESS_LOOKUP_TABLE": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 5.153757176,
+    "peakHour": 20,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "4LpE9Lxqb4jYYh8jA8oDhsGDKPNBNkcoXobbAJTa3pWw": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "REJECT_PROPOSAL": 2,
+      "APPROVE_PROPOSAL": 34,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 1,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "USE_SPENDING_LIMIT": 2,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 26,
+      "TRANSFER": 33,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 1
+    },
+    "sources": {
+      "SQUADS_V4": 96,
+      "SYSTEM_PROGRAM": 4
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.021709513,
+    "peakHour": 21,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "6kDGqrP4Wwqe5KBa9zTrgUFykVsv4YhZPDEX22kUsDMP": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 81,
+    "recentTxs90d": 1,
+    "types": {
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "TRANSFER": 3,
+      "SWAP": 1,
+      "WITHDRAW": 1,
+      "APPROVE_PROPOSAL": 40,
+      "CREATE": 1,
+      "COMPRESSED_NFT_MINT": 11,
+      "EXECUTE_VAULT_TRANSACTION": 17,
+      "REJECT_PROPOSAL": 1,
+      "CANCEL_PROPOSAL": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "UNKNOWN": 1
+    },
+    "sources": {
+      "BUBBLEGUM": 12,
+      "SYSTEM_PROGRAM": 2,
+      "DFLOW": 1,
+      "SOLANA_PROGRAM_LIBRARY": 1,
+      "STREAMFLOW_TIMELOCK": 2,
+      "SQUADS_V4": 62,
+      "UNKNOWN": 1
+    },
+    "swapCount": 1,
+    "nftCount": 12,
+    "defiTxCount": 0,
+    "balance": 0.083910885,
+    "peakHour": 3,
+    "hourSpread": 15,
+    "riskScore": 0
+  },
+  "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 39,
+      "APPROVE_PROPOSAL": 37,
+      "REJECT_PROPOSAL": 3,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 11,
+      "CREATE_VAULT_TRANSACTION": 2
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 27,
+      "SQUADS_V4": 73
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.220938028,
+    "peakHour": 22,
+    "hourSpread": 8,
+    "riskScore": 0
+  },
+  "BaYejjDBVikzBSoHywwX8FwgkHwB6nJpEhJkow2zsL4B": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 7,
+    "recentTxs90d": 7,
+    "types": {
+      "TRANSFER": 4,
+      "INITIALIZE_ACCOUNT": 1,
+      "COMPRESSED_NFT_MINT": 1,
+      "CREATE": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 4,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "BUBBLEGUM": 1,
+      "ALLDOMAINS_NAME_SERVICE": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.1229702,
+    "peakHour": 4,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "CQ7CNkXxzbtK7pr4UokLKBN6xbCWFXmGSnshEioNagbC": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 3,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 100
+    },
+    "sources": {
+      "SQUADS_V4": 100
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.41292417,
+    "peakHour": 20,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "EFYHPtUykMMN3S69rofhWSoTZo6v41mrinDKQynBsguv": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 6,
+    "types": {
+      "APPROVE_PROPOSAL": 97,
+      "TRANSFER": 3
+    },
+    "sources": {
+      "SQUADS_V4": 97,
+      "SYSTEM_PROGRAM": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 1.589880448,
+    "peakHour": 21,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "EWK7U4bTqcywrBGFJ2py4BphoNnyVoqzV5XgW2rxT2yR": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 61,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "TRANSFER": 28,
+      "REJECT_PROPOSAL": 2,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 3
+    },
+    "sources": {
+      "SQUADS_V4": 95,
+      "SYSTEM_PROGRAM": 5
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.178580627,
+    "peakHour": 15,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "G1oGhierAFZdUfRyECgCWkSKhim2NsJUUYz1rYWuxqRq": {
+    "protocols": [
+      "MetaDAO"
+    ],
+    "totalTxs": 3,
+    "recentTxs90d": 0,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 2,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 2,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.088126869,
+    "peakHour": 0,
+    "hourSpread": 2,
+    "riskScore": 0
+  },
+  "mprGV3VdeBmf7o3dixtfYNgB2cHUU6cjRwTFCzWiEwd": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 73,
+    "recentTxs90d": 15,
+    "types": {
+      "TRANSFER": 21,
+      "APPROVE_PROPOSAL": 34,
+      "REJECT_PROPOSAL": 5,
+      "CANCEL_PROPOSAL": 1,
+      "UNKNOWN": 1,
+      "APPROVE_TRANSACTION": 10,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 53,
+      "SYSTEM_PROGRAM": 8,
+      "UNKNOWN": 1,
+      "SQUADS_MPL": 11
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.192819025,
+    "peakHour": 21,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "propu8J469CCZuBxerEm3Yrzx1NDNSFkkn7SYD8MEyz": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "COMPRESSED_NFT_MINT": 1,
+      "UNKNOWN": 94,
+      "TRANSFER": 1,
+      "ACTIVATE_PROPOSAL": 1,
+      "ADD_BATCH_TRANSACTION": 1,
+      "CREATE_BATCH": 1,
+      "CREATE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "BUBBLEGUM": 1,
+      "UNKNOWN": 94,
+      "SQUADS_V4": 5
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 87.106891532,
+    "peakHour": 19,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "9SV1SL96d5CJBaoJsDJePujBVgJ7sVpLZXFsktq2WtSn": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 25,
+    "recentTxs90d": 9,
+    "types": {
+      "APPROVE_PROPOSAL": 10,
+      "TRANSFER": 8,
+      "REJECT_PROPOSAL": 7
+    },
+    "sources": {
+      "SQUADS_V4": 22,
+      "SYSTEM_PROGRAM": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.225676956,
+    "peakHour": 18,
+    "hourSpread": 5,
+    "riskScore": 0
+  },
+  "AWofQNYEnbQniPbyHNiVfrjy3i6PK7xZRUcHVfu7crCs": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 13,
+    "types": {
+      "APPROVE_PROPOSAL": 43,
+      "TRANSFER": 35,
+      "CANCEL_PROPOSAL": 1,
+      "APPROVE_TRANSACTION": 4,
+      "REJECT_PROPOSAL": 7,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 2,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 7,
+      "EXECUTE_CONFIG_TRANSACTION": 1
+    },
+    "sources": {
+      "SQUADS_V4": 80,
+      "SYSTEM_PROGRAM": 14,
+      "SQUADS_MPL": 6
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 6.951840538,
+    "peakHour": 20,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "ERd6pJjzWiCsNvuJWtPYvbusUsqxhVjMEnGdqEgXbHCK": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 12,
+    "types": {
+      "APPROVE_PROPOSAL": 42,
+      "TRANSFER": 22,
+      "REJECT_PROPOSAL": 6,
+      "APPROVE_TRANSACTION": 30
+    },
+    "sources": {
+      "SQUADS_V4": 59,
+      "SYSTEM_PROGRAM": 7,
+      "SQUADS_MPL": 34
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.076593167,
+    "peakHour": 0,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym": {
+    "protocols": [
+      "Helium"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 22,
+    "types": {
+      "TRANSFER": 28,
+      "APPROVE_PROPOSAL": 33,
+      "CANCEL_PROPOSAL": 1,
+      "APPROVE_TRANSACTION": 30,
+      "REJECT_PROPOSAL": 1,
+      "REJECT_TRANSACTION": 7
+    },
+    "sources": {
+      "SQUADS_V4": 44,
+      "SYSTEM_PROGRAM": 18,
+      "SQUADS_MPL": 38
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 1.032658175,
+    "peakHour": 17,
+    "hourSpread": 10,
+    "riskScore": 0
+  },
+  "kMTMpo28DPAZAEGzFJUAufMeiRavxkEupnC5sBb2e2g": {
+    "protocols": [
+      "Voltr"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 59,
+    "types": {
+      "APPROVE_PROPOSAL": 9,
+      "UNKNOWN": 21,
+      "TRANSFER": 56,
+      "UPGRADE_PROGRAM_INSTRUCTION": 14
+    },
+    "sources": {
+      "SQUADS_V4": 10,
+      "UNKNOWN": 21,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "BPF_UPGRADEABLE_LOADER": 14,
+      "SYSTEM_PROGRAM": 53
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.010509705,
+    "peakHour": 8,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n": {
+    "protocols": [
+      "Voltr"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "COLLECT_FEES": 92,
+      "TRANSFER": 2,
+      "APPROVE_PROPOSAL": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 2
+    },
+    "sources": {
+      "VOLTR_VAULT": 92,
+      "SYSTEM_PROGRAM": 2,
+      "SQUADS_V4": 6
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 8.573691085,
+    "peakHour": 14,
+    "hourSpread": 10,
+    "riskScore": 0
+  },
+  "6hAtgoStE4pakkV1yqgBBnvG6vCVKm8C7YBPo7ik1PA9": {
+    "protocols": [
+      "Voltr"
+    ],
+    "totalTxs": 5,
+    "recentTxs90d": 5,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 4,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.043331744,
+    "peakHour": 14,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "AkSsXqekpoWfpMzRwEp55uzDocYocGkL67E1Vz2mZ26e": {
+    "protocols": [
+      "Voltr"
+    ],
+    "totalTxs": 5,
+    "recentTxs90d": 5,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 2
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "SYSTEM_PROGRAM": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.099686897,
+    "peakHour": 0,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "GYQoCNwjj5GjNeuqxLv8E4a8h7NiFPnNT8G5JVsH42cX": {
+    "protocols": [
+      "Voltr"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 8,
+    "types": {
+      "TRANSFER": 87,
+      "APPROVE_PROPOSAL": 11,
+      "EXECUTE_CONFIG_TRANSACTION": 2
+    },
+    "sources": {
+      "SQUADS_V4": 19,
+      "SYSTEM_PROGRAM": 81
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 2.856638033,
+    "peakHour": 10,
+    "hourSpread": 6,
+    "riskScore": 0
+  },
+  "7KFLXnrRvRq8shX8MVMUdGFwgPa342B89c2nxvQXHpNi": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 35,
+    "recentTxs90d": 1,
+    "types": {
+      "APPROVE_PROPOSAL": 16,
+      "TRANSFER": 17,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 20,
+      "SYSTEM_PROGRAM": 15
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 4.145866413,
+    "peakHour": 10,
+    "hourSpread": 6,
+    "riskScore": 0
+  },
+  "BC6PeKaLnpu4oeibT94d79zsavgbg4NhwZ185NX76DTz": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 8,
+    "recentTxs90d": 0,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 3,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 5,
+      "SYSTEM_PROGRAM": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.099462291,
+    "peakHour": 10,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "Bkg1jdrwjQQPyUq2wydGNNri3k1aEfv6RbftLapCryg8": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 4,
+    "recentTxs90d": 0,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.099676713,
+    "peakHour": 10,
+    "hourSpread": 2,
+    "riskScore": 0
+  },
+  "GqUfUruHZgjPjBavqa7aWFoZG1Q5RZUmoUGqLuv6UDCL": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 8,
+    "recentTxs90d": 0,
+    "types": {
+      "APPROVE_PROPOSAL": 4,
+      "TRANSFER": 4
+    },
+    "sources": {
+      "SQUADS_V4": 4,
+      "SYSTEM_PROGRAM": 4
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.099568647,
+    "peakHour": 10,
+    "hourSpread": 2,
+    "riskScore": 0
+  },
+  "HrcKsK6VuLwfSbTJrj9KwwCUU86AnS6YSEsMCNTimtL3": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 19,
+    "recentTxs90d": 1,
+    "types": {
+      "APPROVE_PROPOSAL": 12,
+      "TRANSFER": 7
+    },
+    "sources": {
+      "SQUADS_V4": 12,
+      "SYSTEM_PROGRAM": 7
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.098708143,
+    "peakHour": 10,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "HtyNnjau7fdoHZ3LguboYbg9PUr2QnHFLA1yufA1pG2f": {
+    "protocols": [
+      "Tessera V"
+    ],
+    "totalTxs": 14,
+    "recentTxs90d": 3,
+    "types": {
+      "APPROVE_PROPOSAL": 3,
+      "COMPRESSED_NFT_MINT": 1,
+      "SWAP": 1,
+      "TRANSFER": 9
+    },
+    "sources": {
+      "SQUADS_V4": 3,
+      "BUBBLEGUM": 1,
+      "JUPITER": 1,
+      "SYSTEM_PROGRAM": 9
+    },
+    "swapCount": 1,
+    "nftCount": 1,
+    "defiTxCount": 1,
+    "balance": 0.078058813,
+    "peakHour": 10,
+    "hourSpread": 3,
+    "riskScore": 1
+  },
+  "FKy9ETj6y1pHHrZG7Wg6ARahLpjMxvWdTN1CNybseiy": {
+    "protocols": [
+      "LayerZero OFT"
+    ],
+    "totalTxs": 43,
+    "recentTxs90d": 43,
+    "types": {
+      "APPROVE_PROPOSAL": 11,
+      "TRANSFER": 25,
+      "TOKEN_MINT": 1,
+      "CANCEL_PROPOSAL": 1,
+      "CREATE_MULTISIG": 2,
+      "EXECUTE_CONFIG_TRANSACTION": 3
+    },
+    "sources": {
+      "SQUADS_V4": 22,
+      "SYSTEM_PROGRAM": 19,
+      "PHANTOM": 1,
+      "UNKNOWN": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 1.177608947,
+    "peakHour": 0,
+    "hourSpread": 9,
+    "riskScore": 0
+  },
+  "FW3mAwFdoQoCEKsk3EAoFeZHFPJGFkFieq866yXVnDNx": {
+    "protocols": [
+      "LayerZero OFT"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "INITIALIZE": 1,
+      "UNKNOWN": 94,
+      "TRANSFER": 4,
+      "SET_AUTHORITY": 1
+    },
+    "sources": {
+      "OTTERSEC_VERIFY": 1,
+      "UNKNOWN": 94,
+      "SYSTEM_PROGRAM": 3,
+      "PHANTOM": 1,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 2.390850415,
+    "peakHour": 9,
+    "hourSpread": 3,
+    "riskScore": 0
+  },
+  "2XmSeDwM7sZKPdPoPztbSjasCjejFNEv9ufEShzoThyC": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 70,
+    "recentTxs90d": 17,
+    "types": {
+      "TRANSFER": 18,
+      "APPROVE_PROPOSAL": 35,
+      "EXECUTE_CONFIG_TRANSACTION": 11,
+      "REJECT_PROPOSAL": 1,
+      "CREATE_MULTISIG": 5
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 17,
+      "SQUADS_V4": 53
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.228158145,
+    "peakHour": 7,
+    "hourSpread": 7,
+    "riskScore": 0
+  },
+  "71K5nFw3E3xHqECsRWFAMrr6JvTwkvEyb7mLgs3Gy52q": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 0,
+    "types": {
+      "INITIALIZE_ACCOUNT": 11,
+      "APPROVE_PROPOSAL": 12,
+      "TRANSFER": 15,
+      "UPDATE": 2,
+      "UNKNOWN": 46,
+      "CREATE_VAULT_TRANSACTION": 11,
+      "CREATE_PROPOSAL": 2,
+      "INITIALIZE": 1
+    },
+    "sources": {
+      "ASSOCIATED_TOKEN_PROGRAM": 11,
+      "SQUADS_V4": 29,
+      "SYSTEM_PROGRAM": 11,
+      "OTTERSEC_VERIFY": 3,
+      "UNKNOWN": 46
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 5.340892637,
+    "peakHour": 4,
+    "hourSpread": 6,
+    "riskScore": 0
+  },
+  "BsLt1EKWx7xBop3DWYg8ZpwGfXXxwEvj3ZYFuEp1DMdD": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 1,
+    "recentTxs90d": 1,
+    "types": {
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.2,
+    "peakHour": 8,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 69,
+    "types": {
+      "TRANSFER": 74,
+      "APPROVE_PROPOSAL": 26
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 54,
+      "SQUADS_V4": 46
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.137965143,
+    "peakHour": 13,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "H2ayWzPpVn6hux2Qmat7oDVcReJwZu31856V2CmNUj3i": {
+    "protocols": [
+      "SolvBTC"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 27,
+    "types": {
+      "APPROVE_PROPOSAL": 34,
+      "TRANSFER": 31,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "COMPRESSED_NFT_MINT": 29,
+      "COMPRESSED_NFT_UPDATE_METADATA": 2,
+      "COMPRESSED_NFT_BURN": 3
+    },
+    "sources": {
+      "SQUADS_V4": 35,
+      "SYSTEM_PROGRAM": 29,
+      "BUBBLEGUM": 35,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "swapCount": 0,
+    "nftCount": 35,
+    "defiTxCount": 0,
+    "balance": 0.417960796,
+    "peakHour": 3,
+    "hourSpread": 22,
+    "riskScore": 0
+  },
+  "29qW1KYZ5KLXGcJJ3TYJ6bpmYhujKUACT8H6dTWr3cDM": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 48,
+      "TRANSFER": 38,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 6,
+      "INITIALIZE_ACCOUNT": 1,
+      "CREATE_VAULT_TRANSACTION": 2,
+      "REJECT_PROPOSAL": 5
+    },
+    "sources": {
+      "SQUADS_V4": 67,
+      "SYSTEM_PROGRAM": 32,
+      "ASSOCIATED_TOKEN_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.124130312,
+    "peakHour": 10,
+    "hourSpread": 14,
+    "riskScore": 0
+  },
+  "5ndGNX8Z1tLhiG1NR8AY4QcqBcN2ha9fBCsccZzYEU6r": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 58,
+      "TRANSFER": 38,
+      "EXTEND_LOOKUP_TABLE": 2,
+      "CREATE_LOOKUP_TABLE": 1,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 59,
+      "SYSTEM_PROGRAM": 38,
+      "ADDRESS_LOOKUP_TABLE": 3
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.472151299,
+    "peakHour": 2,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "A78sEHhfKt6x6GUVZNDNdvbgr1EiqjpMQCW88LuyAuQo": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 96,
+    "types": {
+      "TRANSFER": 20,
+      "APPROVE_PROPOSAL": 74,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 3,
+      "REJECT_PROPOSAL": 3
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 20,
+      "SQUADS_V4": 80
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.165137741,
+    "peakHour": 6,
+    "hourSpread": 12,
+    "riskScore": 0
+  },
+  "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 15,
+      "CREATE_VAULT_TRANSACTION": 15,
+      "TRANSFER": 27,
+      "TOKEN_MINT": 1,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 15,
+      "UNKNOWN": 27
+    },
+    "sources": {
+      "SQUADS_V4": 60,
+      "SYSTEM_PROGRAM": 12,
+      "UNKNOWN": 28
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.631884235,
+    "peakHour": 2,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "DaGUge91XiebtdQaiWHXzPMNCUADJPZFPwPjzX4sGF95": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 27,
+    "types": {
+      "APPROVE_PROPOSAL": 54,
+      "TRANSFER": 21,
+      "UNKNOWN": 10,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 4,
+      "CREATE_VAULT_TRANSACTION": 7,
+      "REJECT_PROPOSAL": 1,
+      "EXTEND_LOOKUP_TABLE": 1,
+      "CREATE_LOOKUP_TABLE": 1,
+      "SWAP": 1
+    },
+    "sources": {
+      "SQUADS_V4": 75,
+      "SYSTEM_PROGRAM": 12,
+      "UNKNOWN": 10,
+      "ADDRESS_LOOKUP_TABLE": 2,
+      "JUPITER": 1
+    },
+    "swapCount": 1,
+    "nftCount": 0,
+    "defiTxCount": 1,
+    "balance": 0.783484345,
+    "peakHour": 15,
+    "hourSpread": 11,
+    "riskScore": 1
+  },
+  "EhhdyQpK8pcM75EKQgpu31okQpYAby57CPnPRA7CsWLS": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 71,
+      "TRANSFER": 27,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 73,
+      "SYSTEM_PROGRAM": 27
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.097570834,
+    "peakHour": 9,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "ExAHc3u2KHopmziWyyULWobZ2EAgymEmqQR5fo5T8baM": {
+    "protocols": [
+      "GMSOL"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 9,
+      "APPROVE_PROPOSAL": 74,
+      "UNKNOWN": 15,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 5,
+      "SQUADS_V4": 80,
+      "UNKNOWN": 15
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.200210251,
+    "peakHour": 14,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT": {
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 33,
+    "types": {
+      "TRANSFER": 84,
+      "APPROVE_PROPOSAL": 8,
+      "REJECT_PROPOSAL": 1,
+      "SWAP": 4,
+      "UNKNOWN": 2,
+      "NFT_SALE": 1
+    },
+    "sources": {
+      "SQUADS_V4": 14,
+      "SYSTEM_PROGRAM": 70,
+      "SOLANA_PROGRAM_LIBRARY": 7,
+      "PHANTOM": 2,
+      "DFLOW": 1,
+      "TENSOR": 2,
+      "OKX_DEX_ROUTER": 1,
+      "JUPITER": 2,
+      "UNKNOWN": 1
+    },
+    "swapCount": 4,
+    "nftCount": 1,
+    "defiTxCount": 2,
+    "balance": 0.070076614,
+    "peakHour": 17,
+    "hourSpread": 15,
+    "riskScore": 1
+  },
+  "66kDYpYtuGkaZF2ho64VgEQuAgBPGjY17HtcTtANtNR8": {
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 71,
+      "NFT_SALE": 24,
+      "UNKNOWN": 1,
+      "SWAP": 2,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "INITIALIZE_USER": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 69,
+      "MAGIC_EDEN": 24,
+      "TENSOR": 1,
+      "OKX_DEX_ROUTER": 2,
+      "SOLANA_PROGRAM_LIBRARY": 2,
+      "BUBBLEGUM": 1,
+      "KAMINO_FARMS": 1
+    },
+    "swapCount": 2,
+    "nftCount": 25,
+    "defiTxCount": 1,
+    "balance": 2.449731936,
+    "peakHour": 0,
+    "hourSpread": 10,
+    "riskScore": 1
+  },
+  "Ckw8hHnP2ABcndEQymJ37BENt3gpw6ALwH3wMpYpjXvk": {
+    "protocols": [
+      "GMSOL Deploy"
+    ],
+    "totalTxs": 32,
+    "recentTxs90d": 32,
+    "types": {
+      "APPROVE_PROPOSAL": 9,
+      "CREATE_PROPOSAL": 9,
+      "CREATE_VAULT_TRANSACTION": 9,
+      "EXECUTE_VAULT_TRANSACTION": 3,
+      "REJECT_PROPOSAL": 1,
+      "TRANSFER": 1
+    },
+    "sources": {
+      "SQUADS_V4": 31,
+      "SYSTEM_PROGRAM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.0035768,
+    "peakHour": 13,
+    "hourSpread": 8,
+    "riskScore": 0
+  },
+  "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 46,
+      "TRANSFER": 47,
+      "TOKEN_MINT": 1,
+      "CANCEL_PROPOSAL": 2,
+      "SWAP": 1,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_PROPOSAL": 2
+    },
+    "sources": {
+      "SQUADS_V4": 72,
+      "SYSTEM_PROGRAM": 25,
+      "UNKNOWN": 1,
+      "JUPITER": 1,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 1,
+    "nftCount": 1,
+    "defiTxCount": 1,
+    "balance": 0.265515715,
+    "peakHour": 18,
+    "hourSpread": 11,
+    "riskScore": 1
+  },
+  "A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 32,
+      "APPROVE_PROPOSAL": 59,
+      "EXECUTE_CONFIG_TRANSACTION": 3,
+      "CANCEL_PROPOSAL": 2,
+      "COMPRESSED_NFT_MINT": 1,
+      "REJECT_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 94,
+      "SYSTEM_PROGRAM": 5,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 0,
+    "nftCount": 1,
+    "defiTxCount": 0,
+    "balance": 0.095300375,
+    "peakHour": 21,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "BvQhUYDB4CsrDziuzpUvEy9N4EzYTMy1TASgCatFUHcg": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 3,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 2,
+      "CREATE_VAULT_TRANSACTION": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 1,
+      "SQUADS_V4": 2
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.49642814,
+    "peakHour": 17,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "HC92UzBW5ENtdQ5DSHxZhuSLGchftNfxmdxD1ooj7JiV": {
+    "protocols": [
+      "Ore"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "2rqxgifitmi4Gu6CJcYbxwgE4RtLvDs5nEx4tfTxSfKg": {
+    "protocols": [
+      "Carrot"
+    ],
+    "totalTxs": 0,
+    "recentTxs90d": 0,
+    "types": {},
+    "sources": {},
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 0,
+    "hourSpread": 0,
+    "riskScore": 0
+  },
+  "9vtZSD8staKHC27aPXFMmc6rHJSrpAYjJ5oZWVDmsE2y": {
+    "protocols": [
+      "Carrot"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "UPGRADE_PROGRAM_INSTRUCTION": 1,
+      "UNKNOWN": 99
+    },
+    "sources": {
+      "BPF_UPGRADEABLE_LOADER": 1,
+      "UNKNOWN": 99
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 11.050256458,
+    "peakHour": 20,
+    "hourSpread": 1,
+    "riskScore": 0
+  },
+  "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs": {
+    "protocols": [
+      "Carrot"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 0,
+    "types": {
+      "TRANSFER": 50,
+      "APPROVE_PROPOSAL": 44,
+      "REJECT_PROPOSAL": 5,
+      "CANCEL_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 85,
+      "SYSTEM_PROGRAM": 15
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.094191675,
+    "peakHour": 17,
+    "hourSpread": 16,
+    "riskScore": 0
+  },
+  "3rJe7FAeMDxUYkLMYVcBj1ZPX4o8Ukt4h3mWgyS9a6Jy": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 7,
+      "UNKNOWN": 25,
+      "CLOSE_ACCOUNT": 2,
+      "REJECT_PROPOSAL": 1,
+      "TRANSFER": 65
+    },
+    "sources": {
+      "SQUADS_V4": 8,
+      "UNKNOWN": 25,
+      "SOLANA_PROGRAM_LIBRARY": 3,
+      "SYSTEM_PROGRAM": 64
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.645994905,
+    "peakHour": 9,
+    "hourSpread": 20,
+    "riskScore": 0
+  },
+  "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 48,
+      "APPROVE_PROPOSAL": 39,
+      "REJECT_PROPOSAL": 4,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 9
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 30,
+      "SQUADS_V4": 70
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.843338249,
+    "peakHour": 10,
+    "hourSpread": 11,
+    "riskScore": 0
+  },
+  "9FMXwAQbR7jT149JLcWxXaJHZCg37mh3YHybtYHydT2J": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 52,
+      "APPROVE_PROPOSAL": 30,
+      "REJECT_PROPOSAL": 9,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 9
+    },
+    "sources": {
+      "SQUADS_V4": 75,
+      "SYSTEM_PROGRAM": 25
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0.117977484,
+    "peakHour": 12,
+    "hourSpread": 13,
+    "riskScore": 0
+  },
+  "9KLgXuQc1VXStEx6gppqe6BhX5jE75hLufkXmRwZmWLL": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "APPROVE_PROPOSAL": 31,
+      "TRANSFER": 45,
+      "REJECT_PROPOSAL": 13,
+      "UNKNOWN": 5,
+      "COMPRESSED_NFT_MINT": 1,
+      "INITIALIZE_ACCOUNT": 1,
+      "COMPRESSED_NFT_TRANSFER": 1,
+      "SWAP": 3
+    },
+    "sources": {
+      "SQUADS_V4": 44,
+      "SYSTEM_PROGRAM": 40,
+      "SOLANA_PROGRAM_LIBRARY": 5,
+      "UNKNOWN": 5,
+      "BUBBLEGUM": 2,
+      "ASSOCIATED_TOKEN_PROGRAM": 1,
+      "OKX_DEX_ROUTER": 2,
+      "JUPITER": 1
+    },
+    "swapCount": 3,
+    "nftCount": 2,
+    "defiTxCount": 1,
+    "balance": 4.615912239,
+    "peakHour": 13,
+    "hourSpread": 15,
+    "riskScore": 1
+  },
+  "BkBn8dQ6fFUaGEAaP1HpVzKrqgiUHSWrgPKJxXw6wM98": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 5,
+    "recentTxs90d": 5,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 5
+    },
+    "sources": {
+      "SQUADS_V4": 5
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 14,
+    "hourSpread": 4,
+    "riskScore": 0
+  },
+  "C31s8y9zXnUbXzejPQ4ZaUj8JdR6j3zseAAcmDr8k51x": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 100,
+    "recentTxs90d": 100,
+    "types": {
+      "TRANSFER": 72,
+      "UNKNOWN": 3,
+      "OPEN_POSITION": 4,
+      "SWAP": 16,
+      "COMPRESSED_NFT_MINT": 1,
+      "CLOSE_POSITION": 3,
+      "COMPOUND_FEES": 1
+    },
+    "sources": {
+      "SYSTEM_PROGRAM": 64,
+      "UNKNOWN": 3,
+      "SOLANA_PROGRAM_LIBRARY": 8,
+      "DEFITUNA": 8,
+      "JUPITER": 15,
+      "OKX_DEX_ROUTER": 1,
+      "BUBBLEGUM": 1
+    },
+    "swapCount": 16,
+    "nftCount": 1,
+    "defiTxCount": 15,
+    "balance": 5.220253507,
+    "peakHour": 16,
+    "hourSpread": 15,
+    "riskScore": 3
+  },
+  "ESU3Nb2Xp1YEsKdzVCipqQ1wJHTUgTGDYncwhrUxKKRk": {
+    "protocols": [
+      "DefiTuna"
+    ],
+    "totalTxs": 12,
+    "recentTxs90d": 12,
+    "types": {
+      "CREATE_VAULT_TRANSACTION": 12
+    },
+    "sources": {
+      "SQUADS_V4": 12
+    },
+    "swapCount": 0,
+    "nftCount": 0,
+    "defiTxCount": 0,
+    "balance": 0,
+    "peakHour": 18,
+    "hourSpread": 5,
+    "riskScore": 0
+  }
+}

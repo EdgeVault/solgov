@@ -1,0 +1,119 @@
+{
+  "protocol": "Parcl",
+  "researchedAt": "2026-04-17T22:15:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.parcl.co/addresses.md"
+    }
+  ],
+  "programs": [
+    {
+      "id": "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y",
+      "name": "Parcl v3",
+      "role": "synthetic real-estate perps",
+      "alreadyTracked": false,
+      "upgradeAuthority": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "PaRCLKPpkfHQfXTruT8yhEUx5oRNH8z8erBnzEerc8a",
+      "name": "Parcl Pyth oracle adapter",
+      "role": "oracle integration",
+      "alreadyTracked": false,
+      "upgradeAuthority": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "Di9ZVJeJrRZdQEWzAFYmfjukjR5dUQb7KMaDmv34rNJg",
+      "name": "Parcl SPL Governance",
+      "role": "governance program",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "2gWf5xLAzZaKX9tQj9vuXsaxTWtzTZDFRn21J3zjNVgu",
+      "name": "Parcl Staking",
+      "role": "PRCL staking",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "5tu3xkmLfud5BAwSuQke4WSjoHcQ52SbrPwX9es8j6Ve",
+      "name": "Parcl Merkle Distributor",
+      "role": "airdrop",
+      "alreadyTracked": false,
+      "upgradeAuthority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "7qCHZqcbLm9VYUCLtFmFFSyDsvuZ5GHhypv7b4JRAEUE",
+      "role": "Parcl main multisig (tracked)",
+      "threshold": "3/5",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    },
+    {
+      "address": "DK37X6PNtzS4oiJAWgJ364NkUq6us3gf4u7GVRdezqvW",
+      "role": "Parcl SECOND multisig - 1/8 threshold with 10s timelock. Owns vault 5JKhn62n controlling program `xoVUinQWoi4Bxre6oqEJHp9WrJaHacs74gtYtondogm`",
+      "threshold": "1/8",
+      "timelock": "10s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": false,
+      "notes": "WEAKEST CONFIGURATION in tracked set - any one of 8 keys can execute. 10s timelock provides near-zero defence. Investigate whether this is an automation keeper wallet vs admin."
+    }
+  ],
+  "authorities": [
+    {
+      "address": "6dDCUve96a1Cqw3Zv34wfbCGwU77UEPe13953UdanTnT",
+      "role": "Parcl authorized keeper: Liquidator",
+      "kind": "plain-wallet",
+      "alreadyTracked": false
+    },
+    {
+      "address": "2USsSXPfLcvyFNB2HcsFkkuJ2s2GkHmKZjnZXx6usp93",
+      "role": "Parcl authorized keeper: Settler",
+      "kind": "plain-wallet",
+      "alreadyTracked": false
+    }
+  ],
+  "vaultPdas": [
+    {
+      "address": "5JKhn62nyvAE7aRb5zksXiovDEPX6mAcbdxFsJEdVmbw",
+      "parentMultisig": "DK37X6PNtzS4oiJAWgJ364NkUq6us3gf4u7GVRdezqvW",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "xoVUinQWoi4Bxre6oqEJHp9WrJaHacs74gtYtondogm"
+      ],
+      "alreadyTracked": true
+    },
+    {
+      "address": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "parentMultisig": "BRwx9yUrdP9aZMxJGgarLCKcNr3iCn7yj1nDAy4jfUUk",
+      "vaultIndex": "unknown",
+      "notes": "Squads V3 governance multisig - discovered via RPC concentration sweep April 17 2026",
+      "alreadyTracked": false
+    },
+    {
+      "address": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "parentMultisig": "7qCHZqcbLm9VYUCLtFmFFSyDsvuZ5GHhypv7b4JRAEUE",
+      "vaultIndex": "unknown",
+      "notes": "Squads V3 - Parcl perps uses tracked multisig - discovered via RPC concentration sweep April 17 2026",
+      "alreadyTracked": false
+    }
+  ],
+  "governanceModel": "Parcl has a 3/5 main multisig PLUS a 1/8 multisig with 10s timelock. The 1/8 multisig is an active upgrade authority on an unidentified program (xoVUinQ). Two additional plain-wallet keepers (Liquidator + Settler). SPL Governance + Squads V4 hybrid.",
+  "gaps": [
+    "Identify program xoVUinQWoi4Bxre6oqEJHp9WrJaHacs74gtYtondogm - is this a Parcl automation program or something else?",
+    "Upgrade authority for all 5 Parcl programs - RPC needed",
+    "Investigate whether 1/8 multisig is a team admin or an operational automation wallet. The threshold is structural anomaly either way."
+  ],
+  "confidence": "high for program list, low for 1/8 multisig context",
+  "notes": "Parcl has the weakest Squads V4 threshold configuration we've tracked (1/8 with 10s timelock). Need to understand its role before scoring it."
+}

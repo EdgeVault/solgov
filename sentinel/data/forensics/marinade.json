@@ -1,0 +1,113 @@
+{
+  "protocol": "Marinade",
+  "researchedAt": "2026-04-17T22:15:00Z",
+  "researcher": "manual",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.marinade.finance/developers/contract-addresses"
+    }
+  ],
+  "programs": [
+    {
+      "id": "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD",
+      "name": "Marinade Liquid Staking",
+      "role": "mSOL minting + validator delegation",
+      "alreadyTracked": false,
+      "upgradeAuthority": "551FBXSXdhcRDDkdcb3ThDRg84Mwe5Zs6YjJ1EEoyzBp",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "mnspJQyF1KdDEs5c6YJPocYdY1esBgVQFufM2dY9oDk",
+      "name": "Native Staking Proxy",
+      "role": "native stake delegation proxy",
+      "alreadyTracked": false,
+      "upgradeAuthority": "6YAju4nd4t7kyuHV6NvVpMepMk11DgWyYjKVJUak2EEm",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "GovMaiHfpVPw8BAM1mbdzgmSZYDw2tdP32J2fapoQoYs",
+      "name": "Marinade Council (SPL Governance Realms)",
+      "role": "governance",
+      "alreadyTracked": false,
+      "upgradeAuthority": "6egAu2HDLcSgeUYmiBvNLgp7Bd4nPk16gX9MvWuJpeX2",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "MR2LqxoSbw831bNy68utpu5n4YqBH3AzDmddkgk9LQv",
+      "name": "Liquid Staking Referral",
+      "role": "referral rewards",
+      "alreadyTracked": false,
+      "upgradeAuthority": "6XQFdWeogb5C8c1KsSCkK6rzzxLxzxsPQqoXge9oJ9xR",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "dstK1PDHNoKN9MdmftRzsEbXP5T1FTBiQBm1Ee3meVd",
+      "name": "Directed Stake",
+      "role": "mSOL holder-directed stake",
+      "alreadyTracked": false,
+      "upgradeAuthority": "2aQP7NGhktKR92EsHKSoRzcw5FfcZ8oBWgyoGdB3ouww",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "tokdh9ZbWPxkFzqsKqeAwLDk6J6a8NBZtQanVuuENxa",
+      "name": "Tokadapt",
+      "role": "token adapter",
+      "alreadyTracked": false,
+      "upgradeAuthority": "CWRgRr4udD66JbVtS9u2Gu7LHBi5m6SM3ytvmWobThEQ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "tovt1VkTE2T4caWoeFP6a2xSFoew5mNpd7FWidyyMuk",
+      "name": "Escrow-Relocker (Tribeca Plug-in)",
+      "role": "locked-token escrow",
+      "alreadyTracked": false,
+      "upgradeAuthority": "AEej7Lywu8EzMznXnxhb1493yCVnmLNXaCKYfUNvQQaJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "va12L6Z9fa5aGJ7gxtJuQZ928nySAk5UetjcGPve3Nu",
+      "name": "Validator Gauges",
+      "role": "validator reward gauges",
+      "alreadyTracked": false,
+      "upgradeAuthority": "CLydpgqZty5HQq1uMtbXpH1vtmN7erhdBSPbn12NGLmb",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "LigadctxNRkZied3WuhX525vUhDkuhXNK5DyeijeDnh",
+      "name": "Liquidity Gauges",
+      "role": "LP reward gauges",
+      "alreadyTracked": false,
+      "upgradeAuthority": "3cBS14yanCZPRKgdCLnmxHWXFfGjW8bid5zxj7UPqWW5",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "VoteMBhDCqGLRgYpp9o7DGyq81KNmwjXQRAHStjtJsS",
+      "name": "Voter Stake Registry (SPL Gov Plugin)",
+      "role": "voter escrow / VSR",
+      "alreadyTracked": false,
+      "upgradeAuthority": "2w6ny74cU6yRxkD6ZACh5M1JznLQ1KB6AUsB7zo2NBHX",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "magrsHFQxkkioAy45VWnZnFBBdKVdy2ZiRoRGYT9Wed",
+      "role": "Marinade multisig (V3, tracked)",
+      "threshold": "?",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "threshold + members via V3 layout"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads V3 + SPL Governance Realms council. 10 programs confirmed via docs. Most programs' upgrade authorities not in local data.",
+  "gaps": [
+    "Upgrade authority for every Marinade program (10 RPC calls)",
+    "Confirm Marinade Council (SPL Gov Realms) governance config"
+  ],
+  "confidence": "high for program list, low for governance chain",
+  "notes": "Marinade publishes a comprehensive address list. Largest program surface of the LSTs tracked."
+}

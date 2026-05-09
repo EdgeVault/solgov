@@ -1,0 +1,73 @@
+{
+  "protocol": "Nosana",
+  "researchedAt": "2026-04-17T22:22:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.nosana.io/"
+    },
+    {
+      "kind": "github",
+      "url": "https://github.com/nosana-ci"
+    }
+  ],
+  "programs": [
+    {
+      "id": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "name": "Nosana Jobs",
+      "role": "GPU compute job scheduler",
+      "alreadyTracked": true,
+      "source": "monitor-state.json programAuthorities",
+      "upgradeAuthority": null,
+      "upgradeAuthorityKind": "IMMUTABLE - not upgradeable"
+    },
+    {
+      "id": "(Staking)",
+      "name": "Nosana Staking",
+      "role": "NOS staking",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "exact ID from docs"
+      ]
+    },
+    {
+      "id": "(Rewards)",
+      "name": "Nosana Rewards",
+      "role": "reward distribution",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "exact ID"
+      ]
+    },
+    {
+      "id": "(Nodes)",
+      "name": "Nosana Nodes",
+      "role": "node registry",
+      "alreadyTracked": false,
+      "needsRpcVerify": [
+        "exact ID"
+      ]
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "ktKWwDt5J8NFMi5jQNRRBDKAhimU5tnrGCcXuYJmxqE",
+      "role": "Nosana multisig (tracked)",
+      "threshold": "?",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "threshold + members"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads multisig. Multiple programs (Jobs, Staking, Rewards, Nodes) per dashboard protocols.ts.",
+  "gaps": [
+    "Program IDs for Staking/Rewards/Nodes",
+    "All upgrade authorities",
+    "Confirm multisig threshold"
+  ],
+  "confidence": "low"
+}

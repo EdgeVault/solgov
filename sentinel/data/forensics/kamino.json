@@ -1,0 +1,117 @@
+{
+  "protocol": "Kamino",
+  "researchedAt": "2026-04-17T21:15:00Z",
+  "researcher": "manual - verified via OtterSec verify + Kamino GitHub + docs",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.kamino.finance/"
+    },
+    {
+      "kind": "github",
+      "url": "https://github.com/Kamino-Finance"
+    },
+    {
+      "kind": "github-klend",
+      "url": "https://github.com/Kamino-Finance/klend"
+    },
+    {
+      "kind": "github-kliquidity-sdk",
+      "url": "https://github.com/Kamino-Finance/kliquidity-sdk"
+    },
+    {
+      "kind": "github-kfarms",
+      "url": "https://github.com/Kamino-Finance/kfarms"
+    },
+    {
+      "kind": "ottersec-verify",
+      "url": "https://verify.osec.io/status/KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+      "note": "confirms KLend2g3c built from Kamino-Finance/klend"
+    }
+  ],
+  "programs": [
+    {
+      "id": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+      "name": "Kamino Lending (kLend) mainnet",
+      "role": "lending market",
+      "source": "docs.kamino.finance + Anchor.toml + OtterSec verified build",
+      "upgradeAuthority": "GzFgdRJXmawPhGeBsyRCDLx4jAKPsvbUqoqitzppkzkW",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA",
+      "alreadyTracked": true
+    },
+    {
+      "id": "SLendK7ySfcEzyaFqy93gDnD3RtrpXJcnRwb6zFHJSh",
+      "name": "Kamino Lending staging",
+      "role": "staging deployment on mainnet",
+      "source": "github.com/Kamino-Finance/klend README",
+      "alreadyTracked": false,
+      "upgradeAuthority": "BxdLNhoRXVs45wTVAZBrYQUkxbex5zXFCaJtsuRpoqMj",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc",
+      "name": "Kamino Liquidity (kliquidity)",
+      "role": "concentrated liquidity manager across Orca/Raydium/Meteora",
+      "source": "github.com/Kamino-Finance/kliquidity-sdk",
+      "alreadyTracked": false,
+      "upgradeAuthority": "3pAxu6C9ykZvyyzdknZvmz6CbWGZPTjRevjk4PRF5ib7",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr",
+      "name": "Kamino KFarms",
+      "role": "LP staking / rewards emissions",
+      "source": "github.com/Kamino-Finance/kfarms Anchor.toml",
+      "upgradeAuthority": "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY",
+      "upgradeAuthorityKind": "vault-PDA of multisig 5HzXCm7omo (5/10, 43200s timelock) - parent multisig is Kamino's KFarms admin, NOT Switchboard as solgov-api.ts currently labels",
+      "alreadyTracked": true
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM",
+      "role": "main Kamino multisig (currently tracked). What this multisig actually owns is unconfirmed - it is not the parent of any vault PDA in our scan set.",
+      "threshold": "5/10",
+      "timelock": "43200s (12h)",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "what programs this multisig's vault[0] is upgrade authority for"
+      ]
+    },
+    {
+      "address": "5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk",
+      "role": "KFarms admin (owns FarmsPZp via vault[0] CivjSDKgT)",
+      "threshold": "5/10",
+      "timelock": "43200s (12h)",
+      "configAuthority": "autonomous",
+      "source": "verified-programs-governance.json + extra-multisigs.json member list",
+      "alreadyTracked": false,
+      "notes": "solgov-api.ts mislabels the CivjSDKgT vault as 'Switchboard vault'; this IS a Kamino multisig"
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY",
+      "parentMultisig": "5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk",
+      "vaultIndex": 0,
+      "programsControlled": [
+        "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr"
+      ],
+      "alreadyTracked": true,
+      "notes": "currently mislabelled 'Switchboard vault' in solgov-api.ts - must relabel"
+    }
+  ],
+  "governanceModel": "Squads V4 multisigs for KFarms (confirmed 5/10 with 12h timelock). KLend and KLiquidity upgrade authorities NOT confirmed from local data - main tracked multisig (6hhBGCt) has the same 5/10 12h config but its vault PDA is not in our current scan set. Targeted RPC needed.",
+  "gaps": [
+    "KLend2g3c upgrade authority - need getAccountInfo(ProgramData) to confirm which multisig vault",
+    "6LtLpnUF (KLiquidity) upgrade authority - same",
+    "SLendK7yS (staging KLend) upgrade authority - same",
+    "Add 5HzXCm7omo to tracked-multisigs.json as 'Kamino KFarms' (currently unlabelled)",
+    "Correct solgov-api.ts vault label: CivjSDKgT is Kamino, not Switchboard",
+    "Determine if main 6hhBGCtmg7 multisig owns additional programs we don't track"
+  ],
+  "confidence": "medium",
+  "notes": "Label errors in solgov-api.ts led to earlier 'Kamino kLend vault has 1 program' finding being wrong - that vault (G9jXsKZ) is LayerZero OFT's. Kamino has at least one untracked multisig (5HzXCm7omo) handling KFarms. Need targeted RPC pass to confirm KLend/KLiquidity upgrade authorities before we can claim full coverage."
+}

@@ -1,0 +1,75 @@
+{
+  "protocol": "GMSOL Deploy",
+  "researchedAt": "2026-04-17T22:28:00Z",
+  "researcher": "manual stub",
+  "sources": [],
+  "programs": [
+    {
+      "id": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH",
+      "name": "GMSOL Deploy program 1",
+      "alreadyTracked": true,
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj",
+      "name": "GMSOL Deploy program 2",
+      "alreadyTracked": true,
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2",
+      "name": "GMSOL Deploy program 3",
+      "alreadyTracked": true,
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR",
+      "name": "GMSOL Deploy program 4",
+      "alreadyTracked": true,
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ",
+      "name": "GMSOL Deploy program 5",
+      "alreadyTracked": true,
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    },
+    {
+      "id": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd",
+      "name": "GMSOL Deploy program 6",
+      "alreadyTracked": true,
+      "upgradeAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+      "role": "GMSOL Deploy multisig (tracked)",
+      "threshold": "2/3",
+      "timelock": "3600s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [
+    {
+      "address": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "parentMultisig": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+      "vaultIndex": 0,
+      "programsControlled": 6,
+      "alreadyTracked": true
+    }
+  ],
+  "governanceModel": "Squads V4 2/3 1h timelock, 6 programs.",
+  "gaps": [
+    "Program roles"
+  ],
+  "confidence": "medium"
+}

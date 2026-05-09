@@ -1,0 +1,12 @@
+{
+  "lastFireAt": {
+    "INSURANCE_BREACH|ExAmPLeAdVeRsArY1111111111111111111111111111": 1777447804302
+  },
+  "hourlyFireCounts": {
+    "INSURANCE_BREACH": [
+      1777447804302
+    ]
+  },
+  "digestCounters": {},
+  "digestFirstSuppressedAt": {}
+}

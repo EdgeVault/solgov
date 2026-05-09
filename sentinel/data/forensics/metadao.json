@@ -1,0 +1,49 @@
+{
+  "protocol": "MetaDAO",
+  "researchedAt": "2026-04-17T22:24:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.themetadao.org/"
+    },
+    {
+      "kind": "github",
+      "url": "https://github.com/metaDAOproject/futarchy"
+    }
+  ],
+  "programs": [
+    {
+      "id": "autoQP9RmUNkzzKRXsMkWicDVZ3h29vvyMDcAYjCxxg",
+      "name": "MetaDAO Autocrat",
+      "role": "futarchy proposal program",
+      "alreadyTracked": false,
+      "confidence": "low",
+      "needsRpcVerify": [
+        "confirm ID"
+      ],
+      "upgradeAuthority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "upgradeAuthorityKind": "fetched via getAccountInfo on ProgramData PDA"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH",
+      "role": "MetaDAO multisig (tracked)",
+      "threshold": "3/12",
+      "timelock": "0s",
+      "configAuthority": "autonomous",
+      "alreadyTracked": true
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads V4 3/12, 0 timelock. Futarchy-based governance system.",
+  "gaps": [
+    "The 'propFYxqm' program ID appears to be controlled by Helium (verified in helium-vault-verification.json). This means it is NOT MetaDAO's proposals program - need to find MetaDAO's actual program ID.",
+    "Find Autocrat/Futarchy program IDs",
+    "CORRECTION: previously listed propFYxqm as MetaDAO Proposals, but OtterSec verified it as helium/modular-governance. Removed from this file, added to helium.json."
+  ],
+  "confidence": "low",
+  "notes": " Apr 17 evening: removed mislabelled propFYxqm program (actually Helium)."
+}

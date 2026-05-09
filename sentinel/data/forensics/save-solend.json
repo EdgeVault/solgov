@@ -1,0 +1,7 @@
+{
+  "protocol":"Save (Solend)","researchedAt":"2026-04-17T23:00:00Z","researcher":"manual",
+  "sources":[{"kind":"docs","url":"https://docs.save.finance/"}],
+  "programs":[{"id":"So1endDq2YkqhipRh3WViPa8hdiSpxWy6z3Z6tMCpAo","name":"Solend / Save","role":"lending","alreadyTracked":true,"needsRpcVerify":["upgradeAuthority"]}],
+  "multisigs":[],"authorities":[],"vaultPdas":[],
+  "governanceModel":"Solend (rebranded to Save). Program ID well-known. No Squads multisig currently in tracked list.","gaps":["Add Save governance multisig","Upgrade authority confirmation"],"confidence":"low"
+}

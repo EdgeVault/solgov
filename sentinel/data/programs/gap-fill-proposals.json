@@ -1,0 +1,959 @@
+{
+  "generatedAt": "2026-05-08T09:00:24.166Z",
+  "reverseMapEntries": 127,
+  "proposals": [
+    {
+      "vault": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "vaultLabel": "Helium vault 2",
+      "severity": "CRITICAL",
+      "protocolMatched": "Helium",
+      "proposedProtocol": "Helium",
+      "currentProgramsListed": 1,
+      "vaultProgramCount": 24,
+      "missingPrograms": [
+        {
+          "programDataAccount": "WDHWo6kTfndy2xKzLcze9aVwomp5to8eTaCJktifqUz",
+          "programId": "mfanLprNnaiP4RX9Zz1BMcDosYHCqnG24H1fMEbi9Gn",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "ec5NgrYWhZBjoWracq3WQca6jDEAwDWibgDDSFWrwww",
+          "programId": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT",
+          "knownName": "Helium Data Credits",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "2KWAhXyZvNQoPCTR1gAKLZYWW4jRefFitvQjRWLhzhMz",
+          "programId": "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs",
+          "knownName": "Helium Modular Governance (proposals)",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "2oRmyQGGzxs9WxkYRUj4Yu9CrWxAwZKW7pNH9jBYvfgs",
+          "programId": "nprx42sXf5rpVnwBWEdRg1d8tuCWsTuVLys1pRWwE6p",
+          "knownName": "Helium Modular Governance (proposals v2)",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "3nfjrM9UfPJxsqVqvzf1aa9MptAMnGGDuQGPy9Y1jGWv",
+          "programId": "1atrmQs3eq1N2FEYWu6tyTXbCjP4uQwExpjtnhXtS8h",
+          "knownName": "Helium IoT Distributor",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "5eD2ns9eqYhRMQVaJo1cExfY1JQme6ybt2ZgjkXLA1cU",
+          "programId": "tuktukUrfhXT6ZT77QTU8RQtvgL967uRuVagWF57zVA",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "5f7TWpzsBFPKjaoAP5mZ5t2FZCV7ZuA9usZVr5K1PDTz",
+          "programId": "cronAjRZnJn3MTP3B9kE62NWDrjSuAPVXf9c4hu4grM",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "5pW4TFoaHszXUHLK6AnLcv3peYTvHiu8ExKeMtGeLho8",
+          "programId": "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR",
+          "knownName": "Helium Sub DAOs",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "5x63AgNQWkw7hNG5poEhDdQamWeQVwDpPAuwThZiBMR7",
+          "programId": "treaf4wWBBty3fHdyBpo35Mz84M8k3heKXmjmi9vFt5",
+          "knownName": "Helium Treasury Management",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "612cWU5D6At4tttf2ryJoC1QWomNEEhGN2cVxv5hWEyu",
+          "programId": "topqqzQZroCyRrgyM5zVq6xkFDVnfF13iixSjajydgU",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "7xmHwZCeR34udycMUrMzKsPvA9WcXePh52L1paGSqGf3",
+          "programId": "memMa1HG4odAFmUbGWfPwS1WWfK95k99F2YTkGvyxZr",
+          "knownName": "Helium Mobile Entity",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "8NSe9xRgDYFjyS2Kx6FZfwkK6udEw19dT6Tdxvvb2q3R",
+          "programId": "noEmmgLmQdk6DLiPV8CSwQv3qQDyGEhz9m5A4zhtByv",
+          "knownName": "Helium No-Emit",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "95gFBuAJqWhxnFXNpyJYeXjLACbwqaRfXJYLDAhW5cLo",
+          "programId": "orgdXvHVLkWgBYerptASkAwkZAE563CJUu717dMNx5f",
+          "knownName": "Helium Organisations",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "9uGEpvoQzzuDGHayfLqSrLdx7hoC4BgTvChGrQGC3Tzc",
+          "programId": "hvsrNC3NKbcryqDs2DocYHZ9yPKEVzdSjQG6RVtK1s8",
+          "knownName": "Helium Voter Stake Registry",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "A8VEPbBLUdo7LCdpQR6Nvwi8tfU4Q3fCgbgjKu3sY7Ez",
+          "programId": "stcfiqW3fwD9QCd8Bqr1NBLrs7dftZHBQe7RiMMA4aM",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "BSbzkBGA333NCuLTvfarqnj54KLJjt5sZWqujy94GLqs",
+          "programId": "porcSnvH9pvcYPmQ65Y8qcZSRxQBiBBQX7UV5nmBegy",
+          "knownName": "Helium Price Oracle",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "BfCv4387kNq3osADrM8mw2TE2e39tcmot37EuKuqHu1g",
+          "programId": "hexbnKYoA2GercNNhHUCCfrTRWrHjT6ujKPXTa5NPqJ",
+          "knownName": "Helium Hex Boosting",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "BvQLZFuj14sorcYWZFq4uZHiCrnfS7oms3bRWURYCLma",
+          "programId": "circAbx64bbsscPbQzZAUvuXpHqrCe6fLMzc2uKXz9g",
+          "knownName": "Helium Circuit Breaker",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "C7AGGjcwxc9iUCt815q7htTJec8JjphKoFLnZ6F6Bvm5",
+          "programId": "hcrLPFgFUY6sCUKzqLWxXx5bntDiDCrAZVcrXfx9AHu",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "CtUT6SbdHPxLxLopuhCUd3uYGMZerZPrDP8eKK71tuEZ",
+          "programId": "we1cGnTxTkDP9Sk49dw1d3T7ik7V2NfnY4qDGCDHXfC",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "Cx3kWaJhKuNqf1HaQfEzoQdy7NpoQRcj8Epmf4vokEsr",
+          "programId": "fanqeMu3fw8R4LwKNbahPtYXJsyLL6NXyfe2BqzhfB6",
+          "knownName": "Helium Fanout",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "EJAtq4Cc2jRym8igsmjaLx2XvgZr4kGBGo7Xj9w21Tjf",
+          "programId": "rorcfdX4h9m9swCKgcypaHJ8NGYVANBpmV9EHn3cYrF",
+          "knownName": "Helium Rewards Oracle",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "FBXYw85yzxyghiyAUpedouWNLWooraC799BUqQ99HgtT",
+          "programId": "1azyuavdMyvsivtNxPoz6SucD18eDHeXzFCUPq5XU7w",
+          "knownName": "Helium Lazy Distributor",
+          "status": "known"
+        }
+      ]
+    },
+    {
+      "vault": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "vaultLabel": "Meteora upgrade vault (V3, 3 progs)",
+      "severity": "CRITICAL",
+      "protocolMatched": "Meteora",
+      "proposedProtocol": "Meteora",
+      "currentProgramsListed": 4,
+      "vaultProgramCount": 15,
+      "missingPrograms": [
+        {
+          "programDataAccount": "2YYscysxJpLRVVtQjjehtCvsqXUZUk2Y9yhnzPQi5rxX",
+          "programId": "GacY9YuN16HNRTy7ZWwULPccwvfFSBeNLuAQP7y38Du3",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "4RPLBaQZSbED4ooPSidrYtvYRoReeP3NedZwed3YLgTz",
+          "programId": "zapvX9M3uf5pvy4wRPAbQgdQsM1xmuiFnkfHKPvwMiz",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "4mj2HFBHyWTcYR2cjMzaekDxkR8CiR7b84kmY2gXpJzU",
+          "programId": "pDisRpxvnFw4osSqDPqMJ62tLsVQGsHL4tMX23ArYrL",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "5hnEancYxAKq5RVwVFjGUaqXYWKMJhBbiEVvALf3KDYk",
+          "programId": "abcSyangMHdGzUGKhBhKoQzSFdJKUdkPGf5cbXVHpEw",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "6PuDc6n6kLWyDZsovop14vLmKk6N15wtXiJ51CHADszL",
+          "programId": "CAT7rbZD4eJ8zscj89HYWUKNcqhujQ9RB1zYrbrF5rXb",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "6gQF2hWghfbUAfBSNVjNxLsULUeEKPAJkjeTkMGJby7o",
+          "programId": "FEESngU3neckdwib9X3KWqdL7Mjmqk9XNp3uh5JbP4KP",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "7ZuRQYsDwvtdJNCuM46Uw1khmpQtymwmiYxfLWfybY85",
+          "programId": "dfsdo2UqvwfN8DuUVrMRNfQe11VaiNoKcMqLHVvDPzh",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "DqD2Le59TDJuSe3Zhk6h8v8ueW395KUGcpYGshRqoAKS",
+          "programId": "FarmuwXPWXvefWUeqFAa5w6rifLkq5X6E8bimYvrhCB1",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "EHSLhL1F25toWAyL967Vp9ZDvdxNUK2KbJHjHZZkXLC6",
+          "programId": "vaU6kP7iNEGkbmPkLmZfGwiGxd4Mob24QQCie5R9kd2",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "GcKbkDDmBfVQL7ouFvy2Xjer5qVdbRnQoqsSWmfDgQi2",
+          "programId": "presSVxnf9UU8jMxhgSMqaRwNiT36qeBdNeTRKjTdbj",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "HUfnSSiJxgspQm6C1rkqv6L3XgVtn7AESApgCQpCXCYh",
+          "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
+      "vaultLabel": "Raydium upgrade vault (V3, 8 progs)",
+      "severity": "CRITICAL",
+      "protocolMatched": null,
+      "proposedProtocol": "Raydium upgrade vault (V3, 8 progs)",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 14,
+      "missingPrograms": [
+        {
+          "programDataAccount": "4riHch34cRGqSTSpcLXv42TvkLUG6t3JgzvzyCPQE6vg",
+          "programId": "VoteWPk9yyGmkX4U77nEWRJWpcc8kUfrPoghxENpstL",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "88UeaMABMessDkUy9yPRVexgaaHGKGmoNWxQdPSXidVF",
+          "programId": "CLaimxFqjHzgTJtAGHU47NPhg6qrc5sCnpC4tBLyABQS",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "Am73KshQKaKVRrB8qbnhAub2rcwWtbhKASDrkmedrJWE",
+          "programId": "LockrWmn6K5twhz3y9w1dQERbmgSaRkfnTeTKbpofwE",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "CQkNjbYLFYc5xdbqLaZNC7KZThzRUa5EscAcHpPpdqs1",
+          "programId": "FarmqiPv5eAj3j1GMdMCMUGXqPUvmquZtMy86QH6rzhG",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "D9Kh6CzoNb2gj7EDsP7fNZpbhLq8r9LoLgambqPKoF4z",
+          "programId": "27haf8L6oxUeXrHrgEgsexjSY5hbVUWEmvv9Nyxg8vQv",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "G4Cf8MQtyueoLFDxV9BtzyrtXRetmA14JiFj6cqfAodr",
+          "programId": "9KEPoZmtHUrBbhWN1v1KWLMkkvwY6WLtAVUCPRtRjP4z",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "H9vbtL8jBVAdBagXdRAVihGkyWiCuH6RFno5J7GU6sFF",
+          "programId": "routeUGWgWzqBWFcrCfv8tritsqukccJPu3q5GPP3xS",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "HvVk1rnRQ1pYRXhmmx1xgSqu948GEfnovREjW5KbELVN",
+          "programId": "5quBtoiQqxF9Jv6KYKctB59NT3gtJD2Y65kdnB1Uev3h",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "J2jMHtW52EuEqZMe4tiyjif5XS9EY46jMqUd5ggPD2cd",
+          "programId": "xRayKBTwoDMpH5dzAJF8cnsL81BHq7iEfVyscmw8GjC",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "vaultLabel": "Tensor vault (V3, 2 progs)",
+      "severity": "CRITICAL",
+      "protocolMatched": "Tensor",
+      "proposedProtocol": "Tensor",
+      "currentProgramsListed": 3,
+      "vaultProgramCount": 13,
+      "missingPrograms": [
+        {
+          "programDataAccount": "VimoVh3knvQExg1da41FNbY2fnor57HVEFdmtxfcowb",
+          "programId": "TL1ST2iRBzuGTqLn1KXnGdSnEow62BzPnGiqyRXhWtW",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "2EZwMWPsWxXUC4YxmW8C1nMDBv8gRhQcSV4i7NPnVQxF",
+          "programId": "TLoCKic2wGJm7VhZKumih4Lc35fUhYqVMgA4j389Buk",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "35SrsGjKPKZCvDgT5LaSSGDcSsrGp3uLWTANVaecAnzX",
+          "programId": "VFeesufQJnGunv2kBXDYnThT1CoAYB45U31qGDe5QjU",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "3Y6bMQqbHfzsiDF82YLddmMVvhFYBDkcERUrw53j5Uqa",
+          "programId": "3vtZSP5wZe8QgX71EjrpGArEwM8LSgzTiEHkw6pSGFLD",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "7vPpdWSt8tgGkf2hkpFLhyG6zz616Xvb9TLyeazNAxKv",
+          "programId": "TB1Dqt8JeKQh7RLDzfYDJsq8KS4fS2yt87avRjyRxMv",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "B3Pg3ieZ9HLrT4BXKfoWDrApAq9ZprsToUxiupieTZas",
+          "programId": "TFEEgwDP6nn1s8mMX2tTNPPz8j2VomkphLUmyxKm17A",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "CExoFY3i21XkfSUXbfPDsx9ShD8gn7NVdXfR9cH2NF2w",
+          "programId": "VAggLCsx2hpZXF5t5aHfJC4Lt4rBKDuyUfbad1akWvA",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "CLMB8FqaSWyQ9vCEd6JthUsuZV8iEMZuDGydEbh73oN9",
+          "programId": "VordrNZMkkryqCDFhFRcti4x3j94KY8fog3RhjGDVok",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "EN7bDyRGG7DLv1f9DZfPxwiKxcrj6yfeAVY2s5Hxx3XN",
+          "programId": "Td1ST8yc9Vt7vsBY7rZzrCjkXeGnr4ECMtso9ueLhyQ",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "HTu2ayS6qszsUanPz2WzZ7K6KmFqGnon16V6j68k5JHK",
+          "programId": "TSTKEiz9sqJRypokAkRhaW29rnDYDSxqWxmdv9brkp2",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "vaultLabel": "Sanctum vault (V3, 2 progs)",
+      "severity": "CRITICAL",
+      "protocolMatched": "Sanctum",
+      "proposedProtocol": "Sanctum",
+      "currentProgramsListed": 3,
+      "vaultProgramCount": 12,
+      "missingPrograms": [
+        {
+          "programDataAccount": "26GWfXL2eYH8AtX9b6Uw8PBrjLu98sWvc9wrfxLj4kLF",
+          "programId": "sp1V4h2gWorkGhVcazBc22Hfo2f5sd7jcjT4EDPrWFF",
+          "knownName": "Sanctum SOL Value Calculator",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "3E5A8HNuvJJKYa58TZddiVMnc8ZTsRVw4pmrww3xgcQ5",
+          "programId": "mare3SCyfZkAndpBRBeonETmkCCB3TJTTrz8ZN2dnhP",
+          "knownName": "Sanctum Marinade SOL Calculator",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "3LvZbmj32toBzGoCpYYya2GSPAaWoC6K2YLTBPV3ZxLs",
+          "programId": "sspUE1vrh7xRoXxGsg7vR1zde2WdGtJRbyK9uRumBDy",
+          "knownName": "Sanctum SPL Stake Pool Calculator",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "Bq9UFte9zDSUdUzE4JeTRLwejvcoizwUwbNVqi8n5QBx",
+          "programId": "s1b6NRXj6ygNu1QMKXh2H9LUR2aPApAAm1UQ2DjdhNV",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "Cn5fegqLh8Fmvffisr4Wk3LmuaUgMMzTFfEuidpZFsvV",
+          "programId": "SP12tWFxD9oJsVWNavTTBZvMbA6gkAmxtVgxdqvyvhY",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "D2d3odoQoCeZ3dygmnvYZiUhsGvgskGJpoD9umnBKJz7",
+          "programId": "ssmbu3KZxgonUtjEMCKspZzxvUQCxAFnyh1rcHUeEDo",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "DsrWC93rAjG3jT2YzwuT3MMGp7Jb4bLYGfX8riCBnxGi",
+          "programId": "f1tUoNEKrDp1oeGn4zxr7bh41eN6VcfHjfrL3ZqQday",
+          "knownName": "Sanctum Flat Fee Pricing",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "HkuX8A8Q6XQjimK3LP6vfhAZrm4UJgUZTRR7uYbzj3FH",
+          "programId": "1idUSy4MGGKyKhvjSnGZ6Zc7Q4eKQcibym4BkEEw9KR",
+          "knownName": "Sanctum LiDo SOL Calculator",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "HxBTMuB7cFBPVWVJjTi9iBF8MPd7mfY1QnrrWfLAySFd",
+          "programId": "SPMBzsVUuoHA4Jm6KunbsotaahvVikZs1JyTW6iJvbn",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "JCiy5grhSYeceD5FAd9AKQa9p2t7vXe6zC3sUDVjWMrx",
+          "programId": "wsoGmxQLSvwWpuaidCApxN5kEowLe2HLQLJhCQnj4bE",
+          "knownName": "Sanctum wSOL Calculator",
+          "status": "known"
+        }
+      ]
+    },
+    {
+      "vault": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "vaultLabel": "Pyth upgrade authority (Wormhole-style, 3 progs)",
+      "severity": "CRITICAL",
+      "protocolMatched": "Pyth",
+      "proposedProtocol": "Pyth",
+      "currentProgramsListed": 3,
+      "vaultProgramCount": 11,
+      "missingPrograms": [
+        {
+          "programDataAccount": "CmumsQAU6TvqW2VLFVySBjQYKqKDeUPMBVdrxJ2YoK1",
+          "programId": "HDwcJBJXjL9FpJ7UBsYBtaDjsBUhuLCUYoz3zr8SWWaQ",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "3BBuXtcSiGrp8Q9717NL7yxmB2ZzW1TttFUkJ8kjB7a4",
+          "programId": "tstPARXbQ5yxVkRU2UcZRbYphzbUEW6t5ihzpLaafgz",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "3TL2YwKrwtn9V291qZ3n4GLKngG7ZuTwapVuvvCh66gJ",
+          "programId": "GovFUVGZWWwyoLq8rhnoVWknRFkhDSbQiSoREJ5LiZCV",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "44pm2sLV2xC7pjEk2UxUR3hPPFDbLSykAcPoU9YKrwJe",
+          "programId": "sta99txADjRfwHQQMNckb8vUN4jcAAhN2HBMTR2Ah6d",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "7ac9hrQ4LKEZuGT4mzTFvPdWDCf2MHawh6soycCDWXRp",
+          "programId": "PytERJFhAKuNNuaiXkApLfWzwNwSNDACpigT3LwQfou",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "AS5KV2ZXJScVLyT2jBqMV8iksS51sW6tHyo7YT18d1WC",
+          "programId": "prfmVhiQTN5Spgoxa8uZJba35V1s7XXReqbBiqPDWeJ",
+          "knownName": "Pyth Governance",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "Bvr6VWREUEvwef1VoFJm6sjL4tXmg35N9rbW3YttkMhb",
+          "programId": "pytd2yyk641x7ak7mkaasSJVXh6YYZnC7wTmtgAyxPt",
+          "knownName": "Pyth Crosschain",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "EyLb5sRd6nNTv59bMfkXdcSpomBMDRr7wJQrrsJuznt8",
+          "programId": "escMHe7kSqPcDHx4HU44rAHhgdTLBZkUrU39aN8kMcL",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "vaultLabel": "Magic Eden vault (V4, 2 progs)",
+      "severity": "CRITICAL",
+      "protocolMatched": "Magic Eden",
+      "proposedProtocol": "Magic Eden",
+      "currentProgramsListed": 2,
+      "vaultProgramCount": 7,
+      "missingPrograms": [
+        {
+          "programDataAccount": "378C6ePKR6dMsM2NrfTCrTDjWzQPcK6SwQDSuVYcJoZb",
+          "programId": "LUCK57mxzZiRGF2PdHAY79P6tZ8Apsi381tKvBrTdqk",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "BNs5tC1aerFFn41UguvrU7JWVr4LLfYTWZEw5Co5FvB8",
+          "programId": "WDPKndVQYXANGvAxRgZujP4nT5rDMNqbs6aVeZe9kxX",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "FYPgmagfNtBmH3EJ6kUyduF9sKzxuF6swwoK5A71ZH5Z",
+          "programId": "CMZYPASGWeTz7RNGHaRJfCq2XQ5pYK6nDvVQxzkH51zb",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "FazvcSvYh7QpbDjEgVNT1fh5sEUAfDXicSJrFU3jb6w1",
+          "programId": "M3mxk5W2tt27WGT7THox7PmgRDp4m6NEhL5xvxrBfS1",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "HdsQV9jCpy8cbaTAwGK7zYUtQ5ekhWCf5FgZFLhhMVQH",
+          "programId": "PCKjSaQaZb3AcmjTcb2fcLanh9Mky9ZvuaKqTBxsqWE",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "vaultLabel": "Drift BBC5g vault (pre-exploit, 6 programs)",
+      "severity": "CRITICAL",
+      "protocolMatched": null,
+      "proposedProtocol": "Drift BBC5g vault (pre-exploit, 6 programs)",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 6,
+      "missingPrograms": [
+        {
+          "programDataAccount": "4YwyCK5z8MEK5YwsCoZDFixxFqpQ6JFF98pcMqoAp8dr",
+          "programId": "DraWMeQX9LfzQQSYoeBwHAgM5JcqFkgrX7GbTfjzVMVL",
+          "knownName": "Drift Competitions",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "7qtZgwfKf81mBq7f3Y2GgpsJAEtGREzGQ1re8Bbmvuvp",
+          "programId": "J1TnP8zvVxbtF5KFp5xRmWuvG9McnhzmBd9XGfCyuxFP",
+          "knownName": "Drift JIT Proxy",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "9n7qsPfdjsNmyPZd7EzAhWuSL2ZQ6ehvhKPdj96pYbpb",
+          "programId": "E7HtfkEMhmn9uwL7EFNydcXBWy5WCYN1vFmKKjipEH1x",
+          "knownName": "Drift Merkle Distributor",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "BYMMEXer2aQ8g6FBvoH5Gmp7xggjVK4jBktEsQzELTAK",
+          "programId": "dVoTE1AJqkZVoE1mPbWcqYPmEEvAUBksHY2NiM2UJQe",
+          "knownName": "Drift Stake Voter",
+          "status": "known"
+        },
+        {
+          "programDataAccount": "FUNZUAcm96zb85A3mm4VRpzbip1RsxjyZ6Wyc8SnCJdW",
+          "programId": "G6EoTTTgpkNBtVXo96EQp2m6uwwVh2Kt6YidjkmQqoha",
+          "knownName": "Drift Oracle Receiver",
+          "status": "known"
+        }
+      ]
+    },
+    {
+      "vault": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "vaultLabel": "GMSOL main vault",
+      "severity": "CRITICAL",
+      "protocolMatched": "GMSOL",
+      "proposedProtocol": "GMSOL",
+      "currentProgramsListed": 4,
+      "vaultProgramCount": 6,
+      "missingPrograms": [
+        {
+          "programDataAccount": "8NJ8KU4ajpcQsgYnto7wSpADWayASBoLbaLsr3mAsgKT",
+          "programId": "TimeBQ7gQyWyQMD3bTteAdy7hTVDNWSwELdSVZHfSXL",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "BnRXCFnA7LegobKuHVwqh8hpSYesdUGDDZqVvz2g4CFs",
+          "programId": "12cJKgP9r2bcaruqu3XsCS1hxLqsHrmZhqG5Qy2TWRap",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P",
+      "vaultLabel": "Loopscale vault",
+      "severity": "CRITICAL",
+      "protocolMatched": null,
+      "proposedProtocol": "Loopscale vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 6,
+      "missingPrograms": [
+        {
+          "programDataAccount": "kSqvNR39pSQK5kGfpHi6f2prXT4HGndskVP6U6tTx88",
+          "programId": "jg82rRko6Hu1KqZ47RR95Jrq1cfqBhaAPXStseajmfQ",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "4GJpur1FxHgRDF4zq1LJsL8RrVRfagcU8fpWb2o2UFd2",
+          "programId": "HAiowc2WWGp3VwVjpAtiduLCwWQmQqVPQgLbn5jurM8o",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "CFy65JjJK3XmdB1UcR8qgZ1yFoJ2HfExy96RDhpZRZsf",
+          "programId": "HaioYYCZuXWxiHjFG9i8MnzAH6dFdgh1E1eCGjTwWzb",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "EGMmWjEg2DZt4JfhHmqhd7CezRDQY9HwrL9zEubPp7fX",
+          "programId": "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "FtZqbxzGFfYKVv6gaqA1ihzB5UcBtkhowyeJzU42Jy8s",
+          "programId": "HaiooUZ4qzSEi2sn1qbwH8mKVXgnwY8oyziUStJDcb6Z",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "GWhTuDMo4PkMuwdynT8uREFYtU93wvDxX15gNxaSFA9C",
+          "programId": "Haio3oNYt8MtL9traoQNJ9RXK1XEVaQBBrZZKXt2VXjz",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "vaultLabel": "Ore vault",
+      "severity": "CRITICAL",
+      "protocolMatched": "Ore",
+      "proposedProtocol": "Ore",
+      "currentProgramsListed": 1,
+      "vaultProgramCount": 4,
+      "missingPrograms": [
+        {
+          "programDataAccount": "2Kvu78wApwvXQm8XQi9ESFb21AxZYWdXLJ4PgEzSk6uv",
+          "programId": "3jSkUuYBoJzQPMEzTvkDFXCZUBksPamrVhrnHR9igu2X",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "7EXATyheU8mhYLBv9TwSBoi124g6y5SBTYK72j7JCKUA",
+          "programId": "LStwN2E5Uw6MCtuxHRLhy8RY9hxqW2XRpLzettb696y",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "9PVAhQc7mVvptNv7PTXwv2x6Cn969cPVqW9ncjsZoXMg",
+          "programId": "STkEAu2cEyQp5ktgUauRVq8es6mEP2w6ixw4NEd5tDJ",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+      "vaultLabel": "Parcl governance vault (V3, 3 progs)",
+      "severity": "CRITICAL",
+      "protocolMatched": null,
+      "proposedProtocol": "Parcl governance vault (V3, 3 progs)",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 4,
+      "missingPrograms": [
+        {
+          "programDataAccount": "8EACiZSTxeuwkF9RSA8dz1TAqg4rtZ6CnjCFbeiFhM8u",
+          "programId": "2GTq96kiPYg2XbDwvcHha1gMTo2bjfiuCc72Z8bKq4HX",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "C3QnedtdqM4AdHDauYvnjvjcYGBkx1kh9dbsiQSueNqU",
+          "programId": "Di9ZVJeJrRZdQEWzAFYmfjukjR5dUQb7KMaDmv34rNJg",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "C9vDZ1qk9pD7Uvv4gZbxqrmn1gTmzyqyy78cftiLyNqn",
+          "programId": "2gWf5xLAzZaKX9tQj9vuXsaxTWtzTZDFRn21J3zjNVgu",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "DGZ2psHJvUPuoC156JSxakxFUKDkkPN2e55KymkxpVqR",
+          "programId": "5tu3xkmLfud5BAwSuQke4WSjoHcQ52SbrPwX9es8j6Ve",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "vaultLabel": "Orca vault",
+      "severity": "HIGH",
+      "protocolMatched": "Orca",
+      "proposedProtocol": "Orca",
+      "currentProgramsListed": 2,
+      "vaultProgramCount": 3,
+      "missingPrograms": [
+        {
+          "programDataAccount": "nEuknUvGZK5UVyq3Tf18tcpNtC7dmjPMirrry66SkAs",
+          "programId": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "7TdF3aLJXvwo24azTD3vBTMzr5ScscQUdHzdfcf41kbD",
+          "programId": "StaKE6XNKVVhG8Qu9hDJBqCW3eRe7MDGLz17nJZetLT",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "3hiQADryzHeV6gQa8gojLV5EHNAKXdujtTX2u8evVh1Z",
+      "vaultLabel": "Berrie Dex / unknown vault",
+      "severity": "HIGH",
+      "protocolMatched": null,
+      "proposedProtocol": "Berrie Dex / unknown vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 2,
+      "missingPrograms": [
+        {
+          "programDataAccount": "2nshv4xgCYmGvn8Nz1ucDJZfXKCLWwtzrofn87EW6En6",
+          "programId": "8Hcd5Kmi47JhgNr1GVYfAbMyXfwYo5T7UUYhGeEu8qPr",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "6KAQneizosCT8ZipkQHieQhBrWJyg1mC122rxTdTJRDP",
+          "programId": "EP1N2w7ijCboXHJS6mfysTWu2vQohP933ny2cHovSxfU",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+      "vaultLabel": "Carrot vault",
+      "severity": "HIGH",
+      "protocolMatched": null,
+      "proposedProtocol": "Carrot vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 2,
+      "missingPrograms": [
+        {
+          "programDataAccount": "4Doyk29vFcFqUzn2VditTHwfqY3YMy1HXUARuwTfCuvT",
+          "programId": "JAZWcGrpSWNPTBj8QtJ9UyQqhJCDhG9GJkDeMf5NQBiq",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "CiVCR727TAKyt4xAbxsWYjXSXNG3f8a17chhnuvjX15n",
+          "programId": "Fk1RpqsfeWt8KnFCTW9NQVdVxYvxuqjGn6iPB9wrmM8h",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+      "vaultLabel": "Parcl perps vault (V3, 2 progs)",
+      "severity": "HIGH",
+      "protocolMatched": "Parcl",
+      "proposedProtocol": "Parcl",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 2,
+      "missingPrograms": [
+        {
+          "programDataAccount": "2uaEDjBgADsZEtGbrjEkVFVfxSMbEzpn7FkmsDEi5hPg",
+          "programId": "PaRCLKPpkfHQfXTruT8yhEUx5oRNH8z8erBnzEerc8a",
+          "knownName": null,
+          "status": "reverse-derived"
+        },
+        {
+          "programDataAccount": "31zRxF6h9SukNpGghuHVXApxT3P3G3sef3cfzhWiTLy7",
+          "programId": "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5",
+      "vaultLabel": "LayerZero OFT (devtools vault)",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "LayerZero OFT (devtools vault)",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "5EcpgQ1gN2hCDuZjaTc9iXcFLmfU5YiNn9ENYhMGQDeW",
+          "programId": "A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "Gy7pgCryzquDBHkpGkJGBRAyLpdmdqkifjLdKMoS1GEE",
+      "vaultLabel": "Marginfi vault",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "Marginfi vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "Btvgkx4HZCVKUGofTC74DC7Utb6vtmdsmjC9D8EfwX5G",
+          "programId": "CAW7771FWrfBFtxAUrSw38fBVtKHns9WW9KCw65vnVsH",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY",
+      "vaultLabel": "Kamino KFarms vault",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "Kamino KFarms vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "5Fz4tY19ihWJAW1j9RNoEQJKSdn5mQHjcVrcZ5BRK5E9",
+          "programId": "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+      "vaultLabel": "Helium vault",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "Helium vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "CtdTN3od14hyJm7DwmZABPxZBLiuUi7kKrHoNUkSQuMM",
+          "programId": "omnixgS8fnqHfCcTGKWj6JtKjzpJZ1Y5y9pyFkQDkYE",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "9ECeczLtFZDYE3NX6G7uNw5BUGjoJAu1kFyEihA5hMaM",
+      "vaultLabel": "Ondo Global Markets vault A",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "Ondo Global Markets vault A",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "F4F1ZdqwmT4KfCfCnXrqLp9R6Liq4vEqJcs64xVKTKeU",
+          "programId": "XzTT4XB8m7sLD2xi6snefSasaswsKCxx5Tifjondogm",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "5JKhn62nyvAE7aRb5zksXiovDEPX6mAcbdxFsJEdVmbw",
+      "vaultLabel": "Ondo Global Markets vault B",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "Ondo Global Markets vault B",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "FnzFmRhh2SJD5TiCWctSHAwmUysraMPrwtq4LqVsaj71",
+          "programId": "xoVUinQWoi4Bxre6oqEJHp9WrJaHacs74gtYtondogm",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda",
+      "vaultLabel": "Flash Trade vault",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "Flash Trade vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "5HYFtYsP3izQdfBjyN85sYjgsuPH4j82HQ2aMANwGK52",
+          "programId": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+      "vaultLabel": "Solstice vault",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "Solstice vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "geaY9W36prjcuZkiB5YCZwfFp3fjVXrWVuWtqKFJRBs",
+          "programId": "7FaMyGiTVdjm8dd3PxpjjCX15ibbmuE1zWVFX2PHxYUK",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    },
+    {
+      "vault": "87VfCnQ4d7XuZwriJAK7yADmqzrJQBx9FYMqCwdue5kv",
+      "vaultLabel": "DefiTuna vault",
+      "severity": "MONITOR",
+      "protocolMatched": null,
+      "proposedProtocol": "DefiTuna vault",
+      "currentProgramsListed": 0,
+      "vaultProgramCount": 1,
+      "missingPrograms": [
+        {
+          "programDataAccount": "FtAx72dC6tg2hmocbzwDzKGXy9oNxvwB7xAi64em7xXP",
+          "programId": "par1tyqusak2f2DXg9RHv78SVHNWXkJLSbtJZQSuWjV",
+          "knownName": null,
+          "status": "reverse-derived"
+        }
+      ]
+    }
+  ]
+}

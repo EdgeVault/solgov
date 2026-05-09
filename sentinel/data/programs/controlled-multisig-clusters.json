@@ -1,0 +1,42 @@
+{
+  "computedAt": "2026-04-17T15:21:13.587Z",
+  "clusters": [
+    {
+      "configAuthority": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP",
+      "size": 6,
+      "severity": "CRITICAL",
+      "multisigs": [
+        {
+          "address": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+          "label": "Drift",
+          "ca": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP"
+        },
+        {
+          "address": "61ApQqLoWVfTuzua9c22SWMj78RGv77x6Z2kzcJVGNjP",
+          "label": "Drift 61ApQqLoW (historical admin)",
+          "ca": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP"
+        },
+        {
+          "address": "Er82vnftZhA2YrRZyuGpw1an3Ho585eYCAxNv2U9F2uY",
+          "label": "Drift Er82vnft (historical peer)",
+          "ca": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP"
+        },
+        {
+          "address": "GMNVGNk8Kso1cjre4Wx7zx2knP4uKLNVtpfay2FEEaAi",
+          "label": "Drift GMNVGNk8 (historical peer)",
+          "ca": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP"
+        },
+        {
+          "address": "2LW6PSEjp81xSEttWwXDB6Etb1eKdhYPbFEojYbyhx88",
+          "label": "Drift 2LW6PS (exploited)",
+          "ca": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP"
+        },
+        {
+          "address": "BBC5gSPh71YB2eUXdCqvkmL6kj6YDkUQJpX997qXUt2Q",
+          "label": "Drift BBC5g (sister)",
+          "ca": "A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP"
+        }
+      ]
+    }
+  ]
+}

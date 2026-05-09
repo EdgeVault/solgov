@@ -1,0 +1,41 @@
+{
+  "protocol": "Stabble",
+  "researchedAt": "2026-04-17T22:24:00Z",
+  "researcher": "manual stub",
+  "sources": [
+    {
+      "kind": "docs",
+      "url": "https://docs.stabble.org/"
+    }
+  ],
+  "programs": [
+    {
+      "id": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP",
+      "name": "Stabble Stable Swap",
+      "role": "stable AMM",
+      "alreadyTracked": true,
+      "source": "monitor-state.json programAuthorities",
+      "upgradeAuthority": null,
+      "upgradeAuthorityKind": "IMMUTABLE - not upgradeable"
+    }
+  ],
+  "multisigs": [
+    {
+      "address": "AFRN2ECAY1YTbfkXD7yvoc1iaxYdt5BdyyqyPRsrHaK2",
+      "role": "Stabble multisig (tracked)",
+      "threshold": "?",
+      "alreadyTracked": true,
+      "needsRpcVerify": [
+        "threshold + members"
+      ]
+    }
+  ],
+  "authorities": [],
+  "vaultPdas": [],
+  "governanceModel": "Squads V4 multisig. One program confirmed.",
+  "gaps": [
+    "threshold",
+    "upgrade authority chain"
+  ],
+  "confidence": "low"
+}

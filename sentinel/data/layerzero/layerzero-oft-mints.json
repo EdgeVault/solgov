@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-04-19T07:09:26.558Z",
+  "mints": [
+    {
+      "mint": "2qGGU89KPaNgLBzfH5iTZArCPkgaBe3sfeRKaQ4sp496",
+      "name": "DogLibre",
+      "symbol": "DOGL",
+      "supply": 1011000000512,
+      "decimals": 9
+    },
+    {
+      "mint": "2wK4xo29nqVqCroNyCVrGg6tbL5tVGPMUmwKZkvTJKhX",
+      "name": "RECORD",
+      "symbol": "RECORD",
+      "supply": 20000000,
+      "decimals": 6
+    },
+    {
+      "mint": "5BERgtiBBj3LBAnrLszLcVKpsTPFqUNuhb7t45k1srhR",
+      "name": "Bitcoin on Solana",
+      "symbol": "BTCSOL",
+      "supply": 1000000000000000000,
+      "decimals": 9
+    },
+    {
+      "mint": "5a7FpPh8w1cd9fy54fGnqAczzKvMJMB75Q7hp6j9uezG",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "5jPMp8GjiCSR7HrnTc3xBLrRCxKHri8BFbmuoFfosBPn",
+      "name": "SEI",
+      "symbol": "SEI",
+      "supply": 2386816620,
+      "decimals": 6
+    },
+    {
+      "mint": "6D7NaB2xsLd7cauWu1wKk6KBsJohJmP2qZH9GEfVi5Ui",
+      "name": "Shark Cat",
+      "symbol": "SC",
+      "supply": 989825029459360,
+      "decimals": 6
+    },
+    {
+      "mint": "6FRwMJ7TvKH8JJFxK6nbYRSV3PjejnX2C4nydFTDpwgZ",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "6JEUwGZZ1K2c6JQqBqevNwHjsxvdkT1m48Pk9XesyK96",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 3800000000,
+      "decimals": 8
+    },
+    {
+      "mint": "6MK2WgyNp41JCT2XhqwYJwsqtxjeQmjwAP3pPgZ95yiu",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 9
+    },
+    {
+      "mint": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "name": "OFFICIAL TRUMP",
+      "symbol": "TRUMP",
+      "supply": 999999140182553,
+      "decimals": 6
+    },
+    {
+      "mint": "7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump",
+      "name": "yesnoerror",
+      "symbol": "YNE",
+      "supply": 999968796033771,
+      "decimals": 6
+    },
+    {
+      "mint": "7W9QLpg27cNkt6BUArUpwtbrJxSdkHVyvws5cJJU1DAo",
+      "name": "DogLibre",
+      "symbol": "DOGL",
+      "supply": 53521126761,
+      "decimals": 9
+    },
+    {
+      "mint": "8DzFbuCiD7UTJnVUcCykXefWSuFm2Gsp26MAXK4tL873",
+      "name": "frogwifcat",
+      "symbol": "WEF",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "8bk3hKqrq1NgLKck937Fj6PoY9jAJgGpUKQ28qutgqha",
+      "name": "DogLibre",
+      "symbol": "DOGL",
+      "supply": 4337740808298086000,
+      "decimals": 6
+    },
+    {
+      "mint": "9eBm7EG6HEavEJTQ5q8PuESmLJVugWwTd7ttxCrHFjLi",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 111758,
+      "decimals": 6
+    },
+    {
+      "mint": "AFJtnuqGMaj5jAo6Pwxo28r1f7XAXXTSA8q3rG3q8b4A",
+      "name": "CARV",
+      "symbol": "CARV",
+      "supply": 74161531798,
+      "decimals": 6
+    },
+    {
+      "mint": "AGGPfrzVh4vtNbQNNkuuykRbfQJ9ofjYsSxPENxup1b1",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 9990000000,
+      "decimals": 6
+    },
+    {
+      "mint": "BGajvA7fduyJQVjwogAPSR1gJPnCavPS2MLhWbyS8pxZ",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "BLiUhfaUFbSoMVeRqq3QYTA1eJsTsB3ZDEYtUsGGQ9em",
+      "name": "SolForge Fusion",
+      "symbol": "SFG",
+      "supply": 84402640918675380,
+      "decimals": 9
+    },
+    {
+      "mint": "C7Xr4VM6H3W9HHpVep96Hrknkxv2c33kcBTi6e9ZjphW",
+      "name": "Plume",
+      "symbol": "PLUME",
+      "supply": 299702249282,
+      "decimals": 6
+    },
+    {
+      "mint": "CRiaXGJNvhK5moXUYkscV73egoBrSPnaPY4SqH5T7etj",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "Cd2JWboYkgSW5WzC8zhxvo8f29c5azhd9aVU25MU2imi",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "CyJsdLTT7YEjUh47G91F83PZL5RbANUJCWDoR3kmdJk6",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "D6Ztbvm8rVPHG68S4coLrQ7uo4v1AnhwJDkLFQsBTbM9",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "DeiQvDibaBtHsN3k6uZT7DdLLSqxUKMvPcgdRW3tf7Wq",
+      "name": "DogLibre",
+      "symbol": "DOGL",
+      "supply": 24000000000,
+      "decimals": 9
+    },
+    {
+      "mint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "name": "dogwifhat",
+      "symbol": "$WIF",
+      "supply": 998839196194381,
+      "decimals": 6
+    },
+    {
+      "mint": "EmhVWGUa2Q9PN4QjzFjvuVyzFKg4s3ERwjKR9dQDpump",
+      "name": "Believe In Something",
+      "symbol": "DTF",
+      "supply": 998614562469519,
+      "decimals": 6
+    },
+    {
+      "mint": "FHPMjL3noqQ4PLfczqC7n1Vo62QGh7PGSyar9ETyTkbw",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 1310794000,
+      "decimals": 6
+    },
+    {
+      "mint": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+      "name": "Melania Meme",
+      "symbol": "MELANIA",
+      "supply": 999996230870884,
+      "decimals": 6
+    },
+    {
+      "mint": "FZXJ7DxLQcf2FsGPQnp6WnmJg4hnjWGAR1mehsx4x8RF",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 10010000000,
+      "decimals": 6
+    },
+    {
+      "mint": "GTsarqfBtydKeuGLttFiZNV77bEXYpdEodVPZkgMPVUy",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 0,
+      "decimals": 6
+    },
+    {
+      "mint": "fBsqXcBZgrSYppmjqist7dd2T7pApnfhapXmPnq3zym",
+      "name": "DogLibre",
+      "symbol": "DOGL",
+      "supply": 28008476982128716,
+      "decimals": 6
+    },
+    {
+      "mint": "kAWRSQPQB7bBzA6fTNmyY71HpucrT4QX61y4UnuTU4x",
+      "name": "(no name)",
+      "symbol": "(no symbol)",
+      "supply": 10000000000000000,
+      "decimals": 9
+    },
+    {
+      "mint": "nMRuwNqQsTt47yyQ5LqDtXgeegvyu5kNvCJQ369KKp5",
+      "name": "RECORD",
+      "symbol": "RECORD",
+      "supply": 415410000,
+      "decimals": 6
+    }
+  ]
+}

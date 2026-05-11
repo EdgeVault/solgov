@@ -1,0 +1,942 @@
+[
+  {
+    "name": "Orca (Whirlpools)",
+    "programId": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Orca (Token Swap V2)",
+    "programId": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Orca (Wave (waveQX))",
+    "programId": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Orca (Stake (StaKE6))",
+    "programId": "StaKE6XNKVVhG8Qu9hDJBqCW3eRe7MDGLz17nJZetLT",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Drift (Protocol V2)",
+    "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Drift (Vaults)",
+    "programId": "vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Marginfi (Lending V2)",
+    "programId": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Marginfi (LIP)",
+    "programId": "LipsxuAkFkwa4RKNzn51wAsW7Dedzt1RNHMkTkDEZUW",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Project 0 (CAW (mrgn legacy admin))",
+    "programId": "CAW7771FWrfBFtxAUrSw38fBVtKHns9WW9KCw65vnVsH",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Kamino (kLend)",
+    "programId": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Kamino (Liquidity)",
+    "programId": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Kamino (KFarms)",
+    "programId": "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jupiter Perps (Perpetuals)",
+    "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jupiter Lend (Liquidity)",
+    "programId": "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jupiter Lend (Lending)",
+    "programId": "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jupiter Lend (Reward Rate)",
+    "programId": "jup7TthsMgcR9Y3L277b8Eo9uboVSmu1utkuXHNUKar",
+    "role": "peripheral"
+  },
+  {
+    "name": "Jupiter Lend (Vaults)",
+    "programId": "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jupiter Lend (Oracle)",
+    "programId": "jupnw4B6Eqs7ft6rxpzYLJZYSnrpRgPcr589n5Kv4oc",
+    "role": "peripheral"
+  },
+  {
+    "name": "Jupiter Lend (Flashloan)",
+    "programId": "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Magic Eden (Marketplace V2)",
+    "programId": "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Magic Eden (AMM)",
+    "programId": "mmm3XBJg5gk8XJxEKBvdgptZz6SgK4tXvn36sodowMc",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Magic Eden (Luck (LUCK57))",
+    "programId": "LUCK57mxzZiRGF2PdHAY79P6tZ8Apsi381tKvBrTdqk",
+    "role": "peripheral"
+  },
+  {
+    "name": "Magic Eden (WDPK)",
+    "programId": "WDPKndVQYXANGvAxRgZujP4nT5rDMNqbs6aVeZe9kxX",
+    "role": "peripheral"
+  },
+  {
+    "name": "Magic Eden (CMZY)",
+    "programId": "CMZYPASGWeTz7RNGHaRJfCq2XQ5pYK6nDvVQxzkH51zb",
+    "role": "peripheral"
+  },
+  {
+    "name": "Magic Eden (M3MX)",
+    "programId": "M3mxk5W2tt27WGT7THox7PmgRDp4m6NEhL5xvxrBfS1",
+    "role": "peripheral"
+  },
+  {
+    "name": "Magic Eden (PCKj)",
+    "programId": "PCKjSaQaZb3AcmjTcb2fcLanh9Mky9ZvuaKqTBxsqWE",
+    "role": "peripheral"
+  },
+  {
+    "name": "Loopscale (Loopscale Core (jg82))",
+    "programId": "jg82rRko6Hu1KqZ47RR95Jrq1cfqBhaAPXStseajmfQ",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Loopscale (HAiowc)",
+    "programId": "HAiowc2WWGp3VwVjpAtiduLCwWQmQqVPQgLbn5jurM8o",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Loopscale (HaioYY)",
+    "programId": "HaioYYCZuXWxiHjFG9i8MnzAH6dFdgh1E1eCGjTwWzb",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Loopscale (haio6i)",
+    "programId": "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Loopscale (HaiooU)",
+    "programId": "HaiooUZ4qzSEi2sn1qbwH8mKVXgnwY8oyziUStJDcb6Z",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Loopscale (Haio3o)",
+    "programId": "Haio3oNYt8MtL9traoQNJ9RXK1XEVaQBBrZZKXt2VXjz",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Exponent (Core)",
+    "programId": "ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Huma Finance (Permissionless)",
+    "programId": "HumaXepHnjaRCpjYTokxY4UtaJcmx41prQ8cxGmFC5fn",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Huma Finance (Institutional)",
+    "programId": "EVQ4s1b6N1vmWFDv8PRNc77kufBP8HcrSNWXQAhRsJq9",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Solstice (USX)",
+    "programId": "USXyiSTsPEWz55pSK7sZoUL79ntoVGQbaTDT57tH6bx",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Solstice (YieldVault)",
+    "programId": "eUSXyKoZ6aGejYVbnp3wtWQ1E8zuokLAJPecPxxtgG3",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Solstice (Solstice Aux (7FaMy))",
+    "programId": "7FaMyGiTVdjm8dd3PxpjjCX15ibbmuE1zWVFX2PHxYUK",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Pumpfun + PumpSwap (Bonding Curve)",
+    "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Pumpfun + PumpSwap (PumpSwap)",
+    "programId": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Lulo (FlexLend)",
+    "programId": "FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Nosana (Jobs)",
+    "programId": "nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Nosana (Staking)",
+    "programId": "nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Nosana (Rewards)",
+    "programId": "nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp",
+    "role": "peripheral"
+  },
+  {
+    "name": "Nosana (Nodes)",
+    "programId": "nosNeZR64wiEhQc5j251bsP4WqDabT6hmz4PHyoHLGD",
+    "role": "peripheral"
+  },
+  {
+    "name": "Switchboard (Oracle V2)",
+    "programId": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+    "role": "peripheral"
+  },
+  {
+    "name": "Switchboard (Attestation)",
+    "programId": "sbattyXrzedoNATfc4L31wC9Mhxsi1BmFhTiN8gDshx",
+    "role": "peripheral"
+  },
+  {
+    "name": "Switchboard (On-Demand)",
+    "programId": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv",
+    "role": "peripheral"
+  },
+  {
+    "name": "Stabble (Stable Swap)",
+    "programId": "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Flash Trade (Flash Trade Aux (6U1gV))",
+    "programId": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (Infinity)",
+    "programId": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (Unstake)",
+    "programId": "unpXTU2Ndrc7WWNyEhQWe4udTzSibLPi25SXv2xbCHQ",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (Router)",
+    "programId": "stkitrT1Uoy18Dk1fTrgPw8W6MVzoCfYoAFT4MLsmhq",
+    "role": "routes-funds"
+  },
+  {
+    "name": "Sanctum (SOL Value Calculator)",
+    "programId": "sp1V4h2gWorkGhVcazBc22Hfo2f5sd7jcjT4EDPrWFF",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (Marinade SOL Calculator)",
+    "programId": "mare3SCyfZkAndpBRBeonETmkCCB3TJTTrz8ZN2dnhP",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (SPL Stake Pool Calculator)",
+    "programId": "sspUE1vrh7xRoXxGsg7vR1zde2WdGtJRbyK9uRumBDy",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (Flat Fee Pricing)",
+    "programId": "f1tUoNEKrDp1oeGn4zxr7bh41eN6VcfHjfrL3ZqQday",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (LiDo SOL Calculator)",
+    "programId": "1idUSy4MGGKyKhvjSnGZ6Zc7Q4eKQcibym4BkEEw9KR",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (wSOL Calculator)",
+    "programId": "wsoGmxQLSvwWpuaidCApxN5kEowLe2HLQLJhCQnj4bE",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (S1B6)",
+    "programId": "s1b6NRXj6ygNu1QMKXh2H9LUR2aPApAAm1UQ2DjdhNV",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (SP12 (Stake Pool))",
+    "programId": "SP12tWFxD9oJsVWNavTTBZvMbA6gkAmxtVgxdqvyvhY",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (SSMBU)",
+    "programId": "ssmbu3KZxgonUtjEMCKspZzxvUQCxAFnyh1rcHUeEDo",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Sanctum (SPMB)",
+    "programId": "SPMBzsVUuoHA4Jm6KunbsotaahvVikZs1JyTW6iJvbn",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jupiter Agg (Aggregator V6)",
+    "programId": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+    "role": "routes-funds"
+  },
+  {
+    "name": "Jupiter Agg (DCA)",
+    "programId": "DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jupiter Agg (Limit Orders)",
+    "programId": "jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Raydium (AMM V4)",
+    "programId": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Raydium (CLMM)",
+    "programId": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Raydium (CP-Swap)",
+    "programId": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Raydium (LaunchLab)",
+    "programId": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+    "role": "routes-funds"
+  },
+  {
+    "name": "Raydium (Staking)",
+    "programId": "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Tensor (Marketplace)",
+    "programId": "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Tensor (AMM)",
+    "programId": "TAMM6ub33ij1mbetoMyVBLeKY5iP41i4UPUJQGkhfsg",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Tensor (TensorSwap)",
+    "programId": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Tensor (Listing (TList))",
+    "programId": "TL1ST2iRBzuGTqLn1KXnGdSnEow62BzPnGiqyRXhWtW",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Lock (TLock))",
+    "programId": "TLoCKic2wGJm7VhZKumih4Lc35fUhYqVMgA4j389Buk",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Fees (VFees))",
+    "programId": "VFeesufQJnGunv2kBXDYnThT1CoAYB45U31qGDe5QjU",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Aux 1)",
+    "programId": "3vtZSP5wZe8QgX71EjrpGArEwM8LSgzTiEHkw6pSGFLD",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Bid (TBid))",
+    "programId": "TB1Dqt8JeKQh7RLDzfYDJsq8KS4fS2yt87avRjyRxMv",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Fee distribution (TFee))",
+    "programId": "TFEEgwDP6nn1s8mMX2tTNPPz8j2VomkphLUmyxKm17A",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Aggregator (VAgg))",
+    "programId": "VAggLCsx2hpZXF5t5aHfJC4Lt4rBKDuyUfbad1akWvA",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Order (Vordr))",
+    "programId": "VordrNZMkkryqCDFhFRcti4x3j94KY8fog3RhjGDVok",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Listing v2 (Tlist v2))",
+    "programId": "Td1ST8yc9Vt7vsBY7rZzrCjkXeGnr4ECMtso9ueLhyQ",
+    "role": "peripheral"
+  },
+  {
+    "name": "Tensor (Stake (TStake))",
+    "programId": "TSTKEiz9sqJRypokAkRhaW29rnDYDSxqWxmdv9brkp2",
+    "role": "peripheral"
+  },
+  {
+    "name": "Phoenix DEX (CLOB V1)",
+    "programId": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (DLMM)",
+    "programId": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Dynamic AMM)",
+    "programId": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (DAMM V2)",
+    "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Dynamic Vault)",
+    "programId": "24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Aux 1)",
+    "programId": "GacY9YuN16HNRTy7ZWwULPccwvfFSBeNLuAQP7y38Du3",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Zap)",
+    "programId": "zapvX9M3uf5pvy4wRPAbQgdQsM1xmuiFnkfHKPvwMiz",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Distribution (pDis))",
+    "programId": "pDisRpxvnFw4osSqDPqMJ62tLsVQGsHL4tMX23ArYrL",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Alpha Bonding Curve)",
+    "programId": "abcSyangMHdGzUGKhBhKoQzSFdJKUdkPGf5cbXVHpEw",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (CAT)",
+    "programId": "CAT7rbZD4eJ8zscj89HYWUKNcqhujQ9RB1zYrbrF5rXb",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Fees)",
+    "programId": "FEESngU3neckdwib9X3KWqdL7Mjmqk9XNp3uh5JbP4KP",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (DFSDO)",
+    "programId": "dfsdo2UqvwfN8DuUVrMRNfQe11VaiNoKcMqLHVvDPzh",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Farm)",
+    "programId": "FarmuwXPWXvefWUeqFAa5w6rifLkq5X6E8bimYvrhCB1",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (Vault)",
+    "programId": "vaU6kP7iNEGkbmPkLmZfGwiGxd4Mob24QQCie5R9kd2",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (PreS)",
+    "programId": "presSVxnf9UU8jMxhgSMqaRwNiT36qeBdNeTRKjTdbj",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Meteora (DBC)",
+    "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Parcl (Parcl Perps Core (PaRCL))",
+    "programId": "PaRCLKPpkfHQfXTruT8yhEUx5oRNH8z8erBnzEerc8a",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Parcl (Parcl Perps Aux (3parc))",
+    "programId": "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Parcl (Parcl Governance 1 (2GTq))",
+    "programId": "2GTq96kiPYg2XbDwvcHha1gMTo2bjfiuCc72Z8bKq4HX",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Parcl (Parcl Governance 2 (Di9Z))",
+    "programId": "Di9ZVJeJrRZdQEWzAFYmfjukjR5dUQb7KMaDmv34rNJg",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Parcl (Parcl Governance 3 (2gWf))",
+    "programId": "2gWf5xLAzZaKX9tQj9vuXsaxTWtzTZDFRn21J3zjNVgu",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Parcl (Parcl Governance 4 (5tu3))",
+    "programId": "5tu3xkmLfud5BAwSuQke4WSjoHcQ52SbrPwX9es8j6Ve",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Marinade (Liquid Staking)",
+    "programId": "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Pyth (Legacy Oracle)",
+    "programId": "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (Pull Oracle)",
+    "programId": "rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (Push Oracle)",
+    "programId": "pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (Pyth Governance)",
+    "programId": "prfmVhiQTN5Spgoxa8uZJba35V1s7XXReqbBiqPDWeJ",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (Pyth Crosschain)",
+    "programId": "pytd2yyk641x7ak7mkaasSJVXh6YYZnC7wTmtgAyxPt",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (HDwc)",
+    "programId": "HDwcJBJXjL9FpJ7UBsYBtaDjsBUhuLCUYoz3zr8SWWaQ",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (Test (tstPAR))",
+    "programId": "tstPARXbQ5yxVkRU2UcZRbYphzbUEW6t5ihzpLaafgz",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (Governance (GovFUV))",
+    "programId": "GovFUVGZWWwyoLq8rhnoVWknRFkhDSbQiSoREJ5LiZCV",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (Staking (sta99))",
+    "programId": "sta99txADjRfwHQQMNckb8vUN4jcAAhN2HBMTR2Ah6d",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (PytER)",
+    "programId": "PytERJFhAKuNNuaiXkApLfWzwNwSNDACpigT3LwQfou",
+    "role": "peripheral"
+  },
+  {
+    "name": "Pyth (escrow (escMHe))",
+    "programId": "escMHe7kSqPcDHx4HU44rAHhgdTLBZkUrU39aN8kMcL",
+    "role": "peripheral"
+  },
+  {
+    "name": "Jito (Vault)",
+    "programId": "Vau1t6sLNxnzB7ZDsef8TLbPLfyZMYXH8WTNqUdm9g8",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jito (Restaking)",
+    "programId": "RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jito (Steward)",
+    "programId": "Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8",
+    "role": "peripheral"
+  },
+  {
+    "name": "Jito (Tip Payment)",
+    "programId": "T1pyyaTNZsKv2WcRAB8oVnk93mLJw2XzjtVYqCsaHqt",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Jito (Tip Distribution)",
+    "programId": "4R3gSG8BpU4t19KYj8CfnbtRpnT8gtk4dvTHxVRwc2r7",
+    "role": "routes-funds"
+  },
+  {
+    "name": "Jito (Validator History)",
+    "programId": "HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa",
+    "role": "peripheral"
+  },
+  {
+    "name": "Zebec (Streaming)",
+    "programId": "zbcKGdAmXfthXY3rEPBzexVByT2cqRqCZb9NwWdGQ2T",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Zebec (Multisig Helper)",
+    "programId": "b6ZPysThkApNx2YDiGsPUiYPE7Ub1kTRdCWp7gBkzbr",
+    "role": "peripheral"
+  },
+  {
+    "name": "Zebec (SDK/V1)",
+    "programId": "AknC341xog56SrnoK6j3mUvaD1Y7tYayx1sxUGpeYWdX",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Wick (Wick)",
+    "programId": "wickHYqFr8NayYurE8M4oT8F4ZrYUwzaFoiXctCDSmF",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Onre Finance (Core)",
+    "programId": "onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe",
+    "role": "holds-funds"
+  },
+  {
+    "name": "MetaDAO (Futarchy)",
+    "programId": "FUTARELBfJfQ8RDGhg1wdhddq1odMAJUePHFuBYfUxKq",
+    "role": "peripheral"
+  },
+  {
+    "name": "MetaDAO (Autocrat)",
+    "programId": "auToUr3CQza3D4qreT6Std2MTomfzvrEeCC5qh7ivW5",
+    "role": "peripheral"
+  },
+  {
+    "name": "MetaDAO (AMM)",
+    "programId": "AMMJdEiCCa8mdugg6JPF7gFirmmxisTfDJoSNSUi5zDJ",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Helium (Entity Manager)",
+    "programId": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Data Credits)",
+    "programId": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Sub DAOs)",
+    "programId": "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Voter Stake Registry)",
+    "programId": "hvsrNC3NKbcryqDs2DocYHZ9yPKEVzdSjQG6RVtK1s8",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Modular Governance (proposals))",
+    "programId": "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Modular Governance (proposals v2))",
+    "programId": "nprx42sXf5rpVnwBWEdRg1d8tuCWsTuVLys1pRWwE6p",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Treasury Management)",
+    "programId": "treaf4wWBBty3fHdyBpo35Mz84M8k3heKXmjmi9vFt5",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Mobile Entity)",
+    "programId": "memMa1HG4odAFmUbGWfPwS1WWfK95k99F2YTkGvyxZr",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (No-Emit)",
+    "programId": "noEmmgLmQdk6DLiPV8CSwQv3qQDyGEhz9m5A4zhtByv",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (IoT Distributor)",
+    "programId": "1atrmQs3eq1N2FEYWu6tyTXbCjP4uQwExpjtnhXtS8h",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Organisations)",
+    "programId": "orgdXvHVLkWgBYerptASkAwkZAE563CJUu717dMNx5f",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Price Oracle)",
+    "programId": "porcSnvH9pvcYPmQ65Y8qcZSRxQBiBBQX7UV5nmBegy",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Hex Boosting)",
+    "programId": "hexbnKYoA2GercNNhHUCCfrTRWrHjT6ujKPXTa5NPqJ",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Circuit Breaker)",
+    "programId": "circAbx64bbsscPbQzZAUvuXpHqrCe6fLMzc2uKXz9g",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Fanout)",
+    "programId": "fanqeMu3fw8R4LwKNbahPtYXJsyLL6NXyfe2BqzhfB6",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Rewards Oracle)",
+    "programId": "rorcfdX4h9m9swCKgcypaHJ8NGYVANBpmV9EHn3cYrF",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Lazy Distributor)",
+    "programId": "1azyuavdMyvsivtNxPoz6SucD18eDHeXzFCUPq5XU7w",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Mobile Fanout (mfan))",
+    "programId": "mfanLprNnaiP4RX9Zz1BMcDosYHCqnG24H1fMEbi9Gn",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (TukTuk)",
+    "programId": "tuktukUrfhXT6ZT77QTU8RQtvgL967uRuVagWF57zVA",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Cron)",
+    "programId": "cronAjRZnJn3MTP3B9kE62NWDrjSuAPVXf9c4hu4grM",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Top (topqq))",
+    "programId": "topqqzQZroCyRrgyM5zVq6xkFDVnfF13iixSjajydgU",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Stake Controller (stcfi))",
+    "programId": "stcfiqW3fwD9QCd8Bqr1NBLrs7dftZHBQe7RiMMA4aM",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (hcrLP)",
+    "programId": "hcrLPFgFUY6sCUKzqLWxXx5bntDiDCrAZVcrXfx9AHu",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (we1cG)",
+    "programId": "we1cGnTxTkDP9Sk49dw1d3T7ik7V2NfnY4qDGCDHXfC",
+    "role": "peripheral"
+  },
+  {
+    "name": "Helium (Omnix Admin)",
+    "programId": "omnixgS8fnqHfCcTGKWj6JtKjzpJZ1Y5y9pyFkQDkYE",
+    "role": "peripheral"
+  },
+  {
+    "name": "Voltr (Vaults)",
+    "programId": "aVoLTRCRt3NnnchvLYH6rMYehJHwM5m45RmLBZq7PGz",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Tessera V (AMM)",
+    "programId": "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH",
+    "role": "holds-funds"
+  },
+  {
+    "name": "deBridge (Main)",
+    "programId": "DEbrdGj3HsRsAzx6uH4MKyREKxVAfBydijLUF3ygsFfh",
+    "role": "routes-funds"
+  },
+  {
+    "name": "deBridge (Settings)",
+    "programId": "DeSetTwWhjZq6Pz9Kfdo1KoS5NqtsM6G8ERbX4SSCSft",
+    "role": "peripheral"
+  },
+  {
+    "name": "BisonFi (AMM)",
+    "programId": "BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi",
+    "role": "holds-funds"
+  },
+  {
+    "name": "HumidiFi (AMM)",
+    "programId": "9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Photon (Trading Bot)",
+    "programId": "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW",
+    "role": "holds-funds"
+  },
+  {
+    "name": "SPL Stake Pool (Stake Pool)",
+    "programId": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy",
+    "role": "holds-funds"
+  },
+  {
+    "name": "LayerZero OFT (OFT)",
+    "programId": "219m42qCuVirVvWs5GnkuX4aWFx5pX6D9RSTE1vsV5WS",
+    "role": "routes-funds"
+  },
+  {
+    "name": "LayerZero OFT (Devtools (A8W6A))",
+    "programId": "A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN",
+    "role": "routes-funds"
+  },
+  {
+    "name": "SolvBTC (Solv Protocol)",
+    "programId": "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz",
+    "role": "holds-funds"
+  },
+  {
+    "name": "GMSOL (Core)",
+    "programId": "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo",
+    "role": "holds-funds"
+  },
+  {
+    "name": "GMSOL (Exchange)",
+    "programId": "GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg",
+    "role": "holds-funds"
+  },
+  {
+    "name": "GMSOL (LP Manager)",
+    "programId": "LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8",
+    "role": "holds-funds"
+  },
+  {
+    "name": "GMSOL (Router)",
+    "programId": "2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc",
+    "role": "routes-funds"
+  },
+  {
+    "name": "GMSOL (TimeBQ)",
+    "programId": "TimeBQ7gQyWyQMD3bTteAdy7hTVDNWSwELdSVZHfSXL",
+    "role": "holds-funds"
+  },
+  {
+    "name": "GMSOL (12cJK)",
+    "programId": "12cJKgP9r2bcaruqu3XsCS1hxLqsHrmZhqG5Qy2TWRap",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Ore (Ore V3)",
+    "programId": "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Ore (3jSk)",
+    "programId": "3jSkUuYBoJzQPMEzTvkDFXCZUBksPamrVhrnHR9igu2X",
+    "role": "routes-funds"
+  },
+  {
+    "name": "Ore (LStw)",
+    "programId": "LStwN2E5Uw6MCtuxHRLhy8RY9hxqW2XRpLzettb696y",
+    "role": "routes-funds"
+  },
+  {
+    "name": "Ore (Stake (STkE))",
+    "programId": "STkEAu2cEyQp5ktgUauRVq8es6mEP2w6ixw4NEd5tDJ",
+    "role": "routes-funds"
+  },
+  {
+    "name": "GMSOL Deploy (Deploy 1)",
+    "programId": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH",
+    "role": "peripheral"
+  },
+  {
+    "name": "GMSOL Deploy (Deploy 2)",
+    "programId": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj",
+    "role": "peripheral"
+  },
+  {
+    "name": "GMSOL Deploy (Deploy 3)",
+    "programId": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2",
+    "role": "peripheral"
+  },
+  {
+    "name": "GMSOL Deploy (Deploy 4)",
+    "programId": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR",
+    "role": "peripheral"
+  },
+  {
+    "name": "GMSOL Deploy (Deploy 5)",
+    "programId": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ",
+    "role": "peripheral"
+  },
+  {
+    "name": "GMSOL Deploy (Deploy 6)",
+    "programId": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd",
+    "role": "peripheral"
+  },
+  {
+    "name": "Carrot (Carrot)",
+    "programId": "CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Carrot (JAZW)",
+    "programId": "JAZWcGrpSWNPTBj8QtJ9UyQqhJCDhG9GJkDeMf5NQBiq",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Carrot (Fk1R)",
+    "programId": "Fk1RpqsfeWt8KnFCTW9NQVdVxYvxuqjGn6iPB9wrmM8h",
+    "role": "holds-funds"
+  },
+  {
+    "name": "DefiTuna (DefiTuna)",
+    "programId": "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD",
+    "role": "holds-funds"
+  }
+]

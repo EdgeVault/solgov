@@ -1,0 +1,1005 @@
+{
+  "generatedAt": "2026-05-08T09:33:06.674Z",
+  "summary": {
+    "total": 118,
+    "matches": 112,
+    "mismatches": 6,
+    "unreadable": 0
+  },
+  "mismatches": [
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 1",
+      "programId": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 2",
+      "programId": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 3",
+      "programId": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 4",
+      "programId": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 5",
+      "programId": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 6",
+      "programId": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    }
+  ],
+  "results": [
+    {
+      "protocol": "Orca",
+      "programName": "Whirlpools",
+      "programId": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+      "listedAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "onChainAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+      "status": "match"
+    },
+    {
+      "protocol": "Orca",
+      "programName": "Token Swap V2",
+      "programId": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP",
+      "listedAuthority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+      "onChainAuthority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+      "status": "match"
+    },
+    {
+      "protocol": "Drift",
+      "programName": "Protocol V2",
+      "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+      "listedAuthority": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+      "onChainAuthority": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
+      "status": "match"
+    },
+    {
+      "protocol": "Drift",
+      "programName": "Vaults",
+      "programId": "vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR",
+      "listedAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "onChainAuthority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+      "status": "match"
+    },
+    {
+      "protocol": "Project 0",
+      "programName": "Lending V2",
+      "programId": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+      "listedAuthority": "J3oBkTkDXU3TcAggJEa3YeBZE5om5yNAdTtLVNXFD47",
+      "onChainAuthority": "J3oBkTkDXU3TcAggJEa3YeBZE5om5yNAdTtLVNXFD47",
+      "status": "match"
+    },
+    {
+      "protocol": "Project 0",
+      "programName": "LIP",
+      "programId": "LipsxuAkFkwa4RKNzn51wAsW7Dedzt1RNHMkTkDEZUW",
+      "listedAuthority": "3HGdGLrnK9DsnHi1mCrUMLGfQHcu6xUrXhMY14GYjqvM",
+      "onChainAuthority": "3HGdGLrnK9DsnHi1mCrUMLGfQHcu6xUrXhMY14GYjqvM",
+      "status": "match"
+    },
+    {
+      "protocol": "Kamino",
+      "programName": "kLend",
+      "programId": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+      "listedAuthority": "GzFgdRJXmawPhGeBsyRCDLx4jAKPsvbUqoqitzppkzkW",
+      "onChainAuthority": "GzFgdRJXmawPhGeBsyRCDLx4jAKPsvbUqoqitzppkzkW",
+      "status": "match"
+    },
+    {
+      "protocol": "Kamino",
+      "programName": "Liquidity",
+      "programId": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc",
+      "listedAuthority": "3pAxu6C9ykZvyyzdknZvmz6CbWGZPTjRevjk4PRF5ib7",
+      "onChainAuthority": "3pAxu6C9ykZvyyzdknZvmz6CbWGZPTjRevjk4PRF5ib7",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Perps",
+      "programName": "Perpetuals",
+      "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+      "listedAuthority": "5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx",
+      "onChainAuthority": "5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "programName": "Liquidity",
+      "programId": "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC",
+      "listedAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "onChainAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "programName": "Lending",
+      "programId": "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9",
+      "listedAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "onChainAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "programName": "Reward Rate",
+      "programId": "jup7TthsMgcR9Y3L277b8Eo9uboVSmu1utkuXHNUKar",
+      "listedAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "onChainAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "programName": "Vaults",
+      "programId": "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi",
+      "listedAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "onChainAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "programName": "Oracle",
+      "programId": "jupnw4B6Eqs7ft6rxpzYLJZYSnrpRgPcr589n5Kv4oc",
+      "listedAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "onChainAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "programName": "Flashloan",
+      "programId": "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS",
+      "listedAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "onChainAuthority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+      "status": "match"
+    },
+    {
+      "protocol": "Magic Eden",
+      "programName": "Marketplace V2",
+      "programId": "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K",
+      "listedAuthority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "onChainAuthority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "status": "match"
+    },
+    {
+      "protocol": "Magic Eden",
+      "programName": "AMM",
+      "programId": "mmm3XBJg5gk8XJxEKBvdgptZz6SgK4tXvn36sodowMc",
+      "listedAuthority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "onChainAuthority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+      "status": "match"
+    },
+    {
+      "protocol": "Exponent",
+      "programName": "Core",
+      "programId": "ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7",
+      "listedAuthority": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+      "onChainAuthority": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+      "status": "match"
+    },
+    {
+      "protocol": "Huma Finance",
+      "programName": "Permissionless",
+      "programId": "HumaXepHnjaRCpjYTokxY4UtaJcmx41prQ8cxGmFC5fn",
+      "listedAuthority": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+      "onChainAuthority": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+      "status": "match"
+    },
+    {
+      "protocol": "Huma Finance",
+      "programName": "Institutional",
+      "programId": "EVQ4s1b6N1vmWFDv8PRNc77kufBP8HcrSNWXQAhRsJq9",
+      "listedAuthority": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+      "onChainAuthority": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+      "status": "match"
+    },
+    {
+      "protocol": "Solstice",
+      "programName": "USX",
+      "programId": "USXyiSTsPEWz55pSK7sZoUL79ntoVGQbaTDT57tH6bx",
+      "listedAuthority": "BzMuMbtah9bqN4HERkPo2PsVoaQKD2xfvYq1xfDCFwEb",
+      "onChainAuthority": "BzMuMbtah9bqN4HERkPo2PsVoaQKD2xfvYq1xfDCFwEb",
+      "status": "match"
+    },
+    {
+      "protocol": "Solstice",
+      "programName": "YieldVault",
+      "programId": "eUSXyKoZ6aGejYVbnp3wtWQ1E8zuokLAJPecPxxtgG3",
+      "listedAuthority": "CYr14TrXD5MAertRqcR58KirPz7XoHGZjfBsfn5M2voh",
+      "onChainAuthority": "CYr14TrXD5MAertRqcR58KirPz7XoHGZjfBsfn5M2voh",
+      "status": "match"
+    },
+    {
+      "protocol": "Pumpfun + PumpSwap",
+      "programName": "Bonding Curve",
+      "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "listedAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "onChainAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "status": "match"
+    },
+    {
+      "protocol": "Pumpfun + PumpSwap",
+      "programName": "PumpSwap",
+      "programId": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+      "listedAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "onChainAuthority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+      "status": "match"
+    },
+    {
+      "protocol": "Lulo",
+      "programName": "FlexLend",
+      "programId": "FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q",
+      "listedAuthority": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs",
+      "onChainAuthority": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs",
+      "status": "match"
+    },
+    {
+      "protocol": "Nosana",
+      "programName": "Jobs",
+      "programId": "nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM",
+      "listedAuthority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "onChainAuthority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "status": "match"
+    },
+    {
+      "protocol": "Nosana",
+      "programName": "Staking",
+      "programId": "nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE",
+      "listedAuthority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "onChainAuthority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "status": "match"
+    },
+    {
+      "protocol": "Nosana",
+      "programName": "Rewards",
+      "programId": "nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp",
+      "listedAuthority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "onChainAuthority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "status": "match"
+    },
+    {
+      "protocol": "Nosana",
+      "programName": "Nodes",
+      "programId": "nosNeZR64wiEhQc5j251bsP4WqDabT6hmz4PHyoHLGD",
+      "listedAuthority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "onChainAuthority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+      "status": "match"
+    },
+    {
+      "protocol": "Switchboard",
+      "programName": "Oracle V2",
+      "programId": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f",
+      "listedAuthority": "2NvGRFswVx3GXxURNSfjbsWY4iP1ufj8LvAKJWGXSm4D",
+      "onChainAuthority": "2NvGRFswVx3GXxURNSfjbsWY4iP1ufj8LvAKJWGXSm4D",
+      "status": "match"
+    },
+    {
+      "protocol": "Switchboard",
+      "programName": "Attestation",
+      "programId": "sbattyXrzedoNATfc4L31wC9Mhxsi1BmFhTiN8gDshx",
+      "listedAuthority": "31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc",
+      "onChainAuthority": "31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc",
+      "status": "match"
+    },
+    {
+      "protocol": "Switchboard",
+      "programName": "On-Demand",
+      "programId": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv",
+      "listedAuthority": "DREcTwxxuehtUVgnGwDpTcKT9zTK5uDmdLbnRY7cijEx",
+      "onChainAuthority": "DREcTwxxuehtUVgnGwDpTcKT9zTK5uDmdLbnRY7cijEx",
+      "status": "match"
+    },
+    {
+      "protocol": "Stabble",
+      "programName": "Stable Swap",
+      "programId": "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ",
+      "listedAuthority": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP",
+      "onChainAuthority": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "Infinity (S Controller)",
+      "programId": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+      "listedAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "onChainAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "Unstake",
+      "programId": "unpXTU2Ndrc7WWNyEhQWe4udTzSibLPi25SXv2xbCHQ",
+      "listedAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "onChainAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "Router",
+      "programId": "stkitrT1Uoy18Dk1fTrgPw8W6MVzoCfYoAFT4MLsmhq",
+      "listedAuthority": "8VE2uJkoheDbJd9rCyKzfXmiMqAS4o1B3XGshEh86BGk",
+      "onChainAuthority": "8VE2uJkoheDbJd9rCyKzfXmiMqAS4o1B3XGshEh86BGk",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "SOL Value Calculator",
+      "programId": "sp1V4h2gWorkGhVcazBc22Hfo2f5sd7jcjT4EDPrWFF",
+      "listedAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "onChainAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "Marinade SOL Calculator",
+      "programId": "mare3SCyfZkAndpBRBeonETmkCCB3TJTTrz8ZN2dnhP",
+      "listedAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "onChainAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "SPL Stake Pool Calculator",
+      "programId": "sspUE1vrh7xRoXxGsg7vR1zde2WdGtJRbyK9uRumBDy",
+      "listedAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "onChainAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "Flat Fee Pricing",
+      "programId": "f1tUoNEKrDp1oeGn4zxr7bh41eN6VcfHjfrL3ZqQday",
+      "listedAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "onChainAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "LiDo SOL Calculator",
+      "programId": "1idUSy4MGGKyKhvjSnGZ6Zc7Q4eKQcibym4BkEEw9KR",
+      "listedAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "onChainAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "match"
+    },
+    {
+      "protocol": "Sanctum",
+      "programName": "wSOL Calculator",
+      "programId": "wsoGmxQLSvwWpuaidCApxN5kEowLe2HLQLJhCQnj4bE",
+      "listedAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "onChainAuthority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Agg",
+      "programName": "Aggregator V6",
+      "programId": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+      "listedAuthority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "onChainAuthority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Agg",
+      "programName": "DCA",
+      "programId": "DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M",
+      "listedAuthority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "onChainAuthority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "status": "match"
+    },
+    {
+      "protocol": "Jupiter Agg",
+      "programName": "Limit Orders",
+      "programId": "jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu",
+      "listedAuthority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "onChainAuthority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+      "status": "match"
+    },
+    {
+      "protocol": "Raydium",
+      "programName": "AMM V4",
+      "programId": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8",
+      "listedAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "onChainAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "status": "match"
+    },
+    {
+      "protocol": "Raydium",
+      "programName": "CLMM",
+      "programId": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK",
+      "listedAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "onChainAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "status": "match"
+    },
+    {
+      "protocol": "Raydium",
+      "programName": "CP-Swap",
+      "programId": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C",
+      "listedAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "onChainAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "status": "match"
+    },
+    {
+      "protocol": "Raydium",
+      "programName": "LaunchLab",
+      "programId": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj",
+      "listedAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "onChainAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "status": "match"
+    },
+    {
+      "protocol": "Raydium",
+      "programName": "Staking",
+      "programId": "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q",
+      "listedAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "onChainAuthority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+      "status": "match"
+    },
+    {
+      "protocol": "Tensor",
+      "programName": "Marketplace",
+      "programId": "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp",
+      "listedAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "onChainAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "status": "match"
+    },
+    {
+      "protocol": "Tensor",
+      "programName": "AMM",
+      "programId": "TAMM6ub33ij1mbetoMyVBLeKY5iP41i4UPUJQGkhfsg",
+      "listedAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "onChainAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "status": "match"
+    },
+    {
+      "protocol": "Tensor",
+      "programName": "TensorSwap",
+      "programId": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN",
+      "listedAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "onChainAuthority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+      "status": "match"
+    },
+    {
+      "protocol": "Phoenix DEX",
+      "programName": "CLOB V1",
+      "programId": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+      "listedAuthority": "8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq",
+      "onChainAuthority": "8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq",
+      "status": "match"
+    },
+    {
+      "protocol": "Meteora",
+      "programName": "DLMM",
+      "programId": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "listedAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "onChainAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "status": "match"
+    },
+    {
+      "protocol": "Meteora",
+      "programName": "Dynamic AMM",
+      "programId": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB",
+      "listedAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "onChainAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "status": "match"
+    },
+    {
+      "protocol": "Meteora",
+      "programName": "DAMM V2",
+      "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG",
+      "listedAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "onChainAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "status": "match"
+    },
+    {
+      "protocol": "Meteora",
+      "programName": "Dynamic Vault",
+      "programId": "24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi",
+      "listedAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "onChainAuthority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+      "status": "match"
+    },
+    {
+      "protocol": "Marinade",
+      "programName": "Liquid Staking",
+      "programId": "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD",
+      "listedAuthority": "551FBXSXdhcRDDkdcb3ThDRg84Mwe5Zs6YjJ1EEoyzBp",
+      "onChainAuthority": "551FBXSXdhcRDDkdcb3ThDRg84Mwe5Zs6YjJ1EEoyzBp",
+      "status": "match"
+    },
+    {
+      "protocol": "Pyth",
+      "programName": "Legacy Oracle",
+      "programId": "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH",
+      "listedAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "onChainAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "status": "match"
+    },
+    {
+      "protocol": "Pyth",
+      "programName": "Pull Oracle",
+      "programId": "rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ",
+      "listedAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "onChainAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "status": "match"
+    },
+    {
+      "protocol": "Pyth",
+      "programName": "Push Oracle",
+      "programId": "pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT",
+      "listedAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "onChainAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "status": "match"
+    },
+    {
+      "protocol": "Pyth",
+      "programName": "Pyth Governance",
+      "programId": "prfmVhiQTN5Spgoxa8uZJba35V1s7XXReqbBiqPDWeJ",
+      "listedAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "onChainAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "status": "match"
+    },
+    {
+      "protocol": "Pyth",
+      "programName": "Pyth Crosschain",
+      "programId": "pytd2yyk641x7ak7mkaasSJVXh6YYZnC7wTmtgAyxPt",
+      "listedAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "onChainAuthority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+      "status": "match"
+    },
+    {
+      "protocol": "Jito",
+      "programName": "Vault",
+      "programId": "Vau1t6sLNxnzB7ZDsef8TLbPLfyZMYXH8WTNqUdm9g8",
+      "listedAuthority": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+      "onChainAuthority": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+      "status": "match"
+    },
+    {
+      "protocol": "Jito",
+      "programName": "Restaking",
+      "programId": "RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q",
+      "listedAuthority": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+      "onChainAuthority": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+      "status": "match"
+    },
+    {
+      "protocol": "Jito",
+      "programName": "Steward",
+      "programId": "Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8",
+      "listedAuthority": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+      "onChainAuthority": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+      "status": "match"
+    },
+    {
+      "protocol": "Jito",
+      "programName": "Tip Payment",
+      "programId": "T1pyyaTNZsKv2WcRAB8oVnk93mLJw2XzjtVYqCsaHqt",
+      "listedAuthority": "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+      "onChainAuthority": "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+      "status": "match"
+    },
+    {
+      "protocol": "Jito",
+      "programName": "Tip Distribution",
+      "programId": "4R3gSG8BpU4t19KYj8CfnbtRpnT8gtk4dvTHxVRwc2r7",
+      "listedAuthority": "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+      "onChainAuthority": "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+      "status": "match"
+    },
+    {
+      "protocol": "Jito",
+      "programName": "Validator History",
+      "programId": "HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa",
+      "listedAuthority": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+      "onChainAuthority": "9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6",
+      "status": "match"
+    },
+    {
+      "protocol": "Zebec",
+      "programName": "Streaming",
+      "programId": "zbcKGdAmXfthXY3rEPBzexVByT2cqRqCZb9NwWdGQ2T",
+      "listedAuthority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+      "onChainAuthority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+      "status": "match"
+    },
+    {
+      "protocol": "Zebec",
+      "programName": "Multisig Helper",
+      "programId": "b6ZPysThkApNx2YDiGsPUiYPE7Ub1kTRdCWp7gBkzbr",
+      "listedAuthority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+      "onChainAuthority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+      "status": "match"
+    },
+    {
+      "protocol": "Zebec",
+      "programName": "SDK/V1",
+      "programId": "AknC341xog56SrnoK6j3mUvaD1Y7tYayx1sxUGpeYWdX",
+      "listedAuthority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+      "onChainAuthority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+      "status": "match"
+    },
+    {
+      "protocol": "Wick",
+      "programName": "Wick",
+      "programId": "wickHYqFr8NayYurE8M4oT8F4ZrYUwzaFoiXctCDSmF",
+      "listedAuthority": "3bAHFKgJx7mHeyo2VmDCGp4QmKxTbPdtF5MfPF16R19P",
+      "onChainAuthority": "3bAHFKgJx7mHeyo2VmDCGp4QmKxTbPdtF5MfPF16R19P",
+      "status": "match"
+    },
+    {
+      "protocol": "Onre Finance",
+      "programName": "Core",
+      "programId": "onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe",
+      "listedAuthority": "FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f",
+      "onChainAuthority": "FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f",
+      "status": "match"
+    },
+    {
+      "protocol": "MetaDAO",
+      "programName": "Futarchy",
+      "programId": "FUTARELBfJfQ8RDGhg1wdhddq1odMAJUePHFuBYfUxKq",
+      "listedAuthority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "onChainAuthority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "status": "match"
+    },
+    {
+      "protocol": "MetaDAO",
+      "programName": "Autocrat",
+      "programId": "auToUr3CQza3D4qreT6Std2MTomfzvrEeCC5qh7ivW5",
+      "listedAuthority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "onChainAuthority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "status": "match"
+    },
+    {
+      "protocol": "MetaDAO",
+      "programName": "AMM",
+      "programId": "AMMJdEiCCa8mdugg6JPF7gFirmmxisTfDJoSNSUi5zDJ",
+      "listedAuthority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "onChainAuthority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Entity Manager",
+      "programId": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Data Credits",
+      "programId": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Sub DAOs",
+      "programId": "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Voter Stake Registry",
+      "programId": "hvsrNC3NKbcryqDs2DocYHZ9yPKEVzdSjQG6RVtK1s8",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Modular Governance (proposals)",
+      "programId": "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Modular Governance (proposals v2)",
+      "programId": "nprx42sXf5rpVnwBWEdRg1d8tuCWsTuVLys1pRWwE6p",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Treasury Management",
+      "programId": "treaf4wWBBty3fHdyBpo35Mz84M8k3heKXmjmi9vFt5",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Mobile Entity",
+      "programId": "memMa1HG4odAFmUbGWfPwS1WWfK95k99F2YTkGvyxZr",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "No-Emit",
+      "programId": "noEmmgLmQdk6DLiPV8CSwQv3qQDyGEhz9m5A4zhtByv",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "IoT Distributor",
+      "programId": "1atrmQs3eq1N2FEYWu6tyTXbCjP4uQwExpjtnhXtS8h",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Organisations",
+      "programId": "orgdXvHVLkWgBYerptASkAwkZAE563CJUu717dMNx5f",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Price Oracle",
+      "programId": "porcSnvH9pvcYPmQ65Y8qcZSRxQBiBBQX7UV5nmBegy",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Hex Boosting",
+      "programId": "hexbnKYoA2GercNNhHUCCfrTRWrHjT6ujKPXTa5NPqJ",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Circuit Breaker",
+      "programId": "circAbx64bbsscPbQzZAUvuXpHqrCe6fLMzc2uKXz9g",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Fanout",
+      "programId": "fanqeMu3fw8R4LwKNbahPtYXJsyLL6NXyfe2BqzhfB6",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Rewards Oracle",
+      "programId": "rorcfdX4h9m9swCKgcypaHJ8NGYVANBpmV9EHn3cYrF",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Helium",
+      "programName": "Lazy Distributor",
+      "programId": "1azyuavdMyvsivtNxPoz6SucD18eDHeXzFCUPq5XU7w",
+      "listedAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "onChainAuthority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+      "status": "match"
+    },
+    {
+      "protocol": "Voltr",
+      "programName": "Vaults",
+      "programId": "aVoLTRCRt3NnnchvLYH6rMYehJHwM5m45RmLBZq7PGz",
+      "listedAuthority": "7p4d84NuXbuDhaAq9H3Yp3vpBSDLQWousp1a4jBVoBgU",
+      "onChainAuthority": "7p4d84NuXbuDhaAq9H3Yp3vpBSDLQWousp1a4jBVoBgU",
+      "status": "match"
+    },
+    {
+      "protocol": "Tessera V",
+      "programName": "AMM",
+      "programId": "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH",
+      "listedAuthority": "7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK",
+      "onChainAuthority": "7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK",
+      "status": "match"
+    },
+    {
+      "protocol": "deBridge",
+      "programName": "Main",
+      "programId": "DEbrdGj3HsRsAzx6uH4MKyREKxVAfBydijLUF3ygsFfh",
+      "listedAuthority": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+      "onChainAuthority": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+      "status": "match"
+    },
+    {
+      "protocol": "deBridge",
+      "programName": "Settings",
+      "programId": "DeSetTwWhjZq6Pz9Kfdo1KoS5NqtsM6G8ERbX4SSCSft",
+      "listedAuthority": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+      "onChainAuthority": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+      "status": "match"
+    },
+    {
+      "protocol": "BisonFi",
+      "programName": "AMM",
+      "programId": "BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi",
+      "listedAuthority": "UfSM2ZFRMeurGs1gqrMREjZDyzPweUY9Wt67BMVeo8j",
+      "onChainAuthority": "UfSM2ZFRMeurGs1gqrMREjZDyzPweUY9Wt67BMVeo8j",
+      "status": "match"
+    },
+    {
+      "protocol": "HumidiFi",
+      "programName": "AMM",
+      "programId": "9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp",
+      "listedAuthority": "4p1FfVusdT83PxejTPLEz6ZQ4keN9LVEkKhzSt6PJ5zw",
+      "onChainAuthority": "4p1FfVusdT83PxejTPLEz6ZQ4keN9LVEkKhzSt6PJ5zw",
+      "status": "match"
+    },
+    {
+      "protocol": "Photon",
+      "programName": "Trading Bot",
+      "programId": "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW",
+      "listedAuthority": "9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6",
+      "onChainAuthority": "9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6",
+      "status": "match"
+    },
+    {
+      "protocol": "SPL Stake Pool",
+      "programName": "Stake Pool",
+      "programId": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy",
+      "listedAuthority": "dPpFfahSWhm5M2RB3nVaHsXfnh9ooz5bWtR3WeUguDH",
+      "onChainAuthority": "dPpFfahSWhm5M2RB3nVaHsXfnh9ooz5bWtR3WeUguDH",
+      "status": "match"
+    },
+    {
+      "protocol": "LayerZero OFT",
+      "programName": "OFT",
+      "programId": "219m42qCuVirVvWs5GnkuX4aWFx5pX6D9RSTE1vsV5WS",
+      "listedAuthority": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+      "onChainAuthority": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+      "status": "match"
+    },
+    {
+      "protocol": "SolvBTC",
+      "programName": "Solv Protocol",
+      "programId": "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz",
+      "listedAuthority": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+      "onChainAuthority": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+      "status": "match"
+    },
+    {
+      "protocol": "GMSOL",
+      "programName": "Core",
+      "programId": "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo",
+      "listedAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "onChainAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "status": "match"
+    },
+    {
+      "protocol": "GMSOL",
+      "programName": "Exchange",
+      "programId": "GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg",
+      "listedAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "onChainAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "status": "match"
+    },
+    {
+      "protocol": "GMSOL",
+      "programName": "LP Manager",
+      "programId": "LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8",
+      "listedAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "onChainAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "status": "match"
+    },
+    {
+      "protocol": "GMSOL",
+      "programName": "Router",
+      "programId": "2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc",
+      "listedAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "onChainAuthority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+      "status": "match"
+    },
+    {
+      "protocol": "Ore",
+      "programName": "Ore V3",
+      "programId": "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv",
+      "listedAuthority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "onChainAuthority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+      "status": "match"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 1",
+      "programId": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 2",
+      "programId": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 3",
+      "programId": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 4",
+      "programId": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 5",
+      "programId": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "programName": "Deploy 6",
+      "programId": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd",
+      "listedAuthority": "4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ",
+      "onChainAuthority": "GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN",
+      "status": "mismatch"
+    },
+    {
+      "protocol": "Carrot",
+      "programName": "Carrot",
+      "programId": "CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s",
+      "listedAuthority": "3eUEKYy7bPqtZ3KyUvCgpXV55v8TfN4xE85NickX6SUM",
+      "onChainAuthority": "3eUEKYy7bPqtZ3KyUvCgpXV55v8TfN4xE85NickX6SUM",
+      "status": "match"
+    },
+    {
+      "protocol": "DefiTuna",
+      "programName": "DefiTuna",
+      "programId": "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD",
+      "listedAuthority": "FWFrrwQ3kd91FEBD17paLUNmWwCYwpxg9bQCXGAcq7jx",
+      "onChainAuthority": "FWFrrwQ3kd91FEBD17paLUNmWwCYwpxg9bQCXGAcq7jx",
+      "status": "match"
+    }
+  ]
+}

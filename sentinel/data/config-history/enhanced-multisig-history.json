@@ -1,0 +1,922 @@
+{
+  "Orca": {
+    "totalTxs": 1000,
+    "types": {
+      "USE_SPENDING_LIMIT": 894,
+      "APPROVE_PROPOSAL": 63,
+      "CREATE_VAULT_TRANSACTION": 16,
+      "EXECUTE_CONFIG_TRANSACTION": 5,
+      "CREATE_CONFIG_TRANSACTION": 3,
+      "TRANSFER": 15,
+      "ADD_BATCH_TRANSACTION": 2,
+      "CREATE_BATCH": 1,
+      "REJECT_PROPOSAL": 1
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV transferred 140920.031 ORCA to E7CgMQJUkd53vMgF89iRWCqGjSNtLoM4uUQDZccK97uT.",
+      "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV transferred 309734.6 ORCA to 5emFjuQYMcwzZ3HFfQ9M391QzBKE1uP1tyzsHMQuc7Ep.",
+      "DWo8SNtdBDuebAEeVDf7cWBQ6DUvoDbS7K4QTrQvYS1S transferred 18000 USDC to 5emFjuQYMcwzZ3HFfQ9M391QzBKE1uP1tyzsHMQuc7Ep.",
+      "Multiple native SOL transfers.",
+      "Multiple native SOL transfers.",
+      "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "FbLXvzaKfV6USGNMBTjoobbXrAbpXn4R1v87GFv4rDtY transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "DWo8SNtdBDuebAEeVDf7cWBQ6DUvoDbS7K4QTrQvYS1S transferred 499999 USDC to AJJp35YQoTXqjabSEZqEFK4QsYKbZ5vj5DkCqozbnWhr.",
+      "DWo8SNtdBDuebAEeVDf7cWBQ6DUvoDbS7K4QTrQvYS1S transferred 1 USDC to AJJp35YQoTXqjabSEZqEFK4QsYKbZ5vj5DkCqozbnWhr.",
+      "Multiple native SOL transfers."
+    ],
+    "firstTx": "2025-10-26",
+    "lastTx": "2026-04-06"
+  },
+  "Drift": {
+    "totalTxs": 55,
+    "types": {
+      "APPROVE_PROPOSAL": 41,
+      "TRANSFER": 13,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 55
+    },
+    "sampleDescriptions": [
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 14352.791091478 SOL to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 474184.818508 USDC to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 1.52 USDC to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 1.69 SOL to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF.",
+      "Multiple native SOL transfers.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 0.42 DRIFT to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 0.000001 SOL to HVoDbY5fWufyposQrdpwsV6w8TkSEi2hS6AjAPz4HRDF.",
+      "8GyLXWePLLwVDzoPmt8peTWCxp2ypbz2SuZHWNAraF8Z transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 15595120.84 USDC to dHkm17KBMg4xqe4ZURoyH1u9WycxyzAgbGVutWRLMaf.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 0.00001 USDC to dHkm17KBMg4xqe4ZURoyH1u9WycxyzAgbGVutWRLMaf."
+    ],
+    "firstTx": "2026-04-02",
+    "lastTx": "2026-04-10"
+  },
+  "Pumpfun": {
+    "totalTxs": 294,
+    "types": {
+      "REJECT_PROPOSAL": 12,
+      "APPROVE_PROPOSAL": 178,
+      "EXECUTE_CONFIG_TRANSACTION": 15,
+      "TRANSFER": 72,
+      "CANCEL_PROPOSAL": 14,
+      "COMPRESSED_NFT_MINT": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 287,
+      "BUBBLEGUM": 2,
+      "SYSTEM_PROGRAM": 4,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "sampleDescriptions": [
+      "5sFJMw5dC59oKGKA9LgeYQCSmYS6rLeCegxMkcM2Pwby transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7zc8kzBr5wbsQKxYYv9uCMgfcW5zjxLEopvmuf3ig6iw transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7zc8kzBr5wbsQKxYYv9uCMgfcW5zjxLEopvmuf3ig6iw transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4tbEe4AquJWyMh7f7yE5poFChhsuPbeGh7EHVQCvq2N8 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4tbEe4AquJWyMh7f7yE5poFChhsuPbeGh7EHVQCvq2N8 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6W6qsDbocrEs3vjri5Di15bf9PLRYhfxekPk25MhVHWz transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2024-05-24",
+    "lastTx": "2026-04-07"
+  },
+  "Magic Eden": {
+    "totalTxs": 158,
+    "types": {
+      "TRANSFER": 43,
+      "APPROVE_PROPOSAL": 100,
+      "EXECUTE_CONFIG_TRANSACTION": 12,
+      "EXECUTE_VAULT_TRANSACTION": 1,
+      "CREATE_VAULT_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 158
+    },
+    "sampleDescriptions": [
+      "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "fZTH6VKb8nBk8qaphYGR7BzoHua1uEWdboU9oQR2F3b transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2024-11-20",
+    "lastTx": "2026-04-10"
+  },
+  "Kamino": {
+    "totalTxs": 291,
+    "types": {
+      "APPROVE_PROPOSAL": 236,
+      "TRANSFER": 40,
+      "EXECUTE_CONFIG_TRANSACTION": 13,
+      "EXECUTE_VAULT_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 291
+    },
+    "sampleDescriptions": [
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6vkzAQLAERW5RKHX68ZCDxWxW77T8dMqYUYMXCe6ooMC transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6vkzAQLAERW5RKHX68ZCDxWxW77T8dMqYUYMXCe6ooMC transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Multiple native SOL transfers.",
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5ggs2vd1csz74YMCzxesmcUEd3ycYFKAW6kfyttVYwBv transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-04-15",
+    "lastTx": "2026-04-14"
+  },
+  "Jupiter Perps": {
+    "totalTxs": 16,
+    "types": {
+      "TRANSFER": 1,
+      "APPROVE_PROPOSAL": 12,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 16
+    },
+    "sampleDescriptions": [
+      "89FnbsKH8n6FXCghGUijxh3snqx3e6VXJ7q1fQAHWkQQ transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2026-02-04",
+    "lastTx": "2026-04-14"
+  },
+  "Jupiter Lend": {
+    "totalTxs": 132,
+    "types": {
+      "TRANSFER": 11,
+      "APPROVE_PROPOSAL": 106,
+      "EXECUTE_CONFIG_TRANSACTION": 14,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 132
+    },
+    "sampleDescriptions": [
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2KXsciM43Uw2SMxeRurSDMfEjTvwvPT2noCKHHM8c3pq transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-10-09",
+    "lastTx": "2026-03-20"
+  },
+  "Exponent": {
+    "totalTxs": 470,
+    "types": {
+      "APPROVE_PROPOSAL": 323,
+      "EXECUTE_VAULT_TRANSACTION": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 8,
+      "TRANSFER": 126,
+      "REJECT_PROPOSAL": 3,
+      "CANCEL_PROPOSAL": 5,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 470
+    },
+    "sampleDescriptions": [
+      "Multiple native SOL transfers.",
+      "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP transferred 200 ewfragSOL to CwZfcJ4E18oBRDxmBEpBC6kDdeffCqKwUyzN4kzbDRr3.",
+      "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP transferred 200 ewfragSOL to CwZfcJ4E18oBRDxmBEpBC6kDdeffCqKwUyzN4kzbDRr3.",
+      "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP transferred 204.520604468 ewfragSOL to CwZfcJ4E18oBRDxmBEpBC6kDdeffCqKwUyzN4kzbDRr3.",
+      "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP transferred 123.373783426 wkySOL to CwZfcJ4E18oBRDxmBEpBC6kDdeffCqKwUyzN4kzbDRr3.",
+      "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP transferred 1 wkySOL to CwZfcJ4E18oBRDxmBEpBC6kDdeffCqKwUyzN4kzbDRr3.",
+      "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP transferred 1 ewfragSOL to CwZfcJ4E18oBRDxmBEpBC6kDdeffCqKwUyzN4kzbDRr3.",
+      "2cVAT3oviEWgaTJkBipmN5KiYpmguzSqJG6hBa4Jfqgj transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2cVAT3oviEWgaTJkBipmN5KiYpmguzSqJG6hBa4Jfqgj transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2024-11-10",
+    "lastTx": "2026-04-14"
+  },
+  "Nosana": {
+    "totalTxs": 206,
+    "types": {
+      "TRANSFER": 63,
+      "APPROVE_PROPOSAL": 137,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "REJECT_PROPOSAL": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 206
+    },
+    "sampleDescriptions": [
+      "5WNNVkahiacGz88kBtZUfVhTFTsp2J4J5n6yEB4q3A3D transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5WNNVkahiacGz88kBtZUfVhTFTsp2J4J5n6yEB4q3A3D transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "FnCZoNo6ki4njeBKW6hWdS64gi3zj5j2aAAkhGbb7cBH transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "DabyDHD71166zcVcftGbnyZ9KWwFCt1nE6oXRyopqfRc transferred 100 nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7 to GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9.",
+      "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9 transferred 86898.47 nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7 to FEEw3nDocYSyrLT4HPjibjYuaNekakWNmasNvEx3nHKi.",
+      "FX7su1Vju2BFbZsz4FUb26LZBuc4TpBDN3dNBYbWAERx transferred 250 nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7 to GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9.",
+      "6iNSA5Tgbs11aX1NGjj4EjU9P3nV7knBtP4MmSwKky4o transferred 100 nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7 to GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9.",
+      "EhvYa3H4cK487YyuvheAPGHcdstZA7nqtwGfc3gh1Wsw transferred 100 nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7 to GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9.",
+      "DAJZgezuRoGnRFXBZB4mHXDCiwqBWd2rXhUJKvx7LZPc transferred 100 nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7 to GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9.",
+      "5biRX14jeczXDeXhdbfKbPKpMgATUwx7qtskQXEByToi transferred 100 nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7 to GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9."
+    ],
+    "firstTx": "2023-11-27",
+    "lastTx": "2025-07-29"
+  },
+  "Lulo": {
+    "totalTxs": 408,
+    "types": {
+      "EXECUTE_CONFIG_TRANSACTION": 14,
+      "APPROVE_PROPOSAL": 243,
+      "REJECT_PROPOSAL": 9,
+      "TRANSFER": 98,
+      "CANCEL_PROPOSAL": 3,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 6,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 12,
+      "CREATE_VAULT_TRANSACTION": 22,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 408
+    },
+    "sampleDescriptions": [
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "At3T1WtGw34Yt8WzJGNT5mrmRKLHuer6kAzZc7UBMWTh transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2024-05-22",
+    "lastTx": "2026-04-14"
+  },
+  "Huma Finance": {
+    "totalTxs": 168,
+    "types": {
+      "APPROVE_PROPOSAL": 86,
+      "EXECUTE_CONFIG_TRANSACTION": 11,
+      "EXECUTE_VAULT_TRANSACTION": 8,
+      "CANCEL_PROPOSAL": 4,
+      "TRANSFER": 18,
+      "USE_SPENDING_LIMIT": 9,
+      "REJECT_PROPOSAL": 7,
+      "CREATE_VAULT_TRANSACTION": 24,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 168
+    },
+    "sampleDescriptions": [
+      "Multiple native SOL transfers.",
+      "pjptFPDnkB8uhStmtGgEBgP9ARFUfCR9r9AAqZ725Js transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AVGVkpxUZ5K8Ftq8bEc2m8cKaLAJ4D2DRAepDFa85nv3 transferred 28768.199135 PST to D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF.",
+      "AVGVkpxUZ5K8Ftq8bEc2m8cKaLAJ4D2DRAepDFa85nv3 transferred 16672.955173 PST to D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF.",
+      "AVGVkpxUZ5K8Ftq8bEc2m8cKaLAJ4D2DRAepDFa85nv3 transferred 16486.253511 USDC to D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF.",
+      "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF transferred 29359.966147 PST to AVGVkpxUZ5K8Ftq8bEc2m8cKaLAJ4D2DRAepDFa85nv3.",
+      "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF transferred 13000 PST to AVGVkpxUZ5K8Ftq8bEc2m8cKaLAJ4D2DRAepDFa85nv3.",
+      "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4eFYjKnGAiwt6sR8rHrfXhLbSQ8PDfMhR9KpaQvbuG7z transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AVGVkpxUZ5K8Ftq8bEc2m8cKaLAJ4D2DRAepDFa85nv3 transferred 13.669167 PST to D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF."
+    ],
+    "firstTx": "2025-03-20",
+    "lastTx": "2026-04-13"
+  },
+  "Loopscale": {
+    "totalTxs": 1000,
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 157,
+      "TRANSFER": 157,
+      "APPROVE_PROPOSAL": 490,
+      "CREATE_VAULT_TRANSACTION": 180,
+      "REJECT_PROPOSAL": 16
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2026-01-21",
+    "lastTx": "2026-04-10"
+  },
+  "Switchboard": {
+    "totalTxs": 170,
+    "types": {
+      "TRANSFER": 28,
+      "APPROVE_PROPOSAL": 124,
+      "CANCEL_PROPOSAL": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 7,
+      "REJECT_PROPOSAL": 5,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 170
+    },
+    "sampleDescriptions": [
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7xAdgHMXqxErMQi5uGPWdCZcDR9E34bLputsbUbA29Rr transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2024-04-02",
+    "lastTx": "2025-09-08"
+  },
+  "Solstice": {
+    "totalTxs": 559,
+    "types": {
+      "EXECUTE_VAULT_TRANSACTION": 146,
+      "APPROVE_PROPOSAL": 372,
+      "CREATE_VAULT_TRANSACTION": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 22,
+      "TRANSFER": 5,
+      "REJECT_PROPOSAL": 5,
+      "CREATE_CONFIG_TRANSACTION": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 559
+    },
+    "sampleDescriptions": [
+      "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK transferred a total 0.002023704 SOL to multiple accounts.",
+      "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK transferred a total 0.002024154 SOL to multiple accounts.",
+      "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK transferred a total 0.002023854 SOL to multiple accounts.",
+      "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK transferred a total 0.002023704 SOL to multiple accounts.",
+      "BSfsLADCq7q6xDh28HQWcZXqE27ZKKRz24PHsRzMxXZK transferred a total 0.002023704 SOL to multiple accounts."
+    ],
+    "firstTx": "2025-06-19",
+    "lastTx": "2026-04-14"
+  },
+  "Hylo": {
+    "totalTxs": 1000,
+    "types": {
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 131,
+      "TRANSFER": 116,
+      "APPROVE_PROPOSAL": 472,
+      "REJECT_PROPOSAL": 31,
+      "USE_SPENDING_LIMIT": 74,
+      "CREATE_VAULT_TRANSACTION": 51,
+      "EXECUTE_VAULT_TRANSACTION": 25,
+      "SWAP": 16,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 10,
+      "ADD_BATCH_TRANSACTION": 33,
+      "CREATE_BATCH": 13,
+      "CANCEL_PROPOSAL": 15,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 7,
+      "EXECUTE_CONFIG_TRANSACTION": 6
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "Multiple native SOL transfers.",
+      "DLkcqeNNX8nRQgD87DN7LjHkcLQd9K2wuqaCbhkERJxL transferred 188241.211815 USDC to 91P72HUmuKVW9ZFfeMBkczBax7QN2ijVnQ9FeCgBtJfB.",
+      "3uxNepDbmkDNq6JhRja5Z8QwbTrfmkKP8AKZV5chYDGG transferred 98169.681821 USDC to DLkcqeNNX8nRQgD87DN7LjHkcLQd9K2wuqaCbhkERJxL.",
+      "Multiple native SOL transfers.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 90070.092583 USDC to DLkcqeNNX8nRQgD87DN7LjHkcLQd9K2wuqaCbhkERJxL.",
+      "mAQQ9BphDL82kcA5unrA5PJ6ekYh5PxKVh7UBwtgVyV transferred 18 JitoSOL to BjVanGXAEmHL677Lj7ywusqE7Uaop3sqYb7kiL2LFiK9.",
+      "Multiple native SOL transfers.",
+      "Multiple native SOL transfers.",
+      "DLkcqeNNX8nRQgD87DN7LjHkcLQd9K2wuqaCbhkERJxL transferred 82760 USDC to 91P72HUmuKVW9ZFfeMBkczBax7QN2ijVnQ9FeCgBtJfB.",
+      "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw transferred 82000 USDC to DLkcqeNNX8nRQgD87DN7LjHkcLQd9K2wuqaCbhkERJxL."
+    ],
+    "firstTx": "2025-03-12",
+    "lastTx": "2026-04-12"
+  },
+  "Stabble": {
+    "totalTxs": 1000,
+    "types": {
+      "APPROVE_PROPOSAL": 611,
+      "CANCEL_PROPOSAL": 5,
+      "TRANSFER": 277,
+      "EXECUTE_CONFIG_TRANSACTION": 14,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 77,
+      "REJECT_PROPOSAL": 12,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 4
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AzHKe4RnzpYRxjZ7eyVBL1fQnVvzV5pfQF9w3Cf1gqQB transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2024-07-11",
+    "lastTx": "2026-04-09"
+  },
+  "Marginfi": {
+    "totalTxs": 680,
+    "types": {
+      "APPROVE_PROPOSAL": 566,
+      "TRANSFER": 53,
+      "REJECT_PROPOSAL": 18,
+      "EXECUTE_CONFIG_TRANSACTION": 26,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 9,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 5,
+      "EXECUTE_VAULT_TRANSACTION": 1,
+      "CANCEL_PROPOSAL": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 680
+    },
+    "sampleDescriptions": [
+      "53kWkWcayhQfLqU2B5QAJTD9C7keD4HY7Y9Se4Mdmp9z transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "2owonq2d2LaQNCc4iq8s4848GeRsPQqbRdCReLhdx9mW transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Azrx6Xgii2jycxudPGrn1gk2XBkyfvGfMzqMfqfFfq8R transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-02-12",
+    "lastTx": "2026-04-10"
+  },
+  "Titan": {
+    "totalTxs": 1000,
+    "types": {
+      "REJECT_PROPOSAL": 10,
+      "APPROVE_PROPOSAL": 703,
+      "TRANSFER": 218,
+      "CREATE_VAULT_TRANSACTION": 37,
+      "ADD_BATCH_TRANSACTION": 4,
+      "CREATE_BATCH": 4,
+      "USE_SPENDING_LIMIT": 12,
+      "SWAP": 1,
+      "EXECUTE_VAULT_TRANSACTION": 7,
+      "CANCEL_PROPOSAL": 4
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "8voMjkW5B9GYRbPhjuoMSYyqiLvmozcRhSbmLHDMTtGk transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6p9M5QJLyLMbeVFqqNCLyRTQngd6ohBFUnwRGjwDE1oU transferred 7500 USDC to 46Nb3c42CC6C6zdRYw2hSsbsbBBz51qSPPM1mqqwzwwj.",
+      "3wLd4AUHQRB9DJrgP8Qwfp5fMh2SyAqj148d7qbUq8Lb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "H92mY1R6CYDPpHjisrE3C7xqfgp7751f2R13aRoT4SbB transferred 600 USDC to 5hN3QkaiHzQYDTCF2rYvyEkKHP3oTytRMcto9qxAGHxF.",
+      "9DrvZvyWh1HuAoZxvYWMvkf2XCzryCpGgHqrMjyDWpmo transferred 514983.944472 USDT to D3fxyAUGACaifNjHMYiBZRv3PBzwCVKpLAnLkBxBKw1q.",
+      "6p9M5QJLyLMbeVFqqNCLyRTQngd6ohBFUnwRGjwDE1oU transferred 17500 USDC to 46Nb3c42CC6C6zdRYw2hSsbsbBBz51qSPPM1mqqwzwwj.",
+      "H92mY1R6CYDPpHjisrE3C7xqfgp7751f2R13aRoT4SbB transferred 2995 USDC to 29LEBotT9wtt5WfAAig3jtZKEfG8CRygKseU47F9WWPD.",
+      "H92mY1R6CYDPpHjisrE3C7xqfgp7751f2R13aRoT4SbB transferred 2000 USDC to 7uj4WBNH1wRLZg8Wux9iTSJyJfonQs6hgMcRQXW7dqkF.",
+      "H92mY1R6CYDPpHjisrE3C7xqfgp7751f2R13aRoT4SbB transferred 5 USDC to 29LEBotT9wtt5WfAAig3jtZKEfG8CRygKseU47F9WWPD."
+    ],
+    "firstTx": "2025-03-23",
+    "lastTx": "2026-04-13"
+  },
+  "Solayer": {
+    "totalTxs": 47,
+    "types": {
+      "EXECUTE_CONFIG_TRANSACTION": 6,
+      "APPROVE_PROPOSAL": 30,
+      "TRANSFER": 7,
+      "REJECT_PROPOSAL": 3,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 46,
+      "SOLANA_PROGRAM_LIBRARY": 1
+    },
+    "sampleDescriptions": [
+      "CusYdBturGtGHLD8QiQdDuotq28cNnKiPzvaVRjfPr6N transferred 30000000 LAYER to 5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp.",
+      "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6eAxgG1KoXC6Q4YBdjptFmyfoWKNGYQEKT3sHoX7JWU8 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "BaNFXTtxVYnWDi5p1Fnb9BHxVc7amKiCXzg6XKRFomxf transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6eAxgG1KoXC6Q4YBdjptFmyfoWKNGYQEKT3sHoX7JWU8 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6eAxgG1KoXC6Q4YBdjptFmyfoWKNGYQEKT3sHoX7JWU8 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2024-03-31",
+    "lastTx": "2025-10-17"
+  },
+  "Flash Trade": {
+    "totalTxs": 274,
+    "types": {
+      "TRANSFER": 58,
+      "APPROVE_PROPOSAL": 200,
+      "EXECUTE_CONFIG_TRANSACTION": 13,
+      "REJECT_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 274
+    },
+    "sampleDescriptions": [
+      "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5xAoMYe8fFikUsJHRLq1suRA7tE3GrztqNkx9LhWaYZw transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "JwV3M6PvMykzYeQznSeZA7WdwTvyaXCC4dFWoKvSYZS transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "9woYpYDW8HcpY1KUvKToXPbK9nKyvz56bjU3MUFpZR5C transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "9woYpYDW8HcpY1KUvKToXPbK9nKyvz56bjU3MUFpZR5C transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "JwV3M6PvMykzYeQznSeZA7WdwTvyaXCC4dFWoKvSYZS transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "JwV3M6PvMykzYeQznSeZA7WdwTvyaXCC4dFWoKvSYZS transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "JwV3M6PvMykzYeQznSeZA7WdwTvyaXCC4dFWoKvSYZS transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5Arakn7JSt3sPkXdWvy1887Bjd2d755b57BTEwBR7cW3 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "9woYpYDW8HcpY1KUvKToXPbK9nKyvz56bjU3MUFpZR5C transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-05-26",
+    "lastTx": "2026-04-08"
+  },
+  "Wick": {
+    "totalTxs": 11,
+    "types": {
+      "CANCEL_PROPOSAL": 3,
+      "APPROVE_PROPOSAL": 6,
+      "EXECUTE_CONFIG_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 11
+    },
+    "sampleDescriptions": [],
+    "firstTx": "2026-04-03",
+    "lastTx": "2026-04-11"
+  },
+  "Onre Finance": {
+    "totalTxs": 1000,
+    "types": {
+      "TRANSFER": 190,
+      "APPROVE_PROPOSAL": 689,
+      "USE_SPENDING_LIMIT": 38,
+      "EXECUTE_CONFIG_TRANSACTION": 18,
+      "CREATE_VAULT_TRANSACTION": 10,
+      "REJECT_PROPOSAL": 42,
+      "CANCEL_PROPOSAL": 11,
+      "SWAP": 2
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 1093256.64 USDC to BWWBf4RPajg8ZgZxqVVduAsC9TdZJJPhpAdk9JDft5o4.",
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 1000000 USDC to 9RqDTfwCx2SgxsvKpspQHc38HUo3B6hRd3oR9JR966Ps.",
+      "Multiple native SOL transfers.",
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 1000000 USDC to FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f.",
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 5000000 2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH to FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f.",
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 1.1 USDC to FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f.",
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 1091800 USDC to BWWBf4RPajg8ZgZxqVVduAsC9TdZJJPhpAdk9JDft5o4.",
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 14348214.77169 ONyc to .",
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 1024929 2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH to BWWBf4RPajg8ZgZxqVVduAsC9TdZJJPhpAdk9JDft5o4.",
+      "45YnzauhsBM8CpUz96Djf8UG5vqq2Dua62wuW9H3jaJ5 transferred 109006 2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH to BWWBf4RPajg8ZgZxqVVduAsC9TdZJJPhpAdk9JDft5o4."
+    ],
+    "firstTx": "2025-09-01",
+    "lastTx": "2026-04-13"
+  },
+  "MetaDAO": {
+    "totalTxs": 1000,
+    "types": {
+      "APPROVE_PROPOSAL": 463,
+      "REJECT_PROPOSAL": 23,
+      "ACTIVATE_PROPOSAL": 5,
+      "ADD_BATCH_TRANSACTION": 9,
+      "CREATE_BATCH": 5,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 5,
+      "EXECUTE_CONFIG_TRANSACTION": 10,
+      "USE_SPENDING_LIMIT": 14,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 46,
+      "TRANSFER": 216,
+      "CREATE_VAULT_TRANSACTION": 199,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 1,
+      "CREATE_PROPOSAL": 4
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf transferred 16730.654318 SUPER to 32sBoSpYvsrev12rQ9cZRQnT4u6R5jf3v8PPVRbhhBR4.",
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "B3tDgrBf1CXt7gWwzT1Sw8X7SVqkAWFyPZahCKrhU3ZK transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-12-01",
+    "lastTx": "2026-04-13"
+  },
+  "Helium": {
+    "totalTxs": 465,
+    "types": {
+      "TRANSFER": 63,
+      "APPROVE_PROPOSAL": 187,
+      "ACTIVATE_PROPOSAL": 35,
+      "ADD_BATCH_TRANSACTION": 58,
+      "CREATE_BATCH": 43,
+      "CREATE_VAULT_TRANSACTION": 31,
+      "REJECT_PROPOSAL": 27,
+      "CANCEL_PROPOSAL": 4,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 2,
+      "CLOSE_VAULT_BATCH_TRANSACTION_ACCOUNT": 7,
+      "EXECUTE_CONFIG_TRANSACTION": 6,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 465
+    },
+    "sampleDescriptions": [
+      "mprGV3VdeBmf7o3dixtfYNgB2cHUU6cjRwTFCzWiEwd transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "mprGV3VdeBmf7o3dixtfYNgB2cHUU6cjRwTFCzWiEwd transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Multiple native SOL transfers.",
+      "Multiple native SOL transfers.",
+      "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "9SV1SL96d5CJBaoJsDJePujBVgJ7sVpLZXFsktq2WtSn transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "AWofQNYEnbQniPbyHNiVfrjy3i6PK7xZRUcHVfu7crCs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Multiple native SOL transfers."
+    ],
+    "firstTx": "2025-10-14",
+    "lastTx": "2026-04-10"
+  },
+  "Voltr": {
+    "totalTxs": 34,
+    "types": {
+      "TRANSFER": 11,
+      "APPROVE_PROPOSAL": 22,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 34
+    },
+    "sampleDescriptions": [
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "vxyzZyfd6nJ3v82fTSmuRiKF4owWF9sAXqneu9mne9n transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2026-03-08",
+    "lastTx": "2026-04-03"
+  },
+  "Tessera V": {
+    "totalTxs": 88,
+    "types": {
+      "TRANSFER": 12,
+      "APPROVE_PROPOSAL": 65,
+      "EXECUTE_CONFIG_TRANSACTION": 2,
+      "REJECT_PROPOSAL": 8,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 88
+    },
+    "sampleDescriptions": [
+      "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7KFLXnrRvRq8shX8MVMUdGFwgPa342B89c2nxvQXHpNi transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "7KFLXnrRvRq8shX8MVMUdGFwgPa342B89c2nxvQXHpNi transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "5JkWDAvrWGs1DzZYNDfKivCrB93AVPoa9xSpCDmrdSnb transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-06-12",
+    "lastTx": "2026-04-08"
+  },
+  "LayerZero OFT": {
+    "totalTxs": 24,
+    "types": {
+      "TRANSFER": 4,
+      "APPROVE_PROPOSAL": 10,
+      "CANCEL_PROPOSAL": 1,
+      "CREATE_VAULT_TRANSACTION": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 24
+    },
+    "sampleDescriptions": [
+      "Multiple native SOL transfers.",
+      "FKy9ETj6y1pHHrZG7Wg6ARahLpjMxvWdTN1CNybseiy transferred a total 0.003741984 SOL to multiple accounts.",
+      "FKy9ETj6y1pHHrZG7Wg6ARahLpjMxvWdTN1CNybseiy transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "FKy9ETj6y1pHHrZG7Wg6ARahLpjMxvWdTN1CNybseiy transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2026-01-26",
+    "lastTx": "2026-01-29"
+  },
+  "SolvBTC": {
+    "totalTxs": 79,
+    "types": {
+      "APPROVE_PROPOSAL": 48,
+      "EXECUTE_CONFIG_TRANSACTION": 4,
+      "TRANSFER": 12,
+      "CREATE_VAULT_TRANSACTION": 11,
+      "CREATE_PROPOSAL": 2,
+      "REJECT_PROPOSAL": 1,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 79
+    },
+    "sampleDescriptions": [
+      "Multiple native SOL transfers.",
+      "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "FDXnob5DQEghkpLsBAsiQsarxodkcbJ728HhhZeykzH6 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Multiple native SOL transfers.",
+      "H2ayWzPpVn6hux2Qmat7oDVcReJwZu31856V2CmNUj3i transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "71K5nFw3E3xHqECsRWFAMrr6JvTwkvEyb7mLgs3Gy52q transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "71K5nFw3E3xHqECsRWFAMrr6JvTwkvEyb7mLgs3Gy52q transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-10-30",
+    "lastTx": "2026-01-06"
+  },
+  "GMSOL": {
+    "totalTxs": 1000,
+    "types": {
+      "APPROVE_PROPOSAL": 551,
+      "CREATE_VAULT_TRANSACTION": 136,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 141,
+      "TRANSFER": 137,
+      "REJECT_PROPOSAL": 35
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Multiple native SOL transfers.",
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Multiple native SOL transfers.",
+      "BQ5qnKRmtECLcxVfaVtGvY5Z5xoFF9hSY9ETUh7oMwY2 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2026-01-13",
+    "lastTx": "2026-04-13"
+  },
+  "GMSOL Deploy": {
+    "totalTxs": 46,
+    "types": {
+      "TRANSFER": 5,
+      "APPROVE_PROPOSAL": 17,
+      "CREATE_PROPOSAL": 9,
+      "CREATE_VAULT_TRANSACTION": 9,
+      "EXECUTE_VAULT_TRANSACTION": 3,
+      "REJECT_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 46
+    },
+    "sampleDescriptions": [
+      "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2026-03-25",
+    "lastTx": "2026-04-10"
+  },
+  "Ore": {
+    "totalTxs": 1000,
+    "types": {
+      "TRANSFER": 304,
+      "APPROVE_PROPOSAL": 621,
+      "CANCEL_PROPOSAL": 10,
+      "REJECT_PROPOSAL": 12,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 53
+    },
+    "sources": {
+      "SQUADS_V4": 1000
+    },
+    "sampleDescriptions": [
+      "7eyKjpFyTszL1JB1g3BAi7UucCQfKHPThX56ehZ9kxAh transferred 84999.02 USDC to 7RU8tK6ktYP4Lvxp6xTR8RsfHLxGY1zB7ZzsJ1w8tyLi.",
+      "7eyKjpFyTszL1JB1g3BAi7UucCQfKHPThX56ehZ9kxAh transferred 0.98 USDC to 7RU8tK6ktYP4Lvxp6xTR8RsfHLxGY1zB7ZzsJ1w8tyLi.",
+      "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "DyB4Kv6V613gp2LWQTq1dwDYHGKuUEoDHnCouGUtxFiX transferred 24153.188699 USDC to 7eyKjpFyTszL1JB1g3BAi7UucCQfKHPThX56ehZ9kxAh.",
+      "A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13 transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "iqsobyCTnvKErPnQybqTY6ZvhQjpmCverBbxDJfTTWR transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-11-23",
+    "lastTx": "2026-04-09"
+  },
+  "Carrot": {
+    "totalTxs": 251,
+    "types": {
+      "TRANSFER": 73,
+      "APPROVE_PROPOSAL": 160,
+      "REJECT_PROPOSAL": 13,
+      "CANCEL_PROPOSAL": 4,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 251
+    },
+    "sampleDescriptions": [
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2025-04-04",
+    "lastTx": "2026-01-12"
+  },
+  "DefiTuna": {
+    "totalTxs": 571,
+    "types": {
+      "TRANSFER": 142,
+      "APPROVE_PROPOSAL": 323,
+      "USE_SPENDING_LIMIT": 8,
+      "REJECT_PROPOSAL": 36,
+      "CLOSE_VAULT_TRANSACTION_ACCOUNTS": 29,
+      "CREATE_VAULT_TRANSACTION": 17,
+      "CLOSE_CONFIG_TRANSACTION_ACCOUNTS": 4,
+      "EXECUTE_CONFIG_TRANSACTION": 8,
+      "CREATE_CONFIG_TRANSACTION": 1,
+      "CANCEL_PROPOSAL": 2,
+      "CREATE_MULTISIG": 1
+    },
+    "sources": {
+      "SQUADS_V4": 571
+    },
+    "sampleDescriptions": [
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL.",
+      "4naYqyXqJnkQe4JABAn4sCyxYqFoUuePosS2T2g68vak transferred 0.0001 SOL to DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL."
+    ],
+    "firstTx": "2024-12-13",
+    "lastTx": "2026-04-14"
+  }
+}

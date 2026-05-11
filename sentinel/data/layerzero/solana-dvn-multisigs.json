@@ -1,0 +1,261 @@
+{
+  "generatedAt": "2026-04-20T12:00:15.146Z",
+  "dvns": [
+    {
+      "name": "LayerZero Labs",
+      "address": "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+      "vid": 168,
+      "quorum": 2,
+      "signers": [
+        "4df790520d7c2688726775070b5cc1b0257bad9a5c1379559d29284c3ac749848ab6adf259f9b769da6415085bd1d0650824bc9fb1e1302d270d24fa95051c92",
+        "6350407df6f84281cac1683acbb725bb66a5b5a576c7a186da1f9866bd4ae339a5612b6ebf15020f12cd07eba5e8e9d5c7da204b2764246f25420b5cab76ca54",
+        "9c4001179624ef08ce8295b4e4177b46760b520b28127e0efaacae3aca94adc2f1d37b6db39ea9ddb01fb304c2b856d66efbc52385f8b57aa2c8a45ace865b50"
+      ],
+      "dataLen": 7113,
+      "ownerProgram": "HtEYV4xB4wvsj5fgTkcfuChYpvGYzgzwvNhgDZQNh7wW"
+    },
+    {
+      "name": "Nethermind",
+      "address": "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "86fc438197b3a3fdacd566360c681332e6dcd3bb2e8a2f29a23afe880ea11d381c08373756f57403a8673f2489aed19f5c1f1c68c3821334b86abd53f7b3cb9c",
+        "ec9d8747f335d167892e396bc9b1a6ee8a32f465b303094b2b36d97fd5262d17e1eeb872ec6bc80ff57f53357d8acec487035a24d96b5a85293aae2b76d3b88c",
+        "c1bcf2c37181f46747299f0d700a51db02f8a882d578f518afaf599663270c45e430f6dd2499da4f98d47db1e6018276c2fbaf2796e66d6533871e85c1e372c1",
+        "2dcd2603a40013133d0a64a4cb75bddada8e9a35cbaf1fce9938cc3cde523536a0c518f8501a46e1a4839da844ceb810272b2855f29ae4ad8374b5fa0bdf813b"
+      ],
+      "dataLen": 7113,
+      "ownerProgram": "4fs6aL12L18K5giDy9Dgxgrb3aNRYiuRV2a7JPPj3e7F"
+    },
+    {
+      "name": "Google",
+      "address": "F7gu9kLcpn4bSTZn183mhn2RXUuMy7zckdxJZdUjuALw",
+      "vid": 168,
+      "quorum": 2,
+      "signers": [
+        "ac3bbcc909cc9cf180adc598988377a129b24b4f9414b6a5570db36cadbd8e6b044fe59178630a0f794f2f1eda58cd3e5271202801aed93eee074893266ad719",
+        "ba807e9be2a722dbfdf01238a8d543d5773dc5605f574054630061b54d1ed2a63d153cb3a309582186f52ba09a6de60c7aa49a782a78623182923423f05e9422",
+        "50203e9d4dfc47d3cb28c63b854e2e2d0cdc72666ae97d512a0ba62bd6f4e925ba5ad214bdffc79656fe5603f724636cbd2439f2de59463a9e4eef9dfa9acd71"
+      ],
+      "dataLen": 7113,
+      "ownerProgram": "D5mVdHmD21yPS3p4utgp54wTUPqt7d7qCXt4oqCYsaBo"
+    },
+    {
+      "name": "Horizen",
+      "address": "HR9NQKK1ynW9NzgdM37dU5CBtqRHTukmbMKS7qkwSkHX",
+      "vid": 168,
+      "quorum": 2,
+      "signers": [
+        "558c1b17103386da10dd8189c509c8434a6f0b05e0f473a086894c373f062acc420f5fd5e9702d7af5afc6e009fec5955466bb3be8ad3c9a7b6f6f3bb2134122",
+        "3a36c3663865a705d4e9798a29b1650e5d980a2792eeb3aea8cbe26fa0c5cad367712241618d343e9c3236c60167cb5ed5c2b69c7cb57079ccb1721d70e0f4de"
+      ],
+      "dataLen": 7113,
+      "ownerProgram": "4Z436PCb83Ft9dMRtwZ2mK7ZQtqVhbFEC3BYna9qB7B9"
+    },
+    {
+      "name": "Deutsche Telekom",
+      "address": "FxFxe8j7e2xgpP9bw8LUehmz7DoQXaNFadJMEUKwBcRs",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "bf44b3858aa2f25a97958766fd1a4e24b7f0cb4c250dc3e8bce84b43fa65e9702274681e89080e320635bc58aad81105825b2b100248385a51d8dc8d9278cc4b"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "FAAWGvgG5KNinoW4UJDF2MMU33DXeUb16tqapAgNbowR"
+    },
+    {
+      "name": "Luganodes",
+      "address": "41QAdzUraTcvk1P2B6fcs5nQ4EeEKEGnQy5EPpCQ5AdX",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "ff7694ad623d4082c87efbb95aa2e33580acd905d97d19c60b083d0fac8d8d6446503564600854153a462cee533ac41f7821bb224707ef768c04e6ce1382cd1d"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "QvorCTciEhpzwCVUCcLcbGFp15rpwFSsdQzHkgGBGHA"
+    },
+    {
+      "name": "Frax",
+      "address": "6YB63FDuyYLt5gnJeiVmYRE4c6tFid5SrBZzMLQFfexm",
+      "vid": 168,
+      "quorum": 2,
+      "signers": [
+        "568b33e71581dca7adfd4e2bf8fd78069aabce1cf80b4968d2d01c25109804b71cbf09fb57005ea3a2faf99a65075b56b0c6688a11c27bdfe1ca8ceb4892752f",
+        "b4ef5c41d6fcac802fa36d6a9aa5755581b42d32991c464a1b5513787f02f41e957dd63a0952fdf8379d71af74af4da4e6b15aa341ddebf34bd1a104523deccf",
+        "f6ffb60fd03e011d9ca8e98931f3f96f626431773fdb71f66f6b3327f32e30a10f6d5a06cbf347413a1c0c69dbb06ca3369c8f8284247e2fffdc22760272bd3d"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "3f8coqkajiMZC4dyrSs4JHH5xt8m9ceZJZe7d7VVCC3e"
+    },
+    {
+      "name": "Ondo",
+      "address": "D1A8NPP4S5RX5jFLprNQGytLFCrV9ZiaFykLmat4WGA7",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "cc122a9f171d9f366a7028ff93fcfc4a0944981d776a81dcf370d0325e0a1b81f02a3419fc9cdbe42e5c85ba7d268e955143b11dc0da11d6a37a395a0baefc94"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "BzEhK3gW6C1uJfRR8Uu2xjKPyYiQGRfR8tr6UNdb6u1k"
+    },
+    {
+      "name": "Ondo Staging",
+      "address": "4npJTMgVbLn2jAiLGg7pNEBv4RjQ5HScjLeSQPZAdJdq",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "29501c04f7ff61e75ad5a610ee0fa1983253fc8e8db04e800f06e6db7927ba9bfae37e198274ee699057214fb05e2298f92893a0498811f4182346a313623319"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "GZPWZ44QJZ4pKArayYDUwP3R18gk4jBELE3ke7gU2zeS"
+    },
+    {
+      "name": "Canary",
+      "address": "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "d171a4428246ac2fe197c6ffe4973809e8d8c797a9c24010a99e31e98fcceb3694be32cbaa366166cafe512728e543a99e575aecd94451608ea20206cc5639f8"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "5KAALa8AEEKnW6p6AacdnqNDmGMpfhwR7AEyWs1gUvsT"
+    },
+    {
+      "name": "USDT0",
+      "address": "JBt34GkVns6VSoP2dCPpViW28eqE4GNgKaoZPRP63wZs",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "6d0df72513cbceee7d66f71078d9bb941812884089a364342ab51bd4127dc0b87b4ec97f4f22b990e8cb59f1b6cdceed1f4c484f49d2816201925364eccf3553",
+        "b672af75970b0b8d45284c9bf6cc793c7437f8f365e21527cae4f8367c8f945355f48838a8cafecdc6aef1392fe5457c64201dba493d0b3d4ceb9bfe65e6cc85"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "3T7waVnx1W54ZA7XuRmXngoua4hEkRXciNL8stBJAUR4"
+    },
+    {
+      "name": "Brale",
+      "address": "4EsNicsBtbNE2ZQqB24DVjjqgKh1sWjSKNcdxEgD5d8b",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "ff907ed01af93da399f2c574d45d295904645c73e127e87eebf7797dded9c5fbb09ccd52eaf50c9af9cd7c93f8678f5da71d30a4109f4e79a857f270813ce721"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "BsVNDmb6UckcSEJUbbrM4m7tu75FXx6RKSdpZPztHrvW"
+    },
+    {
+      "name": "Wyoming",
+      "address": "6bdMfqghzhFpMsbrfy6qiyXnGkYGcamn3WYxeKx8Muik",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "0273da6366d7e6db5255ba611a59225f8045b06e20a4c341bcbcdc8e41152ad4be6179b6e513a79fbbc9968eb26a683d222b6ff84431eb2816ac05149543ca15"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "5cqUFgEWjk78u6n9ZCnw7b6qXPemiYWsmiYowHLzpR75"
+    },
+    {
+      "name": "MantleCross",
+      "address": "AKPKvgSvx4XocG7rMBv3qycKpZWaSCE4gZUCaTZp3J5W",
+      "vid": 168,
+      "quorum": 2,
+      "signers": [
+        "1d45bd6ad05ecc5b60395df6a8b33c0ef2e1359aaa6fa03f8e0e2b4e37ab39e17179aa3315df82d8abca62b84aca3b56826e7b328320496f0b0a6714a8b70fb0",
+        "659e50a53de8f114261744be1d791add2fb951e35ae494be7b48f4c5246c4df56772cb3b21ca60099891157abfdcee946928e54dde3c98c71f42445bb63942e9"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "HXfAKVgs3kPvmLVDmBCfU9b1fMXW7XXXNdkDAgVorUH3"
+    },
+    {
+      "name": "P2P",
+      "address": "29EKzmCscUg8mf4f5uskwMqvu2SXM8hKF1gWi1cCBoKT",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "c71ba7e4df3a3c05e98a1bccee5be544b02ffd28336d374253c6408b31f69f05f9dca9dd2b6908791a98d5f8ecae4bd6eae9ff8a9d16fcf6f1e637f0d0986136"
+      ],
+      "dataLen": 7113,
+      "ownerProgram": "68C5DkFUS2BJwvjhi25s6WgJK5oi6f1TrDXPDvLK6c1b"
+    },
+    {
+      "name": "B-Harvest",
+      "address": "F8tr3GMivioYFEvJAR2WW5CKjPtgMQtM5CEuSjjVkjWL",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "60443831b1eb1b76f2d13e06891f03e3c2454653694ddeab53f86390be13ab4503948210a3870fa57e4fa2213607fa1080d168f9e56c974988b6857d748ccae4"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "DTNFmiLYqCPQXAQ38fCS59fr6wRWT1G1eb2Xr4R9tts6"
+    },
+    {
+      "name": "Nansen",
+      "address": "Fn8yyjaLbqw9FZyyLaTkb8o8RWp3vztxNChtPxcV1cLV",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "c0c8a4c1a5a5b5bd75e0b52118a0db0ec3c499c94c2604d463798db11c68fa0f734ee09bda277dbbce9f71c6a081310ece6eb7f6332737a66fdce3975bb6a30d"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "8Hi6A4afZQrYjJrKFGqaLfWroMUrCqSonrwVhopxSVnW"
+    },
+    {
+      "name": "Paxos",
+      "address": "4HxXbLv37XrivKukEbofybpHr7C8HUGJzd4B5T9USpGh",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "8e7f9274fbff55b7a8ad2ddf7b0542eea1a994d459f7482b53f6a76667f66e56f54b1bd5c64c98f13b00f311323e7e5d4b053c7ab818281acc11a055cf53e76f"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "2riPXyzsFhSasZTxbEeWuuvHu4P5c49x4ARJQ4wgLiTF"
+    },
+    {
+      "name": "Worldpay",
+      "address": "SzcKuPbuMGwMqd9pWTRQDEyL3qZT8YJU4Q5DY9M2aee",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "d9a292795199f1b4449f749e475b1df882f86ccb73d359b8707174aab320ca27af28575c03544d9453a4b759a65c8036e8e31ac2a4f6af164586beb44da891c3"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "CHRnLFhstvA4y8GftZ7guMkwpx2UXwFB8hytCcvYZ7ju"
+    },
+    {
+      "name": "Mantle Bank",
+      "address": "GfG8FCkhxmkgXd2yZQbogUV669jX5t9RK87jL2bWBkKK",
+      "vid": 168,
+      "quorum": 2,
+      "signers": [
+        "d5f3633450564a90d16d9b3dc36fe5df972c2ae8f4ca44fd0972bedf387bdcdbceeb586153096aef675150737f6db1a42d62b2142ba12fcc0a0820c9bee96835",
+        "eedc2066aba3386d1f38f8ca7d281638605b00d32e99635caf355bf7b890367f624791d173fa96e6576f77f14644565b3d586188062e0358185ce12df646ffd3"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "DzEfSvmnZEWStNydXgAkZJCqJr3L5XgvTUxWEScTXehP"
+    },
+    {
+      "name": "Fidelity",
+      "address": "AQGjhJcqEVZP5WHd3NhidpbL743eiTti2Mxgc6XZeKPV",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "8781712dc228641e28e2edbeac9af858f11d5de190a23552d9e6476d12f96d09d7d192a72629285c6c884655c03afdfd4e5298a3fb06ce6385e91430c8b590f7"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "GbCW2Gg621DMyRR2XDLuLZgNXAXBh12njiYLvdCFQ5wy"
+    },
+    {
+      "name": "P-OPS",
+      "address": "CratyHhkQXbRAgck3sooXFYbBADsCtjoxhjVbPKAAhK2",
+      "vid": 168,
+      "quorum": 1,
+      "signers": [
+        "94b8b7ccd03d3b8a78a8d429a2e34814efa6b5ef499345dbd41a4041736b5cc86e0bad6472e48269a18a25fcf8c3a0316feb31cf891f795844901da0bbf8f6f1"
+      ],
+      "dataLen": 5433,
+      "ownerProgram": "GJdzhEGLsZMMhA21fE2uWsydjJZEvoauYYneR8sV4WaA"
+    }
+  ],
+  "sharedSigners": []
+}

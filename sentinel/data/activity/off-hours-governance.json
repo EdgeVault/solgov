@@ -1,0 +1,143 @@
+[
+  {
+    "protocol": "Orca",
+    "offHoursConfigChanges": 2,
+    "totalConfigChanges": 5,
+    "details": [
+      {
+        "date": "2026-04-03 05:55:36 UTC",
+        "hour": 5,
+        "description": ""
+      },
+      {
+        "date": "2025-12-29 22:01:36 UTC",
+        "hour": 22,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "protocol": "Magic Eden",
+    "offHoursConfigChanges": 1,
+    "totalConfigChanges": 1,
+    "details": [
+      {
+        "date": "2025-07-18 00:49:03 UTC",
+        "hour": 0,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "protocol": "Jupiter Perps",
+    "offHoursConfigChanges": 1,
+    "totalConfigChanges": 2,
+    "details": [
+      {
+        "date": "2026-02-11 06:00:50 UTC",
+        "hour": 6,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "protocol": "Huma Finance",
+    "offHoursConfigChanges": 5,
+    "totalConfigChanges": 7,
+    "details": [
+      {
+        "date": "2026-04-13 06:30:53 UTC",
+        "hour": 6,
+        "description": ""
+      },
+      {
+        "date": "2026-04-10 04:39:54 UTC",
+        "hour": 4,
+        "description": ""
+      },
+      {
+        "date": "2026-04-09 03:33:40 UTC",
+        "hour": 3,
+        "description": ""
+      },
+      {
+        "date": "2026-03-23 04:47:10 UTC",
+        "hour": 4,
+        "description": ""
+      },
+      {
+        "date": "2025-05-19 23:50:58 UTC",
+        "hour": 23,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "protocol": "Marginfi",
+    "offHoursConfigChanges": 2,
+    "totalConfigChanges": 4,
+    "details": [
+      {
+        "date": "2026-03-13 02:10:26 UTC",
+        "hour": 2,
+        "description": ""
+      },
+      {
+        "date": "2026-01-29 00:42:40 UTC",
+        "hour": 0,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "protocol": "Solayer",
+    "offHoursConfigChanges": 1,
+    "totalConfigChanges": 6,
+    "details": [
+      {
+        "date": "2024-05-14 22:11:03 UTC",
+        "hour": 22,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "protocol": "Flash Trade",
+    "offHoursConfigChanges": 1,
+    "totalConfigChanges": 11,
+    "details": [
+      {
+        "date": "2026-04-03 00:19:32 UTC",
+        "hour": 0,
+        "description": ""
+      }
+    ]
+  },
+  {
+    "protocol": "MetaDAO",
+    "offHoursConfigChanges": 4,
+    "totalConfigChanges": 4,
+    "details": [
+      {
+        "date": "2026-04-11 02:51:44 UTC",
+        "hour": 2,
+        "description": ""
+      },
+      {
+        "date": "2026-04-01 22:56:23 UTC",
+        "hour": 22,
+        "description": ""
+      },
+      {
+        "date": "2026-04-01 22:55:01 UTC",
+        "hour": 22,
+        "description": ""
+      },
+      {
+        "date": "2026-04-01 22:53:30 UTC",
+        "hour": 22,
+        "description": ""
+      }
+    ]
+  }
+]

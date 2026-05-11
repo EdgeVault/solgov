@@ -1,0 +1,35 @@
+{
+  "Orca": {
+    "totalTxs": 500,
+    "creates": 19,
+    "executes": 5,
+    "approvals": 60,
+    "timingSamples": 4,
+    "avgH": 70.7,
+    "fastestH": 18.1,
+    "slowestH": 132.4,
+    "medianH": 66.3
+  },
+  "Huma Finance": {
+    "totalTxs": 168,
+    "creates": 24,
+    "executes": 19,
+    "approvals": 86,
+    "timingSamples": 9,
+    "avgH": 0.4,
+    "fastestH": 0,
+    "slowestH": 1.7,
+    "medianH": 0.1
+  },
+  "Solstice": {
+    "totalTxs": 500,
+    "creates": 8,
+    "executes": 143,
+    "approvals": 339,
+    "timingSamples": 63,
+    "avgH": 28.6,
+    "fastestH": 0.1,
+    "slowestH": 144.6,
+    "medianH": 14.4
+  }
+}

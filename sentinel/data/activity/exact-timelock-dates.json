@@ -1,0 +1,103 @@
+{
+  "computedAt": "2026-04-20T16:10:24.677Z",
+  "results": [
+    {
+      "protocol": "Orca",
+      "multisig": "BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF",
+      "timelockSeconds": 86400,
+      "timelockSetTs": 1733781720,
+      "timelockSetIso": "2024-12-09T22:02:00.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 46L1u57nWzhtu3iC"
+    },
+    {
+      "protocol": "Kamino",
+      "multisig": "6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM",
+      "timelockSeconds": 43200,
+      "timelockSetTs": 1744729540,
+      "timelockSetIso": "2025-04-15T15:05:40.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 2hx1eCBmL7dEQXkj"
+    },
+    {
+      "protocol": "Jupiter Perps",
+      "multisig": "AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm",
+      "timelockSeconds": 86400,
+      "timelockSetTs": 1770376501,
+      "timelockSetIso": "2026-02-06T11:15:01.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig ggRHbhisPqYPmegH"
+    },
+    {
+      "protocol": "Jupiter Lend",
+      "multisig": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+      "timelockSeconds": 43200,
+      "timelockSetTs": 1760105077,
+      "timelockSetIso": "2025-10-10T14:04:37.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 3ufxrLuQ3cFiXqQr"
+    },
+    {
+      "protocol": "Huma",
+      "multisig": "uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX",
+      "timelockSeconds": 43200,
+      "timelockSetTs": 1743862774,
+      "timelockSetIso": "2025-04-05T14:19:34.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 27sxKVT1LapXpskR"
+    },
+    {
+      "protocol": "Solstice",
+      "multisig": "AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf",
+      "timelockSeconds": 86400,
+      "timelockSetTs": 1750495948,
+      "timelockSetIso": "2025-06-21T08:52:28.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 2p7BzHJrJuXbSiZF"
+    },
+    {
+      "protocol": "Flash Trade",
+      "multisig": "Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF",
+      "timelockSeconds": 3600,
+      "timelockSetTs": 1764193285,
+      "timelockSetIso": "2025-11-26T21:41:25.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 4FNF7txXPkDLrcLu"
+    },
+    {
+      "protocol": "Wick",
+      "multisig": "8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA",
+      "timelockSeconds": 86400,
+      "timelockSetTs": 1775252258,
+      "timelockSetIso": "2026-04-03T21:37:38.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 7NQU4h1FnRQAyFuq"
+    },
+    {
+      "protocol": "Voltr",
+      "multisig": "5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH",
+      "timelockSeconds": 28800,
+      "timelockSetTs": 1776176844,
+      "timelockSetIso": "2026-04-14T14:27:24.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 5dTpWaVnVJ7GbmPD"
+    },
+    {
+      "protocol": "GMSOL",
+      "multisig": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+      "timelockSeconds": 600,
+      "timelockSetTs": 1737653527,
+      "timelockSetIso": "2025-01-23T17:32:07.000Z",
+      "method": "first ConfigTransactionExecute",
+      "detail": "sig 2df4DKY3VNJFEwb3"
+    },
+    {
+      "protocol": "GMSOL Deploy",
+      "multisig": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+      "timelockSeconds": 3600,
+      "timelockSetTs": 1774436216,
+      "timelockSetIso": "2026-03-25T10:56:56.000Z",
+      "method": "creation date (no config-change found)"
+    }
+  ]
+}

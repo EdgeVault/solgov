@@ -1,0 +1,871 @@
+{
+  "Drift": {
+    "totalTxs": 55,
+    "transfers": 13,
+    "govTxs": 0,
+    "transferPct": 24,
+    "solOutLamports": 0,
+    "solInLamports": 2958000,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 16069307.178518001,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "out": 14354.481092478001,
+        "in": 0,
+        "count": 3
+      },
+      {
+        "mint": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+        "out": 0.42,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Pumpfun": {
+    "totalTxs": 294,
+    "transfers": 72,
+    "govTxs": 0,
+    "transferPct": 24,
+    "solOutLamports": 0,
+    "solInLamports": 4346092,
+    "tokenFlows": [
+      {
+        "mint": "78sbodGKFxCesckpZ5vtNqJTYWcJvMnTFtpsKVynJG9E",
+        "out": 695747,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Magic Eden": {
+    "totalTxs": 158,
+    "transfers": 43,
+    "govTxs": 0,
+    "transferPct": 27,
+    "solOutLamports": 0,
+    "solInLamports": 5025120,
+    "tokenFlows": [
+      {
+        "mint": "MEFNBXixkEbait3xn9bkm8WsJzXtVsaJEn4c8Sam21u",
+        "out": 2000000000,
+        "in": 0,
+        "count": 11
+      }
+    ]
+  },
+  "Exponent": {
+    "totalTxs": 476,
+    "transfers": 128,
+    "govTxs": 0,
+    "transferPct": 27,
+    "solOutLamports": 0,
+    "solInLamports": 4336080,
+    "tokenFlows": [
+      {
+        "mint": "HvbiURJrVQnRQynYqDTWqsBUfqZGvWuL1VXYFtUQ9bGC",
+        "out": 1816.5618134039996,
+        "in": 0,
+        "count": 8
+      },
+      {
+        "mint": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL",
+        "out": 14747.728231977002,
+        "in": 0,
+        "count": 7
+      },
+      {
+        "mint": "8RYqiomyaKEEWSR8vZppG44VyPJK5jwR7EVwGo2Yk9YM",
+        "out": 373.121350278,
+        "in": 0,
+        "count": 6
+      },
+      {
+        "mint": "AbLVgZ12tDRf7PSYFKRjtHM1yvqXwhLk9sSiL8ocRqt3",
+        "out": 0.00004,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "87fiJLeSc6veNH1qc5VRmmuuRoWGFbZvoynkjdWrfDjs",
+        "out": 4e-8,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "5fLxHMbTuxhHnbA38hMNrj5FQVrF9JnmuPz7e8JQAJ5S",
+        "out": 0.00004,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "9DwmsYUJRenZ1kX2Qvmfwg5ACraUYvEFMHb4hoDz3Prb",
+        "out": 4e-8,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 7564.952342,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "Af4kuyVwhoWK91YcsaoRQE4YbSknuWjwVM4xet7hRHB6",
+        "out": 0.00002,
+        "in": 0,
+        "count": 2
+      },
+      {
+        "mint": "2jSne8C9vMkMZC5Wj1Q3SsD7T5RTZx7pzsgZrXPYoWoB",
+        "out": 2e-8,
+        "in": 0,
+        "count": 2
+      }
+    ]
+  },
+  "Nosana": {
+    "totalTxs": 206,
+    "transfers": 63,
+    "govTxs": 0,
+    "transferPct": 31,
+    "solOutLamports": 0,
+    "solInLamports": 4572720,
+    "tokenFlows": [
+      {
+        "mint": "nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7",
+        "out": 174000.18729400006,
+        "in": 0,
+        "count": 331
+      }
+    ]
+  },
+  "Lulo": {
+    "totalTxs": 408,
+    "transfers": 98,
+    "govTxs": 0,
+    "transferPct": 24,
+    "solOutLamports": 0,
+    "solInLamports": 4336080,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 39250.868283,
+        "in": 0,
+        "count": 12
+      },
+      {
+        "mint": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+        "out": 212.51797,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Stabble": {
+    "totalTxs": 1010,
+    "transfers": 277,
+    "govTxs": 0,
+    "transferPct": 27,
+    "solOutLamports": 0,
+    "solInLamports": 4336080,
+    "tokenFlows": [
+      {
+        "mint": "STBk7CTmLP22U3QvvMoYAxJo8NDcghcwyLn5YUGY7XF",
+        "out": 3526430,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Hylo": {
+    "totalTxs": 1466,
+    "transfers": 173,
+    "govTxs": 0,
+    "transferPct": 12,
+    "solOutLamports": 0,
+    "solInLamports": 5025120,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 5607831.279674002,
+        "in": 0,
+        "count": 187
+      },
+      {
+        "mint": "5YMkXAYccHSGnHn9nob9xEvv6Pvka9DZWH7nTbotTu9E",
+        "out": 3595662.2542649996,
+        "in": 0,
+        "count": 67
+      },
+      {
+        "mint": "hy1oXYgrBW6PVcJ4s6s2FKavRdwgWTXdfE69AxT7kPT",
+        "out": 10997.382873718,
+        "in": 0,
+        "count": 27
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "out": 10554.248293198996,
+        "in": 0,
+        "count": 20
+      },
+      {
+        "mint": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+        "out": 5141.012026717001,
+        "in": 0,
+        "count": 18
+      },
+      {
+        "mint": "HnnGv3HrSqjRpgdFmx7vQGjntNEoex1SU4e9Lxcxuihz",
+        "out": 1647018.8986690002,
+        "in": 0,
+        "count": 16
+      },
+      {
+        "mint": "BDh5h1uqhdL3pdCcTB1AEc2dyRsorDx9fF8Y72H1XZu8",
+        "out": 2619775.1656400003,
+        "in": 0,
+        "count": 9
+      },
+      {
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "out": 25443.401718,
+        "in": 0,
+        "count": 7
+      },
+      {
+        "mint": "27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4",
+        "out": 9579.604012,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "B8V6WVjPxW1UGwVDfxH2d2r8SyT4cqn7dQRK6XneVa7D",
+        "out": 137791.402194,
+        "in": 0,
+        "count": 2
+      }
+    ]
+  },
+  "Loopscale": {
+    "totalTxs": 2000,
+    "transfers": 319,
+    "govTxs": 0,
+    "transferPct": 16,
+    "solOutLamports": 0,
+    "solInLamports": 0,
+    "tokenFlows": []
+  },
+  "Orca": {
+    "totalTxs": 1321,
+    "transfers": 39,
+    "govTxs": 0,
+    "transferPct": 3,
+    "solOutLamports": 0,
+    "solInLamports": 4336080,
+    "tokenFlows": [
+      {
+        "mint": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+        "out": 26931739.472226,
+        "in": 0,
+        "count": 1024
+      },
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 34168449.475535996,
+        "in": 0,
+        "count": 19
+      },
+      {
+        "mint": "EALhX1qjt3P19tuqkyqKoAEK3wL36tMzrnRkA2gWLxgf",
+        "out": 1,
+        "in": 0,
+        "count": 1
+      },
+      {
+        "mint": "2fWmzvN9C9eTPSmnVVkGxkoBRYx6Mv6dopR5WYwUQWta",
+        "out": 100,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Marginfi": {
+    "totalTxs": 680,
+    "transfers": 53,
+    "govTxs": 0,
+    "transferPct": 8,
+    "solOutLamports": 0,
+    "solInLamports": 6632880,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 2209826.2141739996,
+        "in": 0,
+        "count": 9
+      },
+      {
+        "mint": "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA",
+        "out": 12536.040945,
+        "in": 0,
+        "count": 9
+      },
+      {
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "out": 1266001.571932,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "7kbnvuGBxxj8AG9qp8Scn56muWGaRaFqxg1FsRp3PaFT",
+        "out": 9239.153124,
+        "in": 0,
+        "count": 2
+      },
+      {
+        "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "out": 163469595.77508,
+        "in": 0,
+        "count": 1
+      },
+      {
+        "mint": "LSTxxxnJzKDFSLr4dUkPcmCf5VyryEqzPLz5j4bpxFp",
+        "out": 260,
+        "in": 0,
+        "count": 1
+      },
+      {
+        "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+        "out": 216632,
+        "in": 0,
+        "count": 1
+      },
+      {
+        "mint": "susdabGDNbhrnCa6ncrYo81u4s9GM8ecK2UwMyZiq4X",
+        "out": 2305.855939,
+        "in": 0,
+        "count": 1
+      },
+      {
+        "mint": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+        "out": 42731.124851,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Kamino": {
+    "totalTxs": 291,
+    "transfers": 40,
+    "govTxs": 0,
+    "transferPct": 14,
+    "solOutLamports": 0,
+    "solInLamports": 4565760,
+    "tokenFlows": []
+  },
+  "Jupiter Perps": {
+    "totalTxs": 16,
+    "transfers": 1,
+    "govTxs": 0,
+    "transferPct": 6,
+    "solOutLamports": 0,
+    "solInLamports": 3417360,
+    "tokenFlows": []
+  },
+  "Jupiter Lend": {
+    "totalTxs": 132,
+    "transfers": 11,
+    "govTxs": 0,
+    "transferPct": 8,
+    "solOutLamports": 0,
+    "solInLamports": 5254800,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 1,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Huma": {
+    "totalTxs": 168,
+    "transfers": 18,
+    "govTxs": 0,
+    "transferPct": 11,
+    "solOutLamports": 0,
+    "solInLamports": 4795440,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 406711.898758,
+        "in": 0,
+        "count": 27
+      },
+      {
+        "mint": "59obFNBzyTBGowrkif5uK7ojS58vsuWz3ZCvg6tfZAGw",
+        "out": 220162.80887699997,
+        "in": 0,
+        "count": 18
+      },
+      {
+        "mint": "4wwSPei7CCb2Qhx4kDLTrEbRJaK1cMdmT78LtjRFD9bj",
+        "out": 4305926.837876,
+        "in": 0,
+        "count": 2
+      },
+      {
+        "mint": "HUPfpnsaJtJGpJxAPNX1vXah7BgYiQYt1c2JMgMumvPs",
+        "out": 2,
+        "in": 0,
+        "count": 2
+      }
+    ]
+  },
+  "Solstice": {
+    "totalTxs": 559,
+    "transfers": 5,
+    "govTxs": 0,
+    "transferPct": 1,
+    "solOutLamports": 0,
+    "solInLamports": 4336080,
+    "tokenFlows": [
+      {
+        "mint": "6FrrzDk5mQARGc1TDYoyVnSyRdds1t4PbtohCD6p3tgG",
+        "out": 238.63278100000002,
+        "in": 0,
+        "count": 29
+      },
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 215.226255,
+        "in": 0,
+        "count": 25
+      },
+      {
+        "mint": "3ThdFZQKM6kRyVGLG48kaPg5TRMhYMKY1iCRa9xop1WC",
+        "out": 181.031591,
+        "in": 0,
+        "count": 13
+      },
+      {
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "out": 3.5,
+        "in": 0,
+        "count": 4
+      }
+    ]
+  },
+  "Switchboard": {
+    "totalTxs": 170,
+    "transfers": 28,
+    "govTxs": 0,
+    "transferPct": 16,
+    "solOutLamports": 0,
+    "solInLamports": 4795440,
+    "tokenFlows": []
+  },
+  "Titan": {
+    "totalTxs": 1279,
+    "transfers": 265,
+    "govTxs": 0,
+    "transferPct": 21,
+    "solOutLamports": 0,
+    "solInLamports": 5254800,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 4303919.250173999,
+        "in": 0,
+        "count": 194
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "out": 0.20029999999999998,
+        "in": 0,
+        "count": 5
+      },
+      {
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "out": 1019983.9445720001,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "B8zf4kojJbwgCRKA7rLaLhRCZBGhgAJp8wPBVZZHMhSv",
+        "out": 886498.6406660001,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A",
+        "out": 93.32098474800001,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "B8V6WVjPxW1UGwVDfxH2d2r8SyT4cqn7dQRK6XneVa7D",
+        "out": 180081.84840800002,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "32XLsweyeQwWgLKRVAzS72nxHGU1JmmNQQZ3C3q6fBjJ",
+        "out": 176982.07116599998,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
+        "out": 18464.83,
+        "in": 0,
+        "count": 3
+      },
+      {
+        "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+        "out": 78.913579726,
+        "in": 0,
+        "count": 2
+      }
+    ]
+  },
+  "Solayer": {
+    "totalTxs": 47,
+    "transfers": 7,
+    "govTxs": 0,
+    "transferPct": 15,
+    "solOutLamports": 0,
+    "solInLamports": 4336080,
+    "tokenFlows": [
+      {
+        "mint": "GUa98UPwDXx2DG1ewhneRPTMN1Yacs4bwk5MKSJCYkoP",
+        "out": 30000000,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Flash Trade": {
+    "totalTxs": 274,
+    "transfers": 58,
+    "govTxs": 0,
+    "transferPct": 21,
+    "solOutLamports": 0,
+    "solInLamports": 5484480,
+    "tokenFlows": []
+  },
+  "Wick": {
+    "totalTxs": 11,
+    "transfers": 0,
+    "govTxs": 0,
+    "transferPct": 0,
+    "solOutLamports": 0,
+    "solInLamports": 2958000,
+    "tokenFlows": []
+  },
+  "Onre Finance": {
+    "totalTxs": 1298,
+    "transfers": 235,
+    "govTxs": 0,
+    "transferPct": 18,
+    "solOutLamports": 0,
+    "solInLamports": 5254800,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 198817096.98045594,
+        "in": 0,
+        "count": 169
+      },
+      {
+        "mint": "5Y8NV33Vv7WbnLfq3zBcKSdYPrk7g2KoiQoe7M2tcxp5",
+        "out": 1164053193.913554,
+        "in": 0,
+        "count": 73
+      },
+      {
+        "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+        "out": 25911048.627467003,
+        "in": 0,
+        "count": 21
+      },
+      {
+        "mint": "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA",
+        "out": 12356409.526460998,
+        "in": 0,
+        "count": 18
+      },
+      {
+        "mint": "AvZZF1YaZDziPY2RCK4oJrRVrbN3mTD9NL24hPeaZeUj",
+        "out": 12819449.370101001,
+        "in": 0,
+        "count": 7
+      },
+      {
+        "mint": "Eh6XEPhSwoLv5wFApukmnaVSHQ6sAnoD9BmgmwQoN2sN",
+        "out": 8355724.791770164,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "8Tyc5bJuUj4YuMZV7wwQGsRcXbnaGuM1GbUcgfjkFiZb",
+        "out": 110000010,
+        "in": 0,
+        "count": 4
+      },
+      {
+        "mint": "5EfKsb9eCc3MFYtUCZ8Vp5VD4o31aLTYUf8vxzZmyGLi",
+        "out": 2000000000,
+        "in": 0,
+        "count": 3
+      },
+      {
+        "mint": "3b8X44fLF9ooXaUm3hhSgjpmVs6rZZ3pPoGnGahc3Uu7",
+        "out": 98.192714,
+        "in": 0,
+        "count": 2
+      },
+      {
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "out": 1000.295204,
+        "in": 0,
+        "count": 2
+      }
+    ]
+  },
+  "MetaDAO": {
+    "totalTxs": 1885,
+    "transfers": 471,
+    "govTxs": 0,
+    "transferPct": 25,
+    "solOutLamports": 0,
+    "solInLamports": 4795440,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 10539492.864268,
+        "in": 0,
+        "count": 159
+      },
+      {
+        "mint": "RNGRtJMbCveqCp7AC6U95KmrdKecFckaJZiWbPGmeta",
+        "out": 12779466.049131,
+        "in": 0,
+        "count": 149
+      },
+      {
+        "mint": "METADDFL6wWMWEoKTFJwcThTbUmtarRJZjRpzUvkxhr",
+        "out": 6438.820897009001,
+        "in": 0,
+        "count": 88
+      },
+      {
+        "mint": "METAwkXcqyXKy1AtsSgJ8JiUHwGCafnZL38n3vYmeta",
+        "out": 3453486.6001279997,
+        "in": 0,
+        "count": 37
+      },
+      {
+        "mint": "ZKFHiLAfAFMTcDAuCtjNW54VzpERvoe7PBF9mYgmeta",
+        "out": 12979328.960386999,
+        "in": 0,
+        "count": 11
+      },
+      {
+        "mint": "BANKJmvhT8tiJRsBSS1n2HryMBPvT5Ze4HU95DUAmeta",
+        "out": 200415.80242700002,
+        "in": 0,
+        "count": 10
+      },
+      {
+        "mint": "PRVT6TB7uss3FrUd2D9xs2zqDBsa3GbMJMwCQsgmeta",
+        "out": 175589.474776,
+        "in": 0,
+        "count": 10
+      },
+      {
+        "mint": "SoLo9oxzLDpcq1dpqAgMwgce5WqkRDtNXK7EPnbmeta",
+        "out": 104608.627309,
+        "in": 0,
+        "count": 10
+      },
+      {
+        "mint": "PAYZP1W3UmdEsNLJwmH61TNqACYJTvhXy8SCN4Tmeta",
+        "out": 150237.18172,
+        "in": 0,
+        "count": 10
+      },
+      {
+        "mint": "LYLikzBQtpa9ZgVrJsqYGQpR3cC1WMJrBHaXGrQmeta",
+        "out": 134463.510504,
+        "in": 0,
+        "count": 10
+      }
+    ]
+  },
+  "Helium": {
+    "totalTxs": 465,
+    "transfers": 63,
+    "govTxs": 0,
+    "transferPct": 14,
+    "solOutLamports": 0,
+    "solInLamports": 5254800,
+    "tokenFlows": [
+      {
+        "mint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
+        "out": 63529.56114298,
+        "in": 0,
+        "count": 1
+      },
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 19117.282129,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "Voltr": {
+    "totalTxs": 45,
+    "transfers": 11,
+    "govTxs": 0,
+    "transferPct": 24,
+    "solOutLamports": 0,
+    "solInLamports": 4795440,
+    "tokenFlows": []
+  },
+  "Tessera V": {
+    "totalTxs": 88,
+    "transfers": 12,
+    "govTxs": 0,
+    "transferPct": 14,
+    "solOutLamports": 0,
+    "solInLamports": 3417360,
+    "tokenFlows": []
+  },
+  "LayerZero OFT": {
+    "totalTxs": 24,
+    "transfers": 4,
+    "govTxs": 0,
+    "transferPct": 17,
+    "solOutLamports": 0,
+    "solInLamports": 2268960,
+    "tokenFlows": []
+  },
+  "SolvBTC": {
+    "totalTxs": 79,
+    "transfers": 12,
+    "govTxs": 0,
+    "transferPct": 15,
+    "solOutLamports": 0,
+    "solInLamports": 4336080,
+    "tokenFlows": []
+  },
+  "GMSOL": {
+    "totalTxs": 2000,
+    "transfers": 264,
+    "govTxs": 0,
+    "transferPct": 13,
+    "solOutLamports": 0,
+    "solInLamports": 0,
+    "tokenFlows": []
+  },
+  "Ore": {
+    "totalTxs": 1141,
+    "transfers": 347,
+    "govTxs": 0,
+    "transferPct": 30,
+    "solOutLamports": 0,
+    "solInLamports": 4795440,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 5162613.825077,
+        "in": 0,
+        "count": 233
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "out": 22670.794543994,
+        "in": 0,
+        "count": 148
+      },
+      {
+        "mint": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
+        "out": 7540.814729415321,
+        "in": 0,
+        "count": 19
+      },
+      {
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "out": 316935.63689,
+        "in": 0,
+        "count": 8
+      },
+      {
+        "mint": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
+        "out": 58399.23284,
+        "in": 0,
+        "count": 6
+      },
+      {
+        "mint": "CceCXFy4UeXheTpf8sn1bpECxMQeH5BTyxQK4BdRMf2T",
+        "out": 0.1,
+        "in": 0,
+        "count": 1
+      }
+    ]
+  },
+  "GMSOL Deploy": {
+    "totalTxs": 46,
+    "transfers": 5,
+    "govTxs": 0,
+    "transferPct": 11,
+    "solOutLamports": 0,
+    "solInLamports": 2498640,
+    "tokenFlows": []
+  },
+  "Carrot": {
+    "totalTxs": 251,
+    "transfers": 73,
+    "govTxs": 0,
+    "transferPct": 29,
+    "solOutLamports": 0,
+    "solInLamports": 2498640,
+    "tokenFlows": []
+  },
+  "DefiTuna": {
+    "totalTxs": 571,
+    "transfers": 142,
+    "govTxs": 0,
+    "transferPct": 25,
+    "solOutLamports": 0,
+    "solInLamports": 4795440,
+    "tokenFlows": [
+      {
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "out": 926715.9928540001,
+        "in": 0,
+        "count": 24
+      },
+      {
+        "mint": "So11111111111111111111111111111111111111112",
+        "out": 3.284277788,
+        "in": 0,
+        "count": 7
+      },
+      {
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "out": 400.335322,
+        "in": 0,
+        "count": 2
+      }
+    ]
+  }
+}

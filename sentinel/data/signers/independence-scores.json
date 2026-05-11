@@ -1,0 +1,519 @@
+{
+  "computedAt": "2026-04-17T17:48:36.052Z",
+  "groups": [
+    {
+      "team": "Loopscale",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Loopscale",
+          "address": "C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk",
+          "memberCount": 8
+        },
+        {
+          "label": "Loopscale (vault-parent NG2KqH)",
+          "address": "NG2KqHb4SE1HmqSf1GfJHorKGVNcYfgVSdwPPvn7Lsq",
+          "memberCount": 5
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 13,
+      "uniqueSigners": 13,
+      "pairwiseOverlap": [
+        {
+          "a": "Loopscale",
+          "b": "Loopscale (vault-parent NG2KqH)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Marginfi",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Marginfi",
+          "address": "7FCPipJWVbPbdHymVt1gJYwKciakkJz5GahdQySemvHk",
+          "memberCount": 13
+        },
+        {
+          "label": "Marginfi (vault-parent 9CiwEG)",
+          "address": "9CiwEGczicmjioXiPsaJV92j4UXG1qMLYLQTxej4U7tr",
+          "memberCount": 6
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 19,
+      "uniqueSigners": 19,
+      "pairwiseOverlap": [
+        {
+          "a": "Marginfi",
+          "b": "Marginfi (vault-parent 9CiwEG)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Jupiter",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Jupiter Perps",
+          "address": "AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm",
+          "memberCount": 7
+        },
+        {
+          "label": "Jupiter Lend",
+          "address": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+          "memberCount": 7
+        },
+        {
+          "label": "Jupiter Agg",
+          "address": "7ZyDFzet6sKgZLN4D89JLfo7chu2n7nYdkFt5RCFk8Sf",
+          "memberCount": 8
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 22,
+      "uniqueSigners": 22,
+      "pairwiseOverlap": [
+        {
+          "a": "Jupiter Perps",
+          "b": "Jupiter Lend",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        },
+        {
+          "a": "Jupiter Perps",
+          "b": "Jupiter Agg",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        },
+        {
+          "a": "Jupiter Lend",
+          "b": "Jupiter Agg",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Solstice",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Solstice",
+          "address": "AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf",
+          "memberCount": 5
+        },
+        {
+          "label": "Solstice (vault-parent BPdkMG)",
+          "address": "BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE",
+          "memberCount": 3
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 8,
+      "uniqueSigners": 8,
+      "pairwiseOverlap": [
+        {
+          "a": "Solstice",
+          "b": "Solstice (vault-parent BPdkMG)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Flash",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Flash Trade",
+          "address": "Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF",
+          "memberCount": 7
+        },
+        {
+          "label": "Flash (vault-parent GPuMML)",
+          "address": "GPuMML3FeJXTr948CvTwSYANHm74RSW5iUibw5T6vSfa",
+          "memberCount": 5
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 12,
+      "uniqueSigners": 12,
+      "pairwiseOverlap": [
+        {
+          "a": "Flash Trade",
+          "b": "Flash (vault-parent GPuMML)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Helium",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Helium (vault-parent FXyzyV)",
+          "address": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+          "memberCount": 6
+        },
+        {
+          "label": "Helium (vault-parent 1XEcKn)",
+          "address": "1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz",
+          "memberCount": 9
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 15,
+      "uniqueSigners": 15,
+      "pairwiseOverlap": [
+        {
+          "a": "Helium (vault-parent FXyzyV)",
+          "b": "Helium (vault-parent 1XEcKn)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "GMSOL",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "GMSOL (vault-parent CxnEVp)",
+          "address": "CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1",
+          "memberCount": 7
+        },
+        {
+          "label": "GMSOL (vault-parent F7axBN)",
+          "address": "F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A",
+          "memberCount": 3
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 10,
+      "uniqueSigners": 10,
+      "pairwiseOverlap": [
+        {
+          "a": "GMSOL (vault-parent CxnEVp)",
+          "b": "GMSOL (vault-parent F7axBN)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Carrot",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Carrot (vault-parent BVQn1w)",
+          "address": "BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon",
+          "memberCount": 3
+        },
+        {
+          "label": "Carrot (vault-parent DrFv23)",
+          "address": "DrFv23CkTxu84aAYCK7cvUP3zBvFGz2ruuCXuuyPZWbV",
+          "memberCount": 2
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 5,
+      "uniqueSigners": 5,
+      "pairwiseOverlap": [
+        {
+          "a": "Carrot (vault-parent BVQn1w)",
+          "b": "Carrot (vault-parent DrFv23)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "DefiTuna",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "DefiTuna (vault-parent 7tmQEK)",
+          "address": "7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv",
+          "memberCount": 7
+        },
+        {
+          "label": "DefiTuna (vault-parent 5Sjxei)",
+          "address": "5Sjxeibf9PmN2WG23nhfJVEJ8paPKfpK7pQ9oyfQkrZy",
+          "memberCount": 3
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 10,
+      "uniqueSigners": 10,
+      "pairwiseOverlap": [
+        {
+          "a": "DefiTuna (vault-parent 7tmQEK)",
+          "b": "DefiTuna (vault-parent 5Sjxei)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "LayerZero",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "LayerZero (vault-parent 9XnbnS)",
+          "address": "9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN",
+          "memberCount": 2
+        },
+        {
+          "label": "LayerZero (vault-parent HB3boZ)",
+          "address": "HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC",
+          "memberCount": 6
+        }
+      ],
+      "independenceScore": 0.8333333333333334,
+      "independencePct": 83,
+      "totalSignerPositions": 8,
+      "uniqueSigners": 7,
+      "pairwiseOverlap": [
+        {
+          "a": "LayerZero (vault-parent 9XnbnS)",
+          "b": "LayerZero (vault-parent HB3boZ)",
+          "shared": 1,
+          "sharedPctOfMinSet": 50
+        }
+      ]
+    },
+    {
+      "team": "Ondo",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Ondo (vault-parent EfMUAS)",
+          "address": "EfMUASGwCsPBafiPi8rwdZfUJSUt7pxAoxayR39PVpMr",
+          "memberCount": 7
+        },
+        {
+          "label": "Ondo (vault-parent DK37X6)",
+          "address": "DK37X6PNtzS4oiJAWgJ364NkUq6us3gf4u7GVRdezqvW",
+          "memberCount": 8
+        }
+      ],
+      "independenceScore": 0.625,
+      "independencePct": 63,
+      "totalSignerPositions": 15,
+      "uniqueSigners": 12,
+      "pairwiseOverlap": [
+        {
+          "a": "Ondo (vault-parent EfMUAS)",
+          "b": "Ondo (vault-parent DK37X6)",
+          "shared": 3,
+          "sharedPctOfMinSet": 43
+        }
+      ]
+    },
+    {
+      "team": "Drift",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Drift",
+          "address": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+          "memberCount": 5
+        },
+        {
+          "label": "Drift (vault-parent BBC5gS)",
+          "address": "BBC5gSPh71YB2eUXdCqvkmL6kj6YDkUQJpX997qXUt2Q",
+          "memberCount": 5
+        },
+        {
+          "label": "Drift (vault-parent Er82vn)",
+          "address": "Er82vnftZhA2YrRZyuGpw1an3Ho585eYCAxNv2U9F2uY",
+          "memberCount": 5
+        },
+        {
+          "label": "Drift (vault-parent 2LW6PS)",
+          "address": "2LW6PSEjp81xSEttWwXDB6Etb1eKdhYPbFEojYbyhx88",
+          "memberCount": 5
+        },
+        {
+          "label": "Drift (vault-parent 61ApQq)",
+          "address": "61ApQqLoWVfTuzua9c22SWMj78RGv77x6Z2kzcJVGNjP",
+          "memberCount": 5
+        },
+        {
+          "label": "Drift (vault-parent GMNVGN)",
+          "address": "GMNVGNk8Kso1cjre4Wx7zx2knP4uKLNVtpfay2FEEaAi",
+          "memberCount": 5
+        }
+      ],
+      "independenceScore": 0.24,
+      "independencePct": 24,
+      "totalSignerPositions": 30,
+      "uniqueSigners": 11,
+      "pairwiseOverlap": [
+        {
+          "a": "Drift",
+          "b": "Drift (vault-parent BBC5gS)",
+          "shared": 3,
+          "sharedPctOfMinSet": 60
+        },
+        {
+          "a": "Drift",
+          "b": "Drift (vault-parent Er82vn)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        },
+        {
+          "a": "Drift",
+          "b": "Drift (vault-parent 2LW6PS)",
+          "shared": 3,
+          "sharedPctOfMinSet": 60
+        },
+        {
+          "a": "Drift",
+          "b": "Drift (vault-parent 61ApQq)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        },
+        {
+          "a": "Drift",
+          "b": "Drift (vault-parent GMNVGN)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        },
+        {
+          "a": "Drift (vault-parent BBC5gS)",
+          "b": "Drift (vault-parent Er82vn)",
+          "shared": 1,
+          "sharedPctOfMinSet": 20
+        },
+        {
+          "a": "Drift (vault-parent BBC5gS)",
+          "b": "Drift (vault-parent 2LW6PS)",
+          "shared": 5,
+          "sharedPctOfMinSet": 100
+        },
+        {
+          "a": "Drift (vault-parent BBC5gS)",
+          "b": "Drift (vault-parent 61ApQq)",
+          "shared": 1,
+          "sharedPctOfMinSet": 20
+        },
+        {
+          "a": "Drift (vault-parent BBC5gS)",
+          "b": "Drift (vault-parent GMNVGN)",
+          "shared": 1,
+          "sharedPctOfMinSet": 20
+        },
+        {
+          "a": "Drift (vault-parent Er82vn)",
+          "b": "Drift (vault-parent 2LW6PS)",
+          "shared": 1,
+          "sharedPctOfMinSet": 20
+        },
+        {
+          "a": "Drift (vault-parent Er82vn)",
+          "b": "Drift (vault-parent 61ApQq)",
+          "shared": 5,
+          "sharedPctOfMinSet": 100
+        },
+        {
+          "a": "Drift (vault-parent Er82vn)",
+          "b": "Drift (vault-parent GMNVGN)",
+          "shared": 5,
+          "sharedPctOfMinSet": 100
+        },
+        {
+          "a": "Drift (vault-parent 2LW6PS)",
+          "b": "Drift (vault-parent 61ApQq)",
+          "shared": 1,
+          "sharedPctOfMinSet": 20
+        },
+        {
+          "a": "Drift (vault-parent 2LW6PS)",
+          "b": "Drift (vault-parent GMNVGN)",
+          "shared": 1,
+          "sharedPctOfMinSet": 20
+        },
+        {
+          "a": "Drift (vault-parent 61ApQq)",
+          "b": "Drift (vault-parent GMNVGN)",
+          "shared": 5,
+          "sharedPctOfMinSet": 100
+        }
+      ]
+    },
+    {
+      "team": "Kamino",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Kamino",
+          "address": "6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM",
+          "memberCount": 10
+        },
+        {
+          "label": "Kamino (vault-parent 5HzXCm)",
+          "address": "5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk",
+          "memberCount": 10
+        }
+      ],
+      "independenceScore": 0,
+      "independencePct": 0,
+      "totalSignerPositions": 20,
+      "uniqueSigners": 10,
+      "pairwiseOverlap": [
+        {
+          "a": "Kamino",
+          "b": "Kamino (vault-parent 5HzXCm)",
+          "shared": 10,
+          "sharedPctOfMinSet": 100
+        }
+      ]
+    },
+    {
+      "team": "Drift (pre-exploit case study, March 25 to April 1 2026)",
+      "context": "case-study",
+      "note": "2LW6PS (State admin) and BBC5g (upgrade authority for 6 programs) were created on the same day with shared signer sets. This was the structural condition that let one compromise reach two products.",
+      "multisigs": [
+        {
+          "label": "2LW6PS (State admin, 2/5)",
+          "address": "2LW6PSEjp81xSEttWwXDB6Etb1eKdhYPbFEojYbyhx88",
+          "memberCount": 5
+        },
+        {
+          "label": "BBC5g (upgrade auth for 6 programs, 3/5)",
+          "address": "BBC5gSPh71YB2eUXdCqvkmL6kj6YDkUQJpX997qXUt2Q",
+          "memberCount": 5
+        }
+      ],
+      "independenceScore": 0,
+      "independencePct": 0,
+      "totalSignerPositions": 10,
+      "uniqueSigners": 5,
+      "pairwiseOverlap": [
+        {
+          "a": "2LW6PS (State admin, 2/5)",
+          "b": "BBC5g (upgrade auth for 6 programs, 3/5)",
+          "shared": 5,
+          "sharedPctOfMinSet": 100
+        }
+      ]
+    }
+  ]
+}

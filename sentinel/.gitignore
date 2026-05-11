@@ -1,0 +1,13 @@
+node_modules/
+dist/
+reports/
+.env
+*.js
+*.d.ts
+*.js.map
+!jest.config.js
+
+# Runtime caches written by long-running processes; regenerated continuously.
+data/yieldbay-cache.json
+data/webhook-subscribers.json
+data/user-tracked-multisigs.json

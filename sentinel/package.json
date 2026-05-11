@@ -1,0 +1,41 @@
+{
+  "name": "sentinel",
+  "version": "0.1.0",
+  "description": "Backend for solgov - continuous on-chain reads of Solana DeFi multisig, timelock, and program authority configuration",
+  "main": "dist/index.js",
+  "scripts": {
+    "scan": "ts-node src/index.ts",
+    "scan:dry": "ts-node src/index.ts --dry-run",
+    "scan:safe": "ts-node src/index.ts --safe-mode",
+    "listener": "ts-node src/solgov-listener.ts",
+    "monitor": "ts-node src/solgov-monitor.ts",
+    "api": "ts-node src/solgov-api.ts",
+    "bot": "ts-node src/solgov-bot.ts",
+    "triage": "ts-node src/llm-triage.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "solana",
+    "governance",
+    "security",
+    "scanner",
+    "multisig"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.0",
+    "@huma-finance/permissionless-sdk": "^1.0.23",
+    "@solana/web3.js": "^1.91.0",
+    "@sqds/multisig": "^2.1.0",
+    "@sqds/sdk": "^2.0.4",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}

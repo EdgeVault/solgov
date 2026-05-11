@@ -1,0 +1,126 @@
+{
+  "updatedAt": "2026-04-22",
+  "source": "DeFi exploits on chains outside the Solana + EVM scope covered by the two main datasets. Covers verifiable major incidents on Sui, Cosmos ecosystem, NEAR, Aptos, Polkadot parachains, and other non-EVM non-Solana L1s. Excludes CEX-adjacent incidents, tokens/wallets unrelated to smart-contract protocols, and unverified or anonymous reports. Intended for the combined 'all tracked DeFi' view; the chain-level Solana vs EVM comparison does not include these entries.",
+  "hacks": [
+    {
+      "date": "2025-05-22",
+      "protocol": "Cetus Protocol",
+      "chain": "Sui",
+      "amountUsd": 223000000,
+      "category": "contract",
+      "rootCause": "Integer overflow in shared math library (checked_shlw function) combined with spoofed fake-token attack on concentrated liquidity pools. Attacker exploited flaws in the largest DEX aggregator on Sui, draining approximately $220-260M from liquidity pools",
+      "recovered": "partial",
+      "recoveryNote": "Sui validators froze approximately $162M in stolen funds via chain-level intervention; attacker offered a $6M bounty for asset recovery; Cetus relaunched 17 days after the exploit",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/cetus-rekt/"
+    },
+    {
+      "date": "2022-08-14",
+      "protocol": "Acala Network (aUSD)",
+      "chain": "Polkadot",
+      "amountUsd": 1280000000,
+      "category": "contract",
+      "rootCause": "Misconfiguration of the newly deployed iBTC/aUSD liquidity pool allowed the attacker to mint approximately 1.28B aUSD stablecoin tokens without adequate collateral. aUSD depegged dramatically, losing 99% of value",
+      "recovered": "full",
+      "recoveryNote": "Acala paused network trades via urgent governance vote, disabled aUSD transfer functions, identified 16 addresses holding erroneously minted tokens, and burned the unbacked supply via on-chain governance. Net realised user loss substantially smaller than the gross mint figure",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/acala-rekt/"
+    },
+    {
+      "date": "2024-11-15",
+      "protocol": "Thala",
+      "chain": "Aptos",
+      "amountUsd": 25500000,
+      "category": "contract",
+      "rootCause": "Money market exploit via a Move contract vulnerability. Attacker drained user deposits from Thala's lending product on Aptos",
+      "recovered": "partial",
+      "recoveryNote": "Aptos ecosystem response included coordinated asset freezes; partial fund recovery via post-incident negotiations",
+      "affectedProtocols": [],
+      "link": "https://halborn.com/blog/the-month-in-crypto-hacks-november-2024"
+    },
+    {
+      "date": "2026-04-16",
+      "protocol": "Rhea Finance",
+      "chain": "NEAR",
+      "amountUsd": 18400000,
+      "category": "oracle",
+      "rootCause": "Oracle manipulation via 423 fake wallets inflating liquidity pool prices to borrow against artificial collateral. Rhea Finance was formed in early 2025 through the merger of Ref Finance and Burrow Finance",
+      "recovered": "partial",
+      "recoveryNote": "Tether froze approximately $3M of stolen assets; protocol implemented emergency oracle fix",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/rhea-finance-rekt/"
+    },
+    {
+      "date": "2026-04-21",
+      "protocol": "Volo Vault",
+      "chain": "Sui",
+      "amountUsd": 3500000,
+      "category": "contract",
+      "rootCause": "Protocol logic bug in a Move contract managing vault deposits",
+      "recovered": "none",
+      "recoveryNote": "No recovery at time of disclosure",
+      "affectedProtocols": [],
+      "link": ""
+    },
+    {
+      "date": "2025-09-01",
+      "protocol": "Nemo Protocol",
+      "chain": "Sui",
+      "amountUsd": 2400000,
+      "category": "contract",
+      "rootCause": "Yield market pool drain exploited via Move contract vulnerability during pre-maintenance window",
+      "recovered": "none",
+      "recoveryNote": "Incident investigated by Halborn; limited recovery",
+      "affectedProtocols": [],
+      "link": ""
+    },
+    {
+      "date": "2026-04-13",
+      "protocol": "Hyperbridge",
+      "chain": "Polkadot",
+      "amountUsd": 2500000,
+      "category": "contract",
+      "rootCause": "MMR (Merkle Mountain Range) proof verifier bug allowed forged cross-chain messages. Attacker minted unbacked cross-chain tokens by submitting fraudulent proofs",
+      "recovered": "none",
+      "recoveryNote": "Emergency pause of affected bridge routes; recovery status unclear",
+      "affectedProtocols": [],
+      "link": ""
+    },
+    {
+      "date": "2022-06-08",
+      "protocol": "Osmosis",
+      "chain": "Cosmos",
+      "amountUsd": 5000000,
+      "category": "contract",
+      "rootCause": "Critical bug in liquidity pool mechanism allowed adding liquidity and immediately withdrawing a larger amount than deposited. Vulnerability detected and the blockchain halted at block 4713065 to prevent further losses",
+      "recovered": "partial",
+      "recoveryNote": "Chain halt and restart on June 13 2022 with fix applied; some funds recovered through voluntary returns and bounty",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/osmosis-rekt/"
+    },
+    {
+      "date": "2021-07-16",
+      "protocol": "THORChain",
+      "chain": "Thorchain (Cosmos-SDK L1)",
+      "amountUsd": 7600000,
+      "category": "contract",
+      "rootCause": "Bifrost ETH router exploit: custom wrapper contracts tricked the cross-chain Bifrost into recognising phantom deposits. Attacker minted synthetic assets without collateral",
+      "recovered": "none",
+      "recoveryNote": "Post-incident audits and code freeze; some funds lost permanently",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/thorchain-rekt/"
+    },
+    {
+      "date": "2021-07-23",
+      "protocol": "THORChain",
+      "chain": "Thorchain (Cosmos-SDK L1)",
+      "amountUsd": 8000000,
+      "category": "contract",
+      "rootCause": "ETH router override loop (designed only for vault transfer incidents) was manipulated via a custom wrapper contract to access the override function",
+      "recovered": "none",
+      "recoveryNote": "Second exploit within a week of the July 16 incident; protocol paused and rewrote router contracts",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/thorchain-rekt-2/"
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "generatedAt": "2026-04-20T11:48:34.729Z",
+  "results": [
+    {
+      "symbol": "kAWRSQPQ",
+      "mint": "kAWRSQPQB7bBzA6fTNmyY71HpucrT4QX61y4UnuTU4x",
+      "oapp": "23nMVbvespmbp17tXh5AkhEyczaySFwnggEXdvWRuneq",
+      "chains": []
+    },
+    {
+      "symbol": "TRUMP",
+      "mint": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "oapp": "6o9mQ6HL2xC7Naht6rTg1XHpgk766dtTCU3Ze7vHZdoX",
+      "chains": [
+        {
+          "chain": "Avalanche",
+          "eid": 30106,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "OK",
+            "note": "3 required DVNs"
+          }
+        },
+        {
+          "chain": "Base",
+          "eid": 30184,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "OK",
+            "note": "3 required DVNs"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "SFG",
+      "mint": "BLiUhfaUFbSoMVeRqq3QYTA1eJsTsB3ZDEYtUsGGQ9em",
+      "oapp": "8ML8soQ8B97hGm4PTtFSYrG5VS38eU42yHL9RpeSMe2q",
+      "chains": [
+        {
+          "chain": "Base",
+          "eid": 30184,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 1,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 1,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "CRITICAL",
+            "note": "1/1 DVN config. Required DVN: LayerZero Labs (4VDjp6...Lfhb)"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "DTF",
+      "mint": "EmhVWGUa2Q9PN4QjzFjvuVyzFKg4s3ERwjKR9dQDpump",
+      "oapp": "A86eHuapFggWPc2Zdc6ixeSQ48wNW7Zms5rcKrA74ZCV",
+      "chains": [
+        {
+          "chain": "Base",
+          "eid": 30184,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "OK",
+            "note": "3 required DVNs"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "YNE",
+      "mint": "7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump",
+      "oapp": "AA3aanojMBR8n55W18zFkMQu3aqH6rdmmebFe7V9WujB",
+      "chains": [
+        {
+          "chain": "Base",
+          "eid": 30184,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 1,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 1,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "CRITICAL",
+            "note": "1/1 DVN config. Required DVN: LayerZero Labs (4VDjp6...Lfhb)"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "$WIF",
+      "mint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "oapp": "AnQ6iBnkC2xAYc2GoqhnZRsoDH2KFqtEJj7s3J8JE7jS",
+      "chains": [
+        {
+          "chain": "Ethereum",
+          "eid": 30101,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 1,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 1,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "CRITICAL",
+            "note": "1/1 DVN config. Required DVN: LayerZero Labs (4VDjp6...Lfhb)"
+          }
+        },
+        {
+          "chain": "BNB",
+          "eid": 30102,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "OK",
+            "note": "3 required DVNs"
+          }
+        },
+        {
+          "chain": "Arbitrum",
+          "eid": 30110,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "OK",
+            "note": "3 required DVNs"
+          }
+        },
+        {
+          "chain": "Base",
+          "eid": 30184,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "OK",
+            "note": "3 required DVNs"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "MELANIA",
+      "mint": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+      "oapp": "Eu9f1DmGWTNmjttn4kWHtV4Z1nYs8vBwZ8iqHrjWUt3S",
+      "chains": [
+        {
+          "chain": "Base",
+          "eid": 30184,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "OK",
+            "note": "3 required DVNs"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "kAWRSQPQ",
+      "mint": "kAWRSQPQB7bBzA6fTNmyY71HpucrT4QX61y4UnuTU4x",
+      "oapp": "GKUoKM3HGzQ2DzAK3gfiCaRxHBpzcw289oe6NSXRdDFm",
+      "chains": []
+    },
+    {
+      "symbol": "YNE",
+      "mint": "7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump",
+      "oapp": "H6s3NkLLhaQ8qwBCy1wAY4AsKCg2euC97gtcFgej1XcK",
+      "chains": [
+        {
+          "chain": "Base",
+          "eid": 30184,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 1,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 1,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "CRITICAL",
+            "note": "1/1 DVN config. Required DVN: LayerZero Labs (4VDjp6...Lfhb)"
+          }
+        }
+      ]
+    },
+    {
+      "symbol": "SC",
+      "mint": "6D7NaB2xsLd7cauWu1wKk6KBsJohJmP2qZH9GEfVi5Ui",
+      "oapp": "HaWi1q9MJVLytUG2EWK56KaZJAuLw8sna2QB3Aev4vFX",
+      "chains": [
+        {
+          "chain": "Base",
+          "eid": 30184,
+          "send": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "receive": {
+            "confirmations": "10",
+            "requiredDvnCount": 3,
+            "optionalDvnCount": 0,
+            "optionalDvnThreshold": 0,
+            "requiredDvns": [
+              "4VDjp6XQaxoZf5RGwiPU9NR1EXSZn2TP4ATMmiSzLfhb",
+              "7jMeX5mzXnSSKYd8DxBDP4xMnkNFZZZm5W28FWUTbwU3",
+              "GPjyWr8vCotGuFubDpTxDxy9Vj1ZeEN4F2dwRmFiaGab"
+            ],
+            "optionalDvns": []
+          },
+          "risk": {
+            "level": "OK",
+            "note": "3 required DVNs"
+          }
+        }
+      ]
+    }
+  ]
+}

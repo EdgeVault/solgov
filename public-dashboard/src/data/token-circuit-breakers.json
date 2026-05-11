@@ -1,0 +1,684 @@
+{
+  "generatedAt": "2026-04-21T13:05:59.531Z",
+  "results": [
+    {
+      "protocol": "SolvBTC",
+      "symbol": "SolvBTC",
+      "mint": "SoLvHDFVstC74Jr9eNLTDoG4goSUsn1RENmjNtFKZvW",
+      "decimals": 8,
+      "supply": "912504718",
+      "mintAuthority": {
+        "address": "Fy1qxnjucTtbLgniZRz8UmdPXet6YyxXCz4HkDz5fBKs",
+        "type": "spl-multisig",
+        "m": 1,
+        "n": 2,
+        "effectiveThreshold": 1,
+        "signers": [
+          "HEoPcCuuHzvxBNjfG5i8jjCDqf8RsPyhuWQtE5oRSFYn",
+          "EZzXKHYjpKgXaZ3vy3zqBzr2TsVHNWbJ3N4daTxNdfUQ"
+        ],
+        "programOwner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "note": "threshold=1 ⇒ effectively single signer"
+      },
+      "freezeAuthority": {
+        "address": "4cPFyaxcDbXozAHtQB2s6Z4yHuCJCdwEHeNnWdmRLCLh",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "circuitBreakerPda": "2iuVDogSdE4KJL7JkfR2TnUgXr1kFYxfKYnS9mNfTi49",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "zBTC",
+      "symbol": "zBTC",
+      "mint": "zBTCug3er3tLyffELcvDNrKkCymbPWysGcWihESYfLg",
+      "decimals": 8,
+      "supply": "10782355273",
+      "mintAuthority": {
+        "address": "C82azkvqxFNBx5x14Cm6bgQZbLnVV79THeMCYKWW2w1X",
+        "type": "single-keypair",
+        "note": "no account data - plain keypair"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "HKuNyvrqBoG96jv7uUgqMZkngLEPv48HonvGGqgxVRXS",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "zenBTC",
+      "symbol": "zenBTC",
+      "mint": "9hX59xHHnaZXLU6quvm5uGY2iDiT3jczaReHy6A6TYKw",
+      "decimals": 8,
+      "supply": "4244271063",
+      "mintAuthority": {
+        "address": "E7AxNdStGFka5JQvpbYZEitr83idsy135ccHHiH5E7Bk",
+        "type": "spl-multisig",
+        "m": 1,
+        "n": 2,
+        "effectiveThreshold": 1,
+        "signers": [
+          "BeHQMExMeRFoNkk1byHowSGWjSpwgRFrw9dQK9gWtTj5",
+          "4m3vcaUQc5jx9xUBHERYCRvvbk5oUzmuKLej42639PSH"
+        ],
+        "programOwner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "note": "threshold=1 ⇒ effectively single signer"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "2ySud3RjxpNFyRDkLZpjJ9Ag71tFt5Waei9B1yQkqKN4",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "xBTC",
+      "symbol": "xBTC",
+      "mint": "CtzPWv73Sn1dMGVU3ZtLv9yWSyUAanBni19YWDaznnkn",
+      "decimals": 8,
+      "supply": "43124469294",
+      "mintAuthority": {
+        "address": "2hkCcczkANNHGxi3tMgtwsMHqQysEkBXmzpDXdqUBKWE",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "freezeAuthority": {
+        "address": "CjoV5B96reuCfPh2rRK11G1QptG97jZdyZArTn3EN1Mj",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "circuitBreakerPda": "E87A8sgDiH2FLJ8425r2PjjEmoFfzBpHdZDdUA2k4XzF",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "tBTC",
+      "symbol": "tBTC",
+      "mint": "6DNSN2BJsaPFdFFc1zP37kkeNe4Usc1Sqkzr9C9vPWcU",
+      "decimals": 8,
+      "supply": "2695754384",
+      "mintAuthority": {
+        "address": "2PfR3xUdMS8xHUhE9H47dy2Ro3Ww9agP5GdnNoKj3Vtf",
+        "type": "program-pda",
+        "programOwner": "Gj93RRt6QB7FjmyokAD5rcMAku7pq3Fk2Aa8y6nNbwsV",
+        "note": "owned by program Gj93RRt6QB7FjmyokAD5rcMAku7pq3Fk2Aa8y6nNbwsV"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "5TFmpQYYUD8J1NYqcu7m46yxzAbauw9QLdJCxEbGAC4S",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "cbBTC",
+      "symbol": "cbBTC",
+      "mint": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij",
+      "decimals": 8,
+      "supply": "390725482166",
+      "mintAuthority": {
+        "address": "CTQE6PMesbH4szKR9Nk5moj9WWUr9MVGP734wYX9wy3p",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "freezeAuthority": {
+        "address": "DSFAkPhfrSR95J9oq9Sh8rUetbj5vgFmwiSuHw6rAVnz",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "circuitBreakerPda": "G8L2qwKv1TD6EyBQ7cD2u3sojdsGkNabLAqBbJahgW1L",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Jito",
+      "symbol": "JitoSOL",
+      "mint": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+      "decimals": 9,
+      "supply": "8589495062020548",
+      "mintAuthority": {
+        "address": "6iQKfEyhr3bZMotVkW6beNZz5CPAkiwvgV2CTje9pVSS",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "7QnhwaFBTGUWY11gzn2zZVBfcG5Hfxcb1d4hiq21N9bA",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Marinade",
+      "symbol": "mSOL",
+      "mint": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+      "decimals": 9,
+      "supply": "2339274789821506",
+      "mintAuthority": {
+        "address": "3JLPCS1qM2zRw3Dp6V4hZnYHd4toMNPkNesXdX9tg6KM",
+        "type": "single-keypair",
+        "note": "no account data - plain keypair"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "J5mEwvdQzj6RoGUXms46i5BWMVW1BubAyV6fWxNbtb4G",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "BlazeStake",
+      "symbol": "bSOL",
+      "mint": "bSo13r4TkiE4KumL71LsHTPpL2euBYLFx6h9HP3piy1",
+      "decimals": 9,
+      "supply": "802866404936146",
+      "mintAuthority": {
+        "address": "6WecYymEARvjG5ZyqkrVQ6YkhPfujNzWpSPwNKXHCbV2",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "DJheErD3HxR8HvpjsAN2vgQXLCYpssNeUm4QdYYfKX8E",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Sanctum",
+      "symbol": "INF",
+      "mint": "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
+      "decimals": 9,
+      "supply": "1440926251282757",
+      "mintAuthority": {
+        "address": "AYhux5gJzCoeoc1PoJ1VxwPDe22RwcvpHviLDD1oCGvW",
+        "type": "program-pda",
+        "programOwner": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx",
+        "note": "owned by program 5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "CmDtu3quGbj8nNtN2nTE6pYUeArHf176dsAgLcnXML28",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Jupiter Staked SOL",
+      "symbol": "JupSOL",
+      "mint": "jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v",
+      "decimals": 9,
+      "supply": "4270675352912015",
+      "mintAuthority": {
+        "address": "EMjuABxELpYWYEwjkKmQKBNCwdaFAy4QYAs6W9bDQDNw",
+        "type": "single-keypair",
+        "note": "no account data - plain keypair"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "GK9W2YH2nhXtMEfgQ6ioN37FKQzYnRgj6MZrKoiRwAp8",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Circle",
+      "symbol": "USDC",
+      "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "decimals": 6,
+      "supply": "8734936628201631",
+      "mintAuthority": {
+        "address": "BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG",
+        "type": "spl-multisig",
+        "m": 2,
+        "n": 4,
+        "effectiveThreshold": 2,
+        "signers": [
+          "42XHrxUX5skic589HER817BWiJ5xvhJurrFVKjYCPwnb",
+          "BwdZnHHaC7Ho7xAAirLqWVLa9m7iWMkUN7PiZknActzy",
+          "Cf4s35LcAf9YC7wpdXTSxFg3i3GrvSYMavCVVefw3jd",
+          "HvhFE75zWkXvL7gAyjvatQcNrPA99ttFEz78kAgPF31v"
+        ],
+        "programOwner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "note": "2-of-4"
+      },
+      "freezeAuthority": {
+        "address": "7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar",
+        "type": "spl-multisig",
+        "m": 2,
+        "n": 4,
+        "effectiveThreshold": 2,
+        "signers": [
+          "Af4XfMtaHRR68pfHFoDGVP7nKmywrAuDQWjhHpbbtFjM",
+          "8xZVZQV3yb1kqzwX5Zdte4yuFncWcEn6A1GjjF7oL1M5",
+          "FAAQopHzHu7WG4QAij7w9QVjAp33dQDfK73AGhKhpbFk",
+          "5nbc9tTyc2Kw9rynSfB4mhGMhRtbAE8juucm4TEkzDy5"
+        ],
+        "programOwner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "note": "2-of-4"
+      },
+      "circuitBreakerPda": "26pWKkr6jtcbnuEWU7KT3v3Kmq5PZdELnZ7J7m77XzD1",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Tether",
+      "symbol": "USDT",
+      "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "decimals": 6,
+      "supply": "3489909676352591",
+      "mintAuthority": {
+        "address": "Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi",
+        "type": "spl-multisig",
+        "m": 2,
+        "n": 3,
+        "effectiveThreshold": 2,
+        "signers": [
+          "66YZZejVBupBnMwSEqTaCkAMwPacpPzP41GSEst55Kgz",
+          "yo4bccTt3FTnMguy2D3NCox8tG1CuHYRfxAdQoiJ7Th",
+          "A3znyaRYUvi7GbQv1pp9CqqiVo7anddU9rPKFH55V28R"
+        ],
+        "programOwner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "note": "2-of-3"
+      },
+      "freezeAuthority": {
+        "address": "Q6XprfkF8RQQKoQVG33xT88H7wi8Uk1B1CC7YAs69Gi",
+        "type": "spl-multisig",
+        "m": 2,
+        "n": 3,
+        "effectiveThreshold": 2,
+        "signers": [
+          "66YZZejVBupBnMwSEqTaCkAMwPacpPzP41GSEst55Kgz",
+          "yo4bccTt3FTnMguy2D3NCox8tG1CuHYRfxAdQoiJ7Th",
+          "A3znyaRYUvi7GbQv1pp9CqqiVo7anddU9rPKFH55V28R"
+        ],
+        "programOwner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "note": "2-of-3"
+      },
+      "circuitBreakerPda": "6Yycj22GSjVbqeGPXSWnY9KgZy2962ETvt6VqrvSc2Vd",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "PayPal",
+      "symbol": "PYUSD",
+      "mint": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+      "decimals": 6,
+      "supply": "687709083677815",
+      "mintAuthority": {
+        "address": "8Jornc27vtAYPkwDzsZVgLQchAYyC8nD7aCNPCDV8Qk2",
+        "type": "spl-multisig",
+        "m": 1,
+        "n": 4,
+        "effectiveThreshold": 1,
+        "signers": [
+          "2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk",
+          "3QaqDJS5angcPhW1HsMbB74vJbzWNcy1r5bwtATUro7d",
+          "BfWsvypxRvQ4KUhyJ2gLeFEkhRx3LgfkVahXMj6Kz3LN",
+          "AuVW19qwit2bxZqcspGZLsbq2ZiqosvryTNXE8UZSeGh"
+        ],
+        "programOwner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+        "note": "threshold=1 ⇒ effectively single signer"
+      },
+      "freezeAuthority": {
+        "address": "2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "circuitBreakerPda": "7CG1Q7cwEdP6wdf3LRoveWSyMqcehj22C5j6Vgj6QVdZ",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Sky",
+      "symbol": "USDS",
+      "mint": "USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA",
+      "decimals": 6,
+      "supply": "56277350793612",
+      "mintAuthority": {
+        "address": "BEvTHkTyXooyaJzP8egDUC7WQK8cyRrq5WvERZNWhuah",
+        "type": "program-pda",
+        "programOwner": "SKYTAiJRkgexqQqFoqhXdCANyfziwrVrzjhBaCzdbKW",
+        "note": "owned by program SKYTAiJRkgexqQqFoqhXdCANyfziwrVrzjhBaCzdbKW"
+      },
+      "freezeAuthority": {
+        "address": "AYPtjx4Hc8us1ikULUedkmZ3wtiD6tmL7gK3qe4V3oHt",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "circuitBreakerPda": "2YceRoNj5SKmu1wGpvZvBtH3MnEotzf7CESVPx1KxazQ",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Global Dollar",
+      "symbol": "USDG",
+      "mint": "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
+      "decimals": 6,
+      "supply": "1301457041769056",
+      "mintAuthority": {
+        "address": "3YJL8sesK3ooPpJddypvFUhCvnvaQ1oF8This4J3bhxR",
+        "type": "spl-multisig",
+        "m": 1,
+        "n": 4,
+        "effectiveThreshold": 1,
+        "signers": [
+          "2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk",
+          "GdJywa1Mye4fA7ST5WuJw2eEsxbPPgNc7AsCT8D6Hngg",
+          "CzSG2jccXqr19Xcbr7E1yCPs4nbQj3ggsZtK7BGwe56L",
+          "75sq4xbQ1snnWKmwZ9sDZjzaLxgiZedPcegXwCCQ2bnp"
+        ],
+        "programOwner": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+        "note": "threshold=1 ⇒ effectively single signer"
+      },
+      "freezeAuthority": {
+        "address": "2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "circuitBreakerPda": "3sUZ1koE1CDqyev2awEYzuQR4ZJdVGqJHrAaHRGPPmFx",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Jupiter USD",
+      "symbol": "JupUSD",
+      "mint": "JuprjznTrTSp2UFa3ZBUFgwdAmtZCq4MQCwysN55USD",
+      "decimals": 6,
+      "supply": "65951531527286",
+      "mintAuthority": {
+        "address": "CkzLnD9r4d4ZZofsgNVo2VNunxDmte5YJ4vfAgMfBZNA",
+        "type": "single-keypair",
+        "note": "no account data - plain keypair"
+      },
+      "freezeAuthority": {
+        "address": "CkzLnD9r4d4ZZofsgNVo2VNunxDmte5YJ4vfAgMfBZNA",
+        "type": "single-keypair",
+        "note": "no account data - plain keypair"
+      },
+      "circuitBreakerPda": "GRghTAD4jnpXRRfiMuVkmKRmuoz3UZzvGDZzm7dhmeaH",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Huma Finance",
+      "symbol": "HUMA",
+      "mint": "HUMA1821qVDKta3u2ovmfDQeW2fSQouSKE8fkF44wvGw",
+      "decimals": 6,
+      "supply": "9999996043971789",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "CqbcLnCV6i23qntuFfLPGSeDKb19N9DHJGa1KjtXwYnz",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Jupiter",
+      "symbol": "JUP",
+      "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "decimals": 6,
+      "supply": "6863982191958796",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "JE1qJBZUqSnA8cCwZ6MZLb6WJGK9auDxF95nG6sHq6Sy",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Drift",
+      "symbol": "DRIFT",
+      "mint": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
+      "decimals": 6,
+      "supply": "999998892435020",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "63mEorBGoDuMGcARoX2Ds7f9sV9C4YLzrK1H6HQxJP7q",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Orca",
+      "symbol": "ORCA",
+      "mint": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+      "decimals": 6,
+      "supply": "74999558993017",
+      "mintAuthority": {
+        "address": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "BPUzzLoDGFcqwYBJnhATVREznB1fHcf8mggoea19E1VQ",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Raydium",
+      "symbol": "RAY",
+      "mint": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+      "decimals": 6,
+      "supply": "554997757072975",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "GBLhVrdCeAS534RGfzWLLjJAK7cnDojDaSoFzLyV9sfB",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Pyth",
+      "symbol": "PYTH",
+      "mint": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+      "decimals": 6,
+      "supply": "9999982174570340",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "5ZrMrUUoitt5sRBqXtrfbZa81HhtGvnqqmAdc7ZAehr7",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Helium",
+      "symbol": "HNT",
+      "mint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
+      "decimals": 8,
+      "supply": "18404336335553647",
+      "mintAuthority": {
+        "address": "3QqEkX1juz4bW8mCQBMJLWjEpHqYawvbEUvpc6iwYom3",
+        "type": "program-pda",
+        "programOwner": "circAbx64bbsscPbQzZAUvuXpHqrCe6fLMzc2uKXz9g",
+        "note": "owned by program circAbx64bbsscPbQzZAUvuXpHqrCe6fLMzc2uKXz9g"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "3QqEkX1juz4bW8mCQBMJLWjEpHqYawvbEUvpc6iwYom3",
+      "circuitBreakerInitialized": true,
+      "circuitBreakerWrapped": true
+    },
+    {
+      "protocol": "Helium",
+      "symbol": "IOT",
+      "mint": "iotEVVZLEywoTn1QdwNPddxPWszn3zFhEot3MfL9fns",
+      "decimals": 6,
+      "supply": "16833617889298528",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "FPJjfrmwePzQdrhXELwwzQWLKfEaabrNVC7eqzPdqcB4",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "Helium",
+      "symbol": "MOBILE",
+      "mint": "mb1eu7TzEc71KxDpsmsKoucSSuuoGLv1drys1oP2jh6",
+      "decimals": 6,
+      "supply": "53129026561670240",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "3xGSXWtUTpZKEcM68wYSCaBRNPs8kxNeTEdi5HsDVKxh",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "LayerZero (WIF)",
+      "symbol": "$WIF",
+      "mint": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+      "decimals": 6,
+      "supply": "998839196079299",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "GnT9XKu6Ei3rzsEskY8pMFiZaN1xfK8YmSD5iGLX7zdY",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "LayerZero (TRUMP)",
+      "symbol": "TRUMP",
+      "mint": "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN",
+      "decimals": 6,
+      "supply": "999999139094270",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "53HwbqMXwsdjh4tcznGdWCVVf46msDQfncGPUKpuHZyQ",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "LayerZero (MELANIA)",
+      "symbol": "MELANIA",
+      "mint": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+      "decimals": 6,
+      "supply": "999996228604670",
+      "mintAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "mint authority renounced - supply is fixed"
+      },
+      "freezeAuthority": {
+        "address": "null",
+        "type": "null",
+        "note": "no freeze authority - no emergency pause mechanism"
+      },
+      "circuitBreakerPda": "31EhtZVY6qKyHGPfhMzo3Mv7S47HnJjTFQv5NMam57Ew",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    },
+    {
+      "protocol": "LayerZero (PLUME)",
+      "symbol": "PLUME",
+      "mint": "C7Xr4VM6H3W9HHpVep96Hrknkxv2c33kcBTi6e9ZjphW",
+      "decimals": 6,
+      "supply": "299702249282",
+      "mintAuthority": {
+        "address": "9kneLSBsykLzbuYEVZmBEMNV53QqCxKwJJu3iFd6JvJk",
+        "type": "program-pda",
+        "programOwner": "HRPXLCqspQocTjfcX4rvAPaY9q6Gwb1rrD3xXWrfJWdW",
+        "note": "owned by program HRPXLCqspQocTjfcX4rvAPaY9q6Gwb1rrD3xXWrfJWdW"
+      },
+      "freezeAuthority": {
+        "address": "GrvPpMeeYmT7hzfSp1UUatma2orhUE6mg7NWjRKvhmwZ",
+        "type": "single-keypair",
+        "programOwner": "11111111111111111111111111111111"
+      },
+      "circuitBreakerPda": "8YvDXDxE7ooEi1MN8gum9oDDEX7dA46EowBGYQhmCeUv",
+      "circuitBreakerInitialized": false,
+      "circuitBreakerWrapped": false
+    }
+  ]
+}

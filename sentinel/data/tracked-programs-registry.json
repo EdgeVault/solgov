@@ -1,0 +1,942 @@
+[
+  {
+    "protocol": "Orca",
+    "programName": "Whirlpools",
+    "programId": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc"
+  },
+  {
+    "protocol": "Orca",
+    "programName": "Token Swap V2",
+    "programId": "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP"
+  },
+  {
+    "protocol": "Orca",
+    "programName": "Wave (waveQX)",
+    "programId": "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF"
+  },
+  {
+    "protocol": "Orca",
+    "programName": "Stake (StaKE6)",
+    "programId": "StaKE6XNKVVhG8Qu9hDJBqCW3eRe7MDGLz17nJZetLT"
+  },
+  {
+    "protocol": "Drift",
+    "programName": "Protocol V2",
+    "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH"
+  },
+  {
+    "protocol": "Drift",
+    "programName": "Vaults",
+    "programId": "vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR"
+  },
+  {
+    "protocol": "Project 0",
+    "programName": "Lending V2",
+    "programId": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA"
+  },
+  {
+    "protocol": "Project 0",
+    "programName": "LIP",
+    "programId": "LipsxuAkFkwa4RKNzn51wAsW7Dedzt1RNHMkTkDEZUW"
+  },
+  {
+    "protocol": "Project 0",
+    "programName": "CAW (mrgn legacy admin)",
+    "programId": "CAW7771FWrfBFtxAUrSw38fBVtKHns9WW9KCw65vnVsH"
+  },
+  {
+    "protocol": "Kamino",
+    "programName": "kLend",
+    "programId": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD"
+  },
+  {
+    "protocol": "Kamino",
+    "programName": "Liquidity",
+    "programId": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc"
+  },
+  {
+    "protocol": "Kamino",
+    "programName": "KFarms",
+    "programId": "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr"
+  },
+  {
+    "protocol": "Jupiter Perps",
+    "programName": "Perpetuals",
+    "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu"
+  },
+  {
+    "protocol": "Jupiter Lend",
+    "programName": "Liquidity",
+    "programId": "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC"
+  },
+  {
+    "protocol": "Jupiter Lend",
+    "programName": "Lending",
+    "programId": "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9"
+  },
+  {
+    "protocol": "Jupiter Lend",
+    "programName": "Reward Rate",
+    "programId": "jup7TthsMgcR9Y3L277b8Eo9uboVSmu1utkuXHNUKar"
+  },
+  {
+    "protocol": "Jupiter Lend",
+    "programName": "Vaults",
+    "programId": "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi"
+  },
+  {
+    "protocol": "Jupiter Lend",
+    "programName": "Oracle",
+    "programId": "jupnw4B6Eqs7ft6rxpzYLJZYSnrpRgPcr589n5Kv4oc"
+  },
+  {
+    "protocol": "Jupiter Lend",
+    "programName": "Flashloan",
+    "programId": "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS"
+  },
+  {
+    "protocol": "Magic Eden",
+    "programName": "Marketplace V2",
+    "programId": "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K"
+  },
+  {
+    "protocol": "Magic Eden",
+    "programName": "AMM",
+    "programId": "mmm3XBJg5gk8XJxEKBvdgptZz6SgK4tXvn36sodowMc"
+  },
+  {
+    "protocol": "Magic Eden",
+    "programName": "Luck (LUCK57)",
+    "programId": "LUCK57mxzZiRGF2PdHAY79P6tZ8Apsi381tKvBrTdqk"
+  },
+  {
+    "protocol": "Magic Eden",
+    "programName": "WDPK",
+    "programId": "WDPKndVQYXANGvAxRgZujP4nT5rDMNqbs6aVeZe9kxX"
+  },
+  {
+    "protocol": "Magic Eden",
+    "programName": "CMZY",
+    "programId": "CMZYPASGWeTz7RNGHaRJfCq2XQ5pYK6nDvVQxzkH51zb"
+  },
+  {
+    "protocol": "Magic Eden",
+    "programName": "M3MX",
+    "programId": "M3mxk5W2tt27WGT7THox7PmgRDp4m6NEhL5xvxrBfS1"
+  },
+  {
+    "protocol": "Magic Eden",
+    "programName": "PCKj",
+    "programId": "PCKjSaQaZb3AcmjTcb2fcLanh9Mky9ZvuaKqTBxsqWE"
+  },
+  {
+    "protocol": "Loopscale",
+    "programName": "Loopscale Core (jg82)",
+    "programId": "jg82rRko6Hu1KqZ47RR95Jrq1cfqBhaAPXStseajmfQ"
+  },
+  {
+    "protocol": "Loopscale",
+    "programName": "HAiowc",
+    "programId": "HAiowc2WWGp3VwVjpAtiduLCwWQmQqVPQgLbn5jurM8o"
+  },
+  {
+    "protocol": "Loopscale",
+    "programName": "HaioYY",
+    "programId": "HaioYYCZuXWxiHjFG9i8MnzAH6dFdgh1E1eCGjTwWzb"
+  },
+  {
+    "protocol": "Loopscale",
+    "programName": "haio6i",
+    "programId": "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF"
+  },
+  {
+    "protocol": "Loopscale",
+    "programName": "HaiooU",
+    "programId": "HaiooUZ4qzSEi2sn1qbwH8mKVXgnwY8oyziUStJDcb6Z"
+  },
+  {
+    "protocol": "Loopscale",
+    "programName": "Haio3o",
+    "programId": "Haio3oNYt8MtL9traoQNJ9RXK1XEVaQBBrZZKXt2VXjz"
+  },
+  {
+    "protocol": "Exponent",
+    "programName": "Core",
+    "programId": "ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7"
+  },
+  {
+    "protocol": "Huma Finance",
+    "programName": "Permissionless",
+    "programId": "HumaXepHnjaRCpjYTokxY4UtaJcmx41prQ8cxGmFC5fn"
+  },
+  {
+    "protocol": "Huma Finance",
+    "programName": "Institutional",
+    "programId": "EVQ4s1b6N1vmWFDv8PRNc77kufBP8HcrSNWXQAhRsJq9"
+  },
+  {
+    "protocol": "Solstice",
+    "programName": "USX",
+    "programId": "USXyiSTsPEWz55pSK7sZoUL79ntoVGQbaTDT57tH6bx"
+  },
+  {
+    "protocol": "Solstice",
+    "programName": "YieldVault",
+    "programId": "eUSXyKoZ6aGejYVbnp3wtWQ1E8zuokLAJPecPxxtgG3"
+  },
+  {
+    "protocol": "Solstice",
+    "programName": "Solstice Aux (7FaMy)",
+    "programId": "7FaMyGiTVdjm8dd3PxpjjCX15ibbmuE1zWVFX2PHxYUK"
+  },
+  {
+    "protocol": "Pumpfun + PumpSwap",
+    "programName": "Bonding Curve",
+    "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"
+  },
+  {
+    "protocol": "Pumpfun + PumpSwap",
+    "programName": "PumpSwap",
+    "programId": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA"
+  },
+  {
+    "protocol": "Lulo",
+    "programName": "FlexLend",
+    "programId": "FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q"
+  },
+  {
+    "protocol": "Nosana",
+    "programName": "Jobs",
+    "programId": "nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM"
+  },
+  {
+    "protocol": "Nosana",
+    "programName": "Staking",
+    "programId": "nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE"
+  },
+  {
+    "protocol": "Nosana",
+    "programName": "Rewards",
+    "programId": "nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp"
+  },
+  {
+    "protocol": "Nosana",
+    "programName": "Nodes",
+    "programId": "nosNeZR64wiEhQc5j251bsP4WqDabT6hmz4PHyoHLGD"
+  },
+  {
+    "protocol": "Switchboard",
+    "programName": "Oracle V2",
+    "programId": "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f"
+  },
+  {
+    "protocol": "Switchboard",
+    "programName": "Attestation",
+    "programId": "sbattyXrzedoNATfc4L31wC9Mhxsi1BmFhTiN8gDshx"
+  },
+  {
+    "protocol": "Switchboard",
+    "programName": "On-Demand",
+    "programId": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv"
+  },
+  {
+    "protocol": "Stabble",
+    "programName": "Stable Swap",
+    "programId": "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ"
+  },
+  {
+    "protocol": "Flash Trade",
+    "programName": "Flash Trade Aux (6U1gV)",
+    "programId": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "Infinity (S Controller)",
+    "programId": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "Unstake",
+    "programId": "unpXTU2Ndrc7WWNyEhQWe4udTzSibLPi25SXv2xbCHQ"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "Router",
+    "programId": "stkitrT1Uoy18Dk1fTrgPw8W6MVzoCfYoAFT4MLsmhq"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "SOL Value Calculator",
+    "programId": "sp1V4h2gWorkGhVcazBc22Hfo2f5sd7jcjT4EDPrWFF"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "Marinade SOL Calculator",
+    "programId": "mare3SCyfZkAndpBRBeonETmkCCB3TJTTrz8ZN2dnhP"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "SPL Stake Pool Calculator",
+    "programId": "sspUE1vrh7xRoXxGsg7vR1zde2WdGtJRbyK9uRumBDy"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "Flat Fee Pricing",
+    "programId": "f1tUoNEKrDp1oeGn4zxr7bh41eN6VcfHjfrL3ZqQday"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "LiDo SOL Calculator",
+    "programId": "1idUSy4MGGKyKhvjSnGZ6Zc7Q4eKQcibym4BkEEw9KR"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "wSOL Calculator",
+    "programId": "wsoGmxQLSvwWpuaidCApxN5kEowLe2HLQLJhCQnj4bE"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "S1B6",
+    "programId": "s1b6NRXj6ygNu1QMKXh2H9LUR2aPApAAm1UQ2DjdhNV"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "SP12 (Stake Pool)",
+    "programId": "SP12tWFxD9oJsVWNavTTBZvMbA6gkAmxtVgxdqvyvhY"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "SSMBU",
+    "programId": "ssmbu3KZxgonUtjEMCKspZzxvUQCxAFnyh1rcHUeEDo"
+  },
+  {
+    "protocol": "Sanctum",
+    "programName": "SPMB",
+    "programId": "SPMBzsVUuoHA4Jm6KunbsotaahvVikZs1JyTW6iJvbn"
+  },
+  {
+    "protocol": "Jupiter Agg",
+    "programName": "Aggregator V6",
+    "programId": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4"
+  },
+  {
+    "protocol": "Jupiter Agg",
+    "programName": "DCA",
+    "programId": "DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M"
+  },
+  {
+    "protocol": "Jupiter Agg",
+    "programName": "Limit Orders",
+    "programId": "jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu"
+  },
+  {
+    "protocol": "Raydium",
+    "programName": "AMM V4",
+    "programId": "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8"
+  },
+  {
+    "protocol": "Raydium",
+    "programName": "CLMM",
+    "programId": "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK"
+  },
+  {
+    "protocol": "Raydium",
+    "programName": "CP-Swap",
+    "programId": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
+  },
+  {
+    "protocol": "Raydium",
+    "programName": "LaunchLab",
+    "programId": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj"
+  },
+  {
+    "protocol": "Raydium",
+    "programName": "Staking",
+    "programId": "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Marketplace",
+    "programId": "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "AMM",
+    "programId": "TAMM6ub33ij1mbetoMyVBLeKY5iP41i4UPUJQGkhfsg"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "TensorSwap",
+    "programId": "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Listing (TList)",
+    "programId": "TL1ST2iRBzuGTqLn1KXnGdSnEow62BzPnGiqyRXhWtW"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Lock (TLock)",
+    "programId": "TLoCKic2wGJm7VhZKumih4Lc35fUhYqVMgA4j389Buk"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Fees (VFees)",
+    "programId": "VFeesufQJnGunv2kBXDYnThT1CoAYB45U31qGDe5QjU"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Aux 1",
+    "programId": "3vtZSP5wZe8QgX71EjrpGArEwM8LSgzTiEHkw6pSGFLD"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Bid (TBid)",
+    "programId": "TB1Dqt8JeKQh7RLDzfYDJsq8KS4fS2yt87avRjyRxMv"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Fee distribution (TFee)",
+    "programId": "TFEEgwDP6nn1s8mMX2tTNPPz8j2VomkphLUmyxKm17A"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Aggregator (VAgg)",
+    "programId": "VAggLCsx2hpZXF5t5aHfJC4Lt4rBKDuyUfbad1akWvA"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Order (Vordr)",
+    "programId": "VordrNZMkkryqCDFhFRcti4x3j94KY8fog3RhjGDVok"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Listing v2 (Tlist v2)",
+    "programId": "Td1ST8yc9Vt7vsBY7rZzrCjkXeGnr4ECMtso9ueLhyQ"
+  },
+  {
+    "protocol": "Tensor",
+    "programName": "Stake (TStake)",
+    "programId": "TSTKEiz9sqJRypokAkRhaW29rnDYDSxqWxmdv9brkp2"
+  },
+  {
+    "protocol": "Phoenix DEX",
+    "programName": "CLOB V1",
+    "programId": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "DLMM",
+    "programId": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Dynamic AMM",
+    "programId": "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "DAMM V2",
+    "programId": "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Dynamic Vault",
+    "programId": "24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Aux 1",
+    "programId": "GacY9YuN16HNRTy7ZWwULPccwvfFSBeNLuAQP7y38Du3"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Zap",
+    "programId": "zapvX9M3uf5pvy4wRPAbQgdQsM1xmuiFnkfHKPvwMiz"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Distribution (pDis)",
+    "programId": "pDisRpxvnFw4osSqDPqMJ62tLsVQGsHL4tMX23ArYrL"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Alpha Bonding Curve",
+    "programId": "abcSyangMHdGzUGKhBhKoQzSFdJKUdkPGf5cbXVHpEw"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "CAT",
+    "programId": "CAT7rbZD4eJ8zscj89HYWUKNcqhujQ9RB1zYrbrF5rXb"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Fees",
+    "programId": "FEESngU3neckdwib9X3KWqdL7Mjmqk9XNp3uh5JbP4KP"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "DFSDO",
+    "programId": "dfsdo2UqvwfN8DuUVrMRNfQe11VaiNoKcMqLHVvDPzh"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Farm",
+    "programId": "FarmuwXPWXvefWUeqFAa5w6rifLkq5X6E8bimYvrhCB1"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "Vault",
+    "programId": "vaU6kP7iNEGkbmPkLmZfGwiGxd4Mob24QQCie5R9kd2"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "PreS",
+    "programId": "presSVxnf9UU8jMxhgSMqaRwNiT36qeBdNeTRKjTdbj"
+  },
+  {
+    "protocol": "Meteora",
+    "programName": "DBC",
+    "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN"
+  },
+  {
+    "protocol": "Parcl",
+    "programName": "Parcl Perps Core (PaRCL)",
+    "programId": "PaRCLKPpkfHQfXTruT8yhEUx5oRNH8z8erBnzEerc8a"
+  },
+  {
+    "protocol": "Parcl",
+    "programName": "Parcl Perps Aux (3parc)",
+    "programId": "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y"
+  },
+  {
+    "protocol": "Parcl",
+    "programName": "Parcl Governance 1 (2GTq)",
+    "programId": "2GTq96kiPYg2XbDwvcHha1gMTo2bjfiuCc72Z8bKq4HX"
+  },
+  {
+    "protocol": "Parcl",
+    "programName": "Parcl Governance 2 (Di9Z)",
+    "programId": "Di9ZVJeJrRZdQEWzAFYmfjukjR5dUQb7KMaDmv34rNJg"
+  },
+  {
+    "protocol": "Parcl",
+    "programName": "Parcl Governance 3 (2gWf)",
+    "programId": "2gWf5xLAzZaKX9tQj9vuXsaxTWtzTZDFRn21J3zjNVgu"
+  },
+  {
+    "protocol": "Parcl",
+    "programName": "Parcl Governance 4 (5tu3)",
+    "programId": "5tu3xkmLfud5BAwSuQke4WSjoHcQ52SbrPwX9es8j6Ve"
+  },
+  {
+    "protocol": "Marinade",
+    "programName": "Liquid Staking",
+    "programId": "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "Legacy Oracle",
+    "programId": "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "Pull Oracle",
+    "programId": "rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "Push Oracle",
+    "programId": "pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "Pyth Governance",
+    "programId": "prfmVhiQTN5Spgoxa8uZJba35V1s7XXReqbBiqPDWeJ"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "Pyth Crosschain",
+    "programId": "pytd2yyk641x7ak7mkaasSJVXh6YYZnC7wTmtgAyxPt"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "HDwc",
+    "programId": "HDwcJBJXjL9FpJ7UBsYBtaDjsBUhuLCUYoz3zr8SWWaQ"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "Test (tstPAR)",
+    "programId": "tstPARXbQ5yxVkRU2UcZRbYphzbUEW6t5ihzpLaafgz"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "Governance (GovFUV)",
+    "programId": "GovFUVGZWWwyoLq8rhnoVWknRFkhDSbQiSoREJ5LiZCV"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "Staking (sta99)",
+    "programId": "sta99txADjRfwHQQMNckb8vUN4jcAAhN2HBMTR2Ah6d"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "PytER",
+    "programId": "PytERJFhAKuNNuaiXkApLfWzwNwSNDACpigT3LwQfou"
+  },
+  {
+    "protocol": "Pyth",
+    "programName": "escrow (escMHe)",
+    "programId": "escMHe7kSqPcDHx4HU44rAHhgdTLBZkUrU39aN8kMcL"
+  },
+  {
+    "protocol": "Jito",
+    "programName": "Vault",
+    "programId": "Vau1t6sLNxnzB7ZDsef8TLbPLfyZMYXH8WTNqUdm9g8"
+  },
+  {
+    "protocol": "Jito",
+    "programName": "Restaking",
+    "programId": "RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q"
+  },
+  {
+    "protocol": "Jito",
+    "programName": "Steward",
+    "programId": "Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8"
+  },
+  {
+    "protocol": "Jito",
+    "programName": "Tip Payment",
+    "programId": "T1pyyaTNZsKv2WcRAB8oVnk93mLJw2XzjtVYqCsaHqt"
+  },
+  {
+    "protocol": "Jito",
+    "programName": "Tip Distribution",
+    "programId": "4R3gSG8BpU4t19KYj8CfnbtRpnT8gtk4dvTHxVRwc2r7"
+  },
+  {
+    "protocol": "Jito",
+    "programName": "Validator History",
+    "programId": "HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa"
+  },
+  {
+    "protocol": "Zebec",
+    "programName": "Streaming",
+    "programId": "zbcKGdAmXfthXY3rEPBzexVByT2cqRqCZb9NwWdGQ2T"
+  },
+  {
+    "protocol": "Zebec",
+    "programName": "Multisig Helper",
+    "programId": "b6ZPysThkApNx2YDiGsPUiYPE7Ub1kTRdCWp7gBkzbr"
+  },
+  {
+    "protocol": "Zebec",
+    "programName": "SDK/V1",
+    "programId": "AknC341xog56SrnoK6j3mUvaD1Y7tYayx1sxUGpeYWdX"
+  },
+  {
+    "protocol": "Wick",
+    "programName": "Wick",
+    "programId": "wickHYqFr8NayYurE8M4oT8F4ZrYUwzaFoiXctCDSmF"
+  },
+  {
+    "protocol": "Onre Finance",
+    "programName": "Core",
+    "programId": "onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe"
+  },
+  {
+    "protocol": "MetaDAO",
+    "programName": "Futarchy",
+    "programId": "FUTARELBfJfQ8RDGhg1wdhddq1odMAJUePHFuBYfUxKq"
+  },
+  {
+    "protocol": "MetaDAO",
+    "programName": "Autocrat",
+    "programId": "auToUr3CQza3D4qreT6Std2MTomfzvrEeCC5qh7ivW5"
+  },
+  {
+    "protocol": "MetaDAO",
+    "programName": "AMM",
+    "programId": "AMMJdEiCCa8mdugg6JPF7gFirmmxisTfDJoSNSUi5zDJ"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Entity Manager",
+    "programId": "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Data Credits",
+    "programId": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Sub DAOs",
+    "programId": "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Voter Stake Registry",
+    "programId": "hvsrNC3NKbcryqDs2DocYHZ9yPKEVzdSjQG6RVtK1s8"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Modular Governance (proposals)",
+    "programId": "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Modular Governance (proposals v2)",
+    "programId": "nprx42sXf5rpVnwBWEdRg1d8tuCWsTuVLys1pRWwE6p"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Treasury Management",
+    "programId": "treaf4wWBBty3fHdyBpo35Mz84M8k3heKXmjmi9vFt5"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Mobile Entity",
+    "programId": "memMa1HG4odAFmUbGWfPwS1WWfK95k99F2YTkGvyxZr"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "No-Emit",
+    "programId": "noEmmgLmQdk6DLiPV8CSwQv3qQDyGEhz9m5A4zhtByv"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "IoT Distributor",
+    "programId": "1atrmQs3eq1N2FEYWu6tyTXbCjP4uQwExpjtnhXtS8h"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Organisations",
+    "programId": "orgdXvHVLkWgBYerptASkAwkZAE563CJUu717dMNx5f"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Price Oracle",
+    "programId": "porcSnvH9pvcYPmQ65Y8qcZSRxQBiBBQX7UV5nmBegy"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Hex Boosting",
+    "programId": "hexbnKYoA2GercNNhHUCCfrTRWrHjT6ujKPXTa5NPqJ"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Circuit Breaker",
+    "programId": "circAbx64bbsscPbQzZAUvuXpHqrCe6fLMzc2uKXz9g"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Fanout",
+    "programId": "fanqeMu3fw8R4LwKNbahPtYXJsyLL6NXyfe2BqzhfB6"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Rewards Oracle",
+    "programId": "rorcfdX4h9m9swCKgcypaHJ8NGYVANBpmV9EHn3cYrF"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Lazy Distributor",
+    "programId": "1azyuavdMyvsivtNxPoz6SucD18eDHeXzFCUPq5XU7w"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Mobile Fanout (mfan)",
+    "programId": "mfanLprNnaiP4RX9Zz1BMcDosYHCqnG24H1fMEbi9Gn"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "TukTuk",
+    "programId": "tuktukUrfhXT6ZT77QTU8RQtvgL967uRuVagWF57zVA"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Cron",
+    "programId": "cronAjRZnJn3MTP3B9kE62NWDrjSuAPVXf9c4hu4grM"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Top (topqq)",
+    "programId": "topqqzQZroCyRrgyM5zVq6xkFDVnfF13iixSjajydgU"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Stake Controller (stcfi)",
+    "programId": "stcfiqW3fwD9QCd8Bqr1NBLrs7dftZHBQe7RiMMA4aM"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "hcrLP",
+    "programId": "hcrLPFgFUY6sCUKzqLWxXx5bntDiDCrAZVcrXfx9AHu"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "we1cG",
+    "programId": "we1cGnTxTkDP9Sk49dw1d3T7ik7V2NfnY4qDGCDHXfC"
+  },
+  {
+    "protocol": "Helium",
+    "programName": "Omnix Admin",
+    "programId": "omnixgS8fnqHfCcTGKWj6JtKjzpJZ1Y5y9pyFkQDkYE"
+  },
+  {
+    "protocol": "Voltr",
+    "programName": "Vaults",
+    "programId": "aVoLTRCRt3NnnchvLYH6rMYehJHwM5m45RmLBZq7PGz"
+  },
+  {
+    "protocol": "Tessera V",
+    "programName": "AMM",
+    "programId": "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH"
+  },
+  {
+    "protocol": "deBridge",
+    "programName": "Main",
+    "programId": "DEbrdGj3HsRsAzx6uH4MKyREKxVAfBydijLUF3ygsFfh"
+  },
+  {
+    "protocol": "deBridge",
+    "programName": "Settings",
+    "programId": "DeSetTwWhjZq6Pz9Kfdo1KoS5NqtsM6G8ERbX4SSCSft"
+  },
+  {
+    "protocol": "BisonFi",
+    "programName": "AMM",
+    "programId": "BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi"
+  },
+  {
+    "protocol": "HumidiFi",
+    "programName": "AMM",
+    "programId": "9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp"
+  },
+  {
+    "protocol": "Photon",
+    "programName": "Trading Bot",
+    "programId": "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW"
+  },
+  {
+    "protocol": "SPL Stake Pool",
+    "programName": "Stake Pool",
+    "programId": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy"
+  },
+  {
+    "protocol": "LayerZero OFT",
+    "programName": "OFT",
+    "programId": "219m42qCuVirVvWs5GnkuX4aWFx5pX6D9RSTE1vsV5WS"
+  },
+  {
+    "protocol": "LayerZero OFT",
+    "programName": "Devtools (A8W6A)",
+    "programId": "A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN"
+  },
+  {
+    "protocol": "SolvBTC",
+    "programName": "Solv Protocol",
+    "programId": "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz"
+  },
+  {
+    "protocol": "GMSOL",
+    "programName": "Core",
+    "programId": "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo"
+  },
+  {
+    "protocol": "GMSOL",
+    "programName": "Exchange",
+    "programId": "GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg"
+  },
+  {
+    "protocol": "GMSOL",
+    "programName": "LP Manager",
+    "programId": "LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8"
+  },
+  {
+    "protocol": "GMSOL",
+    "programName": "Router",
+    "programId": "2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc"
+  },
+  {
+    "protocol": "GMSOL",
+    "programName": "TimeBQ",
+    "programId": "TimeBQ7gQyWyQMD3bTteAdy7hTVDNWSwELdSVZHfSXL"
+  },
+  {
+    "protocol": "GMSOL",
+    "programName": "12cJK",
+    "programId": "12cJKgP9r2bcaruqu3XsCS1hxLqsHrmZhqG5Qy2TWRap"
+  },
+  {
+    "protocol": "Ore",
+    "programName": "Ore V3",
+    "programId": "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv"
+  },
+  {
+    "protocol": "Ore",
+    "programName": "3jSk",
+    "programId": "3jSkUuYBoJzQPMEzTvkDFXCZUBksPamrVhrnHR9igu2X"
+  },
+  {
+    "protocol": "Ore",
+    "programName": "LStw",
+    "programId": "LStwN2E5Uw6MCtuxHRLhy8RY9hxqW2XRpLzettb696y"
+  },
+  {
+    "protocol": "Ore",
+    "programName": "Stake (STkE)",
+    "programId": "STkEAu2cEyQp5ktgUauRVq8es6mEP2w6ixw4NEd5tDJ"
+  },
+  {
+    "protocol": "GMSOL Deploy",
+    "programName": "Deploy 1",
+    "programId": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH"
+  },
+  {
+    "protocol": "GMSOL Deploy",
+    "programName": "Deploy 2",
+    "programId": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj"
+  },
+  {
+    "protocol": "GMSOL Deploy",
+    "programName": "Deploy 3",
+    "programId": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2"
+  },
+  {
+    "protocol": "GMSOL Deploy",
+    "programName": "Deploy 4",
+    "programId": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR"
+  },
+  {
+    "protocol": "GMSOL Deploy",
+    "programName": "Deploy 5",
+    "programId": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ"
+  },
+  {
+    "protocol": "GMSOL Deploy",
+    "programName": "Deploy 6",
+    "programId": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd"
+  },
+  {
+    "protocol": "Carrot",
+    "programName": "Carrot",
+    "programId": "CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s"
+  },
+  {
+    "protocol": "Carrot",
+    "programName": "JAZW",
+    "programId": "JAZWcGrpSWNPTBj8QtJ9UyQqhJCDhG9GJkDeMf5NQBiq"
+  },
+  {
+    "protocol": "Carrot",
+    "programName": "Fk1R",
+    "programId": "Fk1RpqsfeWt8KnFCTW9NQVdVxYvxuqjGn6iPB9wrmM8h"
+  },
+  {
+    "protocol": "DefiTuna",
+    "programName": "DefiTuna",
+    "programId": "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD"
+  }
+]

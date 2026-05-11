@@ -1,0 +1,182 @@
+{
+  "updatedAt": "2026-04-21",
+  "source": "Solana-native DeFi exploits only. Curated from Rekt, public post-mortems, and protocol disclosures. Excludes cross-chain hacks where the root cause sat outside Solana. Excludes centralised exchange compromises, Telegram bot wallet-level incidents, and prevented exploits.",
+  "hacks": [
+    {
+      "date": "2022-02-02",
+      "protocol": "Wormhole",
+      "amountUsd": 325000000,
+      "category": "contract",
+      "rootCause": "Signature verification bypass on the Solana-side Wormhole bridge contract allowed the attacker to mint wrapped ETH without collateral",
+      "recovered": "full",
+      "recoveryNote": "Jump Crypto replaced the 120k ETH within 24 hours, averting ecosystem-wide cascade to all Solana protocols holding wETH",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/wormhole-rekt/"
+    },
+    {
+      "date": "2022-03-23",
+      "protocol": "Cashio",
+      "amountUsd": 28000000,
+      "category": "contract",
+      "rootCause": "Infinite mint via missing collateral account validation on the CASH stablecoin issuance contract",
+      "recovered": "partial",
+      "recoveryNote": "Hacker returned a portion from holders under $100K; protocol defunct",
+      "affectedProtocols": ["Saber", "Sunny"],
+      "link": "https://rekt.news/cashio-rekt/"
+    },
+    {
+      "date": "2022-07-02",
+      "protocol": "Crema Finance",
+      "amountUsd": 8800000,
+      "category": "contract",
+      "rootCause": "Flash-loan exploit via tick account spoofing in the concentrated liquidity contract",
+      "recovered": "partial",
+      "recoveryNote": "Attacker returned majority via bug-bounty agreement",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/crema-rekt/"
+    },
+    {
+      "date": "2022-07-28",
+      "protocol": "Nirvana Finance",
+      "amountUsd": 3500000,
+      "category": "contract",
+      "rootCause": "Flash-loan exploit on the ANA token bonding curve",
+      "recovered": "none",
+      "recoveryNote": "Protocol defunct after exploit",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/nirvana-rekt/"
+    },
+    {
+      "date": "2022-08-02",
+      "protocol": "Slope Wallet",
+      "amountUsd": 5000000,
+      "category": "wallet",
+      "rootCause": "Seed phrases logged to Sentry server in plaintext, attacker drained thousands of user wallets",
+      "recovered": "none",
+      "recoveryNote": "Funds not recovered",
+      "affectedProtocols": [],
+      "link": "https://solana.com/news/08-03-2022-solana-foundation-statement"
+    },
+    {
+      "date": "2022-08-30",
+      "protocol": "OptiFi",
+      "amountUsd": 661000,
+      "category": "contract",
+      "rootCause": "Admin accidentally called the program close instruction, funds locked and unrecoverable",
+      "recovered": "none",
+      "recoveryNote": "Funds permanently locked via program self-destruct",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/optifi-rekt/"
+    },
+    {
+      "date": "2022-10-11",
+      "protocol": "Mango Markets",
+      "amountUsd": 114000000,
+      "category": "oracle",
+      "rootCause": "Oracle price manipulation via MNGO spot/perp self-trading; attacker borrowed against inflated collateral and drained treasury",
+      "recovered": "partial",
+      "recoveryNote": "Attacker returned $67M via governance vote; perpetrator later convicted",
+      "affectedProtocols": ["UXD Protocol", "Tulip Protocol"],
+      "link": "https://rekt.news/mango-markets-rekt/"
+    },
+    {
+      "date": "2022-11-02",
+      "protocol": "Solend",
+      "amountUsd": 1260000,
+      "category": "oracle",
+      "rootCause": "USDH oracle price manipulated to liquidate undercollateralised position",
+      "recovered": "full",
+      "recoveryNote": "Bad debt covered by Solend treasury",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/solend-rekt/"
+    },
+    {
+      "date": "2022-12-16",
+      "protocol": "Raydium",
+      "amountUsd": 4400000,
+      "category": "signer",
+      "rootCause": "Admin keypair compromised via trojan, attacker drained liquidity pool fees through privileged instruction",
+      "recovered": "partial",
+      "recoveryNote": "Some recovery via CEX cooperation",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/raydium-rekt/"
+    },
+    {
+      "date": "2023-08-07",
+      "protocol": "Cypher Protocol",
+      "amountUsd": 1040000,
+      "category": "contract",
+      "rootCause": "Flash-loan exploit on SVT perpetuals contract",
+      "recovered": "partial",
+      "recoveryNote": "Partial recovery via bounty negotiation",
+      "affectedProtocols": [],
+      "link": "https://rekt.news/cypher-rekt/"
+    },
+    {
+      "date": "2024-05-16",
+      "protocol": "Pump.fun",
+      "amountUsd": 1900000,
+      "category": "signer",
+      "rootCause": "Ex-employee abused legacy withdraw authority after departure",
+      "recovered": "full",
+      "recoveryNote": "Users fully compensated by Pump.fun",
+      "affectedProtocols": [],
+      "link": "https://x.com/pumpdotfun"
+    },
+    {
+      "date": "2025-04-26",
+      "protocol": "Loopscale",
+      "amountUsd": 5800000,
+      "category": "oracle",
+      "rootCause": "Oracle manipulation on RateX PT token pricing",
+      "recovered": "full",
+      "recoveryNote": "Fully recovered via 10% bounty agreement",
+      "affectedProtocols": [],
+      "link": "https://docs.loopscale.com/resources/audits"
+    },
+    {
+      "date": "2025-08-01",
+      "protocol": "CrediX",
+      "amountUsd": 4500000,
+      "category": "signer",
+      "rootCause": "Admin wallet drained; team disclosed settlement and then went dark off-chain",
+      "recovered": "none",
+      "recoveryNote": "Team did not return; no recovery announced",
+      "affectedProtocols": [],
+      "link": ""
+    },
+    {
+      "date": "2025-10-01",
+      "protocol": "Texture",
+      "amountUsd": 2200000,
+      "category": "contract",
+      "rootCause": "Contract vulnerability exploited in vault logic",
+      "recovered": "partial",
+      "recoveryNote": "$1.98M of $2.2M returned",
+      "affectedProtocols": [],
+      "link": ""
+    },
+    {
+      "date": "2026-01-31",
+      "protocol": "Step Finance",
+      "amountUsd": 27000000,
+      "category": "signer",
+      "rootCause": "Executive device compromise led to admin keys being used to drain treasury",
+      "recovered": "none",
+      "recoveryNote": "Protocol shut down following the incident",
+      "affectedProtocols": [],
+      "link": ""
+    },
+    {
+      "date": "2026-04-01",
+      "protocol": "Drift",
+      "amountUsd": 285000000,
+      "category": "signer",
+      "rootCause": "Multisig signer keys compromised; pre-staged durable nonce transactions executed. State admin transferred to attacker, vault drained",
+      "recovered": "partial",
+      "recoveryNote": "Recovery plan via future trading fees and a Tether-assisted credit facility for Drift; actual amount returned directly to users is phased and not yet fully realised",
+      "affectedProtocols": ["Prime Numbers Fi", "Carrot", "Gauntlet", "Neutral Trade", "Elemental DeFi", "Reflect Money", "Vectis", "Ranger Finance", "Pyra", "Titan", "Loopscale", "PiggyBank", "Lulo", "Fuse Wallet", "Exponent", "Asgard Finance", "xPlace", "Project 0", "Perena", "DiversiFi", "Valeo", "Amp Pay"],
+      "link": "https://x.com/DriftProtocol/status/1907115900000000000"
+    }
+  ]
+}

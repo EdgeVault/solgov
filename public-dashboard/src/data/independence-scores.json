@@ -1,0 +1,80 @@
+{
+  "computedAt": "2026-04-17T14:39:55.789Z",
+  "groups": [
+    {
+      "team": "Jupiter",
+      "context": "live",
+      "note": "Three product multisigs: Perps, Lend, Aggregator",
+      "multisigs": [
+        {
+          "label": "Jupiter Perps",
+          "address": null,
+          "memberCount": 7
+        },
+        {
+          "label": "Jupiter Lend",
+          "address": null,
+          "memberCount": 7
+        },
+        {
+          "label": "Jupiter Agg",
+          "address": null,
+          "memberCount": 8
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 22,
+      "uniqueSigners": 22,
+      "pairwiseOverlap": [
+        {
+          "a": "Jupiter Perps",
+          "b": "Jupiter Lend",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        },
+        {
+          "a": "Jupiter Perps",
+          "b": "Jupiter Agg",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        },
+        {
+          "a": "Jupiter Lend",
+          "b": "Jupiter Agg",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Drift (pre-exploit case study, March 25 to April 1 2026)",
+      "context": "case-study",
+      "note": "2LW6PS (State admin) and BBC5g (upgrade authority for 6 programs) were created on the same day with shared signer sets. This was the structural condition that let one compromise reach two products.",
+      "multisigs": [
+        {
+          "label": "2LW6PS (State admin, 2/5)",
+          "address": "2LW6PSEjp81xSEttWwXDB6Etb1eKdhYPbFEojYbyhx88",
+          "memberCount": 5
+        },
+        {
+          "label": "BBC5g (upgrade auth for 6 programs, 3/5)",
+          "address": "BBC5gSPh71YB2eUXdCqvkmL6kj6YDkUQJpX997qXUt2Q",
+          "memberCount": 5
+        }
+      ],
+      "independenceScore": 0,
+      "independencePct": 0,
+      "totalSignerPositions": 10,
+      "uniqueSigners": 5,
+      "pairwiseOverlap": [
+        {
+          "a": "2LW6PS (State admin, 2/5)",
+          "b": "BBC5g (upgrade auth for 6 programs, 3/5)",
+          "shared": 5,
+          "sharedPctOfMinSet": 100
+        }
+      ]
+    }
+  ]
+}

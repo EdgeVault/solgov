@@ -126,20 +126,31 @@ async function sendTelegram(message: string, severity: Severity = 'MONITOR') {
     return;
   }
   const threadId = TG_THREADS[severity];
-  try {
-    const resp = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: TG_CHAT_ID,
-        text: message,
-        parse_mode: 'HTML',
-        message_thread_id: threadId,
-      }),
-    });
-    if (!resp.ok) console.error('[TG] Send failed:', resp.status, await resp.text());
-  } catch (e: any) {
-    console.error('[TG] Error:', e.message);
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const resp = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TG_CHAT_ID,
+          text: message,
+          parse_mode: 'HTML',
+          message_thread_id: threadId,
+        }),
+      });
+      if (resp.ok) return;
+      const errText = await resp.text();
+      console.error(`[TG] Send failed (attempt ${attempt}): ${resp.status} thread=${threadId}`, errText.slice(0, 200));
+      if (resp.status === 429) {
+        const retryAfter = parseInt(JSON.parse(errText)?.parameters?.retry_after, 10);
+        await sleep((retryAfter > 0 ? retryAfter : 5) * 1000);
+      } else if (attempt === 1) {
+        await sleep(1500);
+      }
+    } catch (e: any) {
+      console.error(`[TG] Error (attempt ${attempt}):`, e.message);
+      if (attempt === 1) await sleep(1500);
+    }
   }
 }
 
@@ -232,9 +243,14 @@ function decodePerms(mask: number): string {
 
 type Severity = 'CRITICAL' | 'HIGH' | 'MONITOR';
 
-function classifyV4Change(name: string, prev: { threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }, now: { threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }): { severity: Severity; changes: string[] } {
-  const changes: string[] = [];
-  let severity: Severity = 'MONITOR';
+interface TypedChange {
+  type: string;
+  detail: string;
+  severity: Severity;
+}
+
+function classifyV4Change(name: string, prev: { threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }, now: { threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }): TypedChange[] {
+  const events: TypedChange[] = [];
 
   const tlLabel = (s: number) => {
     if (s === 0) return 'none';
@@ -244,44 +260,51 @@ function classifyV4Change(name: string, prev: { threshold: number; memberCount: 
   };
 
   if (now.threshold < prev.threshold) {
-    changes.push(`Threshold: ${prev.threshold} → ${now.threshold}`);
-    severity = 'CRITICAL';
+    events.push({ type: 'ThresholdLowered', detail: `Threshold: ${prev.threshold} → ${now.threshold}`, severity: 'CRITICAL' });
   } else if (now.threshold > prev.threshold) {
-    changes.push(`Threshold: ${prev.threshold} → ${now.threshold}`);
+    events.push({ type: 'ThresholdRaised', detail: `Threshold: ${prev.threshold} → ${now.threshold}`, severity: 'HIGH' });
   }
 
-  if (now.memberCount < prev.memberCount) {
-    const removed = prev.memberCount - now.memberCount;
-    changes.push(`Signers: ${prev.memberCount} → ${now.memberCount}`);
-    if (removed >= 3) severity = 'CRITICAL';
-    else if (severity !== 'CRITICAL') severity = 'HIGH';
-  } else if (now.memberCount > prev.memberCount) {
-    changes.push(`Signers: ${prev.memberCount} → ${now.memberCount}`);
+  const added = now.memberKeys.filter(k => !prev.memberKeys.includes(k));
+  const removed = prev.memberKeys.filter(k => !now.memberKeys.includes(k));
+  if (added.length > 0 && removed.length > 0 && added.length === removed.length && now.memberCount === prev.memberCount) {
+    // Intra-tx rotation: members swapped out 1:1 with count unchanged.
+    events.push({ type: 'SignerRotation', detail: `Signer rotation: ${added.length} swapped (total signers unchanged at ${now.memberCount})`, severity: 'HIGH' });
+  } else {
+    if (removed.length > 0) {
+      const sev: Severity = removed.length >= 3 ? 'CRITICAL' : 'HIGH';
+      events.push({ type: 'SignersRemoved', detail: `Total signers: ${prev.memberCount} → ${now.memberCount} (-${removed.length})`, severity: sev });
+    }
+    if (added.length > 0) {
+      events.push({ type: 'SignersAdded', detail: `Total signers: ${prev.memberCount} → ${now.memberCount} (+${added.length})`, severity: 'MONITOR' });
+    }
   }
 
-  if (prev.timeLock > 0 && now.timeLock === 0) {
-    changes.push(`Timelock: ${tlLabel(prev.timeLock)} → none`);
-    severity = 'CRITICAL';
+  if (prev.timeLock === 0 && now.timeLock > 0) {
+    events.push({ type: 'TimelockAdded', detail: `Timelock: none → ${tlLabel(now.timeLock)}`, severity: 'HIGH' });
+  } else if (prev.timeLock > 0 && now.timeLock === 0) {
+    events.push({ type: 'TimelockRemoved', detail: `Timelock: ${tlLabel(prev.timeLock)} → none`, severity: 'CRITICAL' });
   } else if (now.timeLock !== prev.timeLock) {
-    changes.push(`Timelock: ${tlLabel(prev.timeLock)} → ${tlLabel(now.timeLock)}`);
-    if (now.timeLock < prev.timeLock && severity !== 'CRITICAL') severity = 'HIGH';
+    const sev: Severity = now.timeLock < prev.timeLock ? 'HIGH' : 'MONITOR';
+    events.push({ type: 'TimelockChanged', detail: `Timelock: ${tlLabel(prev.timeLock)} → ${tlLabel(now.timeLock)}`, severity: sev });
   }
 
   if (prev.configAuthority !== now.configAuthority) {
     if (now.configAuthority !== 'autonomous') {
-      changes.push(`External admin key on multisig: none → ${now.configAuthority.slice(0, 12)}...`);
-      severity = 'CRITICAL';
+      events.push({ type: 'ExternalAdminKeyAdded', detail: `External admin key on multisig: none → ${now.configAuthority.slice(0, 12)}...`, severity: 'CRITICAL' });
     } else {
-      changes.push(`External admin key on multisig: ${prev.configAuthority.slice(0, 12)}... → none`);
-      if (severity !== 'CRITICAL') severity = 'HIGH';
+      events.push({ type: 'ExternalAdminKeyCleared', detail: `External admin key on multisig: ${prev.configAuthority.slice(0, 12)}... → none`, severity: 'HIGH' });
     }
   }
 
-  if (changes.length >= 2 && (now.threshold < prev.threshold || now.memberCount !== prev.memberCount)) {
-    if (severity !== 'CRITICAL') severity = 'HIGH';
-  }
+  return events;
+}
 
-  return { severity, changes };
+function overallSeverity(events: TypedChange[]): Severity {
+  const rank: Record<Severity, number> = { MONITOR: 0, HIGH: 1, CRITICAL: 2 };
+  let max: Severity = 'MONITOR';
+  for (const e of events) if (rank[e.severity] > rank[max]) max = e.severity;
+  return max;
 }
 
 async function handleV4Change(name: string, address: string, conn: Connection) {
@@ -335,12 +358,18 @@ async function processV4State(name: string, ms: any) {
     }
 
     const now = { threshold, memberCount, timeLock, configAuthority, memberKeys };
-    const { severity, changes } = classifyV4Change(name, prev, now);
+    const typedChanges = classifyV4Change(name, prev, now);
+    const severity = overallSeverity(typedChanges);
+    const changes = typedChanges.map(c => c.detail);
 
-    if (changes.length > 0) {
+    if (typedChanges.length > 0) {
       const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
 
-      logActivity(name, 'ConfigChange', changes.join('; '));
+      // Log one activity entry per typed change so the feed can distinguish
+      // timelock / threshold / rotation / external-key events from one another.
+      for (const c of typedChanges) {
+        logActivity(name, c.type, c.detail);
+      }
 
       const addedSigners = memberKeys.filter((k: string) => !prev.memberKeys.includes(k));
       const removedSigners = prev.memberKeys.filter((k: string) => !memberKeys.includes(k));
@@ -357,24 +386,22 @@ async function processV4State(name: string, ms: any) {
         ? formatAddress(configAuthority, identities[configAuthority])
         : null;
       const changesLabelled = caLabelled
-        ? changes.map(c => c.includes('Config authority SET') ? `Config authority SET to external key: ${caLabelled}` : c)
+        ? changes.map(c => c.startsWith('External admin key on multisig: none') ? `External admin key on multisig: none → ${caLabelled}` : c)
         : changes;
 
       const pub = `<b>${name}</b>\n${changesLabelled.join('\n')}${signerBlock}\n${timestamp} UTC\nsolgov.xyz`;
-      if (severity === 'CRITICAL') {
-        const msg = `🔴 <b>CRITICAL</b>\n\n<b>${name}</b>\n${changesLabelled.join('\n')}${signerBlock}\n📅 ${timestamp} UTC`;
-        console.log(`[CRITICAL] ${name}:`, changes.join(', '));
-        await sendTelegram(msg, 'CRITICAL');
-        await sendPublic(pub);
-      } else if (severity === 'HIGH') {
-        const msg = `🟡 <b>HIGH ALERT</b>\n\n<b>${name}</b>\n${changesLabelled.join('\n')}${signerBlock}\n📅 ${timestamp} UTC`;
-        console.log(`[HIGH] ${name}:`, changes.join(', '));
-        await sendTelegram(msg, 'HIGH');
-        await sendPublic(pub);
-      } else {
-        console.log(`[MONITOR] ${name}:`, changes.join(', '));
-      }
+      const sevHeader = severity === 'CRITICAL' ? '🔴 <b>CRITICAL</b>' : severity === 'HIGH' ? '🟡 <b>HIGH ALERT</b>' : '📋 <b>MONITOR</b>';
+      const alertMsg = `${sevHeader}\n\n<b>${name}</b>\n${changesLabelled.join('\n')}${signerBlock}\n📅 ${timestamp} UTC`;
+      console.log(`[${severity}] ${name}:`, changes.join(', '));
+      await sendTelegram(alertMsg, severity);
+      if (severity === 'CRITICAL' || severity === 'HIGH') await sendPublic(pub);
 
+      await sendToSubscribers({
+        protocol: name,
+        severity,
+        type: 'ConfigChange',
+        message: alertMsg,
+      });
     }
 
     prevState[name] = { threshold, memberCount, timeLock, configAuthority, memberKeys };

@@ -16,7 +16,7 @@
       "HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:03.430Z",
+    "lastChecked": "2026-05-16T08:30:03.633Z",
     "programAuthorities": {
       "Protocol V2": "GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo",
       "Vaults": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
@@ -47,7 +47,7 @@
       "FoSGKYHTLjL5RzAujxSu356SeUE65VJ2j5TH9buUy2Ze": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:09.256Z",
+    "lastChecked": "2026-05-16T08:30:10.296Z",
     "programAuthorities": {
       "Marketplace": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb"
     }
@@ -69,7 +69,7 @@
       "Hg8U22DzhvGHJ34yjkMi8WS82F3VH2EGuV3wiN6byNm3": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:10.127Z",
+    "lastChecked": "2026-05-16T08:30:11.345Z",
     "programAuthorities": {
       "Core": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP"
     },
@@ -79,17 +79,8 @@
         "category": "DEPLOY",
         "severity": "MEDIUM",
         "detail": "Signer deployed or upgraded a program",
-        "detectedAt": "2026-05-08 17:41 BST",
-        "signature": "3amqEbh5XXXWmsE9kd3t",
-        "precedent": "Program deploy or upgrade signed by a multisig signer"
-      },
-      {
-        "signer": "2cVAT3oviEWgaTJkBipmN5KiYpmguzSqJG6hBa4Jfqgj",
-        "category": "DEPLOY",
-        "severity": "MEDIUM",
-        "detail": "Signer deployed or upgraded a program",
-        "detectedAt": "2026-05-07 20:24 BST",
-        "signature": "VYP4ceSttg684V1pauMX",
+        "detectedAt": "2026-05-15 19:06 BST",
+        "signature": "L9vzvJP4WJDvrnrsy674",
         "precedent": "Program deploy or upgrade signed by a multisig signer"
       }
     ]
@@ -107,7 +98,7 @@
       "FnCZoNo6ki4njeBKW6hWdS64gi3zj5j2aAAkhGbb7cBH": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:11.012Z",
+    "lastChecked": "2026-05-16T08:30:12.433Z",
     "programAuthorities": {
       "Jobs": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9"
     }
@@ -135,7 +126,7 @@
       "DvJu3DJEet34pEpGe2i59AyF82EbCL9gu5HxaduJKPZk": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:11.948Z",
+    "lastChecked": "2026-05-16T08:30:13.368Z",
     "programAuthorities": {
       "FlexLend": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs"
     }
@@ -152,8 +143,8 @@
       "BR4ExSPZUMHfWB6kNvYL6AXNbW4NXLzdFnuKs5qSxSR1": "Full",
       "DJNmudJZNtBBrjZzpLkrMdSL8kiZwr7ZLpHEZPL2WaVN": "Full"
     },
-    "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:12.891Z",
+    "timeLock": 86400,
+    "lastChecked": "2026-05-16T08:30:14.428Z",
     "programAuthorities": {
       "Stable Swap": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP"
     }
@@ -185,32 +176,34 @@
       "HXBJWRFGT1DmAJuVdfvMhC9LC3BRVMwAaAKfdmK6hJRe": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:13.835Z"
+    "lastChecked": "2026-05-16T08:30:15.369Z"
   },
   "Loopscale": {
-    "threshold": 3,
+    "threshold": 4,
     "members": [
-      "LUKET3JPqzoCMZNLos4MN6yHUzpX2qsgjen4uhS86u9",
       "LoTy38EiLYg85rWq5okYjNwzQECGbYa6uPcJPj8MHu2",
       "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN",
       "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j",
-      "26Es6MMrHXXBGPoVd5D5VZwepTHPigaSU5iTSd2hmp1m",
-      "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn",
+      "4NJCNincafwMMwXhzK2CgokUJpLxaanZYEPK4avm89jj",
+      "6M7BQ6cChvcS6mpm9zyKKSquawdj1Hf7izXhrutK99HV",
+      "A35RFXLpbadJLA4t4rhhTgcvcKS3z271B71EnUcpLsaZ",
+      "BZGpLwdMAUGAUd7ohr2JQdQU8sboVZfgAHFbfWL58tuC",
       "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs",
       "FmoQf6t1fxNhvzJ7iVyoiue5C8JuhkLxpp6it9jAkkua"
     ],
     "memberPerms": {
-      "LUKET3JPqzoCMZNLos4MN6yHUzpX2qsgjen4uhS86u9": "Propose",
       "LoTy38EiLYg85rWq5okYjNwzQECGbYa6uPcJPj8MHu2": "Full",
       "bs1PuRvB9rBBZkryBjADYvxc2qYh51EVW2fsb1uTiBN": "Full",
       "stnD32KEQkgA7LTVNprUPBWXt86fstt1sdUiwUUJH4j": "Vote",
-      "26Es6MMrHXXBGPoVd5D5VZwepTHPigaSU5iTSd2hmp1m": "Full",
-      "4PvYpgZLarj2dbMEYPuCwaPd7aZ6fvmsZqvDswq4EjUn": "Full",
+      "4NJCNincafwMMwXhzK2CgokUJpLxaanZYEPK4avm89jj": "Full",
+      "6M7BQ6cChvcS6mpm9zyKKSquawdj1Hf7izXhrutK99HV": "Full",
+      "A35RFXLpbadJLA4t4rhhTgcvcKS3z271B71EnUcpLsaZ": "Full",
+      "BZGpLwdMAUGAUd7ohr2JQdQU8sboVZfgAHFbfWL58tuC": "Full",
       "CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs": "Propose",
       "FmoQf6t1fxNhvzJ7iVyoiue5C8JuhkLxpp6it9jAkkua": "Propose"
     },
-    "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:14.190Z"
+    "timeLock": 86400,
+    "lastChecked": "2026-05-16T08:30:15.735Z"
   },
   "Orca": {
     "threshold": 3,
@@ -239,7 +232,7 @@
       "GBHs346biSdbr5CJ7QorBeZg8kvd34JCHf6juxmp6JEa": "Full"
     },
     "timeLock": 86400,
-    "lastChecked": "2026-05-11T22:30:14.545Z"
+    "lastChecked": "2026-05-16T08:30:16.113Z"
   },
   "Kamino": {
     "threshold": 5,
@@ -268,7 +261,7 @@
       "HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj": "Full"
     },
     "timeLock": 43200,
-    "lastChecked": "2026-05-11T22:30:15.266Z"
+    "lastChecked": "2026-05-16T08:30:16.862Z"
   },
   "Jupiter Perps": {
     "threshold": 4,
@@ -291,7 +284,7 @@
       "GGG2JyBtwbPAsYwUQED8GBbj9UMi7NQa3uwN3DmyGNtz": "Full"
     },
     "timeLock": 86400,
-    "lastChecked": "2026-05-11T22:30:15.624Z"
+    "lastChecked": "2026-05-16T08:30:17.243Z"
   },
   "Jupiter Lend": {
     "threshold": 4,
@@ -314,7 +307,7 @@
       "GpvnGqPTq4Ga7k5PgxoBA7Yr6HCnsqeeeb8KhczztdRu": "Full"
     },
     "timeLock": 43200,
-    "lastChecked": "2026-05-11T22:30:15.984Z"
+    "lastChecked": "2026-05-16T08:30:17.620Z"
   },
   "Solstice": {
     "threshold": 3,
@@ -333,7 +326,7 @@
       "GHynRYHV1YcePhhRRKvicCvVqnWvnSPm1GiVj7s34K7r": "Vote"
     },
     "timeLock": 86400,
-    "lastChecked": "2026-05-11T22:30:16.700Z"
+    "lastChecked": "2026-05-16T08:30:18.355Z"
   },
   "Switchboard": {
     "threshold": 3,
@@ -356,7 +349,7 @@
       "EoHK5VNgYisSRDcqSkBPoQTGsGroBnNR4xiWWWo8K3g5": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:17.056Z"
+    "lastChecked": "2026-05-16T08:30:18.721Z"
   },
   "Titan": {
     "threshold": 3,
@@ -381,7 +374,7 @@
       "H93FtQBKFib1nUDchwNLRspgVEYpUw17D4Wo2SsXY5HT": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:17.410Z"
+    "lastChecked": "2026-05-16T08:30:19.089Z"
   },
   "Solayer": {
     "threshold": 3,
@@ -402,7 +395,7 @@
       "GjtMGFA81gyP5FRX5skKmwKRT3VV4LdhCJLexwyM4Hjd": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:17.767Z"
+    "lastChecked": "2026-05-16T08:30:19.456Z"
   },
   "Flash Trade": {
     "threshold": 3,
@@ -425,7 +418,7 @@
       "DUDssoE15XShhrJC7jJE3QhyzL7s4TnYogePVzswdR2R": "Full"
     },
     "timeLock": 3600,
-    "lastChecked": "2026-05-11T22:30:18.130Z"
+    "lastChecked": "2026-05-16T08:30:19.826Z"
   },
   "Wick": {
     "threshold": 3,
@@ -444,7 +437,7 @@
       "9RkMtrs93JspVYaDjm1SWWj6zE3xVP5VN26vEMDAVkAf": "Full"
     },
     "timeLock": 86400,
-    "lastChecked": "2026-05-11T22:30:18.491Z"
+    "lastChecked": "2026-05-16T08:30:20.197Z"
   },
   "Sanctum": {
     "threshold": 6,
@@ -462,7 +455,7 @@
       "CoxYLqf6zUrkTvWfVSHbxdjswrDEaNnciuGtzWniFzu5"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:28.610Z"
+    "lastChecked": "2026-05-16T08:30:31.512Z"
   },
   "Jupiter Agg": {
     "threshold": 4,
@@ -476,7 +469,7 @@
       "GGG2JyBtwbPAsYwUQED8GBbj9UMi7NQa3uwN3DmyGNtz"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:28.968Z"
+    "lastChecked": "2026-05-16T08:30:31.877Z"
   },
   "Raydium": {
     "threshold": 3,
@@ -493,7 +486,27 @@
       "AaUu9okTZ9wUBTSYJ3QhXp7ssxGbabsAbyTJ91orVUUq": "Full"
     },
     "timeLock": 86400,
-    "lastChecked": "2026-05-11T22:30:29.328Z"
+    "lastChecked": "2026-05-16T08:30:32.235Z",
+    "threatAlerts": [
+      {
+        "signer": "7W4mr6bHDgF1euonrraAF8easT5G6tEiRJdyVqNpu6tn",
+        "category": "NONCE",
+        "severity": "MEDIUM",
+        "detail": "Durable nonce activity (nonce: BwptnXLv...): nonce 21d old being advanced",
+        "detectedAt": "2026-05-16 03:24 BST",
+        "signature": "24FZMbQxyKKpXtmzmuhr",
+        "precedent": "Durable nonce activity on a multisig signer"
+      },
+      {
+        "signer": "AaUu9okTZ9wUBTSYJ3QhXp7ssxGbabsAbyTJ91orVUUq",
+        "category": "NONCE",
+        "severity": "MEDIUM",
+        "detail": "Durable nonce activity (nonce: BwptnXLv...): nonce 21d old being advanced",
+        "detectedAt": "2026-05-16 03:47 BST",
+        "signature": "2vNK1fc2itpiGA3Vo9jN",
+        "precedent": "Durable nonce activity on a multisig signer"
+      }
+    ]
   },
   "Tensor": {
     "threshold": 4,
@@ -507,7 +520,7 @@
       "Hhnqp3wuAWsPbnLL6jrHCWkYKcYGSw9VmMCcWVbM7BS8"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:30.042Z"
+    "lastChecked": "2026-05-16T08:30:32.967Z"
   },
   "Phoenix DEX": {
     "threshold": 2,
@@ -517,7 +530,7 @@
       "HDssbweGxefXxnw6y9DzPzX2XGhDYSRPFrekM3hXguJX"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:30.394Z"
+    "lastChecked": "2026-05-16T08:30:33.333Z"
   },
   "Meteora": {
     "threshold": 4,
@@ -531,7 +544,7 @@
       "GaQiRh5oWQjcfBj7kYjp1PH5yYgnWnNPwZD9sgdg2JBd"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:30.753Z"
+    "lastChecked": "2026-05-16T08:30:33.705Z"
   },
   "Parcl": {
     "threshold": 3,
@@ -541,7 +554,7 @@
       "EurgEXfzquakGJ6nJFyFDyLJHsarPrwAZ6CReKvsU1qR"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:31.111Z"
+    "lastChecked": "2026-05-16T08:30:34.075Z"
   },
   "Marinade": {
     "threshold": 6,
@@ -561,14 +574,14 @@
       "5ygHFBRddFh7v4PpqquQu2yeRdxWvN1PhyjyzfENdUVh"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:31.467Z"
+    "lastChecked": "2026-05-16T08:30:34.437Z"
   },
   "Save (Solend)": {
     "threshold": 0,
     "members": [],
     "timeLock": 0,
     "programAuthorities": {},
-    "lastChecked": "2026-05-11T22:30:38.462Z"
+    "lastChecked": "2026-05-16T08:30:41.470Z"
   },
   "Zebec": {
     "threshold": 0,
@@ -577,7 +590,7 @@
     "programAuthorities": {
       "Streaming": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h"
     },
-    "lastChecked": "2026-05-11T22:30:39.121Z"
+    "lastChecked": "2026-05-16T08:30:42.134Z"
   },
   "Pyth": {
     "threshold": 0,
@@ -588,7 +601,7 @@
       "Pull Oracle": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
       "Push Oracle": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT"
     },
-    "lastChecked": "2026-05-11T22:30:39.973Z"
+    "lastChecked": "2026-05-16T08:30:43.044Z"
   },
   "Jito": {
     "threshold": 0,
@@ -599,7 +612,7 @@
       "Restaking": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
       "Steward": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF"
     },
-    "lastChecked": "2026-05-11T22:30:41.764Z"
+    "lastChecked": "2026-05-16T08:30:44.885Z"
   },
   "Onre Finance": {
     "threshold": 3,
@@ -632,7 +645,7 @@
       "J7nrqDcSuL77TPr1Vz7n8RC4VUeN4pXfx6Xx9E4SA59e": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:18.848Z",
+    "lastChecked": "2026-05-16T08:30:20.559Z",
     "programAuthorities": {
       "Core": "FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f"
     }
@@ -668,7 +681,7 @@
       "G1oGhierAFZdUfRyECgCWkSKhim2NsJUUYz1rYWuxqRq": "Propose"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:20.094Z",
+    "lastChecked": "2026-05-16T08:30:21.933Z",
     "programAuthorities": {
       "Futarchy": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
       "Autocrat": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
@@ -694,7 +707,7 @@
       "HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:22.033Z",
+    "lastChecked": "2026-05-16T08:30:24.109Z",
     "programAuthorities": {
       "Entity Manager": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U"
     }
@@ -716,7 +729,7 @@
       "GYQoCNwjj5GjNeuqxLv8E4a8h7NiFPnNT8G5JVsH42cX": "Full"
     },
     "timeLock": 28800,
-    "lastChecked": "2026-05-11T22:30:23.054Z",
+    "lastChecked": "2026-05-16T08:30:25.145Z",
     "programAuthorities": {
       "Vaults": "7p4d84NuXbuDhaAq9H3Yp3vpBSDLQWousp1a4jBVoBgU"
     }
@@ -742,7 +755,7 @@
       "HtyNnjau7fdoHZ3LguboYbg9PUr2QnHFLA1yufA1pG2f": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:23.873Z",
+    "lastChecked": "2026-05-16T08:30:26.160Z",
     "programAuthorities": {
       "AMM": "7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK"
     }
@@ -760,7 +773,7 @@
       "EWJFBLoybGfEphK1bf2EyDVDEUmSM6TekkQSGeBHyFU7": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:24.666Z",
+    "lastChecked": "2026-05-16T08:30:27.088Z",
     "programAuthorities": {
       "Main": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
       "Settings": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x"
@@ -773,7 +786,7 @@
     "programAuthorities": {
       "AMM": "UfSM2ZFRMeurGs1gqrMREjZDyzPweUY9Wt67BMVeo8j"
     },
-    "lastChecked": "2026-05-11T22:30:25.961Z"
+    "lastChecked": "2026-05-16T08:30:28.756Z"
   },
   "HumidiFi": {
     "threshold": 0,
@@ -782,7 +795,7 @@
     "programAuthorities": {
       "AMM": "4p1FfVusdT83PxejTPLEz6ZQ4keN9LVEkKhzSt6PJ5zw"
     },
-    "lastChecked": "2026-05-11T22:30:26.816Z"
+    "lastChecked": "2026-05-16T08:30:29.645Z"
   },
   "Photon": {
     "threshold": 0,
@@ -791,7 +804,7 @@
     "programAuthorities": {
       "Trading Bot": "9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6"
     },
-    "lastChecked": "2026-05-11T22:30:27.770Z"
+    "lastChecked": "2026-05-16T08:30:30.494Z"
   },
   "SPL Stake Pool": {
     "threshold": 6,
@@ -808,7 +821,7 @@
       "ChSAh3XXTxpp5n2EmgSCm6vVvVPoD1L9VrK3mcQkYz7m"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:31.826Z"
+    "lastChecked": "2026-05-16T08:30:34.810Z"
   },
   "LayerZero OFT": {
     "threshold": 1,
@@ -821,7 +834,7 @@
       "FW3mAwFdoQoCEKsk3EAoFeZHFPJGFkFieq866yXVnDNx": "Propose"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:32.179Z",
+    "lastChecked": "2026-05-16T08:30:35.176Z",
     "programAuthorities": {
       "OFT": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31"
     }
@@ -843,7 +856,7 @@
       "H2ayWzPpVn6hux2Qmat7oDVcReJwZu31856V2CmNUj3i": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:33.099Z",
+    "lastChecked": "2026-05-16T08:30:36.075Z",
     "programAuthorities": {
       "Solv Protocol": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM"
     }
@@ -869,7 +882,7 @@
       "ExAHc3u2KHopmziWyyULWobZ2EAgymEmqQR5fo5T8baM": "Full"
     },
     "timeLock": 600,
-    "lastChecked": "2026-05-11T22:30:34.053Z",
+    "lastChecked": "2026-05-16T08:30:37.038Z",
     "programAuthorities": {
       "Core": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA"
     }
@@ -889,7 +902,7 @@
       "HC92UzBW5ENtdQ5DSHxZhuSLGchftNfxmdxD1ooj7JiV": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:35.223Z",
+    "lastChecked": "2026-05-16T08:30:38.166Z",
     "programAuthorities": {
       "Ore V3": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV"
     }
@@ -907,7 +920,7 @@
       "Ckw8hHnP2ABcndEQymJ37BENt3gpw6ALwH3wMpYpjXvk": "Full"
     },
     "timeLock": 3600,
-    "lastChecked": "2026-05-11T22:30:36.097Z"
+    "lastChecked": "2026-05-16T08:30:39.093Z"
   },
   "Carrot": {
     "threshold": 2,
@@ -922,7 +935,7 @@
       "Hiunn1XooeR2XNSHExYTzAh5xBynBG27kfnzUfaMXfjs": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:36.450Z",
+    "lastChecked": "2026-05-16T08:30:39.463Z",
     "programAuthorities": {
       "Carrot": "3eUEKYy7bPqtZ3KyUvCgpXV55v8TfN4xE85NickX6SUM"
     }
@@ -948,7 +961,7 @@
       "ESU3Nb2Xp1YEsKdzVCipqQ1wJHTUgTGDYncwhrUxKKRk": "Propose"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:37.525Z",
+    "lastChecked": "2026-05-16T08:30:40.497Z",
     "programAuthorities": {
       "DefiTuna": "FWFrrwQ3kd91FEBD17paLUNmWwCYwpxg9bQCXGAcq7jx"
     },
@@ -958,8 +971,8 @@
         "category": "DEPLOY",
         "severity": "MEDIUM",
         "detail": "Signer deployed or upgraded a program",
-        "detectedAt": "2026-05-04 18:28 BST",
-        "signature": "1gzQDodtMCYU6FF9cDY7",
+        "detectedAt": "2026-05-15 17:25 BST",
+        "signature": "5b6DG41zaDMNsGmRT2mk",
         "precedent": "Program deploy or upgrade signed by a multisig signer"
       },
       {
@@ -967,14 +980,14 @@
         "category": "DEPLOY",
         "severity": "MEDIUM",
         "detail": "Signer deployed or upgraded a program",
-        "detectedAt": "2026-05-04 16:20 BST",
-        "signature": "4ALgyoeRkKTcviwnhdcB",
+        "detectedAt": "2026-05-04 18:28 BST",
+        "signature": "1gzQDodtMCYU6FF9cDY7",
         "precedent": "Program deploy or upgrade signed by a multisig signer"
       }
     ]
   },
   "_integrity": {
-    "scannedAt": "2026-05-11T03:15:12.227Z",
+    "scannedAt": "2026-05-16T03:15:11.252Z",
     "dvnMultisigs": [
       {
         "name": "LayerZero Labs",
@@ -2469,7 +2482,7 @@
       "J7nrqDcSuL77TPr1Vz7n8RC4VUeN4pXfx6Xx9E4SA59e": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:19.735Z",
+    "lastChecked": "2026-05-16T08:30:21.565Z",
     "programAuthorities": {}
   },
   "Project 0": {
@@ -2509,7 +2522,7 @@
       "FGGC4aPUuWip2CXM8WL4aeefJqmPrh6uNr6NLKtBJaMN": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:14.907Z"
+    "lastChecked": "2026-05-16T08:30:16.499Z"
   },
   "Huma Finance": {
     "threshold": 4,
@@ -2534,7 +2547,7 @@
       "G1AonKZArhAC51Mp3uhJ3Yk1kRVsEwbg9RGTrUoqEPRm": "Full"
     },
     "timeLock": 43200,
-    "lastChecked": "2026-05-11T22:30:16.342Z"
+    "lastChecked": "2026-05-16T08:30:17.985Z"
   },
   "Raydium (treasury)": {
     "threshold": 2,
@@ -2544,7 +2557,7 @@
       "Cth8ZMqNPTrUhKuLJdkK6tHt5hfPoRKzn29FqMtrK7cf"
     ],
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:29.689Z"
+    "lastChecked": "2026-05-16T08:30:32.600Z"
   },
   "Pumpfun + PumpSwap": {
     "threshold": 3,
@@ -2561,7 +2574,7 @@
       "7zc8kzBr5wbsQKxYYv9uCMgfcW5zjxLEopvmuf3ig6iw": "Full"
     },
     "timeLock": 0,
-    "lastChecked": "2026-05-11T22:30:08.057Z",
+    "lastChecked": "2026-05-16T08:30:09.041Z",
     "programAuthorities": {
       "Bonding Curve": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8"
     },
@@ -2571,8 +2584,8 @@
         "category": "DEPLOY",
         "severity": "MEDIUM",
         "detail": "Signer deployed or upgraded a program",
-        "detectedAt": "2026-05-07 17:32 BST",
-        "signature": "2jr1mkMQUUdvgsx8TWTc",
+        "detectedAt": "2026-05-15 10:56 BST",
+        "signature": "37B3gvQ6fT43D8TqKRnC",
         "precedent": "Program deploy or upgrade signed by a multisig signer"
       }
     ]
@@ -2591,7 +2604,7 @@
     },
     "timeLock": 0,
     "configAuthority": "autonomous",
-    "lastChecked": "2026-05-11T21:50:24.076Z"
+    "lastChecked": "2026-05-15T22:56:09.609Z"
   },
   "_activityLog": [
     {
@@ -4770,7 +4783,315 @@
       "protocol": "BisonFi Program",
       "type": "ProgramUpgrade",
       "detail": "Program upgrade (program BiSoNHVpsVZW...)"
+    },
+    {
+      "date": "2026-05-12",
+      "timestamp": "2026-05-12T07:45:03.943Z",
+      "protocol": "Kamino (kLend)",
+      "type": "ProgramUpgrade",
+      "detail": "Program KLend2g3cP87... upgraded at 7:00 UTC"
+    },
+    {
+      "date": "2026-05-12",
+      "timestamp": "2026-05-12T18:50:15.823Z",
+      "protocol": "Exponent (Core)",
+      "type": "ProgramUpgrade",
+      "detail": "Program ExponentnaRg... upgraded at 18:00 UTC"
+    },
+    {
+      "date": "2026-05-12",
+      "timestamp": "2026-05-12T19:01:15.519Z",
+      "protocol": "HumidiFi (AMM)",
+      "type": "ProgramUpgrade",
+      "detail": "Program 9H6tua7jkLhd... upgraded at 19:00 UTC"
+    },
+    {
+      "date": "2026-05-12",
+      "timestamp": "2026-05-12T19:01:27.564Z",
+      "protocol": "Unknown",
+      "type": "ProgramUpgrade",
+      "detail": "Program upgrade (program 7bsaqMWhdGFz...)"
+    },
+    {
+      "date": "2026-05-13",
+      "timestamp": "2026-05-13T03:01:19.019Z",
+      "protocol": "Meteora",
+      "type": "VaultTx",
+      "detail": "Account data changed"
+    },
+    {
+      "date": "2026-05-13",
+      "timestamp": "2026-05-13T03:01:20.843Z",
+      "protocol": "Meteora (DLMM)",
+      "type": "ProgramUpgrade",
+      "detail": "Program LBUZKhRxPF3X... upgraded at 3:00 UTC"
+    },
+    {
+      "date": "2026-05-13",
+      "timestamp": "2026-05-13T06:00:58.874Z",
+      "protocol": "Exponent",
+      "type": "ProgramUpgrade",
+      "detail": "Core upgraded: 2026-05-12 19:50 BST"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T04:51:31.024Z",
+      "protocol": "Pumpfun + PumpSwap (Bonding Curve)",
+      "type": "ProgramUpgrade",
+      "detail": "Program 6EF8rrecthR5... upgraded at 4:00 UTC"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T05:13:15.474Z",
+      "protocol": "Pumpfun + PumpSwap (PumpSwap)",
+      "type": "ProgramUpgrade",
+      "detail": "Program pAMMBay6oceH... upgraded at 5:00 UTC"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T06:00:33.034Z",
+      "protocol": "Pumpfun + PumpSwap",
+      "type": "ProgramUpgrade",
+      "detail": "Bonding Curve upgraded: 2026-05-14 05:51 BST"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T06:28:43.567Z",
+      "protocol": "Raydium (treasury)",
+      "type": "VaultTx",
+      "detail": "Account data changed"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T06:28:47.448Z",
+      "protocol": "Raydium",
+      "type": "ProposalCreated",
+      "detail": "Proposal created"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T06:28:51.947Z",
+      "protocol": "Raydium",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T07:08:52.477Z",
+      "protocol": "Raydium (treasury)",
+      "type": "VaultTx",
+      "detail": "Account data changed"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T07:08:52.808Z",
+      "protocol": "Raydium",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T09:32:40.480Z",
+      "protocol": "Meteora",
+      "type": "VaultTx",
+      "detail": "Account data changed"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T09:32:44.472Z",
+      "protocol": "Meteora",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T09:47:13.764Z",
+      "protocol": "Kamino (kLend)",
+      "type": "ProgramUpgrade",
+      "detail": "Program KLend2g3cP87... upgraded at 9:00 UTC"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T10:03:39.122Z",
+      "protocol": "Helium (Omnix Admin)",
+      "type": "ProgramUpgrade",
+      "detail": "Program omnixgS8fnqH... upgraded at 10:00 UTC"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T16:14:48.611Z",
+      "protocol": "Meteora",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T16:43:07.653Z",
+      "protocol": "Stabble",
+      "type": "ConfigChange",
+      "detail": "Timelock: none → 24h"
+    },
+    {
+      "date": "2026-05-14",
+      "timestamp": "2026-05-14T18:35:02.220Z",
+      "protocol": "Meteora",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T00:59:39.626Z",
+      "protocol": "Meteora",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T04:16:57.871Z",
+      "protocol": "Meteora",
+      "type": "VaultTx",
+      "detail": "Account data changed"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T04:16:59.713Z",
+      "protocol": "Meteora (DLMM)",
+      "type": "ProgramUpgrade",
+      "detail": "Program LBUZKhRxPF3X... upgraded at 4:00 UTC"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T09:14:13.921Z",
+      "protocol": "Jupiter Agg",
+      "type": "VaultTx",
+      "detail": "Account data changed"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T09:14:19.358Z",
+      "protocol": "Jupiter Agg",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T09:46:56.432Z",
+      "protocol": "Jupiter Agg",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T09:56:38.096Z",
+      "protocol": "Pumpfun + PumpSwap (PumpSwap)",
+      "type": "ProgramUpgrade",
+      "detail": "Program pAMMBay6oceH... upgraded at 9:00 UTC"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T11:08:15.134Z",
+      "protocol": "Jupiter Agg",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T14:14:12.871Z",
+      "protocol": "Jupiter Agg",
+      "type": "Approval",
+      "detail": "Proposal approved"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T14:53:11.322Z",
+      "protocol": "Jupiter Agg",
+      "type": "VaultTx",
+      "detail": "Account data changed"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T14:53:12.831Z",
+      "protocol": "Jupiter Agg (Aggregator V6)",
+      "type": "ProgramUpgrade",
+      "detail": "Program JUP6LkbZbjS1... upgraded at 14:00 UTC"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T16:20:46.664Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Signers: 8 → 7"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T16:22:29.841Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Signers: 7 → 8"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T16:25:50.471Z",
+      "protocol": "DefiTuna (DefiTuna)",
+      "type": "ProgramUpgrade",
+      "detail": "Program tuna4uSQZncN... upgraded at 16:00 UTC"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T16:28:27.559Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Signers: 8 → 7"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T16:36:50.970Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Signers: 7 → 8"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T17:43:53.039Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Signers: 8 → 7"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T18:09:32.174Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Signers: 7 → 8"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T18:41:09.995Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Signers: 8 → 9"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T18:42:49.058Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Threshold: 3 → 4"
+    },
+    {
+      "date": "2026-05-15",
+      "timestamp": "2026-05-15T18:45:46.394Z",
+      "protocol": "Loopscale",
+      "type": "ConfigChange",
+      "detail": "Timelock: none → 24h"
+    },
+    {
+      "date": "2026-05-16",
+      "timestamp": "2026-05-16T06:04:24.279Z",
+      "protocol": "DefiTuna",
+      "type": "ProgramUpgrade",
+      "detail": "DefiTuna upgraded: 2026-05-15 17:25 BST"
     }
   ],
-  "_snapshotTakenAt": "2026-05-11T22:53:21.413Z"
+  "_snapshotTakenAt": "2026-05-16T08:31:29.129Z"
 }

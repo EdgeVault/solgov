@@ -232,7 +232,10 @@ export function GovernanceCharts({ protocols, liveIntegrity, liveActivity }: { p
   const data = useMemo(() => CHARTS.map(c => {
     const current = c.computeCurrent(protocols);
     const denominator = c.v4Only ? v4Count : total;
-    const series = seriesFor(c.key, liveIntegrity);
+    const histSeries = seriesFor(c.key, liveIntegrity);
+    // Append a live "now" point so the chart's right edge reflects current
+    // on-chain state, not whatever was last in the static metric history file.
+    const series = [...histSeries, { t: Date.now(), v: current }];
     return { ...c, current, denominator, series };
   }), [protocols, v4Count, total, liveIntegrity]);
 

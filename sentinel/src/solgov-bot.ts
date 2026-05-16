@@ -14,6 +14,7 @@ import {
   Severity,
   EventType,
 } from './subscriptions';
+import { readActivityLog } from './activity-log';
 import { nameMatches } from './llm-tools';
 import { addTracked, verifySquadsMultisig, listTracked, MAX_TRACKED } from './user-tracked-multisigs';
 import { Connection } from '@solana/web3.js';
@@ -497,10 +498,13 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
     const protocolName = Object.keys(state).find(k => !k.startsWith('_') && nameMatches(k, protocol));
     const protocolState = protocolName ? state[protocolName] : null;
 
+    let activity: any[] = readActivityLog();
     const feedPath = path.join(__dirname, '..', '..', 'public-dashboard', 'src', 'data', 'activity-feed.json');
-    let activity: any[] = [];
     if (fs.existsSync(feedPath)) {
-      try { activity = JSON.parse(fs.readFileSync(feedPath, 'utf-8')); } catch {}
+      try {
+        const cron = JSON.parse(fs.readFileSync(feedPath, 'utf-8'));
+        if (Array.isArray(cron)) activity = activity.concat(cron);
+      } catch {}
     }
     if (state._activityLog && Array.isArray(state._activityLog)) {
       activity = activity.concat(state._activityLog);

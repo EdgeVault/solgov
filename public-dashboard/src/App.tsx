@@ -81,7 +81,28 @@ const ACTIVITY_TYPE_LABELS: Record<string, string> = {
   DVNConfigChange: 'DVN config change',
   OFTRouteChange: 'OFT route change',
   IntegrityChange: 'Integrity change',
+  TimelockAdded: 'Timelock added',
+  TimelockRemoved: 'Timelock removed',
+  TimelockChanged: 'Timelock changed',
+  ThresholdRaised: 'Threshold raised',
+  ThresholdLowered: 'Threshold lowered',
+  SignersAdded: 'Signers added',
+  SignersRemoved: 'Signers removed',
+  SignerRotation: 'Signer rotation',
+  ExternalAdminKeyAdded: 'External admin key set',
+  ExternalAdminKeyCleared: 'External admin key cleared',
 };
+
+// Governance-change event types where the detail string is more informative
+// than the generic label (e.g. "Signers: 8 → 7"). cleanLiveActivity surfaces
+// detail for these so the feed shows what actually changed, not just the kind.
+const GOV_CHANGE_TYPES: Set<string> = new Set([
+  'ConfigChange',
+  'TimelockAdded', 'TimelockRemoved', 'TimelockChanged',
+  'ThresholdRaised', 'ThresholdLowered',
+  'SignersAdded', 'SignersRemoved', 'SignerRotation',
+  'ExternalAdminKeyAdded', 'ExternalAdminKeyCleared',
+]);
 
 function canonProtoName(raw: string): string {
   let s = raw.replace(/\s*\([^)]*\)\s*$/, '').trim();
@@ -103,7 +124,9 @@ function cleanLiveActivity(raw: { date: string; protocol: string; type: string; 
     if (e.type === 'Watching') continue;
     const proto = canonProtoName(e.protocol);
     if ((e.type === 'VaultTx' || e.type === 'ProposalCreated') && decisionKeys.has(`${e.date}|${proto}`)) continue;
-    const label = ACTIVITY_TYPE_LABELS[e.type] || e.type;
+    let label = ACTIVITY_TYPE_LABELS[e.type] || e.type;
+    // Governance-change events carry a specific detail string ("Timelock: none -> 24h", "Threshold: 2 -> 3") - surface it over the generic label so the feed shows exactly what changed.
+    if (GOV_CHANGE_TYPES.has(e.type) && e.detail) label = e.detail;
     const key = `${e.date}|${proto}|${label}`;
     if (seen.has(key)) continue;
     seen.add(key);
@@ -425,7 +448,18 @@ function App() {
 
               {(() => {
                 const THIRTY_DAYS = 30 * 86400 * 1000;
+                // Routine-ops types are surfaced in the full GovWatch feed,
+                // not on the homepage Live Activity panel which focuses on
+                // governance-health events (timelock, threshold, signer,
+                // configAuthority, authority-key changes).
+                const LIVE_ACTIVITY_NOISE = new Set([
+                  'ProgramUpgrade', 'VaultTx', 'AuthorityActivity',
+                  'Approval', 'Rejection', 'Cancellation',
+                  'ProposalCreated', 'ProposalPending',
+                  'GovernanceActivity', 'SpendingLimit',
+                ]);
                 const recentEvents = cleanLiveActivity(liveActivity || [])
+                  .filter(e => !LIVE_ACTIVITY_NOISE.has(e.rawType))
                   .filter(e => {
                     const ts = Date.parse(e.timestamp || e.date);
                     return !isNaN(ts) && Date.now() - ts < THIRTY_DAYS;
@@ -665,9 +699,9 @@ function App() {
                         <span className="text-gray-500">-</span>
                       ) : (
                         <span className="font-mono">
-                          <span className="text-gray-300">{p.threshold}/{p.activeVoters > 0 ? p.activeVoters : p.totalMembers}</span>
+                          <span className="text-gray-300">{p.threshold}/{p.totalMembers}</span>
                           {p.activeVoters > 0 && p.activeVoters !== p.totalMembers && (
-                            <span className="text-[10px] text-gray-600 ml-1">({p.totalMembers} total)</span>
+                            <span className="text-[10px] text-gray-600 ml-1">({p.activeVoters} voting)</span>
                           )}
                         </span>
                       )}

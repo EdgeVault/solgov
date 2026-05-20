@@ -703,9 +703,9 @@ function App() {
                         <span className="text-gray-500">-</span>
                       ) : (
                         <span className="font-mono">
-                          <span className="text-gray-300">{p.threshold}/{p.totalMembers}</span>
+                          <span className="text-gray-300">{p.threshold}/{p.activeVoters > 0 ? p.activeVoters : p.totalMembers}</span>
                           {p.activeVoters > 0 && p.activeVoters !== p.totalMembers && (
-                            <span className="text-[10px] text-gray-600 ml-1">({p.activeVoters} voting)</span>
+                            <span className="text-[10px] text-gray-600 ml-1">({p.totalMembers} total)</span>
                           )}
                         </span>
                       )}

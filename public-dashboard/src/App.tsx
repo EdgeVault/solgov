@@ -197,6 +197,10 @@ export const LOGO_FILENAMES: Record<string, string> = {
   'Carrot': 'carrot',
   'DefiTuna': 'tuna',
   'BULK': 'bulk.jpg',
+  'Phoenix Eternal': 'phoenix',
+  'Adrena': 'adrena.jpg',
+  'Bullet': 'bullet.jpg',
+  'Bulk': 'bulktrade.jpg',
   'Project 0': 'project0',
   'HawkFi': 'hawkfi',
   'Perena': 'perena',
@@ -412,7 +416,7 @@ function App() {
                 <h1 className="text-3xl md:text-5xl font-semibold text-white tracking-tight leading-none">solgov</h1>
                 <p className="mt-3 text-[14px] md:text-[15px] text-gray-400 leading-relaxed">
                   Audits inspect code. Transaction monitors fire on on-chain activity.
-                  {' '}<span className="text-white">solgov reads the governance setup itself</span>, across {STATS.total} Solana protocols.
+                  {' '}<span className="text-white">solgov reads the governance setup itself</span>, across 50+ Solana protocols.
                 </p>
                 <p className="mt-3 text-[12px] md:text-[13px] text-gray-500 leading-relaxed">
                   Continuous reads on every threshold, signer, timelock, config authority and program upgrade. Nine pattern detection rules tuned to the early warning signs in multisig setups, giving teams time to fix gaps and users a clear view of what they are trusting.
@@ -732,6 +736,11 @@ function App() {
                     <td className="px-3 py-2 text-xs text-gray-400 text-center">{p.upgradesLast30d}</td>
                     <td className="px-3 py-2 text-center text-xs">
                       {(() => {
+                        if (p.version === 'Appchain') return (
+                          <Tooltip text="Appchain architecture. Governance multisig not yet on Solana mainnet, or address not disclosed. Comparison to Squads best practices is not applicable until configuration is on-chain.">
+                            <span className="text-gray-600 cursor-help">N/A<InfoIcon /></span>
+                          </Tooltip>
+                        );
                         const effectiveTotal = p.activeVoters > 0 ? p.activeVoters : p.totalMembers;
                         const pct = effectiveTotal > 0 ? p.threshold / effectiveTotal : 0;
                         const ratioText = `${p.threshold}/${effectiveTotal} (${Math.round(pct*100)}%)`;
@@ -758,7 +767,7 @@ function App() {
                       })()}
                     </td>
                     <td className="px-3 py-2 text-center text-xs">
-                      {p.hasRoleSeparation === null || p.version === 'Single Signer' || p.version === 'Realms DAO' || p.version === 'Wormhole' || p.version === 'Immutable' ? (
+                      {p.hasRoleSeparation === null || p.version === 'Single Signer' || p.version === 'Realms DAO' || p.version === 'Wormhole' || p.version === 'Immutable' || p.version === 'Appchain' ? (
                         <span className="text-gray-600">N/A</span>
                       ) : p.hasRoleSeparation && (p.threshold ?? 0) >= 2 ? (
                         <span className="text-white">Separated</span>
@@ -776,6 +785,11 @@ function App() {
                         const thresholdOk = p.threshold >= 4 && pctThreshold >= 0.67;
                         const needsFix = (!p.hasTimelock && p.timelockSeconds !== -1) || !thresholdOk || p.hasRoleSeparation === false;
                         if (p.version === 'Immutable') return <span className="text-gray-600">N/A</span>;
+                        if (p.version === 'Appchain') return (
+                          <Tooltip text="Appchain architecture. Most logic lives at the rollup or executor layer, not on Solana mainnet. Governance address pending or not applicable until mainnet configuration is published.">
+                            <span className="text-gray-500 whitespace-nowrap">Appchain<InfoIcon /></span>
+                          </Tooltip>
+                        );
                         if (p.version === 'Wormhole') return (
                           <Tooltip text="Wormhole guardian consensus, 13 of 19 independent operators must agree. Different security model.">
                             <span className="text-gray-500 whitespace-nowrap">Different model<InfoIcon /></span>
@@ -863,13 +877,13 @@ function App() {
 
                             <h4 className="font-bold text-white mt-4 mb-2">On-Chain Addresses</h4>
                             <p><span className="text-gray-500">Multisig:</span></p>
-                            <p className="font-mono text-[11px] text-gray-400 break-all">
-                              {p.multisigAddress.length === 44 || p.multisigAddress.length === 43 ? (
+                            {p.multisigAddress.length === 44 || p.multisigAddress.length === 43 ? (
+                              <p className="font-mono text-[11px] text-gray-400 break-all">
                                 <a href={`https://solscan.io/account/${p.multisigAddress}`} target="_blank" rel="noopener" className="hover:text-white underline">{p.multisigAddress}</a>
-                              ) : (
-                                <span>{p.multisigAddress}</span>
-                              )}
-                            </p>
+                              </p>
+                            ) : (
+                              <p className="text-[12px] text-gray-400">{p.multisigAddress}</p>
+                            )}
                             <p className="mt-2">
                               <span className="text-gray-500">Authority:</span>
                               {p.authorityRole && (
@@ -886,17 +900,17 @@ function App() {
                                 </span>
                               )}
                             </p>
-                            <p className="font-mono text-[11px] text-gray-400 break-all">
-                              {p.authorityAddress !== 'N/A' && !p.authorityAddress.startsWith('From') ? (
-                                p.version === 'Squads V4' ? (
+                            {p.authorityAddress.length === 44 || p.authorityAddress.length === 43 ? (
+                              <p className="font-mono text-[11px] text-gray-400 break-all">
+                                {p.version === 'Squads V4' ? (
                                   <a href={`https://app.squads.so/squads/${p.authorityAddress}/home`} target="_blank" rel="noopener" className="hover:text-white underline">{p.authorityAddress}</a>
                                 ) : (
                                   <a href={`https://solscan.io/account/${p.authorityAddress}`} target="_blank" rel="noopener" className="hover:text-white underline">{p.authorityAddress}</a>
-                                )
-                              ) : (
-                                <span>{p.authorityAddress}</span>
-                              )}
-                            </p>
+                                )}
+                              </p>
+                            ) : (
+                              <p className="text-[12px] text-gray-400">{p.authorityAddress}</p>
+                            )}
                             {p.authorityRoleNote && (
                               <p className="text-[10px] text-gray-500 mt-1">{p.authorityRoleNote}</p>
                             )}

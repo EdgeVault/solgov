@@ -578,6 +578,38 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     description: 'Yield vaults and lending. $11M TVL. Squads V4 multisig (2/3, no timelock). Lost $8.4M in Drift exploit.',
     oracles: [], collateral: [], routing: [], settlement: [],
   },
+  'Phoenix Eternal': {
+    name: 'Phoenix Eternal',
+    description: 'On-chain perpetuals exchange by Ellipsis Labs (the Phoenix CLOB team). Currently in private beta. Squads V4 3/6, no timelock. Same multisig also upgrades a beta contract used for testing pre-production upgrades.',
+    oracles: [],
+    collateral: [],
+    routing: [],
+    settlement: [],
+  },
+  'Adrena': {
+    name: 'Adrena',
+    description: 'On-chain perpetuals exchange governed by ADX token holders via SPL Governance (Realms DAO). 1 ADX = 1 vote, must be staked, duration-lock multipliers. Proposal threshold, voting period, quorum and approval thresholds are not disclosed in public documentation.',
+    oracles: [],
+    collateral: [],
+    routing: [],
+    settlement: [],
+  },
+  'Bullet': {
+    name: 'Bullet',
+    description: 'Solana network extension (appchain), successor to Zeta Markets. Trading and settlement live at the rollup layer rather than on Solana mainnet. Hyperlane bridge currently in audit; no mainnet program deployed yet to scan governance on.',
+    oracles: [],
+    collateral: [],
+    routing: [],
+    settlement: [],
+  },
+  'Bulk': {
+    name: 'Bulk',
+    description: 'Perpetuals exchange built on a custom executor. Team has confirmed a 4-of-7 multisig with time locks is being set up for governance; address pending disclosure. Multisig type (Squads, custom, or other) not yet specified by the team. Documentation also describes a separate user-facing multisig primitive inside the executor for institutional fund-admin use cases.',
+    oracles: [],
+    collateral: [],
+    routing: [],
+    settlement: [],
+  },
 };
 
 export const EXPOSURE_PROTOCOLS = Object.keys(EXPOSURES);

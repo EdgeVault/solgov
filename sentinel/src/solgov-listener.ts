@@ -75,6 +75,7 @@ const WATCH_LIST: { name: string; address: string; type: 'v4' | 'v3' | 'serum' |
   { name: 'PYUSD freeze authority', address: '2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk', type: 'authority' },
 
   { name: 'deBridge (governance multisig)', address: 'FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap', type: 'v4' },
+  { name: 'Phoenix Eternal', address: 'Eq2cke33VYoMpunvbMdeCi44PLX7RLzttgFibvvUjvpc', type: 'v4' },
 ];
 
 type ProgramRole = 'holds-funds' | 'routes-funds' | 'peripheral';

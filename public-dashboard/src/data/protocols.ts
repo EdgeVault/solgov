@@ -1,4 +1,4 @@
-// This file is the canonical source of truth for all 50 tracked Solana DeFi protocols. It defines every protocol's governance configuration, multisig details, program authorities, timelocks, audits, and insurance disclosures used by the dashboard and sentinel.
+// This file is the canonical source of truth for all 50+ tracked Solana DeFi protocols. It defines every protocol's governance configuration, multisig details, program authorities, timelocks, audits, and insurance disclosures used by the dashboard and sentinel.
 
 export interface Member {
   key: string;
@@ -25,7 +25,7 @@ export interface Protocol {
   name: string;
   tvl: string;
   category: 'DEX' | 'Lending' | 'Liquid Staking' | 'Perps' | 'Aggregator' | 'Oracle' | 'NFT' | 'DePIN' | 'Yield' | 'Stablecoin' | 'Infrastructure' | 'PayFi' | 'Governance' | 'Other';
-  version: 'Squads V4' | 'Squads V3' | 'Serum Multisig' | 'Wormhole' | 'Immutable' | 'Realms DAO' | 'Single Signer';
+  version: 'Squads V4' | 'Squads V3' | 'Serum Multisig' | 'Wormhole' | 'Immutable' | 'Realms DAO' | 'Single Signer' | 'Appchain';
   threshold: number;
   totalMembers: number;
   activeVoters: number;
@@ -2509,6 +2509,181 @@ insuranceFund: {
       sourceUrl: null,
     },
   },
+  {
+    name: 'Phoenix Eternal',
+    tvl: 'Pre-launch',
+    category: 'Perps',
+    version: 'Squads V4',
+    threshold: 3,
+    totalMembers: 6,
+    activeVoters: 6,
+    timelockSeconds: 0,
+    timelockLabel: 'None',
+    canAddTimelock: true,
+    meetsMinThreshold: false,
+    hasTimelock: false,
+    multisigAddress: 'Eq2cke33VYoMpunvbMdeCi44PLX7RLzttgFibvvUjvpc',
+    authorityAddress: 'GPgADQrhzGoUgLqxsZMKvSpwcLaJFVTq6gEixKhmcwpm',
+    lastUpgrade: '2026-05-19',
+    upgradesLast30d: 9,
+    hasRoleSeparation: false,
+    members: [
+      { key: '57BffiGLUo9rUwAKVEGNruetzXMms41ycriH7Pn2cbpt', role: 'Full' },
+      { key: '5mvmuUfHCEYRJqb9ogwKrDT7XJMqvbjmeAwyMHxAeEWU', role: 'Full' },
+      { key: '6BFp9EY4CUUfH3v9MPgAxuqnFvFEN96EUUQRYnrG8Zg5', role: 'Full' },
+      { key: 'DLAjkp9yNEmuSzCX3EmnX1X7AWcwZFtrbLcWba2Ehe1Q', role: 'Full' },
+      { key: 'EJ326n22QeFgB7NWhRnk9wsf6V3MZ2anq9EVvkCtDTzZ', role: 'Full' },
+      { key: 'EfmQ37LAZ8KdRaaGHeNbDQnreoaEzCcCFRUpUZf7uoFC', role: 'Full' },
+    ],
+    programs: [
+      { name: 'Phoenix Perpetuals', id: 'EtrnLzgbS7nMMy5fbD42kXiUzGg8XQzJ972Xtk1cjWih', authority: 'GPgADQrhzGoUgLqxsZMKvSpwcLaJFVTq6gEixKhmcwpm' },
+    ],
+    sharedAuthority: false,
+    publicDocs: {
+      other: 'Perpetuals exchange built by Ellipsis Labs (the Phoenix CLOB team), currently in private beta with a waitlist for early access. The same 3/6 Squads V4 multisig also upgrades a separate beta contract that the team uses to test upgrades before they reach the production program (per team statement on Twitter, May 2026). Phoenix V1 CLOB was audited by OtterSec. Audit status of the Phoenix Eternal perps fork has not been separately disclosed in public documentation. An active bug bounty existed for Phoenix V1; an Immunefi page specific to Phoenix Eternal has not been located. No insurance fund or socialised-loss mechanism disclosed.',
+      source: 'https://www.ellipsislabs.xyz/blog-posts/introducing-phoenix-perpetuals',
+      updatedAt: '2026-05-20',
+    },
+    verifiedBuild: false,
+    configAuthority: 'autonomous',
+    squadsProfilePublic: false,
+    authorityRole: 'program-upgrade',
+    authorityRoleNote: 'Profile private on squads.so; configuration verified directly from on-chain account data. On-chain confirms this 3/6 Squads V4 multisig is the upgrade authority for the Phoenix Eternal Perpetuals program (EtrnLzgb...) via its vault index 0 (GPgADQ...). The same multisig also upgrades a separate beta contract; both verified on-chain.',
+    insuranceFund: {
+      hasInsuranceFund: false,
+      fundType: 'none',
+      fundSizeEstimate: null,
+      fundAssetType: null,
+      reimbursementPolicy: 'No insurance fund or socialised-loss mechanism disclosed in public documentation. Protocol teams are welcome to disclose if one exists.',
+      historicalReimbursement: null,
+      sourceUrl: null,
+    },
+  },
+  {
+    name: 'Adrena',
+    tvl: '$579k',
+    category: 'Perps',
+    version: 'Realms DAO',
+    threshold: 0,
+    totalMembers: 0,
+    activeVoters: 0,
+    timelockSeconds: -1,
+    timelockLabel: 'DAO governance',
+    canAddTimelock: false,
+    meetsMinThreshold: false,
+    hasTimelock: false,
+    multisigAddress: 'DAO-governed, not a standard multisig',
+    authorityAddress: '7VzEXYvGmLg3tdVuFuGFQdr7GP5tutTUt8EcTGHvG8Ev',
+    lastUpgrade: '2026-05-15',
+    upgradesLast30d: 1,
+    hasRoleSeparation: null,
+    members: null,
+    sharedAuthority: false,
+    programs: [
+      { name: 'Perpetuals', id: '13gDzEXCdocbj8iAiqrScGo47NiSuYENGsRqi3SEAwet', authority: '7VzEXYvGmLg3tdVuFuGFQdr7GP5tutTUt8EcTGHvG8Ev' },
+    ],
+    publicDocs: {
+      other: 'On-chain perpetuals exchange. Upgrade authority is an SPL Governance (Realms) PDA — ADX token holders vote on proposals, 1 ADX = 1 vote, ADX must be staked, with duration-lock multipliers for additional vote weight. Proposal threshold, voting period, quorum and approval thresholds are not disclosed in public documentation; the Realms PDA configuration on-chain is the source of truth. Public references to OtterSec audits of Adrena exist in community materials; specific report URLs and dates are not surfaced. Public references to an active bug bounty exist; the platform, programme page and max payout are not surfaced. No insurance fund disclosed.',
+      source: 'https://docs.adrena.trade/',
+      updatedAt: '2026-05-20',
+    },
+    verifiedBuild: false,
+    authorityRole: 'program-upgrade',
+    authorityRoleNote: 'Upgrade authority is a Realms DAO PDA owned by SPL Governance (GovER5L...). Latest upgrade (2026-05-15) executed via SPL Governance ExecuteTransaction, confirming on-chain DAO control. ADX token holders vote on upgrades.',
+    insuranceFund: {
+      hasInsuranceFund: false,
+      fundType: 'none',
+      fundSizeEstimate: null,
+      fundAssetType: null,
+      reimbursementPolicy: 'No insurance fund disclosed in public documentation. Public references to an active bug bounty exist; platform, programme page and max payout are not publicly surfaced.',
+      historicalReimbursement: null,
+      sourceUrl: null,
+    },
+  },
+  {
+    name: 'Bulk',
+    tvl: 'Unknown',
+    category: 'Perps',
+    version: 'Appchain',
+    threshold: 0,
+    totalMembers: 0,
+    activeVoters: 0,
+    timelockSeconds: 0,
+    timelockLabel: 'Unknown',
+    canAddTimelock: false,
+    meetsMinThreshold: false,
+    hasTimelock: false,
+    multisigAddress: 'Unknown. Team confirmed a 4-of-7 multisig with time locks is being set up; address pending disclosure',
+    authorityAddress: 'Unknown',
+    lastUpgrade: 'Unknown',
+    upgradesLast30d: 0,
+    hasRoleSeparation: null,
+    members: null,
+    sharedAuthority: false,
+    programs: [],
+    protocolDisclosed: {
+      custodyModel: 'On-chain',
+      custodyNote: 'Team-disclosed practices (not yet verified on-chain by solgov): all signing devices are scoped and cannot perform actions outside their specific authorisation; all administrative actions carry time locks before execution; signers use dedicated hardware isolated from general-purpose computing; planned multisig threshold is 4 of 7. Program ID and multisig address will be cross-checked on-chain before going live in the official solgov fields.',
+      other: 'In addition to the team governance multisig, the protocol documentation describes a separate user-facing multisig that is a first-class executor primitive (native off-curve account type, up to 32 signers, configurable threshold and time lock). That executor multisig is for institutional fund-admin use cases inside the protocol; the team governance multisig referenced above is distinct.',
+      updatedAt: '2026-05-20',
+    },
+    publicDocs: {
+      other: 'Perpetuals exchange built on a custom executor. Team has confirmed a 4-of-7 multisig with time locks is being set up for governance; address is pending and will be verified on-chain before being added to solgov as an official field. The specific multisig type (Squads, custom, or other) has not been disclosed by the team. Public documentation also describes a separate user-facing multisig primitive inside the executor — see protocolDisclosed for the distinction.',
+      source: 'https://docs.bulk.trade/multisig',
+      updatedAt: '2026-05-20',
+    },
+    verifiedBuild: false,
+    authorityRole: 'unknown',
+    authorityRoleNote: 'Team has confirmed a 4-of-7 multisig with time locks is being set up; address pending. Multisig type (Squads, custom, or other) not yet disclosed. Will be cross-checked on-chain and moved into the official threshold / totalMembers / timelockSeconds fields once disclosed.',
+    insuranceFund: {
+      hasInsuranceFund: false,
+      fundType: 'none',
+      fundSizeEstimate: null,
+      fundAssetType: null,
+      reimbursementPolicy: 'Not disclosed in public documentation.',
+      historicalReimbursement: null,
+      sourceUrl: null,
+    },
+  },
+  {
+    name: 'Bullet',
+    tvl: 'Pre-launch',
+    category: 'Perps',
+    version: 'Appchain',
+    threshold: 0,
+    totalMembers: 0,
+    activeVoters: 0,
+    timelockSeconds: 0,
+    timelockLabel: 'N/A (appchain)',
+    canAddTimelock: false,
+    meetsMinThreshold: false,
+    hasTimelock: false,
+    multisigAddress: 'Pre-launch. Appchain bridge in audit; no Solana mainnet program deployed yet',
+    authorityAddress: 'N/A',
+    lastUpgrade: 'N/A',
+    upgradesLast30d: 0,
+    hasRoleSeparation: null,
+    members: null,
+    sharedAuthority: false,
+    programs: [],
+    publicDocs: {
+      other: 'Solana network extension (appchain), successor to Zeta Markets which was shut down to focus on this build. Trading and settlement logic live at the rollup layer rather than on Solana mainnet. A Hyperlane bridge connecting the appchain to Solana mainnet is currently in audit by Sigma Prime. Once the bridge program is deployed on Solana mainnet, its upgrade authority will be the relevant governance surface for solgov; until then there is nothing on Solana mainnet to scan. No public Immunefi page, insurance fund, or socialised-loss mechanism located in available documentation.',
+      source: 'https://docs.bullet.xyz/',
+      updatedAt: '2026-05-20',
+    },
+    verifiedBuild: false,
+    authorityRole: 'unknown',
+    authorityRoleNote: 'Appchain architecture. No Solana mainnet program currently deployed for solgov to scan. Sigma Prime audit scope appears limited to the appchain layer and Hyperlane bridge. Will be tracked once mainnet bridge contracts go live.',
+    insuranceFund: {
+      hasInsuranceFund: false,
+      fundType: 'none',
+      fundSizeEstimate: null,
+      fundAssetType: null,
+      reimbursementPolicy: 'No insurance fund or bug bounty disclosed in public documentation. Pre-launch.',
+      historicalReimbursement: null,
+      sourceUrl: null,
+    },
+  },
 ];
 
 export const STATS = {
@@ -2528,7 +2703,7 @@ STATS.total = PROTOCOLS.length;
 STATS.meetThreshold = PROTOCOLS.filter(p => p.meetsMinThreshold).length;
 STATS.haveTimelock = PROTOCOLS.filter(p => p.hasTimelock).length;
 STATS.v4Count = PROTOCOLS.filter(p => p.version === 'Squads V4').length;
-STATS.v3Count = PROTOCOLS.filter(p => p.version === 'Squads V3' || p.version === 'Serum Multisig' || p.version === 'Realms DAO' || p.version === 'Single Signer').length;
+STATS.v3Count = PROTOCOLS.filter(p => p.version === 'Squads V3' || p.version === 'Serum Multisig' || p.version === 'Realms DAO' || p.version === 'Single Signer' || p.version === 'Appchain').length;
 STATS.haveRoleSep = PROTOCOLS.filter(p => p.hasRoleSeparation === true).length;
 STATS.noInsurance = PROTOCOLS.filter(p => !p.insuranceFund || p.insuranceFund.fundType === 'none').length;
 STATS.hasAnyInsurance = PROTOCOLS.filter(p => p.insuranceFund && p.insuranceFund.fundType !== 'none').length;

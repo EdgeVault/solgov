@@ -1,6 +1,6 @@
 # Colosseum Frontier 2026 — solgov submission
 
-solgov is the governance transparency layer for Solana DeFi. Continuous on-chain reads across 50 protocols, surfacing the setup-risk patterns that precede admin-key exploits. Built solo in the weeks since the $285M Drift exploit on April 1, 2026.
+solgov is the governance transparency layer for Solana DeFi. Continuous on-chain reads across 50+ protocols, surfacing the setup-risk patterns that precede admin-key exploits. Built solo in the weeks since the $285M Drift exploit on April 1, 2026.
 
 ## Quick links
 

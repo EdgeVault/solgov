@@ -149,6 +149,11 @@ const PROTOCOLS: ProtocolDef[] = [
       { name: 'Restaking', id: 'RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q', expectedAuth: '5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF' },
       { name: 'Steward', id: 'Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8', expectedAuth: '5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF' },
     ] },
+
+  { name: 'Phoenix Eternal', ms: 'Eq2cke33VYoMpunvbMdeCi44PLX7RLzttgFibvvUjvpc', type: 'v4', tier: 1, active: 6,
+    programs: [{ name: 'Phoenix Perpetuals', id: 'EtrnLzgbS7nMMy5fbD42kXiUzGg8XQzJ972Xtk1cjWih', expectedAuth: 'GPgADQrhzGoUgLqxsZMKvSpwcLaJFVTq6gEixKhmcwpm' }] },
+  { name: 'Adrena', ms: '', type: 'other', tier: 2, active: 0,
+    programs: [{ name: 'Perpetuals', id: '13gDzEXCdocbj8iAiqrScGo47NiSuYENGsRqi3SEAwet', expectedAuth: '7VzEXYvGmLg3tdVuFuGFQdr7GP5tutTUt8EcTGHvG8Ev' }] },
 ];
 
 interface ProtocolState {

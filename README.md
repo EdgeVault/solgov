@@ -2,7 +2,7 @@
 
 ![solgov dashboard](docs/hero.png)
 
-solgov is the governance transparency layer for Solana DeFi. Continuous reads across 50 protocols, surfacing the setup-risk patterns that precede admin-key exploits.
+solgov is the governance transparency layer for Solana DeFi. Continuous reads across 50+ protocols, surfacing the setup-risk patterns that precede admin-key exploits.
 
 ## Try it
 
@@ -20,7 +20,7 @@ Every claim in the dashboard traces to an on-chain RPC read or a named source UR
 
 ## Latest
 
-- May 2026: program coverage expanded to 188 programs across 50 protocols
+- May 2026: program coverage expanded to 188 programs across 50+ protocols
 - May 2026: LLM auto-triage with on-chain follow-up RPC verification on critical events. The system reads additional account state before classifying an alert as real signal versus noise
 - May 2026: risk-weighted alert frequency by program criticality (treasury, admin authority, TVL exposure)
 - Apr 2026: public API shipped with OpenAPI 3.1 spec, versioned endpoints, bulk + search, and webhook subscriptions
@@ -208,7 +208,7 @@ Nothing scraped. Anything not from on-chain reads is credited at the source.
 
 ## Status
 
-- 50 protocols tracked across 63 multisigs (Squads V4, V3, Serum, mean-multisig)
+- 50+ protocols tracked across 63 multisigs (Squads V4, V3, Serum, mean-multisig)
 - 188 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
 - Durable nonce detection, Token-2022 extension flags, and 1-of-N signer setups all surfaced
 - Public good: open source under MIT, free dashboard, free API with no auth, no token

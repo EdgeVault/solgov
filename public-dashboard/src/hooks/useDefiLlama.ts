@@ -42,6 +42,9 @@ const TVL_SLUGS: Record<string, string[]> = {
   'Onre Finance': ['onre'],
   'deBridge': ['debridge'],
   'Titan': ['titan-aggregator'],
+  'Phoenix Eternal': ['phoenix-perp'],
+  'Adrena': ['adrena-protocol'],
+  'Bullet': ['bullet-perps'],
 };
 
 const DEX_SLUGS: Record<string, string> = {

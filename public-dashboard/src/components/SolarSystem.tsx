@@ -629,7 +629,7 @@ export function SolarSystem({ protocolName, tvlData }: { protocolName?: string; 
                         {LOGO_FILENAMES[name] && (
                           <>
                             <clipPath id="clip-center"><circle cx={cx} cy={cy} r={cr - 1} /></clipPath>
-                            <image href={`/logos/${LOGO_FILENAMES[name]}.png`}
+                            <image href={LOGO_FILENAMES[name].includes('.') ? `/logos/${LOGO_FILENAMES[name]}` : `/logos/${LOGO_FILENAMES[name]}.png`}
                               x={cx - cr * 1.05} y={cy - cr * 1.05}
                               width={cr * 2.1} height={cr * 2.1}
                               clipPath="url(#clip-center)"
@@ -695,7 +695,7 @@ export function SolarSystem({ protocolName, tvlData }: { protocolName?: string; 
                           <circle cx={nx} cy={ny} r={r - 1} />
                         </clipPath>
                         <image
-                          href={`/logos/${LOGO_FILENAMES[node.name]}.png`}
+                          href={LOGO_FILENAMES[node.name].includes('.') ? `/logos/${LOGO_FILENAMES[node.name]}` : `/logos/${LOGO_FILENAMES[node.name]}.png`}
                           x={nx - r * 1.05} y={ny - r * 1.05}
                           width={r * 2.1} height={r * 2.1}
                           clipPath={`url(#clip-${node.name.replace(/[^a-zA-Z0-9]/g, '')})`}
@@ -962,7 +962,7 @@ export function OverviewSolarSystem({ onSelect }: { onSelect: (name: string) => 
                     <circle cx={nx} cy={ny} r={nodeR - 1} />
                   </clipPath>
                   <image
-                    href={`/logos/${LOGO_FILENAMES[node.name]}.png`}
+                    href={LOGO_FILENAMES[node.name].includes('.') ? `/logos/${LOGO_FILENAMES[node.name]}` : `/logos/${LOGO_FILENAMES[node.name]}.png`}
                     x={nx - nodeR * 1.05} y={ny - nodeR * 1.05}
                     width={nodeR * 2.1} height={nodeR * 2.1}
                     clipPath={`url(#ov-clip-${node.name.replace(/[^a-zA-Z0-9]/g, '')})`}

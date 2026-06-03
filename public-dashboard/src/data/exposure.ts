@@ -53,7 +53,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
       { name: 'Jupiter Agg', role: 'Routes liquidations to DEX pools (on-chain verified)', governance: '4/8 V3', timelock: 'None (V3 limitation)', activeVoters: '0/8', configChanges: 0, note: 'Liquidation paths from multiple protocols route through this aggregator. V3 cannot add timelock. Zero config changes ever. Zero active voters in 90 days.' },
     ],
     settlement: [
-      { name: 'Orca', role: 'Liquidated assets sold here (on-chain verified)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5, note: 'Only 1 of 10 signers active in 90 days' },
+      { name: 'Orca', role: 'Liquidated assets sold here (on-chain verified)', governance: '3/21', timelock: '24h', activeVoters: '1/21', configChanges: 7, note: 'Multisig expanded 10 → 21 in May 2026; 1 historical signer active in last 90 days' },
       { name: 'Meteora', role: 'Liquidated assets sold here (on-chain verified)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8 (est)', configChanges: 0 },
       { name: 'Raydium', role: 'Liquidated assets sold here (from docs)', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22. Tracked at FytDrVz vault.' },
     ],
@@ -108,7 +108,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
       { name: 'Jupiter Agg', role: 'Routes liquidations', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0, note: 'V3 cannot add timelock. Zero config changes. Zero active voters in 90 days.' },
     ],
     settlement: [
-      { name: 'Orca', role: 'Terminal DEX', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5, note: '1/10 active voters' },
+      { name: 'Orca', role: 'Terminal DEX', governance: '3/21', timelock: '24h', activeVoters: '1/21', configChanges: 7, note: 'Multisig expanded 10 → 21 in May 2026; 1 historical active voter in last 90 days' },
       { name: 'Raydium', role: 'Terminal DEX', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22. Tracked at FytDrVz vault.' },
     ],
   },
@@ -160,7 +160,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     ],
     routing: [],
     settlement: [
-      { name: 'Orca', role: '85% of txs settle on Orca (on-chain verified, 29/34 txs)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5 },
+      { name: 'Orca', role: '85% of txs settle on Orca (on-chain verified, 29/34 txs)', governance: '3/21', timelock: '24h', activeVoters: '1/21', configChanges: 7 },
     ],
   },
   'Jupiter Perps': {
@@ -185,7 +185,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     routing: [],
     settlement: [
       { name: 'Meteora', role: '43% of txs settle here (on-chain verified, 26/60 txs)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
-      { name: 'Orca', role: '7% of txs settle here (on-chain verified, 4/60 txs)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5 },
+      { name: 'Orca', role: '7% of txs settle here (on-chain verified, 4/60 txs)', governance: '3/21', timelock: '24h', activeVoters: '1/21', configChanges: 7 },
     ],
   },
   'Magic Eden': {
@@ -225,7 +225,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
       { name: 'Jupiter Agg', role: '27% of txs route through Jupiter (on-chain verified, 16/60 txs)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
     ],
     settlement: [
-      { name: 'Orca', role: '37% of txs settle on Orca (on-chain verified, 22/60 txs)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5 },
+      { name: 'Orca', role: '37% of txs settle on Orca (on-chain verified, 22/60 txs)', governance: '3/21', timelock: '24h', activeVoters: '1/21', configChanges: 7 },
       { name: 'Meteora', role: '23% of txs settle on Meteora (on-chain verified, 14/60 txs)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
       { name: 'Raydium', role: '15% of txs settle on Raydium (on-chain verified, 9/60 txs)', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22.' },
     ],
@@ -300,7 +300,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
       { name: 'Jupiter Agg', role: '82% of txs route through Jupiter (on-chain verified, 49/60 txs)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
     ],
     settlement: [
-      { name: 'Orca', role: '55% of txs settle on Orca (on-chain verified, 33/60 txs)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5 },
+      { name: 'Orca', role: '55% of txs settle on Orca (on-chain verified, 33/60 txs)', governance: '3/21', timelock: '24h', activeVoters: '1/21', configChanges: 7 },
     ],
   },
   'Sanctum': {
@@ -311,7 +311,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     routing: [],
     settlement: [
       { name: 'Meteora', role: '15% of txs settle on Meteora (on-chain verified, 9/60 txs)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
-      { name: 'Orca', role: '5% of txs settle on Orca (on-chain verified, 3/60 txs)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5 },
+      { name: 'Orca', role: '5% of txs settle on Orca (on-chain verified, 3/60 txs)', governance: '3/21', timelock: '24h', activeVoters: '1/21', configChanges: 7 },
       { name: 'Raydium', role: '3% of txs settle on Raydium (on-chain verified, 2/60 txs)', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22.' },
     ],
   },
@@ -326,7 +326,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
       { name: 'HumidiFi', role: '37% of sampled txs (on-chain verified, 37/100 txs).', governance: 'Unknown', timelock: 'Unknown', activeVoters: 'Unknown', configChanges: 0, note: 'Proprietary AMM. No public governance. No verified build.' },
     ],
     settlement: [
-      { name: 'Orca', role: 'Swaps settle on Orca pools (on-chain verified)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5, note: '1 of 10 signers active in 90 days' },
+      { name: 'Orca', role: 'Swaps settle on Orca pools (on-chain verified)', governance: '3/21', timelock: '24h', activeVoters: '1/21', configChanges: 7, note: 'Multisig expanded 10 → 21 in May 2026; 1 historical signer active in last 90 days' },
       { name: 'Raydium', role: 'Swaps settle on Raydium pools (from docs)', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22.' },
       { name: 'Meteora', role: 'Swaps settle on Meteora DLMM (on-chain verified)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
       { name: 'Phoenix DEX', role: 'Swaps settle on Phoenix CLOB (from docs)', governance: '2/5 V3', timelock: 'None (V3)', activeVoters: '0/5 (est)', configChanges: 0 },

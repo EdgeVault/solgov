@@ -371,8 +371,8 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     approvedProposals: 592, rejectedProposals: 57, cancelledProposals: 23, spendingLimitUses: 0, hotWalletSigners: 0, ghostSigners90d: 0,
   },
   'Raydium': {
-    created: '2026-04-22', totalTxs: 0, configChanges: 0, configDates: [],
-    membersAdded: 4, membersRemoved: 0, thresholdChanges: 0, timelockChanges: 1,
+    created: '2026-04-22', totalTxs: 0, configChanges: 2, configDates: ['2026-04-22', '2026-05-22'],
+    membersAdded: 4, membersRemoved: 0, thresholdChanges: 0, timelockChanges: 2,
     activeVoters90d: 4, totalMembers: 4, voterRate: 100,
     avgExecuteTimeH: 0, fastestExecuteH: 0, slowestExecuteH: 0,
     proposers: 0, approvers: 0, executors: 0, rubberStampSigners: 0,

@@ -55,7 +55,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     settlement: [
       { name: 'Orca', role: 'Liquidated assets sold here (on-chain verified)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5, note: 'Only 1 of 10 signers active in 90 days' },
       { name: 'Meteora', role: 'Liquidated assets sold here (on-chain verified)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8 (est)', configChanges: 0 },
-      { name: 'Raydium', role: 'Liquidated assets sold here (from docs)', governance: '3/4 V4', timelock: '24h', activeVoters: '4/4', configChanges: 0, note: 'Migrated to V4 in April 2026 with 24h timelock. Tracked at FytDrVz vault.' },
+      { name: 'Raydium', role: 'Liquidated assets sold here (from docs)', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22. Tracked at FytDrVz vault.' },
     ],
   },
   'Drift': {
@@ -109,7 +109,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     ],
     settlement: [
       { name: 'Orca', role: 'Terminal DEX', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5, note: '1/10 active voters' },
-      { name: 'Raydium', role: 'Terminal DEX', governance: '3/4 V4', timelock: '24h', activeVoters: '4/4', configChanges: 0, note: 'Migrated to V4 in April 2026 with 24h timelock. Tracked at FytDrVz vault.' },
+      { name: 'Raydium', role: 'Terminal DEX', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22. Tracked at FytDrVz vault.' },
     ],
   },
   'Lulo': {
@@ -227,7 +227,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     settlement: [
       { name: 'Orca', role: '37% of txs settle on Orca (on-chain verified, 22/60 txs)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5 },
       { name: 'Meteora', role: '23% of txs settle on Meteora (on-chain verified, 14/60 txs)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
-      { name: 'Raydium', role: '15% of txs settle on Raydium (on-chain verified, 9/60 txs)', governance: '3/4 V4', timelock: '24h', activeVoters: '4/4', configChanges: 0, note: 'Migrated to V4 with 24h timelock April 2026.' },
+      { name: 'Raydium', role: '15% of txs settle on Raydium (on-chain verified, 9/60 txs)', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22.' },
     ],
   },
   'Hylo': {
@@ -312,7 +312,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     settlement: [
       { name: 'Meteora', role: '15% of txs settle on Meteora (on-chain verified, 9/60 txs)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
       { name: 'Orca', role: '5% of txs settle on Orca (on-chain verified, 3/60 txs)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5 },
-      { name: 'Raydium', role: '3% of txs settle on Raydium (on-chain verified, 2/60 txs)', governance: '3/4 V4', timelock: '24h', activeVoters: '4/4', configChanges: 0, note: 'Migrated to V4 with 24h timelock April 2026.' },
+      { name: 'Raydium', role: '3% of txs settle on Raydium (on-chain verified, 2/60 txs)', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22.' },
     ],
   },
   'Jupiter Agg': {
@@ -327,7 +327,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     ],
     settlement: [
       { name: 'Orca', role: 'Swaps settle on Orca pools (on-chain verified)', governance: '3/10', timelock: '24h', activeVoters: '1/10', configChanges: 5, note: '1 of 10 signers active in 90 days' },
-      { name: 'Raydium', role: 'Swaps settle on Raydium pools (from docs)', governance: '3/4 V4', timelock: '24h', activeVoters: '4/4', configChanges: 0, note: 'Migrated to V4 with 24h timelock April 2026.' },
+      { name: 'Raydium', role: 'Swaps settle on Raydium pools (from docs)', governance: '3/4 V4', timelock: 'None', activeVoters: '4/4', configChanges: 2, note: 'Migrated to V4 in April 2026 with 24h timelock; timelock removed 2026-05-22.' },
       { name: 'Meteora', role: 'Swaps settle on Meteora DLMM (on-chain verified)', governance: '4/8 V3', timelock: 'None (V3)', activeVoters: '0/8', configChanges: 0 },
       { name: 'Phoenix DEX', role: 'Swaps settle on Phoenix CLOB (from docs)', governance: '2/5 V3', timelock: 'None (V3)', activeVoters: '0/5 (est)', configChanges: 0 },
     ],

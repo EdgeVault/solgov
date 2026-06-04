@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/sentinel"
+    schedule:
+      interval: "weekly"
+    ignore:
+      # uuid missing buffer-bounds check in v3/v5/v6 advisory.
+      # The vulnerable API surface (v3/v5/v6 with caller-controlled offset) is not
+      # reachable from this codebase. The transitive consumers (jayson via
+      # @solana/web3.js and the Squads/Anchor SDKs) use uuid for JSON-RPC request
+      # IDs only, which calls uuid.v4() — explicitly not affected by this advisory.
+      - dependency-name: "uuid"
+
+  - package-ecosystem: "npm"
+    directory: "/public-dashboard"
+    schedule:
+      interval: "weekly"

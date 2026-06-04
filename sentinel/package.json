@@ -31,7 +31,7 @@
     "@sqds/multisig": "^2.1.0",
     "@sqds/sdk": "^2.0.4",
     "bs58": "^5.0.0",
-    "dotenv": "^16.4.0"
+    "dotenv": "^17.4.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

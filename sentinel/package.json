@@ -25,7 +25,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@coral-xyz/anchor": "^0.30.0",
+    "@coral-xyz/anchor": "^0.32.1",
     "@huma-finance/permissionless-sdk": "^1.0.23",
     "@solana/web3.js": "^1.91.0",
     "@sqds/multisig": "^2.1.0",

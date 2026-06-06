@@ -260,12 +260,12 @@ function ProgramsList({ p }: { p: typeof PROTOCOLS[0] }) {
           return (
             <div key={i} className="flex items-center gap-2 text-[11px]">
               <span className="text-gray-400">{prog.name}</span>
-              <a href={`https://solscan.io/account/${prog.id}`} target="_blank" rel="noopener" className="font-mono text-gray-600 hover:text-white">{prog.id.slice(0, 6)}...{prog.id.slice(-4)}</a>
-              <span className="text-gray-600">→</span>
+              <a href={`https://solscan.io/account/${prog.id}`} target="_blank" rel="noopener" className="font-mono text-gray-500 hover:text-white">{prog.id.slice(0, 6)}...{prog.id.slice(-4)}</a>
+              <span className="text-gray-500">→</span>
               {prog.authority === 'IMMUTABLE' ? (
                 <span className="text-white">Immutable</span>
               ) : prog.authority === 'N/A' ? (
-                <span className="text-gray-600">N/A</span>
+                <span className="text-gray-500">N/A</span>
               ) : p.version === 'Squads V4' ? (
                 <a href={`https://app.squads.so/squads/${prog.authority}/home`} target="_blank" rel="noopener" className="font-mono text-gray-500 hover:text-white">{shortAuth}</a>
               ) : (
@@ -421,7 +421,7 @@ function App() {
                 <p className="mt-3 text-[12px] md:text-[13px] text-gray-500 leading-relaxed">
                   Continuous reads on every threshold, signer, timelock, config authority and program upgrade. Nine pattern detection rules tuned to the early warning signs in multisig setups, giving teams time to fix gaps and users a clear view of what they are trusting.
                 </p>
-                <p className="hidden md:block mt-3 text-[13px] text-gray-500 leading-relaxed">
+                <p className="mt-3 text-[12px] md:text-[13px] text-gray-300 leading-relaxed">
                   Drift's $285M April exploit was compromised signers approving pre-positioned transactions, per Drift's post-mortem. The configuration that let those signatures execute instantly was on chain before the attack: zero timelock, a stale external config authority, a multisig migrated days before. solgov reads configuration like this.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2.5">
@@ -486,7 +486,7 @@ function App() {
                         <span className="text-[10px] uppercase tracking-[0.08em] text-gray-400">Live activity</span>
                       </div>
                       {lastScanLabel && (
-                        <span className="text-[10px] text-gray-600 font-mono">scan {lastScanLabel}</span>
+                        <span className="text-[10px] text-gray-500 font-mono">scan {lastScanLabel}</span>
                       )}
                     </div>
                     {recentEvents.length > 0 ? (
@@ -496,14 +496,14 @@ function App() {
                             key={i}
                             className={`px-3.5 py-2 flex items-center gap-3 text-[11px] ${i >= 3 ? 'hidden md:flex' : ''}`}
                           >
-                            <span className="text-gray-600 font-mono w-[68px] flex-shrink-0">{e.date}</span>
+                            <span className="text-gray-500 font-mono w-[68px] flex-shrink-0">{e.date}</span>
                             <span className="text-white font-medium w-[110px] truncate flex-shrink-0">{e.protocol}</span>
                             <span className="text-gray-400 truncate">{e.type}</span>
                           </div>
                         ))}
                       </div>
                     ) : (
-                      <div className="px-3.5 py-6 text-center text-[11px] text-gray-600">
+                      <div className="px-3.5 py-6 text-center text-[11px] text-gray-500">
                         No governance activity in the last 30 days.
                       </div>
                     )}
@@ -566,14 +566,14 @@ function App() {
           {filterTimelock !== 'all' && (
             <button
               onClick={() => setFilterTimelock('all')}
-              className="text-[11px] text-gray-600 hover:text-gray-300 underline decoration-gray-700"
+              className="text-[11px] text-gray-500 hover:text-gray-300 underline decoration-gray-700"
             >
               clear timelock filter
             </button>
           )}
         </div>
 
-        <div className="rounded-md border border-white/[0.04] px-3 md:px-4 py-2.5 mb-4 text-[10px] md:text-[11px] text-gray-600 leading-relaxed">
+        <div className="rounded-md border border-white/[0.04] px-3 md:px-4 py-2.5 mb-4 text-[10px] md:text-[11px] text-gray-500 leading-relaxed">
           <span className="text-gray-400">Squads best practices:</span>
           <span className="ml-2"></span>
           <Tooltip text="Squads best practices reference a 4/6 threshold (67%+ ratio)."><span className="text-gray-500 cursor-help">Threshold 4/6+<InfoIcon /></span></Tooltip>
@@ -586,18 +586,18 @@ function App() {
           <span className="mx-1.5 text-gray-700">&middot;</span>
           <Tooltip text="Scanning multisig signers for durable nonce accounts."><span className="text-gray-500 cursor-help">Nonce detection<InfoIcon /></span></Tooltip>
           <span className="mx-1.5 text-gray-700">&middot;</span>
-          <Tooltip text="Signers use dedicated hardware wallets for multisig transactions."><span className="text-gray-600 cursor-help">Hardware wallets<InfoIcon /></span></Tooltip>
+          <Tooltip text="Signers use dedicated hardware wallets for multisig transactions."><span className="text-gray-500 cursor-help">Hardware wallets<InfoIcon /></span></Tooltip>
           <span className="mx-1.5 text-gray-700">&middot;</span>
-          <Tooltip text="Regular rotation of signer keys."><span className="text-gray-600 cursor-help">Key rotation<InfoIcon /></span></Tooltip>
+          <Tooltip text="Regular rotation of signer keys."><span className="text-gray-500 cursor-help">Key rotation<InfoIcon /></span></Tooltip>
           <span className="mx-2 text-gray-700">|</span>
-          <a href={`https://${SQUADS_MINIMUM.source}`} target="_blank" rel="noopener" className="text-gray-600 underline decoration-gray-700 hover:text-gray-400">Source</a>
+          <a href={`https://${SQUADS_MINIMUM.source}`} target="_blank" rel="noopener" className="text-gray-500 underline decoration-gray-700 hover:text-gray-400">Source</a>
           <br className="md:hidden" />
           <div className="mt-1">
             <span className="text-gray-400">Additional:</span>
             <span className="ml-2"></span>
             <Tooltip text="Whether the protocol has a fund to cover user losses in the event of an exploit."><span className="text-gray-500 cursor-help">Insurance fund<InfoIcon /></span></Tooltip>
             <span className="mx-1.5 text-gray-700">&middot;</span>
-            <Tooltip text="Separating operations wallet from reserve funds."><span className="text-gray-600 cursor-help">Treasury segmentation<InfoIcon /></span></Tooltip>
+            <Tooltip text="Separating operations wallet from reserve funds."><span className="text-gray-500 cursor-help">Treasury segmentation<InfoIcon /></span></Tooltip>
           </div>
         </div>
 
@@ -640,36 +640,36 @@ function App() {
           <table className="w-full text-sm">
             <thead className="bg-white/[0.02]">
               <tr>
-                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('name')}>Protocol</th>
-                <th className="px-3 py-2.5 text-right text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('name')}>Protocol</th>
+                <th className="px-3 py-2.5 text-right text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   TVL {!llama.loading && <Tooltip text="Live from DeFiLlama"><span className="inline-block w-1.5 h-1.5 rounded-full bg-white ml-1" /></Tooltip>}
                 </th>
-                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">Version</th>
-                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('threshold')}>
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">Version</th>
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('threshold')}>
                   Signers <Tooltip text="Threshold / active voters who can sign. Total members shown if different."><InfoIcon /></Tooltip>
                 </th>
-                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('timelockSeconds')}>
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('timelockSeconds')}>
                   Gov. TL <Tooltip text="Governance-level timelock configured in the multisig. On-chain verified."><InfoIcon /></Tooltip>
                 </th>
-                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Prog. TL <Tooltip text="Timelock in the program code itself. From protocol docs or team disclosure."><InfoIcon /></Tooltip>
                 </th>
-                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Last Upgrade <Tooltip text="Most recent program upgrade transaction on-chain."><InfoIcon /></Tooltip>
                 </th>
-                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   30d <Tooltip text="Program upgrade transactions in the last 30 days."><InfoIcon /></Tooltip>
                 </th>
-                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Threshold <Tooltip text="Green: 4+ signers with 67%+ ratio (Squads 4/6+). Amber: 3 signers or below 67%. Red: fewer than 3 or below 50%."><InfoIcon /></Tooltip>
                 </th>
-                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Roles <Tooltip text="Squads best practices reference separating Proposer, Voter, and Executor roles."><InfoIcon /></Tooltip>
                 </th>
-                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Status <Tooltip text="Governance version capability. V4 supports timelocks natively. V3/legacy does not."><InfoIcon /></Tooltip>
                 </th>
-                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+                <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Insurance <Tooltip text="Funded insurance mechanism based on public documentation."><InfoIcon /></Tooltip>
                 </th>
               </tr>
@@ -685,7 +685,7 @@ function App() {
                       </div>
                     </td>
                     <td className="px-3 py-2 text-xs text-right text-gray-400 whitespace-nowrap">
-                      {formatTvlDisplay(llama.tvl[p.name]) || <span className="text-gray-600">-</span>}
+                      {formatTvlDisplay(llama.tvl[p.name]) || <span className="text-gray-500">-</span>}
                     </td>
                     <td className="px-3 py-2 text-xs whitespace-nowrap">
                       {p.version === 'Single Signer' ? (
@@ -705,7 +705,7 @@ function App() {
                         <span className="font-mono">
                           <span className="text-gray-300">{p.threshold}/{p.activeVoters > 0 ? p.activeVoters : p.totalMembers}</span>
                           {p.activeVoters > 0 && p.activeVoters !== p.totalMembers && (
-                            <span className="text-[10px] text-gray-600 ml-1">({p.totalMembers} total)</span>
+                            <span className="text-[10px] text-gray-500 ml-1">({p.totalMembers} total)</span>
                           )}
                         </span>
                       )}
@@ -729,7 +729,7 @@ function App() {
                           <span className="text-gray-300 cursor-help whitespace-nowrap">Yes (docs)<InfoIcon /></span>
                         </Tooltip>
                       ) : (
-                        <span className="text-gray-600">-</span>
+                        <span className="text-gray-500">-</span>
                       )}
                     </td>
                     <td className="px-3 py-2 text-xs text-gray-400">{p.lastUpgrade}</td>
@@ -738,7 +738,7 @@ function App() {
                       {(() => {
                         if (p.version === 'Appchain') return (
                           <Tooltip text="Appchain architecture. Governance multisig not yet on Solana mainnet, or address not disclosed. Comparison to Squads best practices is not applicable until configuration is on-chain.">
-                            <span className="text-gray-600 cursor-help">N/A<InfoIcon /></span>
+                            <span className="text-gray-500 cursor-help">N/A<InfoIcon /></span>
                           </Tooltip>
                         );
                         const effectiveTotal = p.activeVoters > 0 ? p.activeVoters : p.totalMembers;
@@ -768,7 +768,7 @@ function App() {
                     </td>
                     <td className="px-3 py-2 text-center text-xs">
                       {p.hasRoleSeparation === null || p.version === 'Single Signer' || p.version === 'Realms DAO' || p.version === 'Wormhole' || p.version === 'Immutable' || p.version === 'Appchain' ? (
-                        <span className="text-gray-600">N/A</span>
+                        <span className="text-gray-500">N/A</span>
                       ) : p.hasRoleSeparation && (p.threshold ?? 0) >= 2 ? (
                         <span className="text-white">Separated</span>
                       ) : p.hasRoleSeparation ? (
@@ -784,7 +784,7 @@ function App() {
                         const pctThreshold = p.totalMembers > 0 ? p.threshold / p.totalMembers : 0;
                         const thresholdOk = p.threshold >= 4 && pctThreshold >= 0.67;
                         const needsFix = (!p.hasTimelock && p.timelockSeconds !== -1) || !thresholdOk || p.hasRoleSeparation === false;
-                        if (p.version === 'Immutable') return <span className="text-gray-600">N/A</span>;
+                        if (p.version === 'Immutable') return <span className="text-gray-500">N/A</span>;
                         if (p.version === 'Appchain') return (
                           <Tooltip text="Appchain architecture. Most logic lives at the rollup or executor layer, not on Solana mainnet. Governance address pending or not applicable until mainnet configuration is published.">
                             <span className="text-gray-500 whitespace-nowrap">Appchain<InfoIcon /></span>
@@ -810,9 +810,9 @@ function App() {
                             <span className="text-gray-300/70 whitespace-nowrap">V3/Legacy<InfoIcon /></span>
                           </Tooltip>
                         );
-                        if (!needsFix) return <span className="text-gray-600">N/A</span>;
+                        if (!needsFix) return <span className="text-gray-500">N/A</span>;
                         if (p.canAddTimelock) return <span className="text-white/70">Yes</span>;
-                        return <span className="text-gray-600">N/A</span>;
+                        return <span className="text-gray-500">N/A</span>;
                       })()}
                     </td>
                     <td className="px-3 py-2 text-center text-xs">
@@ -951,7 +951,7 @@ function App() {
                                       {voters.length > 0 && <p className="text-[10px] text-white/70 font-medium mb-0.5">Voters ({voters.length})</p>}
                                       {voters.map((m, i) => (
                                         <div key={`v${i}`} className="flex items-center gap-2">
-                                          <span className="text-gray-600 w-4 text-right">{i + 1}</span>
+                                          <span className="text-gray-500 w-4 text-right">{i + 1}</span>
                                           <a href={`https://solscan.io/account/${m.key}`} target="_blank" rel="noopener" className="font-mono text-[11px] text-gray-400 hover:text-white">{m.key.slice(0, 4)}...{m.key.slice(-4)}</a>
                                           <span className="text-[10px] px-1.5 py-0.5 rounded bg-gray-700 text-gray-300">{
                                             m.role === 'Full' ? 'Full' :
@@ -963,7 +963,7 @@ function App() {
                                       {nonVoters.length > 0 && <p className="text-[10px] text-orange-400/70 font-medium mt-1.5 mb-0.5">Propose only ({nonVoters.length})</p>}
                                       {nonVoters.map((m, i) => (
                                         <div key={`p${i}`} className="flex items-center gap-2">
-                                          <span className="text-gray-600 w-4 text-right">{voters.length + i + 1}</span>
+                                          <span className="text-gray-500 w-4 text-right">{voters.length + i + 1}</span>
                                           <a href={`https://solscan.io/account/${m.key}`} target="_blank" rel="noopener" className="font-mono text-[11px] text-gray-400 hover:text-white">{m.key.slice(0, 4)}...{m.key.slice(-4)}</a>
                                           <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.04] text-gray-400">Propose</span>
                                         </div>
@@ -971,7 +971,7 @@ function App() {
                                       {inactive.length > 0 && <p className="text-[10px] text-gray-400/70 font-medium mt-1.5 mb-0.5">Inactive ({inactive.length})</p>}
                                       {inactive.map((m, i) => (
                                         <div key={`n${i}`} className="flex items-center gap-2">
-                                          <span className="text-gray-600 w-4 text-right">{voters.length + nonVoters.length + i + 1}</span>
+                                          <span className="text-gray-500 w-4 text-right">{voters.length + nonVoters.length + i + 1}</span>
                                           <a href={`https://solscan.io/account/${m.key}`} target="_blank" rel="noopener" className="font-mono text-[11px] text-gray-400 hover:text-white">{m.key.slice(0, 4)}...{m.key.slice(-4)}</a>
                                           <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.04] text-gray-400">None</span>
                                         </div>
@@ -981,7 +981,7 @@ function App() {
                                 })()}
                               </div>
                             ) : (
-                              <p className="text-gray-600">Not available ({p.version})</p>
+                              <p className="text-gray-500">Not available ({p.version})</p>
                             )}
                           </div>
 
@@ -1080,10 +1080,10 @@ function App() {
                                   <p className="text-[11px] text-gray-500">{p.protocolDisclosed.custodyNote}</p>
                                 )}
                                 {p.protocolDisclosed.other && (
-                                  <p className="text-[11px] text-gray-500">{p.protocolDisclosed.other}</p>
+                                  <p className="text-[11px] text-gray-400">{p.protocolDisclosed.other}</p>
                                 )}
                                 {p.protocolDisclosed.updatedAt && (
-                                  <p className="text-[10px] text-gray-600 mt-1">Updated {p.protocolDisclosed.updatedAt}</p>
+                                  <p className="text-[10px] text-gray-500 mt-1">Updated {p.protocolDisclosed.updatedAt}</p>
                                 )}
                               </>
                             )}
@@ -1095,14 +1095,14 @@ function App() {
                                   <Tooltip text="Information sourced from the protocol's public documentation, announcements, or case studies. Not independently verified on-chain."><InfoIcon /></Tooltip>
                                 </h4>
                                 {p.publicDocs.other && (
-                                  <p className="text-[11px] text-gray-500">{p.publicDocs.other}</p>
+                                  <p className="text-[11px] text-gray-400">{p.publicDocs.other}</p>
                                 )}
                                 <div className="flex items-center gap-3 mt-1">
                                   {p.publicDocs.source && (
                                     <a href={p.publicDocs.source} target="_blank" rel="noopener" className="text-[10px] text-gray-500 hover:text-gray-300 underline decoration-gray-700">Read more</a>
                                   )}
                                   {p.publicDocs.updatedAt && (
-                                    <span className="text-[10px] text-gray-600">Updated {p.publicDocs.updatedAt}</span>
+                                    <span className="text-[10px] text-gray-500">Updated {p.publicDocs.updatedAt}</span>
                                   )}
                                 </div>
                               </>
@@ -1154,7 +1154,7 @@ function App() {
           </table>
         </div>
 
-        <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-600 space-y-1">
+        <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500 space-y-1">
           <p>All governance data decoded directly from on-chain Solana account data. Live updates via Helius webhooks.{isLive && lastScan ? ` Last event: ${lastScan.split('T')[0]} ${lastScan.split('T')[1]?.slice(0, 5)} UTC.` : ''}{!llama.loading ? ' TVL data live from DeFiLlama.' : ''}</p>
           <p className="text-gray-700">This dashboard does not provide financial advice. It presents on-chain governance configurations for informational purposes.</p>
         </div>
@@ -1212,7 +1212,7 @@ function App() {
                 <SolanaHackChart />
                 <div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Cross-chain context</div>
-                  <p className="text-[10px] text-gray-600 mb-3">Smaller reference views. Solana DeFi exploits are the focus of this dashboard; the panels below scale those losses against an EVM-only aggregate and a combined total.</p>
+                  <p className="text-[10px] text-gray-500 mb-3">Smaller reference views. Solana DeFi exploits are the focus of this dashboard; the panels below scale those losses against an EVM-only aggregate and a combined total.</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <CompactHackChart
                       title="EVM DeFi Exploits"
@@ -1424,29 +1424,29 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
         <table className="w-full text-sm">
           <thead className="bg-white/[0.02]">
             <tr>
-              <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">Protocol</th>
-              <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+              <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">Protocol</th>
+              <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                 Created <Tooltip text="Date the multisig was first created on-chain."><InfoIcon /></Tooltip>
               </th>
-              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                 Config <Tooltip text="Total governance config changes (threshold, members, timelock). More = actively maintained."><InfoIcon /></Tooltip>
               </th>
-              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                 Voters <Tooltip text="Signers active in the last 90 days / total members. 0 active = nobody governing."><InfoIcon /></Tooltip>
               </th>
-              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                 Avg Exec <Tooltip text="Average time from proposal creation to execution. Longer = more deliberation."><InfoIcon /></Tooltip>
               </th>
-              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                 Proposers <Tooltip text="Unique signers who create proposals. 1 = single point of control."><InfoIcon /></Tooltip>
               </th>
-              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                 Build <Tooltip text="On-chain verified build via OtterSec/Ellipsis verifier. Confirms deployed bytecode matches source code."><InfoIcon /></Tooltip>
               </th>
-              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                 Nonces <Tooltip text="Signers with durable nonce activity detected on-chain."><InfoIcon /></Tooltip>
               </th>
-              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-500 uppercase tracking-wide whitespace-nowrap">
+              <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                 Activity <Tooltip text="Signing activity hours based on on-chain transaction timestamps. Dist = spread across multiple regions. Conc = concentrated in one region."><InfoIcon /></Tooltip>
               </th>
             </tr>
@@ -1501,7 +1501,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                         <span className="cursor-help">{g.avgExecuteTimeH >= 24 ? Math.round(g.avgExecuteTimeH / 24) + 'd' : g.avgExecuteTimeH.toFixed(1) + 'h'}</span>
                       </Tooltip>
                     ) : (
-                      <span className="text-gray-600">-</span>
+                      <span className="text-gray-500">-</span>
                     )}
                   </td>
                   <td className="px-3 py-2 text-xs text-center text-gray-400">{g.proposers}</td>
@@ -1624,7 +1624,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                               <h4 className="font-bold text-white mt-3 mb-1">Program Upgrades</h4>
                               <div className="space-y-0.5">
                                 {g.programUpgrades.map((u, i) => (
-                                  <p key={i} className="text-[11px]"><span className="text-gray-500">{u.name}:</span> <span className="text-gray-300">{u.count}</span> <span className="text-gray-600">(last {u.lastDate})</span></p>
+                                  <p key={i} className="text-[11px]"><span className="text-gray-500">{u.name}:</span> <span className="text-gray-300">{u.count}</span> <span className="text-gray-500">(last {u.lastDate})</span></p>
                                 ))}
                               </div>
                             </>
@@ -1716,7 +1716,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                               <h4 className="font-bold text-white mt-3 mb-1">Identified Signers</h4>
                               <div className="space-y-0.5">
                                 {g.identifiedSigners.map((s, i) => (
-                                  <p key={i} className="text-[11px]"><span className="text-gray-300">{s.name}</span> <span className="text-gray-600 font-mono">({s.address.slice(0, 6)}..{s.address.slice(-4)})</span></p>
+                                  <p key={i} className="text-[11px]"><span className="text-gray-300">{s.name}</span> <span className="text-gray-500 font-mono">({s.address.slice(0, 6)}..{s.address.slice(-4)})</span></p>
                                 ))}
                               </div>
                             </>
@@ -1726,7 +1726,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                               <h4 className="font-bold text-white mt-3 mb-1">Notable Funding Sources <Tooltip text="Original funding source of governance signers, from first incoming SOL transfer. Identifying exchanges and mixers, not judging intent."><InfoIcon /></Tooltip></h4>
                               <div className="space-y-0.5">
                                 {g.fundingSources.map((f, i) => (
-                                  <p key={i} className="text-[11px]"><span className="text-gray-300">{f.funderName}</span><span className="text-gray-600">: {f.signerCount} signer{f.signerCount > 1 ? 's' : ''}{f.firstSeen ? `, first ${f.firstSeen}` : ''}</span></p>
+                                  <p key={i} className="text-[11px]"><span className="text-gray-300">{f.funderName}</span><span className="text-gray-500">: {f.signerCount} signer{f.signerCount > 1 ? 's' : ''}{f.firstSeen ? `, first ${f.firstSeen}` : ''}</span></p>
                                 ))}
                               </div>
                             </>
@@ -1752,7 +1752,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                             </>
                           )}
                           {liveStates[name]?.lastChecked && (
-                            <p className="mt-2 text-[10px] text-gray-600">Last scanned: {liveStates[name].lastChecked.replace('T', ' ').slice(0, 16)} UTC</p>
+                            <p className="mt-2 text-[10px] text-gray-500">Last scanned: {liveStates[name].lastChecked.replace('T', ' ').slice(0, 16)} UTC</p>
                           )}
                         </div>
                       </div>
@@ -1787,19 +1787,19 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
               : 'text-gray-400';
             return (
               <div key={i} className="flex items-center gap-3 text-xs py-1.5 border-b border-white/[0.03]">
-                <span className="text-gray-600 font-mono w-20 flex-shrink-0">{e.date}</span>
+                <span className="text-gray-500 font-mono w-20 flex-shrink-0">{e.date}</span>
                 <span className="text-white font-medium w-28 flex-shrink-0 truncate">{e.protocol}</span>
                 <span className={typeColor}>{e.type}</span>
               </div>
             );
           })}
           {feed.length === 0 && (
-            <p className="text-gray-600 text-center py-4">No activity recorded</p>
+            <p className="text-gray-500 text-center py-4">No activity recorded</p>
           )}
         </div>
       </div>
 
-      <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-600 space-y-1">
+      <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500 space-y-1">
         <p>All data verified on-chain via Helius RPC. Continuous monitoring across {PROTOCOLS.length} protocols.</p>
         <p className="flex items-center gap-1.5">
           {snapshotLabel}
@@ -1832,7 +1832,7 @@ function ExposureRow({ node, index, liveByName }: { node: ExposureNode; index: n
   const { governance, timelock, activeVoters, isLive } = overlayExposureNode(node, liveByName);
   return (
     <div className={`flex items-start gap-3 py-2.5 px-3 rounded-lg ${hasNote ? 'bg-white/[0.02] border border-white/[0.06]' : 'bg-white/[0.01]'}`}>
-      <span className="text-gray-600 text-[10px] w-4 pt-0.5">{index + 1}</span>
+      <span className="text-gray-500 text-[10px] w-4 pt-0.5">{index + 1}</span>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs font-medium text-white">{node.name}</span>
@@ -1909,7 +1909,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
       <div className="mb-4">
         <h2 className="text-lg font-semibold text-white mb-1">Blast Radius</h2>
         <p className="text-xs text-gray-500 mb-3">The Drift exploit affected 22 connected protocols with $37.1M in quantified downstream losses. Dependency mapping identifies cascade risk and whether a protocol sits within a chain.</p>
-        <p className="text-xs text-gray-600">Select a protocol to view its dependency chain and governance at each layer.</p>
+        <p className="text-xs text-gray-500">Select a protocol to view its dependency chain and governance at each layer.</p>
       </div>
 
       <div className={viewMode === 'overview' ? '' : 'hidden'}>
@@ -1987,17 +1987,17 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
           <div className="space-y-1">
             <ExposureSection title="Price Feeds (Oracles)" icon="📡" nodes={exposure.oracles} emptyText="No oracle dependencies" liveByName={liveByName} />
             {exposure.oracles.length > 0 && exposure.collateral.length > 0 && (
-              <div className="text-center text-gray-600 text-[10px] py-1">↓ prices feed into ↓</div>
+              <div className="text-center text-gray-500 text-[10px] py-1">↓ prices feed into ↓</div>
             )}
 
             <ExposureSection title="Collateral Accepted" icon="🪙" nodes={exposure.collateral} emptyText="No external collateral" liveByName={liveByName} />
             {exposure.collateral.length > 0 && exposure.routing.length > 0 && (
-              <div className="text-center text-gray-600 text-[10px] py-1">↓ if liquidated, flows to ↓</div>
+              <div className="text-center text-gray-500 text-[10px] py-1">↓ if liquidated, flows to ↓</div>
             )}
 
             <ExposureSection title="Routing" icon="🔀" nodes={exposure.routing} emptyText="" liveByName={liveByName} />
             {exposure.routing.length > 0 && exposure.settlement.length > 0 && (
-              <div className="text-center text-gray-600 text-[10px] py-1">↓ settles on ↓</div>
+              <div className="text-center text-gray-500 text-[10px] py-1">↓ settles on ↓</div>
             )}
 
             <ExposureSection title="Settlement (DEX Pools)" icon="💱" nodes={exposure.settlement} emptyText="" liveByName={liveByName} />
@@ -2038,7 +2038,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                           <div className="flex items-center gap-3">
                             <span className="text-white font-medium w-28 flex-shrink-0">{r.protocol}</span>
                             <span className="text-gray-400 flex-1">{r.detail}</span>
-                            <span className="text-gray-600 text-[10px]">{r.verified}</span>
+                            <span className="text-gray-500 text-[10px]">{r.verified}</span>
                           </div>
                           {r.caveat && (
                             <div className="mt-1 pl-[124px] text-[10px] text-gray-400/80">On-chain: {r.caveat}</div>
@@ -2057,7 +2057,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                           <div className="flex items-center gap-3">
                             <span className="text-white font-medium w-28 flex-shrink-0">{r.protocol}</span>
                             <span className="text-gray-400 flex-1">{r.detail}</span>
-                            <span className="text-gray-600 text-[10px]">{r.verified}</span>
+                            <span className="text-gray-500 text-[10px]">{r.verified}</span>
                           </div>
                           {r.caveat && (
                             <div className="mt-1 pl-[124px] text-[10px] text-gray-400/80">On-chain: {r.caveat}</div>
@@ -2206,7 +2206,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                         <td className="py-1.5 pr-3 text-gray-300">{p.name}</td>
                         <td className="py-1.5 px-3 text-right text-gray-300">{p.loss}</td>
                         <td className="py-1.5 px-3 text-center text-gray-400">{p.chainDepth}</td>
-                        <td className="py-1.5 pl-3 text-gray-600">{p.source}</td>
+                        <td className="py-1.5 pl-3 text-gray-500">{p.source}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -2240,7 +2240,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
             </div>
           )}
 
-      <div className="mt-6 pt-5 border-t border-white/[0.04] text-[11px] text-gray-600">
+      <div className="mt-6 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500">
         <p>Routing and settlement data verified on-chain where possible. Oracle dependencies sourced from protocol documentation (oracle price accounts are read via account references and cannot be verified through transaction analysis). Governance data from solgov on-chain audits. Data covers the {PROTOCOLS.length} protocols tracked on solgov.</p>
       </div>
         </>}

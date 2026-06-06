@@ -6,6 +6,7 @@ solgov is the governance transparency layer for Solana DeFi. Continuous reads ac
 
 ## Try it
 
+- 3-minute demo: [youtu.be/F1clEqm7SRk](https://youtu.be/F1clEqm7SRk)
 - Dashboard: [solgov.xyz](https://solgov.xyz)
 - Public alerts: [t.me/SolGovActivity](https://t.me/SolGovActivity) (Telegram channel for real-time alerts on threshold, member, timelock, and configAuthority changes)
 - Personal subscriptions: [@SolGov_bot](https://t.me/SolGov_bot) (filter by severity and event type, `/check` lookups)

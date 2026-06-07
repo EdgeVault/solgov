@@ -1,6 +1,6 @@
 # solgov
 
-[![License: MIT](https://img.shields.io/github/license/EdgeVault/solgov)](LICENSE)
+[![Submission](https://img.shields.io/badge/Colosseum%20Frontier-submission-purple)](SUBMISSION.md)
 [![Last commit](https://img.shields.io/github/last-commit/EdgeVault/solgov)](https://github.com/EdgeVault/solgov/commits/main)
 [![Live dashboard](https://img.shields.io/badge/dashboard-solgov.xyz-blue)](https://solgov.xyz)
 [![Live API](https://img.shields.io/badge/API-live-brightgreen)](https://api.solgov.xyz/api/state)

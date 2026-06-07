@@ -26,6 +26,9 @@ Every claim in the dashboard traces to an on-chain RPC read or a named source UR
 
 ## Latest
 
+- Jun 2026: continuous monitoring caught real-time governance changes across tracked protocols, including timelocks added and removed, thresholds raised, and signer sets expanded
+- Jun 2026: weekly governance digest broadcast added to the public Telegram channel
+- Jun 2026: tracked protocol set expanded with new perps and DEX entries
 - May 2026: program coverage expanded to 188 programs across 50+ protocols
 - May 2026: LLM auto-triage with on-chain follow-up RPC verification on critical events. The system reads additional account state before classifying an alert as real signal versus noise
 - May 2026: risk-weighted alert frequency by program criticality (treasury, admin authority, TVL exposure)

@@ -1,5 +1,10 @@
 # solgov
 
+[![License: MIT](https://img.shields.io/github/license/EdgeVault/solgov)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/EdgeVault/solgov)](https://github.com/EdgeVault/solgov/commits/main)
+[![Live dashboard](https://img.shields.io/badge/dashboard-solgov.xyz-blue)](https://solgov.xyz)
+[![Live API](https://img.shields.io/badge/API-live-brightgreen)](https://api.solgov.xyz/api/state)
+
 ![solgov dashboard](docs/hero.png)
 
 solgov is the governance transparency layer for Solana DeFi. Continuous reads across 50+ protocols, surfacing the setup-risk patterns that precede admin-key exploits.
@@ -221,6 +226,6 @@ Built solo by [@Trader_CSK](https://x.com/Trader_CSK).
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to suggest a protocol or report a factual correction. For vulnerabilities in solgov itself, see [`SECURITY.md`](SECURITY.md). For how on-chain observations about tracked protocols are handled, see [`disclosures.md`](disclosures.md).
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to suggest a protocol or report a factual correction. For vulnerabilities in solgov itself, see [`SECURITY.md`](SECURITY.md). For how on-chain observations about tracked protocols are handled, see [`disclosures.md`](disclosures.md). Direction notes are in [`ROADMAP.md`](ROADMAP.md).
 
 Contact: [@Trader_CSK](https://x.com/Trader_CSK) on X.

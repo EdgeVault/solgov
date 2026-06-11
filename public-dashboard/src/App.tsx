@@ -22,7 +22,7 @@ function Dropdown({ value, onChange, options }: { value: string; onChange: (v: s
         onClick={() => setOpen(!open)}
       >
         {label}
-        <span className="text-gray-500 text-[10px]">{open ? '\u25B2' : '\u25BC'}</span>
+        <span className="text-gray-400 text-[10px]">{open ? '\u25B2' : '\u25BC'}</span>
       </button>
       {open && (
         <div className="absolute top-full left-0 mt-1 bg-[#0e0e14] border border-white/[0.08] rounded-md shadow-2xl z-50 min-w-[160px] py-1">
@@ -54,6 +54,7 @@ import { ChainRiskPanel } from './components/ChainRiskPanel';
 import { CompactHackChart } from './components/CompactHackChart';
 import solanaHacksData from './data/solana-hacks.json';
 import evmHacksData from './data/evm-hacks.json';
+import tokenCustodyData from './data/token-custody.json';
 import otherChainHacksData from './data/other-chain-hacks.json';
 import { TvlChart } from './components/TvlChart';
 import { useLiveData } from './hooks/useLiveData';
@@ -238,6 +239,264 @@ function ProtocolLogo({ name }: { name: string }) {
       className="w-5 h-5 rounded-full flex-shrink-0"
       onError={() => setFailed(true)}
     />
+  );
+}
+
+// Identity-aware custody upgrade. The structural classifier returns 'single-key' for any
+// System Program owned account. That's misleading because Squads vault PDAs, Realms treasury
+// PDAs, CEX hot wallets, and genuine single keys all look identical at that layer. Use the
+// Helius identity overlay (name + tags) to upgrade to a more accurate label where possible.
+// When no override fires, label as 'unverified' rather than 'single-key' to be honest about
+// the limit of what we can confirm.
+function effectiveCustody(rawCustody: string, identityName?: string, identityTags?: string[]): string {
+  const name = (identityName || '').toLowerCase();
+  const tagsJoined = (identityTags || []).join(' ').toLowerCase();
+  const combined = `${name} ${tagsJoined}`;
+
+  // Multisig signals (highest confidence, Helius explicitly labels these)
+  if (combined.includes('squads multisig v4')) return 'squads-v4';
+  if (combined.includes('squads multisig v3')) return 'squads-v3';
+  if (combined.includes('squads')) return 'squads-v4';
+
+  // DAO / Realms signals
+  if (combined.includes('realms') || combined.includes('spl governance')) return 'dao-realms';
+  if (name.includes('dao treasury') || name.includes('dao vault') || name.includes('realm treasury')) return 'dao-realms';
+
+  // CEX custody signals (Helius tags / known CEX names in identity)
+  const cexNames = ['binance', 'coinbase', 'okx', 'kucoin', 'bybit', 'kraken', 'gate', 'crypto.com', 'huobi', 'mexc', 'bitkub', 'bitstamp', 'gemini', 'upbit'];
+  const cexCustodyTags = ['fireblocks', 'coinbase prime', 'bitgo', 'copper', 'bitkub deposit', 'fireblocks custody'];
+  if (cexNames.some(n => combined.includes(n)) ||
+      cexCustodyTags.some(t => combined.includes(t)) ||
+      name.includes('hot wallet') ||
+      name.includes('exchange deposit') ||
+      name.endsWith('deposit')) {
+    return 'cex-custody';
+  }
+
+  // Foundation / team treasury (gentle label, Helius identified, just not as DAO)
+  if (name.includes('foundation') || name.includes('treasury')) return 'foundation-treasury';
+
+  // Vesting / lockup / protocol vault
+  if (name.includes('vesting') || name.includes('lockup') || name.includes('cliff') || name.includes('escrow')) return 'vesting';
+  if (name.endsWith(' vault') || name.includes('insurance fund') || name.includes('protocol vault') || / vault$/i.test(name)) return 'protocol-vault';
+
+  // Pass through known structural classifications
+  if (rawCustody === 'squads-v4' || rawCustody === 'squads-v3' || rawCustody === 'serum-multisig' || rawCustody === 'spl-governance') return rawCustody;
+  if (rawCustody === 'program-pda' || rawCustody === 'token-account') return rawCustody;
+
+  // System Program owned with no identity signal, honest fallback
+  if (rawCustody === 'single-key' || rawCustody === 'system-program') return 'unverified';
+  return rawCustody;
+}
+
+function custodyLabel(c: string | null | undefined): string {
+  if (!c) return '';
+  return ({
+    'squads-v4': 'Squads V4',
+    'squads-v3': 'Squads V3',
+    'serum-multisig': 'Serum multisig',
+    'spl-governance': 'Realms DAO',
+    'dao-realms': 'DAO / Realms',
+    'cex-custody': 'CEX custody',
+    'foundation-treasury': 'Foundation treasury',
+    'vesting': 'Vesting / lockup',
+    'protocol-vault': 'Protocol vault',
+    'program-pda': 'Program-controlled',
+    'token-account': 'Token account',
+    'system-program': 'System',
+    'single-key': 'Single key',
+    'unverified': 'Unverified',
+    'unknown': 'Unknown',
+  } as Record<string, string>)[c] || c;
+}
+
+function custodyClass(c: string | null | undefined): string {
+  if (!c) return 'text-gray-500';
+  if (c === 'unverified' || c === 'single-key') return 'text-amber-300/80';
+  if (c === 'unknown') return 'text-gray-500';
+  if (c === 'cex-custody') return 'text-blue-300/80';
+  if (c === 'dao-realms' || c === 'foundation-treasury' || c === 'protocol-vault') return 'text-emerald-300/80';
+  return 'text-gray-300';
+}
+
+function fmtTokenAmount(n: number): string {
+  if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
+  if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
+  if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+  return n.toFixed(0);
+}
+
+function fmtUSD(n: number | undefined | null, prefix: string = '$'): string {
+  if (n == null) return '-';
+  if (n >= 1e9) return prefix + (n / 1e9).toFixed(2) + 'B';
+  if (n >= 1e6) return prefix + (n / 1e6).toFixed(2) + 'M';
+  if (n >= 1e3) return prefix + (n / 1e3).toFixed(1) + 'K';
+  if (n >= 1) return prefix + n.toFixed(2);
+  if (n > 0) return prefix + n.toPrecision(3);
+  return prefix + '0';
+}
+
+function TokenCustodySection({
+  protocolName: _protocolName,
+  tokenSymbol,
+  snapshot,
+}: {
+  protocolName: string;
+  tokenSymbol: string;
+  snapshot: any;
+}) {
+  const [expanded, setExpanded] = useState(false);
+
+  const upgradedHolders = snapshot.topHolders.map((h: any) => ({
+    ...h,
+    effectiveCustody: effectiveCustody(h.ownerCustody, h.identityName, h.identityTags),
+  }));
+
+  let unverifiedCount = 0;
+  let multisigOrDaoCount = 0;
+  let cexCount = 0;
+  let programCount = 0;
+  for (const h of upgradedHolders) {
+    const c = h.effectiveCustody;
+    if (c === 'unverified' || c === 'single-key' || c === 'unknown') unverifiedCount++;
+    else if (c === 'cex-custody') cexCount++;
+    else if (c.startsWith('squads') || c === 'serum-multisig' || c === 'spl-governance' || c === 'dao-realms' || c === 'foundation-treasury') multisigOrDaoCount++;
+    else if (c === 'program-pda' || c === 'token-account' || c === 'vesting' || c === 'protocol-vault') programCount++;
+  }
+
+  const fundingClusters = (snapshot.fundingClusters as any[]) || [];
+  // Map each clustered owner address to a cluster index so we can draw a small marker
+  // on the table row in a matching colour to the callout above. Distinct colour per cluster
+  // so two separate groups of linked wallets don't get visually mixed.
+  const ownerToClusterIdx = new Map<string, number>();
+  fundingClusters.forEach((c: any, idx: number) => {
+    for (const owner of c.holderOwners) ownerToClusterIdx.set(owner, idx);
+  });
+  const clusterDotColors = [
+    'bg-amber-300/80',
+    'bg-sky-300/80',
+    'bg-violet-300/80',
+    'bg-emerald-300/80',
+    'bg-rose-300/80',
+  ];
+  const colorForCluster = (idx: number) => clusterDotColors[idx % clusterDotColors.length];
+
+  return (
+    <>
+      <h4 className="font-bold text-white mt-4 mb-2">
+        Token Custody
+        <Tooltip text="Top holders of the protocol's native token with on-chain custody classification (single-key vs multisig vs program-controlled), Helius identity labels where available, and a note on holders that share a common first-funder on chain."><InfoIcon /></Tooltip>
+      </h4>
+
+      {/* Compact market + authority row */}
+      <div className="grid grid-cols-2 md:grid-cols-2 gap-2 mb-2">
+        <div className="bg-white/[0.03] rounded p-2">
+          <p className="text-gray-400 text-[10px]">{tokenSymbol} market cap</p>
+          <p className="text-gray-300 text-[11px]">{fmtUSD(snapshot.marketCapUsd)}</p>
+        </div>
+        <div className="bg-white/[0.03] rounded p-2">
+          <p className="text-gray-400 text-[10px]">Spot price</p>
+          <p className="text-gray-300 text-[11px]">{fmtUSD(snapshot.priceUsd)}</p>
+        </div>
+        <div className="bg-white/[0.03] rounded p-2">
+          <p className="text-gray-400 text-[10px]">Mint authority</p>
+          <p className={`text-[11px] ${custodyClass(snapshot.mintAuthorityCustody)}`}>
+            {snapshot.mintAuthority === null ? 'Disabled (immutable)' : custodyLabel(snapshot.mintAuthorityCustody)}
+          </p>
+        </div>
+        <div className="bg-white/[0.03] rounded p-2">
+          <p className="text-gray-400 text-[10px]">Freeze authority</p>
+          <p className={`text-[11px] ${custodyClass(snapshot.freezeAuthorityCustody)}`}>
+            {snapshot.freezeAuthority === null ? 'Disabled' : custodyLabel(snapshot.freezeAuthorityCustody)}
+          </p>
+        </div>
+      </div>
+
+      {/* Funding-cluster note. One line per cluster, each with its own dot colour.
+          The dots match the markers next to the affected rows in the table below. */}
+      {fundingClusters.length > 0 && (
+        <div className="mb-2 p-2 rounded border border-white/[0.06] bg-white/[0.02]">
+          {fundingClusters.map((c: any, i: number) => (
+            <p key={c.funder} className={`text-[11px] text-gray-300 ${i > 0 ? 'mt-1' : ''}`}>
+              <span className={`inline-block w-2 h-2 rounded-full mr-1.5 align-middle ${colorForCluster(i)}`} />
+              {c.count} of the top wallets share the same first funder
+            </p>
+          ))}
+        </div>
+      )}
+
+      {/* Expandable top-10 summary */}
+      <button
+        type="button"
+        onClick={() => setExpanded(v => !v)}
+        className="w-full flex items-center justify-between bg-white/[0.03] hover:bg-white/[0.05] rounded p-2 text-left transition-colors"
+      >
+        <span className="text-[11px] text-gray-400">
+          Top 10 holders control <span className="text-white font-medium">{snapshot.summary.topNPct.toFixed(1)}%</span> of supply
+          <span className="text-gray-500 ml-2 block md:inline">
+            ({multisigOrDaoCount} multisig/DAO, {cexCount} CEX, {programCount} program/lock, {unverifiedCount} unverified)
+          </span>
+        </span>
+        <span className="text-[10px] text-gray-400 ml-2">{expanded ? '▴ hide' : '▾ show'}</span>
+      </button>
+
+      {expanded && (
+        <>
+          <div className="overflow-x-auto mt-2">
+            <div className="overflow-hidden rounded border border-white/[0.04] min-w-[480px] md:min-w-0">
+              <table className="w-full text-[11px]">
+                <thead className="bg-white/[0.03]">
+                  <tr className="text-gray-500">
+                    <th className="text-left px-2 py-1.5 font-medium">#</th>
+                    <th className="text-left px-2 py-1.5 font-medium">Holder</th>
+                    <th className="text-right px-2 py-1.5 font-medium">USD value</th>
+                    <th className="text-right px-2 py-1.5 font-medium">% supply</th>
+                    <th className="text-left px-2 py-1.5 font-medium">Custody</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {upgradedHolders.map((h: any, i: number) => {
+                    const clusterIdx = ownerToClusterIdx.get(h.owner);
+                    return (
+                    <tr key={h.address} className="border-t border-white/[0.03]">
+                      <td className="px-2 py-1.5 text-gray-500">{i + 1}</td>
+                      <td className="px-2 py-1.5">
+                        {clusterIdx !== undefined && (
+                          <span
+                            className={`inline-block w-2 h-2 rounded-full mr-1.5 align-middle ${colorForCluster(clusterIdx)}`}
+                            title="Linked wallet (shares first funder with another top holder)"
+                          />
+                        )}
+                        {h.identityName ? (
+                          <span>
+                            <span className="text-gray-300">{h.identityName}</span>
+                            {h.identityTags && h.identityTags.length > 0 && (
+                              <span className="text-gray-500 ml-1 text-[10px]">({h.identityTags.join(', ')})</span>
+                            )}
+                          </span>
+                        ) : (
+                          <a href={`https://solscan.io/account/${h.owner}`} target="_blank" rel="noopener" className="font-mono text-gray-400 hover:text-gray-300 underline decoration-gray-700">
+                            {h.owner.slice(0, 4)}...{h.owner.slice(-4)}
+                          </a>
+                        )}
+                      </td>
+                      <td className="px-2 py-1.5 text-right text-gray-300 font-mono">{fmtUSD(h.usdValue)}</td>
+                      <td className="px-2 py-1.5 text-right text-gray-400 font-mono">{h.pctOfSupply.toFixed(2)}%</td>
+                      <td className={`px-2 py-1.5 ${custodyClass(h.effectiveCustody)} whitespace-nowrap`}>{custodyLabel(h.effectiveCustody)}</td>
+                    </tr>
+                  )})}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p className="text-[10px] text-gray-400 mt-2">
+            Mint: <a href={`https://solscan.io/token/${snapshot.mint}`} target="_blank" rel="noopener" className="font-mono hover:text-gray-300 underline decoration-gray-700">{snapshot.mint.slice(0, 6)}...{snapshot.mint.slice(-4)}</a>
+            {' · '}Snapshot {snapshot.fetchedAt.split('T')[0]}
+            {' · '}Identity via Helius, prices via Jupiter
+          </p>
+        </>
+      )}
+    </>
   );
 }
 
@@ -486,7 +745,7 @@ function App() {
                         <span className="text-[10px] uppercase tracking-[0.08em] text-gray-400">Live activity</span>
                       </div>
                       {lastScanLabel && (
-                        <span className="text-[10px] text-gray-500 font-mono">scan {lastScanLabel}</span>
+                        <span className="text-[10px] text-gray-400 font-mono">scan {lastScanLabel}</span>
                       )}
                     </div>
                     {recentEvents.length > 0 ? (
@@ -705,7 +964,7 @@ function App() {
                         <span className="font-mono">
                           <span className="text-gray-300">{p.threshold}/{p.activeVoters > 0 ? p.activeVoters : p.totalMembers}</span>
                           {p.activeVoters > 0 && p.activeVoters !== p.totalMembers && (
-                            <span className="text-[10px] text-gray-500 ml-1">({p.totalMembers} total)</span>
+                            <span className="text-[10px] text-gray-400 ml-1">({p.totalMembers} total)</span>
                           )}
                         </span>
                       )}
@@ -844,7 +1103,7 @@ function App() {
                               <div className="mb-3 pb-3 border-b border-white/[0.06]">
                                 <h4 className="font-bold text-white mb-1">TVL</h4>
                                 <p className="text-lg text-white font-semibold">{formatTvlDisplay(llama.tvl[p.name])}</p>
-                                <p className="text-[10px] text-gray-500">Live from DeFiLlama{
+                                <p className="text-[10px] text-gray-400">Live from DeFiLlama{
                                   p.name === 'Pumpfun + PumpSwap' ? ' (PumpSwap DEX only - bonding curve SOL not tracked)'
                                   : p.name === 'Drift' ? ' (Drift Trade + Drift Staked SOL combined)'
                                   : p.name === 'Sanctum' ? ' (Validator LSTs + Infinity + Reserve combined)'
@@ -912,7 +1171,7 @@ function App() {
                               <p className="text-[12px] text-gray-400">{p.authorityAddress}</p>
                             )}
                             {p.authorityRoleNote && (
-                              <p className="text-[10px] text-gray-500 mt-1">{p.authorityRoleNote}</p>
+                              <p className="text-[10px] text-gray-400 mt-1">{p.authorityRoleNote}</p>
                             )}
                             {p.secondaryVaults && p.secondaryVaults.length > 0 && (
                               <>
@@ -925,13 +1184,21 @@ function App() {
                                     ) : (
                                       <a href={`https://solscan.io/account/${v.address}`} target="_blank" rel="noopener" className="hover:text-white underline">{v.address}</a>
                                     )}
-                                    {v.note && <span className="block text-gray-500 text-[10px] mt-0.5">{v.note}</span>}
+                                    {v.note && <span className="block text-gray-400 text-[10px] mt-0.5">{v.note}</span>}
                                   </p>
                                 ))}
                               </>
                             )}
                             {p.squadsProfilePublic === false && (
                               <p className="mt-2 text-[11px] text-amber-400/70">Squads profile: private. UI hidden from non-members, but threshold, members, and balance are still fully readable on-chain via RPC. Solgov uses RPC reads, not the Squads UI.</p>
+                            )}
+
+                            {p.tokenMint && (tokenCustodyData.snapshots as any)[p.name] && (
+                              <TokenCustodySection
+                                protocolName={p.name}
+                                tokenSymbol={p.tokenSymbol!}
+                                snapshot={(tokenCustodyData.snapshots as any)[p.name]}
+                              />
                             )}
                           </div>
 
@@ -1020,7 +1287,7 @@ function App() {
                                   <Check pass={false} label="No verified build. Cannot confirm deployed code matches source." />
                                 )}</p>
                                 {p.configAuthority && p.configAuthority !== 'autonomous' && (
-                                  <p className="mt-1"><span className="text-gray-400 font-bold">{'\u2717'} External config authority key</span> <span className="text-gray-400">can change threshold, members, and timelock on this multisig without going through the multisig vote</span>. <code className="text-[10px] text-gray-500">{p.configAuthority.slice(0, 12)}...</code>
+                                  <p className="mt-1"><span className="text-gray-400 font-bold">{'\u2717'} External config authority key</span> <span className="text-gray-400">can change threshold, members, and timelock on this multisig without going through the multisig vote</span>. <code className="text-[10px] text-gray-400">{p.configAuthority.slice(0, 12)}...</code>
                                   <Tooltip text="Squads documentation states a Controlled Multisig is not recommended for most use cases."><InfoIcon /></Tooltip></p>
                                 )}
                               </>
@@ -1083,7 +1350,7 @@ function App() {
                                   <p className="text-[11px] text-gray-400">{p.protocolDisclosed.other}</p>
                                 )}
                                 {p.protocolDisclosed.updatedAt && (
-                                  <p className="text-[10px] text-gray-500 mt-1">Updated {p.protocolDisclosed.updatedAt}</p>
+                                  <p className="text-[10px] text-gray-400 mt-1">Updated {p.protocolDisclosed.updatedAt}</p>
                                 )}
                               </>
                             )}
@@ -1099,10 +1366,10 @@ function App() {
                                 )}
                                 <div className="flex items-center gap-3 mt-1">
                                   {p.publicDocs.source && (
-                                    <a href={p.publicDocs.source} target="_blank" rel="noopener" className="text-[10px] text-gray-500 hover:text-gray-300 underline decoration-gray-700">Read more</a>
+                                    <a href={p.publicDocs.source} target="_blank" rel="noopener" className="text-[10px] text-gray-400 hover:text-gray-300 underline decoration-gray-700">Read more</a>
                                   )}
                                   {p.publicDocs.updatedAt && (
-                                    <span className="text-[10px] text-gray-500">Updated {p.publicDocs.updatedAt}</span>
+                                    <span className="text-[10px] text-gray-400">Updated {p.publicDocs.updatedAt}</span>
                                   )}
                                 </div>
                               </>
@@ -1138,7 +1405,7 @@ function App() {
                                     <p><span className="text-gray-500">Track record:</span> <span className="text-gray-400">{p.insuranceFund.historicalReimbursement}</span></p>
                                   )}
                                   {p.insuranceFund.sourceUrl && (
-                                    <a href={p.insuranceFund.sourceUrl} target="_blank" rel="noopener" className="text-[10px] text-gray-500 hover:text-gray-300 underline decoration-gray-700 block mt-1">Source documentation</a>
+                                    <a href={p.insuranceFund.sourceUrl} target="_blank" rel="noopener" className="text-[10px] text-gray-400 hover:text-gray-300 underline decoration-gray-700 block mt-1">Source documentation</a>
                                   )}
                                 </div>
                               </>
@@ -1202,7 +1469,7 @@ function App() {
             return (
               <div className="space-y-6">
                 <div className="bg-[#0a0a0f] border border-white/[0.04] rounded-md px-4 py-4">
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Headline finding</div>
+                  <div className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Headline finding</div>
                   <div className="flex items-baseline gap-3 flex-wrap">
                     <div className="text-3xl font-semibold text-white tabular-nums">{fmt(signerGross)}</div>
                     <div className="text-sm text-gray-300">of <span className="tabular-nums">{fmt(totalGross)}</span> tracked DeFi losses ({(signerShare * 100).toFixed(0)}%) trace to signer / admin key compromise.</div>
@@ -1211,8 +1478,8 @@ function App() {
                 </div>
                 <SolanaHackChart />
                 <div>
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">Cross-chain context</div>
-                  <p className="text-[10px] text-gray-500 mb-3">Smaller reference views. Solana DeFi exploits are the focus of this dashboard; the panels below scale those losses against an EVM-only aggregate and a combined total.</p>
+                  <div className="text-[10px] text-gray-400 uppercase tracking-wider mb-1">Cross-chain context</div>
+                  <p className="text-[10px] text-gray-400 mb-3">Smaller reference views. Solana DeFi exploits are the focus of this dashboard; the panels below scale those losses against an EVM-only aggregate and a combined total.</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <CompactHackChart
                       title="EVM DeFi Exploits"
@@ -1752,7 +2019,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                             </>
                           )}
                           {liveStates[name]?.lastChecked && (
-                            <p className="mt-2 text-[10px] text-gray-500">Last scanned: {liveStates[name].lastChecked.replace('T', ' ').slice(0, 16)} UTC</p>
+                            <p className="mt-2 text-[10px] text-gray-400">Last scanned: {liveStates[name].lastChecked.replace('T', ' ').slice(0, 16)} UTC</p>
                           )}
                         </div>
                       </div>
@@ -1832,11 +2099,11 @@ function ExposureRow({ node, index, liveByName }: { node: ExposureNode; index: n
   const { governance, timelock, activeVoters, isLive } = overlayExposureNode(node, liveByName);
   return (
     <div className={`flex items-start gap-3 py-2.5 px-3 rounded-lg ${hasNote ? 'bg-white/[0.02] border border-white/[0.06]' : 'bg-white/[0.01]'}`}>
-      <span className="text-gray-500 text-[10px] w-4 pt-0.5">{index + 1}</span>
+      <span className="text-gray-400 text-[10px] w-4 pt-0.5">{index + 1}</span>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs font-medium text-white">{node.name}</span>
-          <span className="text-[10px] text-gray-500">{node.role}</span>
+          <span className="text-[10px] text-gray-400">{node.role}</span>
           {isLive && (
             <Tooltip text="Governance, timelock and active-voter values for this dependency are pulled live from on-chain reads via the listener.">
               <span className="text-[9px] uppercase tracking-wider text-emerald-400/70 cursor-help">live</span>
@@ -1987,17 +2254,17 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
           <div className="space-y-1">
             <ExposureSection title="Price Feeds (Oracles)" icon="📡" nodes={exposure.oracles} emptyText="No oracle dependencies" liveByName={liveByName} />
             {exposure.oracles.length > 0 && exposure.collateral.length > 0 && (
-              <div className="text-center text-gray-500 text-[10px] py-1">↓ prices feed into ↓</div>
+              <div className="text-center text-gray-400 text-[10px] py-1">↓ prices feed into ↓</div>
             )}
 
             <ExposureSection title="Collateral Accepted" icon="🪙" nodes={exposure.collateral} emptyText="No external collateral" liveByName={liveByName} />
             {exposure.collateral.length > 0 && exposure.routing.length > 0 && (
-              <div className="text-center text-gray-500 text-[10px] py-1">↓ if liquidated, flows to ↓</div>
+              <div className="text-center text-gray-400 text-[10px] py-1">↓ if liquidated, flows to ↓</div>
             )}
 
             <ExposureSection title="Routing" icon="🔀" nodes={exposure.routing} emptyText="" liveByName={liveByName} />
             {exposure.routing.length > 0 && exposure.settlement.length > 0 && (
-              <div className="text-center text-gray-500 text-[10px] py-1">↓ settles on ↓</div>
+              <div className="text-center text-gray-400 text-[10px] py-1">↓ settles on ↓</div>
             )}
 
             <ExposureSection title="Settlement (DEX Pools)" icon="💱" nodes={exposure.settlement} emptyText="" liveByName={liveByName} />
@@ -2038,7 +2305,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                           <div className="flex items-center gap-3">
                             <span className="text-white font-medium w-28 flex-shrink-0">{r.protocol}</span>
                             <span className="text-gray-400 flex-1">{r.detail}</span>
-                            <span className="text-gray-500 text-[10px]">{r.verified}</span>
+                            <span className="text-gray-400 text-[10px]">{r.verified}</span>
                           </div>
                           {r.caveat && (
                             <div className="mt-1 pl-[124px] text-[10px] text-gray-400/80">On-chain: {r.caveat}</div>
@@ -2057,7 +2324,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                           <div className="flex items-center gap-3">
                             <span className="text-white font-medium w-28 flex-shrink-0">{r.protocol}</span>
                             <span className="text-gray-400 flex-1">{r.detail}</span>
-                            <span className="text-gray-500 text-[10px]">{r.verified}</span>
+                            <span className="text-gray-400 text-[10px]">{r.verified}</span>
                           </div>
                           {r.caveat && (
                             <div className="mt-1 pl-[124px] text-[10px] text-gray-400/80">On-chain: {r.caveat}</div>

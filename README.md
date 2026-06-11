@@ -26,6 +26,7 @@ Every claim in the dashboard traces to an on-chain RPC read or a named source UR
 
 ## Latest
 
+- Jun 2026: token custody view added for protocols with a native token, showing top holders, custody classification, mint and freeze authority status, and wallets sharing a first funder
 - Jun 2026: continuous monitoring caught real-time governance changes across tracked protocols, including timelocks added and removed, thresholds raised, and signer sets expanded
 - Jun 2026: weekly governance digest broadcast added to the public Telegram channel
 - Jun 2026: tracked protocol set expanded with new perps and DEX entries
@@ -218,7 +219,7 @@ Nothing scraped. Anything not from on-chain reads is credited at the source.
 ## Status
 
 - 50+ protocols tracked across 63 multisigs (Squads V4, V3, Serum, mean-multisig)
-- 188 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
+- 190 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
 - Durable nonce detection, Token-2022 extension flags, and 1-of-N signer setups all surfaced
 - Public good: open source under MIT, free dashboard, free API with no auth, no token
 - Engagement: ecosystem leaders and protocol teams have reached out privately. See [`disclosures.md`](disclosures.md).

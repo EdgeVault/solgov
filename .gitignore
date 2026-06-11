@@ -138,3 +138,8 @@ sentinel/src/investigations/
 # Sentinel src-level dev README + PowerShell scratch
 sentinel/src/README.md
 sentinel/src/*.ps1
+
+# Hackathon competitor research export (local only, never commit)
+frontier-hackathon-projects.xlsx
+*.xlsx
+*.csv

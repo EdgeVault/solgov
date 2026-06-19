@@ -811,7 +811,7 @@ function inferCategory(name: string): string {
     'BisonFi': 'Prop AMM', 'Tessera V': 'Prop AMM', 'HumidiFi': 'Prop AMM',
     'Photon': 'Trading Bot', 'deBridge': 'Bridge',
     'Zebec': 'Infrastructure', 'Onre Finance': 'Other', 'SPL Stake Pool': 'Infrastructure',
-    'LayerZero OFT': 'Bridge', 'SolvBTC': 'Bridge', 'GMSOL': 'Perps', 'GMSOL Deploy': 'Perps', 'Ore': 'Infrastructure',
+    'LayerZero OFT': 'Bridge', 'SolvBTC': 'Bridge', 'GMSOL': 'Perps', 'Ore': 'Infrastructure',
     'Carrot': 'Yield', 'DefiTuna': 'Lending',
     'Neutral Trade': 'Yield', 'Vectis Finance': 'Yield', 'HawkFi': 'Yield', 'Perena': 'Yield',
   };

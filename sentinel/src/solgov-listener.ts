@@ -311,13 +311,13 @@ function overallSeverity(events: TypedChange[]): Severity {
 async function handleV4Change(name: string, address: string, conn: Connection) {
   try {
     const ms = await multisig.accounts.Multisig.fromAccountAddress(conn, new PublicKey(address));
-    await processV4State(name, ms);
+    await processV4State(name, ms, address);
   } catch (e: any) {
     console.error(`[ERROR] ${name}:`, e.message?.slice(0, 60));
   }
 }
 
-async function processV4State(name: string, ms: any) {
+async function processV4State(name: string, ms: any, address: string) {
   try {
     const threshold = ms.threshold;
     const memberCount = ms.members.length;
@@ -369,7 +369,7 @@ async function processV4State(name: string, ms: any) {
       // Log one activity entry per typed change so the feed can distinguish
       // timelock / threshold / rotation / external-key events from one another.
       for (const c of typedChanges) {
-        logActivity(name, c.type, c.detail);
+        logActivity(name, c.type, c.detail, address);
       }
 
       const addedSigners = memberKeys.filter((k: string) => !prev.memberKeys.includes(k));
@@ -431,7 +431,7 @@ async function reVerifyAllV4(conn: Connection, reason: string) {
       if (!info) continue;
       try {
         const [ms] = multisig.accounts.Multisig.fromAccountInfo(info);
-        await processV4State(v4Items[i].name, ms);
+        await processV4State(v4Items[i].name, ms, v4Items[i].address);
       } catch (e: any) {
         console.error(`[RE-VERIFY] ${v4Items[i].name}: decode failed: ${e.message?.slice(0, 40)}`);
       }
@@ -467,7 +467,7 @@ async function handleAuthorityChange(name: string, address: string) {
   }
   const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
   const hour = new Date().getUTCHours();
-  logActivity(name, 'AuthorityActivity', `Authority activity at ${hour}:00 UTC`);
+  logActivity(name, 'AuthorityActivity', `Authority activity at ${hour}:00 UTC`, address);
 
   const label = await labelAddress(address);
 
@@ -701,7 +701,7 @@ function connectWebSocket(conn: Connection, programDataWatch: { name: string; ad
           await sleep(1000);
           await handleV4Change(changedItem.name, changedItem.address, conn);
         } else if (changedItem.type === 'v3' || changedItem.type === 'serum') {
-          logActivity(changedItem.name, 'VaultTx', 'Account data changed');
+          logActivity(changedItem.name, 'VaultTx', 'Account data changed', changedItem.address);
         } else if (changedItem.type === 'authority') {
           await handleAuthorityChange(changedItem.name, changedItem.address);
         } else if (changedItem.type === 'program-upgrade') {
@@ -769,7 +769,7 @@ async function main() {
       }
       try {
         const [ms] = multisig.accounts.Multisig.fromAccountInfo(info);
-        await processV4State(v4Items[i].name, ms);
+        await processV4State(v4Items[i].name, ms, v4Items[i].address);
       } catch (e: any) {
         console.error(`  ${v4Items[i].name}: ${e.message?.slice(0, 40)}`);
       }

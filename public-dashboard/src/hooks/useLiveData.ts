@@ -15,6 +15,7 @@ export interface ActivityEvent {
   protocol: string;
   type: string;
   detail: string;
+  multisig?: string;
 }
 
 interface MonitorState {

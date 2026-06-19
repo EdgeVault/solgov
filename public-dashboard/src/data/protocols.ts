@@ -11,6 +11,20 @@ export interface Program {
   authority: string;
 }
 
+// Role-separated governance. Some protocols split control across multiple multisigs
+// with different thresholds, timelocks and scopes (e.g. cold upgrade vs warm params vs
+// emergency pause). status 'verified' = read on-chain; 'announced' = team-disclosed,
+// values pending on-chain deployment. null values render as "Pending".
+export interface GovernanceRole {
+  role: string;
+  scope: string;
+  threshold: string | null;
+  timelock: string | null;
+  address: string | null;
+  status: 'verified' | 'announced';
+  roleSeparation?: boolean | null;
+}
+
 export interface InsuranceFund {
   hasInsuranceFund: boolean;
   fundType: 'none' | 'token_treasury' | 'stablecoin' | 'socialized_loss';
@@ -42,6 +56,8 @@ export interface Protocol {
   upgradesLast30d: number;
   hasRoleSeparation: boolean | null;
   members: Member[] | null;
+  governanceRoles?: GovernanceRole[];
+  governanceRolesNote?: string;
   programs?: Program[];
   sharedAuthority?: boolean;
   programTimelock?: 'verified' | 'self-reported' | null;
@@ -174,6 +190,13 @@ export const PROTOCOLS: Protocol[] = [
       { key: 'HC6BxMvDLfefSZE16FRRktLHD7JVFLuLKvNRidGzH7iH', role: 'Full' },
       { key: 'HgjySRE1j9T2NwFrGbK2hXk4Przoz31xdciedmt6CHF6', role: 'Full' },
     ],
+    governanceRolesNote: 'Drift currently runs a single interim recovery multisig (the 3/5 shown above, no timelock) put in place after the April 2026 exploit. The role-separated structure below has been publicly described by the team to replace it at relaunch. On-chain values are pending deployment and will be read on-chain and filled once live.',
+    governanceRoles: [
+      { role: 'Program upgrade (interim recovery)', scope: 'Current upgrade authority for Drift Protocol V2, the recovery multisig created after the April 2026 exploit', threshold: '3/5', timelock: 'None', address: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', status: 'verified', roleSeparation: false },
+      { role: 'Cold admin (planned)', scope: 'Program upgrades and all on-chain admin parameters', threshold: null, timelock: null, address: null, status: 'announced' },
+      { role: 'Warm admin (planned)', scope: 'On-chain admin parameters and new market listings', threshold: null, timelock: null, address: null, status: 'announced' },
+      { role: 'Pause admin (planned)', scope: 'Emergency pause of the protocol or any individual market', threshold: null, timelock: null, address: null, status: 'announced' },
+    ],
     sharedAuthority: false,
     programs: [
       { name: 'Protocol V2', id: 'dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH', authority: 'GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo' },
@@ -287,6 +310,12 @@ export const PROTOCOLS: Protocol[] = [
       { key: 'DFheUjWj6BL9CuF8gAYfF6TgrbrruTTCc3vE6Ajn1gyK', role: 'Full' },
       { key: 'G8fVffcHt3n6DkjSdYj47xWe55QjFsL4P5zhQ9RXFuPa', role: 'Full' },
       { key: 'HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj', role: 'Full' },
+    ],
+    governanceRolesNote: 'Kamino splits program upgrade authority across three multisigs, each read on-chain.',
+    governanceRoles: [
+      { role: 'kLend', scope: 'Lending program (kLend)', threshold: '5/10', timelock: '24h', address: '6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM', status: 'verified', roleSeparation: false },
+      { role: 'Liquidity', scope: 'Liquidity program', threshold: '4/7', timelock: 'None', address: 'E7994UpSGhSpbpnuSepPXHBuMy3eRvHJL36DjTs1kb2b', status: 'verified', roleSeparation: false },
+      { role: 'Farms', scope: 'KFarms program', threshold: '5/10', timelock: '24h', address: '5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk', status: 'verified', roleSeparation: false },
     ],
     sharedAuthority: false,
     programs: [
@@ -705,6 +734,11 @@ export const PROTOCOLS: Protocol[] = [
       { key: 'E1iyboRnxBSD8KJncj8mkkzbJu17gr5w6CiTN6q4YoUN', role: 'Full' },
       { key: 'EBCXuPcvNP39vbVSjadH7YwtKRt47iWK7Xs2yATDhmJ7', role: 'Vote' },
       { key: 'FoMboHErV2g7GjfQayFCRjWdXg3USZkPJCoeYEgPastv', role: 'Vote' },
+    ],
+    governanceRolesNote: 'Solstice splits program upgrade authority across two multisigs, both read on-chain.',
+    governanceRoles: [
+      { role: 'Core', scope: 'USX and YieldVault programs', threshold: '3/5', timelock: '24h', address: 'AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf', status: 'verified', roleSeparation: true },
+      { role: 'Aux', scope: 'Auxiliary program', threshold: '2/3', timelock: 'None', address: 'BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE', status: 'verified', roleSeparation: false },
     ],
     sharedAuthority: false,
     programs: [
@@ -1249,6 +1283,11 @@ insuranceFund: {
       { key: '7W4mr6bHDgF1euonrraAF8easT5G6tEiRJdyVqNpu6tn', role: 'Full' },
       { key: 'AZEvpc6RqVWt5uS1LiAXw9ann6bKKDwFBTCgZVWR2Zna', role: 'Full' },
       { key: 'AaUu9okTZ9wUBTSYJ3QhXp7ssxGbabsAbyTJ91orVUUq', role: 'Full' },
+    ],
+    governanceRolesNote: 'Raydium splits control across two multisigs, both read on-chain: a Squads V4 upgrade-authority multisig and a Squads V3 treasury multisig.',
+    governanceRoles: [
+      { role: 'Upgrade authority', scope: 'Program upgrade authority for Raydium programs (AMM, CLMM, CP-Swap, LaunchLab, Staking and others)', threshold: '3/4', timelock: 'None', address: 'tr8rgazUrZzgdkfc6Q622nVJHMMzh29trdBE2uBHb4u', status: 'verified', roleSeparation: false },
+      { role: 'Treasury', scope: 'Treasury, protocol revenue, and limited program-admin authority (AmmConfig creation and modification, protocol fee sweeping, pool parameter configuration)', threshold: '2/3', timelock: 'None', address: 'EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm', status: 'verified', roleSeparation: null },
     ],
     sharedAuthority: true,
     programs: [
@@ -1870,6 +1909,11 @@ insuranceFund: {
       { key: 'ERd6pJjzWiCsNvuJWtPYvbusUsqxhVjMEnGdqEgXbHCK', role: 'Full' },
       { key: 'HermrxzFjZ7mthzWZCoTXWdkGEaCh8MoZPSCray3U5ym', role: 'Full' },
     ],
+    governanceRolesNote: 'Helium splits program upgrade authority across two multisigs, both read on-chain.',
+    governanceRoles: [
+      { role: 'Ecosystem', scope: 'Main ecosystem programs (Entity Manager, Data Credits, Sub DAOs, governance, treasury and others)', threshold: '3/6', timelock: 'None', address: 'FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1', status: 'verified', roleSeparation: true },
+      { role: 'Omnix Admin', scope: 'Omnix admin program', threshold: '4/11', timelock: 'None', address: '1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz', status: 'verified', roleSeparation: true },
+    ],
     programs: [
       { name: 'Entity Manager', id: 'hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8', authority: 'pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U' },
       { name: 'Data Credits', id: 'credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT', authority: 'pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U' },
@@ -2229,6 +2273,11 @@ insuranceFund: {
       { key: 'FKy9ETj6y1pHHrZG7Wg6ARahLpjMxvWdTN1CNybseiy', role: 'Full' },
       { key: 'FW3mAwFdoQoCEKsk3EAoFeZHFPJGFkFieq866yXVnDNx', role: 'Propose' },
     ],
+    governanceRolesNote: 'LayerZero OFT splits program upgrade authority across two multisigs, both read on-chain.',
+    governanceRoles: [
+      { role: 'OFT bridge', scope: 'OFT bridge program', threshold: '1/2', timelock: 'None', address: '9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN', status: 'verified', roleSeparation: true },
+      { role: 'Devtools', scope: 'Devtools program', threshold: '4/6', timelock: 'None', address: 'HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC', status: 'verified', roleSeparation: false },
+    ],
     programs: [
       { name: 'OFT', id: '219m42qCuVirVvWs5GnkuX4aWFx5pX6D9RSTE1vsV5WS', authority: '6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31' },
       { name: 'Devtools (A8W6A)', id: 'A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN', authority: 'G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5' },
@@ -2326,6 +2375,11 @@ insuranceFund: {
       { key: 'EhhdyQpK8pcM75EKQgpu31okQpYAby57CPnPRA7CsWLS', role: 'Full' },
       { key: 'ExAHc3u2KHopmziWyyULWobZ2EAgymEmqQR5fo5T8baM', role: 'Full' },
     ],
+    governanceRolesNote: 'GMSOL splits control across two multisigs, both read on-chain: a core operations multisig and a separate deployment multisig with no signer overlap.',
+    governanceRoles: [
+      { role: 'Core operations', scope: 'Core operations and on-chain parameters', threshold: '4/7', timelock: '10min', address: 'CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1', status: 'verified', roleSeparation: false },
+      { role: 'Deployment', scope: 'Program deployments (6 programs)', threshold: '2/3', timelock: '1h', address: 'F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A', status: 'verified', roleSeparation: false },
+    ],
     sharedAuthority: false,
     programs: [
       { name: 'Core', id: 'Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo', authority: '6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA' },
@@ -2400,55 +2454,6 @@ insuranceFund: {
       fundSizeEstimate: null,
       fundAssetType: null,
       reimbursementPolicy: 'Mining protocol, no insurance fund.',
-      historicalReimbursement: null,
-      sourceUrl: null,
-    },
-  },
-  {
-    name: 'GMSOL Deploy',
-    tvl: 'N/A',
-    category: 'Perps',
-    version: 'Squads V4',
-    threshold: 2,
-    totalMembers: 3,
-    activeVoters: 3,
-    timelockSeconds: 3600,
-    timelockLabel: '1h',
-    canAddTimelock: true,
-    meetsMinThreshold: false,
-    hasTimelock: true,
-    multisigAddress: 'F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A',
-    authorityAddress: 'GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN',
-    lastUpgrade: '2026-04-14',
-    upgradesLast30d: 2,
-    hasRoleSeparation: false,
-    members: [
-      { key: '63LLDGUEjkfMPyrqQbmUWckGttdRNW8HM69rSkCjMpWT', role: 'Full' },
-      { key: '66kDYpYtuGkaZF2ho64VgEQuAgBPGjY17HtcTtANtNR8', role: 'Full' },
-      { key: 'Ckw8hHnP2ABcndEQymJ37BENt3gpw6ALwH3wMpYpjXvk', role: 'Full' },
-    ],
-    programs: [
-      { name: 'Deploy 1', id: '12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH', authority: 'GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN' },
-      { name: 'Deploy 2', id: '43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj', authority: 'GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN' },
-      { name: 'Deploy 3', id: '4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2', authority: 'GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN' },
-      { name: 'Deploy 4', id: '5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR', authority: 'GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN' },
-      { name: 'Deploy 5', id: '5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ', authority: 'GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN' },
-      { name: 'Deploy 6', id: 'CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd', authority: 'GDY4Qu3xGNGZxXdLs1h6eoMXZgJ9aPpv7jtCaqzMoDcN' },
-    ],
-    sharedAuthority: true,
-    publicDocs: {
-      other: 'GMSOL/GMTrade deployment multisig. Controls 6 program deployments. Separate from the core 4/7 operations multisig. No signer overlap with core multisig. 1h timelock. Verified build. Authority migration noted 2026-05-08: program upgrade authority moved from vault 4SMcPtixKvjg to GDY4Qu3xGNGZ. Caught by sentinel verify-protocol-authorities scan.',
-      source: 'https://github.com/gmsol-labs/gmx-solana',
-      updatedAt: '2026-05-08',
-    },
-    verifiedBuild: true,
-    configAuthority: 'autonomous',
-    insuranceFund: {
-      hasInsuranceFund: false,
-      fundType: 'none',
-      fundSizeEstimate: null,
-      fundAssetType: null,
-      reimbursementPolicy: 'No insurance fund. Code4rena bug bounty active.',
       historicalReimbursement: null,
       sourceUrl: null,
     },

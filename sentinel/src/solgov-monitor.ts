@@ -127,6 +127,15 @@ const PROTOCOLS: ProtocolDef[] = [
     programs: [{ name: 'Ore V3', id: 'oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv', expectedAuth: 'J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV' }] },
 
   { name: 'GMSOL Deploy', ms: 'F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A', type: 'v4', tier: 2, active: 3 },
+
+  // Secondary governance multisigs surfaced by the dashboard role breakdowns. Each controls a
+  // distinct set of programs alongside the protocol's primary multisig. Monitored for config drift.
+  { name: 'Kamino (Liquidity)', ms: 'E7994UpSGhSpbpnuSepPXHBuMy3eRvHJL36DjTs1kb2b', type: 'v4', tier: 2, active: 7 },
+  { name: 'Kamino (Farms)', ms: '5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk', type: 'v4', tier: 2, active: 10 },
+  { name: 'Solstice (Aux)', ms: 'BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE', type: 'v4', tier: 2, active: 3 },
+  { name: 'Helium (Omnix)', ms: '1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz', type: 'v4', tier: 2, active: 11 },
+  { name: 'LayerZero OFT (Devtools)', ms: 'HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC', type: 'v4', tier: 2, active: 6 },
+
   { name: 'Carrot', ms: 'BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon', type: 'v4', tier: 1, active: 3,
     programs: [{ name: 'Carrot', id: 'CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s', expectedAuth: '3eUEKYy7bPqtZ3KyUvCgpXV55v8TfN4xE85NickX6SUM' }] },
   { name: 'DefiTuna', ms: '7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv', type: 'v4', tier: 1, active: 3,
@@ -823,7 +832,7 @@ async function main() {
               : c.includes('upgrade') || c.includes('🔄') ? 'ProgramUpgrade'
               : c.includes('pending') ? 'ProposalPending'
               : 'VaultTx';
-            logActivity(p.name, type, c.replace(/<[^>]+>/g, '').replace(/🚨|⚠️|🔄|📅/g, '').trim());
+            logActivity(p.name, type, c.replace(/<[^>]+>/g, '').replace(/🚨|⚠️|🔄|📅/g, '').trim(), p.ms);
             if (type !== 'ProposalPending' && !dominantType) dominantType = type;
             if (c.includes('🚨')) dominantSev = 'CRITICAL';
             else if (c.includes('⚠️') && dominantSev !== 'CRITICAL') dominantSev = 'HIGH';

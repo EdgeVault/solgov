@@ -111,14 +111,14 @@ function canonProtoName(raw: string): string {
   return s || raw;
 }
 
-function cleanLiveActivity(raw: { date: string; protocol: string; type: string; timestamp: string; detail?: string }[]): { date: string; protocol: string; type: string; timestamp: string; rawType: string }[] {
+function cleanLiveActivity(raw: { date: string; protocol: string; type: string; timestamp: string; detail?: string; multisig?: string }[]): { date: string; protocol: string; type: string; timestamp: string; rawType: string; multisig?: string }[] {
   const decisionKeys = new Set<string>();
   for (const e of raw) {
     if (e.type === 'Approval' || e.type === 'Rejection' || e.type === 'Cancellation') {
       decisionKeys.add(`${e.date}|${canonProtoName(e.protocol)}`);
     }
   }
-  const out: { date: string; protocol: string; type: string; timestamp: string; rawType: string }[] = [];
+  const out: { date: string; protocol: string; type: string; timestamp: string; rawType: string; multisig?: string }[] = [];
   const seen = new Set<string>();
   for (const e of raw) {
     if (!e.protocol || e.protocol === 'Unknown') continue;
@@ -128,10 +128,10 @@ function cleanLiveActivity(raw: { date: string; protocol: string; type: string; 
     let label = ACTIVITY_TYPE_LABELS[e.type] || e.type;
     // Governance-change events carry a specific detail string ("Timelock: none -> 24h", "Threshold: 2 -> 3") - surface it over the generic label so the feed shows exactly what changed.
     if (GOV_CHANGE_TYPES.has(e.type) && e.detail) label = e.detail;
-    const key = `${e.date}|${proto}|${label}`;
+    const key = `${e.date}|${proto}|${label}|${e.multisig || ''}`;
     if (seen.has(key)) continue;
     seen.add(key);
-    out.push({ date: e.date, protocol: proto, type: label, timestamp: e.timestamp, rawType: e.type });
+    out.push({ date: e.date, protocol: proto, type: label, timestamp: e.timestamp, rawType: e.type, multisig: e.multisig });
   }
   return out;
 }
@@ -194,7 +194,6 @@ export const LOGO_FILENAMES: Record<string, string> = {
   'SolvBTC': 'solv',
   'GMSOL': 'gmtrade',
   'Ore': 'ore',
-  'GMSOL Deploy': 'gmtrade',
   'Carrot': 'carrot',
   'DefiTuna': 'tuna',
   'BULK': 'bulk.jpg',
@@ -538,6 +537,68 @@ function ProgramsList({ p }: { p: typeof PROTOCOLS[0] }) {
   );
 }
 
+// Maps a governance multisig address to its protocol + role, for protocols that run more than
+// one multisig. Lets the activity feed name the exact multisig a change hit (e.g. "Kamino · kLend"
+// vs "Kamino · Liquidity") rather than just the protocol. Only built for multi-multisig protocols,
+// so single-multisig entries stay labelled by protocol name alone.
+const ROLE_BY_MULTISIG: Record<string, { protocol: string; role: string }> = (() => {
+  const m: Record<string, { protocol: string; role: string }> = {};
+  for (const p of PROTOCOLS) {
+    const roles = (p as any).governanceRoles as { role: string; address: string | null }[] | undefined;
+    if (!roles) continue;
+    const addressed = roles.filter(r => r.address);
+    if (addressed.length < 2) continue;
+    for (const r of addressed) if (r.address) m[r.address] = { protocol: p.name, role: r.role };
+  }
+  return m;
+})();
+
+// Display label for an activity event: "Protocol · Role" when the changed multisig is one of a
+// protocol's several, otherwise the protocol name on its own.
+function activityLabel(e: { protocol: string; multisig?: string }): string {
+  const hit = e.multisig ? ROLE_BY_MULTISIG[e.multisig] : undefined;
+  return hit ? `${hit.protocol} · ${hit.role}` : e.protocol;
+}
+
+// Compact hover summaries for role-separated governance (cold/warm/pause style splits).
+// Full per-role breakdown lives in the expanded dropdown; these are the table-cell tooltips.
+function rolesThresholdTip(roles: any[]): string {
+  return ['Per-role thresholds', ...roles.map(r => `${r.role}: ${r.threshold || 'pending'}`), 'Full breakdown in the dropdown'].join('\n');
+}
+function rolesTimelockTip(roles: any[]): string {
+  return ['Per-role timelocks', ...roles.map(r => `${r.role}: ${r.timelock || 'pending'}`), 'Full breakdown in the dropdown'].join('\n');
+}
+// Tooltip text for the single Squads Safety Benchmark heading on multi-multisig protocols.
+// The section shows the primary multisig inline; this hover surfaces the full four-check
+// benchmark for every multisig. Threshold + timelock are computed from live values; role
+// separation + verified build are real for the primary and pending for the others until
+// the live per-role member scan lands.
+function rolesBenchmarkTip(p: any): string {
+  const roles = p.governanceRoles || [];
+  const out: string[] = ['Benchmark per multisig'];
+  for (const r of roles) {
+    out.push('');
+    if (!r.threshold) { out.push(`${r.role}: not yet on-chain`); continue; }
+    const m = String(r.threshold).match(/(\d+)\s*\/\s*(\d+)/);
+    const thr = m ? +m[1] : 0, tot = m ? +m[2] : 0, pct = tot > 0 ? Math.round((thr / tot) * 100) : 0;
+    const hasTl = r.timelock && r.timelock !== 'None';
+    const thrPass = thr >= 4 || (thr >= 3 && pct >= 67);
+    const thrNote = thr >= 4 && pct >= 67 ? `${pct}% meets 4/6+`
+      : thr >= 4 ? `${pct}%, ratio below 67%`
+      : thr >= 3 && pct >= 67 ? `${pct}% meets 67%`
+      : `${pct}% below 4/6+`;
+    out.push(`${r.role} (${r.threshold})`);
+    out.push(`${thrPass ? '✓' : '✗'} Threshold ${thrNote}`);
+    out.push(`${hasTl ? '✓' : '✗'} ${hasTl ? `Timelock ${r.timelock}` : 'No timelock'}`);
+    out.push(r.roleSeparation == null ? '- Role separation (not read)' : (r.roleSeparation ? '✓ Role separation' : '✗ No role separation'));
+  }
+  out.push('');
+  out.push(p.verifiedBuild === true ? '✓ Verified build (protocol-wide)'
+    : p.verifiedBuild === 'partial' ? '~ Verified build on some programs'
+    : '✗ No verified build (protocol-wide)');
+  return out.join('\n');
+}
+
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
 
 function App() {
@@ -756,7 +817,7 @@ function App() {
                             className={`px-3.5 py-2 flex items-center gap-3 text-[11px] ${i >= 3 ? 'hidden md:flex' : ''}`}
                           >
                             <span className="text-gray-500 font-mono w-[68px] flex-shrink-0">{e.date}</span>
-                            <span className="text-white font-medium w-[110px] truncate flex-shrink-0">{e.protocol}</span>
+                            <span className="text-white font-medium w-[150px] truncate flex-shrink-0">{activityLabel(e)}</span>
                             <span className="text-gray-400 truncate">{e.type}</span>
                           </div>
                         ))}
@@ -833,13 +894,13 @@ function App() {
         </div>
 
         <div className="rounded-md border border-white/[0.04] px-3 md:px-4 py-2.5 mb-4 text-[10px] md:text-[11px] text-gray-500 leading-relaxed">
-          <span className="text-gray-400">Squads best practices:</span>
+          <span className="text-gray-400">Squads safety benchmark:</span>
           <span className="ml-2"></span>
-          <Tooltip text="Squads best practices reference a 4/6 threshold (67%+ ratio)."><span className="text-gray-500 cursor-help">Threshold 4/6+<InfoIcon /></span></Tooltip>
+          <Tooltip text="The Squads benchmark is a 4/6 threshold (67%+ ratio)."><span className="text-gray-500 cursor-help">Threshold 4/6+<InfoIcon /></span></Tooltip>
           <span className="mx-1.5 text-gray-700">&middot;</span>
           <Tooltip text="Mandatory delay between approval and execution. Gives time to detect and cancel malicious transactions."><span className="text-gray-500 cursor-help">Timelocks<InfoIcon /></span></Tooltip>
           <span className="mx-1.5 text-gray-700">&middot;</span>
-          <Tooltip text="Squads best practices reference separating proposer, voter, and executor permissions."><span className="text-gray-500 cursor-help">Role separation<InfoIcon /></span></Tooltip>
+          <Tooltip text="The Squads benchmark separates proposer, voter, and executor permissions."><span className="text-gray-500 cursor-help">Role separation<InfoIcon /></span></Tooltip>
           <span className="mx-1.5 text-gray-700">&middot;</span>
           <Tooltip text="On-chain proof that deployed bytecode matches published source code. Confirms what's running is what was audited."><span className="text-gray-500 cursor-help">Verified builds<InfoIcon /></span></Tooltip>
           <span className="mx-1.5 text-gray-700">&middot;</span>
@@ -895,9 +956,9 @@ function App() {
           />
         </div>
 
-        <div className="overflow-x-auto border border-white/[0.06] rounded-md">
+        <div className="overflow-auto max-h-[80vh] border border-white/[0.06] rounded-md scroll-thin">
           <table className="w-full text-sm">
-            <thead className="bg-white/[0.02]">
+            <thead className="bg-[#0e0e14] sticky top-0 z-20">
               <tr>
                 <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('name')}>Protocol</th>
                 <th className="px-3 py-2.5 text-right text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
@@ -923,7 +984,7 @@ function App() {
                   Threshold <Tooltip text="Green: 4+ signers with 67%+ ratio (Squads 4/6+). Amber: 3 signers or below 67%. Red: fewer than 3 or below 50%."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
-                  Roles <Tooltip text="Squads best practices reference separating Proposer, Voter, and Executor roles."><InfoIcon /></Tooltip>
+                  Roles <Tooltip text="The Squads benchmark separates Proposer, Voter, and Executor roles."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Status <Tooltip text="Governance version capability. V4 supports timelocks natively. V3/legacy does not."><InfoIcon /></Tooltip>
@@ -966,6 +1027,11 @@ function App() {
                           {p.activeVoters > 0 && p.activeVoters !== p.totalMembers && (
                             <span className="text-[10px] text-gray-400 ml-1">({p.totalMembers} total)</span>
                           )}
+                          {p.governanceRoles && p.governanceRoles.length > 0 && (
+                            <Tooltip text={rolesThresholdTip(p.governanceRoles)} align="left">
+                              <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
+                            </Tooltip>
+                          )}
                         </span>
                       )}
                     </td>
@@ -976,6 +1042,11 @@ function App() {
                         <span className="text-white whitespace-nowrap">{p.timelockLabel}</span>
                       ) : (
                         <span className="text-gray-400 whitespace-nowrap">None</span>
+                      )}
+                      {p.governanceRoles && p.governanceRoles.length > 0 && (
+                        <Tooltip text={rolesTimelockTip(p.governanceRoles)} align="left">
+                          <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
+                        </Tooltip>
                       )}
                     </td>
                     <td className="px-3 py-2 text-center text-xs">
@@ -996,7 +1067,7 @@ function App() {
                     <td className="px-3 py-2 text-center text-xs">
                       {(() => {
                         if (p.version === 'Appchain') return (
-                          <Tooltip text="Appchain architecture. Governance multisig not yet on Solana mainnet, or address not disclosed. Comparison to Squads best practices is not applicable until configuration is on-chain.">
+                          <Tooltip text="Appchain architecture. Governance multisig not yet on Solana mainnet, or address not disclosed. Comparison to the Squads benchmark is not applicable until configuration is on-chain.">
                             <span className="text-gray-500 cursor-help">N/A<InfoIcon /></span>
                           </Tooltip>
                         );
@@ -1004,12 +1075,12 @@ function App() {
                         const pct = effectiveTotal > 0 ? p.threshold / effectiveTotal : 0;
                         const ratioText = `${p.threshold}/${effectiveTotal} (${Math.round(pct*100)}%)`;
                         if (p.threshold >= 4 && pct >= 0.67) return (
-                          <Tooltip text={`${ratioText}. Squads best practices reference 4/6+ (67%+).`}>
+                          <Tooltip text={`${ratioText}. The Squads benchmark is 4/6+ (67%+).`}>
                             <span className="text-white cursor-help">Above<InfoIcon /></span>
                           </Tooltip>
                         );
                         if (p.threshold >= 4 && pct < 0.67) return (
-                          <Tooltip text={`${ratioText}. Meets signer count but below 67% ratio. Squads best practices reference 4/6+ (67%+).`}>
+                          <Tooltip text={`${ratioText}. Meets signer count but below 67% ratio. The Squads benchmark is 4/6+ (67%+).`}>
                             <span className="text-gray-300 cursor-help">Partial<InfoIcon /></span>
                           </Tooltip>
                         );
@@ -1019,7 +1090,7 @@ function App() {
                           </Tooltip>
                         );
                         return (
-                          <Tooltip text={`${ratioText}. Below Squads best practice reference of 4/6+ (67%+).`}>
+                          <Tooltip text={`${ratioText}. Below the Squads benchmark of 4/6+ (67%+).`}>
                             <span className="text-gray-400 cursor-help">Below<InfoIcon /></span>
                           </Tooltip>
                         );
@@ -1129,6 +1200,33 @@ function App() {
                             ) : 'Not reported'}</p>
                             <p><span className="text-gray-500">Version:</span> {p.version}</p>
                             <p><span className="text-gray-500">Can add timelock:</span> {p.canAddTimelock ? 'Yes (V4 config transaction)' : 'Not available on this version'}</p>
+
+                            {p.governanceRoles && p.governanceRoles.length > 0 && (
+                              <>
+                                <h4 className="font-bold text-white mt-4 mb-1">
+                                  Role-separated governance
+                                  {p.governanceRoles.some((r: any) => r.status === 'announced') && (
+                                    <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded border border-amber-300/[0.25] bg-amber-300/[0.05] text-amber-200/80 font-normal align-middle">Not yet on-chain</span>
+                                  )}
+                                </h4>
+                                {p.governanceRolesNote && (
+                                  <p className="text-[11px] text-gray-400 mb-2">{p.governanceRolesNote}</p>
+                                )}
+                                <div className="space-y-2">
+                                  {p.governanceRoles.map((r: any, i: number) => (
+                                    <div key={i} className="bg-white/[0.03] rounded p-2">
+                                      <span className="text-gray-300 text-[12px] font-medium block">{r.role}</span>
+                                      <p className="text-[11px] text-gray-400 mt-0.5">{r.scope}</p>
+                                      {r.address ? (
+                                        <a href={`https://solscan.io/account/${r.address}`} target="_blank" rel="noopener" className="font-mono text-[10px] text-gray-500 hover:text-gray-300 underline decoration-gray-700 break-all">{r.address}</a>
+                                      ) : (
+                                        <span className="text-[10px] text-gray-500">Address pending deployment</span>
+                                      )}
+                                    </div>
+                                  ))}
+                                </div>
+                              </>
+                            )}
 
                             <h4 className="font-bold text-white mt-4 mb-2">Upgrade Activity</h4>
                             <p><span className="text-gray-500">Last upgrade:</span> {p.lastUpgrade}</p>
@@ -1255,7 +1353,7 @@ function App() {
                           <div className="min-w-0 overflow-hidden">
                             {(p.version === 'Squads V4' || p.version === 'Squads V3') ? (
                               <>
-                                <h4 className="font-bold text-white mb-2">Squads Best Practice Check</h4>
+                                <h4 className="font-bold text-white mb-2">Squads Safety Benchmark{p.governanceRoles && p.governanceRoles.length > 0 ? <Tooltip text={rolesBenchmarkTip(p)} align="left"><InfoIcon /></Tooltip> : null}</h4>
                                 <p>{(() => {
                                   const effectiveTotal = p.activeVoters > 0 ? p.activeVoters : p.totalMembers;
                         const pct = effectiveTotal > 0 ? p.threshold / effectiveTotal : 0;
@@ -1318,7 +1416,7 @@ function App() {
                             ) : (
                               <>
                                 <h4 className="font-bold text-white mb-2">Governance</h4>
-                                <p className="text-gray-400 text-[11px]">Different governance model ({p.version}). Squads best practices do not apply.</p>
+                                <p className="text-gray-400 text-[11px]">Different governance model ({p.version}). The Squads benchmark does not apply.</p>
                                 <p className="mt-1"><Check pass={p.verifiedBuild === true} label={p.verifiedBuild ? 'Verified build' : 'No verified build'} /></p>
                               </>
                             )}
@@ -1590,7 +1688,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
   }
 
   const feed = useMemo(() => {
-    const events: { date: string; protocol: string; type: string; ts?: string }[] = [];
+    const events: { date: string; protocol: string; type: string; ts?: string; multisig?: string }[] = [];
 
     for (const entry of ACTIVITY_FEED as { date: string; protocol: string; type: string; detail: string }[]) {
       const label = entry.type === 'VaultTx' ? 'Vault transaction executed'
@@ -1622,7 +1720,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     }
 
     for (const evt of cleanLiveActivity(liveActivity)) {
-      events.push({ date: evt.date, protocol: evt.protocol, type: evt.type, ts: evt.timestamp });
+      events.push({ date: evt.date, protocol: evt.protocol, type: evt.type, ts: evt.timestamp, multisig: evt.multisig });
     }
 
     for (const e of yieldbay.events) {
@@ -1652,7 +1750,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
 
     const seen = new Set<string>();
     const deduped = events.filter(e => {
-      const key = e.date + '|' + e.protocol + '|' + e.type;
+      const key = e.date + '|' + e.protocol + '|' + e.type + '|' + (e.multisig || '');
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -1687,9 +1785,9 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
         <p className="text-xs text-gray-500">Governance accountability data. On-chain verified. Live updates via Helius webhooks.</p>
       </div>
 
-      <div className="overflow-x-auto border border-white/[0.06] rounded-md">
+      <div className="overflow-auto max-h-[80vh] border border-white/[0.06] rounded-md scroll-thin">
         <table className="w-full text-sm">
-          <thead className="bg-white/[0.02]">
+          <thead className="bg-[#0e0e14] sticky top-0 z-20">
             <tr>
               <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">Protocol</th>
               <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
@@ -2055,7 +2153,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
             return (
               <div key={i} className="flex items-center gap-3 text-xs py-1.5 border-b border-white/[0.03]">
                 <span className="text-gray-500 font-mono w-20 flex-shrink-0">{e.date}</span>
-                <span className="text-white font-medium w-28 flex-shrink-0 truncate">{e.protocol}</span>
+                <span className="text-white font-medium w-36 flex-shrink-0 truncate">{activityLabel(e)}</span>
                 <span className={typeColor}>{e.type}</span>
               </div>
             );

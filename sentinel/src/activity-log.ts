@@ -13,6 +13,7 @@ export interface ActivityEvent {
   protocol: string;
   type: string;
   detail: string;
+  multisig?: string;
 }
 
 let migrated = false;
@@ -34,7 +35,7 @@ function migrateOnce(): void {
   } catch {}
 }
 
-export function appendActivity(protocol: string, type: string, detail: string): void {
+export function appendActivity(protocol: string, type: string, detail: string, multisig?: string): void {
   migrateOnce();
   const event: ActivityEvent = {
     date: new Date().toISOString().split('T')[0],
@@ -42,6 +43,7 @@ export function appendActivity(protocol: string, type: string, detail: string): 
     protocol,
     type,
     detail,
+    ...(multisig ? { multisig } : {}),
   };
   try {
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n');

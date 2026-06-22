@@ -89,9 +89,31 @@ export interface TokenCustodySnapshot {
 /**
  * Classify a wallet by its owning program. Structural label only.
  */
+// Resolve whether a System-owned address is actually a Squads multisig vault, by tracing a recent
+// transaction back to the controlling multisig account. Returns the Squads type or null. This is the
+// same reverse-lookup the governance scanner uses, so a vault PDA is never mistaken for a single key.
+async function resolveSquadsVault(conn: Connection, address: string): Promise<CustodyType | null> {
+  try {
+    const sigs = await conn.getSignaturesForAddress(new PublicKey(address), { limit: 4 });
+    for (const s of sigs) {
+      const tx = await conn.getTransaction(s.signature, { maxSupportedTransactionVersion: 0 });
+      if (!tx) continue;
+      const keys = tx.transaction.message.staticAccountKeys || [];
+      const infos = await conn.getMultipleAccountsInfo(keys);
+      for (let i = 0; i < keys.length; i++) {
+        const o = infos[i]?.owner.toBase58();
+        if (o === SQUADS_V4) return 'squads-v4';
+        if (o === SQUADS_V3) return 'squads-v3';
+      }
+    }
+  } catch { /* fall through to single-key */ }
+  return null;
+}
+
 export async function classifyOwner(
   conn: Connection,
-  address: string
+  address: string,
+  tryResolve: boolean = false
 ): Promise<CustodyType> {
   if (address === SYSTEM_PROGRAM) return 'system-program';
 
@@ -110,9 +132,14 @@ export async function classifyOwner(
     if (owner === BPF_LOADER_UPGRADEABLE) return 'program-pda';
     if (owner === SPL_TOKEN || owner === SPL_TOKEN_2022) return 'token-account';
     if (owner === SYSTEM_PROGRAM) {
-      // Could be a regular wallet OR a vault PDA. Both look like 0-byte System Program accounts.
-      // Treated as single-key for the structural label. Helius identity overlay (next stage)
-      // may upgrade this to a known entity (CEX, MM, etc).
+      // Could be a regular wallet OR a Squads vault PDA, both look like 0-byte System Program
+      // accounts. For authorities (tryResolve), trace a recent transaction back to the controlling
+      // multisig before defaulting to single-key, so a multisig-controlled mint/freeze authority is
+      // never mislabelled. Holders rely on the Helius identity overlay downstream.
+      if (tryResolve) {
+        const resolved = await resolveSquadsVault(conn, address);
+        if (resolved) return resolved;
+      }
       return 'single-key';
     }
     if (info.executable) return 'program-pda';
@@ -156,8 +183,8 @@ export async function getMintInfo(
       ? new PublicKey(d.slice(50, 82)).toBase58()
       : null;
 
-    const mintAuthorityCustody = mintAuthority ? await classifyOwner(conn, mintAuthority) : null;
-    const freezeAuthorityCustody = freezeAuthority ? await classifyOwner(conn, freezeAuthority) : null;
+    const mintAuthorityCustody = mintAuthority ? await classifyOwner(conn, mintAuthority, true) : null;
+    const freezeAuthorityCustody = freezeAuthority ? await classifyOwner(conn, freezeAuthority, true) : null;
 
     return {
       mint: mintAddress,

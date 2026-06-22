@@ -257,6 +257,10 @@ function effectiveCustody(rawCustody: string, identityName?: string, identityTag
   if (combined.includes('squads multisig v3')) return 'squads-v3';
   if (combined.includes('squads')) return 'squads-v4';
 
+  // Identity provider has named it a multisig. Lower confidence than an explicit Squads tag, but a
+  // named multisig must never fall through to a single-key / unverified label.
+  if (combined.includes('multisig') || combined.includes(' msig') || / ms ?#/i.test(name)) return 'multisig';
+
   // DAO / Realms signals
   if (combined.includes('realms') || combined.includes('spl governance')) return 'dao-realms';
   if (name.includes('dao treasury') || name.includes('dao vault') || name.includes('realm treasury')) return 'dao-realms';
@@ -293,6 +297,7 @@ function custodyLabel(c: string | null | undefined): string {
   return ({
     'squads-v4': 'Squads V4',
     'squads-v3': 'Squads V3',
+    'multisig': 'Multisig',
     'serum-multisig': 'Serum multisig',
     'spl-governance': 'Realms DAO',
     'dao-realms': 'DAO / Realms',
@@ -399,14 +404,14 @@ function TokenCustodySection({
         </div>
         <div className="bg-white/[0.03] rounded p-2">
           <p className="text-gray-400 text-[10px]">Mint authority</p>
-          <p className={`text-[11px] ${custodyClass(snapshot.mintAuthorityCustody)}`}>
-            {snapshot.mintAuthority === null ? 'Disabled (immutable)' : custodyLabel(snapshot.mintAuthorityCustody)}
+          <p className={`text-[11px] ${custodyClass(effectiveCustody(snapshot.mintAuthorityCustody || ''))}`}>
+            {snapshot.mintAuthority === null ? 'Disabled (immutable)' : custodyLabel(effectiveCustody(snapshot.mintAuthorityCustody || ''))}
           </p>
         </div>
         <div className="bg-white/[0.03] rounded p-2">
           <p className="text-gray-400 text-[10px]">Freeze authority</p>
-          <p className={`text-[11px] ${custodyClass(snapshot.freezeAuthorityCustody)}`}>
-            {snapshot.freezeAuthority === null ? 'Disabled' : custodyLabel(snapshot.freezeAuthorityCustody)}
+          <p className={`text-[11px] ${custodyClass(effectiveCustody(snapshot.freezeAuthorityCustody || ''))}`}>
+            {snapshot.freezeAuthority === null ? 'Disabled' : custodyLabel(effectiveCustody(snapshot.freezeAuthorityCustody || ''))}
           </p>
         </div>
       </div>
@@ -1302,7 +1307,7 @@ function App() {
 
                           <div className="min-w-0 overflow-hidden">
                             <h4 className="font-bold text-white mb-2">Members ({p.totalMembers})
-                              <Tooltip text={p.version === 'Squads V4' ? "Voter = counts toward threshold. Propose = can submit transactions but cannot vote. None = inactive." : "All members have equal permissions on " + p.version + ". No role separation available."}><InfoIcon /></Tooltip>
+                              <Tooltip text={p.version === 'Squads V4' ? "Squads V4 has three permissions: Propose, Vote, Execute. Voter counts toward threshold. Propose / Execute members can submit and/or execute approved transactions but cannot vote. Execution still requires the vote threshold and any timelock first. None = inactive." : "All members have equal permissions on " + p.version + ". No role separation available."}><InfoIcon /></Tooltip>
                             </h4>
                             {p.members ? (
                               <div className="space-y-1">
@@ -1325,12 +1330,12 @@ function App() {
                                           }</span>
                                         </div>
                                       ))}
-                                      {nonVoters.length > 0 && <p className="text-[10px] text-orange-400/70 font-medium mt-1.5 mb-0.5">Propose only ({nonVoters.length})</p>}
+                                      {nonVoters.length > 0 && <p className="text-[10px] text-orange-400/70 font-medium mt-1.5 mb-0.5">Propose / Execute ({nonVoters.length})</p>}
                                       {nonVoters.map((m, i) => (
                                         <div key={`p${i}`} className="flex items-center gap-2">
                                           <span className="text-gray-500 w-4 text-right">{voters.length + i + 1}</span>
                                           <a href={`https://solscan.io/account/${m.key}`} target="_blank" rel="noopener" className="font-mono text-[11px] text-gray-400 hover:text-white">{m.key.slice(0, 4)}...{m.key.slice(-4)}</a>
-                                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.04] text-gray-400">Propose</span>
+                                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.04] text-gray-400">{m.role}</span>
                                         </div>
                                       ))}
                                       {inactive.length > 0 && <p className="text-[10px] text-gray-400/70 font-medium mt-1.5 mb-0.5">Inactive ({inactive.length})</p>}

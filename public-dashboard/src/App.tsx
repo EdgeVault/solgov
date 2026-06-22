@@ -615,6 +615,16 @@ function App() {
   const [filterTimelock, setFilterTimelock] = useState('all');
   const [filterInsurance, setFilterInsurance] = useState('all');
   const [expanded, setExpanded] = useState<string | null>(null);
+  // When a protocol row expands, scroll its detail panel into view, so clicking a row near the
+  // bottom of the table doesn't look like nothing happened (the panel renders below the fold).
+  const detailRef = useRef<HTMLTableRowElement | null>(null);
+  useEffect(() => {
+    if (!expanded) return;
+    const id = requestAnimationFrame(() => {
+      detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+    return () => cancelAnimationFrame(id);
+  }, [expanded]);
   type Tab = 'dashboard' | 'govwatch' | 'blast' | 'charts';
   type ChartsSub = 'exploits' | 'risk' | 'governance';
   const VALID_TABS: Tab[] = ['dashboard', 'govwatch', 'blast', 'charts'];
@@ -1171,7 +1181,7 @@ function App() {
                     </td>
                   </tr>
                   {expanded === p.name && (
-                    <tr key={`${p.name}-detail`} className="bg-white/[0.01]">
+                    <tr key={`${p.name}-detail`} ref={detailRef} className="bg-white/[0.01] scroll-mt-2">
                       <td colSpan={12} className="px-2 md:px-6 py-4" style={{width: 0}}>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-xs min-w-0 overflow-hidden" style={{maxWidth: 'calc(100vw - 48px)'}}>
                           <div className="min-w-0 overflow-hidden">
@@ -1610,6 +1620,16 @@ function App() {
 
 function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, liveHistorical, historicalAsOf }: { protocols: typeof PROTOCOLS; liveStates: Record<string, any>; liveActivity: { date: string; timestamp: string; protocol: string; type: string; detail: string }[]; liveHistorical: Record<string, import('./hooks/useLiveData').HistoricalProtocolState>; historicalAsOf: string | null }) {
   const [selectedProtocol, setSelectedProtocol] = useState<string | null>(null);
+  // Same as the dashboard table: bring the expanded detail row into view when a protocol near the
+  // bottom is opened, so the click doesn't look like nothing happened.
+  const govDetailRef = useRef<HTMLTableRowElement | null>(null);
+  useEffect(() => {
+    if (!selectedProtocol) return;
+    const id = requestAnimationFrame(() => {
+      govDetailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+    return () => cancelAnimationFrame(id);
+  }, [selectedProtocol]);
   const [feedFilter, setFeedFilter] = useState<string>('all');
 
   const yieldbay = useYieldbayHealth();
@@ -1893,7 +1913,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                   </td>
                 </tr>
                 {selectedProtocol === name && (
-                  <tr key={`${name}-detail`} className="bg-white/[0.01]">
+                  <tr key={`${name}-detail`} ref={govDetailRef} className="bg-white/[0.01] scroll-mt-2">
                     <td colSpan={9} className="px-2 md:px-6 py-4">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-xs min-w-0 max-w-full overflow-hidden">
                         <div className="min-w-0 overflow-hidden">

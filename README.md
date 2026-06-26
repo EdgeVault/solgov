@@ -26,7 +26,8 @@ Every claim in the dashboard traces to an on-chain RPC read or a named source UR
 
 ## Latest
 
-- Jun 2026: split view added for protocols running more than one governance multisig, showing each multisig's programs and a per-multisig Squads benchmark, with the activity feed now labelling which multisig each change hit
+- Jun 2026: external review by Soladex, with a "Reviewed by Soladex" badge added to the dashboard
+- Jun 2026: split view added for protocols running more than one governance multisig, showing each multisig's programs, threshold, timelock, and a per-multisig Squads benchmark, with the activity feed now labelling which multisig each change hit
 - Jun 2026: token custody view added for protocols with a native token, showing top holders, custody classification, mint and freeze authority status, and wallets sharing a first funder
 - Jun 2026: continuous monitoring caught real-time governance changes across tracked protocols, including timelocks added and removed, thresholds raised, and signer sets expanded
 - Jun 2026: weekly governance digest broadcast added to the public Telegram channel

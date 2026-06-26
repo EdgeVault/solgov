@@ -573,35 +573,45 @@ function rolesThresholdTip(roles: any[]): string {
 function rolesTimelockTip(roles: any[]): string {
   return ['Per-role timelocks', ...roles.map(r => `${r.role}: ${r.timelock || 'pending'}`), 'Full breakdown in the dropdown'].join('\n');
 }
-// Tooltip text for the single Squads Safety Benchmark heading on multi-multisig protocols.
-// The section shows the primary multisig inline; this hover surfaces the full four-check
-// benchmark for every multisig. Threshold + timelock are computed from live values; role
-// separation + verified build are real for the primary and pending for the others until
-// the live per-role member scan lands.
+// Tooltip text for the Squads Safety Benchmark heading on multi-multisig protocols. Each
+// multisig's threshold + timelock is shown inline on its card; this hover gives the aggregate
+// so it stays compact even when a protocol runs many multisigs. Role separation is omitted here
+// because it is only member-verified for the primary multisig.
 function rolesBenchmarkTip(p: any): string {
-  const roles = p.governanceRoles || [];
-  const out: string[] = ['Benchmark per multisig'];
-  for (const r of roles) {
-    out.push('');
-    if (!r.threshold) { out.push(`${r.role}: not yet on-chain`); continue; }
+  const roles = (p.governanceRoles || []).filter((r: any) => r.threshold);
+  const n = roles.length;
+  const withTl = roles.filter((r: any) => r.timelock && r.timelock !== 'None').length;
+  const meetsRatio = roles.filter((r: any) => {
     const m = String(r.threshold).match(/(\d+)\s*\/\s*(\d+)/);
-    const thr = m ? +m[1] : 0, tot = m ? +m[2] : 0, pct = tot > 0 ? Math.round((thr / tot) * 100) : 0;
-    const hasTl = r.timelock && r.timelock !== 'None';
-    const thrPass = thr >= 4 || (thr >= 3 && pct >= 67);
-    const thrNote = thr >= 4 && pct >= 67 ? `${pct}% meets 4/6+`
-      : thr >= 4 ? `${pct}%, ratio below 67%`
-      : thr >= 3 && pct >= 67 ? `${pct}% meets 67%`
-      : `${pct}% below 4/6+`;
-    out.push(`${r.role} (${r.threshold})`);
-    out.push(`${thrPass ? '✓' : '✗'} Threshold ${thrNote}`);
-    out.push(`${hasTl ? '✓' : '✗'} ${hasTl ? `Timelock ${r.timelock}` : 'No timelock'}`);
-    out.push(r.roleSeparation == null ? '- Role separation (not read)' : (r.roleSeparation ? '✓ Role separation' : '✗ No role separation'));
-  }
-  out.push('');
-  out.push(p.verifiedBuild === true ? '✓ Verified build (protocol-wide)'
-    : p.verifiedBuild === 'partial' ? '~ Verified build on some programs'
-    : '✗ No verified build (protocol-wide)');
-  return out.join('\n');
+    if (!m) return false;
+    const pct = +m[2] > 0 ? (+m[1] / +m[2]) * 100 : 0;
+    return +m[1] >= 4 && pct >= 67;
+  }).length;
+  return [
+    `Benchmark across all ${n} multisigs`,
+    '',
+    `${withTl}/${n} carry a governance timelock.`,
+    `${meetsRatio}/${n} meet the Squads 4/6+ (67%) ratio.`,
+    'Per-multisig threshold and timelock are shown on each card.',
+  ].join('\n');
+}
+
+// Per-multisig Squads benchmark for the info icon on each role card. One multisig per hover,
+// so it stays compact regardless of how many a protocol runs. Role separation reads from the
+// per-role flag (null = members not yet scanned), so it never over-claims.
+function roleBenchmarkTip(r: any): string {
+  if (!r.threshold) return `${r.role}: not yet on-chain`;
+  const m = String(r.threshold).match(/(\d+)\s*\/\s*(\d+)/);
+  const thr = m ? +m[1] : 0, tot = m ? +m[2] : 0, pct = tot > 0 ? Math.round((thr / tot) * 100) : 0;
+  const hasTl = r.timelock && r.timelock !== 'None';
+  const thrMeets = thr >= 4 && pct >= 67;
+  return [
+    `${r.role} Squads benchmark`,
+    '',
+    `${thrMeets ? '✓' : '✗'} Threshold ${r.threshold} (${pct}%)${thrMeets ? ', meets 4/6+ (67%)' : pct >= 67 ? ', meets 67% ratio' : thr >= 4 ? ', meets signer count, ratio below 67%' : ', below 4/6+'}`,
+    `${hasTl ? '✓' : '✗'} ${hasTl ? `Timelock ${r.timelock}` : 'No governance timelock'}`,
+    r.roleSeparation == null ? 'Role separation not yet verified' : (r.roleSeparation ? '✓ Role separation' : '✗ No role separation, all signers full'),
+  ].join('\n');
 }
 
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
@@ -1233,12 +1243,17 @@ function App() {
                                 <div className="space-y-2">
                                   {p.governanceRoles.map((r: any, i: number) => (
                                     <div key={i} className="bg-white/[0.03] rounded p-2">
-                                      <span className="text-gray-300 text-[12px] font-medium block">{r.role}</span>
+                                      <div className="flex items-center justify-between gap-2">
+                                        <span className="text-gray-300 text-[12px] font-medium flex items-center">{r.role}{r.threshold && <Tooltip text={roleBenchmarkTip(r)} align="left"><InfoIcon /></Tooltip>}</span>
+                                        {(r.threshold || r.timelock) && (
+                                          <span className="text-[10px] text-gray-400 whitespace-nowrap shrink-0">{r.threshold}{r.threshold && r.timelock ? ' · ' : ''}{r.timelock === 'None' ? 'no timelock' : r.timelock}</span>
+                                        )}
+                                      </div>
                                       <p className="text-[11px] text-gray-400 mt-0.5">{r.scope}</p>
                                       {r.address ? (
                                         <a href={`https://solscan.io/account/${r.address}`} target="_blank" rel="noopener" className="font-mono text-[10px] text-gray-500 hover:text-gray-300 underline decoration-gray-700 break-all">{r.address}</a>
                                       ) : (
-                                        <span className="text-[10px] text-gray-500">{r.status === 'disclosed' ? 'Per team disclosure — address not yet verified on-chain' : 'Address pending deployment'}</span>
+                                        <span className="text-[10px] text-gray-500">{r.status === 'disclosed' ? 'Per team disclosure, address not yet verified on-chain' : 'Address pending deployment'}</span>
                                       )}
                                     </div>
                                   ))}

@@ -1044,7 +1044,7 @@ function App() {
                           )}
                           {p.governanceRoles && p.governanceRoles.length > 0 && (
                             <Tooltip text={rolesThresholdTip(p.governanceRoles)} align="left">
-                              <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
+                              <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced' || r.status === 'disclosed') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
                             </Tooltip>
                           )}
                         </span>
@@ -1060,7 +1060,7 @@ function App() {
                       )}
                       {p.governanceRoles && p.governanceRoles.length > 0 && (
                         <Tooltip text={rolesTimelockTip(p.governanceRoles)} align="left">
-                          <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
+                          <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced' || r.status === 'disclosed') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
                         </Tooltip>
                       )}
                     </td>
@@ -1223,9 +1223,12 @@ function App() {
                                   {p.governanceRoles.some((r: any) => r.status === 'announced') && (
                                     <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded border border-amber-300/[0.25] bg-amber-300/[0.05] text-amber-200/80 font-normal align-middle">Not yet on-chain</span>
                                   )}
+                                  {p.governanceRoles.some((r: any) => r.status === 'disclosed') && (
+                                    <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded border border-amber-300/[0.25] bg-amber-300/[0.05] text-amber-200/80 font-normal align-middle">Some via disclosure</span>
+                                  )}
                                 </h4>
                                 {p.governanceRolesNote && (
-                                  <p className="text-[11px] text-gray-400 mb-2">{p.governanceRolesNote}</p>
+                                  <p className="text-[11px] text-gray-400 mb-2">{p.governanceRolesNote}{p.governanceRolesSource && (<> <a href={p.governanceRolesSource} target="_blank" rel="noopener" className="text-gray-500 hover:text-gray-300 underline">Source</a></>)}</p>
                                 )}
                                 <div className="space-y-2">
                                   {p.governanceRoles.map((r: any, i: number) => (
@@ -1235,7 +1238,7 @@ function App() {
                                       {r.address ? (
                                         <a href={`https://solscan.io/account/${r.address}`} target="_blank" rel="noopener" className="font-mono text-[10px] text-gray-500 hover:text-gray-300 underline decoration-gray-700 break-all">{r.address}</a>
                                       ) : (
-                                        <span className="text-[10px] text-gray-500">Address pending deployment</span>
+                                        <span className="text-[10px] text-gray-500">{r.status === 'disclosed' ? 'Per team disclosure — address not yet verified on-chain' : 'Address pending deployment'}</span>
                                       )}
                                     </div>
                                   ))}
@@ -1535,6 +1538,7 @@ function App() {
         </div>
 
         <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500 space-y-1">
+          <img src="/reviewed-by-soladex.svg" alt="Reviewed by Soladex" className="h-9 w-auto mb-3" />
           <p>All governance data decoded directly from on-chain Solana account data. Live updates via Helius webhooks.{isLive && lastScan ? ` Last event: ${lastScan.split('T')[0]} ${lastScan.split('T')[1]?.slice(0, 5)} UTC.` : ''}{!llama.loading ? ' TVL data live from DeFiLlama.' : ''}</p>
           <p className="text-gray-700">This dashboard does not provide financial advice. It presents on-chain governance configurations for informational purposes.</p>
         </div>

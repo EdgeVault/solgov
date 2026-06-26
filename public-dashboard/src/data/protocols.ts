@@ -21,7 +21,7 @@ export interface GovernanceRole {
   threshold: string | null;
   timelock: string | null;
   address: string | null;
-  status: 'verified' | 'announced';
+  status: 'verified' | 'announced' | 'disclosed';
   roleSeparation?: boolean | null;
 }
 
@@ -58,6 +58,7 @@ export interface Protocol {
   members: Member[] | null;
   governanceRoles?: GovernanceRole[];
   governanceRolesNote?: string;
+  governanceRolesSource?: string;
   programs?: Program[];
   sharedAuthority?: boolean;
   programTimelock?: 'verified' | 'self-reported' | null;
@@ -304,11 +305,18 @@ export const PROTOCOLS: Protocol[] = [
       { key: 'G8fVffcHt3n6DkjSdYj47xWe55QjFsL4P5zhQ9RXFuPa', role: 'Full' },
       { key: 'HrKa158AuSt2QtDWnvr81qdgBZjJ7MJGkaQ8D7pZeYMj', role: 'Full' },
     ],
-    governanceRolesNote: 'Kamino splits program upgrade authority across three multisigs, each read on-chain.',
+    governanceRolesNote: 'Kamino operates nine purpose-specific multisigs across three groups: program deployers, config admins, and an emergency council. The six with addresses shown are read on-chain. The three marked are from Kamino\'s published opsec disclosure, with on-chain addresses still to be verified.',
+    governanceRolesSource: 'https://x.com/kamino/status/2070169977647231391',
     governanceRoles: [
-      { role: 'kLend', scope: 'Lending program (kLend)', threshold: '5/10', timelock: '24h', address: '6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM', status: 'verified', roleSeparation: false },
-      { role: 'Liquidity', scope: 'Liquidity program', threshold: '4/7', timelock: 'None', address: 'E7994UpSGhSpbpnuSepPXHBuMy3eRvHJL36DjTs1kb2b', status: 'verified', roleSeparation: false },
-      { role: 'Farms', scope: 'KFarms program', threshold: '5/10', timelock: '24h', address: '5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk', status: 'verified', roleSeparation: false },
+      { role: 'Lend Deployer', scope: 'Upgrade authority for the Kamino Lend program', threshold: '5/10', timelock: '24h', address: '6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM', status: 'verified', roleSeparation: false },
+      { role: 'Scope Deployer', scope: 'Upgrade authority for the Scope oracle program', threshold: '5/10', timelock: '24h', address: 'DDJGaWjVREXffoMe9nyvb1c7wpajLdh7fTnAb2giD9RM', status: 'verified', roleSeparation: false },
+      { role: 'Liquidity Deployer', scope: 'Upgrade authority for the Liquidity program', threshold: '4/7', timelock: 'None', address: 'E7994UpSGhSpbpnuSepPXHBuMy3eRvHJL36DjTs1kb2b', status: 'verified', roleSeparation: false },
+      { role: 'Farms Deployer', scope: 'Upgrade authority for the Farms program', threshold: '5/10', timelock: '24h', address: '5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk', status: 'verified', roleSeparation: false },
+      { role: 'LIMO Deployer', scope: 'Upgrade authority for the Limit Order program', threshold: '4/7', timelock: '24h', address: 'Fkzn1purBunp2Q4jrtp1Bso8GPj9hFqUGLH3Np4k8sVs', status: 'verified', roleSeparation: false },
+      { role: 'Lend Market Owner', scope: 'Config admin: lending market parameters and management', threshold: '4/10', timelock: '12h', address: '7idEEVRidWrahZJhxXMqniDbV6ESj7ZjyLrigcMcEt6H', status: 'verified', roleSeparation: false },
+      { role: 'Kamino Vaults', scope: 'Config admin: vault configuration and global admin', threshold: '5/10', timelock: 'None', address: null, status: 'disclosed', roleSeparation: false },
+      { role: 'Scope MS', scope: 'Config admin: Scope oracle configuration and feed management', threshold: '4/10', timelock: 'None', address: null, status: 'disclosed', roleSeparation: false },
+      { role: 'Lend Council', scope: 'Emergency council: pause markets, halt withdrawals', threshold: '2/7', timelock: 'None', address: null, status: 'disclosed', roleSeparation: false },
     ],
     sharedAuthority: false,
     programs: [

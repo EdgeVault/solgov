@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-21",
+  "updatedAt": "2026-06-26",
   "source": "Solana-native DeFi exploits only. Curated from Rekt, public post-mortems, and protocol disclosures. Excludes cross-chain hacks where the root cause sat outside Solana. Excludes centralised exchange compromises, Telegram bot wallet-level incidents, and prevented exploits.",
   "hacks": [
     {
@@ -177,6 +177,17 @@
       "recoveryNote": "Recovery plan via future trading fees and a Tether-assisted credit facility for Drift; actual amount returned directly to users is phased and not yet fully realised",
       "affectedProtocols": ["Prime Numbers Fi", "Carrot", "Gauntlet", "Neutral Trade", "Elemental DeFi", "Reflect Money", "Vectis", "Ranger Finance", "Pyra", "Titan", "Loopscale", "PiggyBank", "Lulo", "Fuse Wallet", "Exponent", "Asgard Finance", "xPlace", "Project 0", "Perena", "DiversiFi", "Valeo", "Amp Pay"],
       "link": "https://x.com/DriftProtocol/status/1907115900000000000"
+    },
+    {
+      "date": "2026-06-10",
+      "protocol": "Raydium",
+      "amountUsd": 1340000,
+      "category": "contract",
+      "rootCause": "Forged LP token attack on the deprecated AMM V3 program (phased out 2021); validation gaps let the attacker mint unauthorised LP tokens and drain five legacy pools. No key compromise or authority-level issue; current mainnet programs were unaffected",
+      "recovered": "full",
+      "recoveryNote": "Raydium pledged to repay affected users from treasury; only deprecated AMM V3 pools were affected",
+      "affectedProtocols": [],
+      "link": "https://decrypt.co/370700/solana-exchange-raydium-exploit-defi-attacks-grow"
     }
   ]
 }

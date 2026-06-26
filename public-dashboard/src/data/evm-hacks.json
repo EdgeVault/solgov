@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-22",
+  "updatedAt": "2026-06-26",
   "source": "EVM-native DeFi exploits only (Ethereum, BSC, Polygon, Arbitrum, Optimism, Avalanche, Blast, Heco). Curated from Rekt, Chainalysis, Halborn, Immunefi post-mortems, and protocol disclosures. Excludes centralised exchange compromises (Bybit, DMM, WazirX, HTX, Poloniex, BitMart), wallet-drainer / phishing incidents where the root cause is user-side (Atomic Wallet), prop-trading / market-maker hot-wallet losses (Wintermute), validator-backed L1 bridge incidents where the chain itself is the target (BNB Chain hard-fork bypass), and non-EVM incidents. Bridge hacks whose EVM-side smart contract was the exploited component are included (Ronin, Nomad, Harmony, Poly, Wormhole-EVM-side excluded as Solana primary). Amounts are USD at time of exploit per the cited source.",
   "hacks": [
     {

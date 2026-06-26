@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-23",
+  "updatedAt": "2026-06-26",
   "windowDays": 365,
   "methodology": {
     "tvl": "DefiLlama historicalChainTvl, 365d trailing average",
@@ -24,17 +24,17 @@
   },
   "chains": {
     "Solana": {
-      "avgTvl": 8938974142.745205,
-      "latestTvl": 5553348920,
-      "yieldPaid1y": 2317018161,
-      "grossLoss1y": 324500000,
+      "avgTvl": 8347694851.720548,
+      "latestTvl": 4783613031,
+      "yieldPaid1y": 2483526695,
+      "grossLoss1y": 320040000,
       "hackCount1y": 5,
       "fullRecoveryCount1y": 1,
       "partialRecoveryCount1y": 2,
       "noRecoveryCount1y": 2,
-      "yieldRate": 0.25920403437797973,
-      "lossRate": 0.03630170473905682,
-      "yieldToLossRatio": 7.1402716825885975,
+      "yieldRate": 0.29751047913402334,
+      "lossRate": 0.03833872771883083,
+      "yieldToLossRatio": 7.760050915510561,
       "series": [
         {
           "date": "2023-07-01",
@@ -71,596 +71,628 @@
         {
           "date": "2023-11-01",
           "avgTvl": 299396213.1178082,
-          "yieldPaid": 15369324,
+          "yieldPaid": 15335206,
           "grossLoss": 6700000,
-          "yieldRate": 0.05133439678461259,
+          "yieldRate": 0.05122044076745156,
           "lossRate": 0.022378372559320393
         },
         {
           "date": "2023-12-01",
           "avgTvl": 304489855.11232877,
-          "yieldPaid": 23023794,
+          "yieldPaid": 22257265,
           "grossLoss": 5440000,
-          "yieldRate": 0.07561432216356219,
+          "yieldRate": 0.07309690167440591,
           "lossRate": 0.017865948269419812
         },
         {
           "date": "2024-01-01",
           "avgTvl": 373235286.58082193,
-          "yieldPaid": 52502130,
+          "yieldPaid": 51578579,
           "grossLoss": 1040000,
-          "yieldRate": 0.1406676482306047,
+          "yieldRate": 0.13819320105691818,
           "lossRate": 0.0027864460767559125
         },
         {
           "date": "2024-02-01",
           "avgTvl": 469131708.12876713,
-          "yieldPaid": 83829780,
+          "yieldPaid": 85683212,
           "grossLoss": 1040000,
-          "yieldRate": 0.17869135372318604,
+          "yieldRate": 0.18264212483476325,
           "lossRate": 0.0022168614527213774
         },
         {
           "date": "2024-03-01",
           "avgTvl": 600591652.3917809,
-          "yieldPaid": 122971905,
+          "yieldPaid": 127370864,
           "grossLoss": 1040000,
-          "yieldRate": 0.20475127236664017,
+          "yieldRate": 0.21207564822581454,
           "lossRate": 0.0017316257990904979
         },
         {
           "date": "2024-04-01",
           "avgTvl": 894836234.0328767,
-          "yieldPaid": 221805770,
+          "yieldPaid": 234537917,
           "grossLoss": 1040000,
-          "yieldRate": 0.2478730314711985,
+          "yieldRate": 0.2621014975477434,
           "lossRate": 0.0011622238354306402
         },
         {
           "date": "2024-05-01",
           "avgTvl": 1204965548.0328767,
-          "yieldPaid": 304568234,
+          "yieldPaid": 328301707,
           "grossLoss": 1040000,
-          "yieldRate": 0.25276094781067554,
+          "yieldRate": 0.2724573391628974,
           "lossRate": 0.00086309521603984
         },
         {
           "date": "2024-06-01",
           "avgTvl": 1561670826.5945206,
-          "yieldPaid": 388758736,
+          "yieldPaid": 427913608,
           "grossLoss": 2940000,
-          "yieldRate": 0.24893769505046862,
+          "yieldRate": 0.2740101183378931,
           "lossRate": 0.0018825990406769347
         },
         {
           "date": "2024-07-01",
           "avgTvl": 1903040067.1753426,
-          "yieldPaid": 486801449,
+          "yieldPaid": 540588076,
           "grossLoss": 2940000,
-          "yieldRate": 0.25580199670864157,
+          "yieldRate": 0.2840655251165509,
           "lossRate": 0.00154489653198096
         },
         {
           "date": "2024-08-01",
           "avgTvl": 2276723060.50137,
-          "yieldPaid": 621095078,
+          "yieldPaid": 690355374,
           "grossLoss": 2940000,
-          "yieldRate": 0.2728022080398418,
+          "yieldRate": 0.30322325362135744,
           "lossRate": 0.0012913296531342577
         },
         {
           "date": "2024-09-01",
           "avgTvl": 2652400419.9561644,
-          "yieldPaid": 700858819,
+          "yieldPaid": 782756765,
           "grossLoss": 1900000,
-          "yieldRate": 0.2642356763808622,
+          "yieldRate": 0.2951125927709424,
           "lossRate": 0.0007163322648061566
         },
         {
           "date": "2024-10-01",
           "avgTvl": 3019724900.369863,
-          "yieldPaid": 766517520,
+          "yieldPaid": 860815717,
           "grossLoss": 1900000,
-          "yieldRate": 0.25383687100308877,
+          "yieldRate": 0.2850642841321623,
           "lossRate": 0.0006291963879780186
         },
         {
           "date": "2024-11-01",
           "avgTvl": 3475777294.350685,
-          "yieldPaid": 955229574,
+          "yieldPaid": 1068102427,
           "grossLoss": 1900000,
-          "yieldRate": 0.2748247350463367,
+          "yieldRate": 0.30729886771975523,
           "lossRate": 0.0005466403164230756
         },
         {
           "date": "2024-12-01",
-          "avgTvl": 4067649849.553425,
-          "yieldPaid": 1438467749,
+          "avgTvl": 4067649849.5561643,
+          "yieldPaid": 1579189363,
           "grossLoss": 1900000,
-          "yieldRate": 0.35363608034204935,
-          "lossRate": 0.00046710018567812454
+          "yieldRate": 0.3882313919356434,
+          "lossRate": 0.00046710018567780996
         },
         {
           "date": "2025-01-01",
-          "avgTvl": 4724178811.539726,
-          "yieldPaid": 1765447966,
+          "avgTvl": 4724178811.556165,
+          "yieldPaid": 1929976903,
           "grossLoss": 1900000,
-          "yieldRate": 0.37370472973790697,
-          "lossRate": 0.00040218630068762005
+          "yieldRate": 0.4085317215933783,
+          "lossRate": 0.0004021863006862206
         },
         {
           "date": "2025-02-01",
-          "avgTvl": 5465759434.931507,
-          "yieldPaid": 2404740172,
+          "avgTvl": 5465759434.953424,
+          "yieldPaid": 2597203103,
           "grossLoss": 1900000,
-          "yieldRate": 0.4399645100791258,
-          "lossRate": 0.0003476186653691994
+          "yieldRate": 0.4751769875547279,
+          "lossRate": 0.00034761866536780545
         },
         {
           "date": "2025-03-01",
-          "avgTvl": 5988674789.057534,
-          "yieldPaid": 2628671281,
+          "avgTvl": 5988674789.071233,
+          "yieldPaid": 2839896191,
           "grossLoss": 1900000,
-          "yieldRate": 0.4389403955952142,
-          "lossRate": 0.00031726551648315703
+          "yieldRate": 0.474211121996897,
+          "lossRate": 0.0003172655164824313
         },
         {
           "date": "2025-04-01",
-          "avgTvl": 6268827909.561644,
-          "yieldPaid": 2656587587,
+          "avgTvl": 6268827909.589041,
+          "yieldPaid": 2881588582,
           "grossLoss": 1900000,
-          "yieldRate": 0.42377739911283757,
-          "lossRate": 0.0003030869609775043
+          "yieldRate": 0.4596694347905469,
+          "lossRate": 0.00030308696097617975
         },
         {
           "date": "2025-05-01",
-          "avgTvl": 6521436030.246575,
-          "yieldPaid": 2766173606,
+          "avgTvl": 6521436030.271233,
+          "yieldPaid": 2997861905,
           "grossLoss": 7700000,
-          "yieldRate": 0.4241663328706164,
-          "lossRate": 0.0011807215411279383
+          "yieldRate": 0.45969352318791606,
+          "lossRate": 0.001180721541123474
         },
         {
           "date": "2025-06-01",
-          "avgTvl": 6896768876.495891,
-          "yieldPaid": 2927335637,
+          "avgTvl": 6896768876.520548,
+          "yieldPaid": 3196724256,
           "grossLoss": 5800000,
-          "yieldRate": 0.42445030265931144,
-          "lossRate": 0.0008409735201894809
+          "yieldRate": 0.4635104225230703,
+          "lossRate": 0.0008409735201864743
         },
         {
           "date": "2025-07-01",
-          "avgTvl": 7229022981.580822,
-          "yieldPaid": 3005005670,
+          "avgTvl": 7229022981.602739,
+          "yieldPaid": 3300702198,
           "grossLoss": 5800000,
-          "yieldRate": 0.41568627982738465,
-          "lossRate": 0.0008023214222417194
+          "yieldRate": 0.45659035894615524,
+          "lossRate": 0.0008023214222392869
         },
         {
           "date": "2025-08-01",
-          "avgTvl": 7625892167.241096,
-          "yieldPaid": 3120337242,
+          "avgTvl": 7625892167.249315,
+          "yieldPaid": 3449625659,
           "grossLoss": 10300000,
-          "yieldRate": 0.40917668038949984,
-          "lossRate": 0.001350661637237174
+          "yieldRate": 0.4523569942170178,
+          "lossRate": 0.0013506616372357184
         },
         {
           "date": "2025-09-01",
           "avgTvl": 8123003706.547945,
-          "yieldPaid": 3278684322,
+          "yieldPaid": 3647351594,
           "grossLoss": 10300000,
-          "yieldRate": 0.4036295489262249,
+          "yieldRate": 0.4490151335348861,
           "lossRate": 0.0012680038532663946
         },
         {
           "date": "2025-10-01",
           "avgTvl": 8713012290.287672,
-          "yieldPaid": 3458432844,
+          "yieldPaid": 3865710371,
           "grossLoss": 12500000,
-          "yieldRate": 0.39692734599434554,
+          "yieldRate": 0.4436709420585895,
           "lossRate": 0.0014346358737418118
         },
         {
           "date": "2025-11-01",
-          "avgTvl": 9215058485.580822,
-          "yieldPaid": 3492282150,
+          "avgTvl": 9215058485.553425,
+          "yieldPaid": 3919006431,
           "grossLoss": 12500000,
-          "yieldRate": 0.37897558170298284,
-          "lossRate": 0.0013564753842375782
+          "yieldRate": 0.42528286034688556,
+          "lossRate": 0.001356475384241611
         },
         {
           "date": "2025-12-01",
-          "avgTvl": 9362202822.564384,
-          "yieldPaid": 3158324994,
+          "avgTvl": 9362202822.528767,
+          "yieldPaid": 3584595479,
           "grossLoss": 12500000,
-          "yieldRate": 0.33734849093291797,
-          "lossRate": 0.0013351558641597713
+          "yieldRate": 0.38287949395565296,
+          "lossRate": 0.0013351558641648508
         },
         {
           "date": "2026-01-01",
-          "avgTvl": 9338784575.931507,
-          "yieldPaid": 2963138036,
+          "avgTvl": 9338784575.879452,
+          "yieldPaid": 3396666905,
           "grossLoss": 12500000,
-          "yieldRate": 0.31729375615289196,
-          "lossRate": 0.0013385039453866162
+          "yieldRate": 0.36371616428255915,
+          "lossRate": 0.0013385039453940773
         },
         {
           "date": "2026-02-01",
-          "avgTvl": 9204166009.761644,
-          "yieldPaid": 2522665222,
+          "avgTvl": 9204167754.68493,
+          "yieldPaid": 2970590271,
           "grossLoss": 39500000,
-          "yieldRate": 0.274078631276809,
-          "lossRate": 0.004291534937343325
+          "yieldRate": 0.3227440383719611,
+          "lossRate": 0.004291534123755454
         },
         {
           "date": "2026-03-01",
-          "avgTvl": 9038184930.249315,
-          "yieldPaid": 2390159982,
+          "avgTvl": 9038086410.104109,
+          "yieldPaid": 2843950376,
           "grossLoss": 39500000,
-          "yieldRate": 0.26445132517708597,
-          "lossRate": 0.004370346513689935
+          "yieldRate": 0.31466288846504187,
+          "lossRate": 0.004370394152886286
         },
         {
           "date": "2026-04-01",
-          "avgTvl": 9009663229.8,
-          "yieldPaid": 2372898826,
+          "avgTvl": 9009391029.180822,
+          "yieldPaid": 2830349470,
           "grossLoss": 324500000,
-          "yieldRate": 0.26337264395760046,
-          "lossRate": 0.036016884507591454
+          "yieldRate": 0.31415546964635954,
+          "lossRate": 0.03601797268527539
+        },
+        {
+          "date": "2026-05-01",
+          "avgTvl": 8884701635.323288,
+          "yieldPaid": 2737507838,
+          "grossLoss": 318700000,
+          "yieldRate": 0.3081147741772637,
+          "lossRate": 0.03587064744334585
+        },
+        {
+          "date": "2026-06-01",
+          "avgTvl": 8596227930.331507,
+          "yieldPaid": 2568165186,
+          "grossLoss": 318700000,
+          "yieldRate": 0.29875489654460113,
+          "lossRate": 0.037074400839870424
         }
       ]
     },
     "EVM": {
-      "avgTvl": 88055261644.7507,
-      "latestTvl": 60393810795,
-      "yieldPaid1y": 5996638064,
-      "grossLoss1y": 610180000,
-      "hackCount1y": 10,
+      "avgTvl": 84678384308.6493,
+      "latestTvl": 49468663503,
+      "yieldPaid1y": 6113126513,
+      "grossLoss1y": 588380000,
+      "hackCount1y": 8,
       "fullRecoveryCount1y": 1,
-      "partialRecoveryCount1y": 5,
-      "noRecoveryCount1y": 4,
-      "yieldRate": 0.06810084885322104,
-      "lossRate": 0.006929512088235048,
-      "yieldToLossRatio": 9.827654239732539,
+      "partialRecoveryCount1y": 4,
+      "noRecoveryCount1y": 3,
+      "yieldRate": 0.07219229042819121,
+      "lossRate": 0.006948408437451741,
+      "yieldToLossRatio": 10.38975919133893,
       "breakdown": {
         "Ethereum": {
-          "avgTvl": 69761226767.24384,
-          "yield1y": 4466624790,
-          "latestTvl": 45916480961
+          "avgTvl": 66870094181.627396,
+          "yield1y": 4580567179,
+          "latestTvl": 37033561989
         },
         "Arbitrum": {
-          "avgTvl": 2733991022.6246576,
-          "yield1y": 306490664,
-          "latestTvl": 1718936997
+          "avgTvl": 2571475283.8273973,
+          "yield1y": 301030127,
+          "latestTvl": 1210435885
         },
         "Base": {
-          "avgTvl": 4195029214.553425,
-          "yield1y": 501615817,
-          "latestTvl": 4316826687
+          "avgTvl": 4433860947.605479,
+          "yield1y": 589034172,
+          "latestTvl": 4052321555
         },
         "OP Mainnet": {
-          "avgTvl": 345842880.3178082,
-          "yield1y": 10940976,
-          "latestTvl": 372002128
+          "avgTvl": 331388927.4739726,
+          "yield1y": 14644199,
+          "latestTvl": 271263718
         },
         "Polygon": {
-          "avgTvl": 1145811633.6,
-          "yield1y": 72871762,
-          "latestTvl": 1204000225
+          "avgTvl": 1180739778.939726,
+          "yield1y": 101901350,
+          "latestTvl": 993432814
         },
         "BSC": {
-          "avgTvl": 6612423539.386301,
-          "yield1y": 437311492,
-          "latestTvl": 5537818891
+          "avgTvl": 6508943582.882192,
+          "yield1y": 341660161,
+          "latestTvl": 4951498059
         },
         "Avalanche": {
-          "avgTvl": 1408619724.1726027,
-          "yield1y": 104158496,
-          "latestTvl": 647802170
+          "avgTvl": 1257588851.7671232,
+          "yield1y": 102593120,
+          "latestTvl": 458278206
         },
         "Blast": {
-          "avgTvl": 67127712.64109589,
-          "yield1y": 518865,
-          "latestTvl": 32482409
+          "avgTvl": 52801354.84109589,
+          "yield1y": 415214,
+          "latestTvl": 28614040
         },
         "Linea": {
-          "avgTvl": 391831946.4219178,
-          "yield1y": 15230593,
-          "latestTvl": 68773551
+          "avgTvl": 374151350.3178082,
+          "yield1y": 15226546,
+          "latestTvl": 24196913
         },
         "Mantle": {
-          "avgTvl": 267209938.22465754,
-          "yield1y": 6668109,
-          "latestTvl": 210458617
+          "avgTvl": 261759917.07945207,
+          "yield1y": 8651475,
+          "latestTvl": 145739157
         },
         "Sonic": {
-          "avgTvl": 327021758.01643836,
-          "yield1y": 21333391,
-          "latestTvl": 33362828
+          "avgTvl": 174629077.20547944,
+          "yield1y": 16884801,
+          "latestTvl": 15660501
         },
         "Cronos": {
-          "avgTvl": 447177364.0931507,
-          "yield1y": 12308366,
-          "latestTvl": 299076987
+          "avgTvl": 420588982.2438356,
+          "yield1y": 11515671,
+          "latestTvl": 260021899
         },
         "Unichain": {
-          "avgTvl": 351948143.4547945,
-          "yield1y": 40564743,
-          "latestTvl": 35788344
+          "avgTvl": 240362072.83835617,
+          "yield1y": 29002498,
+          "latestTvl": 23638767
         }
       },
       "series": [
         {
           "date": "2023-07-01",
-          "avgTvl": 38439274260.457535,
-          "yieldPaid": 1581402619,
+          "avgTvl": 38427171488.42192,
+          "yieldPaid": 1476782784,
           "grossLoss": 1100400000,
-          "yieldRate": 0.041140282937828204,
-          "lossRate": 0.028626971272763622
+          "yieldRate": 0.038430691794345405,
+          "lossRate": 0.028635987437471158
         },
         {
           "date": "2023-08-01",
-          "avgTvl": 37671359966.139725,
-          "yieldPaid": 1629632040,
+          "avgTvl": 37658116870.59452,
+          "yieldPaid": 1543904419,
           "grossLoss": 1109900000,
-          "yieldRate": 0.04325917730245915,
-          "lossRate": 0.02946270060325975
+          "yieldRate": 0.04099791883660448,
+          "lossRate": 0.02947306164601846
         },
         {
           "date": "2023-09-01",
-          "avgTvl": 36274693392.40274,
-          "yieldPaid": 1658367320,
+          "avgTvl": 36260860588.14794,
+          "yieldPaid": 1589615777,
           "grossLoss": 1109900000,
-          "yieldRate": 0.045716921768588215,
-          "lossRate": 0.030597088388690668
+          "yieldRate": 0.043838335638387314,
+          "lossRate": 0.030608760575384048
         },
         {
           "date": "2023-10-01",
-          "avgTvl": 35207182181.79178,
-          "yieldPaid": 1684059566,
+          "avgTvl": 35192847267.97808,
+          "yieldPaid": 1623068796,
           "grossLoss": 1309900000,
-          "yieldRate": 0.047832841529446536,
-          "lossRate": 0.03720547680403249
+          "yieldRate": 0.04611928053564532,
+          "lossRate": 0.03722063151144568
         },
         {
           "date": "2023-11-01",
-          "avgTvl": 34152643893.98904,
-          "yieldPaid": 1742201860,
+          "avgTvl": 34137798732.29315,
+          "yieldPaid": 1684348711,
           "grossLoss": 723900000,
-          "yieldRate": 0.05101221051605414,
-          "lossRate": 0.02119601639764728
+          "yieldRate": 0.049339698912884665,
+          "lossRate": 0.021205233696430934
         },
         {
           "date": "2023-12-01",
-          "avgTvl": 33964666906.241096,
-          "yieldPaid": 1823641801,
+          "avgTvl": 33949080213.183563,
+          "yieldPaid": 1766324708,
           "grossLoss": 772700000,
-          "yieldRate": 0.05369232108279269,
-          "lossRate": 0.022750112701915366
+          "yieldRate": 0.05202864692970613,
+          "lossRate": 0.022760557727862528
         },
         {
           "date": "2024-01-01",
-          "avgTvl": 34397789586.43014,
-          "yieldPaid": 1995885457,
+          "avgTvl": 34381017076.860275,
+          "yieldPaid": 1940746418,
           "grossLoss": 854200000,
-          "yieldRate": 0.05802365445561575,
-          "lossRate": 0.02483299102268421
+          "yieldRate": 0.05644819679596377,
+          "lossRate": 0.024845105602617816
         },
         {
           "date": "2024-02-01",
-          "avgTvl": 34830104860.734245,
-          "yieldPaid": 2116876914,
+          "avgTvl": 34812217748.6411,
+          "yieldPaid": 2072901383,
           "grossLoss": 740700000,
-          "yieldRate": 0.060777219088606976,
-          "lossRate": 0.021266085846185
+          "yieldRate": 0.059545226275649045,
+          "lossRate": 0.02127701272433048
         },
         {
           "date": "2024-03-01",
-          "avgTvl": 35634884709.265755,
-          "yieldPaid": 2234748742,
+          "avgTvl": 35616585539.8548,
+          "yieldPaid": 2201532455,
           "grossLoss": 1030700000,
-          "yieldRate": 0.06271238872337147,
-          "lossRate": 0.028923904438282026
+          "yieldRate": 0.06181200195444044,
+          "lossRate": 0.028938765026946544
         },
         {
           "date": "2024-04-01",
-          "avgTvl": 38038618817.27397,
-          "yieldPaid": 2596215311,
+          "avgTvl": 38020105435.78082,
+          "yieldPaid": 2559289499,
           "grossLoss": 896200000,
-          "yieldRate": 0.06825209199817253,
-          "lossRate": 0.023560266588675945
+          "yieldRate": 0.06731410840832246,
+          "lossRate": 0.023571738945168307
         },
         {
           "date": "2024-05-01",
-          "avgTvl": 40190107510.0411,
-          "yieldPaid": 2854994731,
+          "avgTvl": 40171751944.02192,
+          "yieldPaid": 2818402930,
           "grossLoss": 888800000,
-          "yieldRate": 0.07103725040513285,
-          "lossRate": 0.02211489481031973
+          "yieldRate": 0.07015882538375116,
+          "lossRate": 0.022124999707220015
         },
         {
           "date": "2024-06-01",
-          "avgTvl": 42862238854.60274,
-          "yieldPaid": 3021812462,
+          "avgTvl": 42842181375.77808,
+          "yieldPaid": 3002403799,
           "grossLoss": 1104800000,
-          "yieldRate": 0.07050057446253777,
-          "lossRate": 0.025775601777305705
+          "yieldRate": 0.07008055385101108,
+          "lossRate": 0.025787669173741624
         },
         {
           "date": "2024-07-01",
-          "avgTvl": 46088667928.55068,
-          "yieldPaid": 3242919872,
+          "avgTvl": 46064798220.1726,
+          "yieldPaid": 3230288729,
           "grossLoss": 1104800000,
-          "yieldRate": 0.07036262963875116,
-          "lossRate": 0.023971185318541314
+          "yieldRate": 0.07012488611282788,
+          "lossRate": 0.023983606629936094
         },
         {
           "date": "2024-08-01",
-          "avgTvl": 48957758746.98356,
-          "yieldPaid": 3430395403,
+          "avgTvl": 48928373996.56986,
+          "yieldPaid": 3419731692,
           "grossLoss": 905300000,
-          "yieldRate": 0.07006847312452508,
-          "lossRate": 0.018491451062509646
+          "yieldRate": 0.06989260857595107,
+          "lossRate": 0.018502556411612334
         },
         {
           "date": "2024-09-01",
-          "avgTvl": 51367782037.87397,
-          "yieldPaid": 3584871702,
+          "avgTvl": 51336230171.71781,
+          "yieldPaid": 3574622161,
           "grossLoss": 905300000,
-          "yieldRate": 0.06978832956729257,
-          "lossRate": 0.0176238872710625
+          "yieldRate": 0.06963156720006553,
+          "lossRate": 0.017634719124715714
         },
         {
           "date": "2024-10-01",
-          "avgTvl": 53793006180.69863,
-          "yieldPaid": 3708474085,
+          "avgTvl": 53759456910.0137,
+          "yieldPaid": 3697322985,
           "grossLoss": 732300000,
-          "yieldRate": 0.06893970700471153,
-          "lossRate": 0.013613293846045645
+          "yieldRate": 0.06877530387237421,
+          "lossRate": 0.01362178939466919
         },
         {
           "date": "2024-11-01",
-          "avgTvl": 56425105549.55891,
-          "yieldPaid": 3873779209,
+          "avgTvl": 56387528501.27123,
+          "yieldPaid": 3853289550,
           "grossLoss": 782300000,
-          "yieldRate": 0.06865346854508955,
-          "lossRate": 0.013864395863874737
+          "yieldRate": 0.0683358475254529,
+          "lossRate": 0.013873635195455735
         },
         {
           "date": "2024-12-01",
-          "avgTvl": 59660417105.11507,
-          "yieldPaid": 4115390637,
+          "avgTvl": 59615012432.76164,
+          "yieldPaid": 4089168691,
           "grossLoss": 733500000,
-          "yieldRate": 0.06898025251397649,
-          "lossRate": 0.012294583839527203
+          "yieldRate": 0.0685929353048794,
+          "lossRate": 0.012303947782067432
         },
         {
           "date": "2025-01-01",
-          "avgTvl": 63915518850.90137,
-          "yieldPaid": 4399170456,
+          "avgTvl": 63861875785.61918,
+          "yieldPaid": 4376479422,
           "grossLoss": 652000000,
-          "yieldRate": 0.06882789242878783,
-          "lossRate": 0.010200965457558907
+          "yieldRate": 0.06853039263506136,
+          "lossRate": 0.01020953412312423
         },
         {
           "date": "2025-02-01",
-          "avgTvl": 67648539297.178085,
-          "yieldPaid": 4652379330,
+          "avgTvl": 67589479492.40274,
+          "yieldPaid": 4640717262,
           "grossLoss": 645500000,
-          "yieldRate": 0.06877279802838361,
-          "lossRate": 0.00954196508463157
+          "yieldRate": 0.06866034916753029,
+          "lossRate": 0.009550302870324014
         },
         {
           "date": "2025-03-01",
-          "avgTvl": 69565970187.03836,
-          "yieldPaid": 4768411883,
+          "avgTvl": 69504317152.18082,
+          "yieldPaid": 4790840438,
           "grossLoss": 355500000,
-          "yieldRate": 0.06854517906067323,
-          "lossRate": 0.005110257199665093
+          "yieldRate": 0.06892867427947502,
+          "lossRate": 0.0051147901967244285
         },
         {
           "date": "2025-04-01",
-          "avgTvl": 69411279146.82466,
-          "yieldPaid": 4526186349,
+          "avgTvl": 69347876274.25754,
+          "yieldPaid": 4584501283,
           "grossLoss": 293000000,
-          "yieldRate": 0.06520822558860823,
-          "lossRate": 0.004221215969528834
+          "yieldRate": 0.0661087480872403,
+          "lossRate": 0.004225075312201937
         },
         {
           "date": "2025-05-01",
-          "avgTvl": 69038313213.97534,
-          "yieldPaid": 4371732478,
+          "avgTvl": 68974023781.0767,
+          "yieldPaid": 4438115167,
           "grossLoss": 293000000,
-          "yieldRate": 0.0633232805739384,
-          "lossRate": 0.004244020260053057
+          "yieldRate": 0.06434473333158815,
+          "lossRate": 0.004247976034136864
         },
         {
           "date": "2025-06-01",
-          "avgTvl": 69580171133.43013,
-          "yieldPaid": 4356370041,
+          "avgTvl": 69516193582.27124,
+          "yieldPaid": 4443293329,
           "grossLoss": 89000000,
-          "yieldRate": 0.06260936082847547,
-          "lossRate": 0.0012791000445993373
+          "yieldRate": 0.06391738528867288,
+          "lossRate": 0.0012802772334574103
         },
         {
           "date": "2025-07-01",
-          "avgTvl": 69942790794.09589,
-          "yieldPaid": 4434085177,
+          "avgTvl": 69881216526.42465,
+          "yieldPaid": 4468974407,
           "grossLoss": 98800000,
-          "yieldRate": 0.063395885789766,
-          "lossRate": 0.0014125830393422055
+          "yieldRate": 0.06395101043082324,
+          "lossRate": 0.001413827705226627
         },
         {
           "date": "2025-08-01",
-          "avgTvl": 72097759707.8685,
-          "yieldPaid": 4704211746,
+          "avgTvl": 72037987208.10684,
+          "yieldPaid": 4686713988,
           "grossLoss": 140800000,
-          "yieldRate": 0.06524768266116594,
-          "lossRate": 0.0019529039538885087
+          "yieldRate": 0.06505892473731661,
+          "lossRate": 0.0019545243482893284
         },
         {
           "date": "2025-09-01",
-          "avgTvl": 76458169986.51233,
-          "yieldPaid": 5086512078,
+          "avgTvl": 76388931299.2822,
+          "yieldPaid": 5074592647,
           "grossLoss": 149200000,
-          "yieldRate": 0.06652673061488773,
-          "lossRate": 0.0019513938147659008
+          "yieldRate": 0.06643099413340901,
+          "lossRate": 0.001953162551986141
         },
         {
           "date": "2025-10-01",
-          "avgTvl": 81044518387.39452,
-          "yieldPaid": 5521469660,
+          "avgTvl": 80965992838.17809,
+          "yieldPaid": 5529661563,
           "grossLoss": 163200000,
-          "yieldRate": 0.06812884782172754,
-          "lossRate": 0.0020137080612892353
+          "yieldRate": 0.06829610024114452,
+          "lossRate": 0.002015661072991202
         },
         {
           "date": "2025-11-01",
-          "avgTvl": 85481763684.58356,
-          "yieldPaid": 6006181202,
+          "avgTvl": 85401125217.45753,
+          "yieldPaid": 6073329595,
           "grossLoss": 113200000,
-          "yieldRate": 0.07026271970898983,
-          "lossRate": 0.0013242590597182
+          "yieldRate": 0.07111533459934438,
+          "lossRate": 0.0013255094673724494
         },
         {
           "date": "2025-12-01",
-          "avgTvl": 86997029283.84657,
-          "yieldPaid": 6132845150,
+          "avgTvl": 86924468855.30138,
+          "yieldPaid": 6251809587,
           "grossLoss": 241200000,
-          "yieldRate": 0.07049488011815058,
-          "lossRate": 0.0027725084636284875
+          "yieldRate": 0.0719223214053463,
+          "lossRate": 0.002774822822346065
         },
         {
           "date": "2026-01-01",
-          "avgTvl": 86956238966.1726,
-          "yieldPaid": 6005914025,
+          "avgTvl": 86893196489.61644,
+          "yieldPaid": 6133736120,
           "grossLoss": 241200000,
-          "yieldRate": 0.06906823588973758,
-          "lossRate": 0.002773809020119082
+          "yieldRate": 0.07058937140991205,
+          "lossRate": 0.0027758214652492718
         },
         {
           "date": "2026-02-01",
-          "avgTvl": 87448342257.53972,
-          "yieldPaid": 5970918493,
+          "avgTvl": 87389497222.63562,
+          "yieldPaid": 6096396675,
           "grossLoss": 267400000,
-          "yieldRate": 0.06827937887507744,
-          "lossRate": 0.003057805249326439
+          "yieldRate": 0.06976120550812498,
+          "lossRate": 0.003059864268571831
         },
         {
           "date": "2026-03-01",
-          "avgTvl": 87114852348.8274,
-          "yieldPaid": 5944465134,
+          "avgTvl": 87056455356.93425,
+          "yieldPaid": 6046382749,
           "grossLoss": 267400000,
-          "yieldRate": 0.0682371027869855,
-          "lossRate": 0.003069511028145585
+          "yieldRate": 0.06945358301357019,
+          "lossRate": 0.0030715700392768283
         },
         {
           "date": "2026-04-01",
-          "avgTvl": 87583651031.32329,
-          "yieldPaid": 5961046059,
+          "avgTvl": 87523849219.5863,
+          "yieldPaid": 6073992004,
           "grossLoss": 320180000,
-          "yieldRate": 0.06806117339031802,
-          "lossRate": 0.0036557051028335333
+          "yieldRate": 0.06939813614413963,
+          "lossRate": 0.003658202911034097
+        },
+        {
+          "date": "2026-05-01",
+          "avgTvl": 87884975507.90959,
+          "yieldPaid": 6170539657,
+          "grossLoss": 610180000,
+          "yieldRate": 0.07021154209054374,
+          "lossRate": 0.006942938727280913
+        },
+        {
+          "date": "2026-06-01",
+          "avgTvl": 86502734936.16713,
+          "yieldPaid": 6159730358,
+          "grossLoss": 598180000,
+          "yieldRate": 0.07120850413048146,
+          "lossRate": 0.006915157080772236
         }
       ]
     }
@@ -668,12 +700,12 @@
   "venues": [
     {
       "name": "Kamino",
-      "avgTvl": 2535486607.4027395,
-      "latestTvl": 1672864379,
-      "yieldPaid1y": 5436520,
+      "avgTvl": 2372215811.761644,
+      "latestTvl": 1203590285,
+      "yieldPaid1y": 4109279,
       "grossLoss1y": 0,
       "hackCount1y": 0,
-      "yieldRate": 0.002144172240597624,
+      "yieldRate": 0.001732253439853934,
       "lossRate": 0,
       "yieldToLossRatio": null,
       "tvlSlugs": [
@@ -686,36 +718,36 @@
       ],
       "yieldSource": "DefiLlama fees adapter, supply-side revenue",
       "liveApy": {
-        "minApy": 0.02626144062995861,
-        "maxApy": 0.056032876115918784,
-        "topApy": 0.055150960588408626,
+        "minApy": 0.024543832359666506,
+        "maxApy": 0.04246199140043405,
+        "topApy": 0.03767574399416418,
         "topSymbol": "USDC",
-        "topPoolTvl": 168206311.88407618,
+        "topPoolTvl": 114255058.34915978,
         "poolCount": 5
       },
       "cascadeExposure": [],
       "allHacksFullyRecovered": false,
       "launchDate": "2022-09-05",
-      "ageYears": 3.6315962847618324,
+      "ageYears": 3.8074268424721778,
       "allTime": {
-        "avgTvl": 747000806.5462494,
-        "yieldPaid": 5816721.933692787,
+        "avgTvl": 745787852.8804867,
+        "yieldPaid": 4918790.269564912,
         "grossLoss": 0,
         "hackCount": 0,
-        "yieldRate": 0.002144172240597624,
+        "yieldRate": 0.001732253439853934,
         "lossRateAnnualised": 0
       }
     },
     {
       "name": "Drift",
-      "avgTvl": 914673592.1287671,
-      "latestTvl": 244951912,
-      "yieldPaid1y": 16703632,
+      "avgTvl": 776462517.169863,
+      "latestTvl": 203679068,
+      "yieldPaid1y": 15948314,
       "grossLoss1y": 285000000,
       "hackCount1y": 1,
-      "yieldRate": 0.018261850067328143,
-      "lossRate": 0.3115865620835349,
-      "yieldToLossRatio": 0.0586092350877193,
+      "yieldRate": 0.02053970880414188,
+      "lossRate": 0.3670492698588977,
+      "yieldToLossRatio": 0.05595899649122807,
       "tvlSlugs": [
         "drift-trade",
         "drift-staked-sol"
@@ -726,34 +758,34 @@
       ],
       "yieldSource": "DefiLlama fees adapter, supply-side revenue",
       "liveApy": {
-        "minApy": 0.0615611,
-        "maxApy": 0.0615611,
-        "topApy": 0.0615611,
+        "minApy": 0.0587348,
+        "maxApy": 0.0587348,
+        "topApy": 0.0587348,
         "topSymbol": "DSOL",
-        "topPoolTvl": 237786753,
+        "topPoolTvl": 197802776,
         "poolCount": 1
       },
       "cascadeExposure": [],
       "allHacksFullyRecovered": false,
       "launchDate": "2021-12-04",
-      "ageYears": 4.38450525122316,
+      "ageYears": 4.560335808933505,
       "allTime": {
-        "avgTvl": 269803103.0964674,
-        "yieldPaid": 21602912.55653602,
+        "avgTvl": 261282479.87457192,
+        "yieldPaid": 24473799.37265331,
         "grossLoss": 285000000,
         "hackCount": 1,
-        "yieldRate": 0.018261850067328143,
-        "lossRateAnnualised": 0.24092248003910222
+        "yieldRate": 0.020539708804141882,
+        "lossRateAnnualised": 0.23918709637382302
       }
     },
     {
       "name": "Project 0",
-      "avgTvl": 140494847.62465754,
-      "latestTvl": 47171504,
-      "yieldPaid1y": 826333,
+      "avgTvl": 118544832.3260274,
+      "latestTvl": 37349536,
+      "yieldPaid1y": 970029,
       "grossLoss1y": 0,
       "hackCount1y": 0,
-      "yieldRate": 0.005881589353423196,
+      "yieldRate": 0.00818280291908619,
       "lossRate": 0,
       "yieldToLossRatio": null,
       "tvlSlugs": [
@@ -765,11 +797,11 @@
       ],
       "yieldSource": "DefiLlama fees adapter, supply-side revenue",
       "liveApy": {
-        "minApy": 0.0600444,
-        "maxApy": 0.0600444,
-        "topApy": 0.0600444,
+        "minApy": 0.057940399999999996,
+        "maxApy": 0.057940399999999996,
+        "topApy": 0.057940399999999996,
         "topSymbol": "LST",
-        "topPoolTvl": 9193990,
+        "topPoolTvl": 6469518,
         "poolCount": 1
       },
       "cascadeExposure": [
@@ -780,24 +812,24 @@
       ],
       "allHacksFullyRecovered": false,
       "launchDate": "2023-02-22",
-      "ageYears": 3.166161650949375,
+      "ageYears": 3.3419922086597205,
       "allTime": {
-        "avgTvl": 132281375.45817308,
-        "yieldPaid": 2463352.0621945313,
+        "avgTvl": 125881681.13360508,
+        "yieldPaid": 3442469.1637729146,
         "grossLoss": 0,
         "hackCount": 0,
-        "yieldRate": 0.005881589353423196,
+        "yieldRate": 0.00818280291908619,
         "lossRateAnnualised": 0
       }
     },
     {
       "name": "Save (Solend)",
-      "avgTvl": 176207585.3369863,
-      "latestTvl": 84851680,
-      "yieldPaid1y": 3905483,
+      "avgTvl": 149519485.60273972,
+      "latestTvl": 67420784,
+      "yieldPaid1y": 3173408,
       "grossLoss1y": 0,
       "hackCount1y": 0,
-      "yieldRate": 0.022164102598256488,
+      "yieldRate": 0.021224043055040127,
       "lossRate": 0,
       "yieldToLossRatio": null,
       "tvlSlugs": [
@@ -809,34 +841,34 @@
       ],
       "yieldSource": "DefiLlama fees adapter, supply-side revenue",
       "liveApy": {
-        "minApy": 0.02,
-        "maxApy": 0.030699999999999998,
-        "topApy": 0.02,
+        "minApy": 0.0141,
+        "maxApy": 0.0282,
+        "topApy": 0.0236,
         "topSymbol": "USDC",
-        "topPoolTvl": 11703914,
+        "topPoolTvl": 6812871,
         "poolCount": 3
       },
       "cascadeExposure": [],
       "allHacksFullyRecovered": false,
       "launchDate": "2021-08-12",
-      "ageYears": 4.693996467285218,
+      "ageYears": 4.869827024995564,
       "allTime": {
-        "avgTvl": 193596382.2293976,
-        "yieldPaid": 20141422.86944203,
+        "avgTvl": 184604236.54153427,
+        "yieldPaid": 19080217.3237007,
         "grossLoss": 1260000,
         "hackCount": 1,
-        "yieldRate": 0.022164102598256488,
-        "lossRateAnnualised": 0.0013865340822655004
+        "yieldRate": 0.021224043055040127,
+        "lossRateAnnualised": 0.0014015717848314196
       }
     },
     {
       "name": "Jupiter Lend",
-      "avgTvl": 892650525.3012048,
-      "latestTvl": 876670721,
-      "yieldPaid1y": 50818702.1916508,
+      "avgTvl": 895495419.1054313,
+      "latestTvl": 866025568,
+      "yieldPaid1y": 33472746.7000831,
       "grossLoss1y": 0,
       "hackCount1y": 0,
-      "yieldRate": 0.05693012074854622,
+      "yieldRate": 0.037379026163552244,
       "lossRate": 0,
       "yieldToLossRatio": null,
       "tvlSlugs": [
@@ -845,31 +877,31 @@
       "feeSlugs": [],
       "yieldSource": "DefiLlama yields API, sum of pool TVL times APY (annualised current rates)",
       "liveApy": {
-        "minApy": 0.0371724,
-        "maxApy": 0.1078106,
-        "topApy": 0.0465607,
+        "minApy": 0.0269559,
+        "maxApy": 0.0580473,
+        "topApy": 0.0580473,
         "topSymbol": "USDC",
-        "topPoolTvl": 402881494,
-        "poolCount": 21
+        "topPoolTvl": 387273981,
+        "poolCount": 12
       },
       "cascadeExposure": [],
       "allHacksFullyRecovered": false,
       "launchDate": "2025-08-19",
-      "ageYears": 0.6774552854462951,
+      "ageYears": 0.8532858431566406,
       "allTime": {
-        "avgTvl": 892650525.3012048,
-        "yieldPaid": 34427398.39925505,
+        "avgTvl": 895495419.1054313,
+        "yieldPaid": 28561820.890749067,
         "grossLoss": 0,
         "hackCount": 0,
-        "yieldRate": 0.05693012074854621,
+        "yieldRate": 0.03737902616355225,
         "lossRateAnnualised": 0
       }
     },
     {
       "name": "Solstice",
-      "avgTvl": 308155734.7584541,
-      "latestTvl": 378160042,
-      "yieldPaid1y": 25885081.719710145,
+      "avgTvl": 339857606.8376384,
+      "latestTvl": 505405123,
+      "yieldPaid1y": 28548038.974361625,
       "grossLoss1y": 0,
       "hackCount1y": 0,
       "yieldRate": 0.084,
@@ -884,10 +916,10 @@
       "cascadeExposure": [],
       "allHacksFullyRecovered": false,
       "launchDate": "2025-09-30",
-      "ageYears": 0.5624655523867468,
+      "ageYears": 0.7382961100970923,
       "allTime": {
-        "avgTvl": 308155734.7584541,
-        "yieldPaid": 14559466.788052848,
+        "avgTvl": 339857606.8376384,
+        "yieldPaid": 21076906.12567137,
         "grossLoss": 0,
         "hackCount": 0,
         "yieldRate": 0.084,
@@ -896,25 +928,25 @@
     },
     {
       "name": "Loopscale",
-      "avgTvl": 72576903.10294117,
-      "latestTvl": 83695165,
-      "yieldPaid1y": 377424.03518830007,
-      "grossLoss1y": 5800000,
-      "hackCount1y": 1,
-      "yieldRate": 0.005200332599656006,
-      "lossRate": 0.07991523132054054,
-      "yieldToLossRatio": 0.06507310951522415,
+      "avgTvl": 74092148.86746988,
+      "latestTvl": 79178356,
+      "yieldPaid1y": 248971.1917759,
+      "grossLoss1y": 0,
+      "hackCount1y": 0,
+      "yieldRate": 0.0033602911453039347,
+      "lossRate": 0,
+      "yieldToLossRatio": null,
       "tvlSlugs": [
         "loopscale"
       ],
       "feeSlugs": [],
       "yieldSource": "DefiLlama yields API, sum of pool TVL times APY (annualised current rates)",
       "liveApy": {
-        "minApy": 0.0163529,
-        "maxApy": 0.0884426,
-        "topApy": 0.0163529,
+        "minApy": 0.0166949,
+        "maxApy": 0.0815128,
+        "topApy": 0.0166949,
         "topSymbol": "USX",
-        "topPoolTvl": 2825716,
+        "topPoolTvl": 1026244,
         "poolCount": 5
       },
       "cascadeExposure": [
@@ -923,26 +955,26 @@
           "date": "2026-04-01"
         }
       ],
-      "allHacksFullyRecovered": true,
+      "allHacksFullyRecovered": false,
       "launchDate": "2025-07-22",
-      "ageYears": 0.7541151074859939,
+      "ageYears": 0.9299456651963394,
       "allTime": {
-        "avgTvl": 72576903.10294117,
-        "yieldPaid": 284621.16686382244,
+        "avgTvl": 74092148.86746988,
+        "yieldPaid": 231529.6805507647,
         "grossLoss": 5800000,
         "hackCount": 1,
-        "yieldRate": 0.005200332599656006,
-        "lossRateAnnualised": 0.10597219247729339
+        "yieldRate": 0.0033602911453039347,
+        "lossRateAnnualised": 0.08417792741043219
       }
     },
     {
       "name": "Exponent",
-      "avgTvl": 81855587.08767124,
-      "latestTvl": 71271139,
-      "yieldPaid1y": 823575,
+      "avgTvl": 80765617.41369863,
+      "latestTvl": 89031216,
+      "yieldPaid1y": 777730,
       "grossLoss1y": 0,
       "hackCount1y": 0,
-      "yieldRate": 0.010061316878931085,
+      "yieldRate": 0.009629468886695955,
       "lossRate": 0,
       "yieldToLossRatio": null,
       "tvlSlugs": [
@@ -961,24 +993,24 @@
       ],
       "allHacksFullyRecovered": false,
       "launchDate": "2025-02-03",
-      "ageYears": 1.216811890511319,
+      "ageYears": 1.3926424482216646,
       "allTime": {
-        "avgTvl": 71799204.69506727,
-        "yieldPaid": 879018.2781928955,
+        "avgTvl": 72320554.58039215,
+        "yieldPaid": 969848.0804608514,
         "grossLoss": 0,
         "hackCount": 0,
-        "yieldRate": 0.010061316878931085,
+        "yieldRate": 0.009629468886695955,
         "lossRateAnnualised": 0
       }
     },
     {
       "name": "Lulo",
-      "avgTvl": 94262519.32054794,
-      "latestTvl": 86432320,
-      "yieldPaid1y": 4164311.8293728256,
+      "avgTvl": 93416837.38630137,
+      "latestTvl": 78321627,
+      "yieldPaid1y": 4194516.40562783,
       "grossLoss1y": 0,
       "hackCount1y": 0,
-      "yieldRate": 0.044177811704901704,
+      "yieldRate": 0.04490107482746909,
       "lossRate": 0,
       "yieldToLossRatio": null,
       "tvlSlugs": [
@@ -987,11 +1019,11 @@
       "feeSlugs": [],
       "yieldSource": "api.lulo.fi/v1/rates.getRates Protected CURRENT (live)",
       "liveApy": {
-        "minApy": 0.044177811704901704,
-        "maxApy": 0.044177811704901704,
-        "topApy": 0.044177811704901704,
+        "minApy": 0.04490107482746909,
+        "maxApy": 0.04490107482746909,
+        "topApy": 0.04490107482746909,
         "topSymbol": "Lulo",
-        "topPoolTvl": 86432320,
+        "topPoolTvl": 78321627,
         "poolCount": 1
       },
       "cascadeExposure": [
@@ -1002,24 +1034,24 @@
       ],
       "allHacksFullyRecovered": false,
       "launchDate": "2024-01-02",
-      "ageYears": 2.306476503789895,
+      "ageYears": 2.482307061500241,
       "allTime": {
-        "avgTvl": 64899663.283511266,
-        "yieldPaid": 6612956.686379893,
+        "avgTvl": 66178183.474090405,
+        "yieldPaid": 7376104.856581818,
         "grossLoss": 0,
         "hackCount": 0,
-        "yieldRate": 0.044177811704901704,
+        "yieldRate": 0.04490107482746909,
         "lossRateAnnualised": 0
       }
     },
     {
       "name": "DefiTuna",
-      "avgTvl": 22245330.148007706,
-      "latestTvl": 3057862,
-      "yieldPaid1y": 2662818,
+      "avgTvl": 17842850.17334577,
+      "latestTvl": 2529681,
+      "yieldPaid1y": 2715922,
       "grossLoss1y": 0,
       "hackCount1y": 0,
-      "yieldRate": 0.11970233672789443,
+      "yieldRate": 0.15221346217753554,
       "lossRate": 0,
       "yieldToLossRatio": null,
       "tvlSlugs": [
@@ -1034,13 +1066,13 @@
       "cascadeExposure": [],
       "allHacksFullyRecovered": false,
       "launchDate": "2025-09-03",
-      "ageYears": 0.6363875236393135,
+      "ageYears": 0.812218081349659,
       "allTime": {
-        "avgTvl": 10978321.762863535,
-        "yieldPaid": 836296.425418325,
+        "avgTvl": 8839563.205217391,
+        "yieldPaid": 1092839.8504871554,
         "grossLoss": 0,
         "hackCount": 0,
-        "yieldRate": 0.11970233672789443,
+        "yieldRate": 0.15221346217753556,
         "lossRateAnnualised": 0
       }
     },
@@ -1068,10 +1100,10 @@
       "cascadeExposure": [],
       "allHacksFullyRecovered": false,
       "launchDate": "2025-04-01",
-      "ageYears": 1.0607543956447891,
+      "ageYears": 1.2365849533551347,
       "allTime": {
         "avgTvl": 177763843,
-        "yieldPaid": 15085102.227916814,
+        "yieldPaid": 17585607.48035076,
         "grossLoss": 0,
         "hackCount": 0,
         "yieldRate": 0.08,

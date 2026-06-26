@@ -197,9 +197,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'Vaults', id: 'vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR', authority: 'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9' },
     ],
     publicDocs: {
-      other: '$285M exploit April 1, 2026 via compromised multisig signers (pre-signed durable nonce transactions). Protocol frozen. Recovery announced April 16 with Tether support (~$150M). New community multisig planned for relaunch with timelocks, disabled durable nonces, and dedicated signing devices. Audited by Trail of Bits (2022), Neodyme (2024).',
+      other: '$285M exploit April 1, 2026 via compromised multisig signers (pre-signed durable nonce transactions). Protocol remains frozen as of June 2026 with no relaunch date set. Recovery (announced April 16, detailed May 5) is a pro-rata recovery-token pool seeded with remaining assets and backed by up to $127.5M from Tether plus $20M from partners, against ~$295M in user losses; users are not yet made whole. Relaunch will use a community multisig with timelocks, disabled durable nonces, and dedicated signing devices. Audited by Trail of Bits (2022) and Neodyme (2024) pre-incident, plus OtterSec (full code audit) and Asymmetric Research (operational security) for the relaunch.',
       source: 'https://docs.drift.trade/security/risks',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP',
@@ -255,9 +255,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'CAW (mrgn legacy admin)', id: 'CAW7771FWrfBFtxAUrSw38fBVtKHns9WW9KCw65vnVsH', authority: 'Gy7pgCryzquDBHkpGkJGBRAyLpdmdqkifjLdKMoS1GEE' },
     ],
     publicDocs: {
-      other: 'Formerly marginfi. Project 0 took over operations Sep 2025, retained the on-chain infrastructure (same Squads V4 multisig, same programs). $160M flash loan vulnerability discovered Sep 2025 by Asymmetric Research, patched via bug bounty before exploitation. 30-minute pause mechanism. Oracle aggregation from 8 independent providers. Verifiable builds via solana-verify.',
+      other: 'Formerly marginfi. Project 0 rebranded from marginfi Sep 2025 (same team, mrgnlabs to 0dotxyz), retaining the on-chain infrastructure (same Squads V4 multisig, same programs). $160M flash loan vulnerability discovered Sep 2025 by Asymmetric Research, patched via bug bounty before exploitation. 30-minute pause mechanism. Oracle aggregation across Pyth and Switchboard with multi-feed weighting. Verifiable builds via solana-verify.',
       source: 'https://www.0.xyz/',
-      updatedAt: '2026-04-23',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -373,9 +373,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'Perpetuals', id: 'PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu', authority: '5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx' },
     ],
     publicDocs: {
-      other: 'Audited by OtterSec and Offside Labs (Feb 2024). Position and market leverage caps as circuit breakers. 24h governance timelock on upgrade authority.',
-      source: 'https://dev.jup.ag/resources/audits',
-      updatedAt: '2026-04-05',
+      other: 'Audited by OtterSec, Offside Labs (Feb 2024), and Sec3. Position and market leverage caps as circuit breakers. 24h governance timelock on upgrade authority.',
+      source: 'https://developers.jup.ag/docs/resources/audits',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -430,7 +430,7 @@ export const PROTOCOLS: Protocol[] = [
     publicDocs: {
       other: '4 separate multisigs: Ops (incentives/treasury), Program (6/12, configs), Program II (3/6, new markets only), UPGRADE (4/7, 12h timelock, program upgrades). 7 audits from 4 firms. Formal verification by Certora. 3 oracle integrations (Chainlink, Pyth, RedStone). Transparency dashboard: jup.ag/lend/transparency',
       source: 'https://jup.ag/lend/transparency',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -483,9 +483,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'PCKj', id: 'PCKjSaQaZb3AcmjTcb2fcLanh9Mky9ZvuaKqTBxsqWE', authority: '9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb' },
     ],
     publicDocs: {
-      other: 'Audited by Halborn. HackerOne bug bounty program ($83K paid, up to $10K per critical). Security Council established Q4 2025.',
+      other: 'Audited by Halborn. HackerOne bug bounty program. 5-member Security Council established Q4 2024.',
       source: 'https://hackerone.com/magic-eden',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -533,9 +533,9 @@ export const PROTOCOLS: Protocol[] = [
     sharedAuthority: true,
     programs: [],
     publicDocs: {
-      other: 'Audited by OtterSec. Oracle-free pricing model reduces oracle manipulation risk.',
+      other: 'Audited by OtterSec (Feb 2025) and Accretion (Dec 2025). Formula-based hyUSD/xSOL pricing with no oracle-driven liquidations; uses the Pyth EMA SOL/USD oracle and Sanctum true-pricing for USD and LST valuation. V2 xAsset Engine (leveraged tokenized assets) launched March 2026.',
       source: 'https://docs.hylo.so',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -590,9 +590,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'Haio3o', id: 'Haio3oNYt8MtL9traoQNJ9RXK1XEVaQBBrZZKXt2VXjz', authority: 'haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P' },
     ],
     publicDocs: {
-      other: 'Audited by OShield (Jan-Feb 2025) and Sec3. $5.8M exploit April 2025 (RateX PT pricing), full recovery within 3 days via 10% bounty. Post-exploit code review by Sec3. Backed by CoinFund, Jump Capital, Solana Ventures. Note: program upgrade authority for all 6 Loopscale programs sits at vault haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P (different from the ls-admin multisig vault at DwBXwJDZ shown above), confirmed via on-chain reverse-derive 2026-05-08.',
+      other: 'Audited by OShield (Feb 2025), Sec3, Adevar Labs, and Highland Security. $5.8M exploit April 2025 (RateX PT pricing), full recovery within 3 days via 10% bounty. Post-exploit code review by Sec3. Backed by CoinFund, Jump Capital, Solana Ventures. Note: program upgrade authority for all 6 Loopscale programs sits at vault haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P (different from the ls-admin multisig vault at DwBXwJDZ shown above), confirmed via on-chain reverse-derive 2026-05-08.',
       source: 'https://docs.loopscale.com/resources/audits',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -638,9 +638,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'Core', id: 'ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7', authority: '2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP' },
     ],
     publicDocs: {
-      other: 'Triple-audited: Offside Labs (Feb 2025), OtterSec (Mar 2025), Certora (Jun 2025). $250K bug bounty program. Open-source under BUSL-1.1. Config change April 9, 2026: threshold bumped 2/3 to 3/4, new member added with Vote+Execute permissions (first role separation for Exponent).',
+      other: 'Audited repeatedly across Offside Labs, OtterSec, Certora, Sec3, Adevar, and Accretion (Sep 2024 to Nov 2025), reports public. $250K bug bounty program. Open-source under BUSL-1.1. Config change April 9, 2026: threshold bumped 2/3 to 3/4, new member added with Vote+Execute permissions (first role separation for Exponent).',
       source: 'https://docs.exponent.finance/security/audits',
-      updatedAt: '2026-04-09',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: true,
     configAuthority: 'autonomous',
@@ -692,9 +692,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'Institutional', id: 'EVQ4s1b6N1vmWFDv8PRNc77kufBP8HcrSNWXQAhRsJq9', authority: 'D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF' },
     ],
     publicDocs: {
-      other: '24h minimum timelock delay on all administrative functions. Even if multisig compromised, attackers cannot access user assets by design. Audited by Halborn (Solana), Spearbit and Certora (EVM). Bug bounty via Spearbit/Cantina.',
-      source: 'https://docs.huma.finance/protocol-overview/security-and-audits',
-      updatedAt: '2026-04-05',
+      other: 'Administrative functions are multisig-secured. Even if a multisig were compromised, attackers cannot access user assets by design. Audited by Halborn and Sec3 (Solana), Spearbit (EVM), and Certora (Stellar). Bug bounty via Spearbit/Cantina.',
+      source: 'https://docs.huma.finance/ecosystem-resources/security-audits',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -754,9 +754,9 @@ export const PROTOCOLS: Protocol[] = [
       updatedAt: '2026-04-05',
     },
     publicDocs: {
-      other: 'Halborn audit completed, no major flaws. Chainlink Proof of Reserves for continuous on-chain collateral verification. Ceffu custody (ISO 27001/27701, SOC2 Type 1 and 2). Copper settlement infrastructure.',
+      other: 'Halborn audit completed June 2025 (USX, YieldVault and governance programs), no major flaws. Chainlink Proof of Reserves for continuous on-chain collateral verification. Ceffu custody (ISO 27001/27701, SOC2 Type 1 and 2) and Copper settlement infrastructure. USX live on Solana mainnet since Sept 2025; SLX governance token (TGE May 2026); eUSX is the yield-bearing receipt token.',
       source: 'https://www.halborn.com/case-studies/post/case-study-securing-solstice-labs-smart-contracts-for-institutional-yield',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -802,9 +802,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'PumpSwap', id: 'pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA', authority: '7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8' },
     ],
     publicDocs: {
-      other: 'PumpSwap underwent 9 independent security audits including a $2M Sherlock audit contest. LP tokens burned on graduation, locking liquidity permanently. Pump.fun core program is closed-source with no published audits.',
+      other: 'PumpSwap underwent 9 independent security audits (Pashov Group, OtterSec, bl0ckpain, Sec3) including a ~$2M Cantina audit competition that also covered the core bonding-curve program. LP tokens burned on graduation, locking that liquidity permanently. The Pump.fun core program remains closed-source.',
       source: 'https://github.com/pump-fun/pump-public-docs',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -849,9 +849,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'FlexLend', id: 'FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q', authority: 'FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs' },
     ],
     publicDocs: {
-      other: '5 independent audits: Certora, Halborn, OtterSec, Offside Labs, Sec3. Bug bounty program active. $100M+ in protected capital across 50+ integrations.',
-      source: 'https://coincodecap.com/lulo-review',
-      updatedAt: '2026-04-05',
+      other: '5 independent audits: Certora, Halborn, OtterSec, Offside Labs, Sec3. $100M+ in protected capital across 50+ integrations.',
+      source: 'https://lulo.fi/docs/audits',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -900,7 +900,7 @@ export const PROTOCOLS: Protocol[] = [
     publicDocs: {
       other: 'Staking program audited by Op Codes (August 2022). Note: repository states most code is unaudited.',
       source: 'https://github.com/nosana-ci/nosana-programs',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -954,9 +954,9 @@ export const PROTOCOLS: Protocol[] = [
     authorityRole: 'program-upgrade',
     authorityRoleNote: 'Squads label: "switchboard". The displayed multisig only controls 1 of 3 Switchboard programs (On-Demand SBondMDr...). Oracle V2 (SW1TCH7q...) and Attestation (sbattyXr...) programs are upgraded by separate vaults (2NvGRFsw... and 31Sof5r1... respectively) - not surfaced here.',
         publicDocs: {
-      other: 'Oracle network. Smart contracts regularly audited. Public bug bounty programme. V3 uses hardware attestation (TEE) for oracle execution. Open source.',
+      other: 'Oracle network. Switchboard On-Demand (pull-based) with V3 TEE hardware attestation for oracle execution; Surge for low-latency streaming. SWTCH governance token, staked as svSWTCH through the Jito Node Consensus Network, governs node operations, fees and economic parameters. Smart contracts audited, public bug bounty, open source.',
       source: 'https://docs.switchboard.xyz',
-      updatedAt: '2026-04-13',
+      updatedAt: '2026-06-26',
     },
 insuranceFund: {
       hasInsuranceFund: false,
@@ -998,9 +998,9 @@ insuranceFund: {
       { name: 'Stable Swap', id: 'swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ', authority: '9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP' },
     ],
     publicDocs: {
-      other: 'New team took over ~March 2026. Multisig changed from 2/5 to 2/3 on April 7, 2026 (two members removed). Team requesting LPs withdraw while fresh audits are conducted. Previously audited by Neodyme AG (November 2024). Program code unchanged since audit.',
+      other: 'New team took over ~March 2026. Multisig changed from 2/5 to 2/3 on April 7, 2026 (two members removed). The team requested LPs withdraw pending fresh audits; as of June 2026 no new audit has been published and TVL remains depressed. Previously audited by Neodyme AG (September 2024). Program code unchanged since audit.',
       source: 'https://docs.stabble.org',
-      updatedAt: '2026-04-07',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -1052,9 +1052,9 @@ insuranceFund: {
     authorityRole: 'unknown',
     authorityRoleNote: 'Squads profile is private. Role (program upgrade vs treasury) not externally verifiable.',
         publicDocs: {
-      other: 'Meta DEX aggregator. Aggregates Jupiter and other routers via proprietary Argos engine. 87% win rate in swap comparisons per public benchmarks.',
+      other: 'Meta DEX aggregator. Aggregates Jupiter and other routers via its Argos meta-aggregator and DART real-time routing engine (2026). 87% win rate in swap comparisons per self-published benchmarks.',
       source: 'https://titan.exchange',
-      updatedAt: '2026-04-13',
+      updatedAt: '2026-06-26',
     },
 insuranceFund: {
       hasInsuranceFund: false,
@@ -1095,9 +1095,9 @@ insuranceFund: {
     sharedAuthority: true,
     programs: [],
     publicDocs: {
-      other: '1 of 5 multisig seats held by core team, community appointment for additional seats. Audited by OtterSec. Public forum for multisig seat candidates.',
-      source: 'https://docs.solayer.org/security/overview',
-      updatedAt: '2026-04-05',
+      other: 'Core team holds a minority of the governing multisig seats, with community-appointed members for the rest. Audited by OtterSec and Halborn. Public forum for multisig seat candidates.',
+      source: 'https://docs.solayer.org/resources/security/audits',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -1145,9 +1145,9 @@ insuranceFund: {
       { name: 'Flash Trade Aux (6U1gV)', id: '6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE', authority: '2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda' },
     ],
     publicDocs: {
-      other: '4 audits: Offside Labs (Mar 2025, May 2025), Halborn (2024, 2023), GriGonTok (economic). Reports on GitHub. Dynamic circuit breakers halt trading during abnormal volatility. Backup oracle system. Open-source reference implementation.',
+      other: '4 audits: Offside Labs (May 2025), Halborn (2024, 2023), GriGonTok (economic). Reports on GitHub. Pyth pricing with a backup oracle system for uptime. Open-source reference implementation.',
       source: 'https://github.com/flash-trade/Audits',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -1201,9 +1201,9 @@ insuranceFund: {
       { name: 'SPMB', id: 'SPMBzsVUuoHA4Jm6KunbsotaahvVikZs1JyTW6iJvbn', authority: '47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz' },
     ],
     publicDocs: {
-      other: '11-member multisig for upgrade authority includes Jito, Jupiter, Laine, Mango, MRGN, Solblaze, SolanaFM. No single party can unilaterally upgrade. Plans to grow multisig and eventually freeze programs. Audited via inherited Solana Labs stake pool audits (Halborn, Kudelski, OtterSec, Neodyme, Quantstamp). Concentration scan flags 4 additional program data accounts under this vault that haven\'t been reverse-derived to programIds yet.',
+      other: '11-member multisig for upgrade authority includes Jito, Jupiter, Laine, Mango, MRGN, Solblaze, SolanaFM. No single party can unilaterally upgrade. Plans to grow multisig and eventually freeze programs. Audited via inherited Solana Labs stake pool audits (Halborn, Kudelski, OtterSec, Neodyme, Quantstamp), plus Sanctum-specific audits of Infinity (Neodyme, OtterSec, Sec3) and the Reserve Pool (Sec3). Concentration scan flags 4 additional program data accounts under this vault that haven\'t been reverse-derived to programIds yet.',
       source: 'https://learn.sanctum.so/legacy-docs/security/is-sanctum-safe',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -1244,9 +1244,9 @@ insuranceFund: {
       { name: 'Limit Orders', id: 'jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu', authority: 'CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ' },
     ],
     publicDocs: {
-      other: 'Ultra V3 routing with on-chain slippage simulation before execution. All swaps and contracts audited and open-sourced. No major security incidents since 2021 launch.',
-      source: 'https://dev.jup.ag/resources/audits',
-      updatedAt: '2026-04-05',
+      other: 'Ultra V3 routing (Iris engine) with on-chain Predictive Execution slippage simulation before execution. All swaps and contracts audited and open-sourced. No documented exploit of the on-chain swap/routing programs since 2021 launch.',
+      source: 'https://developers.jup.ag/docs/resources/audits',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -1352,9 +1352,9 @@ insuranceFund: {
       { name: 'Stake (TStake)', id: 'TSTKEiz9sqJRypokAkRhaW29rnDYDSxqWxmdv9brkp2', authority: 'BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv' },
     ],
     publicDocs: {
-      other: '7-member Security Council of prominent Solana ecosystem builders. 4/7 threshold to pass or veto proposals. Audited by OtterSec, Neodyme audit in progress. Protocols to be open-sourced after second audit.',
+      other: '7-member Security Council of prominent Solana ecosystem builders. 4/7 threshold to pass or veto proposals. Audited by OtterSec and Neodyme. Protocols open-sourced on GitHub under Apache-2.0.',
       source: 'https://docs.tensor.foundation/audits',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -1393,9 +1393,9 @@ insuranceFund: {
       { name: 'CLOB V1', id: 'PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY', authority: '8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq' },
     ],
     publicDocs: {
-      other: 'Audited by OtterSec. Bug bounty up to $200K (critical) via Ellipsis Labs. Open-source on GitHub. Ellipsis Labs authored timelock-program-authority tool but never deployed it to Solana mainnet (confirmed on-chain April 8, 2026).',
+      other: 'The Phoenix V1 spot order book was renamed Phoenix Legacy in November 2025 when Ellipsis Labs launched Phoenix Perpetuals (private beta); the spot DEX remains live. Audited by OtterSec. Bug bounty up to $200K (critical) via Ellipsis Labs. Open-source on GitHub. Ellipsis Labs authored timelock-program-authority tool but never deployed it to Solana mainnet (confirmed on-chain April 8, 2026).',
       source: 'https://github.com/Ellipsis-Labs/phoenix-v1/blob/master/SECURITY.md',
-      updatedAt: '2026-04-08',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: true,
     insuranceFund: {
@@ -1447,9 +1447,9 @@ insuranceFund: {
     ],
     verifiedBuild: false,
         publicDocs: {
-      other: 'DEX with DLMM, DAMM, and Dynamic Vaults. Multiple audits. Open source. Explicitly states no timelock programme function for updates.',
+      other: 'DEX with DLMM, DAMM v2, Dynamic Bonding Curve (DBC) launchpad, and Dynamic Vaults. Audited across DLMM, DAMM v2 and DBC by Offside Labs, OtterSec, Zenith, Sec3 and Sherlock. Open source. MET governance token (TGE Oct 2025) for fee-sharing and parameter votes.',
       source: 'https://docs.meteora.ag',
-      updatedAt: '2026-04-13',
+      updatedAt: '2026-06-26',
     },
 insuranceFund: {
       hasInsuranceFund: false,
@@ -1491,9 +1491,9 @@ insuranceFund: {
     ],
     verifiedBuild: false,
         publicDocs: {
-      other: 'Real estate perpetuals. Audited by OtterSec (2024). Uses forked Pyth V1 oracle operated by Parcl team for real estate price feeds.',
+      other: 'Real estate perpetuals. Audited by OtterSec and Sec3. Uses a Parcl-operated fork of the Pyth oracle contract for real estate price feeds.',
       source: 'https://docs.parcl.co',
-      updatedAt: '2026-04-13',
+      updatedAt: '2026-06-26',
     },
 insuranceFund: {
       hasInsuranceFund: false,
@@ -1531,9 +1531,9 @@ insuranceFund: {
       { name: 'Liquid Staking', id: 'MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD', authority: '551FBXSXdhcRDDkdcb3ThDRg84Mwe5Zs6YjJ1EEoyzBp' },
     ],
     publicDocs: {
-      other: '3 separate multisigs: Code upgrades (6/13, only 3 are core team, rest are ecosystem parties including Staking Facilities, Mango, Phantom), Treasury (7 wallets, team-owned), Operations (5 wallets). Migration of upgrade authority to Realms DAO (MNDE token holders) has been announced and audited but not yet completed. Audited by Kudelski, Ackee Blockchain, Neodyme. ImmuneFi bug bounty up to $250K. veMNDE governance on Realms for treasury and operational decisions.',
+      other: '3 separate multisigs: Code upgrades (6/13, only 3 are core team, rest are ecosystem parties including Staking Facilities, Mango, Phantom), Treasury (7 wallets, team-owned), Operations (5 wallets). Migration of upgrade authority to Realms DAO (MNDE token holders) has been announced and audited but not yet completed. Audited by Kudelski, Ackee Blockchain, Neodyme, and Sec3, with further Neodyme reviews through 2026. ImmuneFi bug bounty up to $250K. veMNDE governance on Realms for treasury and operational decisions.',
       source: 'https://docs.marinade.finance/marinade-protocol/security',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -1582,9 +1582,9 @@ insuranceFund: {
       { name: 'escrow (escMHe)', id: 'escMHe7kSqPcDHx4HU44rAHhgdTLBZkUrU39aN8kMcL', authority: '6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT' },
     ],
     publicDocs: {
-      other: 'Wormhole Core Contracts controlled by Pyth Council members via Squads Mesh multisig. Squads Mesh uses an external authority from the Pyth DAO on Realms. Council members are controlled via Realms voting. Other Pyth programs (staking, governance) have direct Realms authority. Pythian Council: 7/9 threshold, 8 elected members + 1 Operations Wallet. Elections every 6 months, rotating 4 of 8 members, geographic diversity required. Constitutional PIPs require >67% token approval. Three separate councils: Pythian (oracle ops), Price Feed, Community. Audited by Zellic, OtterSec. Concentration scan flags 6 additional program data accounts under this vault that haven\'t been reverse-derived to programIds yet.',
+      other: 'Wormhole Core Contracts controlled by Pyth Council members via Squads Mesh multisig. Squads Mesh uses an external authority from the Pyth DAO on Realms. Council members are controlled via Realms voting. Other Pyth programs (staking, governance) have direct Realms authority. Pythian Council: 7/9 threshold, 8 elected members + 1 Operations Wallet. Elections every 6 months, rotating 4 of 8 members, geographic diversity required. Constitutional PIPs require >67% token approval. Three separate councils: Pythian (oracle ops), Price Feed, Community. Audited by Zellic, OtterSec, Trail of Bits, Halborn, and Certora. Concentration scan flags 6 additional program data accounts under this vault that haven\'t been reverse-derived to programIds yet.',
       source: 'https://github.com/pyth-network/governance/blob/main/docs/constitution/pyth-dao-constitution.md',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -1628,9 +1628,9 @@ insuranceFund: {
       { name: 'Validator History', id: 'HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa', authority: '9eZbWiHsPRsxLSiHxzg2pkXsAuQMwAjQrda7C7e21Fw6' },
     ],
     publicDocs: {
-      other: 'Upgrade authority is an SPL Governance (Realms) PDA. JTO token holders control Vault/Restaking/Steward program upgrades via on-chain voting. 250K JTO to propose, 3-day voting period, 2-day cool-off (only No votes allowed). Security Council has veto power over proposals violating constitution. Stake pool program is immutable. Audited by OtterSec (ongoing per release), Neodyme, Halborn. ImmuneFi bug bounty up to $250K.',
+      other: 'Upgrade authority is an SPL Governance (Realms) PDA. JTO token holders control Vault/Restaking/Steward program upgrades via on-chain voting. 250K JTO to propose, 3-day voting period, 2-day cool-off (only No votes allowed). Security Council has veto power over proposals violating constitution. The upgrade authority for the SPL stake pool program is held by a committee of Solana staking ecosystem participants. Audited by OtterSec (ongoing per release), Neodyme, Halborn, Offside Labs, and Certora. ImmuneFi bug bounty up to $250K.',
       source: 'https://www.jito.network/docs/governance/constitution-of-the-jito-foundation/',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -1667,9 +1667,9 @@ insuranceFund: {
     sharedAuthority: true,
     programs: [],
     publicDocs: {
-      other: 'Open-source (built on spl-token-lending). Audited by Kudelski, Neodyme, OtterSec. Bug bounty programme. Program upgrade authority is RY93CZYe5g6drtG7W9PmHRPzaBLZ1uwihTzayQTmJfh, a single-key address with no on-chain account data. Save documents three operational addresses they label as "msigs": treasury msig EaFPY9LTQeFR7SEyfbKKFuVMtYvUBbYiiK7WvBJJ7iBU, LM msig 5QbRL9MU5QakL5Fx2He9YaiUzB3TQpVAUBR2ARKN1NrM, and a deprecated treasury msig BX1VZoS4sDyBeXWuLzfbngYtdJGEEBK39PzUGfWYpFNu. All three are System Program owned with zero data length on chain, and none resolve to a Squads multisig view in app.squads.so. The most defensible reading is that these are plain EOA wallets labelled as multisigs in Save documentation, with any multi-party signing happening off-chain (custody provider or similar) where solgov cannot verify it. The on-chain governance is single-key across the program upgrade authority and the treasury / LM addresses.',
-      source: 'https://docs.save.finance/daotoken/dao',
-      updatedAt: '2026-05-07',
+      other: 'Open-source (built on spl-token-lending). Audited by Kudelski, Neodyme, OtterSec, with v0.1.2 re-audits by OtterSec (Jan 2026) and Neodyme (Feb 2026). Bug bounty programme up to $1M (10% of value at risk), paid in vesting SLND. Program upgrade authority is RY93CZYe5g6drtG7W9PmHRPzaBLZ1uwihTzayQTmJfh, a single-key address with no on-chain account data. Save documents three operational addresses they label as "msigs": treasury msig EaFPY9LTQeFR7SEyfbKKFuVMtYvUBbYiiK7WvBJJ7iBU, LM msig 5QbRL9MU5QakL5Fx2He9YaiUzB3TQpVAUBR2ARKN1NrM, and a deprecated treasury msig BX1VZoS4sDyBeXWuLzfbngYtdJGEEBK39PzUGfWYpFNu. All three are System Program owned with zero data length on chain, and none resolve to a Squads multisig view in app.squads.so. The most defensible reading is that these are plain EOA wallets labelled as multisigs in Save documentation, with any multi-party signing happening off-chain (custody provider or similar) where solgov cannot verify it. The on-chain governance is single-key across the program upgrade authority and the treasury / LM addresses.',
+      source: 'https://docs.save.finance/getting-started/risks',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -1708,9 +1708,9 @@ insuranceFund: {
       { name: 'SDK/V1', id: 'AknC341xog56SrnoK6j3mUvaD1Y7tYayx1sxUGpeYWdX', authority: '5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h' },
     ],
     publicDocs: {
-      other: 'SOC 2 audit completed August 2025. ISO 20022 compliance achieved December 2025. ZBCN governance token with hybrid DAO. Note: multisig code has not been independently audited.',
+      other: 'SOC 2 audit completed September 2025. ISO 20022 compliance achieved December 2025. ZBCN governance token with hybrid DAO. Note: multisig code has not been independently audited.',
       source: 'https://docs.zebec.io',
-      updatedAt: '2026-04-05',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -1811,9 +1811,9 @@ insuranceFund: {
     authorityRole: 'treasury',
     authorityRoleNote: 'Squads profile is private. Vault holds RWA treasury but Core program upgrade authority was moved (2026-04-08) to a separate single-key wallet (FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f) funded by member PV5tfXh. Program upgrades now execute through a single-key wallet rather than the multisig. See publicDocs for the full timeline.',
     publicDocs: {
-      other: 'RWA reinsurance protocol. OnRe SAC Ltd. operates under Bermuda Segregated Accounts Companies Act 2000. Capital held in legally separate segregated accounts with multi-signature wallet controls and on-chain verification. Two Onre Squads V4 multisigs identified: main (922xY8..., 3/12, autonomous, zero timelock) and secondary (2AD4x72wX..., 3/6, autonomous, zero timelock), both with fully overlapping signers. Secondary multisig created 2026-04-08. Governance changes 2026-04-20 to 2026-04-21: main multisig threshold reduced from 4 to 3 (four ConfigTransactionExecute events in a 13-minute window), one member rotated (69YoSi... replaced with 2HGJuU...), and Core program upgrade authority moved from main multisig vault (45Ynzauh..., vault[0]) to a single-key wallet (Fvmhydbp...) funded on 2026-04-08 by member PV5tfXh.... Program upgrades now execute through a single signer rather than the multisig.',
+      other: 'RWA reinsurance protocol. On Re SAC Ltd. is the first reinsurer licensed under both the Bermuda Insurance Act 1978 (Class IIGB) and the Digital Asset Business Act 2018 (Class F), with capital ring-fenced under the Segregated Accounts Companies Act 2000. Capital held in legally separate segregated accounts with multi-signature wallet controls and on-chain verification. ONyc is the tokenised-reinsurance yield token, built on the earlier ONe LP token, with independent NAV attestation by Apex Group (Jan 2026). Two Onre Squads V4 multisigs identified: main (922xY8..., 3/12, autonomous, zero timelock) and secondary (2AD4x72wX..., 3/6, autonomous, zero timelock), both with fully overlapping signers. Secondary multisig created 2026-04-08. Governance changes 2026-04-20 to 2026-04-21: main multisig threshold reduced from 4 to 3 (four ConfigTransactionExecute events in a 13-minute window), one member rotated (69YoSi... replaced with 2HGJuU...), and Core program upgrade authority moved from main multisig vault (45Ynzauh..., vault[0]) to a single-key wallet (Fvmhydbp...) funded on 2026-04-08 by member PV5tfXh.... Program upgrades now execute through a single signer rather than the multisig.',
       source: 'https://docs.onre.finance/reinsurance-framework/collateral-security-and-segregation',
-      updatedAt: '2026-04-21',
+      updatedAt: '2026-06-26',
     },
     insuranceFund: {
       hasInsuranceFund: true,
@@ -1868,9 +1868,9 @@ insuranceFund: {
     authorityRole: 'both',
     authorityRoleNote: 'Squads label: "Triumvirate" (Latin: rule of three). 3/5 voters (5 Full) / 12 total members (rest propose-only or none). $1.7M+ in vault. Holds program upgrade authority for Futarchy, Autocrat, AMM.',
         publicDocs: {
-      other: 'Futarchy governance protocol. Verified build on Futarchy and AMM programs. Core contracts audited (firms not publicly disclosed). Gradual rollout strategy with market circuit breakers.',
+      other: 'Futarchy-based governance and fundraising launchpad (permissionless token launches). Verified, immutable, open-source Futarchy and AMM programs. Core contracts audited by Accretion (2025 launchpad audit, 2026 full audit). META token live and exchange-listed (2026).',
       source: 'https://docs.metadao.fi',
-      updatedAt: '2026-04-13',
+      updatedAt: '2026-06-26',
     },
 insuranceFund: {
       hasInsuranceFund: false,
@@ -1950,7 +1950,7 @@ insuranceFund: {
         publicDocs: {
       other: 'DePIN wireless network. Programs audited by sec3. Open source on GitHub (helium/helium-program-library). Migrated to Solana April 2023.',
       source: 'https://docs.helium.com',
-      updatedAt: '2026-04-13',
+      updatedAt: '2026-06-26',
     },
 insuranceFund: {
       hasInsuranceFund: false,
@@ -1995,7 +1995,7 @@ insuranceFund: {
         publicDocs: {
       other: 'Yield vault protocol acquired by Ranger Finance (Nov 2025). Sec3 X-ray integrated. Bug bounty programme active. Still in beta. No formal audit completed yet. Governance updated 2026-04-14: multisig expanded from 2/3 to 3/5 with 8-hour timelock added (verified on-chain).',
       source: 'https://docs.voltr.xyz',
-      updatedAt: '2026-04-20',
+      updatedAt: '2026-06-26',
     },
 insuranceFund: {
       hasInsuranceFund: false,
@@ -2089,9 +2089,9 @@ insuranceFund: {
     authorityRole: 'both',
     authorityRoleNote: 'Squads label: "deBridge Governance". 2/3 threshold, $23k in vault. Programs are upgraded via indirection: Squads multisig controls a custom governance program (BRTb...) which invoke_signs a PDA upgrade authority (BCTm...) on each program. Single point of control despite the on-chain authority showing as different addresses.',
         publicDocs: {
-      other: '15 audits across EVM and Solana by Halborn, Neodyme, Zokyo, and Ackee. Immunefi bug bounty up to $200K (EVM only, Solana not covered). 12-node validator network (8/12 threshold) for cross-chain messaging. Solana program upgrades route through a custom deBridge governance program (BRTbgHnC2AWfumCBU6ExthDie912RiDyiS3uXgMPQPQN) that invoke_signs a program-derived upgrade authority. The governance program itself is upgrade-controlled by Squads V4 multisig FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap at threshold 2 of 3 with zero timelock.',
+      other: '33 audits across EVM and Solana by Halborn, Neodyme, Zokyo, Ackee, and Smart Security Consulting. Immunefi bug bounty up to $200K (EVM only, Solana not covered). 12-node validator network (8/12 threshold) for cross-chain messaging. Solana program upgrades route through a custom deBridge governance program (BRTbgHnC2AWfumCBU6ExthDie912RiDyiS3uXgMPQPQN) that invoke_signs a program-derived upgrade authority. The governance program itself is upgrade-controlled by Squads V4 multisig FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap at threshold 2 of 3 with zero timelock.',
       source: 'https://github.com/debridge-finance/debridge-security',
-      updatedAt: '2026-04-23',
+      updatedAt: '2026-06-26',
     },
     insuranceFund: {
       hasInsuranceFund: false,
@@ -2237,9 +2237,9 @@ insuranceFund: {
       { name: 'Stake Pool', id: 'SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy', authority: 'dPpFfahSWhm5M2RB3nVaHsXfnh9ooz5bWtR3WeUguDH' },
     ],
     publicDocs: {
-      other: 'Core Solana program for liquid staking pools. Controls most stake pools outside Marinade and Sanctum. 6/10 threshold, all 10 approvers active. 9 security audits: Quantstamp, Neodyme (x4), Kudelski, OtterSec, Halborn (x2). V3 multisig does not support timelocks.',
-      source: 'https://spl.solana.com/stake-pool',
-      updatedAt: '2026-04-14',
+      other: 'Core Solana program for liquid staking pools. Controls most stake pools outside Marinade and Sanctum. 6/10 threshold, all 10 approvers active. 10 security audits: Quantstamp, Neodyme (x4), Kudelski, OtterSec, Halborn (x2), Certora formal verification (Sept 2025). V3 multisig does not support timelocks. Program migrated to the solana-program GitHub org.',
+      source: 'https://www.solana-program.com/docs/stake-pool',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     insuranceFund: {
@@ -2284,9 +2284,9 @@ insuranceFund: {
       { name: 'Devtools (A8W6A)', id: 'A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN', authority: 'G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5' },
     ],
     publicDocs: {
-      other: 'Cross-chain messaging protocol. OFT (Omnichain Fungible Token) program on Solana. 1/2 threshold with only 1 member having vote and execute permissions, so it is effectively a single signer. Multisig label: "MainTest". Created as 2/2, reduced to 1/1 within 5 minutes. Verified build. Audited by Zellic, Trail of Bits, ABDK. Separately, the LayerZero V2 Endpoint program admin is a single plain keypair that also holds upgrade authority over the ULN, DVN, Executor, Pricefeed and Blocked-MessageLib programs (six components under one key). 20 of 22 Solana DVN programs route program upgrade authority through three plain keypairs. 16 of 22 Solana DVN configs run an internal multisig quorum of 1. Verified on-chain 2026-04-20.',
+      other: 'Cross-chain messaging protocol. OFT (Omnichain Fungible Token) program on Solana. 1/2 threshold with only 1 member having vote and execute permissions, so it is effectively a single signer. Multisig label: "MainTest". Created as 2/2, reduced to 1/1 within 5 minutes. Verified build (OFT program; the Solana Endpoint remains Mainnet Beta pending a final audit). Audited by Zellic, Trail of Bits, ABDK. Separately, the LayerZero V2 Endpoint program admin is a single plain keypair that also holds upgrade authority over the ULN, DVN, Executor, Pricefeed and Blocked-MessageLib programs (six components under one key). 20 of 22 Solana DVN programs route program upgrade authority through three plain keypairs. 16 of 22 Solana DVN configs run an internal multisig quorum of 1. Verified on-chain 2026-04-20.',
       source: 'https://docs.layerzero.network/v2/developers/solana/getting-started',
-      updatedAt: '2026-04-20',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: true,
     configAuthority: 'autonomous',
@@ -2331,9 +2331,9 @@ insuranceFund: {
       { name: 'Solv Protocol', id: 'soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz', authority: 'BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM' },
     ],
     publicDocs: {
-      other: 'Bitcoin reserve protocol. SolvBTC wraps BTC for cross-chain DeFi. 3/5 threshold, no timelock. SolvBTC mint authority is a separate 1/2 SPL Token multisig (threshold 1 = effectively single signer). $2.7M exploit March 2026 (EVM, not Solana). Verified build. Audited by OpenZeppelin, Quantstamp, Salus, Paladin.',
+      other: 'Bitcoin reserve protocol. SolvBTC wraps BTC for cross-chain DeFi. 3/5 threshold, no timelock. SolvBTC mint authority is a separate 1/2 SPL Token multisig (threshold 1 = effectively single signer). $2.7M exploit March 2026 (EVM, not Solana). Verified build. Audited by OpenZeppelin, Quantstamp, Salus, Paladin, and Offside Labs.',
       source: 'https://docs.solv.finance/',
-      updatedAt: '2026-04-14',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: true,
     configAuthority: 'autonomous',
@@ -2391,9 +2391,9 @@ insuranceFund: {
       { name: '12cJK', id: '12cJKgP9r2bcaruqu3XsCS1hxLqsHrmZhqG5Qy2TWRap', authority: '6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA' },
     ],
     publicDocs: {
-      other: 'GMX V2 fork on Solana (formerly GMXSOL, rebranded GMTrade Nov 2025). 3rd largest perp DEX on Solana. Two multisigs: 4/7 core (10min timelock) + 2/3 deployment (1h timelock). 10 distinct signer keys, no overlap. GMX DAO approved. 8 audits in 16 months (Sherlock, Zenith/Code4rena). Verified build.',
+      other: 'GMX V2 fork on Solana (formerly GMXSOL, rebranded GMTrade Nov 2025). A leading Solana perp DEX (reached #1 by 24h volume in 2026). Two multisigs: 4/7 core (10min timelock) + 2/3 deployment (1h timelock). 10 distinct signer keys, no overlap. GMX DAO approved. 8 audits (Sherlock, Zenith/Code4rena) Dec 2024 to May 2026. Verified build.',
       source: 'https://docs.gmsol.io/',
-      updatedAt: '2026-04-14',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: true,
     configAuthority: 'autonomous',
@@ -2441,9 +2441,9 @@ insuranceFund: {
       { name: 'Stake (STkE)', id: 'STkEAu2cEyQp5ktgUauRVq8es6mEP2w6ixw4NEd5tDJ', authority: 'J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV' },
     ],
     publicDocs: {
-      other: 'Proof-of-work mining protocol on Solana. 2/4 threshold but only 2 of 4 signers are active. 1 signer is propose-only, 1 has never transacted. 200+ multisig txs in 6 weeks, 3 program upgrades in a single day (Apr 9). No timelock. Founded by HardhatChad.',
-      source: 'https://ore.supply/',
-      updatedAt: '2026-04-14',
+      other: 'Solana mining protocol; moved from hash-based proof-of-work to a grid-based SOL-staking model (2025), built by Regolith Labs. 5M ORE supply, mint authority disabled. 2/4 threshold but only 2 of 4 signers are active. 1 signer is propose-only, 1 has never transacted. 200+ multisig txs in 6 weeks, 3 program upgrades in a single day (Apr 9). No timelock. Founded by HardhatChad.',
+      source: 'https://ore.com/',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -2488,9 +2488,9 @@ insuranceFund: {
       { name: 'Fk1R', id: 'Fk1RpqsfeWt8KnFCTW9NQVdVxYvxuqjGn6iPB9wrmM8h', authority: '3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV' },
     ],
     publicDocs: {
-      other: 'WINDING DOWN: Carrot announced permanent shutdown 30 April 2026 after losing approximately $8M of TVL to the Drift exploit cascade (TVL fell ~93% from $28M to $1.99M). Withdrawal deadline 14 May 2026; after that the team begins force-deleveraging remaining positions to 1x for final CRT redemptions. First major contagion victim of the Drift exploit. Yield vaults and lending protocol. 2/3 threshold, no timelock. Audited by Sec3 and MadShield. Squads multisig label: "Clend".',
+      other: 'WINDING DOWN: Carrot announced permanent shutdown 30 April 2026 after losing approximately $8M of TVL to the Drift exploit cascade (TVL fell ~93% from $28M to $1.99M). The 14 May 2026 withdrawal deadline has passed and TVL has fallen toward zero; the team stated it would then force-deleverage remaining positions to 1x for final CRT redemptions, though completion of the wind-down is not independently confirmed. First major contagion victim of the Drift exploit. Yield vaults and lending protocol. 2/3 threshold, no timelock. Audited by Sec3 and MadShield. Squads multisig label: "Clend".',
       source: 'https://docs.deficarrot.com/',
-      updatedAt: '2026-05-08',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     configAuthority: 'autonomous',
@@ -2630,9 +2630,9 @@ insuranceFund: {
       { name: 'Perpetuals', id: '13gDzEXCdocbj8iAiqrScGo47NiSuYENGsRqi3SEAwet', authority: '7VzEXYvGmLg3tdVuFuGFQdr7GP5tutTUt8EcTGHvG8Ev' },
     ],
     publicDocs: {
-      other: 'On-chain perpetuals exchange. Upgrade authority is an SPL Governance (Realms) PDA. ADX token holders vote on proposals, 1 ADX = 1 vote, ADX must be staked, with duration-lock multipliers for additional vote weight. Proposal threshold, voting period, quorum and approval thresholds are not disclosed in public documentation; the Realms PDA configuration on-chain is the source of truth. Public references to OtterSec audits of Adrena exist in community materials; specific report URLs and dates are not surfaced. Public references to an active bug bounty exist; the platform, programme page and max payout are not surfaced. No insurance fund disclosed.',
+      other: 'On-chain perpetuals exchange. Upgrade authority is an SPL Governance (Realms) PDA. ADX token holders vote on proposals, 1 ADX = 1 vote, ADX must be staked, with duration-lock multipliers for additional vote weight. Proposal threshold, voting period, quorum and approval thresholds are not disclosed in public documentation; the Realms PDA configuration on-chain is the source of truth. Audited by OtterSec (Jul 2024) and Offside Labs (Dec 2024) on V1, and Offside Labs (Sep 2025) and Fidesium (Feb 2026) on V2, with continuous Offside Labs review. Per Adrena docs, an Immunefi bug bounty caps critical payouts at 10% of economic damage (min $50K, max ~$250K). No insurance fund disclosed.',
       source: 'https://docs.adrena.trade/',
-      updatedAt: '2026-05-20',
+      updatedAt: '2026-06-26',
     },
     verifiedBuild: false,
     authorityRole: 'program-upgrade',

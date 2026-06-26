@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-22",
+  "updatedAt": "2026-06-26",
   "source": "DeFi exploits on chains outside the Solana + EVM scope covered by the two main datasets. Covers verifiable major incidents on Sui, Cosmos ecosystem, NEAR, Aptos, Polkadot parachains, and other non-EVM non-Solana L1s. Excludes CEX-adjacent incidents, tokens/wallets unrelated to smart-contract protocols, and unverified or anonymous reports. Intended for the combined 'all tracked DeFi' view; the chain-level Solana vs EVM comparison does not include these entries.",
   "hacks": [
     {

@@ -12,6 +12,7 @@
     "api": "ts-node src/solgov-api.ts",
     "bot": "ts-node src/solgov-bot.ts",
     "triage": "ts-node src/llm-triage.ts",
+    "govscan": "ts-node src/incremental-scan.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
   },

@@ -1553,7 +1553,15 @@ function App() {
         </div>
 
         <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500 space-y-1">
-          <img src="/reviewed-by-soladex.svg" alt="Reviewed by Soladex" className="h-9 w-auto mb-3" />
+          <a
+            href="https://www.soladex.io/project/solgov"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View the solgov review on Soladex"
+            className="inline-block mb-3"
+          >
+            <img src="/reviewed-by-soladex.svg" alt="Reviewed by Soladex" className="h-9 w-auto hover:opacity-80 transition-opacity" />
+          </a>
           <p>All governance data decoded directly from on-chain Solana account data. Live updates via Helius webhooks.{isLive && lastScan ? ` Last event: ${lastScan.split('T')[0]} ${lastScan.split('T')[1]?.slice(0, 5)} UTC.` : ''}{!llama.loading ? ' TVL data live from DeFiLlama.' : ''}</p>
           <p className="text-gray-700">This dashboard does not provide financial advice. It presents on-chain governance configurations for informational purposes.</p>
         </div>

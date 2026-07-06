@@ -7,6 +7,7 @@ import evmHacksData from '../data/evm-hacks.json';
 import { TechniquePie } from './TechniquePie';
 import { Tooltip, InfoIcon } from './Tooltip';
 import { useLiveChainTvl } from '../hooks/useLiveChainTvl';
+import { displayName } from '../data/displayNames';
 
 function formatUsd(n: number): string {
   if (n >= 1e9) return '$' + (n / 1e9).toFixed(2) + 'B';
@@ -238,7 +239,7 @@ function VenueTable({ venues }: { venues: Venue[] }) {
                 <tr key={i} className="border-b border-white/[0.04] last:border-b-0">
                   <td className="px-4 py-2.5 text-white">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span>{v.name}</span>
+                      <span>{displayName(v.name)}</span>
                       {v.cascadeExposure && v.cascadeExposure.length > 0 && v.cascadeExposure.map((ce, j) => (
                         <span
                           key={j}

@@ -42,6 +42,7 @@ function Dropdown({ value, onChange, options }: { value: string; onChange: (v: s
 }
 import { PROTOCOLS, STATS, SQUADS_MINIMUM } from './data/protocols';
 import { GOV_PROFILES, GOV_PROFILES_AS_OF } from './data/governance';
+import { displayName } from './data/displayNames';
 import { EXPOSURES, EXPOSURE_PROTOCOLS, resolveExposureNode } from './data/exposure';
 import type { ExposureNode } from './data/exposure';
 import { getRelationships } from './data/relationships';
@@ -562,7 +563,7 @@ const ROLE_BY_MULTISIG: Record<string, { protocol: string; role: string }> = (()
 // protocol's several, otherwise the protocol name on its own.
 function activityLabel(e: { protocol: string; multisig?: string }): string {
   const hit = e.multisig ? ROLE_BY_MULTISIG[e.multisig] : undefined;
-  return hit ? `${hit.protocol} · ${hit.role}` : e.protocol;
+  return hit ? `${displayName(hit.protocol)} · ${hit.role}` : displayName(e.protocol);
 }
 
 // Compact hover summaries for role-separated governance (cold/warm/pause style splits).
@@ -1026,7 +1027,7 @@ function App() {
                     <td className="px-3 py-2">
                       <div className="flex items-center gap-2">
                         <ProtocolLogo name={p.name} />
-                        <span className="font-medium text-white whitespace-nowrap">{p.name}</span>
+                        <span className="font-medium text-white whitespace-nowrap">{displayName(p.name)}</span>
                       </div>
                     </td>
                     <td className="px-3 py-2 text-xs text-right text-gray-400 whitespace-nowrap">
@@ -1878,7 +1879,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                   <td className="px-3 py-2">
                     <div className="flex items-center gap-2">
                       <ProtocolLogo name={name} />
-                      <span className="font-medium text-white whitespace-nowrap">{name}</span>
+                      <span className="font-medium text-white whitespace-nowrap">{displayName(name)}</span>
                       {liveStates[name]?.pendingProposals > 0 && (
                         <Tooltip text={liveStates[name].pendingProposals + ' proposal' + (liveStates[name].pendingProposals > 1 ? 's' : '') + ' awaiting execution'}>
                           <span className="ml-2 px-1.5 py-0.5 text-[9px] rounded bg-white/[0.04] text-gray-300 border border-white/[0.08] cursor-help">
@@ -2191,7 +2192,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
             onChange={setFeedFilter}
             options={[
               { value: 'all', label: 'All protocols' },
-              ...govEntries.map(([name]) => ({ value: name, label: name })),
+              ...govEntries.map(([name]) => ({ value: name, label: displayName(name) })),
             ]}
           />
         </div>
@@ -2252,7 +2253,7 @@ function ExposureRow({ node, index, liveByName }: { node: ExposureNode; index: n
       <span className="text-gray-400 text-[10px] w-4 pt-0.5">{index + 1}</span>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-medium text-white">{node.name}</span>
+          <span className="text-xs font-medium text-white">{displayName(node.name)}</span>
           <span className="text-[10px] text-gray-400">{node.role}</span>
           {isLive && (
             <Tooltip text="Governance, timelock and active-voter values for this dependency are pulled live from on-chain reads via the listener.">
@@ -2384,7 +2385,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
         {exposure && <>
           <div className="rounded-lg border border-white/[0.08] bg-white/[0.02] p-4 mb-4">
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-sm font-semibold text-white">{exposure.name}</h3>
+              <h3 className="text-sm font-semibold text-white">{displayName(exposure.name)}</h3>
               <div className="flex items-center gap-2">
                 {selected && formatTvlDisplay(llama.tvl[selected]) && (
                   <span className="text-[10px] px-2 py-0.5 rounded bg-white/[0.05] text-gray-300 border border-white/[0.08]">
@@ -2427,7 +2428,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                 .filter(n => n.note)
                 .map((n, i) => (
                   <p key={i} className="text-[11px] text-gray-400 mt-1">
-                    <span className="text-gray-300 font-medium">{n.name}:</span> {n.note}
+                    <span className="text-gray-300 font-medium">{displayName(n.name)}:</span> {n.note}
                   </p>
                 ))
               }
@@ -2448,12 +2449,12 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
               <div className="mt-4">
                 {upstream.length > 0 && (
                   <div className="mb-3">
-                    <h4 className="text-xs font-semibold text-white mb-2">Protocols connected to {exposure.name} ({upstream.length})</h4>
+                    <h4 className="text-xs font-semibold text-white mb-2">Protocols connected to {displayName(exposure.name)} ({upstream.length})</h4>
                     <div className="space-y-1">
                       {upstream.map((r, i) => (
                         <div key={i} className="py-1.5 px-3 bg-white/[0.01] rounded text-[11px]">
                           <div className="flex items-center gap-3">
-                            <span className="text-white font-medium w-28 flex-shrink-0">{r.protocol}</span>
+                            <span className="text-white font-medium w-28 flex-shrink-0">{displayName(r.protocol)}</span>
                             <span className="text-gray-400 flex-1">{r.detail}</span>
                             <span className="text-gray-400 text-[10px]">{r.verified}</span>
                           </div>
@@ -2467,12 +2468,12 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                 )}
                 {downstream.length > 0 && (
                   <div>
-                    <h4 className="text-xs font-semibold text-white mb-2">{exposure.name} connected to ({downstream.length})</h4>
+                    <h4 className="text-xs font-semibold text-white mb-2">{displayName(exposure.name)} connected to ({downstream.length})</h4>
                     <div className="space-y-1">
                       {downstream.map((r, i) => (
                         <div key={i} className="py-1.5 px-3 bg-white/[0.01] rounded text-[11px]">
                           <div className="flex items-center gap-3">
-                            <span className="text-white font-medium w-28 flex-shrink-0">{r.protocol}</span>
+                            <span className="text-white font-medium w-28 flex-shrink-0">{displayName(r.protocol)}</span>
                             <span className="text-gray-400 flex-1">{r.detail}</span>
                             <span className="text-gray-400 text-[10px]">{r.verified}</span>
                           </div>
@@ -2496,6 +2497,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
           {selected === 'Drift' && (
             <div className="mt-4 rounded-lg border border-white/[0.06] bg-white/[0.02] p-4">
               <h4 className="text-xs font-semibold text-white mb-3">Case Study: April 1, 2026</h4>
+              <p className="text-[11px] text-gray-500 mb-3">Drift rebranded to Velocity DEX in July 2026. This exploit is recorded under the Drift name it carried at the time.</p>
 
               <DriftCaseStudySolar affected={DRIFT_CASE_STUDY.affected} />
 
@@ -2620,7 +2622,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                   <tbody>
                     {DRIFT_CASE_STUDY.affected.map((p, i) => (
                       <tr key={i} className="border-t border-white/[0.03]">
-                        <td className="py-1.5 pr-3 text-gray-300">{p.name}</td>
+                        <td className="py-1.5 pr-3 text-gray-300">{displayName(p.name)}</td>
                         <td className="py-1.5 px-3 text-right text-gray-300">{p.loss}</td>
                         <td className="py-1.5 px-3 text-center text-gray-400">{p.chainDepth}</td>
                         <td className="py-1.5 pl-3 text-gray-500">{p.source}</td>

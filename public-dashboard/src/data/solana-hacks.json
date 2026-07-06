@@ -172,7 +172,7 @@
       "protocol": "Drift",
       "amountUsd": 285000000,
       "category": "signer",
-      "rootCause": "Multisig signer keys compromised; pre-staged durable nonce transactions executed. State admin transferred to attacker, vault drained",
+      "rootCause": "Multisig signer keys compromised; pre-staged durable nonce transactions executed. State admin transferred to attacker, vault drained. The protocol rebranded to Velocity DEX in July 2026",
       "recovered": "partial",
       "recoveryNote": "Recovery plan via future trading fees and a Tether-assisted credit facility for Drift; actual amount returned directly to users is phased and not yet fully realised",
       "affectedProtocols": ["Prime Numbers Fi", "Carrot", "Gauntlet", "Neutral Trade", "Elemental DeFi", "Reflect Money", "Vectis", "Ranger Finance", "Pyra", "Titan", "Loopscale", "PiggyBank", "Lulo", "Fuse Wallet", "Exponent", "Asgard Finance", "xPlace", "Project 0", "Perena", "DiversiFi", "Valeo", "Amp Pay"],

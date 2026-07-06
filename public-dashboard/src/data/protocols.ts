@@ -197,9 +197,9 @@ export const PROTOCOLS: Protocol[] = [
       { name: 'Vaults', id: 'vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR', authority: 'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9' },
     ],
     publicDocs: {
-      other: '$285M exploit April 1, 2026 via compromised multisig signers (pre-signed durable nonce transactions). Protocol remains frozen as of June 2026 with no relaunch date set. Recovery (announced April 16, detailed May 5) is a pro-rata recovery-token pool seeded with remaining assets and backed by up to $127.5M from Tether plus $20M from partners, against ~$295M in user losses; users are not yet made whole. Relaunch will use a community multisig with timelocks, disabled durable nonces, and dedicated signing devices. Audited by Trail of Bits (2022) and Neodyme (2024) pre-incident, plus OtterSec (full code audit) and Asymmetric Research (operational security) for the relaunch.',
-      source: 'https://docs.drift.trade/security/risks',
-      updatedAt: '2026-06-26',
+      other: 'Rebranded to Velocity DEX (announced July 2026): a freshly deployed, perps-only exchange settled in USDT, in private beta with mainnet pending instruction-level audits and Solana STRIDE review. The configuration shown reflects the legacy Drift infrastructure that remains on-chain. $285M exploit April 1, 2026 via compromised multisig signers (pre-signed durable nonce transactions). Recovery (announced April 16, detailed May 5) is a pro-rata recovery-token pool seeded with remaining assets and backed by up to $127.5M from Tether plus $20M from partners, against ~$295M in user losses; users are not yet made whole. The rebuilt exchange uses freshly deployed code with rotated keys, disabled durable nonces, and a community multisig with timelocks and dedicated signing devices. Audited by Trail of Bits (2022) and Neodyme (2024) pre-incident, plus OtterSec (full code audit) and Asymmetric Research (operational security) for the relaunch.',
+      source: 'https://docs.velocity.exchange',
+      updatedAt: '2026-06-27',
     },
     verifiedBuild: false,
     configAuthority: 'A1eC8n2tQBHPodn8sZHsc5XWciunZy9B1VgmcHgK1xhP',
@@ -212,7 +212,7 @@ export const PROTOCOLS: Protocol[] = [
       fundAssetType: 'USDC',
       reimbursementPolicy: 'Has an insurance fund that users can stake into. If the fund runs out, losses are spread across all depositors. The fund was affected by the April 2026 exploit. Pre-exploit fund size was ~$5M against a $285M loss.',
       historicalReimbursement: 'April 2026: $285M exploited. Drift has discussed reimbursement plans via insurance fund; details not yet disclosed. PiggyBank covered $106K from own team funds, the only confirmed full downstream reimbursement. No other downstream protocol has announced recovery.',
-      sourceUrl: 'https://docs.drift.trade/insurance-fund/insurance-fund-intro',
+      sourceUrl: 'https://docs.velocity.exchange',
     },
   },
   {

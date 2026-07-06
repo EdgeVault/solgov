@@ -6,6 +6,7 @@ import type { ExposureNode } from '../data/exposure';
 import { getRelationships } from '../data/relationships';
 import { PROTOCOLS } from '../data/protocols';
 import { LOGO_FILENAMES } from '../App';
+import { displayName } from '../data/displayNames';
 
 function nodeTldr(name: string, fallbackGovernance?: string): string {
   const p = PROTOCOLS.find(x => x.name === name);
@@ -989,7 +990,7 @@ export function OverviewSolarSystem({ onSelect }: { onSelect: (name: string) => 
         {hoveredNode && (
           <g>
             <rect x={20} y={452} width={960} height={32} rx={4} fill="rgba(0,0,0,0.85)" stroke="rgba(255,255,255,0.08)" />
-            <text x={30} y={472} fill="white" fontSize="11" fontWeight="600">{ASSET_LABELS[hoveredNode.name] || hoveredNode.name}</text>
+            <text x={30} y={472} fill="white" fontSize="11" fontWeight="600">{ASSET_LABELS[hoveredNode.name] || displayName(hoveredNode.name)}</text>
             <text x={200} y={472} fill="#9ca3af" fontSize="9">{hoveredNode.category} - {hoveredNode.connections} connections - Click to explore</text>
           </g>
         )}
@@ -1198,7 +1199,7 @@ export function DriftCaseStudySolar({ affected }: { affected: { name: string; lo
         {hoveredNode && (
           <g>
             <rect x={20} y={452} width={960} height={32} rx={4} fill="rgba(0,0,0,0.85)" stroke="rgba(255,255,255,0.08)" />
-            <text x={30} y={472} fill="white" fontSize="11" fontWeight="600">{hoveredNode.name}</text>
+            <text x={30} y={472} fill="white" fontSize="11" fontWeight="600">{displayName(hoveredNode.name)}</text>
             <text x={220} y={472} fill="#9ca3af" fontSize="9">
               {hoveredNode.loss !== 'Undisclosed' ? hoveredNode.loss + ' lost' : 'Loss undisclosed'} - Chain depth {hoveredNode.chainDepth}
             </text>

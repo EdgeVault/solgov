@@ -148,7 +148,7 @@ function Check({ pass, label }: { pass: boolean; label?: string }) {
 export const LOGO_FILENAMES: Record<string, string> = {
   'Hastra PRIME': 'hastra',
   'Orca': 'orca',
-  'Drift': 'drift',
+  'Drift': 'velocity',
   'Kamino': 'kamino',
   'Jupiter Perps': 'jupiter',
   'Jupiter Lend': 'juplend',

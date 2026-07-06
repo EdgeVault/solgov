@@ -774,8 +774,11 @@ function diffState(name: string, prev: ProtocolState, curr: ProtocolState, p: Pr
     }
   }
 
-  if (curr.pendingProposals && curr.pendingProposals > 0 && (!prev.pendingProposals || prev.pendingProposals === 0)) {
-    watching.push(`${curr.pendingProposals} pending proposal(s) awaiting execution`);
+  const prevPending = prev.pendingProposals || 0;
+  const currPending = curr.pendingProposals || 0;
+  if (currPending > prevPending) {
+    const added = currPending - prevPending;
+    watching.push(`${added} new proposal(s) submitted (${currPending} now awaiting execution)`);
   }
 
   return { changes, watching };

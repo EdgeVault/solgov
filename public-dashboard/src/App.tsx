@@ -125,7 +125,7 @@ function cleanLiveActivity(raw: { date: string; protocol: string; type: string; 
     if (!e.protocol || e.protocol === 'Unknown') continue;
     if (e.type === 'Watching') continue;
     const proto = canonProtoName(e.protocol);
-    if ((e.type === 'VaultTx' || e.type === 'ProposalCreated') && decisionKeys.has(`${e.date}|${proto}`)) continue;
+    if (e.type === 'VaultTx' && decisionKeys.has(`${e.date}|${proto}`)) continue;
     let label = ACTIVITY_TYPE_LABELS[e.type] || e.type;
     // Governance-change events carry a specific detail string ("Timelock: none -> 24h", "Threshold: 2 -> 3") - surface it over the generic label so the feed shows exactly what changed.
     if (GOV_CHANGE_TYPES.has(e.type) && e.detail) label = e.detail;

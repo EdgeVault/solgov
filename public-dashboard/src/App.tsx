@@ -65,6 +65,7 @@ import './index.css';
 import ACTIVITY_FEED from './data/activity-feed.json';
 
 import { Tooltip, InfoIcon } from './components/Tooltip';
+import { DaoRiskTab } from './components/DaoRiskTab';
 
 const ACTIVITY_TYPE_LABELS: Record<string, string> = {
   ConfigChange: 'Config change',
@@ -75,6 +76,7 @@ const ACTIVITY_TYPE_LABELS: Record<string, string> = {
   Rejection: 'Proposal rejected',
   Cancellation: 'Proposal cancelled',
   ProposalCreated: 'Proposal created',
+  TreasuryProposal: 'Proposal moves treasury',
   AuthorityActivity: 'Authority activity',
   AuthorityChange: 'Authority changed',
   ProposalPending: 'Proposal pending',
@@ -146,6 +148,9 @@ function Check({ pass, label }: { pass: boolean; label?: string }) {
 }
 
 export const LOGO_FILENAMES: Record<string, string> = {
+  'BonkDAO': 'bonkdao.jpg',
+  'MonkeDAO': 'monkedao.jpg',
+  'SamoDAO': 'samodao.jpg',
   'Hastra PRIME': 'hastra',
   'Orca': 'orca',
   'Drift': 'velocity',
@@ -219,7 +224,7 @@ export const LOGO_FILENAMES: Record<string, string> = {
   'Internal AMM': 'driftamm',
 };
 
-function ProtocolLogo({ name }: { name: string }) {
+export function ProtocolLogo({ name }: { name: string }) {
   const [failed, setFailed] = useState(false);
   const filename = LOGO_FILENAMES[name];
 
@@ -618,7 +623,8 @@ function roleBenchmarkTip(r: any): string {
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
 
 function App() {
-  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf } = useLiveData(PROTOCOLS);
+  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos } = useLiveData(PROTOCOLS);
+  const daoNameSet = useMemo(() => new Set((liveDaos || []).map(d => d.name)), [liveDaos]);
   const llama = useDefiLlama();
   const [sortKey, setSortKey] = useState<SortKey>('timelockSeconds');
   const [sortAsc, setSortAsc] = useState(true);
@@ -636,9 +642,9 @@ function App() {
     });
     return () => cancelAnimationFrame(id);
   }, [expanded]);
-  type Tab = 'dashboard' | 'govwatch' | 'blast' | 'charts';
+  type Tab = 'dashboard' | 'govwatch' | 'blast' | 'daos' | 'charts';
   type ChartsSub = 'exploits' | 'risk' | 'governance';
-  const VALID_TABS: Tab[] = ['dashboard', 'govwatch', 'blast', 'charts'];
+  const VALID_TABS: Tab[] = ['dashboard', 'govwatch', 'blast', 'daos', 'charts'];
   const VALID_SUBS: ChartsSub[] = ['exploits', 'risk', 'governance'];
   function parseLocation(): { tab: Tab; sub: ChartsSub } {
     if (typeof window === 'undefined') return { tab: 'dashboard', sub: 'exploits' };
@@ -729,19 +735,19 @@ function App() {
 
   const TabBar = (
     <div className="border-b border-white/[0.06]">
-      <div className="max-w-[1400px] mx-auto px-4">
-        <div className="flex gap-1">
-          {(['dashboard', 'govwatch', 'blast', 'charts'] as const).map(tab => (
+      <div className="max-w-[1400px] mx-auto px-2 sm:px-4">
+        <div className="flex gap-1 overflow-x-auto scroll-thin">
+          {(['dashboard', 'govwatch', 'blast', 'daos', 'charts'] as const).map(tab => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 text-xs font-medium rounded-t-md transition-colors ${
+              className={`px-2.5 sm:px-4 py-2 text-xs font-medium rounded-t-md transition-colors whitespace-nowrap flex-shrink-0 ${
                 activeTab === tab
                   ? 'bg-white/[0.06] text-white border border-white/[0.1] border-b-transparent'
                   : 'text-gray-500 hover:text-gray-300'
               }`}
             >
-              {tab === 'dashboard' ? 'Dashboard' : tab === 'govwatch' ? 'GovWatch' : tab === 'blast' ? 'Blast Radius' : 'Charts'}
+              {tab === 'dashboard' ? 'Dashboard' : tab === 'govwatch' ? 'GovWatch' : tab === 'blast' ? 'Blast Radius' : tab === 'daos' ? 'DAOs' : 'Charts'}
             </button>
           ))}
         </div>
@@ -1561,7 +1567,7 @@ function App() {
             title="View the solgov review on Soladex"
             className="inline-block mb-3"
           >
-            <img src="/reviewed-by-soladex.svg" alt="Reviewed by Soladex" className="h-9 w-auto hover:opacity-80 transition-opacity" />
+            <img src="/reviewed-by-soladex.svg?v=2" alt="Reviewed by Soladex" className="h-9 w-auto hover:opacity-80 transition-opacity" />
           </a>
           <p>All governance data decoded directly from on-chain Solana account data. Live updates via Helius webhooks.{isLive && lastScan ? ` Last event: ${lastScan.split('T')[0]} ${lastScan.split('T')[1]?.slice(0, 5)} UTC.` : ''}{!llama.loading ? ' TVL data live from DeFiLlama.' : ''}</p>
           <p className="text-gray-700">This dashboard does not provide financial advice. It presents on-chain governance configurations for informational purposes.</p>
@@ -1569,11 +1575,15 @@ function App() {
       </>)}
 
       {activeTab === 'govwatch' && (
-        <GovWatchView protocols={liveProtocols} liveStates={liveStates} liveActivity={liveActivity} liveHistorical={liveHistorical} historicalAsOf={historicalAsOf} />
+        <GovWatchView protocols={liveProtocols} liveStates={liveStates} liveActivity={liveActivity} liveHistorical={liveHistorical} historicalAsOf={historicalAsOf} daoNames={daoNameSet} />
       )}
 
       {activeTab === 'blast' && (
         <BlastRadiusView llama={llama} liveProtocols={liveProtocols} />
+      )}
+
+      {activeTab === 'daos' && (
+        <DaoRiskTab daos={liveDaos} activity={liveActivity.filter(e => daoNameSet.has(e.protocol))} />
       )}
 
       {activeTab === 'charts' && (
@@ -1646,7 +1656,7 @@ function App() {
   );
 }
 
-function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, liveHistorical, historicalAsOf }: { protocols: typeof PROTOCOLS; liveStates: Record<string, any>; liveActivity: { date: string; timestamp: string; protocol: string; type: string; detail: string }[]; liveHistorical: Record<string, import('./hooks/useLiveData').HistoricalProtocolState>; historicalAsOf: string | null }) {
+function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, liveHistorical, historicalAsOf, daoNames }: { protocols: typeof PROTOCOLS; liveStates: Record<string, any>; liveActivity: { date: string; timestamp: string; protocol: string; type: string; detail: string }[]; liveHistorical: Record<string, import('./hooks/useLiveData').HistoricalProtocolState>; historicalAsOf: string | null; daoNames: Set<string> }) {
   const [selectedProtocol, setSelectedProtocol] = useState<string | null>(null);
   // Same as the dashboard table: bring the expanded detail row into view when a protocol near the
   // bottom is opened, so the click doesn't look like nothing happened.
@@ -1773,6 +1783,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     }
 
     for (const evt of cleanLiveActivity(liveActivity)) {
+      if (daoNames.has(evt.protocol)) continue; // DAO governance events live in the DAO tab, not the main feed
       events.push({ date: evt.date, protocol: evt.protocol, type: evt.type, ts: evt.timestamp, multisig: evt.multisig });
     }
 
@@ -1817,7 +1828,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     });
     if (feedFilter !== 'all') return deduped.filter(e => e.protocol === feedFilter);
     return deduped;
-  }, [feedFilter, liveStates, liveActivity, yieldbay.events]);
+  }, [feedFilter, liveStates, liveActivity, yieldbay.events, daoNames]);
 
   const govEntries = Object.entries(GOV_PROFILES)
     .map(([name, g]) => [name, getEffectiveGov(name, g)] as [string, typeof g])
@@ -2218,7 +2229,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
       </div>
 
       <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500 space-y-1">
-        <p>All data verified on-chain via Helius RPC. Continuous monitoring across {PROTOCOLS.length} protocols.</p>
+        <p>All data verified on-chain via Helius RPC. Continuous monitoring across 50+ protocols.</p>
         <p className="flex items-center gap-1.5">
           {snapshotLabel}
           <Tooltip text={snapshotTooltip}><InfoIcon /></Tooltip>
@@ -2660,7 +2671,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
           )}
 
       <div className="mt-6 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500">
-        <p>Routing and settlement data verified on-chain where possible. Oracle dependencies sourced from protocol documentation (oracle price accounts are read via account references and cannot be verified through transaction analysis). Governance data from solgov on-chain audits. Data covers the {PROTOCOLS.length} protocols tracked on solgov.</p>
+        <p>Routing and settlement data verified on-chain where possible. Oracle dependencies sourced from protocol documentation (oracle price accounts are read via account references and cannot be verified through transaction analysis). Governance data from solgov on-chain audits. Data covers the 50+ protocols tracked on solgov.</p>
       </div>
         </>}
       </div>

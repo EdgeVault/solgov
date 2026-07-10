@@ -500,6 +500,23 @@ export interface Playbook {
 }
 
 export const PLAYBOOKS: Record<string, Playbook> = {
+  GOVERNANCE: {
+    alertType: 'GOVERNANCE',
+    steps: [
+      {
+        id: 'root',
+        label: 'Check the voting wallet',
+        instruction: 'The alert reports that one wallet holds most of the yes vote on a live governance proposal. Call get_recent_signatures on the wallet in the Authority field to establish how old it is and whether it has prior on-chain history. A wallet created recently that already holds most of a proposal vote is unusual. State the wallet age and one factual sentence on whether this looks routine or worth a deeper look. Do not speculate on intent.',
+        tools: ['get_recent_signatures', 'search_activity_feed'],
+      },
+      {
+        id: 'context',
+        label: 'Wider exposure',
+        instruction: 'Check whether the voting wallet appears elsewhere in the tracked set or the activity feed, and whether this DAO has seen similar concentrated votes before. Be brief and factual.',
+        tools: ['list_signers_sharing_authority', 'search_activity_feed', 'get_hack_history'],
+      },
+    ],
+  },
   NONCE: {
     alertType: 'NONCE',
     steps: [

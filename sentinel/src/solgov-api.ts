@@ -1131,6 +1131,7 @@ const server = http.createServer(async (req, res) => {
     try {
       const raw = JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8'));
       raw._activityLog = readActivityLog().filter(e => e?.type !== 'Watching');
+      try { const daoPath = path.join(__dirname, '..', 'data', 'dao-risk.json'); if (fs.existsSync(daoPath)) raw._daos = JSON.parse(fs.readFileSync(daoPath, 'utf-8')).daos || []; } catch { /* optional */ }
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Cache-Control', 'public, s-maxage=30, stale-while-revalidate=60');
       res.writeHead(200);

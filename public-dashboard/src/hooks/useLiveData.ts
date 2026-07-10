@@ -18,6 +18,26 @@ export interface ActivityEvent {
   multisig?: string;
 }
 
+export interface DaoProfile {
+  name: string;
+  realm: string;
+  updatedAt: string;
+  quorumLabel: string;
+  timelockHours: number;
+  votingPeriodHours: number;
+  proposalThresholdRaw: number;
+  proposalThresholdTokens: number;
+  tokenMcapUsd: number;
+  costToSeizeUsd: number;
+  governanceHeldSol: number;
+  governanceHeldUsd: number;
+  holdsTokens: boolean;
+  holdsUnpricedTokens: boolean;
+  voterWeightPlugin: boolean;
+  liveProposals: number;
+  totalProposals: number;
+}
+
 interface MonitorState {
   [name: string]: any;
 }
@@ -86,6 +106,7 @@ export function useLiveData(staticProtocols: Protocol[]): {
   liveIntegrity: any | null;
   liveHistorical: Record<string, HistoricalProtocolState>;
   historicalAsOf: string | null;
+  liveDaos: DaoProfile[];
 } {
   const [liveState, setLiveState] = useState<MonitorState | null>(null);
   const [historical, setHistorical] = useState<Record<string, HistoricalProtocolState> | null>(null);
@@ -132,7 +153,7 @@ export function useLiveData(staticProtocols: Protocol[]): {
   }, []);
 
   if (!liveState) {
-    return { protocols: staticProtocols, lastScan: null, isLive: false, liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null };
+    return { protocols: staticProtocols, lastScan: null, isLive: false, liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [] };
   }
 
   const liveIntegrity = (liveState as any)._integrity || null;
@@ -251,5 +272,7 @@ export function useLiveData(staticProtocols: Protocol[]): {
     }
   }
 
-  return { protocols: merged, lastScan, isLive: true, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf };
+  const liveDaos: DaoProfile[] = Array.isArray((liveState as any)._daos) ? (liveState as any)._daos : [];
+
+  return { protocols: merged, lastScan, isLive: true, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos };
 }

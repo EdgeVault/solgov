@@ -35,11 +35,12 @@ function migrateOnce(): void {
   } catch {}
 }
 
-export function appendActivity(protocol: string, type: string, detail: string, multisig?: string): void {
+export function appendActivity(protocol: string, type: string, detail: string, multisig?: string, timestamp?: string): void {
   migrateOnce();
+  const ts = timestamp || new Date().toISOString();
   const event: ActivityEvent = {
-    date: new Date().toISOString().split('T')[0],
-    timestamp: new Date().toISOString(),
+    date: ts.split('T')[0],
+    timestamp: ts,
     protocol,
     type,
     detail,

@@ -19,6 +19,7 @@ function playbookKeyFor(type: string): string {
   if (t.includes('programupgrade') || t.includes('program_upgrade') || t.includes('upgrade')) return 'PROGRAM_UPGRADE';
   if (t.includes('authoritychange') || t.includes('config') || t.includes('threshold')) return 'CONFIG_CHANGE';
   if (t.includes('newsigner') || t.includes('new_signer') || t.includes('member')) return 'NEW_SIGNER';
+  if (t.includes('voteconcentration') || t.includes('governance')) return 'GOVERNANCE';
   return 'GENERIC';
 }
 

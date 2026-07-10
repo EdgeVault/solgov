@@ -131,6 +131,7 @@ sentinel/src/*.ts
 !sentinel/src/index.ts
 !sentinel/src/signer-funder-detection.ts
 !sentinel/src/fetch-yieldbay-health.ts
+!sentinel/src/realms.ts
 
 # Investigation reports (forensics scratch, not part of the product)
 sentinel/src/investigations/

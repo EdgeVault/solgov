@@ -261,6 +261,8 @@ async function sendPublic(message: string) {
 }
 
 import { appendActivity as logActivity } from './activity-log';
+import { scanRealmsDAOs, writeDaoRiskSnapshot } from './realms';
+import { runTriageAndPost } from './llm-triage';
 
 function loadState(): MonitorState {
   try {
@@ -864,6 +866,26 @@ async function main() {
     }
 
     await sleep(300);
+  }
+
+  // Realms DAOs (SPL Governance) use a different account model from Squads and are
+  // scanned separately via realms.ts. New proposals + config changes feed the same log.
+  if (!isReport) {
+    try {
+      const realms = await scanRealmsDAOs(conn);
+      realms.watching.forEach((w) => allWatching.push(w));
+      for (const a of realms.alerts) {
+        allChanges.push(`<b>${a.dao}</b>\n${a.message}`);
+        await sendToSubscribers({ protocol: a.dao, severity: a.severity, type: a.type as any, message: a.message });
+        // Significant governance flags auto-run the internal triage (posts to the risk-team thread).
+        if (a.severity === 'HIGH' || a.severity === 'CRITICAL') {
+          try {
+            await runTriageAndPost({ protocol: a.dao, severity: a.severity, type: a.type, message: a.message, authority: a.authority, timestamp: new Date().toISOString() });
+          } catch (e: any) { console.log('  Realms triage failed:', e.message); }
+        }
+      }
+      await writeDaoRiskSnapshot(conn);
+    } catch (e: any) { console.log('  Realms scan failed:', e.message); }
   }
 
   saveState(newState);

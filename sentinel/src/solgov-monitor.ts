@@ -352,12 +352,21 @@ async function scanSignerThreats(conn: Connection, member: string): Promise<Thre
         }
       }
 
-      if (nonceIxType) {
+      // Only treat nonce activity as a signal when the signer actually initiated the transaction
+      // (fee payer), matching the BRIDGE and DEPLOY gates below. Without this, a signer merely
+      // appearing as a passive account in someone else's nonce transaction fired a public CRITICAL.
+      if (nonceIxType && signerInitiated) {
         let nonceAgeDays = -1;
+        let ageCapped = false;
         if (nonceAddrFull) {
           try {
             const nonceSigs = await conn.getSignaturesForAddress(new PublicKey(nonceAddrFull), { limit: 1000 });
-            if (nonceSigs.length > 0) {
+            if (nonceSigs.length >= 1000) {
+              // Page cap hit: the earliest returned signature is not the nonce's creation, so it is
+              // heavily used (established infrastructure), not freshly staged. Do not let it read as
+              // "fresh" - that inflated a busy, benign nonce to a public HIGH.
+              ageCapped = true;
+            } else if (nonceSigs.length > 0) {
               const earliestTs = nonceSigs[nonceSigs.length - 1].blockTime;
               if (earliestTs) nonceAgeDays = (Date.now() / 1000 - earliestTs) / 86400;
             }
@@ -370,7 +379,7 @@ async function scanSignerThreats(conn: Connection, member: string): Promise<Thre
         let note = '';
         if (nonceIxType === 'initializeNonceAccount') {
           severity = 'CRITICAL';
-          note = 'new nonce account being initialised (pre-staging pattern)';
+          note = 'new durable nonce initialised by this signer';
         } else if (nonceIxType === 'authorizeNonceAccount') {
           severity = 'HIGH';
           note = 'nonce authority rotation';
@@ -378,7 +387,10 @@ async function scanSignerThreats(conn: Connection, member: string): Promise<Thre
           severity = 'HIGH';
           note = 'nonce account being emptied';
         } else if (nonceIxType === 'advanceNonce') {
-          if (nonceAgeDays >= 0 && nonceAgeDays < 7 && isAuthority) {
+          if (ageCapped) {
+            severity = 'LOW';
+            note = 'established nonce (1000+ txs) advanced - infrastructure';
+          } else if (nonceAgeDays >= 0 && nonceAgeDays < 7 && isAuthority) {
             severity = 'HIGH';
             note = `fresh nonce (${Math.round(nonceAgeDays * 24)}h old) advanced by its own authority`;
           } else if (nonceAgeDays >= 0 && nonceAgeDays < 7) {
@@ -468,12 +480,19 @@ async function checkProgramUpgrades(conn: Connection, programs: { name: string; 
       const info = await conn.getAccountInfo(new PublicKey(prog.id));
       if (!info || !info.executable) continue;
       const pdKey = new PublicKey(info.data.slice(4, 36));
-      const sigs = await conn.getSignaturesForAddress(pdKey, { limit: 3 });
-      for (const sig of sigs) {
-        if (sig.blockTime && sig.blockTime > oneDayAgo) {
-          upgrades[prog.name] = formatUKTime(new Date(sig.blockTime * 1000));
-          break;
-        }
+      // Read the ProgramData account's last-deployed slot (u64 at offset 4). The BPFLoaderUpgradeable
+      // writes this field ONLY on a genuine deploy or upgrade, so it is the authoritative record of a
+      // real upgrade. The previous version took the blockTime of the most recent transaction TOUCHING
+      // the ProgramData account, which fired a phantom "upgraded" alert whenever an unrelated program
+      // merely referenced the account read-only. That broadcast a false "Bonding Curve upgraded" on the
+      // Pump.fun feed (2026-08-14): a third-party program referenced programData with no redeploy, yet
+      // an upgrade alert went out. Keying on the deploy slot means only a real redeploy can trigger it.
+      const pdInfo = await conn.getAccountInfo(pdKey);
+      if (!pdInfo || pdInfo.data.length < 12) continue;
+      const deploySlot = Number(pdInfo.data.readBigUInt64LE(4));
+      const slotTime = await conn.getBlockTime(deploySlot).catch(() => null);
+      if (slotTime && slotTime > oneDayAgo) {
+        upgrades[prog.name] = formatUKTime(new Date(slotTime * 1000));
       }
       await sleep(300);
     } catch {}

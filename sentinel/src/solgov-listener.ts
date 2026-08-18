@@ -475,7 +475,7 @@ async function handleAuthorityChange(name: string, address: string) {
     const msg = `🔴 <b>CRITICAL: stablecoin authority activity</b>\n\n<b>${name}</b>\nAddress: <code>${label}</code>\n📅 ${timestamp} UTC`;
     console.log(`[CRITICAL] ${name}: stablecoin authority activity (${label})`);
     await sendTelegram(msg, 'CRITICAL');
-    const pub = `<b>${name}</b>\nAuthority signed a transaction.\nAddress: <code>${label}</code>\n${timestamp} UTC\nsolgov.xyz`;
+    const pub = `<b>${name}</b>\nOn-chain activity involving this authority account.\nAddress: <code>${label}</code>\n${timestamp} UTC\nsolgov.xyz`;
     await sendPublic(pub);
     return;
   }
@@ -484,7 +484,7 @@ async function handleAuthorityChange(name: string, address: string) {
     const msg = `🟡 <b>HIGH: Off-hours authority activity</b>\n\n<b>${name}</b>\nAddress: <code>${label}</code>\nActivity at ${hour}:00 UTC\n📅 ${timestamp} UTC`;
     console.log(`[HIGH] ${name}: off-hours authority activity (${label})`);
     await sendTelegram(msg, 'HIGH');
-    const pub = `<b>${name}</b>\nAuthority signed a transaction.\nAddress: <code>${label}</code>\n${timestamp} UTC\nsolgov.xyz`;
+    const pub = `<b>${name}</b>\nOn-chain activity involving this authority account.\nAddress: <code>${label}</code>\n${timestamp} UTC\nsolgov.xyz`;
     await sendPublic(pub);
   } else {
     const msg = `📋 <b>${name}</b>\nAddress: <code>${label}</code>\nAuthority activity at ${hour}:00 UTC\n📅 ${timestamp} UTC`;
@@ -494,6 +494,7 @@ async function handleAuthorityChange(name: string, address: string) {
 }
 
 const lastUpgradeAuthority: Record<string, string> = {};
+const lastDeploySlot: Record<string, number> = {};
 
 async function handleProgramUpgrade(name: string, conn: Connection, programId: string) {
   if (suppressAsDuplicate(`prog:${programId}`)) {
@@ -528,6 +529,25 @@ async function handleProgramUpgrade(name: string, conn: Connection, programId: s
     const prevAuth = lastUpgradeAuthority[programId];
     const isAuthorityChange = prevAuth !== undefined && prevAuth !== authAddr;
     lastUpgradeAuthority[programId] = authAddr;
+
+    // A ProgramData accountSubscribe notification fires on ANY write to the account (rent top-up, a
+    // read/write that does not redeploy, etc), not only on an upgrade. Confirm a genuine redeploy by
+    // the last-deployed slot (u64 at offset 4, written only by the loader on deploy/upgrade): treat it
+    // as an upgrade only if that slot advanced from the last seen value, or was deployed in the last
+    // 30 minutes. Without this, a non-upgrade write posts a phantom "Program X upgraded" to the public
+    // activity feed and a subscriber DM (the same bug fixed in solgov-monitor.ts checkProgramUpgrades).
+    // Authority changes are proven from the authority bytes and still fire regardless.
+    const deploySlot = Number(pdInfo.data.readBigUInt64LE(4));
+    const prevSlot = lastDeploySlot[programId];
+    lastDeploySlot[programId] = deploySlot;
+    const slotAdvanced = prevSlot !== undefined && deploySlot > prevSlot;
+    let recentlyDeployed = false;
+    try { const st = await conn.getBlockTime(deploySlot); if (st) recentlyDeployed = (Date.now() / 1000 - st) < 30 * 60; } catch {}
+    const isRealUpgrade = slotAdvanced || recentlyDeployed;
+    if (!isRealUpgrade && !isAuthorityChange) {
+      console.log(`[SKIP] ${name}: ProgramData write but deploy slot ${deploySlot} did not advance and is not recent - not an upgrade`);
+      return;
+    }
 
     const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
     const hour = new Date().getUTCHours();

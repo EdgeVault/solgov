@@ -623,8 +623,9 @@ function roleBenchmarkTip(r: any): string {
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
 
 function App() {
-  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos } = useLiveData(PROTOCOLS);
+  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles } = useLiveData(PROTOCOLS);
   const daoNameSet = useMemo(() => new Set((liveDaos || []).map(d => d.name)), [liveDaos]);
+  const oracleByProtocol = useMemo(() => new Map((liveOracles || []).map(o => [o.protocol, o])), [liveOracles]);
   const llama = useDefiLlama();
   const [sortKey, setSortKey] = useState<SortKey>('timelockSeconds');
   const [sortAsc, setSortAsc] = useState(true);
@@ -1007,6 +1008,9 @@ function App() {
                   Prog. TL <Tooltip text="Timelock in the program code itself. From protocol docs or team disclosure."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
+                  Oracles <Tooltip text="Price oracle networks the protocol reads on-chain, sampled from recent transactions. Pyth, Switchboard, RedStone and Dove are signature- or aggregation-verified. Reading more than one means the feeds can be cross-referenced."><InfoIcon /></Tooltip>
+                </th>
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Last Upgrade <Tooltip text="Most recent program upgrade transaction on-chain."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
@@ -1093,6 +1097,13 @@ function App() {
                       ) : (
                         <span className="text-gray-500">-</span>
                       )}
+                    </td>
+                    <td className="px-3 py-2 text-xs whitespace-nowrap">
+                      {(() => {
+                        const o: any = oracleByProtocol.get(p.name);
+                        if (!o || !o.networks || o.networks.length === 0) return <span className="text-gray-500">-</span>;
+                        return <span className="text-gray-300">{o.networks.join(' + ')}</span>;
+                      })()}
                     </td>
                     <td className="px-3 py-2 text-xs text-gray-400">{p.lastUpgrade}</td>
                     <td className="px-3 py-2 text-xs text-gray-400 text-center">{p.upgradesLast30d}</td>

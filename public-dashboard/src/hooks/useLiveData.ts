@@ -38,6 +38,16 @@ export interface DaoProfile {
   totalProposals: number;
 }
 
+export interface OracleProfile {
+  protocol: string;
+  program: string;
+  networks: string[];
+  sources: { program: string; name: string; sampleFeed: string; refs: number }[];
+  unclassified: string[];
+  status: 'multi-source' | 'single-network' | 'review' | 'unresolved';
+  scannedAt: string;
+}
+
 interface MonitorState {
   [name: string]: any;
 }
@@ -107,6 +117,7 @@ export function useLiveData(staticProtocols: Protocol[]): {
   liveHistorical: Record<string, HistoricalProtocolState>;
   historicalAsOf: string | null;
   liveDaos: DaoProfile[];
+  liveOracles: OracleProfile[];
 } {
   const [liveState, setLiveState] = useState<MonitorState | null>(null);
   const [historical, setHistorical] = useState<Record<string, HistoricalProtocolState> | null>(null);
@@ -153,7 +164,7 @@ export function useLiveData(staticProtocols: Protocol[]): {
   }, []);
 
   if (!liveState) {
-    return { protocols: staticProtocols, lastScan: null, isLive: false, liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [] };
+    return { protocols: staticProtocols, lastScan: null, isLive: false, liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [], liveOracles: [] };
   }
 
   const liveIntegrity = (liveState as any)._integrity || null;
@@ -273,6 +284,7 @@ export function useLiveData(staticProtocols: Protocol[]): {
   }
 
   const liveDaos: DaoProfile[] = Array.isArray((liveState as any)._daos) ? (liveState as any)._daos : [];
+  const liveOracles: OracleProfile[] = Array.isArray((liveState as any)._oracles) ? (liveState as any)._oracles : [];
 
-  return { protocols: merged, lastScan, isLive: true, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos };
+  return { protocols: merged, lastScan, isLive: true, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles };
 }

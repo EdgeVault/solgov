@@ -431,7 +431,7 @@ async function checkSignerFunding(event: any) {
     console.log(logLine);
     const activityDetail = f.isRepeatOffender
       ? `Repeat cross-protocol funder ${f.funder.slice(0, 12)} sent ${solStr} SOL to signer ${f.signer.slice(0, 8)} (prior hits: ${f.priorProtocolsHit.join(', ')})`
-      : `New funder for signer ${f.signer.slice(0, 8)}: ${f.funder.slice(0, 12)} sent ${solStr} SOL`;
+      : `Funder not in tracked history for signer ${f.signer.slice(0, 8)}: ${f.funder.slice(0, 12)} sent ${solStr} SOL`;
     logActivity(protocolLabel, 'SignerFundingAnomaly', activityDetail);
 
     const repeatLine = f.isRepeatOffender
@@ -439,13 +439,13 @@ async function checkSignerFunding(event: any) {
       : '';
     const headline = f.isRepeatOffender
       ? '🔴 <b>Cross-protocol funder reappearing</b>'
-      : '🔴 <b>New funder for tracked signer</b>';
+      : '🔴 <b>Unrecognised funder for tracked signer</b>';
 
     const msg = `${headline}\n\n` +
       `<b>${protocolLabel}</b>\n` +
       `Signer: <code>${f.signer}</code>\n` +
       `Funder: <code>${f.funder}</code>\n` +
-      `Amount: ${solStr} SOL (first time from this funder to this signer)\n` +
+      `Amount: ${solStr} SOL (not in this signer's tracked funding history)\n` +
       `📅 ${ukTime}` +
       repeatLine + `\n\n` +
       `<code>${f.signature.slice(0, 24)}...</code>`;
@@ -638,9 +638,14 @@ async function processWebhookEvent(event: any) {
     const msg = `🔴 <b>CRITICAL: ${niceTitle}</b>\n\n<b>${protocol}</b>${upgradeInfo}${diffText || '\n' + shortDesc}\n📅 ${ukTime}\n\n<code>${sig.slice(0, 20)}...</code>`;
     if (!isUpgradeEventCoveredByListener) {
       await sendTelegram(msg, 'CRITICAL');
-      const pubBody = diffText || `\n${shortDesc}`;
-      const pub = `<b>${protocol}</b>${pubBody}\n${ukTime} UTC\nsolgov.xyz`;
-      await sendPublic(pub);
+      // Only broadcast publicly when there is an authoritative decoded diff (classifyConfigDiff).
+      // A CRITICAL that comes only from a description substring match ('threshold'/'configAuthority'
+      // in free text, no diff) stays an internal risk-team alert - posting the raw description
+      // publicly would assert a config change we have not decoded.
+      if (diffText) {
+        const pub = `<b>${protocol}</b>${diffText}\n${ukTime} UTC\nsolgov.xyz`;
+        await sendPublic(pub);
+      }
     } else {
       console.log(`[WEBHOOK] suppressing duplicate ${type} for ${protocol}; listener handles upgrade events`);
     }
@@ -1132,6 +1137,8 @@ const server = http.createServer(async (req, res) => {
       const raw = JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8'));
       raw._activityLog = readActivityLog().filter(e => e?.type !== 'Watching');
       try { const daoPath = path.join(__dirname, '..', 'data', 'dao-risk.json'); if (fs.existsSync(daoPath)) raw._daos = JSON.parse(fs.readFileSync(daoPath, 'utf-8')).daos || []; } catch { /* optional */ }
+      try { const oraclePath = path.join(__dirname, '..', 'data', 'oracle-sources.json'); if (fs.existsSync(oraclePath)) raw._oracles = JSON.parse(fs.readFileSync(oraclePath, 'utf-8')).results || []; } catch { /* optional */ }
+      try { const compPath = path.join(__dirname, '..', 'data', 'composability.json'); if (fs.existsSync(compPath)) raw._composability = JSON.parse(fs.readFileSync(compPath, 'utf-8')).results || []; } catch { /* optional */ }
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Cache-Control', 'public, s-maxage=30, stale-while-revalidate=60');
       res.writeHead(200);

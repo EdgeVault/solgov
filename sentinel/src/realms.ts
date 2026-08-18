@@ -333,6 +333,30 @@ type RealmsState = Record<string, RealmsDaoState>;
 function loadRealmsState(): RealmsState { try { return JSON.parse(fs.readFileSync(REALMS_STATE_FILE, 'utf-8')); } catch { return {}; } }
 function saveRealmsState(s: RealmsState): void { try { fs.writeFileSync(REALMS_STATE_FILE, JSON.stringify(s, null, 2)); } catch { /* best effort */ } }
 
+// Proposal names are decoded from third-party on-chain instruction data. Strip
+// control characters and line breaks, collapse whitespace, and cap the length so
+// a crafted name cannot inject structure into a Telegram message, the activity
+// feed, or the LLM triage prompt. Kept as literal text (no HTML entities) so the
+// React dashboard renders it correctly; HTML sinks escape separately.
+export function cleanProposalName(raw: string): string {
+  const s = (raw || '')
+    .replace(/[\u0000-\u001F\u007F-\u009F\u2028\u2029]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (!s) return '';
+  return s.length > 200 ? s.slice(0, 197) + '…' : s;
+}
+
+// Escape the HTML-significant characters for Telegram parse_mode HTML, which also
+// neutralises markup injection into the risk-team thread. Applied only at the
+// Telegram boundary; the stored activity feed keeps the literal cleaned name.
+export function escapeHtml(s: string): string {
+  return (s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 // Proposal name + creation unix time, decoded from the CreateProposal (variant 6)
 // instruction of the proposal's creation tx. Validated against BonkDAO BIP #76.
 export async function getProposalDetail(conn: Connection, proposal: string): Promise<{ name: string; createdAt: number }> {
@@ -353,7 +377,7 @@ export async function getProposalDetail(conn: Connection, proposal: string): Pro
     if (pid !== REALMS_PROGRAM.toBase58() || ix.parsed || !ix.data) continue;
     const data = Buffer.from(bs58.decode(ix.data));
     if (data[0] !== 6) continue; // CreateProposal
-    try { const len = data.readUInt32LE(1); if (len > 0 && len < 500) return { name: data.subarray(5, 5 + len).toString('utf8'), createdAt }; } catch { /* fall through */ }
+    try { const len = data.readUInt32LE(1); if (len > 0 && len < 500) return { name: cleanProposalName(data.subarray(5, 5 + len).toString('utf8')), createdAt }; } catch { /* fall through */ }
   }
   return { name: '(unnamed)', createdAt };
 }
@@ -408,7 +432,8 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
 
     for (const p of toEmit) {
       const intent = await analyzeProposalInstructions(conn, p.proposal);
-      const base = `${p.name || p.proposal.slice(0, 8)} [${p.state}]`;
+      const nameOrShort = p.name || p.proposal.slice(0, 8);
+      const base = `${nameOrShort} [${p.state}]`;
       // Only a drain-scale move gets the distinct type + orange flag; a small grant or
       // sponsorship stays a routine ProposalCreated so it does not read like an exploit.
       const label = intent.largeMove ? `${base} · ${intent.summary}` : base;
@@ -416,9 +441,11 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
       emit(dao.name, evType, label, p.governance, p.createdAt ? new Date(p.createdAt * 1000).toISOString() : undefined);
       if (!firstScan) {
         const sev: 'CRITICAL' | 'HIGH' | 'MONITOR' = intent.largeMove ? 'HIGH' : (p.state === 'Voting' ? 'HIGH' : 'MONITOR');
+        // Escape the third-party proposal name for the HTML Telegram message. dao.name
+        // and intent.summary are generated internally, so they carry the intended markup.
         const msg = intent.largeMove
-          ? `<b>${dao.name}</b> proposal ${intent.summary}: "${p.name}"`
-          : `<b>${dao.name}</b> new proposal: ${label}`;
+          ? `<b>${dao.name}</b> proposal ${intent.summary}: "${escapeHtml(nameOrShort)}"`
+          : `<b>${dao.name}</b> new proposal: ${escapeHtml(nameOrShort)} [${p.state}]`;
         alerts.push({ dao: dao.name, type: evType, severity: sev, message: msg });
       }
       await sleep(120);
@@ -459,7 +486,9 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
           const detail = await getProposalDetail(conn, p.proposal);
           const d = `one wallet (${va.topVoter.slice(0, 8)}) holds ${(va.concentration * 100).toFixed(1)}% of the yes vote and reaches quorum alone on "${detail.name}"`;
           emit(dao.name, 'VoteConcentration', d, p.governance);
-          alerts.push({ dao: dao.name, type: 'VoteConcentration', severity: 'HIGH', message: `<b>${dao.name}</b> ${d}`, authority: va.topVoter });
+          // d embeds the third-party proposal name; escape the whole line for the HTML
+          // message (d carries no intended markup, so escaping only touches the name).
+          alerts.push({ dao: dao.name, type: 'VoteConcentration', severity: 'HIGH', message: `<b>${dao.name}</b> ${escapeHtml(d)}`, authority: va.topVoter });
           flagged.push(p.proposal);
         }
         await sleep(120);

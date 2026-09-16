@@ -216,6 +216,11 @@ Run the unit tests (pure helpers under `src/utils/`, no network):
 npm test
 ```
 
+Check the static protocol data against on-chain state (read-only, reports every multisig config and program authority that differs from `protocols.ts`):
+```bash
+npm run audit:static
+```
+
 The Telegram bot, listener, monitor, and API all run as `pm2` daemons in production.
 
 ---

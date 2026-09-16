@@ -48,6 +48,53 @@ export interface OracleProfile {
   scannedAt: string;
 }
 
+export interface IndependenceGroup {
+  team: string;
+  context: 'live' | 'case-study';
+  note?: string;
+  multisigs: { label: string; address: string | null; memberCount: number }[];
+  independenceScore: number;
+  independencePct: number;
+  totalSignerPositions: number;
+  uniqueSigners: number;
+  pairwiseOverlap: { a: string; b: string; shared: number; sharedPctOfMinSet: number }[];
+}
+
+export interface PendingUpgrade {
+  protocol: string;
+  multisig: string;
+  proposalIndex: number;
+  proposalPda: string;
+  status: 'Active' | 'Approved';
+  approvals: number;
+  rejections: number;
+  threshold: number;
+  timelockSeconds: number;
+  kind: 'ProgramUpgrade' | 'SetUpgradeAuthority' | 'ConfigChange' | 'OtherVaultTx';
+  programId: string | null;
+  detail: string;
+}
+
+export interface VerifiedBuildProgram {
+  programId: string;
+  name: string;
+  protocol: string;
+  upgradeAuthority: string;
+  verified: boolean;
+  signer: string | null;
+  signerIsUpgradeAuthority: boolean;
+  pdaExists: boolean;
+  repo: string | null;
+  commit: string | null;
+  matchesDeployed: boolean | null;
+}
+
+export interface TokenTransparency {
+  scannedAt: string;
+  tokens: any[];
+  programs: { protocol: string; programId: string; name: string; securityMetadata: { exists: boolean; mutable: boolean | null }; securityTxt: { present: boolean; contacts?: string; policy?: string; name?: string } }[];
+}
+
 interface MonitorState {
   [name: string]: any;
 }
@@ -118,6 +165,12 @@ export function useLiveData(staticProtocols: Protocol[]): {
   historicalAsOf: string | null;
   liveDaos: DaoProfile[];
   liveOracles: OracleProfile[];
+  liveIndependence: { computedAt: string; groups: IndependenceGroup[] } | null;
+  livePendingUpgrades: { scannedAt: string; results: PendingUpgrade[] } | null;
+  liveVerifiedBuilds: { scannedAt: string; programs: VerifiedBuildProgram[]; protocols: Record<string, { anyVerified: boolean; verifiedCount: number; totalPrograms: number }> } | null;
+  liveTokenTransparency: TokenTransparency | null;
+  liveMeta: { generatedAt: string; stateFileWrittenAt: string } | null;
+  liveOracleConfig: { scannedAt: string; results: any[] } | null;
 } {
   const [liveState, setLiveState] = useState<MonitorState | null>(null);
   const [historical, setHistorical] = useState<Record<string, HistoricalProtocolState> | null>(null);
@@ -164,7 +217,7 @@ export function useLiveData(staticProtocols: Protocol[]): {
   }, []);
 
   if (!liveState) {
-    return { protocols: staticProtocols, lastScan: null, isLive: false, liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [], liveOracles: [] };
+    return { protocols: staticProtocols, lastScan: null, isLive: false, liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [], liveOracles: [], liveIndependence: null, livePendingUpgrades: null, liveVerifiedBuilds: null, liveTokenTransparency: null, liveMeta: null, liveOracleConfig: null };
   }
 
   const liveIntegrity = (liveState as any)._integrity || null;
@@ -231,6 +284,8 @@ export function useLiveData(staticProtocols: Protocol[]): {
     }
   }
 
+  const liveVerifiedBuilds = (liveState as any)._verifiedBuilds && Array.isArray((liveState as any)._verifiedBuilds.programs) ? (liveState as any)._verifiedBuilds : null;
+
   const merged = staticProtocols.map((p) => {
     const directLive = liveState[p.name];
     const fallbackKey = directLive ? null : (Object.keys(NAME_MAP).find(k => NAME_MAP[k] === p.name) || null);
@@ -244,6 +299,19 @@ export function useLiveData(staticProtocols: Protocol[]): {
     let baseUpdated = { ...p, upgradesLast30d: upgradeKeysByProtocol[p.name]?.size ?? 0 };
     if (liveLatestUpgrade && (!p.lastUpgrade || liveLatestUpgrade > p.lastUpgrade)) {
       baseUpdated = { ...baseUpdated, lastUpgrade: liveLatestUpgrade };
+    }
+    // Verified builds from the live otter-verify scan replace the static flag. The scan re-validates
+    // the deployed hash locally and follows the Solana Explorer's signer policy, so it also catches a
+    // build that was verified once and then superseded by a later upgrade, which a static flag cannot.
+    const vb = liveVerifiedBuilds?.protocols?.[p.name];
+    if (vb && vb.totalPrograms > 0) {
+      const progs = liveVerifiedBuilds!.programs.filter(x => x.protocol === p.name);
+      const superseded = !vb.anyVerified && progs.some(x => x.pdaExists && x.matchesDeployed === false);
+      baseUpdated = {
+        ...baseUpdated,
+        verifiedBuild: vb.anyVerified ? (vb.verifiedCount === vb.totalPrograms ? true : 'partial') : false,
+        verifiedBuildNote: superseded ? 'A verified build was published, but the deployed program has been upgraded since and no longer matches it' : undefined,
+      };
     }
 
     if (!live || live.threshold === 0) return baseUpdated;
@@ -327,6 +395,12 @@ export function useLiveData(staticProtocols: Protocol[]): {
 
   const liveDaos: DaoProfile[] = Array.isArray((liveState as any)._daos) ? (liveState as any)._daos : [];
   const liveOracles: OracleProfile[] = Array.isArray((liveState as any)._oracles) ? (liveState as any)._oracles : [];
+  const ls: any = liveState;
+  const liveIndependence = ls._independence && Array.isArray(ls._independence.groups) ? ls._independence : null;
+  const livePendingUpgrades = ls._pendingUpgrades && Array.isArray(ls._pendingUpgrades.results) ? ls._pendingUpgrades : null;
+  const liveTokenTransparency = ls._tokenTransparency && Array.isArray(ls._tokenTransparency.programs) ? ls._tokenTransparency : null;
+  const liveMeta = ls._meta && typeof ls._meta.generatedAt === 'string' ? ls._meta : null;
+  const liveOracleConfig = ls._oracleConfig && Array.isArray(ls._oracleConfig.results) ? ls._oracleConfig : null;
 
-  return { protocols: merged, lastScan, isLive: true, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles };
+  return { protocols: merged, lastScan, isLive: true, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveMeta, liveOracleConfig };
 }

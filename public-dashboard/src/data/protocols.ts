@@ -78,6 +78,7 @@ export interface Protocol {
   };
   insuranceFund?: InsuranceFund;
   verifiedBuild?: boolean | 'partial';
+  verifiedBuildNote?: string;
   configAuthority?: 'autonomous' | string;
   squadsProfilePublic?: boolean;
   secondaryVaults?: { label: string; address: string; note?: string }[];

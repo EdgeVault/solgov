@@ -623,9 +623,37 @@ function roleBenchmarkTip(r: any): string {
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
 
 function App() {
-  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles } = useLiveData(PROTOCOLS);
+  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveOracleConfig } = useLiveData(PROTOCOLS);
   const daoNameSet = useMemo(() => new Set((liveDaos || []).map(d => d.name)), [liveDaos]);
   const oracleByProtocol = useMemo(() => new Map((liveOracles || []).map(o => [o.protocol, o])), [liveOracles]);
+  // Queued Squads proposals per protocol that would upgrade a program, move its upgrade authority or
+  // change the multisig config, and can still execute (not stale). Keyed by both the exact scanner
+  // label and its family so "Raydium (treasury)" rolls up under Raydium.
+  // Oracle networks each protocol is CONFIGURED to read, decoded from its market / reserve accounts.
+  // Deterministic, unlike the transaction-sampled view, so it is preferred when present. Keyed by
+  // family so "Kamino kLend" resolves for the Kamino row.
+  const oracleConfigByProtocol = useMemo(() => {
+    const m = new Map<string, { networks: string[]; markets: number }>();
+    const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').replace(/\s+kLend$/i, '').trim();
+    for (const r of ((liveOracleConfig?.results || []) as any[])) {
+      if (!Array.isArray(r.networks)) continue;
+      const v = { networks: r.networks as string[], markets: Array.isArray(r.oracleAccounts) ? r.oracleAccounts.length : 0 };
+      for (const k of new Set([r.protocol, fam(r.protocol)])) if (!m.has(k)) m.set(k, v);
+    }
+    return m;
+  }, [liveOracleConfig]);
+  const pendingByProtocol = useMemo(() => {
+    const m = new Map<string, import('./hooks/useLiveData').PendingUpgrade[]>();
+    const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
+    for (const r of (livePendingUpgrades?.results || []) as any[]) {
+      // Stale means the index is at or below the multisig's staleTransactionIndex. In Squads V4 that is a
+      // hard stop for open proposals and for config changes, but an already-approved vault transaction
+      // (a program upgrade) can still be executed, so those are kept.
+      if (r.stale === true && (r.status === 'Active' || r.kind === 'ConfigChange')) continue;
+      for (const k of new Set([r.protocol, fam(r.protocol)])) { if (!m.has(k)) m.set(k, []); m.get(k)!.push(r); }
+    }
+    return m;
+  }, [livePendingUpgrades]);
   const llama = useDefiLlama();
   const [sortKey, setSortKey] = useState<SortKey>('timelockSeconds');
   const [sortAsc, setSortAsc] = useState(true);
@@ -907,9 +935,9 @@ function App() {
             </button>
           </Tooltip>
           <span className="flex items-center gap-1.5">
-            <span className="text-white font-medium tabular-nums">{STATS.verifiedBuilds}</span>
+            <span className="text-white font-medium tabular-nums">{liveProtocols.filter(x => x.verifiedBuild === true || x.verifiedBuild === 'partial').length}</span>
             verified builds
-            <Tooltip text="On-chain verified build confirms deployed bytecode matches published source code. Checked via Ellipsis Labs verifier."><InfoIcon /></Tooltip>
+            <Tooltip text="A verified build confirms the deployed bytecode matches published source. Read from the otter-verify registry, counted only when the record is signed by the program's upgrade authority (or a Solana Explorer trusted signer) and the deployed hash still matches the verified build."><InfoIcon /></Tooltip>
           </span>
           <span className="flex items-center gap-1.5">
             <span className="text-white font-medium tabular-nums">{STATS.noInsurance}</span>
@@ -1038,6 +1066,15 @@ function App() {
                       <div className="flex items-center gap-2">
                         <ProtocolLogo name={p.name} />
                         <span className="font-medium text-white whitespace-nowrap">{displayName(p.name)}</span>
+                        {(() => {
+                          const q = pendingByProtocol.get(p.name) || [];
+                          const upg = q.filter(x => x.kind === 'ProgramUpgrade' || x.kind === 'SetUpgradeAuthority');
+                          const cfg = q.filter(x => x.kind === 'ConfigChange');
+                          if (!upg.length && !cfg.length) return null;
+                          const label = upg.length ? `queued upgrade${upg.length > 1 ? 's' : ''}` : 'queued config change';
+                          const tip = q.slice(0, 4).map(x => `#${x.proposalIndex} ${x.status} ${x.approvals}/${x.threshold}: ${x.detail.slice(0, 90)}`).join('\n');
+                          return <Tooltip text={`Squads proposals approved or open but not yet executed. ${tip}`}><span className="text-[10px] px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20 whitespace-nowrap">{label}</span></Tooltip>;
+                        })()}
                       </div>
                     </td>
                     <td className="px-3 py-2 text-xs text-right text-gray-400 whitespace-nowrap">
@@ -1100,9 +1137,17 @@ function App() {
                     </td>
                     <td className="px-3 py-2 text-xs whitespace-nowrap">
                       {(() => {
+                        const cfg = oracleConfigByProtocol.get(p.name);
                         const o: any = oracleByProtocol.get(p.name);
-                        if (!o || !o.networks || o.networks.length === 0) return <span className="text-gray-500">-</span>;
-                        return <span className="text-gray-300">{o.networks.join(' + ')}</span>;
+                        const sampled: string[] = (o && Array.isArray(o.networks)) ? o.networks : [];
+                        if (cfg && cfg.networks.length) {
+                          // Feeds only visible at call time (signed payloads such as RedStone) never appear in
+                          // configured accounts, so anything sampling saw that config did not is appended.
+                          const extra = sampled.filter(n => !cfg.networks.some(c => c.toLowerCase().startsWith(n.toLowerCase()) || n.toLowerCase().startsWith(c.toLowerCase())));
+                          return <Tooltip text={`Configured: decoded from ${cfg.markets} market or reserve account${cfg.markets === 1 ? '' : 's'} on-chain.${extra.length ? ` Also seen in recent transactions but not in configured accounts: ${extra.join(', ')}.` : ''}`}><span className="text-gray-300">{cfg.networks.join(' + ')}{extra.length ? <span className="text-gray-500"> + {extra.join(' + ')}</span> : null}</span></Tooltip>;
+                        }
+                        if (!sampled.length) return <span className="text-gray-500">-</span>;
+                        return <Tooltip text="Sampled from recent transactions; the protocol's configured oracle accounts were not decoded."><span className="text-gray-300">{sampled.join(' + ')}</span></Tooltip>;
                       })()}
                     </td>
                     <td className="px-3 py-2 text-xs text-gray-400">{p.lastUpgrade}</td>
@@ -1280,8 +1325,68 @@ function App() {
                             )}
 
                             <h4 className="font-bold text-white mt-4 mb-2">Upgrade Activity</h4>
+                            {(() => {
+                              // Most recent multisig configuration change from the live activity log, with its age.
+                              // Stated as a fact and a date; whether the change matters is for the reader.
+                              const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
+                              const cfgTypes = new Set(['ConfigChange', 'ThresholdRaised', 'ThresholdLowered', 'SignersAdded', 'SignersRemoved', 'AuthorityChange', 'TimelockChanged', 'TimelockRemoved', 'TimelockAdded']);
+                              const ev = (liveActivity || [])
+                                .filter(e => e && cfgTypes.has(e.type) && e.protocol && fam(e.protocol) === p.name)
+                                .sort((a, b) => String(b.timestamp || b.date).localeCompare(String(a.timestamp || a.date)))[0];
+                              if (!ev) return null;
+                              const days = Math.max(0, Math.floor((Date.now() - Date.parse(ev.timestamp || ev.date)) / 86400000));
+                              return <p><span className="text-gray-500">Last config change:</span> {ev.detail} <span className="text-gray-500">({days === 0 ? 'today' : `${days} day${days === 1 ? '' : 's'} ago`})</span></p>;
+                            })()}
                             <p><span className="text-gray-500">Last upgrade:</span> {p.lastUpgrade}</p>
                             <p><span className="text-gray-500">Upgrades (30d):</span> {p.upgradesLast30d}</p>
+                            {(() => {
+                              const q = pendingByProtocol.get(p.name) || [];
+                              if (!q.length) return null;
+                              const tl = (sec: number) => sec > 0 ? `${Math.round(sec / 3600)}h timelock` : 'no timelock';
+                              return (
+                                <div className="mt-2">
+                                  <p className="text-gray-500 mb-1">Queued proposals <Tooltip text="Squads proposals that are open or approved but not yet executed and would upgrade a program, move an upgrade authority or change the multisig. Read from the proposal accounts on-chain. Open proposals and config changes that have gone stale are excluded; an approved upgrade that has gone stale is kept because Squads V4 can still execute it."><InfoIcon /></Tooltip></p>
+                                  {q.slice(0, 6).map(x => (
+                                    <p key={x.proposalPda} className="text-[11px] text-gray-300 mb-0.5">
+                                      <a href={`https://solscan.io/account/${x.proposalPda}`} target="_blank" rel="noopener" className="font-mono text-gray-400 hover:text-white underline">#{x.proposalIndex}</a>
+                                      {' '}<span className="text-gray-400">{x.status} {x.approvals}/{x.threshold}, {tl(x.timelockSeconds)}</span>
+                                      {' '}<span className="text-gray-300">{x.kind === 'ProgramUpgrade' ? 'program upgrade' : x.kind === 'SetUpgradeAuthority' ? 'upgrade authority change' : 'config change'}</span>
+                                      <span className="text-gray-500"> · {x.detail.length > 110 ? x.detail.slice(0, 107) + '...' : x.detail}</span>
+                                    </p>
+                                  ))}
+                                </div>
+                              );
+                            })()}
+
+                            {(() => {
+                              // On-chain disclosure signals per program (Neodyme security.txt embedded in the binary,
+                              // the Program Metadata canonical security account) and, for the protocol token, which
+                              // token program it uses and any Token-2022 extension authorities that exist.
+                              const tt = liveTokenTransparency;
+                              if (!tt) return null;
+                              const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
+                              const progs = tt.programs.filter(x => x.protocol === p.name || fam(x.protocol) === p.name);
+                              const tok = (tt.tokens as any[]).find(x => x.protocol === p.name || fam(x.protocol) === p.name);
+                              if (!progs.length && !tok) return null;
+                              const withTxt = progs.filter(x => x.securityTxt.present);
+                              const withMeta = progs.filter(x => x.securityMetadata.exists);
+                              const contact = withTxt.map(x => x.securityTxt.contacts).find(Boolean);
+                              const ext = tok ? Object.entries(tok.extensions || {}).filter(([, v]) => v !== null && v !== false) : [];
+                              return (
+                                <>
+                                  <h4 className="font-bold text-white mt-4 mb-2">Transparency <Tooltip text="Read from the program binaries and accounts on-chain. security.txt is the Neodyme standard embedded in the program; the security metadata account is the newer Program Metadata standard writable only by the upgrade authority."><InfoIcon /></Tooltip></h4>
+                                  {progs.length > 0 && (
+                                    <p><span className="text-gray-500">security.txt:</span> {withTxt.length} of {progs.length} program{progs.length === 1 ? '' : 's'}{contact ? <span className="text-gray-500"> · {contact.length > 60 ? contact.slice(0, 57) + '...' : contact}</span> : null}</p>
+                                  )}
+                                  {progs.length > 0 && (
+                                    <p><span className="text-gray-500">Security metadata account:</span> {withMeta.length ? `${withMeta.length} of ${progs.length}` : 'none'}</p>
+                                  )}
+                                  {tok && (
+                                    <p><span className="text-gray-500">Token program:</span> {tok.program === 'token-2022' ? 'Token-2022' : 'SPL Token'}{tok.program === 'token-2022' ? <span className="text-gray-500"> · extensions with an authority: {ext.length ? ext.map(([k]) => k.replace(/([A-Z])/g, ' $1').toLowerCase().trim()).join(', ') : 'none'}</span> : null}</p>
+                                  )}
+                                </>
+                              );
+                            })()}
 
                             <h4 className="font-bold text-white mt-4 mb-2">On-Chain Addresses</h4>
                             <p><span className="text-gray-500">Multisig:</span></p>
@@ -1433,8 +1538,31 @@ function App() {
                                 ) : p.verifiedBuild === 'partial' ? (
                                   <span className="text-gray-300 font-bold">{'\u2713'} Verified build on some programs, not all. Check individual programs below.</span>
                                 ) : (
-                                  <Check pass={false} label="No verified build. Cannot confirm deployed code matches source." />
+                                  <Check pass={false} label={p.verifiedBuildNote ? 'Verified build superseded. The deployed program has been upgraded since it was verified and no longer matches the verified source.' : 'No verified build. Cannot confirm deployed code matches source.'} />
                                 )}</p>
+                                {(() => {
+                                  // Neutral checklist against two published references. Each line states whether the
+                                  // configuration meets that reference; it is not a score. Numbers verified at source
+                                  // on 2026-09-16: Squads (4+ signers, 67%+ ratio), SEAL (3+ signers, 50% threshold,
+                                  // 7+ signers above $1M, a mandatory delay between approval and execution).
+                                  const n = p.totalMembers || 0, t = p.threshold || 0, ratio = n ? t / n : 0;
+                                  const tvl = llama.tvl[p.name] || 0;
+                                  const hasDelay = (p.timelockSeconds || 0) > 0;
+                                  const rows: { ok: boolean; label: string; src: string; href: string }[] = [
+                                    { ok: n >= 4 && ratio >= 0.67, label: `${t}/${n} against Squads 4+ signers at 67%+`, src: 'Squads', href: 'https://docs.squads.so/main/additional-resources/advanced-security-best-practices' },
+                                    { ok: n >= 3 && ratio >= 0.5, label: `${t}/${n} against SEAL 3+ signers at 50%`, src: 'SEAL', href: 'https://frameworks.securityalliance.org/wallet-security/secure-multisig-best-practices' },
+                                    ...(tvl >= 1_000_000 ? [{ ok: n >= 7, label: `${n} signers against SEAL 7+ when holding over $1M`, src: 'SEAL', href: 'https://frameworks.securityalliance.org/wallet-security/secure-multisig-best-practices' }] : []),
+                                    { ok: hasDelay, label: hasDelay ? `${p.timelockLabel} delay between approval and execution (SEAL: mandatory delay)` : 'No delay between approval and execution (SEAL: mandatory delay)', src: 'SEAL', href: 'https://frameworks.securityalliance.org/wallet-security/secure-multisig-best-practices' },
+                                  ];
+                                  return (
+                                    <div className="mt-2">
+                                      <p className="text-gray-500 mb-1">Reference benchmarks <Tooltip text="Whether the current configuration meets each published reference. States the comparison only; the reader draws the conclusion."><InfoIcon /></Tooltip></p>
+                                      {rows.map((r, i) => (
+                                        <p key={i} className="text-[11px]"><span className={r.ok ? 'text-gray-300' : 'text-gray-400'}>{r.ok ? '\u2713' : '\u2717'} {r.label}</span> <a href={r.href} target="_blank" rel="noopener" className="text-gray-500 hover:text-white underline">{r.src}</a></p>
+                                      ))}
+                                    </div>
+                                  );
+                                })()}
                                 {p.configAuthority && p.configAuthority !== 'autonomous' && (
                                   <p className="mt-1"><span className="text-gray-400 font-bold">{'\u2717'} External config authority key</span> <span className="text-gray-400">can change threshold, members, and timelock on this multisig without going through the multisig vote</span>. <code className="text-[10px] text-gray-400">{p.configAuthority.slice(0, 12)}...</code>
                                   <Tooltip text="Squads documentation states a Controlled Multisig is not recommended for most use cases."><InfoIcon /></Tooltip></p>
@@ -1590,7 +1718,7 @@ function App() {
       )}
 
       {activeTab === 'blast' && (
-        <BlastRadiusView llama={llama} liveProtocols={liveProtocols} />
+        <BlastRadiusView llama={llama} liveProtocols={liveProtocols} independence={liveIndependence?.groups} />
       )}
 
       {activeTab === 'daos' && (
@@ -2313,7 +2441,7 @@ function ExposureSection({ title, icon, nodes, emptyText: _emptyText, liveByName
   );
 }
 
-function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveProtocols: typeof PROTOCOLS }) {
+function BlastRadiusView({ llama, liveProtocols, independence }: { llama: DefiLlamaData; liveProtocols: typeof PROTOCOLS; independence?: import('./components/IndependenceScore').Group[] }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'overview' | 'detail'>('overview');
   const rawExposure = selected ? EXPOSURES[selected] || null : null;
@@ -2512,7 +2640,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
           })()}
 
           {selected && (() => {
-            const g = findLiveGroupForProtocol(selected);
+            const g = findLiveGroupForProtocol(selected, independence);
             return g ? <IndependenceScorePanel group={g} /> : null;
           })()}
 
@@ -2626,7 +2754,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
               </div>
 
               {(() => {
-                const g = findCaseStudyGroup('Drift');
+                const g = findCaseStudyGroup('Drift', independence);
                 return g ? <IndependenceScorePanel group={g} /> : null;
               })()}
 

@@ -156,7 +156,14 @@ export async function analyzeVotes(conn: Connection, proposal: string): Promise<
   return { proposal, yesVoters, yesTotalWeight: yesTotal, topVoter, topWeight, concentration: yesTotal > 0 ? topWeight / yesTotal : 0 };
 }
 
-export interface ProposalIntent { movesTreasury: boolean; largeMove: boolean; summary: string; instructionCount: number; }
+export interface ProposalIntent {
+  movesTreasury: boolean; largeMove: boolean; summary: string; instructionCount: number;
+  // A proposal that rewrites the governance's own rules. proposedHoldUpSec is SPL Governance's
+  // execution delay (its timelock); lowering it or the vote threshold is the shape of the Term
+  // Finance governance takeover (August 2026), where a proposal zeroed the delays before draining.
+  proposesConfigChange: boolean; proposedHoldUpSec: number | null; proposedVoteThresholdPct: number | null;
+  proposesRealmAuthorityChange: boolean;
+}
 
 // A move counts as large (drain-scale) when it takes a big share of the token's total
 // supply, or moves a very large absolute value. Sizing against the source treasury
@@ -187,6 +194,9 @@ export async function analyzeProposalInstructions(conn: Connection, proposal: st
   });
   let count = 0; let movesTreasury = false; let largeMove = false;
   const moves: string[] = [];
+  let proposesConfigChange = false; let proposedHoldUpSec: number | null = null; let proposedVoteThresholdPct: number | null = null;
+  let proposesRealmAuthorityChange = false;
+  const REALMS = REALMS_PROGRAM.toBase58();
   const priceCache: Record<string, number> = {};
   const supplyCache: Record<string, { supply: number; decimals: number }> = {};
   const priceOf = async (mint: string): Promise<number> => {
@@ -252,10 +262,23 @@ export async function analyzeProposalInstructions(conn: Connection, proposal: st
       } else if (prog === BPF && ixData.length >= 4 && ixData.readUInt32LE(0) === 4) {
         movesTreasury = true; largeMove = true;
         moves.push('program authority change');
+      } else if (prog === REALMS && ixData.length >= 2 && ixData[0] === 19) {
+        // SetGovernanceConfig (instruction 19). Layout after the tag mirrors GovernanceConfig:
+        // community VoteThreshold (kind u8, then a percentage byte unless kind is Disabled = 2),
+        // min_community_weight_to_create_proposal u64, min_transaction_hold_up_time u32, ...
+        proposesConfigChange = true;
+        let q = 1;
+        const kind = ixData[q++];
+        proposedVoteThresholdPct = kind === 2 ? null : (q < ixData.length ? ixData[q++] : null);
+        q += 8;
+        if (q + 4 <= ixData.length) proposedHoldUpSec = ixData.readUInt32LE(q);
+      } else if (prog === REALMS && ixData.length >= 1 && ixData[0] === 21) {
+        // SetRealmAuthority (instruction 21): moves control of the realm itself.
+        proposesRealmAuthorityChange = true;
       }
     }
   }
-  return { movesTreasury, largeMove, summary: moves.join('; '), instructionCount: count };
+  return { movesTreasury, largeMove, summary: moves.join('; '), instructionCount: count, proposesConfigChange, proposedHoldUpSec, proposedVoteThresholdPct, proposesRealmAuthorityChange };
 }
 
 export interface RiskAssessment {
@@ -434,16 +457,39 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
       const intent = await analyzeProposalInstructions(conn, p.proposal);
       const nameOrShort = p.name || p.proposal.slice(0, 8);
       const base = `${nameOrShort} [${p.state}]`;
+      // A proposal that changes the governance's own config or realm authority is stated against the
+      // current values. Lowering the hold-up time or the vote threshold, or moving the realm
+      // authority, is the precursor shape of a governance takeover and is flagged HIGH; a change that
+      // raises protections is still recorded, as MONITOR.
+      const cur = govs.find(g => g.governance === p.governance);
+      const fmtH = (sec: number) => sec === 0 ? 'none' : sec % 3600 === 0 ? `${sec / 3600}h` : `${Math.round(sec / 60)}min`;
+      let cfgNote = ''; let lowersProtection = false;
+      if (intent.proposesConfigChange) {
+        const parts: string[] = [];
+        if (intent.proposedHoldUpSec !== null) {
+          parts.push(cur ? `hold-up time ${fmtH(cur.holdUpTimeSec)} to ${fmtH(intent.proposedHoldUpSec)}` : `hold-up time to ${fmtH(intent.proposedHoldUpSec)}`);
+          if (cur && intent.proposedHoldUpSec < cur.holdUpTimeSec) lowersProtection = true;
+        }
+        if (intent.proposedVoteThresholdPct !== null) {
+          parts.push(cur ? `vote threshold ${cur.voteThresholdPct}% to ${intent.proposedVoteThresholdPct}%` : `vote threshold to ${intent.proposedVoteThresholdPct}%`);
+          if (cur && intent.proposedVoteThresholdPct < cur.voteThresholdPct) lowersProtection = true;
+        }
+        cfgNote = `sets governance config: ${parts.join(', ')}`;
+      }
+      if (intent.proposesRealmAuthorityChange) { cfgNote = (cfgNote ? cfgNote + '; ' : '') + 'transfers realm authority'; lowersProtection = true; }
+      const isGovChange = intent.proposesConfigChange || intent.proposesRealmAuthorityChange;
       // Only a drain-scale move gets the distinct type + orange flag; a small grant or
       // sponsorship stays a routine ProposalCreated so it does not read like an exploit.
-      const label = intent.largeMove ? `${base} · ${intent.summary}` : base;
-      const evType = intent.largeMove ? 'TreasuryProposal' : 'ProposalCreated';
+      const label = isGovChange ? `${base} · ${cfgNote}` : intent.largeMove ? `${base} · ${intent.summary}` : base;
+      const evType = isGovChange ? 'GovernanceConfigProposal' : intent.largeMove ? 'TreasuryProposal' : 'ProposalCreated';
       emit(dao.name, evType, label, p.governance, p.createdAt ? new Date(p.createdAt * 1000).toISOString() : undefined);
       if (!firstScan) {
-        const sev: 'CRITICAL' | 'HIGH' | 'MONITOR' = intent.largeMove ? 'HIGH' : (p.state === 'Voting' ? 'HIGH' : 'MONITOR');
-        // Escape the third-party proposal name for the HTML Telegram message. dao.name
-        // and intent.summary are generated internally, so they carry the intended markup.
-        const msg = intent.largeMove
+        const sev: 'CRITICAL' | 'HIGH' | 'MONITOR' = isGovChange ? (lowersProtection ? 'HIGH' : 'MONITOR') : intent.largeMove ? 'HIGH' : (p.state === 'Voting' ? 'HIGH' : 'MONITOR');
+        // Escape the third-party proposal name for the HTML Telegram message. dao.name,
+        // intent.summary and cfgNote are generated internally, so they carry the intended markup.
+        const msg = isGovChange
+          ? `<b>${dao.name}</b> proposal ${cfgNote}: "${escapeHtml(nameOrShort)}" [${p.state}]`
+          : intent.largeMove
           ? `<b>${dao.name}</b> proposal ${intent.summary}: "${escapeHtml(nameOrShort)}"`
           : `<b>${dao.name}</b> new proposal: ${escapeHtml(nameOrShort)} [${p.state}]`;
         alerts.push({ dao: dao.name, type: evType, severity: sev, message: msg });

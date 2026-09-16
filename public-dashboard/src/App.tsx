@@ -623,7 +623,7 @@ function roleBenchmarkTip(r: any): string {
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
 
 function App() {
-  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveOracleConfig } = useLiveData(PROTOCOLS);
+  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveOracleConfig, liveMeta } = useLiveData(PROTOCOLS);
   const daoNameSet = useMemo(() => new Set((liveDaos || []).map(d => d.name)), [liveDaos]);
   const oracleByProtocol = useMemo(() => new Map((liveOracles || []).map(o => [o.protocol, o])), [liveOracles]);
   // Queued Squads proposals per protocol that would upgrade a program, move its upgrade authority or
@@ -1371,7 +1371,6 @@ function App() {
                               const withTxt = progs.filter(x => x.securityTxt.present);
                               const withMeta = progs.filter(x => x.securityMetadata.exists);
                               const contact = withTxt.map(x => x.securityTxt.contacts).find(Boolean);
-                              const ext = tok ? Object.entries(tok.extensions || {}).filter(([, v]) => v !== null && v !== false) : [];
                               return (
                                 <>
                                   <h4 className="font-bold text-white mt-4 mb-2">Transparency <Tooltip text="Read from the program binaries and accounts on-chain. security.txt is the Neodyme standard embedded in the program; the security metadata account is the newer Program Metadata standard writable only by the upgrade authority."><InfoIcon /></Tooltip></h4>
@@ -1381,9 +1380,21 @@ function App() {
                                   {progs.length > 0 && (
                                     <p><span className="text-gray-500">Security metadata account:</span> {withMeta.length ? `${withMeta.length} of ${progs.length}` : 'none'}</p>
                                   )}
-                                  {tok && (
-                                    <p><span className="text-gray-500">Token program:</span> {tok.program === 'token-2022' ? 'Token-2022' : 'SPL Token'}{tok.program === 'token-2022' ? <span className="text-gray-500"> · extensions with an authority: {ext.length ? ext.map(([k]) => k.replace(/([A-Z])/g, ' $1').toLowerCase().trim()).join(', ') : 'none'}</span> : null}</p>
-                                  )}
+                                  {tok && (() => {
+                                    const e = tok.extensions || {};
+                                    const notes: string[] = [];
+                                    if (e.permanentDelegate) notes.push(`permanent delegate ${String(e.permanentDelegate).slice(0, 8)}.. can move or burn any holder's tokens`);
+                                    if (e.transferHookProgram) notes.push(`transfer hook program ${String(e.transferHookProgram).slice(0, 8)}.. runs on every transfer`);
+                                    else if (e.transferHookAuthority) notes.push(`transfer-hook authority ${String(e.transferHookAuthority).slice(0, 8)}.. is set and can install a hook program; none installed`);
+                                    if (e.pauseAuthority) notes.push('pause authority can halt transfers');
+                                    if (e.burnAuthority) notes.push('burn authority must co-sign burns');
+                                    if (e.scaledUiAmountAuthority) notes.push('scaled UI amount authority can change the displayed multiplier');
+                                    if (e.confidentialAuditorSet) notes.push('confidential transfer auditor key set');
+                                    if (e.mintCloseAuthority) notes.push('mint close authority set');
+                                    return (
+                                      <p><span className="text-gray-500">Token program:</span> {tok.program === 'token-2022' ? 'Token-2022' : 'SPL Token'}{tok.program === 'token-2022' ? <span className="text-gray-500"> · {notes.length ? notes.join('; ') : 'no extension authorities set'}</span> : null}</p>
+                                    );
+                                  })()}
                                 </>
                               );
                             })()}
@@ -1708,7 +1719,7 @@ function App() {
           >
             <img src="/reviewed-by-soladex.svg?v=2" alt="Reviewed by Soladex" className="h-9 w-auto hover:opacity-80 transition-opacity" />
           </a>
-          <p>All governance data decoded directly from on-chain Solana account data. Live updates via Helius webhooks.{isLive && lastScan ? ` Last event: ${lastScan.split('T')[0]} ${lastScan.split('T')[1]?.slice(0, 5)} UTC.` : ''}{!llama.loading ? ' TVL data live from DeFiLlama.' : ''}</p>
+          <p>All governance data decoded directly from on-chain Solana account data. Live updates via Helius webhooks.{isLive && lastScan ? ` Last event: ${lastScan.split('T')[0]} ${lastScan.split('T')[1]?.slice(0, 5)} UTC.` : ''}{liveMeta ? ` Response assembled ${liveMeta.generatedAt.split('T')[0]} ${liveMeta.generatedAt.split('T')[1]?.slice(0, 5)} UTC.` : ''}{!llama.loading ? ' TVL data live from DeFiLlama.' : ''}</p>
           <p className="text-gray-700">This dashboard does not provide financial advice. It presents on-chain governance configurations for informational purposes.</p>
         </div>
       </>)}

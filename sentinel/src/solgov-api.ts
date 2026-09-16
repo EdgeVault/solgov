@@ -1005,7 +1005,7 @@ function buildOpenApiSpec(host: string): any {
       '/api/v1/state': {
         get: {
           summary: 'Full monitor state (heavy)',
-          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). ~100 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
+          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _adminPath, _publicCommitsAhead, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). ~100 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
           responses: { '200': { description: 'Complete state object' } },
         },
       },
@@ -1209,6 +1209,17 @@ const server = http.createServer(async (req, res) => {
       attach('_verifiedBuilds', 'verified-builds.json');
       attach('_tokenTransparency', 'token-transparency.json');
       attach('_oracleConfig', 'oracle-config.json');
+      attach('_adminPath', 'admin-path.json');
+      // Public commits ahead of each verified build. The git facts are attached; the keyword-ranked
+      // candidate list is stripped here because a keyword match is not evidence and must not name a
+      // team on the public API. Full detail stays in the data file for the risk team.
+      try {
+        const pf = path.join(__dirname, '..', 'data', 'public-fix-watch.json');
+        if (fs.existsSync(pf)) {
+          const j = JSON.parse(fs.readFileSync(pf, 'utf-8'));
+          raw._publicCommitsAhead = { scannedAt: j.scannedAt, results: (j.results || []).map((r: any) => ({ protocol: r.protocol, program: r.program, programName: r.programName, repo: r.repo, deployedCommit: r.deployedCommit, defaultBranch: r.defaultBranch, aheadCount: r.aheadCount, latestCommitAt: r.commits && r.commits.length ? r.commits[r.commits.length - 1].date : null, ...(r.error ? { error: r.error } : {}) })) };
+        }
+      } catch { /* optional */ }
       // Provenance for integrators: when this response was assembled and when the state file it is
       // built from was last written. Per-protocol `lastChecked` gives the read time of each entry.
       try { raw._meta = { generatedAt: new Date().toISOString(), stateFileWrittenAt: new Date(fs.statSync(STATE_FILE).mtimeMs).toISOString() }; } catch { /* optional */ }
@@ -1708,6 +1719,8 @@ const server = http.createServer(async (req, res) => {
       { name: 'oracleConfig', file: 'oracle-config.json', expectedHours: 24 * 9, stampAt: stampOf(readJson('oracle-config.json'), ['scannedAt']) },
       { name: 'daoRisk', file: 'dao-risk.json', expectedHours: 36, stampAt: stampOf(readJson('dao-risk.json'), ['scannedAt', 'computedAt', 'updatedAt']) },
       { name: 'composability', file: 'composability.json', expectedHours: 36, stampAt: stampOf(readJson('composability.json'), ['scannedAt']) },
+      { name: 'adminPath', file: 'admin-path.json', expectedHours: 24 * 9, stampAt: stampOf(readJson('admin-path.json'), ['scannedAt']) },
+      { name: 'publicFixWatch', file: 'public-fix-watch.json', expectedHours: 48, stampAt: stampOf(readJson('public-fix-watch.json'), ['scannedAt']) },
     ];
     const report = surfaces.map(sf => {
       const ageHours = sf.stampAt ? Math.round((now - new Date(sf.stampAt).getTime()) / 3600000) : null;

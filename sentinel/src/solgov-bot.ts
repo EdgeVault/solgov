@@ -282,7 +282,10 @@ function runScan(mode: string): Promise<string> {
 const STATUS_NAME_MAP: Record<string, string> = {
   'Pumpfun': 'Pumpfun + PumpSwap',
   'Huma': 'Huma Finance',
-  'Onre Finance (secondary)': 'Onre Finance',
+  'Onre Finance (treasury)': 'Onre Finance',
+  'Drift (interim recovery)': 'Drift',
+  'Voltr (former 3/5)': 'Voltr',
+  'Jito (program upgrade)': 'Jito',
   'deBridge (governance multisig)': 'deBridge',
   'Raydium (treasury)': 'Raydium',
 };

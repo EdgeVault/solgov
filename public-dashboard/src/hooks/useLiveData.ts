@@ -102,7 +102,6 @@ interface MonitorState {
 const NAME_MAP: Record<string, string> = {
   'Pumpfun': 'Pumpfun + PumpSwap',
   'Huma': 'Huma Finance',
-  'Onre Finance (secondary)': 'Onre Finance',
   'deBridge (governance multisig)': 'deBridge',
   'Raydium (treasury)': 'Raydium',
 };

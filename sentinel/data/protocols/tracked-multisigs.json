@@ -1,5 +1,5 @@
 {
-  "Drift": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+  "Drift": "7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM",
   "Pumpfun": "2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW",
   "Magic Eden": "J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE",
   "Exponent": "51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH",
@@ -20,7 +20,7 @@
   "Solayer": "5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp",
   "Flash Trade": "Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF",
   "Wick": "8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA",
-  "Onre Finance": "922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR",
+  "Onre Finance": "2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN",
   "MetaDAO": "8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH",
   "Helium": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
   "Voltr": "7szuzpoZzah95BsAu2LQm3bpor5ofiAV4HuinyfFEdse",
@@ -58,8 +58,8 @@
   "Raydium (program admin V3)": "7PMRcwPChXuwKA5Z5znNf6avJgW454gGGboV1Yt1xGgq",
   "Meteora (program admin V3)": "3Eun8CdkJsd5WZC7NdNLUPQCx86cXKtwAK6EFLuWsn5w",
   "Parcl (governance V3)": "BRwx9yUrdP9aZMxJGgarLCKcNr3iCn7yj1nDAy4jfUUk",
-  "Drift (program upgrade)": "7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM",
   "Voltr (former 3/5)": "5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH",
-  "Onre Finance (program upgrade)": "2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN",
-  "Jito (program upgrade)": "AJVQRHk9rg25HzE2TompdcjfvQGuZdytPXhU1SgxUxBa"
+  "Jito (program upgrade)": "AJVQRHk9rg25HzE2TompdcjfvQGuZdytPXhU1SgxUxBa",
+  "Drift (interim recovery)": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+  "Onre Finance (treasury)": "922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR"
 }

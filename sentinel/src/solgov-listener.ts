@@ -25,8 +25,8 @@ const PREV_STATE_FILE = path.join(__dirname, '..', 'data', 'listener-prev-state.
 import { appendActivity as logActivity } from './activity-log';
 
 const WATCH_LIST: { name: string; address: string; type: 'v4' | 'v3' | 'serum' | 'authority' }[] = [
-  { name: 'Drift', address: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', type: 'v4' },
-  { name: 'Drift (program upgrade)', address: '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM', type: 'v4' },
+  { name: 'Drift', address: '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM', type: 'v4' },
+  { name: 'Drift (interim recovery)', address: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', type: 'v4' },
   { name: 'Pumpfun + PumpSwap', address: '2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW', type: 'v4' },
   { name: 'Magic Eden', address: 'J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE', type: 'v4' },
   { name: 'Exponent', address: '51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH', type: 'v4' },
@@ -47,8 +47,8 @@ const WATCH_LIST: { name: string; address: string; type: 'v4' | 'v3' | 'serum' |
   { name: 'Solayer', address: '5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp', type: 'v4' },
   { name: 'Flash Trade', address: 'Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF', type: 'v4' },
   { name: 'Wick', address: '8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA', type: 'v4' },
-  { name: 'Onre Finance', address: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4' },
-  { name: 'Onre Finance (program upgrade)', address: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4' },
+  { name: 'Onre Finance (treasury)', address: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4' },
+  { name: 'Onre Finance', address: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4' },
   { name: 'MetaDAO', address: '8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH', type: 'v4' },
   { name: 'Helium', address: 'FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1', type: 'v4' },
   { name: 'Voltr', address: '7szuzpoZzah95BsAu2LQm3bpor5ofiAV4HuinyfFEdse', type: 'v4' },
@@ -95,7 +95,7 @@ try {
   ];
 }
 
-const prevState: Record<string, { threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }> = {};
+const prevState: Record<string, { address?: string; threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }> = {};
 
 let reconnectDelayMs = 5000;
 let currentWs: WebSocket | null = null;
@@ -352,9 +352,15 @@ async function processV4State(name: string, ms: any, address: string) {
       fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
     } catch {}
 
-    const prev = prevState[name];
+    let prev: (typeof prevState)[string] | undefined = prevState[name];
+    // Same name, different multisig: the entry was re-pointed after an on-chain handover. Baseline it
+    // fresh rather than reporting the new account's config as changes to the old one.
+    if (prev && prev.address && prev.address !== address) {
+      console.log(`[INIT] ${name}: multisig address changed ${prev.address.slice(0, 8)} -> ${address.slice(0, 8)}, re-baselining`);
+      prev = undefined;
+    }
     if (!prev) {
-      prevState[name] = { threshold, memberCount, timeLock, configAuthority, memberKeys };
+      prevState[name] = { address, threshold, memberCount, timeLock, configAuthority, memberKeys };
       savePrevState();
       console.log(`[INIT] ${name}: ${threshold}/${memberCount}, timelock=${timeLock}s, configAuth=${configAuthority === 'autonomous' ? 'autonomous' : configAuthority.slice(0, 12) + '...'}`);
       return;
@@ -407,7 +413,7 @@ async function processV4State(name: string, ms: any, address: string) {
       });
     }
 
-    prevState[name] = { threshold, memberCount, timeLock, configAuthority, memberKeys };
+    prevState[name] = { address, threshold, memberCount, timeLock, configAuthority, memberKeys };
     savePrevState();
   } catch (e: any) {
     console.error(`[ERROR] ${name}:`, e.message?.slice(0, 60));

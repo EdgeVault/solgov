@@ -39,7 +39,7 @@ interface ProtocolDef {
 }
 
 const PROTOCOLS: ProtocolDef[] = [
-  { name: 'Drift', ms: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', type: 'v4', tier: 1, active: 5,
+  { name: 'Drift', ms: '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM', type: 'v4', tier: 1, active: 6,
     programs: [
       { name: 'Protocol V2', id: 'dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH', expectedAuth: '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai' },
       { name: 'Velocity', id: 'vELoC1audYbSYVRXn1vPaV8Axoa9oU6BYmNGZZBDZ1P', expectedAuth: '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai' },
@@ -64,7 +64,7 @@ const PROTOCOLS: ProtocolDef[] = [
   { name: 'Stabble', ms: 'AFRN2ECAY1YTbfkXD7yvoc1iaxYdt5BdyyqyPRsrHaK2', type: 'v4', tier: 1, active: 3,
     programs: [{ name: 'Stable Swap', id: 'swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ', expectedAuth: '9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP' }] },
   { name: 'Hylo', ms: '2z3t2eBz7VL39Q3vEvaemd5mhT9XLoFofEH2cXvwCJvb', type: 'v4', tier: 1, active: 4 },
-  { name: 'Drift (program upgrade)', ms: '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM', type: 'v4', tier: 1, active: 6 },
+  { name: 'Drift (interim recovery)', ms: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', type: 'v4', tier: 1, active: 5 },
   { name: 'Loopscale', ms: 'C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk', type: 'v4', tier: 1, active: 7,
     programs: [
       { name: 'Loopscale', id: '1oopBoJG58DgkUVKkEzKgyG9dvRmpgeEm1AVjoHkF78', expectedAuth: 'DwBXwJDZ4Av4miT62sEssWJUinkzwkmPPB4Fg3fKEfft' },
@@ -85,8 +85,8 @@ const PROTOCOLS: ProtocolDef[] = [
     programs: [{ name: 'Perpetuals', id: 'FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn', expectedAuth: 'dhfZwJfdesv7fNW3nngCSjeGbx9zWUusLtfPaWbVKvo' }] },
   { name: 'Wick', ms: '8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA', type: 'v4', tier: 2, active: 5 },
 
-  { name: 'Onre Finance', ms: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4', tier: 2, active: 7, programs: [] },
-  { name: 'Onre Finance (program upgrade)', ms: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4', tier: 2, active: 7,
+  { name: 'Onre Finance (treasury)', ms: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4', tier: 2, active: 7, programs: [] },
+  { name: 'Onre Finance', ms: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4', tier: 2, active: 7,
     programs: [{ name: 'Core', id: 'onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe', expectedAuth: 'FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f' }] },
   { name: 'MetaDAO', ms: '8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH', type: 'v4', tier: 2, active: 5,
     programs: [
@@ -178,6 +178,7 @@ const PROTOCOLS: ProtocolDef[] = [
 ];
 
 interface ProtocolState {
+  address?: string;          // multisig the entry was read from; a change means re-baseline, not a config change
   threshold: number;
   members: string[];
   memberPerms?: Record<string, string>;
@@ -582,6 +583,7 @@ async function scanV4(conn: Connection, p: ProtocolDef, skipThreats = false): Pr
     const state: ProtocolState = {
       threshold: ms.threshold,
       members,
+      address: p.ms,
       memberPerms,
       timeLock: ms.timeLock,
       lastChecked: new Date().toISOString(),
@@ -850,7 +852,13 @@ async function main() {
 
     if (state) {
       scanned++;
-      const prev = prevState[p.name];
+      let prev: ProtocolState | undefined = prevState[p.name];
+      // A tracked name pointing at a different multisig than last run (the entry was re-pointed after an
+      // on-chain handover) is a new baseline, not a threshold or member change on the old account.
+      if (prev && prev.address && state.address && prev.address !== state.address) {
+        console.log(`  ${p.name}: multisig address changed ${prev.address.slice(0, 8)} -> ${state.address.slice(0, 8)}, re-baselining without alerts`);
+        prev = undefined;
+      }
 
       if (prev) {
         const { changes, watching } = diffState(p.name, prev, state, p);

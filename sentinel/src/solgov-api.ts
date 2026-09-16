@@ -26,8 +26,8 @@ const TG_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '';
 const TG_THREADS = { CRITICAL: 65, HIGH: 67, MONITOR: 69, PUBLIC: 21 };
 
 const ADDRESS_TO_PROTOCOL: Record<string, string> = {
-  'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ': 'Drift',
-  '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM': 'Drift (program upgrade)',
+  '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM': 'Drift',
+  'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ': 'Drift (interim recovery)',
   '2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW': 'Pumpfun',
   'J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE': 'Magic Eden',
   '51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH': 'Exponent',
@@ -48,7 +48,8 @@ const ADDRESS_TO_PROTOCOL: Record<string, string> = {
   '5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp': 'Solayer',
   'Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF': 'Flash Trade',
   '8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA': 'Wick',
-  '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR': 'Onre Finance',
+  '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN': 'Onre Finance',
+  '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR': 'Onre Finance (treasury)',
   '8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH': 'MetaDAO',
   'FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1': 'Helium',
   '7szuzpoZzah95BsAu2LQm3bpor5ofiAV4HuinyfFEdse': 'Voltr',
@@ -73,7 +74,7 @@ const ADDRESS_TO_PROTOCOL: Record<string, string> = {
   '3yqoHFE4nBGchuVH5rJuZMFvsmnaDTuLLdvGPDUEJcbW': 'SPL Stake Pool',
   'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9': 'Drift (BBC5g vault)',
   'GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo': 'Drift (E44y4Gm vault)',
-  '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai': 'Drift (7qipz vault)',
+  '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai': 'Drift (vault)',
   'G2FCNGgQQ7MYyJvkXw1du86YGR6vXXejuQG9LsjX1kEs': 'Voltr (vault)',
   'FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f': 'Onre Finance (vault)',
   '8EP3VommYzMRSdnSn88GnQpxjRwxg6nroTeUNJoqu9b8': 'Jito (AJVQ vault)',
@@ -198,11 +199,17 @@ const STRIDE_MAP = {
 
 const CANONICAL_MAP: Record<string, { canonical: string; role: 'primary' | 'treasury' | 'governance' | 'secondary' | 'historical' }> = {
   'Raydium (treasury)':           { canonical: 'Raydium',     role: 'treasury' },
-  'Onre Finance (secondary)':     { canonical: 'Onre Finance', role: 'secondary' },
+  'Onre Finance (treasury)':      { canonical: 'Onre Finance', role: 'treasury' },
+  'Drift (interim recovery)':     { canonical: 'Drift',        role: 'secondary' },
+  'Voltr (former 3/5)':           { canonical: 'Voltr',        role: 'secondary' },
+  'Jito (program upgrade)':       { canonical: 'Jito',         role: 'governance' },
   'deBridge (governance multisig)': { canonical: 'deBridge',   role: 'governance' },
 };
 function resolveCanonical(name: string): { canonical: string; role: 'primary' | 'treasury' | 'governance' | 'secondary' | 'historical' } {
-  return CANONICAL_MAP[name] || { canonical: name, role: 'primary' };
+  if (CANONICAL_MAP[name]) return CANONICAL_MAP[name];
+  const m = /^(.*?)\s*\(historical.*\)$/i.exec(name);
+  if (m) return { canonical: m[1].trim(), role: 'historical' };
+  return { canonical: name, role: 'primary' };
 }
 
 const HISTORICAL_NAME_MAP: Record<string, string> = {

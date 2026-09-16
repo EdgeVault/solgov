@@ -2377,11 +2377,6 @@ insuranceFund: {
       { key: 'EhhdyQpK8pcM75EKQgpu31okQpYAby57CPnPRA7CsWLS', role: 'Full' },
       { key: 'ExAHc3u2KHopmziWyyULWobZ2EAgymEmqQR5fo5T8baM', role: 'Full' },
     ],
-    governanceRolesNote: 'GMSOL splits control across two multisigs, both read on-chain: a core operations multisig and a separate deployment multisig with no signer overlap.',
-    governanceRoles: [
-      { role: 'Core operations', scope: 'Core operations and on-chain parameters', threshold: '4/7', timelock: '10min', address: 'CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1', status: 'verified', roleSeparation: false },
-      { role: 'Deployment', scope: 'Program deployments (6 programs)', threshold: '2/3', timelock: '1h', address: 'F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A', status: 'verified', roleSeparation: false },
-    ],
     sharedAuthority: false,
     programs: [
       { name: 'Core', id: 'Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo', authority: '6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA' },
@@ -2392,9 +2387,9 @@ insuranceFund: {
       { name: '12cJK', id: '12cJKgP9r2bcaruqu3XsCS1hxLqsHrmZhqG5Qy2TWRap', authority: '6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA' },
     ],
     publicDocs: {
-      other: 'GMX V2 fork on Solana (formerly GMXSOL, rebranded GMTrade Nov 2025). A leading Solana perp DEX (reached #1 by 24h volume in 2026). Two multisigs: 4/7 core (10min timelock) + 2/3 deployment (1h timelock). 10 distinct signer keys, no overlap. GMX DAO approved. 8 audits (Sherlock, Zenith/Code4rena) Dec 2024 to May 2026. Verified build.',
+      other: 'GMX V2 fork on Solana (formerly GMXSOL, rebranded GMTrade Nov 2025). A leading Solana perp DEX (reached #1 by 24h volume in 2026). One 4/7 Squads multisig with a 10min timelock; its vault holds upgrade authority for all six programs listed. GMX DAO approved. 8 audits (Sherlock, Zenith/Code4rena) Dec 2024 to May 2026. Verified build.',
       source: 'https://docs.gmsol.io/',
-      updatedAt: '2026-06-26',
+      updatedAt: '2026-09-16',
     },
     verifiedBuild: true,
     configAuthority: 'autonomous',

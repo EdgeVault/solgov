@@ -126,7 +126,6 @@ const PROTOCOLS: ProtocolDef[] = [
   { name: 'Ore', ms: 'CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo', type: 'v4', tier: 1, active: 2,
     programs: [{ name: 'Ore V3', id: 'oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv', expectedAuth: 'J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV' }] },
 
-  { name: 'GMSOL Deploy', ms: 'F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A', type: 'v4', tier: 2, active: 3 },
 
   // Secondary governance multisigs surfaced by the dashboard role breakdowns. Each controls a
   // distinct set of programs alongside the protocol's primary multisig. Monitored for config drift.

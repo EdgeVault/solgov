@@ -56,7 +56,6 @@ const WATCH_LIST: { name: string; address: string; type: 'v4' | 'v3' | 'serum' |
   { name: 'SolvBTC', address: 'HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE', type: 'v4' },
   { name: 'GMSOL', address: 'CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1', type: 'v4' },
   { name: 'Ore', address: 'CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo', type: 'v4' },
-  { name: 'GMSOL Deploy', address: 'F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A', type: 'v4' },
   { name: 'Carrot', address: 'BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon', type: 'v4' },
   { name: 'DefiTuna', address: '7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv', type: 'v4' },
 

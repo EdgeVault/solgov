@@ -890,36 +890,6 @@
     "programId": "STkEAu2cEyQp5ktgUauRVq8es6mEP2w6ixw4NEd5tDJ"
   },
   {
-    "protocol": "GMSOL Deploy",
-    "programName": "Deploy 1",
-    "programId": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH"
-  },
-  {
-    "protocol": "GMSOL Deploy",
-    "programName": "Deploy 2",
-    "programId": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj"
-  },
-  {
-    "protocol": "GMSOL Deploy",
-    "programName": "Deploy 3",
-    "programId": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2"
-  },
-  {
-    "protocol": "GMSOL Deploy",
-    "programName": "Deploy 4",
-    "programId": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR"
-  },
-  {
-    "protocol": "GMSOL Deploy",
-    "programName": "Deploy 5",
-    "programId": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ"
-  },
-  {
-    "protocol": "GMSOL Deploy",
-    "programName": "Deploy 6",
-    "programId": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd"
-  },
-  {
     "protocol": "Carrot",
     "programName": "Carrot",
     "programId": "CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s"

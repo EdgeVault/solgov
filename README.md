@@ -20,12 +20,18 @@ solgov is the governance transparency layer for Solana DeFi. Continuous reads ac
 
 - Live API: [api.solgov.xyz/api/state](https://api.solgov.xyz/api/state) returns the current governance state for every tracked protocol. JSON, no auth.
 - API docs (OpenAPI 3.1): [solgov.xyz/api-docs.html](https://solgov.xyz/api-docs.html)
+- Also on the API, no auth: `/api/stride` (governance controls per protocol, mapped to the STRIDE framework), `/api/changelog/{protocol}` and `/api/cadence` (observed governance and upgrade history), `/api/badge/{protocol}.json` (shields.io endpoint badge), `/api/feed.xml` (RSS of confirmed governance changes), `/api/health` (per-surface freshness)
 - Source of truth for protocol entries: [`public-dashboard/src/data/protocols.ts`](public-dashboard/src/data/protocols.ts)
 
 Every claim in the dashboard traces to an on-chain RPC read or a named source URL. Open the API endpoint in any browser to confirm.
 
 ## Latest
 
+- Sep 2026: queued Squads proposals surfaced per protocol before execution, with approvals, threshold and timelock read on-chain
+- Sep 2026: verified-build status read live from the on-chain verification PDA and verify.osec.io, replacing the static flag where it is superseded
+- Sep 2026: token and program transparency block added (security.txt, program metadata, Token-2022 extensions), plus STRIDE control mapping, changelog, cadence, badge and RSS endpoints
+- Sep 2026: `solgov-mcp` (Model Context Protocol server) and `solgov-check` (GitHub Action) added so agents and CI can query the same data
+- Sep 2026: unit tests added for the pure scanner helpers (`npm test` in `sentinel/`)
 - Jun 2026: external review by Soladex, with a "Reviewed by Soladex" badge added to the dashboard
 - Jun 2026: split view added for protocols running more than one governance multisig, showing each multisig's programs, threshold, timelock, and a per-multisig Squads benchmark, with the activity feed now labelling which multisig each change hit
 - Jun 2026: token custody view added for protocols with a native token, showing top holders, custody classification, mint and freeze authority status, and wallets sharing a first funder
@@ -47,6 +53,8 @@ Every claim in the dashboard traces to an on-chain RPC read or a named source UR
 ```
 public-dashboard/   React + Vite, deployed to Vercel
 sentinel/           Scanner, listener, monitor cron, API, Telegram bot (VPS)
+solgov-mcp/         Model Context Protocol server exposing the public API as tools
+solgov-check/       GitHub Action that checks a protocol's governance state in CI
 ```
 
 ### Architecture
@@ -190,17 +198,22 @@ cp .env.example .env   # fill in HELIUS_API_KEY, HELIUS_RPC_URL, TELEGRAM_BOT_TO
 
 Run a config scan:
 ```bash
-npx tsx src/solgov-monitor.ts config
+npm run monitor -- config
 ```
 
 Run the listener:
 ```bash
-npx tsx src/solgov-listener.ts
+npm run listener
 ```
 
 Run the API:
 ```bash
-npx tsx src/solgov-api.ts
+npm run api
+```
+
+Run the unit tests (pure helpers under `src/utils/`, no network):
+```bash
+npm test
 ```
 
 The Telegram bot, listener, monitor, and API all run as `pm2` daemons in production.
@@ -220,8 +233,8 @@ Nothing scraped. Anything not from on-chain reads is credited at the source.
 
 ## Status
 
-- 50+ protocols tracked across 63 multisigs (Squads V4, V3, Serum, mean-multisig)
-- 190 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
+- 50+ protocols tracked across 61 multisigs (Squads V4, V3, Serum, mean-multisig)
+- 184 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
 - Durable nonce detection, Token-2022 extension flags, and 1-of-N signer setups all surfaced
 - Public good: open source under MIT, free dashboard, free API with no auth, no token
 - Engagement: ecosystem leaders and protocol teams have reached out privately. See [`disclosures.md`](disclosures.md).

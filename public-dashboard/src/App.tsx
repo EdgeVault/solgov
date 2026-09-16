@@ -2793,7 +2793,7 @@ function BlastRadiusView({ llama, liveProtocols, independence }: { llama: DefiLl
                 </table>
               </div>
 
-              <h5 className="text-[11px] text-white font-medium mt-3 mb-1">Recovery Multisig (E44y4 - April 2 to present)</h5>
+              <h5 className="text-[11px] text-white font-medium mt-3 mb-1">Recovery Multisig (E44y4 - April 2 to June 26 2026)</h5>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-3 text-[11px]">
                 <div className="bg-white/[0.03] rounded p-2">
                   <p className="text-gray-500">Governance</p>
@@ -2812,8 +2812,12 @@ function BlastRadiusView({ llama, liveProtocols, independence }: { llama: DefiLl
                   <p className="text-gray-300">13 transfers across 55 multisig transactions, around $16.07M USDC moved as part of recovery</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2 md:col-span-2">
-                  <p className="text-gray-500">External configAuthority (still active)</p>
-                  <p className="text-gray-300">The same configAuthority key is still set on the recovery multisig. It can still change the threshold, members, or timelock on this multisig without going through the multisig approval process.</p>
+                  <p className="text-gray-500">External configAuthority (still set)</p>
+                  <p className="text-gray-300">The same configAuthority key is still set on the recovery multisig. It can still change the threshold, members, or timelock on this multisig without going through the multisig approval process. Since June 26 2026 this multisig holds upgrade authority over no program.</p>
+                </div>
+                <div className="bg-white/[0.03] rounded p-2 md:col-span-3">
+                  <p className="text-gray-500">Program authority since June 26 2026</p>
+                  <p className="text-gray-300">Upgrade authority for Drift Protocol V2 moved to a new 4/7 multisig (7qipz...) with a 1h timelock, no external configAuthority and a signer set that shares no key with the exploited or recovery multisigs. The recovery multisig executed the handover.</p>
                 </div>
               </div>
 

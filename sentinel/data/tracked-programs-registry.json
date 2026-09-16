@@ -130,36 +130,6 @@
     "programId": "PCKjSaQaZb3AcmjTcb2fcLanh9Mky9ZvuaKqTBxsqWE"
   },
   {
-    "protocol": "Loopscale",
-    "programName": "Loopscale Core (jg82)",
-    "programId": "jg82rRko6Hu1KqZ47RR95Jrq1cfqBhaAPXStseajmfQ"
-  },
-  {
-    "protocol": "Loopscale",
-    "programName": "HAiowc",
-    "programId": "HAiowc2WWGp3VwVjpAtiduLCwWQmQqVPQgLbn5jurM8o"
-  },
-  {
-    "protocol": "Loopscale",
-    "programName": "HaioYY",
-    "programId": "HaioYYCZuXWxiHjFG9i8MnzAH6dFdgh1E1eCGjTwWzb"
-  },
-  {
-    "protocol": "Loopscale",
-    "programName": "haio6i",
-    "programId": "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF"
-  },
-  {
-    "protocol": "Loopscale",
-    "programName": "HaiooU",
-    "programId": "HaiooUZ4qzSEi2sn1qbwH8mKVXgnwY8oyziUStJDcb6Z"
-  },
-  {
-    "protocol": "Loopscale",
-    "programName": "Haio3o",
-    "programId": "Haio3oNYt8MtL9traoQNJ9RXK1XEVaQBBrZZKXt2VXjz"
-  },
-  {
     "protocol": "Exponent",
     "programName": "Core",
     "programId": "ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7"
@@ -243,11 +213,6 @@
     "protocol": "Stabble",
     "programName": "Stable Swap",
     "programId": "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ"
-  },
-  {
-    "protocol": "Flash Trade",
-    "programName": "Flash Trade Aux (6U1gV)",
-    "programId": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE"
   },
   {
     "protocol": "Sanctum",
@@ -908,5 +873,30 @@
     "protocol": "DefiTuna",
     "programName": "DefiTuna",
     "programId": "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD"
+  },
+  {
+    "protocol": "Drift",
+    "programName": "Velocity",
+    "programId": "vELoC1audYbSYVRXn1vPaV8Axoa9oU6BYmNGZZBDZ1P"
+  },
+  {
+    "protocol": "Loopscale",
+    "programName": "Loopscale",
+    "programId": "1oopBoJG58DgkUVKkEzKgyG9dvRmpgeEm1AVjoHkF78"
+  },
+  {
+    "protocol": "Loopscale",
+    "programName": "Beam",
+    "programId": "beamVVkNmKeXcuZ6zLpC9eM5YgVyAn4Z9xdPrz3gCW2"
+  },
+  {
+    "protocol": "Voltr",
+    "programName": "Vault (vVoLTR)",
+    "programId": "vVoLTRjQmtFpiYoegx285Ze4gsLJ8ZxgFKVcuvmG1a8"
+  },
+  {
+    "protocol": "Flash Trade",
+    "programName": "Perpetuals",
+    "programId": "FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn"
   }
 ]

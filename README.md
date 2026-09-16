@@ -135,7 +135,7 @@ The rules above are the surface. Underneath, the system is built to handle the p
 
 ### Detection beyond multisig configuration
 - **Cross-program upgrade authority concentration**: `getProgramAccounts(BPFLoaderUpgradeab1e)` with memcmp filter to find every program controlled by a given vault PDA. Live finding: Helium vault 2 controls 24 programs; Drift's BBC5g held upgrade authority for 7 Drift programs at exploit time (now 6, after Drift Protocol V2 was moved to a recovery vault on April 2).
-- **Signer independence**: ratio of unique signers to total signer slots across a team's multisigs. Jupiter has zero signer overlap across Perps, Lend, and Agg. Drift pre-exploit had five signers shared across 2LW6PS and BBC5g.
+- **Signer independence**: ratio of unique signers to total signer slots across a team's multisigs. Jupiter ran Perps, Lend and Agg with no shared signers until a 2026 rotation put one key on both the Perps and Lend multisigs; the live score reflects that. Drift pre-exploit had five signers shared across 2LW6PS and BBC5g.
 
 ![Signer Independence: Drift pre-exploit case study showing 0% separation, two multisigs with 100% shared signer set](docs/signer-independence.png)
 - **Cross-protocol signer-funder registry**: when a new-funder anomaly fires at protocol A, the funder is recorded. Repeat hits at protocol B upgrade severity to "cross-protocol repeat offender". A network-effect defence where one protocol's detection protects every other tracked protocol.
@@ -233,8 +233,8 @@ Nothing scraped. Anything not from on-chain reads is credited at the source.
 
 ## Status
 
-- 50+ protocols tracked across 61 multisigs (Squads V4, V3, Serum, mean-multisig)
-- 184 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
+- 50+ protocols tracked across 63 multisigs (Squads V4, V3, Serum, mean-multisig)
+- 182 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
 - Durable nonce detection, Token-2022 extension flags, and 1-of-N signer setups all surfaced
 - Public good: open source under MIT, free dashboard, free API with no auth, no token
 - Engagement: ecosystem leaders and protocol teams have reached out privately. See [`disclosures.md`](disclosures.md).

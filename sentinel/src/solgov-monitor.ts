@@ -41,7 +41,8 @@ interface ProtocolDef {
 const PROTOCOLS: ProtocolDef[] = [
   { name: 'Drift', ms: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', type: 'v4', tier: 1, active: 5,
     programs: [
-      { name: 'Protocol V2', id: 'dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH', expectedAuth: 'GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo' },
+      { name: 'Protocol V2', id: 'dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH', expectedAuth: '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai' },
+      { name: 'Velocity', id: 'vELoC1audYbSYVRXn1vPaV8Axoa9oU6BYmNGZZBDZ1P', expectedAuth: '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai' },
       { name: 'Vaults', id: 'vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR', expectedAuth: 'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9' },
       { name: 'JIT Proxy', id: 'J1TnP8zvVxbtF5KFp5xRmWuvG9McnhzmBd9XGfCyuxFP', expectedAuth: 'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9' },
       { name: 'Oracle Receiver', id: 'G6EoTTTgpkNBtVXo96EQp2m6uwwVh2Kt6YidjkmQqoha', expectedAuth: 'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9' },
@@ -63,7 +64,12 @@ const PROTOCOLS: ProtocolDef[] = [
   { name: 'Stabble', ms: 'AFRN2ECAY1YTbfkXD7yvoc1iaxYdt5BdyyqyPRsrHaK2', type: 'v4', tier: 1, active: 3,
     programs: [{ name: 'Stable Swap', id: 'swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ', expectedAuth: '9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP' }] },
   { name: 'Hylo', ms: '2z3t2eBz7VL39Q3vEvaemd5mhT9XLoFofEH2cXvwCJvb', type: 'v4', tier: 1, active: 4 },
-  { name: 'Loopscale', ms: 'C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk', type: 'v4', tier: 1, active: 5 },
+  { name: 'Drift (program upgrade)', ms: '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM', type: 'v4', tier: 1, active: 6 },
+  { name: 'Loopscale', ms: 'C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk', type: 'v4', tier: 1, active: 7,
+    programs: [
+      { name: 'Loopscale', id: '1oopBoJG58DgkUVKkEzKgyG9dvRmpgeEm1AVjoHkF78', expectedAuth: 'DwBXwJDZ4Av4miT62sEssWJUinkzwkmPPB4Fg3fKEfft' },
+      { name: 'Beam', id: 'beamVVkNmKeXcuZ6zLpC9eM5YgVyAn4Z9xdPrz3gCW2', expectedAuth: 'DwBXwJDZ4Av4miT62sEssWJUinkzwkmPPB4Fg3fKEfft' },
+    ] },
 
   { name: 'Orca', ms: 'BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF', type: 'v4', tier: 2, active: 6 },
   { name: 'Project 0', ms: '7FCPipJWVbPbdHymVt1gJYwKciakkJz5GahdQySemvHk', type: 'v4', tier: 2, active: 13 },
@@ -75,12 +81,13 @@ const PROTOCOLS: ProtocolDef[] = [
   { name: 'Switchboard', ms: '93RQfY6VHRkqXBCEhMY5u92bCGp428DTzqZUEA2Hjr9h', type: 'v4', tier: 2, active: 7 },
   { name: 'Titan', ms: 'F1WZezmt2J1dSsXrQWrS2Umn9CYzPPR2eP3sunZrMX29', type: 'v4', tier: 2, active: 6 },
   { name: 'Solayer', ms: '5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp', type: 'v4', tier: 2, active: 6 },
-  { name: 'Flash Trade', ms: 'Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF', type: 'v4', tier: 2, active: 7 },
+  { name: 'Flash Trade', ms: 'Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF', type: 'v4', tier: 2, active: 7,
+    programs: [{ name: 'Perpetuals', id: 'FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn', expectedAuth: 'dhfZwJfdesv7fNW3nngCSjeGbx9zWUusLtfPaWbVKvo' }] },
   { name: 'Wick', ms: '8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA', type: 'v4', tier: 2, active: 5 },
 
-  { name: 'Onre Finance', ms: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4', tier: 2, active: 7,
+  { name: 'Onre Finance', ms: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4', tier: 2, active: 7, programs: [] },
+  { name: 'Onre Finance (program upgrade)', ms: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4', tier: 2, active: 7,
     programs: [{ name: 'Core', id: 'onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe', expectedAuth: 'FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f' }] },
-  { name: 'Onre Finance (secondary)', ms: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4', tier: 2, active: 6, programs: [] },
   { name: 'MetaDAO', ms: '8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH', type: 'v4', tier: 2, active: 5,
     programs: [
       { name: 'Futarchy', id: 'FUTARELBfJfQ8RDGhg1wdhddq1odMAJUePHFuBYfUxKq', expectedAuth: '6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf' },
@@ -89,8 +96,12 @@ const PROTOCOLS: ProtocolDef[] = [
     ] },
   { name: 'Helium', ms: 'FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1', type: 'v4', tier: 2, active: 5,
     programs: [{ name: 'Entity Manager', id: 'hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8', expectedAuth: 'pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U' }] },
-  { name: 'Voltr', ms: '5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH', type: 'v4', tier: 1, active: 3,
-    programs: [{ name: 'Vaults', id: 'aVoLTRCRt3NnnchvLYH6rMYehJHwM5m45RmLBZq7PGz', expectedAuth: '7p4d84NuXbuDhaAq9H3Yp3vpBSDLQWousp1a4jBVoBgU' }] },
+  { name: 'Voltr', ms: '7szuzpoZzah95BsAu2LQm3bpor5ofiAV4HuinyfFEdse', type: 'v4', tier: 1, active: 5,
+    programs: [
+      { name: 'Vaults', id: 'aVoLTRCRt3NnnchvLYH6rMYehJHwM5m45RmLBZq7PGz', expectedAuth: 'G2FCNGgQQ7MYyJvkXw1du86YGR6vXXejuQG9LsjX1kEs' },
+      { name: 'Vault (vVoLTR)', id: 'vVoLTRjQmtFpiYoegx285Ze4gsLJ8ZxgFKVcuvmG1a8', expectedAuth: 'G2FCNGgQQ7MYyJvkXw1du86YGR6vXXejuQG9LsjX1kEs' },
+    ] },
+  { name: 'Voltr (former 3/5)', ms: '5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH', type: 'v4', tier: 2, active: 5 },
   { name: 'Tessera V', ms: '3JW5VWy76TBT5NBbdyrWU6i3fz8XecDko7viGeFSKw7e', type: 'v4', tier: 2, active: 7,
     programs: [{ name: 'AMM', id: 'TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH', expectedAuth: '7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK' }] },
 
@@ -100,9 +111,9 @@ const PROTOCOLS: ProtocolDef[] = [
       { name: 'Settings', id: 'DeSetTwWhjZq6Pz9Kfdo1KoS5NqtsM6G8ERbX4SSCSft', expectedAuth: 'BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x' },
     ] },
   { name: 'BisonFi', ms: '', type: 'other', tier: 1, active: 1,
-    programs: [{ name: 'AMM', id: 'BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi', expectedAuth: 'UfSM2ZFRMeurGs1gqrMREjZDyzPweUY9Wt67BMVeo8j' }] },
+    programs: [{ name: 'AMM', id: 'BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi', expectedAuth: '6dDjBZdpafRKe7WuVHYTF1HphW1BWiKqioMD5eBGYipS' }] },
   { name: 'HumidiFi', ms: '', type: 'other', tier: 1, active: 1,
-    programs: [{ name: 'AMM', id: '9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp', expectedAuth: '4p1FfVusdT83PxejTPLEz6ZQ4keN9LVEkKhzSt6PJ5zw' }] },
+    programs: [{ name: 'AMM', id: '9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp', expectedAuth: 'FMP7rvAsrs69YKBsaqgbB5mpnWrimNM8LNDfHLEzngLA' }] },
   { name: 'Photon', ms: '', type: 'other', tier: 1, active: 1,
     programs: [{ name: 'Trading Bot', id: 'BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW', expectedAuth: '9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6' }] },
 
@@ -155,8 +166,10 @@ const PROTOCOLS: ProtocolDef[] = [
     programs: [
       { name: 'Vault', id: 'Vau1t6sLNxnzB7ZDsef8TLbPLfyZMYXH8WTNqUdm9g8', expectedAuth: '5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF' },
       { name: 'Restaking', id: 'RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q', expectedAuth: '5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF' },
-      { name: 'Steward', id: 'Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8', expectedAuth: '5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF' },
+      { name: 'Steward', id: 'Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8', expectedAuth: '8EP3VommYzMRSdnSn88GnQpxjRwxg6nroTeUNJoqu9b8' },
+      { name: 'Validator History', id: 'HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa', expectedAuth: '8EP3VommYzMRSdnSn88GnQpxjRwxg6nroTeUNJoqu9b8' },
     ] },
+  { name: 'Jito (program upgrade)', ms: 'AJVQRHk9rg25HzE2TompdcjfvQGuZdytPXhU1SgxUxBa', type: 'v4', tier: 2, active: 7 },
 
   { name: 'Phoenix Eternal', ms: 'Eq2cke33VYoMpunvbMdeCi44PLX7RLzttgFibvvUjvpc', type: 'v4', tier: 1, active: 6,
     programs: [{ name: 'Phoenix Perpetuals', id: 'EtrnLzgbS7nMMy5fbD42kXiUzGg8XQzJ972Xtk1cjWih', expectedAuth: 'GPgADQrhzGoUgLqxsZMKvSpwcLaJFVTq6gEixKhmcwpm' }] },

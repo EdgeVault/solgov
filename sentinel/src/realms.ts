@@ -11,6 +11,7 @@ import { Connection, PublicKey } from '@solana/web3.js';
 import bs58 from 'bs58';
 import * as fs from 'fs';
 import * as path from 'path';
+import { decodeSetGovernanceConfig, isSetRealmAuthority } from './utils/spl-governance-ix';
 import { appendActivity } from './activity-log';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -262,18 +263,15 @@ export async function analyzeProposalInstructions(conn: Connection, proposal: st
       } else if (prog === BPF && ixData.length >= 4 && ixData.readUInt32LE(0) === 4) {
         movesTreasury = true; largeMove = true;
         moves.push('program authority change');
-      } else if (prog === REALMS && ixData.length >= 2 && ixData[0] === 19) {
-        // SetGovernanceConfig (instruction 19). Layout after the tag mirrors GovernanceConfig:
-        // community VoteThreshold (kind u8, then a percentage byte unless kind is Disabled = 2),
-        // min_community_weight_to_create_proposal u64, min_transaction_hold_up_time u32, ...
+      } else if (prog === REALMS && decodeSetGovernanceConfig(ixData)) {
+        // SetGovernanceConfig: the proposal rewrites the governance's own rules. Decoded in
+        // utils/spl-governance-ix (layout verified against the program source).
+        const cfg = decodeSetGovernanceConfig(ixData)!;
         proposesConfigChange = true;
-        let q = 1;
-        const kind = ixData[q++];
-        proposedVoteThresholdPct = kind === 2 ? null : (q < ixData.length ? ixData[q++] : null);
-        q += 8;
-        if (q + 4 <= ixData.length) proposedHoldUpSec = ixData.readUInt32LE(q);
-      } else if (prog === REALMS && ixData.length >= 1 && ixData[0] === 21) {
-        // SetRealmAuthority (instruction 21): moves control of the realm itself.
+        proposedVoteThresholdPct = cfg.voteThresholdPct;
+        proposedHoldUpSec = cfg.holdUpTimeSec;
+      } else if (prog === REALMS && isSetRealmAuthority(ixData)) {
+        // SetRealmAuthority: moves control of the realm itself.
         proposesRealmAuthorityChange = true;
       }
     }

@@ -8,6 +8,7 @@ import { Connection, PublicKey } from '@solana/web3.js';
 import * as multisig from '@sqds/multisig';
 import { loadSignerWhitelists, detectNewFunders, persistNewFunder, findProtocolsForSigner } from './signer-funder-detection';
 import { nameMatches } from './llm-tools';
+import { dedupeUpgradesByFamily, cadenceFromKeys } from './utils/upgrade-events';
 import { createSubscription, getSubscription as getWebhookSub, deleteSubscription as deleteWebhookSub, publicView, type Severity as WebhookSeverity } from './webhook-registry';
 import { startYieldbayPoller, getCachedIncidents, getCachedSummary } from './fetch-yieldbay-health';
 import { listTracked, addTracked, verifySquadsMultisig, MAX_TRACKED } from './user-tracked-multisigs';
@@ -1617,34 +1618,12 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(200);
     res.end(JSON.stringify({ protocol: rawName, count: events.length, events }));
   } else if (url.pathname === '/api/cadence' && req.method === 'GET') {
-    // Upgrade cadence per protocol from confirmed ProgramUpgrade events. One upgrade is reported twice
-    // (listener in real time, monitor digest later), so events collapse onto the hour the upgrade
-    // happened before counting; the digest carries that time in its text, the listener's timestamp is it.
-    const family = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
-    const hourKey = (e: any): string | null => {
-      const m = /upgraded:\s*(\d{4}-\d{2}-\d{2})\s+(\d{2}):(\d{2})\s*(BST|GMT)/i.exec(e.detail || '');
-      if (m) return new Date(Date.parse(`${m[1]}T${m[2]}:${m[3]}:00Z`) - (m[4].toUpperCase() === 'BST' ? 3600000 : 0)).toISOString().slice(0, 13);
-      const ts = e.timestamp || e.date; return ts ? new Date(ts).toISOString().slice(0, 13) : null;
-    };
-    const byFamily: Record<string, Set<string>> = {};
-    for (const e of readActivityLog()) {
-      if (!e || e.type !== 'ProgramUpgrade' || !e.protocol || e.protocol === 'Unknown') continue;
-      const k = hourKey(e); if (!k) continue;
-      (byFamily[family(e.protocol)] ||= new Set()).add(k);
-    }
-    const cutoff30 = Date.now() - 30 * 86400000;
+    // Upgrade cadence per protocol from confirmed ProgramUpgrade events. The same upgrade is reported
+    // by the listener and by the monitor digest; utils/upgrade-events collapses both onto the hour it
+    // happened before counting.
+    const byFamily = dedupeUpgradesByFamily(readActivityLog() as any[]);
     const out: Record<string, any> = {};
-    for (const [name, keys] of Object.entries(byFamily)) {
-      const times = Array.from(keys).map(k => Date.parse(`${k}:00:00Z`)).sort((a, b) => a - b);
-      const gaps = times.slice(1).map((t, i) => t - times[i]);
-      out[name] = {
-        observed: times.length,
-        firstAt: new Date(times[0]).toISOString(),
-        lastAt: new Date(times[times.length - 1]).toISOString(),
-        last30d: times.filter(t => t >= cutoff30).length,
-        meanIntervalDays: gaps.length ? Math.round((gaps.reduce((a, b) => a + b, 0) / gaps.length) / 86400000 * 10) / 10 : null,
-      };
-    }
+    for (const [name, keys] of byFamily) out[name] = cadenceFromKeys(keys);
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 'public, s-maxage=300');

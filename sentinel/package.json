@@ -14,7 +14,8 @@
     "triage": "ts-node src/llm-triage.ts",
     "govscan": "ts-node src/incremental-scan.ts",
     "build": "tsc",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --require ts-node/register/transpile-only \"test/**/*.test.ts\""
   },
   "keywords": [
     "solana",

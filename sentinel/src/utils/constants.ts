@@ -48,9 +48,15 @@ export const BPF_UPGRADEABLE_LOADER = new PublicKey(
   'BPFLoaderUpgradeab1e11111111111111111111111'
 );
 
-// Ellipsis Labs Verified Build Program
+// Solana verified-builds (otter-verify) program. The previous value here
+// ('veriCDEvUwJjBcumw3FUDPkHB8NUqoakxGhRbiJhTwj') does not exist on-chain, so every
+// checkVerifiedBuild() call resolved against a dead program and returned false.
+// Note the record PDA is derived from ['otter_verify', signer, programId], not from the
+// program id alone, so scanner/verifiedBuild.ts still needs its seed derivation corrected
+// before its result can be trusted. Until then, treat verifiedBuild flags in the dashboard
+// data as manually researched rather than scanner-derived.
 export const VERIFY_PROGRAM = new PublicKey(
-  'veriCDEvUwJjBcumw3FUDPkHB8NUqoakxGhRbiJhTwj'
+  'verifycLy8mB96wd9wqq3WDXQwM4oU6r42Th37Db9fC'
 );
 
 // Known governance program ID → name mapping

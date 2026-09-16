@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-04-17T14:39:55.789Z",
+  "computedAt": "2026-09-16T13:30:29.050Z",
   "groups": [
     {
       "team": "Jupiter",
@@ -9,41 +9,41 @@
         {
           "label": "Jupiter Perps",
           "address": null,
-          "memberCount": 7
+          "memberCount": 8
         },
         {
           "label": "Jupiter Lend",
           "address": null,
-          "memberCount": 7
+          "memberCount": 6
         },
         {
           "label": "Jupiter Agg",
           "address": null,
-          "memberCount": 8
+          "memberCount": 7
         }
       ],
-      "independenceScore": 1,
-      "independencePct": 100,
-      "totalSignerPositions": 22,
-      "uniqueSigners": 22,
+      "independenceScore": 0.5333333333333333,
+      "independencePct": 53,
+      "totalSignerPositions": 21,
+      "uniqueSigners": 14,
       "pairwiseOverlap": [
         {
           "a": "Jupiter Perps",
           "b": "Jupiter Lend",
-          "shared": 0,
-          "sharedPctOfMinSet": 0
+          "shared": 1,
+          "sharedPctOfMinSet": 17
         },
         {
           "a": "Jupiter Perps",
           "b": "Jupiter Agg",
-          "shared": 0,
-          "sharedPctOfMinSet": 0
+          "shared": 6,
+          "sharedPctOfMinSet": 86
         },
         {
           "a": "Jupiter Lend",
           "b": "Jupiter Agg",
-          "shared": 0,
-          "sharedPctOfMinSet": 0
+          "shared": 1,
+          "sharedPctOfMinSet": 17
         }
       ]
     },

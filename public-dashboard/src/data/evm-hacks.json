@@ -606,6 +606,17 @@
       "recoveryNote": "Cronos validators halted the chain and restored state to before the attack, discarding roughly 11,000 blocks and returning about $69M to depositors; approximately $6M had already been bridged out as ETH",
       "affectedProtocols": [],
       "link": "https://www.bleepingcomputer.com/news/security/cronos-blockchain-restarts-after-74-million-tectonic-exploit/"
+    },
+    {
+      "date": "2026-05-18",
+      "protocol": "Verus-Ethereum Bridge",
+      "amountUsd": 11580000,
+      "category": "contract",
+      "rootCause": "A validation flaw let the Ethereum-side bridge release assets against a forged cross-chain import whose proof passed verification despite no matching export; 1,625 ETH, 103.6 tBTC and 147,000 USDC were drained and swapped into roughly 5,402 ETH",
+      "recovered": "partial",
+      "recoveryNote": "Most of the May proceeds were returned after negotiation. The same bridge was exploited a second time in July, taking the combined total across both incidents to about $19.14M",
+      "affectedProtocols": [],
+      "link": "https://crypto.news/defi-hacks-2026-billion-lost-same-attack-keeps-working/"
     }
   ]
 }

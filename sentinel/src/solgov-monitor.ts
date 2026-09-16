@@ -313,7 +313,7 @@ async function scanSignerThreats(conn: Connection, member: string): Promise<Thre
 
       let tx;
       try {
-        tx = await conn.getParsedTransaction(sig.signature, { maxSupportedTransactionVersion: 0 });
+        tx = await conn.getParsedTransaction(sig.signature, { maxSupportedTransactionVersion: 1 });
       } catch { continue; }
       if (!tx?.transaction?.message) continue;
 
@@ -527,7 +527,7 @@ async function countPendingProposals(conn: Connection, msAddress: string): Promi
           body: JSON.stringify({
             jsonrpc: '2.0', id: 1,
             method: 'getTransaction',
-            params: [sig.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }],
+            params: [sig.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 1 }],
           }),
         });
         const txData = await txResp.json() as any;
@@ -974,7 +974,7 @@ async function main() {
                     body: JSON.stringify({
                       jsonrpc: '2.0', id: 1,
                       method: 'getTransaction',
-                      params: [sig.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }],
+                      params: [sig.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 1 }],
                     }),
                   });
                   const txData = await txResp.json() as any;

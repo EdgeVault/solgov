@@ -370,7 +370,7 @@ export async function getProposalDetail(conn: Connection, proposal: string): Pro
   }
   const oldest = sigs[sigs.length - 1];
   const createdAt = oldest.blockTime || 0;
-  const tx = await conn.getParsedTransaction(oldest.signature, { maxSupportedTransactionVersion: 0 });
+  const tx = await conn.getParsedTransaction(oldest.signature, { maxSupportedTransactionVersion: 1 });
   const ixs: any[] = [...(tx?.transaction.message.instructions || []), ...((tx?.meta?.innerInstructions || []).flatMap((i) => i.instructions))];
   for (const ix of ixs) {
     const pid = ix.programId?.toBase58?.() || ix.programId;

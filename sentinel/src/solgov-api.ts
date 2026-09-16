@@ -111,7 +111,6 @@ const ADDRESS_TO_PROTOCOL: Record<string, string> = {
   '7PMRcwPChXuwKA5Z5znNf6avJgW454gGGboV1Yt1xGgq': 'Raydium (program admin V3)',
   '3Eun8CdkJsd5WZC7NdNLUPQCx86cXKtwAK6EFLuWsn5w': 'Meteora (program admin V3)',
   'BRwx9yUrdP9aZMxJGgarLCKcNr3iCn7yj1nDAy4jfUUk': 'Parcl (governance V3)',
-  'D1LUJooB3ywFDqKwkha5Saqy2u7bnCDvu3rKQReByBZT': 'Magic Eden (program admin)',
 };
 
 const PROGRAM_ID_TO_NAME: Record<string, string> = {

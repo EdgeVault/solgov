@@ -28,6 +28,7 @@
   "dependencies": {
     "@coral-xyz/anchor": "^0.30.0",
     "@huma-finance/permissionless-sdk": "^1.0.23",
+    "@solana/spl-token": "^0.3.11",
     "@solana/web3.js": "^1.91.0",
     "@sqds/multisig": "^2.1.0",
     "@sqds/sdk": "^2.0.4",

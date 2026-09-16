@@ -175,14 +175,52 @@ export function useLiveData(staticProtocols: Protocol[]): {
     protocol: NAME_MAP[e.protocol] || e.protocol,
   }));
 
-  const latestUpgradeByMonitorName: Record<string, string> = {};
+  // Resolve an activity-log label to a dashboard protocol. Upgrade events arrive either as the plain
+  // protocol ("Ore") or with the specific program appended ("Raydium (LaunchLab)"). Match the full
+  // label first, because one tracked protocol is genuinely named "Save (Solend)", and only then strip
+  // the trailing parenthetical to reach the family. The strip is greedy because labels can nest,
+  // for example "Helium (Top (topqq))" and "Parcl (Parcl Perps Aux (3parc))".
+  const knownNames = new Set(staticProtocols.map(p => p.name));
+  const resolveProtocolName = (label: string): string | null => {
+    const direct = NAME_MAP[label] || label;
+    if (knownNames.has(direct)) return direct;
+    const family = label.replace(/\s*\(.*\)\s*$/, '').trim();
+    const mapped = NAME_MAP[family] || family;
+    return knownNames.has(mapped) ? mapped : null;
+  };
+
+  // One upgrade is reported twice: in real time by the listener ("Program 6EF8... upgraded at 10:00
+  // UTC") and again in the monitor digest ("Bonding Curve upgraded: 2026-09-15 11:34 BST"), and the
+  // digest can repeat across runs. Both are collapsed onto the hour the upgrade actually happened.
+  // The digest carries that time in its text; for a listener event the event timestamp is the time.
+  const upgradeHourKey = (e: ActivityEvent): string | null => {
+    const m = /upgraded:\s*(\d{4}-\d{2}-\d{2})\s+(\d{2}):(\d{2})\s*(BST|GMT)/i.exec(e.detail || '');
+    if (m) {
+      const utcMs = Date.parse(`${m[1]}T${m[2]}:${m[3]}:00Z`) - (m[4].toUpperCase() === 'BST' ? 3600000 : 0);
+      return new Date(utcMs).toISOString().slice(0, 13);
+    }
+    const ts = e.timestamp || e.date;
+    return ts ? new Date(ts).toISOString().slice(0, 13) : null;
+  };
+
+  const upgradeCutoffMs = Date.now() - 30 * 24 * 60 * 60 * 1000;
+  const latestUpgradeByProtocol: Record<string, string> = {};
+  const upgradeKeysByProtocol: Record<string, Set<string>> = {};
+
   for (const e of liveActivityRaw) {
     if (e.type !== 'ProgramUpgrade' || !e.protocol) continue;
-    const ts = e.timestamp || e.date;
-    if (!ts) continue;
-    const date = ts.slice(0, 10);
-    const prev = latestUpgradeByMonitorName[e.protocol];
-    if (!prev || date > prev) latestUpgradeByMonitorName[e.protocol] = date;
+    const name = resolveProtocolName(e.protocol);
+    if (!name) continue;
+    const hourKey = upgradeHourKey(e);
+    if (!hourKey) continue;
+
+    const date = hourKey.slice(0, 10);
+    const prev = latestUpgradeByProtocol[name];
+    if (!prev || date > prev) latestUpgradeByProtocol[name] = date;
+
+    if (Date.parse(`${hourKey}:00:00Z`) >= upgradeCutoffMs) {
+      (upgradeKeysByProtocol[name] = upgradeKeysByProtocol[name] || new Set()).add(hourKey);
+    }
   }
 
   let lastScan: string | null = null;
@@ -199,10 +237,14 @@ export function useLiveData(staticProtocols: Protocol[]): {
     const monitorName = directLive ? p.name : (fallbackKey || p.name);
     const live = directLive || (fallbackKey ? liveState[fallbackKey] : undefined);
 
-    const liveLatestUpgrade = latestUpgradeByMonitorName[monitorName];
-    const baseUpdated = liveLatestUpgrade && (!p.lastUpgrade || liveLatestUpgrade > p.lastUpgrade)
-      ? { ...p, lastUpgrade: liveLatestUpgrade }
-      : p;
+    // upgradesLast30d is a rolling window, so it is always derived from the live log rather than the
+    // static value, which would otherwise stay frozen at whatever it was when protocols.ts was last
+    // edited and contradict a live-corrected lastUpgrade.
+    const liveLatestUpgrade = latestUpgradeByProtocol[p.name];
+    let baseUpdated = { ...p, upgradesLast30d: upgradeKeysByProtocol[p.name]?.size ?? 0 };
+    if (liveLatestUpgrade && (!p.lastUpgrade || liveLatestUpgrade > p.lastUpgrade)) {
+      baseUpdated = { ...baseUpdated, lastUpgrade: liveLatestUpgrade };
+    }
 
     if (!live || live.threshold === 0) return baseUpdated;
 

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26",
+  "updatedAt": "2026-09-16",
   "source": "Solana-native DeFi exploits only. Curated from Rekt, public post-mortems, and protocol disclosures. Excludes cross-chain hacks where the root cause sat outside Solana. Excludes centralised exchange compromises, Telegram bot wallet-level incidents, and prevented exploits.",
   "hacks": [
     {
@@ -188,6 +188,28 @@
       "recoveryNote": "Raydium pledged to repay affected users from treasury; only deprecated AMM V3 pools were affected",
       "affectedProtocols": [],
       "link": "https://decrypt.co/370700/solana-exchange-raydium-exploit-defi-attacks-grow"
+    },
+    {
+      "date": "2026-07-16",
+      "protocol": "DefiTuna",
+      "amountUsd": 580000,
+      "category": "contract",
+      "rootCause": "Borrowed USDC was routed through an attacker-created illiquid TUNA/USDC pool; the swap returned a negligible amount of TUNA so the position's total assets rounded down to zero, the solvency check read the position as healthy, and the USDC was withdrawn through attacker-controlled liquidity positions",
+      "recovered": "none",
+      "recoveryNote": "Team stated the vector was identified and mitigated and that it was working to recover funds; a matching deficit was left in the USDC lending pool",
+      "affectedProtocols": [],
+      "link": "https://cryptobriefing.com/defituna-lending-pools-exploited-580k/"
+    },
+    {
+      "date": "2026-08-31",
+      "protocol": "Aquifer",
+      "amountUsd": 2500000,
+      "category": "signer",
+      "rootCause": "Assets moved out of protocol-controlled wallets. No technical post-mortem has established how access was obtained, and public reporting has not shown the protocol's on-chain programs were themselves exploited",
+      "recovered": "none",
+      "recoveryNote": "Team offered a 20% whitehat bounty with a 3 September deadline for return of the assets; no public confirmation the attacker complied",
+      "affectedProtocols": [],
+      "link": "https://crypto.news/solana-amm-aquifer-hit-by-2-5-million-exploit-offers-20-bounty/"
     }
   ]
 }

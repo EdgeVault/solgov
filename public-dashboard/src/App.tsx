@@ -736,7 +736,7 @@ function App() {
 
   const TabBar = (
     <div className="border-b border-white/[0.06]">
-      <div className="max-w-[1400px] mx-auto px-2 sm:px-4">
+      <div className="max-w-[1600px] mx-auto px-2 sm:px-4">
         <div className="flex gap-1 overflow-x-auto scroll-thin">
           {(['dashboard', 'govwatch', 'blast', 'daos', 'charts'] as const).map(tab => (
             <button
@@ -760,7 +760,7 @@ function App() {
     <div className="min-h-screen bg-[#08080d] text-gray-200 overflow-x-hidden">
       {activeTab === 'dashboard' ? (
         <section>
-          <div className="max-w-[1400px] mx-auto px-4 pt-8 pb-6 md:pt-10 md:pb-8 relative">
+          <div className="max-w-[1600px] mx-auto px-4 pt-8 pb-6 md:pt-10 md:pb-8 relative">
             <div className="absolute top-3 right-4 md:top-4 md:right-4">
               {ContactLink}
             </div>
@@ -868,7 +868,7 @@ function App() {
         </section>
       ) : (
         <header className="border-b border-white/[0.06]">
-          <div className="max-w-[1400px] mx-auto px-4 pt-5 pb-4 flex items-center justify-between gap-4">
+          <div className="max-w-[1600px] mx-auto px-4 pt-5 pb-4 flex items-center justify-between gap-4">
             <Tooltip text="Back to dashboard">
               <button
                 onClick={() => setActiveTab('dashboard')}
@@ -885,7 +885,7 @@ function App() {
 
       {TabBar}
 
-      <main className="max-w-[1400px] mx-auto px-4 py-5">
+      <main className="max-w-[1600px] mx-auto px-4 py-5">
       {activeTab === 'dashboard' && (<>
         <div className="mb-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-gray-500">
           <Tooltip text="Filter table to protocols with a governance timelock">
@@ -1014,7 +1014,7 @@ function App() {
                   Last Upgrade <Tooltip text="Most recent program upgrade transaction on-chain."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
-                  30d <Tooltip text="Program upgrade transactions in the last 30 days."><InfoIcon /></Tooltip>
+                  30d <Tooltip text="Program upgrades observed by solgov across this protocol's tracked programs in the last 30 days."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Threshold <Tooltip text="Green: 4+ signers with 67%+ ratio (Squads 4/6+). Amber: 3 signers or below 67%. Red: fewer than 3 or below 50%."><InfoIcon /></Tooltip>

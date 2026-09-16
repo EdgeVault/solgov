@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-26",
-  "source": "EVM-native DeFi exploits only (Ethereum, BSC, Polygon, Arbitrum, Optimism, Avalanche, Blast, Heco). Curated from Rekt, Chainalysis, Halborn, Immunefi post-mortems, and protocol disclosures. Excludes centralised exchange compromises (Bybit, DMM, WazirX, HTX, Poloniex, BitMart), wallet-drainer / phishing incidents where the root cause is user-side (Atomic Wallet), prop-trading / market-maker hot-wallet losses (Wintermute), validator-backed L1 bridge incidents where the chain itself is the target (BNB Chain hard-fork bypass), and non-EVM incidents. Bridge hacks whose EVM-side smart contract was the exploited component are included (Ronin, Nomad, Harmony, Poly, Wormhole-EVM-side excluded as Solana primary). Amounts are USD at time of exploit per the cited source.",
+  "updatedAt": "2026-09-16",
+  "source": "EVM-native DeFi exploits only (Ethereum, BSC, Polygon, Arbitrum, Optimism, Avalanche, Blast, Heco, Cronos). Curated from Rekt, Chainalysis, Halborn, Immunefi post-mortems, and protocol disclosures. Excludes centralised exchange compromises (Bybit, DMM, WazirX, HTX, Poloniex, BitMart), wallet-drainer / phishing incidents where the root cause is user-side (Atomic Wallet), prop-trading / market-maker hot-wallet losses (Wintermute), validator-backed L1 bridge incidents where the chain itself is the target (BNB Chain hard-fork bypass), and non-EVM incidents. Bridge hacks whose EVM-side smart contract was the exploited component are included (Ronin, Nomad, Harmony, Poly, Wormhole-EVM-side excluded as Solana primary). Amounts are USD at time of exploit per the cited source.",
   "hacks": [
     {
       "date": "2022-03-23",
@@ -573,6 +573,39 @@
       "recoveryNote": "Grap Finance whitehat returned $4.4M; Binance credited users to cover the remainder; new COVER token minted to replace diluted supply",
       "affectedProtocols": [],
       "link": "https://rekt.news/cover-rekt/"
+    },
+    {
+      "date": "2026-07-15",
+      "protocol": "Ostium (Arbitrum)",
+      "amountUsd": 18000000,
+      "category": "oracle",
+      "rootCause": "A private key for one of the protocol's price oracles was compromised, letting the attacker sign future-dated price reports and push them through a PriceUpKeep forwarder; a BTC/USD position was opened against a fabricated $5,000 Bitcoin price and closed at the real market price",
+      "recovered": "none",
+      "recoveryNote": "Trading was halted during the incident; initial estimates were about $18M and later fund-flow tracking put the total nearer $24M",
+      "affectedProtocols": [],
+      "link": "https://www.halborn.com/blog/post/explained-the-ostium-hack-july-2026"
+    },
+    {
+      "date": "2026-08-24",
+      "protocol": "Term Finance",
+      "amountUsd": 8500000,
+      "category": "contract",
+      "rootCause": "Attacker took control of the on-chain voting system and drained the vaults in a single transaction sequence",
+      "recovered": "none",
+      "recoveryNote": "Reported as a governance takeover rather than a flaw in the lending logic",
+      "affectedProtocols": [],
+      "link": "https://shattered.io/term-finance-governance-hack-2026/"
+    },
+    {
+      "date": "2026-08-30",
+      "protocol": "Tectonic (Cronos)",
+      "amountUsd": 74000000,
+      "category": "oracle",
+      "rootCause": "Roughly $600,000 was used to buy TONIC across three thin liquidity pools, lifting its price about 100x inside twenty minutes; the inflated token was then posted as collateral to borrow approximately $74M from the lending markets",
+      "recovered": "partial",
+      "recoveryNote": "Cronos validators halted the chain and restored state to before the attack, discarding roughly 11,000 blocks and returning about $69M to depositors; approximately $6M had already been bridged out as ETH",
+      "affectedProtocols": [],
+      "link": "https://www.bleepingcomputer.com/news/security/cronos-blockchain-restarts-after-74-million-tectonic-exploit/"
     }
   ]
 }

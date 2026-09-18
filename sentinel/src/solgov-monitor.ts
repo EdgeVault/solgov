@@ -43,6 +43,7 @@ const PROTOCOLS: ProtocolDef[] = [
     programs: [
       { name: 'Protocol V2', id: 'dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH', expectedAuth: '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai' },
       { name: 'Velocity', id: 'vELoC1audYbSYVRXn1vPaV8Axoa9oU6BYmNGZZBDZ1P', expectedAuth: '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai' },
+      { name: 'JIT Proxy (Velocity)', id: 'J1TPRoXCtGuMcWiWFE6RB9eZU8U35PBMETCwNQLCNPhQ', expectedAuth: '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai' },
       { name: 'Vaults', id: 'vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR', expectedAuth: 'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9' },
       { name: 'JIT Proxy', id: 'J1TnP8zvVxbtF5KFp5xRmWuvG9McnhzmBd9XGfCyuxFP', expectedAuth: 'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9' },
       { name: 'Oracle Receiver', id: 'G6EoTTTgpkNBtVXo96EQp2m6uwwVh2Kt6YidjkmQqoha', expectedAuth: 'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9' },

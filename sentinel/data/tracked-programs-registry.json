@@ -898,5 +898,10 @@
     "protocol": "Flash Trade",
     "programName": "Perpetuals",
     "programId": "FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn"
+  },
+  {
+    "protocol": "Drift",
+    "programName": "JIT Proxy (Velocity)",
+    "programId": "J1TPRoXCtGuMcWiWFE6RB9eZU8U35PBMETCwNQLCNPhQ"
   }
 ]

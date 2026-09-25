@@ -1,12 +1,33 @@
 // Shared dark-theme tooltip primitive used across dashboard panels.
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+
+const FOCUSABLE = 'a[href], button, input, select, textarea, [tabindex]';
 
 export function Tooltip({ text, children, align = 'center' }: { text: string; children: React.ReactNode; align?: 'center' | 'left' }) {
   const [show, setShow] = useState(false);
   const [touched, setTouched] = useState(false);
+  // When the wrapped content already contains a link or button, that control takes focus and carries
+  // the description; otherwise the wrapper itself is made focusable so keyboard users can reach it.
+  const [hasFocusableChild, setHasFocusableChild] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
+  const id = useId();
   const [pos, setPos] = useState<{ top: number; left: number; placement: 'top' | 'bottom' }>({ top: 0, left: 0, placement: 'top' });
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const child = el.querySelector<HTMLElement>(FOCUSABLE);
+    setHasFocusableChild(!!child);
+    if (child) {
+      const prev = child.getAttribute('aria-describedby');
+      child.setAttribute('aria-describedby', id);
+      return () => {
+        if (prev) child.setAttribute('aria-describedby', prev);
+        else child.removeAttribute('aria-describedby');
+      };
+    }
+  }, [id, children]);
 
   const updatePos = () => {
     if (ref.current) {
@@ -47,8 +68,16 @@ export function Tooltip({ text, children, align = 'center' }: { text: string; ch
     <span
       ref={ref}
       className="inline-flex items-center"
+      tabIndex={hasFocusableChild ? undefined : 0}
+      aria-describedby={hasFocusableChild ? undefined : id}
       onMouseEnter={() => { if (!touched) { updatePos(); setShow(true); } }}
       onMouseLeave={() => { if (!touched) setShow(false); }}
+      onFocus={() => { updatePos(); setShow(true); }}
+      onBlur={(e) => {
+        if (ref.current && e.relatedTarget instanceof Node && ref.current.contains(e.relatedTarget)) return;
+        if (!touched) setShow(false);
+      }}
+      onKeyDown={(e) => { if (e.key === 'Escape') { setShow(false); setTouched(false); } }}
       onClick={(e) => {
         if ((e.target as HTMLElement).closest('a, button')) return;
         e.stopPropagation(); e.preventDefault(); updatePos(); setTouched(true); setShow(s => !s);
@@ -59,8 +88,12 @@ export function Tooltip({ text, children, align = 'center' }: { text: string; ch
       }}
     >
       {children}
+      {/* Description source for aria-describedby. Hidden so it is not read twice as content; the
+          visible bubble below is decorative. */}
+      <span id={id} role="tooltip" hidden>{text}</span>
       {show && (
         <span
+          aria-hidden="true"
           className={`fixed -translate-x-1/2 ${pos.placement === 'top' ? '-translate-y-full' : ''} px-3 py-2 text-xs bg-gray-800 border border-gray-700 rounded-lg text-gray-300 whitespace-pre-line break-words w-64 z-[100] shadow-lg pointer-events-none`}
           style={{
             top: pos.top,
@@ -81,5 +114,5 @@ export function Tooltip({ text, children, align = 'center' }: { text: string; ch
 }
 
 export function InfoIcon() {
-  return <span className="ml-1 text-gray-600 cursor-help text-[10px]">&#9432;</span>;
+  return <span className="ml-1 text-gray-600 cursor-help text-[10px]" aria-hidden="true">&#9432;</span>;
 }

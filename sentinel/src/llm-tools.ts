@@ -2,6 +2,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { REBRAND_ALIASES } from './utils/display-names';
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const DASHBOARD_DATA_DIR = process.env.SOLGOV_DASHBOARD_DATA
@@ -21,11 +22,63 @@ export function normaliseName(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
+// Normalised forms of a name: the whole name, the name without a parenthesised part, and the
+// parenthesised part on its own. "Save (Solend)" yields savesolend / save / solend, and an alert label
+// such as "BisonFi (AMM)" yields bisonfiamm / bisonfi, so it still reaches the plain "BisonFi" entry.
+function nameForms(s: string): string[] {
+  const forms = [normaliseName(s), normaliseName(s.replace(/\([^)]*\)/g, ' '))];
+  for (const m of s.matchAll(/\(([^)]*)\)/g)) forms.push(normaliseName(m[1]));
+  return Array.from(new Set(forms.filter(Boolean)));
+}
+
+// Shortest query that may match by prefix; shorter queries must match exactly.
+const MIN_PREFIX_LEN = 3;
+
+function matchRank(key: string, query: string): 0 | 1 | 2 {
+  const keyForms = nameForms(key);
+  const queryForms = nameForms(query).map(q => REBRAND_ALIASES[q] ?? q);
+  if (queryForms.some(q => keyForms.includes(q))) return 2;
+  if (queryForms.some(q => q.length >= MIN_PREFIX_LEN && keyForms.some(k => k.startsWith(q)))) return 1;
+  return 0;
+}
+
+// One-directional: the query must equal, or be a prefix of, the protocol name (or one of its forms).
+// A longer query never matches a shorter name, so "Drift BonkDAO" does not resolve to "Drift".
 export function nameMatches(key: string, query: string): boolean {
-  const nKey = normaliseName(key);
-  const nQuery = normaliseName(query);
-  if (!nQuery) return false;
-  return nKey.includes(nQuery) || nQuery.includes(nKey);
+  return matchRank(key, query) > 0;
+}
+
+// Exact normalised match only (rebrand aliases included); no prefix matching.
+export function resolveExactName(keys: string[], query: string): string | undefined {
+  return keys.find(k => matchRank(k, query) === 2);
+}
+
+// Picks the best key for a query: an exact normalised match first, then the first prefix match.
+export function resolveName(keys: string[], query: string): string | undefined {
+  let prefixHit: string | undefined;
+  for (const k of keys) {
+    const r = matchRank(k, query);
+    if (r === 2) return k;
+    if (r === 1 && prefixHit === undefined) prefixHit = k;
+  }
+  return prefixHit;
+}
+
+// System Program instructions that operate on a durable nonce account, as named by the jsonParsed
+// encoding. The System Program does not log instruction names, so log scanning never sees these.
+const SYSTEM_PROGRAM_ID = '11111111111111111111111111111111';
+const NONCE_IX_TYPES = new Set(['advanceNonce', 'initializeNonce', 'authorizeNonce', 'withdrawFromNonce']);
+
+// Returns the first durable-nonce instruction type in a jsonParsed transaction (outer or inner), or null.
+export function findNonceInstruction(tx: any): string | null {
+  const outer: any[] = tx?.transaction?.message?.instructions || [];
+  const inner: any[] = (tx?.meta?.innerInstructions || []).flatMap((i: any) => i?.instructions || []);
+  for (const ix of [...outer, ...inner]) {
+    const pid = typeof ix?.programId === 'string' ? ix.programId : ix?.programId?.toBase58?.();
+    const t = ix?.parsed?.type;
+    if (pid === SYSTEM_PROGRAM_ID && typeof t === 'string' && NONCE_IX_TYPES.has(t)) return t;
+  }
+  return null;
 }
 
 // ---------------- Tool implementations ----------------
@@ -44,7 +97,8 @@ function tool_search_forensics(args: { protocol: string }): any {
     const dir = path.join(DATA_DIR, 'forensics');
     if (!fs.existsSync(dir)) return { found: false, protocol: args.protocol };
     const files = fs.readdirSync(dir).filter(f => f.endsWith('.json') && !f.startsWith('_'));
-    const hit = files.find(f => nameMatches(f.replace(/\.json$/, ''), args.protocol));
+    const stem = resolveName(files.map(f => f.replace(/\.json$/, '')), args.protocol);
+    const hit = stem !== undefined ? `${stem}.json` : undefined;
     if (hit) {
       data = readJson(path.join(dir, hit));
       if (data) return { found: true, protocol: args.protocol, matchedFile: hit, profile: data };
@@ -56,8 +110,9 @@ function tool_search_forensics(args: { protocol: string }): any {
 function tool_get_upgrade_history(args: { protocol: string }): any {
   const upgrades = readJson(path.join(DATA_DIR, 'programs', 'program-upgrades.json'));
   if (!upgrades) return { found: false };
-  const entry = Object.entries(upgrades).find(([k]) => nameMatches(k, args.protocol));
-  if (!entry) return { found: false, protocol: args.protocol };
+  const key = resolveName(Object.keys(upgrades), args.protocol);
+  if (key === undefined) return { found: false, protocol: args.protocol };
+  const entry: [string, any] = [key, upgrades[key]];
   const hist = (entry[1] as any)?.upgrades || [];
   // Return most recent 30 with count summary
   return {
@@ -96,7 +151,7 @@ function tool_get_monitor_state(args: { protocol: string }): any {
   const state = readJson(path.join(DATA_DIR, 'monitor-state.json'));
   if (!state) return { found: false };
   // Skip internal keys prefixed with "_" (e.g. _activityLog)
-  const match = Object.keys(state).find(k => !k.startsWith('_') && nameMatches(k, args.protocol));
+  const match = resolveName(Object.keys(state).filter(k => !k.startsWith('_')), args.protocol);
   if (!match) return { found: false, protocol: args.protocol };
   const p = state[match];
   // monitor-state members are plain base58 strings, not objects
@@ -138,9 +193,14 @@ function tool_list_signers_sharing_authority(args: { authorityAddress: string })
   const matches: Array<{ protocol: string; role: string }> = [];
   if (state) {
     for (const [proto, p] of Object.entries(state as Record<string, any>)) {
-      if (p.members) {
+      if (proto.startsWith('_') || !p || typeof p !== 'object') continue;
+      if (Array.isArray(p.members)) {
+        // monitor-state members are plain base58 strings; older snapshots used { key, role } objects
         for (const m of p.members) {
-          if (m.key === args.authorityAddress) matches.push({ protocol: proto, role: `${m.role} signer` });
+          const key = typeof m === 'string' ? m : m?.key || m?.publicKey;
+          if (key !== args.authorityAddress) continue;
+          const role = typeof m === 'string' ? 'multisig' : m?.role || 'multisig';
+          matches.push({ protocol: proto, role: `${role} signer` });
         }
       }
       if (p.programAuthorities) {
@@ -215,13 +275,16 @@ async function tool_get_recent_signatures(args: { address: string; limit?: numbe
   const result = await rpcCall('getSignaturesForAddress', [args.address, { limit }]);
   if (!Array.isArray(result)) return { found: false, ...result };
   const now = Math.floor(Date.now() / 1000);
+  const oldest = result[result.length - 1]?.blockTime;
   return {
     found: true,
     address: args.address,
     count: result.length,
-    oldestBlockTime: result[result.length - 1]?.blockTime,
+    // True when the address has fewer transactions than the limit, so the sample is its whole history.
+    fullHistorySampled: result.length < limit,
+    oldestBlockTime: oldest,
     newestBlockTime: result[0]?.blockTime,
-    ageDays: result[result.length - 1]?.blockTime ? Math.floor((now - result[result.length - 1].blockTime) / 86400) : null,
+    oldestSampledTxAgeDays: oldest ? Math.floor((now - oldest) / 86400) : null,
     signatures: result.slice(0, Math.min(limit, 10)).map((s: any) => ({
       sig: s.signature?.slice(0, 20) + '...',
       blockTime: s.blockTime,
@@ -234,26 +297,26 @@ async function tool_check_nonce_activity(args: { address: string }): Promise<any
   const sigsResult = await rpcCall('getSignaturesForAddress', [args.address, { limit: 20 }]);
   if (!Array.isArray(sigsResult)) return { found: false, hasNonceActivity: false };
   const twoWeeksAgo = Math.floor(Date.now() / 1000) - 14 * 86400;
-  const recent = sigsResult.filter((s: any) => s.blockTime && s.blockTime > twoWeeksAgo).slice(0, 5);
+  const inWindow = sigsResult.filter((s: any) => s.blockTime && s.blockTime > twoWeeksAgo);
+  const recent = inWindow.slice(0, 5);
+  let inspected = 0;
   for (const sig of recent) {
     const tx = await rpcCall('getTransaction', [sig.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }]);
-    const logs = tx?.meta?.logMessages || [];
-    if (logs.some((l: string) =>
-      l.includes('InitializeNonceAccount') ||
-      l.includes('AdvanceNonceAccount') ||
-      l.includes('AuthorizeNonceAccount') ||
-      l.includes('WithdrawNonceAccount')
-    )) {
+    if (!tx || tx.error) continue;
+    inspected++;
+    const nonceIx = findNonceInstruction(tx);
+    if (nonceIx) {
       return {
         hasNonceActivity: true,
         address: args.address,
         foundInTx: sig.signature.slice(0, 20) + '...',
         blockTime: sig.blockTime,
-        note: 'Durable nonce activity detected - same vector as Drift exploit. Investigate.',
+        instruction: nonceIx,
+        note: `System Program ${nonceIx} instruction found in this transaction.`,
       };
     }
   }
-  return { hasNonceActivity: false, address: args.address, txnsChecked: recent.length };
+  return { hasNonceActivity: false, address: args.address, txnsInspected: inspected, txnsInWindow: inWindow.length };
 }
 
 async function tool_get_program_upgrade_authority(args: { programId: string }): Promise<any> {
@@ -422,7 +485,7 @@ export const TOOL_SCHEMA = [
     type: 'function',
     function: {
       name: 'get_recent_signatures',
-      description: 'Live RPC call: most recent transaction signatures for an address, plus age of oldest. Use to tell if a signer is brand new (ageDays < 7 is suspicious) or dormant.',
+      description: 'Live RPC call: most recent transaction signatures for an address (up to the limit). oldestSampledTxAgeDays is the age of the oldest returned transaction, so it is always a lower bound on how long the address has been active. It equals the age of the first transaction only when fullHistorySampled is true (count below the limit); otherwise the address is at least that old. Use to establish whether a signer is recently created or long-standing, and when it was last active.',
       parameters: {
         type: 'object',
         properties: {
@@ -437,7 +500,7 @@ export const TOOL_SCHEMA = [
     type: 'function',
     function: {
       name: 'check_nonce_activity',
-      description: 'Live RPC scan of recent transactions on an address for durable nonce operations (InitializeNonce, AdvanceNonce, etc). Durable nonce on an admin signer is the Drift exploit vector. Returns hasNonceActivity: true if found.',
+      description: 'Live RPC scan of up to 5 recent transactions (last 14 days) on an address for System Program durable nonce instructions (initializeNonce, advanceNonce, authorizeNonce, withdrawFromNonce). A durable nonce lets a transaction be signed now and submitted later. Returns hasNonceActivity: true if found, and txnsInspected for how many transactions were read.',
       parameters: {
         type: 'object',
         properties: { address: { type: 'string' } },
@@ -506,7 +569,7 @@ export const PLAYBOOKS: Record<string, Playbook> = {
       {
         id: 'root',
         label: 'Check the voting wallet',
-        instruction: 'The alert reports that one wallet holds most of the yes vote on a live governance proposal. Call get_recent_signatures on the wallet in the Authority field to establish how old it is and whether it has prior on-chain history. A wallet created recently that already holds most of a proposal vote is unusual. State the wallet age and one factual sentence on whether this looks routine or worth a deeper look. Do not speculate on intent.',
+        instruction: 'The alert reports that one wallet holds most of the yes vote on a live governance proposal. Call get_recent_signatures on the wallet in the Authority field to establish how long it has been active and whether it has prior on-chain history (oldestSampledTxAgeDays is a lower bound unless fullHistorySampled is true). State the wallet age and one factual sentence on whether this looks routine or worth a deeper look. Do not speculate on intent.',
         tools: ['get_recent_signatures', 'search_activity_feed'],
       },
       {
@@ -592,7 +655,7 @@ export const PLAYBOOKS: Record<string, Playbook> = {
       {
         id: 'root',
         label: 'Signer age',
-        instruction: 'A new signer was added to a multisig. Call get_recent_signatures on the signer to see how old the wallet is. Brand new wallets (age < 7 days) are suspicious. State the age and one sentence of assessment.',
+        instruction: 'A new signer was added to a multisig. Call get_recent_signatures on the signer to see how long the wallet has been active. oldestSampledTxAgeDays is a lower bound unless fullHistorySampled is true. State the observed age and one factual sentence on whether this looks routine or worth a deeper look.',
         tools: ['get_recent_signatures', 'get_account_info'],
       },
       {

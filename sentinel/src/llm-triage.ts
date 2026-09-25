@@ -1,10 +1,11 @@
 // Step-by-step LLM triage with a per-alert-type playbook and inline 'Scan deeper' continuation.
 
 import 'dotenv/config';
-import * as fs from 'fs';
 import * as path from 'path';
 import { askClaudeWithTools, SOLGOV_SYSTEM_PROMPT } from './llm-client';
 import { executeTool, getPlaybook, toolsByNames, PlaybookStep } from './llm-tools';
+import { escapeHtml, splitTelegramHtml } from './utils/telegram-html';
+import { writeJsonAtomic, readJsonStrict } from './utils/json-file';
 
 const TG_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TG_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
@@ -80,8 +81,9 @@ Rules:
 - Do NOT invent timestamps, addresses, signer names, upgrade authorities, or any numeric claim (amounts, counts, thresholds) that is not in the input or a tool return.
 - If a tool returned no data, say so and move on; do not fabricate a finding.
 - UK English, neutral fact-stating language, no em dashes, no judgement words.
+- Plain text only. Do not use HTML tags or Markdown; any markup is shown to readers literally.
 
-End with one line: "<b>Verdict:</b> routine" or "<b>Verdict:</b> worth a deeper look".
+End with one line: "Verdict: routine" or "Verdict: worth a deeper look".
 
 Do NOT emit pseudo function-call markup such as <function=name>...</function>, <function ... />, [tool_call: ...], or any other inline syntax that mimics a tool invocation. Tool calls go through the tool-call API only. The text response must be plain narrative readable as-is in Telegram.`;
 
@@ -93,7 +95,7 @@ Do NOT emit pseudo function-call markup such as <function=name>...</function>, <
   if (!response?.text) return null;
 
   return {
-    text: sanitiseTriageText(response.text),
+    text: formatTriageTextHtml(response.text),
     stepIndex,
     stepId: step.id,
     hasNextStep,
@@ -125,6 +127,17 @@ function sanitiseTriageText(text: string): string {
 }
 
 /**
+ * Make LLM narrative safe for Telegram parse_mode HTML. None of the model's own
+ * markup is kept: everything is escaped, so a stray "<" cannot make Telegram
+ * reject the message and a tag cannot become live markup. The only formatting
+ * is solgov's own bold on the closing "Verdict:" label.
+ */
+function formatTriageTextHtml(text: string): string {
+  const plain = sanitiseTriageText(text).replace(/<\/?b>\s*Verdict:\s*<\/?b>/gi, 'Verdict:');
+  return escapeHtml(plain).replace(/^(\s*)Verdict:/gim, '$1<b>Verdict:</b>');
+}
+
+/**
  * Neutralise untrusted third-party text (for example an on-chain governance
  * proposal name that ends up in an alert message) before it enters the LLM
  * prompt. Drops control characters and line/paragraph separators so it cannot
@@ -152,20 +165,28 @@ async function postToRiskTeam(message: string, replyMarkup?: any, threadId = TG_
     if (replyMarkup) console.log('[TRIAGE] keyboard:', JSON.stringify(replyMarkup));
     return;
   }
-  try {
-    await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: TG_CHAT_ID,
-        text: message,
-        parse_mode: 'HTML',
-        message_thread_id: threadId,
-        reply_markup: replyMarkup,
-      }),
-    });
-  } catch (e: any) {
-    console.error('[TRIAGE] Telegram post failed:', e.message);
+  // Split long output; the "Scan deeper" button goes on the last part.
+  const parts = splitTelegramHtml(message);
+  for (let i = 0; i < parts.length; i++) {
+    try {
+      const resp = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TG_CHAT_ID,
+          text: parts[i],
+          parse_mode: 'HTML',
+          message_thread_id: threadId,
+          reply_markup: i === parts.length - 1 ? replyMarkup : undefined,
+        }),
+      });
+      if (!resp.ok) {
+        const body = await resp.text().catch(() => '');
+        console.error(`[TRIAGE] Telegram post rejected: ${resp.status} part ${i + 1}/${parts.length} body=${body.slice(0, 200)}`);
+      }
+    } catch (e: any) {
+      console.error('[TRIAGE] Telegram post failed:', e.message);
+    }
   }
 }
 
@@ -177,18 +198,24 @@ async function postToRiskTeam(message: string, replyMarkup?: any, threadId = TG_
 const PENDING_FILE = path.join(__dirname, '..', 'data', 'pending-triage.json');
 type PendingMap = Record<string, TriageInput>;
 
-function loadPending(): PendingMap {
-  try { return fs.existsSync(PENDING_FILE) ? JSON.parse(fs.readFileSync(PENDING_FILE, 'utf-8')) : {}; }
-  catch { return {}; }
+// Returns null when the file exists but does not parse, so callers never save an empty map over it.
+function loadPending(): PendingMap | null {
+  try { return readJsonStrict<PendingMap>(PENDING_FILE, {}); }
+  catch (e: any) {
+    console.error(`[TRIAGE] ${e?.message}; pending triage context unavailable this run`);
+    return null;
+  }
 }
 function savePending(map: PendingMap) {
-  try { fs.writeFileSync(PENDING_FILE, JSON.stringify(map, null, 2)); } catch {}
+  try { writeJsonAtomic(PENDING_FILE, map); }
+  catch (e: any) { console.error('[TRIAGE] pending triage save failed:', e?.message); }
 }
 
 /** Store the triage input under a short id and return the id. */
 export function stashTriage(input: TriageInput): string {
   const id = Math.random().toString(36).slice(2, 10);
   const map = loadPending();
+  if (!map) return id; // corrupt file: skip the write; the button reports the context as expired
   // Prune anything older than 3 days so this file stays small.
   const cutoff = Date.now() - 3 * 86400 * 1000;
   for (const [k, v] of Object.entries(map)) {
@@ -201,7 +228,7 @@ export function stashTriage(input: TriageInput): string {
 }
 
 export function getTriage(id: string): TriageInput | null {
-  return loadPending()[id] || null;
+  return loadPending()?.[id] || null;
 }
 
 // De-dupe recent triage fires. 6-hour bucket per (protocol, programId, type),
@@ -282,7 +309,7 @@ export async function runTriageAndPost(input: TriageInput): Promise<void> {
   if (!output) return;
 
   const id = stashTriage(input);
-  const header = `🧠 <b>Auto-triage: ${input.protocol}</b>\nRe: ${input.type} at ${input.timestamp}\nStep 1: ${getPlaybook(playbookKeyFor(input.type)).steps[0].label} (${output.toolCallsMade} tools)`;
+  const header = `🧠 <b>Auto-triage: ${escapeHtml(input.protocol)}</b>\nRe: ${escapeHtml(input.type)} at ${escapeHtml(input.timestamp)}\nStep 1: ${getPlaybook(playbookKeyFor(input.type)).steps[0].label} (${output.toolCallsMade} tools)`;
   const body = `${header}\n\n${output.text}`;
 
   const replyMarkup = output.hasNextStep
@@ -300,13 +327,17 @@ export async function runStoredTriageStep(id: string, stepIndex: number): Promis
   const input = getTriage(id);
   if (!input) return { text: '⚠️ Triage context expired. Re-trigger the scan from the source alert.' };
 
+  // The step index arrives from Telegram callback data; clamp it to the playbook.
+  const steps = getPlaybook(playbookKeyFor(input.type)).steps;
+  const idx = Math.max(0, Math.min(Number.isFinite(stepIndex) ? Math.floor(stepIndex) : 0, steps.length - 1));
+
   // 30s timeout. Late LLM rejections are caught inside the wrapper.
-  const output = await runTriageWithTimeout({ ...input, stepIndex }, 30000);
+  const output = await runTriageWithTimeout({ ...input, stepIndex: idx }, 30000);
   if (!output) return null;
 
-  const header = `🧠 <b>Auto-triage: ${input.protocol}</b>\nStep ${stepIndex + 1}: ${getPlaybook(playbookKeyFor(input.type)).steps[stepIndex].label} (${output.toolCallsMade} tools)`;
+  const header = `🧠 <b>Auto-triage: ${escapeHtml(input.protocol)}</b>\nStep ${idx + 1}: ${steps[idx].label} (${output.toolCallsMade} tools)`;
   const replyMarkup = output.hasNextStep
-    ? { inline_keyboard: [[{ text: `🔎 ${output.nextStepLabel} (step ${stepIndex + 2})`, callback_data: `triage:${id}:${stepIndex + 1}` }]] }
+    ? { inline_keyboard: [[{ text: `🔎 ${output.nextStepLabel} (step ${idx + 2})`, callback_data: `triage:${id}:${idx + 1}` }]] }
     : undefined;
   return { text: `${header}\n\n${output.text}`, replyMarkup };
 }

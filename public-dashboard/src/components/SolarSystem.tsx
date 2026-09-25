@@ -5,11 +5,14 @@ import { EXPOSURES, EXPOSURE_PROTOCOLS, resolveExposureNode } from '../data/expo
 import type { ExposureNode } from '../data/exposure';
 import { getRelationships } from '../data/relationships';
 import { PROTOCOLS } from '../data/protocols';
+import type { Protocol } from '../data/protocols';
 import { LOGO_FILENAMES } from '../App';
 import { displayName } from '../data/displayNames';
 
-function nodeTldr(name: string, fallbackGovernance?: string): string {
-  const p = PROTOCOLS.find(x => x.name === name);
+// Governance summary for the hovered node. Reads the live-merged protocol list passed in by the
+// caller, so it always matches the dependency rows below; static PROTOCOLS is only the default.
+function nodeTldr(name: string, protocols: Protocol[], fallbackGovernance?: string): string {
+  const p = protocols.find(x => x.name === name);
   if (!p) return fallbackGovernance || '';
   if (p.version === 'Single Signer') return 'No multisig';
   if (p.version === 'Wormhole') return 'Wormhole guardian set';
@@ -59,8 +62,10 @@ function Starfield() {
       prevH = h;
     };
     resize();
+    let orientationTimer = 0;
+    const onOrientation = () => { window.clearTimeout(orientationTimer); orientationTimer = window.setTimeout(resize, 100); };
     window.addEventListener('resize', resize);
-    window.addEventListener('orientationchange', () => setTimeout(resize, 100));
+    window.addEventListener('orientationchange', onOrientation);
 
     const stars: { x: number; y: number; vx: number; vy: number; r: number; o: number }[] = [];
     for (let i = 0; i < 90; i++) {
@@ -75,9 +80,27 @@ function Starfield() {
         o: 0.08 + Math.random() * 0.25,
       });
     }
+    // If the canvas could not be sized yet (mounted hidden), remember the default size the stars were
+    // placed in so the first real resize spreads them over the full area.
+    if (prevW === 0 || prevH === 0) { prevW = canvas.width; prevH = canvas.height; }
 
-    let animId: number;
+    // The animation pauses while the canvas is not displayed (the overview stays mounted but hidden
+    // in detail view, and is display:none on mobile) or the tab is hidden, and draws one static
+    // frame for users who prefer reduced motion.
+    const reduceMotion = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let animId = 0;
+    let pollId = 0;
+    let stopped = false;
+    const isVisible = () => !document.hidden && canvas.offsetWidth > 0 && canvas.offsetHeight > 0;
+    const schedule = () => {
+      if (stopped || reduceMotion) return;
+      if (isVisible()) animId = requestAnimationFrame(draw);
+      else pollId = window.setTimeout(schedule, 500);
+    };
     const draw = () => {
+      if (!isVisible()) { schedule(); return; }
+      // Mounted while hidden: size the canvas the first time it is actually shown.
+      if (canvas.width !== canvas.offsetWidth * 2 || canvas.height !== canvas.offsetHeight * 2) resize();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (const s of stars) {
         s.x += s.vx;
@@ -92,14 +115,24 @@ function Starfield() {
         ctx.fillStyle = `rgba(255,255,255,${s.o})`;
         ctx.fill();
       }
-      animId = requestAnimationFrame(draw);
+      schedule();
     };
-    draw();
+    const onVisibility = () => { if (!document.hidden && !stopped && !reduceMotion) { window.clearTimeout(pollId); cancelAnimationFrame(animId); schedule(); } };
+    document.addEventListener('visibilitychange', onVisibility);
+    if (reduceMotion) {
+      if (isVisible()) draw();
+    } else {
+      draw();
+    }
 
     return () => {
+      stopped = true;
       cancelAnimationFrame(animId);
+      window.clearTimeout(pollId);
+      window.clearTimeout(orientationTimer);
       window.removeEventListener('resize', resize);
-      window.removeEventListener('orientationchange', resize);
+      window.removeEventListener('orientationchange', onOrientation);
+      document.removeEventListener('visibilitychange', onVisibility);
     };
   }, []);
 
@@ -335,7 +368,7 @@ function buildImpactNodes(protocolName: string): SolarNode[] {
   return nodes;
 }
 
-export function SolarSystem({ protocolName, tvlData }: { protocolName?: string; tvlData?: Record<string, number> }) {
+export function SolarSystem({ protocolName, tvlData, protocols = PROTOCOLS }: { protocolName?: string; tvlData?: Record<string, number>; protocols?: Protocol[] }) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [cascadeNode, setCascadeNode] = useState<string | null>(null);
   const [blastKey, setBlastKey] = useState(0);
@@ -753,7 +786,7 @@ export function SolarSystem({ protocolName, tvlData }: { protocolName?: string; 
                     : attackCount > 0
                     ? `${attackCount} upstream protocol${attackCount !== 1 ? 's' : ''} potentially exposed` + (tvlStr ? ` - ${tvlStr} TVL in range` : '')
                     : 'Centre protocol potentially exposed' + (tvlStr ? ` - ${tvlStr} TVL` : ''))
-                  : nodeTldr((infoNode as any)?.name, (infoNode as any)?.governance)
+                  : nodeTldr((infoNode as any)?.name, protocols, (infoNode as any)?.governance)
                 }
               </text>
             </g>

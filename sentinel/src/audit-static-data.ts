@@ -96,6 +96,7 @@ async function main() {
   const entries = parseEntries(fs.readFileSync(PROTOCOLS_TS, 'utf-8'));
   console.log(`protocols.ts: ${entries.length} entries, ${entries.reduce((n, e) => n + e.programs.length, 0)} programs\n`);
   let findings = 0;
+  let rpcErrors = 0; // reads that failed; those items were not checked and are not findings
 
   console.log('== Multisig config vs on-chain');
   for (const e of entries) {
@@ -103,10 +104,17 @@ async function main() {
     if (e.version === 'Squads V4' && BASE58.test(e.multisigAddress || '')) checks.push({ label: 'headline', addr: e.multisigAddress! });
     for (const r of e.roles) if (r.address !== e.multisigAddress) checks.push({ label: `role:${r.role}`, addr: r.address, role: r });
     for (const c of checks) {
-      let m: multisig.accounts.Multisig;
-      try { m = await multisig.accounts.Multisig.fromAccountAddress(conn, new PublicKey(c.addr)); }
-      catch { console.log(`  ${e.name} [${c.label}] ${c.addr}: not a Squads V4 multisig account`); findings++; continue; }
+      // The account read and the decode are separate steps so an RPC error is reported as such and
+      // never as "not a Squads V4 multisig", which would read as a data finding.
+      let info: Awaited<ReturnType<typeof conn.getAccountInfo>>;
+      try { info = await conn.getAccountInfo(new PublicKey(c.addr)); }
+      catch (err: any) { console.log(`  ${e.name} [${c.label}] ${c.addr}: RPC read failed (${String(err?.message || err).slice(0, 100)}); not checked`); rpcErrors++; continue; }
       await sleep(120);
+      if (!info) { console.log(`  ${e.name} [${c.label}] ${c.addr}: account not found on chain`); findings++; continue; }
+      if (!info.owner.equals(SQUADS_V4_PROGRAM)) { console.log(`  ${e.name} [${c.label}] ${c.addr}: not a Squads V4 multisig account (owner ${info.owner.toBase58()})`); findings++; continue; }
+      let m: multisig.accounts.Multisig;
+      try { [m] = multisig.accounts.Multisig.fromAccountInfo(info); }
+      catch { console.log(`  ${e.name} [${c.label}] ${c.addr}: Squads V4 account that does not decode as a Multisig`); findings++; continue; }
       const onT = m.threshold, onN = m.members.length, onTl = Number(m.timeLock);
       const onV = m.members.filter(x => x.permissions.mask & 2).length;
       const onCfg = m.configAuthority.toBase58() === '11111111111111111111111111111111' ? 'autonomous' : m.configAuthority.toBase58();
@@ -137,7 +145,9 @@ async function main() {
   const all = entries.flatMap(e => e.programs.filter(p => BASE58.test(p.id)).map(p => ({ e, p })));
   const pdas = all.map(a => PublicKey.findProgramAddressSync([new PublicKey(a.p.id).toBuffer()], BPF_UPGRADEABLE_LOADER)[0]);
   const infos: (Awaited<ReturnType<typeof conn.getMultipleAccountsInfo>>[number])[] = [];
-  for (let i = 0; i < pdas.length; i += 100) { infos.push(...await conn.getMultipleAccountsInfo(pdas.slice(i, i + 100))); await sleep(300); }
+  // Only the 45-byte ProgramData header (state, slot, authority option, authority) is needed; the
+  // program bytes that follow can be megabytes per account.
+  for (let i = 0; i < pdas.length; i += 100) { infos.push(...await conn.getMultipleAccountsInfo(pdas.slice(i, i + 100), { dataSlice: { offset: 0, length: 45 } })); await sleep(300); }
   const linkedPerProtocol: Record<string, { total: number; linked: number; immutable: number }> = {};
   all.forEach((a, i) => {
     const info = infos[i];
@@ -160,7 +170,7 @@ async function main() {
     for (const [n, s] of unlinked) console.log(`  ${n}: ${s.total} programs, ${s.immutable} immutable`);
     findings += unlinked.length;
   }
-  console.log(`\n${findings} finding(s). Nothing was written.`);
+  console.log(`\n${findings} finding(s).${rpcErrors ? ` ${rpcErrors} multisig read(s) failed and were not checked; re-run before relying on this result.` : ''} Nothing was written.`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

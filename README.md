@@ -239,7 +239,7 @@ Nothing scraped. Anything not from on-chain reads is credited at the source.
 ## Status
 
 - 50+ protocols tracked across 63 multisigs (Squads V4, V3, Serum, mean-multisig)
-- 182 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
+- 183 programs mapped, 22 LayerZero DVNs and 30 SPL tokens included in coverage
 - Durable nonce detection, Token-2022 extension flags, and 1-of-N signer setups all surfaced
 - Public good: open source under MIT, free dashboard, free API with no auth, no token
 - Engagement: ecosystem leaders and protocol teams have reached out privately. See [`disclosures.md`](disclosures.md).

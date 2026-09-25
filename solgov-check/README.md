@@ -18,7 +18,9 @@ Use it to catch an unexpected signer swap, a lowered threshold or a removed time
 }
 ```
 
-Pin the exact signer set with `"members": ["<pubkey>", ...]` or upgrade authorities with `"programAuthorities": { "<program name>": "<authority>" }` if you want those to fail on change too.
+Pin the exact signer set with `"members": ["<pubkey>", ...]` or upgrade authorities with `"programAuthorities": { "<program name>": "<authority>" }` if you want those to fail on change too. Key order and list order do not matter.
+
+The valid fields are `threshold`, `totalMembers`, `timelockSeconds`, `configAuthority`, `members` and `programAuthorities`. Any other key (for example a misspelt one) fails the check, so a typo cannot pass silently.
 
 3. Add a workflow:
 
@@ -40,14 +42,19 @@ jobs:
 
 The job fails on drift and writes a comparison table to the run summary. Set `fail-on-drift: 'false'` to report without failing.
 
+The job also fails, whatever `fail-on-drift` is set to, when the comparison cannot be trusted: the expectation file is unreadable or has an unknown field, the API request fails, times out (15 seconds) or returns something other than JSON, the API answers for a different protocol than the one requested (names are compared case-insensitively), or the live state is older than `max-age-hours`.
+
+Exit codes: `0` matches, `1` drift, `2` the check could not run or could not be trusted.
+
 ## Inputs
 
 | Input | Default | Meaning |
 |---|---|---|
-| `protocol` | required | Name as tracked by solgov |
+| `protocol` | required | Name as tracked by solgov, exactly as listed by `/api/v1/protocols` (case-insensitive) |
 | `expected` | `.solgov.json` | Path to the expectation file |
 | `fail-on-drift` | `true` | Exit non-zero on any difference |
 | `api-base` | `https://solgov.xyz` | API base URL |
+| `max-age-hours` | `48` | Fail when the live state's `lastChecked` is older than this. `0` disables the check |
 
 ## Outputs
 

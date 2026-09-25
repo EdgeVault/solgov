@@ -898,5 +898,10 @@
     "name": "Flash Trade (Perpetuals)",
     "programId": "FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn",
     "role": "holds-funds"
+  },
+  {
+    "name": "Drift (JIT Proxy (Velocity))",
+    "programId": "J1TPRoXCtGuMcWiWFE6RB9eZU8U35PBMETCwNQLCNPhQ",
+    "role": "routes-funds"
   }
 ]

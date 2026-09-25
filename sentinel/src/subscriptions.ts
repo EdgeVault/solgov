@@ -1,7 +1,8 @@
 // Per-user subscription state shared between solgov-bot and solgov-listener.
 
-import * as fs from 'fs';
 import * as path from 'path';
+import { readJsonStrict, writeJsonAtomic } from './utils/json-file';
+import { canonicalLower } from './utils/display-names';
 
 export type Severity = 'CRITICAL' | 'HIGH' | 'MONITOR';
 export type EventType = 'ConfigChange' | 'AuthorityChange' | 'ProgramUpgrade' | 'NONCE' | 'VaultTx' | '*';
@@ -18,19 +19,24 @@ export interface Subscription {
 
 const SUBSCRIPTIONS_PATH = path.join(__dirname, '..', 'data', 'bot-subscriptions.json');
 
+// Read-only callers (alert matching, lookups) tolerate a missing or unreadable file.
 export function loadSubscriptions(): Record<string, Subscription> {
   try {
-    if (!fs.existsSync(SUBSCRIPTIONS_PATH)) return {};
-    const raw = fs.readFileSync(SUBSCRIPTIONS_PATH, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
+    return readJsonStrict<Record<string, Subscription>>(SUBSCRIPTIONS_PATH, {});
+  } catch (e: any) {
+    console.error('[SUBS] read failed:', e.message);
     return {};
   }
 }
 
+// Mutating callers read strictly: a corrupt file throws instead of being treated as empty, so a save
+// can never replace every subscription with just the one being changed.
+function loadForWrite(): Record<string, Subscription> {
+  return readJsonStrict<Record<string, Subscription>>(SUBSCRIPTIONS_PATH, {});
+}
+
 export function saveSubscriptions(subs: Record<string, Subscription>): void {
-  fs.mkdirSync(path.dirname(SUBSCRIPTIONS_PATH), { recursive: true });
-  fs.writeFileSync(SUBSCRIPTIONS_PATH, JSON.stringify(subs, null, 2));
+  writeJsonAtomic(SUBSCRIPTIONS_PATH, subs);
 }
 
 export function getSubscription(userId: number | string): Subscription | null {
@@ -42,7 +48,7 @@ export function upsertSubscription(
   userId: number | string,
   update: Partial<Subscription> & { chatId: number }
 ): Subscription {
-  const subs = loadSubscriptions();
+  const subs = loadForWrite();
   const key = String(userId);
   const existing = subs[key];
   const next: Subscription = {
@@ -60,7 +66,7 @@ export function upsertSubscription(
 }
 
 export function deleteSubscription(userId: number | string): boolean {
-  const subs = loadSubscriptions();
+  const subs = loadForWrite();
   const key = String(userId);
   if (!subs[key]) return false;
   delete subs[key];
@@ -107,12 +113,16 @@ export function matchSubscribersForAlert(event: {
 }): Array<{ userId: string; subscription: Subscription }> {
   const subs = loadSubscriptions();
   const matches: Array<{ userId: string; subscription: Subscription }> = [];
-  const targetProto = event.protocol.toLowerCase();
+  const targetProto = canonicalLower(event.protocol);
+  // User-tracked multisigs carry a user-chosen label, so a fuzzy match would let a label such as
+  // "Drift" reach every Drift subscriber. Their events only go to exact subscriptions of that name.
+  const trackedEvent = targetProto.startsWith('tracked: ');
   for (const [userId, sub] of Object.entries(subs)) {
     // Protocol match: any subscribed protocol name is a substring of the event
     // protocol (or vice versa) to allow fuzzy matches like "Drift" → "Drift (Protocol V2)".
     const protoMatch = sub.protocols.some(p => {
-      const q = p.toLowerCase();
+      const q = canonicalLower(p);
+      if (trackedEvent || q.startsWith('tracked: ')) return q === targetProto;
       return targetProto.includes(q) || q.includes(targetProto);
     });
     if (!protoMatch) continue;
@@ -126,9 +136,13 @@ export function matchSubscribersForAlert(event: {
 }
 
 export function touchNotified(userId: number | string): void {
-  const subs = loadSubscriptions();
-  const key = String(userId);
-  if (!subs[key]) return;
-  subs[key].lastNotifiedAt = new Date().toISOString();
-  saveSubscriptions(subs);
+  try {
+    const subs = loadForWrite();
+    const key = String(userId);
+    if (!subs[key]) return;
+    subs[key].lastNotifiedAt = new Date().toISOString();
+    saveSubscriptions(subs);
+  } catch (e: any) {
+    console.error('[SUBS] touchNotified skipped:', e.message);
+  }
 }

@@ -44,7 +44,10 @@
   },
   "overrides": {
     "rpc-websockets": {
-      "ws": "8.20.1"
+      "ws": "8.21.3"
+    },
+    "jayson": {
+      "ws": "7.5.13"
     }
   }
 }

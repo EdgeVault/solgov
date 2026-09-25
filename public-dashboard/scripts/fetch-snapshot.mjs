@@ -1,5 +1,9 @@
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { dirname } from 'node:path';
+
+// Slug lists are shared with src/hooks/useDefiLlama.ts so the build-time fallback covers the same
+// protocols as the live fetch.
+const SLUGS = JSON.parse(readFileSync(new URL('../src/data/tvl-slugs.json', import.meta.url), 'utf-8'));
 
 const GOV_URLS = [
   'https://solgov.xyz/api/state',
@@ -8,33 +12,18 @@ const GOV_URLS = [
 
 const LLAMA_BASE = 'https://api.llama.fi';
 
-const TVL_SLUGS = {
-  'Orca': ['orca-dex'], 'Drift': ['drift-trade', 'drift-staked-sol'],
-  'Marginfi': ['marginfi-lending', 'marginfi-lst'], 'Kamino': ['kamino-lend', 'kamino-liquidity'],
-  'Jupiter Perps': ['jupiter-perpetual-exchange'], 'Jupiter Lend': ['jupiter-lend'],
-  'Jupiter Agg': ['jupiter-staked-sol'], 'Magic Eden': ['magic-eden'],
-  'Hylo': ['hylo-protocol', 'hylo-lsts'], 'Loopscale': ['loopscale'],
-  'Exponent': ['exponent'], 'Huma Finance': ['huma-v2'],
-  'Solstice': ['solstice-usx'], 'Pumpfun + PumpSwap': ['pumpswap', 'pump.fun'],
-  'Lulo': ['lulo'], 'Stabble': ['stabble-stableswap', 'stabble-clmm'],
-  'Sanctum': ['sanctum-validator-lsts', 'sanctum-infinity', 'sanctum-reserve'],
-  'Raydium': ['raydium-amm'], 'Phoenix DEX': ['phoenix-spot'],
-  'Meteora': ['meteora-dlmm', 'meteora-damm-v2', 'meteora-damm-v1', 'meteora-vaults'],
-  'Parcl': ['parcl-v3', 'parcl-v2'],
-  'Marinade': ['marinade-liquid-staking', 'marinade-native', 'marinade-select'],
-  'Pyth': ['pyth-network'], 'Jito': ['jito-liquid-staking', 'jito-restaking'],
-  'Solayer': ['solayer-restaking', 'solayer-usd'], 'Flash Trade': ['flashtrade'],
-  'Save (Solend)': ['save', 'save-sol'], 'Zebec': ['zebec-protocol'],
-  'SolvBTC': ['solvbtc', 'solv-basis-trading'], 'GMSOL': ['gmtrade'],
-  'Carrot': ['carrot-liquidity', 'carrot-lend'],
-  'DefiTuna': ['defituna-lending', 'defituna-liquidity'],
-};
+const TVL_SLUGS = SLUGS.tvl;
+const DEX_SLUGS = SLUGS.dex;
 
-const DEX_SLUGS = {
-  'Orca': 'orca', 'Raydium': 'raydium', 'Meteora': 'meteora',
-  'Jupiter Agg': 'jupiter', 'Phoenix DEX': 'phoenix',
-  'Pumpfun + PumpSwap': 'pumpswap', 'Stabble': 'stabble',
-};
+// Solana share of a DefiLlama /protocols entry (same rule as solanaTvl in useDefiLlama.ts):
+// chainTvls.Solana when a per-chain breakdown exists, the all-chain total only when it does not.
+function solanaTvl(p) {
+  const ct = p?.chainTvls;
+  if (ct && typeof ct === 'object' && Object.keys(ct).length > 0) {
+    return typeof ct.Solana === 'number' ? ct.Solana : 0;
+  }
+  return typeof p?.tvl === 'number' ? p.tvl : 0;
+}
 
 async function fetchWithTimeout(url, ms = 10000) {
   const ctrl = new AbortController();
@@ -71,7 +60,8 @@ async function fetchDefiLlama() {
     const protocols = await fetchWithTimeout(`${LLAMA_BASE}/protocols`);
     const slugMap = new Map();
     for (const p of protocols) {
-      if (p.slug && p.tvl) slugMap.set(p.slug, p.tvl);
+      const v = solanaTvl(p);
+      if (p.slug && v > 0) slugMap.set(p.slug, v);
     }
     for (const [name, slugs] of Object.entries(TVL_SLUGS)) {
       let total = 0;

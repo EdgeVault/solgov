@@ -9,10 +9,11 @@
 
 import { Connection, PublicKey } from '@solana/web3.js';
 import bs58 from 'bs58';
-import * as fs from 'fs';
 import * as path from 'path';
-import { decodeSetGovernanceConfig, isSetRealmAuthority } from './utils/spl-governance-ix';
+import { decodeSetGovernanceConfig, decodeSetRealmAuthorityAction, isSetRealmConfig, readVoteThreshold, VOTE_THRESHOLD_DISABLED } from './utils/spl-governance-ix';
 import { appendActivity } from './activity-log';
+import { writeJsonAtomic, readJsonStrict } from './utils/json-file';
+import { escapeHtml } from './utils/telegram-html';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -41,10 +42,10 @@ export type ProposalState = typeof PROPOSAL_STATE[number];
 const b58 = (n: number) => bs58.encode(Buffer.from([n]));
 
 // VoteThreshold kinds: 0 YesVotePercentage, 1 QuorumPercentage, 2 Disabled.
-function voteThresholdLabel(kind: number, pct: number): string {
+function voteThresholdLabel(kind: number, pct: number | null): string {
+  if (kind === 2) return 'Disabled';
   if (kind === 0) return `${pct}% approval`;
   if (kind === 1) return `${pct}% quorum`;
-  if (kind === 2) return 'Disabled';
   return `kind${kind}(${pct})`;
 }
 
@@ -54,7 +55,7 @@ export interface GovernanceConfig {
   governedAccount: string;
   proposalCount: number;
   voteThresholdKind: number;
-  voteThresholdPct: number;
+  voteThresholdPct: number | null;   // null when the community vote threshold is Disabled
   voteThresholdLabel: string;
   minCommunityWeight: number;   // raw units of the community mint
   holdUpTimeSec: number;        // execution timelock
@@ -71,8 +72,11 @@ export function parseGovernanceConfig(pubkey: string, data: Buffer): GovernanceC
   const realm = new PublicKey(data.subarray(o, o + 32)); o += 32;
   const governed = new PublicKey(data.subarray(o, o + 32)); o += 32;
   const proposalCount = data.readUInt32LE(o); o += 4;
-  const vtKind = data[o++];
-  const vtPct = data[o++];
+  // VoteThreshold::Disabled carries no percentage byte; reading one unconditionally shifts every
+  // later field (hold-up time, voting time) by a byte.
+  const vt = readVoteThreshold(data, o); o = vt.next;
+  const vtKind = vt.kind;
+  const vtPct = vt.pct;
   const minWeight = Number(data.readBigUInt64LE(o)); o += 8;
   const holdUp = data.readUInt32LE(o); o += 4;
   const baseVoting = data.readUInt32LE(o); o += 4;
@@ -164,6 +168,10 @@ export interface ProposalIntent {
   // Finance governance takeover (August 2026), where a proposal zeroed the delays before draining.
   proposesConfigChange: boolean; proposedHoldUpSec: number | null; proposedVoteThresholdPct: number | null;
   proposesRealmAuthorityChange: boolean;
+  // Remove clears the realm authority; SetChecked/SetUnchecked move it to another account.
+  realmAuthorityAction: 'SetUnchecked' | 'SetChecked' | 'Remove' | 'Unknown' | null;
+  // SetRealmConfig rewrites realm-level settings (council mint use, voter-weight addins, token types).
+  proposesRealmConfigChange: boolean;
 }
 
 // A move counts as large (drain-scale) when it takes a big share of the token's total
@@ -197,6 +205,8 @@ export async function analyzeProposalInstructions(conn: Connection, proposal: st
   const moves: string[] = [];
   let proposesConfigChange = false; let proposedHoldUpSec: number | null = null; let proposedVoteThresholdPct: number | null = null;
   let proposesRealmAuthorityChange = false;
+  let realmAuthorityAction: ProposalIntent['realmAuthorityAction'] = null;
+  let proposesRealmConfigChange = false;
   const REALMS = REALMS_PROGRAM.toBase58();
   const priceCache: Record<string, number> = {};
   const supplyCache: Record<string, { supply: number; decimals: number }> = {};
@@ -270,13 +280,18 @@ export async function analyzeProposalInstructions(conn: Connection, proposal: st
         proposesConfigChange = true;
         proposedVoteThresholdPct = cfg.voteThresholdPct;
         proposedHoldUpSec = cfg.holdUpTimeSec;
-      } else if (prog === REALMS && isSetRealmAuthority(ixData)) {
-        // SetRealmAuthority: moves control of the realm itself.
+      } else if (prog === REALMS && decodeSetRealmAuthorityAction(ixData)) {
+        // SetRealmAuthority: moves or removes control of the realm itself. A move to a new holder
+        // outranks a Remove when one proposal carries both.
+        const action = decodeSetRealmAuthorityAction(ixData)!;
         proposesRealmAuthorityChange = true;
+        if (realmAuthorityAction === null || realmAuthorityAction === 'Remove') realmAuthorityAction = action;
+      } else if (prog === REALMS && isSetRealmConfig(ixData)) {
+        proposesRealmConfigChange = true;
       }
     }
   }
-  return { movesTreasury, largeMove, summary: moves.join('; '), instructionCount: count, proposesConfigChange, proposedHoldUpSec, proposedVoteThresholdPct, proposesRealmAuthorityChange };
+  return { movesTreasury, largeMove, summary: moves.join('; '), instructionCount: count, proposesConfigChange, proposedHoldUpSec, proposedVoteThresholdPct, proposesRealmAuthorityChange, realmAuthorityAction, proposesRealmConfigChange };
 }
 
 export interface RiskAssessment {
@@ -295,8 +310,9 @@ export function assessRisk(cfg: GovernanceConfig): RiskAssessment {
   let score = 0;
   const noTimelock = cfg.holdUpTimeSec === 0;
   // A very low approval/quorum threshold means a small stake can pass a proposal.
-  const lowThreshold = cfg.voteThresholdKind !== 2 && cfg.voteThresholdPct > 0 && cfg.voteThresholdPct <= 10;
-  if (lowThreshold) { labels.push(`${cfg.voteThresholdPct}% ${cfg.voteThresholdKind === 1 ? 'quorum' : 'threshold'}`); score += cfg.voteThresholdPct <= 3 ? 5 : 3; }
+  const pct = cfg.voteThresholdKind !== VOTE_THRESHOLD_DISABLED ? cfg.voteThresholdPct : null;
+  const lowThreshold = pct !== null && pct > 0 && pct <= 10;
+  if (lowThreshold) { labels.push(`${pct}% ${cfg.voteThresholdKind === 1 ? 'quorum' : 'threshold'}`); score += pct! <= 3 ? 5 : 3; }
   if (noTimelock) { labels.push('0 execution timelock'); score += 4; }
   else if (cfg.holdUpTimeSec < 3600) { labels.push(`<1h timelock`); score += 2; }
   return {
@@ -349,10 +365,21 @@ export const REALMS_DAOS: RealmsDAO[] = [
 
 export const REALMS_DAO_NAMES = REALMS_DAOS.map((d) => d.name);
 
-interface RealmsDaoState { seen: string[]; configHash: Record<string, string>; concentrationFlagged?: string[]; }
+// `initialised` marks a DAO whose first (backfill) scan has completed. Keying first-scan on an empty
+// `seen` list instead would re-backfill a DAO that legitimately has no proposals yet, and treat its
+// first real proposal as backfill with no alert.
+interface RealmsDaoState { seen: string[]; configHash: Record<string, string>; concentrationFlagged?: string[]; initialised?: boolean; }
 type RealmsState = Record<string, RealmsDaoState>;
-function loadRealmsState(): RealmsState { try { return JSON.parse(fs.readFileSync(REALMS_STATE_FILE, 'utf-8')); } catch { return {}; } }
-function saveRealmsState(s: RealmsState): void { try { fs.writeFileSync(REALMS_STATE_FILE, JSON.stringify(s, null, 2)); } catch { /* best effort */ } }
+// Throws JsonReadError when the file exists but does not parse. The caller skips the run rather than
+// treating a corrupt file as empty, which would re-backfill every DAO into the feed and overwrite it.
+function loadRealmsState(): RealmsState { return readJsonStrict<RealmsState>(REALMS_STATE_FILE, {}); }
+function saveRealmsState(s: RealmsState): void {
+  try { writeJsonAtomic(REALMS_STATE_FILE, s); } catch (e: any) { console.error(`[REALMS] state save failed: ${e?.message}`); }
+}
+
+// Bumped when the config hash inputs change meaning (v2: hold-up time decoded correctly for a
+// Disabled vote threshold). A stored hash from an older version is re-baselined without an alert.
+const CONFIG_HASH_VERSION = 'v2';
 
 // Proposal names are decoded from third-party on-chain instruction data. Strip
 // control characters and line breaks, collapse whitespace, and cap the length so
@@ -371,12 +398,8 @@ export function cleanProposalName(raw: string): string {
 // Escape the HTML-significant characters for Telegram parse_mode HTML, which also
 // neutralises markup injection into the risk-team thread. Applied only at the
 // Telegram boundary; the stored activity feed keeps the literal cleaned name.
-export function escapeHtml(s: string): string {
-  return (s || '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
+// Re-exported from the shared helper so every sink escapes the same way.
+export { escapeHtml };
 
 // Proposal name + creation unix time, decoded from the CreateProposal (variant 6)
 // instruction of the proposal's creation tx. Validated against BonkDAO BIP #76.
@@ -411,7 +434,12 @@ export interface RealmsAlert { dao: string; type: string; severity: 'CRITICAL' |
 export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: number; dryRun?: boolean } = {}): Promise<{ alerts: RealmsAlert[]; watching: string[] }> {
   const backfillLimit = opts.backfillLimit ?? 40;
   const dry = opts.dryRun ?? false;
-  const state = loadRealmsState();
+  let state: RealmsState;
+  try { state = loadRealmsState(); }
+  catch (e: any) {
+    console.error(`[REALMS] ${e?.message}. Skipping the DAO scan this run so the state file is not overwritten.`);
+    return { alerts: [], watching: [] };
+  }
   const alerts: RealmsAlert[] = [];
   const watching: string[] = [];
   const emit = (dao: string, type: string, detail: string, gov: string, ts?: string) => {
@@ -424,8 +452,9 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
     const govs = await getGovernancesForRealm(conn, dao.realm);
 
     for (const g of govs) {
-      const hash = `${g.voteThresholdLabel}|${g.holdUpTimeSec}|${g.minCommunityWeight}`;
-      if (st.configHash[g.governance] && st.configHash[g.governance] !== hash) {
+      const hash = `${CONFIG_HASH_VERSION}|${g.voteThresholdLabel}|${g.holdUpTimeSec}|${g.minCommunityWeight}`;
+      const prevHash = st.configHash[g.governance];
+      if (prevHash && prevHash.startsWith(`${CONFIG_HASH_VERSION}|`) && prevHash !== hash) {
         const d = `governance config changed: ${g.voteThresholdLabel}, timelock ${g.holdUpTimeSec / 3600}h`;
         emit(dao.name, 'ConfigChange', d, g.governance);
         alerts.push({ dao: dao.name, type: 'ConfigChange', severity: 'HIGH', message: `<b>${dao.name}</b> ${d}` });
@@ -435,7 +464,8 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
 
     const all: Array<{ proposal: string; state: string; governance: string }> = [];
     for (const g of govs) { for (const p of await getProposals(conn, g.governance)) all.push({ proposal: p.proposal, state: p.state, governance: g.governance }); }
-    const firstScan = st.seen.length === 0;
+    // State files written before the `initialised` flag existed count as initialised once they hold proposals.
+    const firstScan = !st.initialised && st.seen.length === 0;
 
     let toEmit: Array<{ proposal: string; state: string; governance: string; name?: string; createdAt?: number }> = [];
     if (firstScan) {
@@ -455,13 +485,15 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
       const intent = await analyzeProposalInstructions(conn, p.proposal);
       const nameOrShort = p.name || p.proposal.slice(0, 8);
       const base = `${nameOrShort} [${p.state}]`;
-      // A proposal that changes the governance's own config or realm authority is stated against the
-      // current values. Lowering the hold-up time or the vote threshold, or moving the realm
-      // authority, is the precursor shape of a governance takeover and is flagged HIGH; a change that
-      // raises protections is still recorded, as MONITOR.
+      // A proposal that changes the governance's own config, the realm config or the realm authority is
+      // stated against the current values. Lowering the hold-up time or the vote threshold, or moving
+      // the realm authority to a new holder, is the precursor shape of a governance takeover and is
+      // flagged HIGH; any other governance or realm config change (including removing the realm
+      // authority) is still recorded, as MONITOR.
       const cur = govs.find(g => g.governance === p.governance);
       const fmtH = (sec: number) => sec === 0 ? 'none' : sec % 3600 === 0 ? `${sec / 3600}h` : `${Math.round(sec / 60)}min`;
       let cfgNote = ''; let lowersProtection = false;
+      const addNote = (n: string) => { cfgNote = (cfgNote ? cfgNote + '; ' : '') + n; };
       if (intent.proposesConfigChange) {
         const parts: string[] = [];
         if (intent.proposedHoldUpSec !== null) {
@@ -469,13 +501,18 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
           if (cur && intent.proposedHoldUpSec < cur.holdUpTimeSec) lowersProtection = true;
         }
         if (intent.proposedVoteThresholdPct !== null) {
-          parts.push(cur ? `vote threshold ${cur.voteThresholdPct}% to ${intent.proposedVoteThresholdPct}%` : `vote threshold to ${intent.proposedVoteThresholdPct}%`);
-          if (cur && intent.proposedVoteThresholdPct < cur.voteThresholdPct) lowersProtection = true;
+          const curLabel = cur ? (cur.voteThresholdPct === null ? 'Disabled' : `${cur.voteThresholdPct}%`) : null;
+          parts.push(curLabel ? `vote threshold ${curLabel} to ${intent.proposedVoteThresholdPct}%` : `vote threshold to ${intent.proposedVoteThresholdPct}%`);
+          if (cur && cur.voteThresholdPct !== null && intent.proposedVoteThresholdPct < cur.voteThresholdPct) lowersProtection = true;
         }
-        cfgNote = `sets governance config: ${parts.join(', ')}`;
+        addNote(parts.length ? `sets governance config: ${parts.join(', ')}` : 'sets governance config');
       }
-      if (intent.proposesRealmAuthorityChange) { cfgNote = (cfgNote ? cfgNote + '; ' : '') + 'transfers realm authority'; lowersProtection = true; }
-      const isGovChange = intent.proposesConfigChange || intent.proposesRealmAuthorityChange;
+      if (intent.proposesRealmConfigChange) addNote('sets realm config');
+      if (intent.proposesRealmAuthorityChange) {
+        if (intent.realmAuthorityAction === 'Remove') addNote('removes realm authority');
+        else { addNote('transfers realm authority'); lowersProtection = true; }
+      }
+      const isGovChange = intent.proposesConfigChange || intent.proposesRealmAuthorityChange || intent.proposesRealmConfigChange;
       // Only a drain-scale move gets the distinct type + orange flag; a small grant or
       // sponsorship stays a routine ProposalCreated so it does not read like an exploit.
       const label = isGovChange ? `${base} · ${cfgNote}` : intent.largeMove ? `${base} · ${intent.summary}` : base;
@@ -524,7 +561,7 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
         if (flagged.includes(p.proposal)) continue; // already flagged, do not re-fire each scan
         const va = await analyzeVotes(conn, p.proposal);
         const gcfg = govByPk.get(p.governance);
-        const quorumUi = gcfg && gcfg.voteThresholdKind !== 2 && supplyUi > 0 ? (gcfg.voteThresholdPct / 100) * supplyUi : Infinity;
+        const quorumUi = gcfg && gcfg.voteThresholdKind !== VOTE_THRESHOLD_DISABLED && gcfg.voteThresholdPct !== null && supplyUi > 0 ? (gcfg.voteThresholdPct / 100) * supplyUi : Infinity;
         const topUi = va ? va.topWeight / Math.pow(10, decimals) : 0;
         if (va && va.concentration >= 0.9 && topUi >= quorumUi) {
           const detail = await getProposalDetail(conn, p.proposal);
@@ -541,11 +578,15 @@ export async function scanRealmsDAOs(conn: Connection, opts: { backfillLimit?: n
       watching.push(`• ${dao.name}: ${liveProps.length} proposal(s) in voting`);
     }
 
-    st.seen = all.map((p) => p.proposal);
+    // Union rather than replace: proposal accounts are not closed, so a read that returns fewer
+    // proposals than before must not make the missing ones look new on the next run.
+    st.seen = Array.from(new Set([...st.seen, ...all.map((p) => p.proposal)]));
+    st.initialised = true;
     state[dao.name] = st;
+    // Saved per DAO so a throw on a later DAO does not re-emit this one's feed entries next run.
+    if (!dry) saveRealmsState(state);
   }
 
-  if (!dry) saveRealmsState(state);
   return { alerts, watching };
 }
 
@@ -623,7 +664,9 @@ export interface DaoRiskProfile {
 // Full attacker-lens profile for one DAO.
 export async function daoRiskProfile(conn: Connection, dao: RealmsDAO, ts: string): Promise<DaoRiskProfile> {
   const govs = await getGovernancesForRealm(conn, dao.realm);
-  const worst = govs.slice().sort((a, b) => a.voteThresholdPct - b.voteThresholdPct)[0];
+  // A Disabled community threshold cannot pass a proposal by community vote, so it sorts last.
+  const pctOrInf = (g: GovernanceConfig) => g.voteThresholdKind !== VOTE_THRESHOLD_DISABLED && g.voteThresholdPct !== null ? g.voteThresholdPct : Infinity;
+  const worst = govs.slice().sort((a, b) => pctOrInf(a) - pctOrInf(b))[0];
   const mint = await realmCommunityMint(conn, dao.realm);
   const supplyRes = mint ? await conn.getTokenSupply(new PublicKey(mint)).catch(() => null) : null;
   const supply = supplyRes?.value.uiAmount || 0;
@@ -634,7 +677,7 @@ export async function daoRiskProfile(conn: Connection, dao: RealmsDAO, ts: strin
   const plugin = await hasVoterWeightPlugin(conn, dao.realm);
   let total = 0, live = 0;
   for (const g of govs) { const ps = await getProposals(conn, g.governance); total += ps.length; live += ps.filter(p => p.state === 'Voting' || p.state === 'SigningOff').length; }
-  const quorumFrac = worst && worst.voteThresholdKind !== 2 ? worst.voteThresholdPct / 100 : 1;
+  const quorumFrac = worst && worst.voteThresholdKind !== VOTE_THRESHOLD_DISABLED && worst.voteThresholdPct !== null ? worst.voteThresholdPct / 100 : 1;
   return {
     name: dao.name, realm: dao.realm, updatedAt: ts,
     quorumLabel: worst?.voteThresholdLabel || 'n/a',
@@ -656,7 +699,7 @@ export async function writeDaoRiskSnapshot(conn: Connection): Promise<DaoRiskPro
   const ts = new Date().toISOString();
   const daos: DaoRiskProfile[] = [];
   for (const dao of REALMS_DAOS) daos.push(await daoRiskProfile(conn, dao, ts));
-  try { fs.writeFileSync(DAO_SNAPSHOT_FILE, JSON.stringify({ updatedAt: ts, daos }, null, 2)); } catch { /* best effort */ }
+  try { writeJsonAtomic(DAO_SNAPSHOT_FILE, { updatedAt: ts, daos }); } catch (e: any) { console.error(`[REALMS] DAO risk snapshot write failed: ${e?.message}`); }
   return daos;
 }
 

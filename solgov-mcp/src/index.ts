@@ -10,9 +10,10 @@ import { z } from 'zod';
 
 const BASE = (process.env.SOLGOV_API_BASE || 'https://solgov.xyz').replace(/\/$/, '');
 const UA = 'solgov-mcp/0.1.0 (+https://solgov.xyz)';
+const TIMEOUT_MS = 15_000;
 
 async function api(path: string): Promise<any> {
-  const res = await fetch(`${BASE}${path}`, { headers: { 'User-Agent': UA, Accept: 'application/json' } });
+  const res = await fetch(`${BASE}${path}`, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(TIMEOUT_MS) });
   const text = await res.text();
   if (!res.ok) throw new Error(`solgov API ${res.status} for ${path}: ${text.slice(0, 200)}`);
   try { return JSON.parse(text); } catch { return text; }
@@ -20,6 +21,16 @@ async function api(path: string): Promise<any> {
 
 const text = (v: unknown) => ({ content: [{ type: 'text' as const, text: typeof v === 'string' ? v : JSON.stringify(v, null, 2) }] });
 const family = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
+// Same match rule for every protocol filter: exact name (case-insensitive) or same family, so
+// "Kamino" matches "Kamino (Farms)" and "kamino lend" matches only itself.
+const sameProtocol = (candidate: string, wanted: string) =>
+  String(candidate).toLowerCase() === wanted.toLowerCase() || family(String(candidate)).toLowerCase() === family(wanted).toLowerCase();
+// Snapshot age, so a caller can tell a fresh reading from a stale one without a second call.
+function freshness(stamp: unknown): { scannedAt: string | null; stalenessHours: number | null } {
+  const iso = typeof stamp === 'string' ? stamp : null;
+  const t = iso ? Date.parse(iso) : NaN;
+  return { scannedAt: iso, stalenessHours: Number.isFinite(t) ? Math.round((Date.now() - t) / 360_000) / 10 : null };
+}
 
 const server = new McpServer({ name: 'solgov', version: '0.1.0' });
 
@@ -63,42 +74,53 @@ server.tool(
 
 server.tool(
   'solgov_pending_upgrades',
-  'Queued Squads proposals that would upgrade a program, move a program\'s upgrade authority, or change a multisig\'s config, and have not executed yet. Includes approval count against threshold and the timelock that must elapse. This is visible before the change lands on-chain.',
+  'Queued Squads proposals that would upgrade, close or extend a program, move a program\'s upgrade authority, or change a multisig\'s config, and have not executed yet. Includes approval count against threshold and the timelock that must elapse. This is visible before the change lands on-chain. Returns available:false when the scan output is missing; scannedAt, stalenessHours and complete say how fresh and whole the scan is.',
   { protocol: z.string().optional().describe('Filter to one protocol family') },
   async ({ protocol }) => {
     const st = await api('/api/v1/state');
-    const all: any[] = st?._pendingUpgrades?.results || [];
-    // Keep proposals that can still execute: open or config proposals that went stale cannot, an
-    // already-approved vault transaction still can.
-    let live = all.filter(r => !(r.stale === true && (r.status === 'Active' || r.kind === 'ConfigChange')));
-    if (protocol) { const w = family(protocol).toLowerCase(); live = live.filter(r => family(r.protocol).toLowerCase() === w || String(r.protocol).toLowerCase() === protocol.toLowerCase()); }
-    return text({ scannedAt: st?._pendingUpgrades?.scannedAt ?? null, count: live.length, results: live });
+    const pu = st?._pendingUpgrades;
+    if (!pu || !Array.isArray(pu.results)) return text({ available: false, reason: 'pending-upgrades scan output is not present in the API state' });
+    const all: any[] = pu.results;
+    // Keep proposals that can still execute. Newer scans carry `executable`; for older ones apply the
+    // same rule: open or config proposals that went stale cannot, an approved vault transaction can.
+    let live = all.filter(r => typeof r.executable === 'boolean' ? r.executable : !(r.stale === true && (r.status === 'Active' || r.kind === 'ConfigChange')));
+    if (protocol) live = live.filter(r => sameProtocol(r.protocol, protocol));
+    return text({ available: true, ...freshness(pu.scannedAt), complete: pu.complete ?? null, count: live.length, results: live });
   },
 );
 
 server.tool(
   'solgov_signer_independence',
-  'For teams running two or more multisigs: how distinct the signer sets are. 100% means no signer sits on more than one of the team\'s multisigs; 0% means they share one signer set. Includes pairwise shared-signer counts. Computed from live on-chain member lists.',
+  'For teams running two or more multisigs: how distinct the signer sets are. 100% means no signer sits on more than one of the team\'s multisigs; 0% means they share one signer set. Includes pairwise shared-signer counts. Computed from live on-chain member lists. Returns available:false when the computation output is missing, and stalenessHours otherwise.',
   { team: z.string().optional().describe('Filter to one team, e.g. "Kamino" or "Jupiter"') },
   async ({ team }) => {
     const st = await api('/api/v1/state');
-    let groups: any[] = st?._independence?.groups || [];
+    const ind = st?._independence;
+    if (!ind || !Array.isArray(ind.groups)) return text({ available: false, reason: 'signer-independence output is not present in the API state' });
+    let groups: any[] = ind.groups;
     if (team) groups = groups.filter(g => String(g.team).toLowerCase().startsWith(team.toLowerCase()));
-    return text({ computedAt: st?._independence?.computedAt ?? null, groups });
+    const f = freshness(ind.computedAt);
+    return text({ available: true, computedAt: f.scannedAt, stalenessHours: f.stalenessHours, groups });
   },
 );
 
 server.tool(
   'solgov_verified_builds',
-  'Verified-build status per program from the otter-verify registry, counted only when the record is signed by the program\'s current upgrade authority (or a Solana Explorer trusted signer) and the deployed hash still matches. Distinguishes "verified", "verified once but upgraded since" (matchesDeployed false) and "not verified".',
+  'Verified-build status per program from the OtterSec verify registry. verified is true only when a registry entry marked verified is signed by the program\'s current upgrade authority (or a Solana Explorer trusted signer) and its recorded on_chain_hash equals a fresh hash of the deployed bytes; false when the check ran and nothing qualified; null when the check could not run (checkError says why). matchesDeployed is the registry\'s own comparison for the recorded entry (on_chain_hash === executable_hash); it is not a fresh comparison with the bytes deployed now. Returns available:false when the scan output is missing; scannedAt, stalenessHours and complete say how fresh and whole the scan is.',
   { protocol: z.string().optional() },
   async ({ protocol }) => {
     const st = await api('/api/v1/state');
     const vb = st?._verifiedBuilds;
-    if (!vb) return text({ available: false });
-    let programs: any[] = vb.programs || [];
-    if (protocol) { const w = family(protocol).toLowerCase(); programs = programs.filter(p => family(String(p.protocol)).toLowerCase() === w); }
-    return text({ scannedAt: vb.scannedAt, notes: vb.notes, programs, rollup: protocol ? vb.protocols?.[protocol] ?? null : vb.protocols });
+    if (!vb || !Array.isArray(vb.programs)) return text({ available: false, reason: 'verified-builds scan output is not present in the API state' });
+    let programs: any[] = vb.programs;
+    let rollup: Record<string, any> | null = vb.protocols ?? null;
+    if (protocol) {
+      programs = programs.filter(p => sameProtocol(p.protocol, protocol));
+      // Same matching as the programs filter, so a family query returns every matching rollup row.
+      const rows = Object.entries(vb.protocols || {}).filter(([name]) => sameProtocol(name, protocol));
+      rollup = rows.length ? Object.fromEntries(rows) : null;
+    }
+    return text({ available: true, ...freshness(vb.scannedAt), complete: vb.complete ?? null, notes: vb.notes, programs, rollup });
   },
 );
 

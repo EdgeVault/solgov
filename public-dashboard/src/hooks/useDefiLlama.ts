@@ -2,66 +2,37 @@
 
 import { useState, useEffect } from 'react';
 import snapshot from '../data/llama-snapshot.json';
+import slugs from '../data/tvl-slugs.json';
 
 const LLAMA_BASE = 'https://api.llama.fi';
-const CACHE_KEY = 'solgov:llama:v1';
+const CACHE_KEY = 'solgov:llama:v2';
 
-const TVL_SLUGS: Record<string, string[]> = {
-  'Orca': ['orca-dex'],
-  'Drift': ['drift-trade', 'drift-staked-sol'],
-  'Project 0': ['marginfi-lending', 'marginfi-lst'],
-  'Kamino': ['kamino-lend', 'kamino-liquidity'],
-  'Jupiter Perps': ['jupiter-perpetual-exchange'],
-  'Jupiter Lend': ['jupiter-lend'],
-  'Jupiter Agg': ['jupiter-staked-sol'],
-  'Magic Eden': ['magic-eden'],
-  'Hylo': ['hylo-protocol', 'hylo-lsts'],
-  'Loopscale': ['loopscale'],
-  'Exponent': ['exponent'],
-  'Huma Finance': ['huma-v2'],
-  'Solstice': ['solstice-usx'],
-  'Pumpfun + PumpSwap': ['pumpswap', 'pump.fun'],
-  'Lulo': ['lulo'],
-  'Stabble': ['stabble-stableswap', 'stabble-clmm'],
-  'Sanctum': ['sanctum-validator-lsts', 'sanctum-infinity', 'sanctum-reserve'],
-  'Raydium': ['raydium-amm'],
-  'Phoenix DEX': ['phoenix-spot'],
-  'Meteora': ['meteora-dlmm', 'meteora-damm-v2', 'meteora-damm-v1', 'meteora-vaults'],
-  'Parcl': ['parcl-v3', 'parcl-v2'],
-  'Marinade': ['marinade-liquid-staking', 'marinade-native', 'marinade-select'],
-  'Pyth': ['pyth-network'],
-  'Jito': ['jito-liquid-staking', 'jito-restaking'],
-  'Solayer': ['solayer-restaking', 'solayer-usd'],
-  'Flash Trade': ['flashtrade'],
-  'Save (Solend)': ['save', 'save-sol'],
-  'Zebec': ['zebec-protocol'],
-  'SolvBTC': ['solvbtc', 'solv-basis-trading'],
-  'GMSOL': ['gmtrade'],
-  'Carrot': ['carrot-liquidity', 'carrot-lend'],
-  'DefiTuna': ['defituna-lending', 'defituna-liquidity'],
-  'Onre Finance': ['onre'],
-  'deBridge': ['debridge'],
-  'Titan': ['titan-aggregator'],
-  'Phoenix Eternal': ['phoenix-perp'],
-  'Adrena': ['adrena-protocol'],
-  'Bullet': ['bullet-perps'],
-};
+// Slug lists live in one JSON file shared with scripts/fetch-snapshot.mjs so the live fetch and the
+// build-time fallback always cover the same protocols.
+const TVL_SLUGS: Record<string, string[]> = slugs.tvl;
+const DEX_SLUGS: Record<string, string> = slugs.dex;
 
-const DEX_SLUGS: Record<string, string> = {
-  'Orca': 'orca',
-  'Raydium': 'raydium',
-  'Meteora': 'meteora',
-  'Jupiter Agg': 'jupiter',
-  'Phoenix DEX': 'phoenix',
-  'Pumpfun + PumpSwap': 'pumpswap',
-  'Stabble': 'stabble',
-};
+// 'live' = fetched from DefiLlama in this session; 'cache' = this browser's last successful fetch;
+// 'snapshot' = bundled at build time. Only 'live' may be labelled live in the UI.
+export type TvlSource = 'live' | 'cache' | 'snapshot' | 'none';
 
 export interface DefiLlamaData {
   tvl: Record<string, number>;
   volume24h: Record<string, number>;
   lastUpdated: string | null;
   loading: boolean;
+  source: TvlSource;
+}
+
+// Solana share of a DefiLlama /protocols entry. chainTvls.Solana is used when DefiLlama breaks TVL
+// down by chain; the all-chain total is only used when no breakdown exists, so a multichain protocol
+// is never shown with its TVL on other chains.
+export function solanaTvl(p: any): number {
+  const ct = p?.chainTvls;
+  if (ct && typeof ct === 'object' && Object.keys(ct).length > 0) {
+    return typeof ct.Solana === 'number' ? ct.Solana : 0;
+  }
+  return typeof p?.tvl === 'number' ? p.tvl : 0;
 }
 
 function formatTvl(value: number): string {
@@ -78,14 +49,14 @@ function readCache(): DefiLlamaData | null {
     if (!raw) return null;
     const c = JSON.parse(raw);
     if (!c || !c.tvl) return null;
-    return { tvl: c.tvl, volume24h: c.volume24h || {}, lastUpdated: c.lastUpdated || null, loading: false };
+    return { tvl: c.tvl, volume24h: c.volume24h || {}, lastUpdated: c.lastUpdated || null, loading: false, source: 'cache' };
   } catch { return null; }
 }
 
 function writeCache(d: DefiLlamaData) {
   try {
     if (typeof window === 'undefined') return;
-    window.localStorage.setItem(CACHE_KEY, JSON.stringify(d));
+    window.localStorage.setItem(CACHE_KEY, JSON.stringify({ tvl: d.tvl, volume24h: d.volume24h, lastUpdated: d.lastUpdated }));
   } catch {}
 }
 
@@ -98,9 +69,10 @@ function initialData(): DefiLlamaData {
       volume24h: (snapshot.volume24h as Record<string, number>) || {},
       lastUpdated: (snapshot.lastUpdated as string | null) || null,
       loading: false,
+      source: 'snapshot',
     };
   }
-  return { tvl: {}, volume24h: {}, lastUpdated: null, loading: true };
+  return { tvl: {}, volume24h: {}, lastUpdated: null, loading: true, source: 'none' };
 }
 
 export function useDefiLlama(): DefiLlamaData {
@@ -108,22 +80,6 @@ export function useDefiLlama(): DefiLlamaData {
 
   useEffect(() => {
     let cancelled = false;
-
-    try {
-      if (typeof window !== 'undefined') {
-        const raw = window.localStorage.getItem(CACHE_KEY);
-        if (raw) {
-          const c = JSON.parse(raw);
-          if (c && c.lastUpdated) {
-            const age = Date.now() - Date.parse(c.lastUpdated);
-            if (age < 60 * 1000) {
-              const interval = setInterval(() => fetchAll(), 10 * 60 * 1000);
-              return () => { cancelled = true; clearInterval(interval); };
-            }
-          }
-        }
-      }
-    } catch {}
 
     async function fetchAll() {
       const tvl: Record<string, number> = {};
@@ -135,12 +91,15 @@ export function useDefiLlama(): DefiLlamaData {
         if (resp.ok) {
           const protocols = await resp.json();
           const slugMap = new Map<string, number>();
-          for (const p of protocols) {
-            if (p.slug && p.tvl) slugMap.set(p.slug, p.tvl);
+          if (Array.isArray(protocols)) {
+            for (const p of protocols) {
+              const v = solanaTvl(p);
+              if (p?.slug && v > 0) slugMap.set(p.slug, v);
+            }
           }
-          for (const [name, slugs] of Object.entries(TVL_SLUGS)) {
+          for (const [name, list] of Object.entries(TVL_SLUGS)) {
             let total = 0;
-            for (const slug of slugs) total += slugMap.get(slug) || 0;
+            for (const slug of list) total += slugMap.get(slug) || 0;
             if (total > 0) tvl[name] = total;
           }
           ok = Object.keys(tvl).length > 0;
@@ -151,7 +110,7 @@ export function useDefiLlama(): DefiLlamaData {
         const resp = await fetch(`${LLAMA_BASE}/overview/dexs/solana?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true`);
         if (resp.ok) {
           const dex = await resp.json();
-          if (dex.protocols) {
+          if (Array.isArray(dex?.protocols)) {
             for (const [name, slug] of Object.entries(DEX_SLUGS)) {
               const found = dex.protocols.find((p: any) =>
                 p.name?.toLowerCase() === slug.toLowerCase() ||
@@ -167,7 +126,7 @@ export function useDefiLlama(): DefiLlamaData {
       if (cancelled) return;
 
       if (ok) {
-        const fresh: DefiLlamaData = { tvl, volume24h, lastUpdated: new Date().toISOString(), loading: false };
+        const fresh: DefiLlamaData = { tvl, volume24h, lastUpdated: new Date().toISOString(), loading: false, source: 'live' };
         setData(fresh);
         writeCache(fresh);
       } else {
@@ -181,6 +140,14 @@ export function useDefiLlama(): DefiLlamaData {
   }, []);
 
   return data;
+}
+
+// Honest provenance label for TVL figures: "Live from DeFiLlama" only after a successful fetch in
+// this session, otherwise "Snapshot from DeFiLlama" with the date it was taken.
+export function tvlSourceLabel(d: DefiLlamaData): string {
+  if (d.source === 'live') return 'Live from DeFiLlama';
+  const date = d.lastUpdated ? d.lastUpdated.slice(0, 10) : null;
+  return `Snapshot from DeFiLlama${date ? `, ${date}` : ''}`;
 }
 
 export function formatTvlDisplay(tvl: number | undefined): string | null {

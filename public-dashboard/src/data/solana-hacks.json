@@ -196,7 +196,7 @@
       "category": "contract",
       "rootCause": "Borrowed USDC was routed through an attacker-created illiquid TUNA/USDC pool; the swap returned a negligible amount of TUNA so the position's total assets rounded down to zero, the solvency check read the position as healthy, and the USDC was withdrawn through attacker-controlled liquidity positions",
       "recovered": "none",
-      "recoveryNote": "Team stated the vector was identified and mitigated and that it was working to recover funds; a matching deficit was left in the USDC lending pool",
+      "recoveryNote": "Losses were socialised across all USDC lending pool depositors; withdrawals reopened for affected lenders on 28 July 2026, per DefiTuna",
       "affectedProtocols": [],
       "link": "https://cryptobriefing.com/defituna-lending-pools-exploited-580k/"
     },

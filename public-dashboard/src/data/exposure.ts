@@ -41,8 +41,8 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     name: 'Kamino', tvl: '$1.6B',
     description: 'Lending protocol. Deposits are lent to borrowers. Liquidations flow through Jupiter Agg, which routes volume through both public DEXs and proprietary AMMs.',
     oracles: [
-      { name: 'Scope (aggregator)', role: 'Primary oracle aggregator (Pyth + Chainlink + Switchboard + RedStone)', governance: 'Kamino internal', timelock: 'N/A', activeVoters: 'External', configChanges: 0 },
-      { name: 'Switchboard', role: 'Feed into Scope aggregator', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Zero active voters in 90 days' },
+      { name: 'Scope (aggregator)', role: 'Primary oracle aggregator; Kamino docs describe it cross-validating Chainlink Data Streams and Pyth Pro', governance: 'Kamino internal', timelock: 'N/A', activeVoters: 'External', configChanges: 0 },
+      { name: 'Switchboard', role: 'Feed into Scope aggregator', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Switchboard announced a wind-down on 18 Sep 2026: implementations deprecated, support ends 25 Sep 2026' },
     ],
     collateral: [
       { name: 'JitoSOL', role: 'Accepted as collateral', governance: 'Jito DAO (immutable)', timelock: 'N/A', activeVoters: 'External', configChanges: 0 },
@@ -63,7 +63,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     description: 'Perpetual trading protocol. Funds sit in vaults that counterparty against traders. On-chain analysis shows 58% of transactions involve Voltr (yield vault protocol, Squads V4 governance).',
     oracles: [
       { name: 'Pyth', role: 'Primary price feed', governance: '13/19 Wormhole guardians', timelock: 'Guardian consensus', activeVoters: '19 guardians on-chain', configChanges: 0 },
-      { name: 'Switchboard', role: 'Backup price feed', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Zero active voters' },
+      { name: 'Switchboard', role: 'Backup price feed', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Switchboard announced a wind-down on 18 Sep 2026: implementations deprecated, support ends 25 Sep 2026' },
     ],
     collateral: [
       { name: 'USDC', role: 'Primary collateral', governance: 'Circle (regulated)', timelock: 'Legal process', activeVoters: 'External', configChanges: 0 },
@@ -131,7 +131,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     description: 'Lending protocol, formerly marginfi. Project 0 took over operations Sep 2025 and retained the same Squads V4 multisig and on-chain programs. Deposits are lent to borrowers. Third-party liquidators handle liquidations.',
     oracles: [
       { name: 'Pyth', role: 'Primary oracle', governance: '13/19 Wormhole guardians', timelock: 'Guardian consensus', activeVoters: '19 guardians on-chain', configChanges: 0 },
-      { name: 'Switchboard', role: 'Oracle for unsupported assets', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Zero active voters in 90 days' },
+      { name: 'Switchboard', role: 'Oracle for unsupported assets', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Switchboard announced a wind-down on 18 Sep 2026 (support ends 25 Sep 2026); Project 0 program 0.1.11 adds oracle setups that do not depend on Switchboard' },
     ],
     collateral: [
       { name: 'USDC', role: 'Primary collateral', governance: 'Circle (regulated)', timelock: 'Legal process', activeVoters: 'External', configChanges: 0 },
@@ -255,7 +255,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'Switchboard': {
     name: 'Switchboard',
-    description: 'Oracle network. Provides price feeds to other protocols.',
+    description: 'Oracle network. Announced a wind-down on 18 September 2026: all implementations deprecated, remaining support ends 25 September 2026.',
     oracles: [],
     collateral: [],
     routing: [],
@@ -381,7 +381,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     description: 'Liquid staking. mSOL is used as collateral across Kamino, Project 0, Drift, Jupiter Lend, and Save. mSOL price derived from Pyth and Switchboard.',
     oracles: [
       { name: 'Pyth', role: 'mSOL price feed', governance: '13/19 Wormhole guardians', timelock: 'Guardian consensus', activeVoters: '19 guardians on-chain', configChanges: 0 },
-      { name: 'Switchboard', role: 'mSOL price feed', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Zero active voters in 90 days' },
+      { name: 'Switchboard', role: 'mSOL price feed', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Switchboard announced a wind-down on 18 Sep 2026: implementations deprecated, support ends 25 Sep 2026' },
     ],
     collateral: [],
     routing: [],
@@ -408,7 +408,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
     description: 'Lending protocol. Single signer governance. Receives routed funds from Lulo and Meteora Dynamic Vaults.',
     oracles: [
       { name: 'Pyth', role: 'Primary price feed', governance: '13/19 Wormhole guardians', timelock: 'Guardian consensus', activeVoters: '19 guardians on-chain', configChanges: 0 },
-      { name: 'Switchboard', role: 'Backup feed', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Zero active voters in 90 days' },
+      { name: 'Switchboard', role: 'Backup feed', governance: '3/7', timelock: 'None', activeVoters: '0/7', configChanges: 7, note: 'Switchboard announced a wind-down on 18 Sep 2026: implementations deprecated, support ends 25 Sep 2026' },
     ],
     collateral: [
       { name: 'USDC', role: 'Collateral', governance: 'Circle (regulated)', timelock: 'Legal process', activeVoters: 'External', configChanges: 0 },

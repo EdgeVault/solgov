@@ -1,148 +1,127 @@
 {
-  "asOf": "2026-06-09T12:07:56.279Z",
+  "asOf": "2026-09-16T13:28:29.592Z",
   "snapshots": {
     "Orca": {
       "mint": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
       "symbol": "ORCA",
-      "fetchedAt": "2026-06-09T11:40:05.352Z",
-      "supply": "74999553894537",
-      "uiSupply": 74999553.894537,
+      "fetchedAt": "2026-09-16T13:28:48.671Z",
+      "supply": "74999536933292",
+      "uiSupply": 74999536.933292,
       "decimals": 6,
       "mintAuthority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
       "mintAuthorityCustody": "squads-v4",
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 2052840.2000000004,
+      "priceUsd": 1.3001381813122037,
+      "marketCapUsd": 97509761.54770772,
+      "dexLiquidityUsd": 2215387.3099999996,
       "dexPairCount": 30,
-      "dexVolume24h": 517058.9600000001,
+      "dexVolume24h": 618751.12,
       "topHolders": [
         {
           "address": "5ooCx5vKiV2ZxAEKNNHAJjAJ7BARfLUZPGvgiApZjgFD",
           "owner": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
           "amount": "14200768337139",
           "uiAmount": 14200768.337139,
-          "pctOfSupply": 18.934470406461166,
+          "pctOfSupply": 18.934474688516822,
           "ownerCustody": "single-key",
-          "identityName": "Orca Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "AM1tQFm9YCFZaqU69iX6zg5Sy9RQRxGrU6Pp9od22pb4",
-          "usdValue": 14534508.177653028,
-          "priceImpactPct": 96.05903242347836
+          "usdValue": 18462961.119083825,
+          "priceImpactPct": 96.30963386812854
         },
         {
           "address": "Ce5j11WAsSzM3nkzrw4Kw6v6ic3nbyqpv5eywjYKeKc5",
           "owner": "CSqKhyW1cpdyjheAx5HXx4ibcnYrzpL5JywEMAkZixBK",
-          "amount": "7518111705600",
-          "uiAmount": 7518111.7056,
-          "pctOfSupply": 10.024208565522711,
+          "amount": "8633162356594",
+          "uiAmount": 8633162.356594,
+          "pctOfSupply": 11.51095421332098,
           "ownerCustody": "program-pda",
-          "funder": "94kZD71sbTKhqhcvY9D9Ra5BsLzKRZgznbBbQpBWmKrT",
-          "usdValue": 7694798.863789294,
-          "priceImpactPct": 92.15762676488987
+          "usdValue": 11224304.005275102,
+          "priceImpactPct": 93.40295937069547
         },
         {
           "address": "3YzoJK4pS8Urmd6PZtj16BMBVtc8eepk3MLs6LYtrArV",
           "owner": "DbfGbmN89NGpXoEyuNj49tn29XTAr9Tw7y29bBnsJ74v",
-          "amount": "6337699994105",
-          "uiAmount": 6337699.994105,
-          "pctOfSupply": 8.45031692190724,
+          "amount": "4595508919491",
+          "uiAmount": 4595508.919491,
+          "pctOfSupply": 6.127383057816017,
           "ownerCustody": "single-key",
-          "identityName": "Upbit Hot Wallet",
-          "identityTags": [],
-          "funder": "82s3CRh3PwEakgzCTi3ZYK4akVikwgwTFmh8Ps3rYfRj",
-          "usdValue": 6486645.666271672,
-          "priceImpactPct": 90.94870936250429
+          "usdValue": 5974796.608791038,
+          "priceImpactPct": 88.89003794586421
         },
         {
           "address": "3qPbC7P9baPCXxz2Duqk2Qmbj21ap8pRRbRY8sfobKje",
           "owner": "5Je5sHZL5HrF8YDiwZDbpnsRSzzbeNYAjQSx4e2U5Uxd",
-          "amount": "4048206787747",
-          "uiAmount": 4048206.787747,
-          "pctOfSupply": 5.397641155892092,
+          "amount": "3960466117747",
+          "uiAmount": 3960466.117747,
+          "pctOfSupply": 5.2806540942641,
           "ownerCustody": "single-key",
-          "funder": "4XrVmNt99A25er51YNiZQujH3RFRjRTvmdEf7dbnpXF1",
-          "usdValue": 4143345.85738291,
-          "priceImpactPct": 86.05784595872962
-        },
-        {
-          "address": "BwzWKw33iBQin9E8HwFgevCeMByioZCvoZFk7uN433ft",
-          "owner": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
-          "amount": "3383891158522",
-          "uiAmount": 3383891.158522,
-          "pctOfSupply": 4.51188171503042,
-          "ownerCustody": "single-key",
-          "identityName": "Binance Hot Wallet 2",
-          "identityTags": [],
-          "funder": "2ojv9BAiHUrvsm9gxDe7fJSzbNZSJcxZvf8dqmWGHG8S",
-          "funderName": "Binance Hot Wallet 1",
-          "usdValue": 3463417.791782288,
-          "priceImpactPct": 83.95958468171493
+          "usdValue": 5149153.215476189,
+          "priceImpactPct": 86.544616307989
         },
         {
           "address": "2NUxDnrNAUuPAmzHoCS2pFsRt9u5gFhdJTAHyfhj9mwp",
           "owner": "Fue5m7uwemAhv1uyPSC44hd6UpBgAkubxiFCvBGmc8Ah",
           "amount": "3157630871888",
           "uiAmount": 3157630.871888,
-          "pctOfSupply": 4.210199538424192,
+          "pctOfSupply": 4.210200490566416,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Prime Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 3231840.0413193484,
-          "priceImpactPct": 83.07115455942011
+          "usdValue": 4105356.4590317323,
+          "priceImpactPct": 83.98725266786322
         },
         {
           "address": "6wfrMMr9BAuEXHK7u93vxTDnzWJfHSURXJeN5HYFhkKi",
           "owner": "7NQr63ojGTySSaPqD8w3bQ7pTFk4TdmvYGVjZzNtfwML",
           "amount": "3000000010001",
           "uiAmount": 3000000.010001,
-          "pctOfSupply": 4.000023805767626,
+          "pctOfSupply": 4.0000247103783275,
           "ownerCustody": "single-key",
-          "funder": "H8sMJSCQxfKiFTCfDR3DUMLPwcRbM61LGFJ8N4dK3WjS",
-          "funderName": "Coinbase Hot Wallet 12",
-          "usdValue": 3070504.6123654614,
-          "priceImpactPct": 82.41366192558533
+          "usdValue": 3900414.556939293,
+          "priceImpactPct": 83.35228598406643
+        },
+        {
+          "address": "BwzWKw33iBQin9E8HwFgevCeMByioZCvoZFk7uN433ft",
+          "owner": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
+          "amount": "2832923633794",
+          "uiAmount": 2832923.633794,
+          "pctOfSupply": 3.7772548333381457,
+          "ownerCustody": "single-key",
+          "usdValue": 3683192.1810372905,
+          "priceImpactPct": 81.78239786881699
+        },
+        {
+          "address": "AUqYKdvujquu6tTJD2URFwNH8k3ubhWdSQZsRr559eGm",
+          "owner": "6FmYt5Pfw2jUyKiLdYvA5sCjqf5rc2RZMXyqKxzFMQ9F",
+          "amount": "1739918791940",
+          "uiAmount": 1739918.79194,
+          "pctOfSupply": 2.319906046203409,
+          "ownerCustody": "unknown",
+          "usdValue": 2262134.853783798,
+          "priceImpactPct": 72.64559638668402
         },
         {
           "address": "ED41P14GFhHSA223RuqMfCd8D1s1WQHnwfVSNdY2KFi9",
           "owner": "HEzBty781Xrow7wMcxTmCVV93pYZYfHWpd4kSMBcqAQ6",
           "amount": "1650785538613",
           "uiAmount": 1650785.538613,
-          "pctOfSupply": 2.201060476885375,
+          "pctOfSupply": 2.201060974658129,
           "ownerCustody": "single-key",
-          "funder": "vNNgyy8Y22xMWcEMmgGM2KoJMH3d3XBxJNQk1EJ7jVv",
-          "funderName": "Meteora OTC Scammer 1",
-          "usdValue": 1689581.5311466379,
-          "priceImpactPct": 70.49546638373879
+          "usdValue": 2146249.3079087925,
+          "priceImpactPct": 71.68150215740584
         },
         {
           "address": "CofxNB5kJzLF8iTwe4Wb7SZQaoukRy4J5vz6aoREoRdi",
           "owner": "AuVBa5BkKaxWNTn66GwE2MR7LtnYoFioWQcr1VTcej44",
           "amount": "1650785538613",
           "uiAmount": 1650785.538613,
-          "pctOfSupply": 2.201060476885375,
+          "pctOfSupply": 2.201060974658129,
           "ownerCustody": "unknown",
-          "usdValue": 1689581.5311466379,
-          "priceImpactPct": 70.49270224208955
-        },
-        {
-          "address": "4rqFqGzqqi5niiiRFqAXy25cjiJ5pto2DL68WK6xRMzu",
-          "owner": "CdzS4f8yvEpDkGmU2pMzrdmxDmVkz52MP48j2yvEHSsH",
-          "amount": "1650785538613",
-          "uiAmount": 1650785.538613,
-          "pctOfSupply": 2.201060476885375,
-          "ownerCustody": "unknown",
-          "usdValue": 1689581.5311466379,
-          "priceImpactPct": 70.49754814105053
+          "usdValue": 2146249.3079087925,
+          "priceImpactPct": 71.68180695992021
         }
       ],
       "fundingClusters": [],
       "summary": {
-        "topNPct": 62.131923539661564,
+        "topNPct": 60.56297408372047,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -154,178 +133,120 @@
           "single-key": 7,
           "unknown": 2
         },
-        "namedCount": 3
-      },
-      "priceUsd": 1.0235015340431408,
-      "marketCapUsd": 76762158.46360984
+        "namedCount": 0
+      }
     },
     "Drift": {
       "mint": "DriFtupJYLTosbwoN8koMbEYSx54aFAVLddWsbksjwg7",
       "symbol": "DRIFT",
-      "fetchedAt": "2026-06-09T11:40:28.636Z",
-      "supply": "999998442034761",
-      "uiSupply": 999998442.034761,
+      "fetchedAt": "2026-09-16T13:29:02.205Z",
+      "supply": "999998370202325",
+      "uiSupply": 999998370.202325,
       "decimals": 6,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 63927.490000000005,
-      "dexPairCount": 22,
-      "dexVolume24h": 58145.39999999999,
+      "priceUsd": 0.01111470543862959,
+      "marketCapUsd": 11114687.323908508,
+      "dexLiquidityUsd": 28275.700000000004,
+      "dexPairCount": 20,
+      "dexVolume24h": 28327.070000000003,
       "topHolders": [
         {
           "address": "9kC8aNZxao9yxVxVjCnhXjiBsbeczq85n4QJrrjbyED8",
           "owner": "9Wiiyvy8zzbZmJwxevi5CHZKs2VSZW7fvJJjrixviLA6",
-          "amount": "238724783209837",
-          "uiAmount": 238724783.209837,
-          "pctOfSupply": 23.87251551353304,
+          "amount": "244924883209837",
+          "uiAmount": 244924883.209837,
+          "pctOfSupply": 24.492528238849278,
           "ownerCustody": "single-key",
-          "funder": "9bfCKWXrNTVx2h2svuhTfU6H4JvbpKep7znomgPNvzuw",
-          "usdValue": 3799771.0095180585,
-          "priceImpactPct": 99.27811609284151
-        },
-        {
-          "address": "BKiCWzmQBWeqgzQuZTcoSGZsB33HhDZGZvYyqozYT2kT",
-          "owner": "Am8MAEorCMAKxphqjAz3Ff59NEwPm4W2eS3DQLi2B4hg",
-          "amount": "85949333431644",
-          "uiAmount": 85949333.431644,
-          "pctOfSupply": 8.594946733792643,
-          "ownerCustody": "single-key",
-          "funder": "hTvwKr1RvQdPS5xiWfXM2UZYuF55Ei8zzsuB7e58feu",
-          "usdValue": 1368051.448491187,
-          "priceImpactPct": 97.99463328607492
+          "usdValue": 2722267.9314680924
         },
         {
           "address": "FhsHxHdqqgvepb8b6rLnrS7KbngFX3DCLkkwgF51cYGq",
           "owner": "5LZkATrLwHYCQj2YuVbjjgsDZzBk6YfL4pFQRJmtboT2",
-          "amount": "80868439009154",
-          "uiAmount": 80868439.009154,
-          "pctOfSupply": 8.08685649995672,
+          "amount": "73189190597123",
+          "uiAmount": 73189190.597123,
+          "pctOfSupply": 7.318930988089008,
           "ownerCustody": "single-key",
-          "identityName": "Bybit Hot Wallet 4",
-          "identityTags": [
-            "Bitkub Deposit"
-          ],
-          "funder": "AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2",
-          "funderName": "Bybit Hot Wallet 1",
-          "usdValue": 1287179.093851621,
-          "priceImpactPct": 97.86880335947406
+          "usdValue": 813476.2947787406
         },
         {
-          "address": "DYvHf9SvzRoSAXGc2sp6bTGmyJMV8MiEWH6PWB1syKHo",
-          "owner": "7LCwgH3TtA7v9jvPoU3zHhRUCgd2XNCdAwQSjBPDzFQ6",
-          "amount": "36900054000000",
-          "uiAmount": 36900054,
-          "pctOfSupply": 3.6900111489091016,
+          "address": "28nohZoGjtvzpbVhLewYGjyrPdPCennubHTYwZWfXT6B",
+          "owner": "5wHTJGeiVDpGDCFxkmGGxY2PG5WEVoNzKX8MzNBesKsd",
+          "amount": "47162034852064",
+          "uiAmount": 47162034.852064,
+          "pctOfSupply": 4.716211171676402,
           "ownerCustody": "single-key",
-          "identityName": "Drift C Community Wallet Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "3Ld1UdEiEr3K5hTB4fucHJaBv6UPsjb7f9XTmoPh8L9H",
-          "usdValue": 587336.402838435,
-          "priceImpactPct": 95.3294577827574
+          "usdValue": 524192.125267074
+        },
+        {
+          "address": "BKiCWzmQBWeqgzQuZTcoSGZsB33HhDZGZvYyqozYT2kT",
+          "owner": "Am8MAEorCMAKxphqjAz3Ff59NEwPm4W2eS3DQLi2B4hg",
+          "amount": "41820818445285",
+          "uiAmount": 41820818.445285,
+          "pctOfSupply": 4.182088660486875,
+          "ownerCustody": "single-key",
+          "usdValue": 464826.07822174986
+        },
+        {
+          "address": "HzRbC9xqYtznGNaM8xuSjSr1yAfvoEVB5Xw3HfBbShbU",
+          "owner": "u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w",
+          "amount": "34179000194816",
+          "uiAmount": 34179000.194816,
+          "pctOfSupply": 3.417905589976184,
+          "ownerCustody": "single-key",
+          "usdValue": 379889.5193522432
         },
         {
           "address": "51qJ8nzigTCYgj12V8c6Fkm2yzz9VijTmGub4hQzArCN",
           "owner": "EPpctwZpP7LE61Xkpbb9ixfxMFD8fFAxewe7dTk6dg1M",
           "amount": "25846871809551",
           "uiAmount": 25846871.809551,
-          "pctOfSupply": 2.584691207814155,
+          "pctOfSupply": 2.584691393479124,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 411403.4281155208,
-          "priceImpactPct": 93.33149738127395
-        },
-        {
-          "address": "5ds2A6556hfJFWYy3tk3gB41Xt5yVPpjvomCQndRzyKz",
-          "owner": "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
-          "amount": "22518271791274",
-          "uiAmount": 22518271.791274,
-          "pctOfSupply": 2.251830687401335,
-          "ownerCustody": "single-key",
-          "identityName": "Kraken Hot Wallet 1",
-          "identityTags": [],
-          "funder": "FWznbcNXWQuHTawe9RxvQ2LdCENssh12dsznf4RiouN5",
-          "funderName": "Kraken Hot Wallet",
-          "usdValue": 358422.2600873449,
-          "priceImpactPct": 92.34430860874589
+          "usdValue": 287280.36667317833
         },
         {
           "address": "EK7MVK4LgKJL2fTU75fs1RapVDR188ZPy4a3ddNVkDXr",
           "owner": "DemTRm4sQbLxMywg9XST9TMYRmXfwNH6CCfiU4xb47kR",
           "amount": "22257547900000",
           "uiAmount": 22257547.9,
-          "pctOfSupply": 2.225758257653996,
+          "pctOfSupply": 2.2257584175358938,
           "ownerCustody": "single-key",
-          "identityName": "Champ MS #1 Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "3gdRrVu5hVp8NRAJ1gnJDvwMYxYrij65QyrtHqgdtdBe",
-          "usdValue": 354272.3303220684,
-          "priceImpactPct": 92.26257551233601
+          "usdValue": 247386.0886946886
         },
         {
-          "address": "28nohZoGjtvzpbVhLewYGjyrPdPCennubHTYwZWfXT6B",
-          "owner": "5wHTJGeiVDpGDCFxkmGGxY2PG5WEVoNzKX8MzNBesKsd",
-          "amount": "20332554808759",
-          "uiAmount": 20332554.808759,
-          "pctOfSupply": 2.0332586486221964,
+          "address": "CX6XvRkQpFxaiBFWb1XTFL1VeH14gvX6wW121nbiiGPy",
+          "owner": "2UL8hbNaoErAYNePqgQYPP9yDCDRZGWbzKW4krLqkhNL",
+          "amount": "20212842120144",
+          "uiAmount": 20212842.120144,
+          "pctOfSupply": 2.0212875063040783,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 323632.30693082005,
-          "priceImpactPct": 91.53331241231729
+          "usdValue": 224659.78624292577
         },
         {
-          "address": "HzRbC9xqYtznGNaM8xuSjSr1yAfvoEVB5Xw3HfBbShbU",
-          "owner": "u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w",
-          "amount": "19929604406709",
-          "uiAmount": 19929604.406709,
-          "pctOfSupply": 1.9929635456388268,
+          "address": "5ds2A6556hfJFWYy3tk3gB41Xt5yVPpjvomCQndRzyKz",
+          "owner": "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
+          "amount": "18546667691598",
+          "uiAmount": 18546667.691598,
+          "pctOfSupply": 1.8546697918963146,
           "ownerCustody": "single-key",
-          "identityName": "Gate Hot Wallet",
-          "identityTags": [],
-          "funder": "7cvkjYAkUYs4W8XcXsca7cBrEGFeSUjeZmKoNBvEwyri",
-          "funderName": "Non-circulating Supply List 35",
-          "usdValue": 317218.56456441735,
-          "priceImpactPct": 91.35098066001224
+          "usdValue": 206140.74826025998
         },
         {
-          "address": "9EzLvGf4m7drJCoEdaLoC4D8uYux6tuM1EdtGV4YCEcS",
-          "owner": "JCNCMFXo5M5qwUPg2Utu1u6YWp3MbygxqBsBeXXJfrw",
-          "amount": "19103797344162",
-          "uiAmount": 19103797.344162,
-          "pctOfSupply": 1.9103827107260565,
+          "address": "14nj9Zi3WiuDtm13URaqnavPx7rT9VyfvFd43Wyb7Bm7",
+          "owner": "AVPKzX2QZ8E23SWR728yhMTnnqr9UjAZdgemfaE3qHg5",
+          "amount": "18335311324000",
+          "uiAmount": 18335311.324,
+          "pctOfSupply": 1.833534120689647,
           "ownerCustody": "single-key",
-          "identityName": "Drift Vault",
-          "identityTags": [],
-          "usdValue": 304074.23286357673,
-          "priceImpactPct": 90.97771352769614
+          "usdValue": 203791.58449182953
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "holderOwners": [
-            "EPpctwZpP7LE61Xkpbb9ixfxMFD8fFAxewe7dTk6dg1M",
-            "5wHTJGeiVDpGDCFxkmGGxY2PG5WEVoNzKX8MzNBesKsd"
-          ],
-          "count": 2
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 57.24321495404807,
+        "topNPct": 54.64760587898281,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -337,157 +258,120 @@
           "single-key": 10,
           "unknown": 0
         },
-        "namedCount": 6
-      },
-      "priceUsd": 0.01591695239357739,
-      "marketCapUsd": 15916927.59551885
+        "namedCount": 0
+      }
     },
     "Kamino": {
       "mint": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
       "symbol": "KMNO",
-      "fetchedAt": "2026-06-09T11:40:54.596Z",
-      "supply": "9999957987088855",
-      "uiSupply": 9999957987.088856,
+      "fetchedAt": "2026-09-16T13:29:16.956Z",
+      "supply": "9999956822497190",
+      "uiSupply": 9999956822.49719,
       "decimals": 6,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 1211276.8800000001,
+      "priceUsd": 0.024884712391943477,
+      "marketCapUsd": 248846049.45969555,
+      "dexLiquidityUsd": 1937778.1400000001,
       "dexPairCount": 30,
-      "dexVolume24h": 93642.91999999998,
+      "dexVolume24h": 1701944.75,
       "topHolders": [
         {
           "address": "7iu1kuYkDoVez1mxmARXvrYgngjew7bLzUpPugone86r",
           "owner": "GvXkGJiAnGv9wBW6XTD9ALYNFWsjJhQ4aA3NBbAEiRVU",
-          "amount": "2209505884409317",
-          "uiAmount": 2209505884.409317,
-          "pctOfSupply": 22.09515167225756,
+          "amount": "2064505884409367",
+          "uiAmount": 2064505884.409367,
+          "pctOfSupply": 20.64514798468718,
           "ownerCustody": "single-key",
-          "identityName": "Kamino Issuer Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "F8JF9hBDmXWkffvZfTqvTWt3zTC9T8PBKz6AeFL5VjuG",
-          "usdValue": 33208407.51442196
+          "usdValue": 51374635.165002
         },
         {
           "address": "5xpGE38rm4ZqAgQiuocqkw6cM6Cwrwvx6BVJk6i2oKhv",
           "owner": "Ec6MuWtpvFcVyMsp7vipKCg1CMkKrWHZpWPdnJF16G57",
-          "amount": "589990708348303",
-          "uiAmount": 589990708.348303,
-          "pctOfSupply": 5.899931870814375,
+          "amount": "617596381256758",
+          "uiAmount": 617596381.256758,
+          "pctOfSupply": 6.1759904789522055,
           "ownerCustody": "single-key",
-          "identityName": "Kamino KMNO Vault Authority",
-          "identityTags": [],
-          "usdValue": 8867435.932532383
+          "usdValue": 15368708.321879493
         },
         {
           "address": "4BeJsBKuqaS8dgAPoQx3XiLbCB15w3tGM6VeUcYs1pEz",
           "owner": "8civ8uAA4RMY8Ho6DmJzgatAqutsRDL4hkmmCXtxZ8ew",
           "amount": "565681470000001",
           "uiAmount": 565681470.000001,
-          "pctOfSupply": 5.656838466025193,
+          "pctOfSupply": 5.656839124818731,
           "ownerCustody": "single-key",
-          "funder": "6fQu8HCjX9RAvijL6CFhLccD2BV2JgkMCeQRtRCBciKM",
-          "funderName": "Anchorage Digital Gas Supply",
-          "usdValue": 8502073.206353702
+          "usdValue": 14076820.686401825
         },
         {
           "address": "GhorMarryQw8g7wu7yh7JUr8mXAoGRcwQwm2msMjEUAr",
           "owner": "4x3uU27N1cfmBx8JerY13ZzdNxgmgQdiZUSFZQHbhe1B",
           "amount": "400000001000000",
           "uiAmount": 400000001,
-          "pctOfSupply": 4.000016815235103,
+          "pctOfSupply": 4.000017281075739,
           "ownerCustody": "single-key",
-          "funder": "EUJqnixJ8YPSE3Sq25KgPGCE396Nn2uKMdSvwN947Mw8",
-          "usdValue": 6011915.665265733
+          "usdValue": 9953884.981662104
         },
         {
           "address": "5KsuKWDkcshdMFt6DcuVbeEwFBrYpYyUUtTusGHh7SCo",
           "owner": "4uD7K6KCFfAWoeJVeDKk2V5fuRd8X4Y926cAqeoAhD8N",
           "amount": "367000001000001",
           "uiAmount": 367000001.000001,
-          "pctOfSupply": 3.6700154288032207,
+          "pctOfSupply": 3.670015856212004,
           "ownerCustody": "single-key",
-          "funder": "6fQu8HCjX9RAvijL6CFhLccD2BV2JgkMCeQRtRCBciKM",
-          "funderName": "Anchorage Digital Gas Supply",
-          "usdValue": 5515932.624121283
+          "usdValue": 9132689.472727994
         },
         {
           "address": "DKFYwevMPn76ts7vw5dZC64yj4qRbEfd1ZTDRnbF7FKZ",
           "owner": "6EyjmmTYdAEyoLN1eTynuGvQPRq8mR4HKrW9uBqWqi7N",
           "amount": "333333333000000",
           "uiAmount": 333333333,
-          "pctOfSupply": 3.3333473343625375,
+          "pctOfSupply": 3.333347722563066,
           "ownerCustody": "single-key",
-          "funder": "3wSV9qSLATBQsnRgxvYac47rTJppzNHYvKPqrDHNgwxi",
-          "usdValue": 5009929.703520023
+          "usdValue": 8294904.122352921
         },
         {
           "address": "CxKsbi2MHasL4bPk2aMajYxeS8bBbt6RrprDTN9kqJst",
           "owner": "G2VtFJ9P5P7qjz5bcfwVQw6DGJ2sYBUTXf7npQy5PZ2R",
           "amount": "330294545000000",
           "uiAmount": 330294545,
-          "pctOfSupply": 3.3029593266936703,
+          "pctOfSupply": 3.302959711355222,
           "ownerCustody": "single-key",
-          "funder": "7HSQk5DLVYfYGM9kq1LvWueJHRGxN1o8xT2EBtF4jkU",
-          "usdValue": 4964257.3606826505
+          "usdValue": 8219284.756952832
         },
         {
           "address": "TMUrx3993fAb26F2NfdcKrEWACgc5oEW15x6i1SXnTv",
           "owner": "Ad29ikw7DwEEbFTW6LEDVNC3cxGrNdsY4r276FAeT1Dt",
           "amount": "255251141297361",
           "uiAmount": 255251141.297361,
-          "pctOfSupply": 2.5525221368621827,
+          "pctOfSupply": 2.5525224341280675,
           "ownerCustody": "single-key",
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 3836370.827765477
-        },
-        {
-          "address": "Ezms1kVcqVsiruJvZrtX8qfEa2DLEC1TRvK5NqxHNEM4",
-          "owner": "AGzZas78FXZkH8FrUW3x54h639fbfT1PhBA6SLbY5tTi",
-          "amount": "250000000010000",
-          "uiAmount": 250000000.01,
-          "pctOfSupply": 2.5000105033719136,
-          "ownerCustody": "single-key",
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 3757447.2815477625
+          "usdValue": 6351851.238900155
         },
         {
           "address": "6RphkdeGKKNe4M2ukFWiGVd11oSCsiQwGowH8fKpNfLm",
           "owner": "6AapP9rsXMsNTJEMbKUatmzLeYwkZSJWd84c6PLBJNvK",
           "amount": "240000001000000",
           "uiAmount": 240000001,
-          "pctOfSupply": 2.400010093141079,
+          "pctOfSupply": 2.400010372645461,
           "ownerCustody": "unknown",
-          "usdValue": 3607149.405171355
-        }
-      ],
-      "fundingClusters": [
-        {
-          "funder": "6fQu8HCjX9RAvijL6CFhLccD2BV2JgkMCeQRtRCBciKM",
-          "funderName": "Anchorage Digital Gas Supply",
-          "holderOwners": [
-            "8civ8uAA4RMY8Ho6DmJzgatAqutsRDL4hkmmCXtxZ8ew",
-            "4uD7K6KCFfAWoeJVeDKk2V5fuRd8X4Y926cAqeoAhD8N"
-          ],
-          "count": 2
+          "usdValue": 5972330.998951147
         },
         {
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "holderOwners": [
-            "Ad29ikw7DwEEbFTW6LEDVNC3cxGrNdsY4r276FAeT1Dt",
-            "AGzZas78FXZkH8FrUW3x54h639fbfT1PhBA6SLbY5tTi"
-          ],
-          "count": 2
+          "address": "8NUHjaRbxufXh6fNxYYdiS5SG8ADDjhdfQV3XTpNXxie",
+          "owner": "G9bARD4KGGgt7dJRWQf9PTz69ndQJKkEJdg3c6NXGmTD",
+          "amount": "224593489957223",
+          "uiAmount": 224593489.957223,
+          "pctOfSupply": 2.245944597000145,
+          "ownerCustody": "single-key",
+          "usdValue": 5588944.40268834
         }
       ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 55.41080364756682,
+        "topNPct": 53.982795563437826,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -499,176 +383,120 @@
           "single-key": 9,
           "unknown": 1
         },
-        "namedCount": 2
-      },
-      "priceUsd": 0.01502978912558986,
-      "marketCapUsd": 150297259.81070355
+        "namedCount": 0
+      }
     },
     "Magic Eden": {
       "mint": "MEFNBXixkEbait3xn9bkm8WsJzXtVsaJEn4c8Sam21u",
       "symbol": "ME",
-      "fetchedAt": "2026-06-09T11:41:24.955Z",
-      "supply": "999990916392116",
-      "uiSupply": 999990916.392116,
+      "fetchedAt": "2026-09-16T13:29:31.942Z",
+      "supply": "999990248828116",
+      "uiSupply": 999990248.828116,
       "decimals": 6,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 397085.4000000001,
-      "dexPairCount": 30,
-      "dexVolume24h": 66181.01,
+      "priceUsd": 0.06038380163764852,
+      "marketCapUsd": 60383212.82481974,
+      "dexLiquidityUsd": 467676.16,
+      "dexPairCount": 17,
+      "dexVolume24h": 68747.51,
       "topHolders": [
         {
           "address": "GC9peXepLy1bBmrF2PrLACaQHvSrtjKEPRgy33seF5id",
           "owner": "32WMXy2CjmgweedFaUuNVHj6yM3DyVWH6eLQ4g2PHzkw",
-          "amount": "200644729806568",
-          "uiAmount": 200644729.806568,
-          "pctOfSupply": 20.06465524011733,
+          "amount": "224877613723951",
+          "uiAmount": 224877613.723951,
+          "pctOfSupply": 22.487980656559806,
           "ownerCustody": "single-key",
-          "identityName": "Upbit Hot Wallet",
-          "identityTags": [],
-          "funder": "9WjbWVgkAti9uMdvWEZmM5F7yNT5Yj6JHTRTSVLLPQHi",
-          "usdValue": 12045864.754906008,
-          "priceImpactPct": 97.673578826166
+          "usdValue": 13578965.219854804
         },
         {
           "address": "2TAwkTqMqKi2TzVGdzPTgagGQ3RgXaph51rqppiFpLS7",
           "owner": "AcG5pZLa5c1A6FT8UkVbUNYvwuEKkAQHt5vgxqNPmdXJ",
           "amount": "188137454692737",
           "uiAmount": 188137454.692737,
-          "pctOfSupply": 18.813916367512746,
+          "pctOfSupply": 18.813928927128483,
           "ownerCustody": "single-key",
-          "identityName": "Magic Eden User Incentives",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
-          "usdValue": 11294980.619454982,
-          "priceImpactPct": 97.52721800668964
+          "usdValue": 11360454.744778316
         },
         {
           "address": "5hzvv5ebHbdAnHskQDgGXgZLPYsoLiCouibds8zNZ2Cv",
           "owner": "FcfYR3GNuvWxgto8YkXLFbMKaDX4R6z39Js2MFH7vuLX",
-          "amount": "161326709000000",
-          "uiAmount": 161326709,
-          "pctOfSupply": 16.132817444187726,
+          "amount": "84864571000000",
+          "uiAmount": 84864571,
+          "pctOfSupply": 8.486539853708813,
           "ownerCustody": "single-key",
-          "identityName": "MagicEden MEDAO Security Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
-          "usdValue": 9685376.335782852,
-          "priceImpactPct": 97.14159479372962
+          "usdValue": 5124445.421328139
         },
         {
-          "address": "5PRvN1aodVW1ARE76yHKed5bnsCvBhkfBQexJtxphpcz",
-          "owner": "HSR2SbS9ES96oAVzcaSQ4ExbdRRuzUDKEPXE5aQtohGb",
-          "amount": "39290679205718",
-          "uiAmount": 39290679.205718,
-          "pctOfSupply": 3.929103611008338,
+          "address": "2F5bzLu6mNwzNpwgqNvuNF2QcmobtLswtRxaf39N9uUd",
+          "owner": "AzcBxq9NMoVxBfvXcuc1Df3vrSwLAa2ZiMstsvSA91jn",
+          "amount": "62564235822408",
+          "uiAmount": 62564235.822408,
+          "pctOfSupply": 6.25648459029743,
           "ownerCustody": "single-key",
-          "identityName": "Magic Eden Keiko Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
-          "usdValue": 2358846.9445310296,
-          "priceImpactPct": 90.10665193749988
+          "usdValue": 3777866.405511348
         },
         {
           "address": "GEC4nP61dcigZ5HmQJGxFDB4YXMnWD9Nw9JkLh7yLdpQ",
           "owner": "2zu85CKy9vQ1G1y2FxEj2A8qLKcYmJC9aN7Axjtw7rJF",
           "amount": "38888891000000",
           "uiAmount": 38888891,
-          "pctOfSupply": 3.888924425464572,
+          "pctOfSupply": 3.8889270215958316,
           "ownerCustody": "unknown",
-          "usdValue": 2334725.2724050716,
-          "priceImpactPct": 90.02730034215492
+          "usdValue": 2348259.0800521346
+        },
+        {
+          "address": "5PRvN1aodVW1ARE76yHKed5bnsCvBhkfBQexJtxphpcz",
+          "owner": "HSR2SbS9ES96oAVzcaSQ4ExbdRRuzUDKEPXE5aQtohGb",
+          "amount": "31544388235718",
+          "uiAmount": 31544388.235718,
+          "pctOfSupply": 3.1544695833469105,
+          "ownerCustody": "single-key",
+          "usdValue": 1904770.0820065693
         },
         {
           "address": "59atCQRjNnj24Vph2HNPLkDCPzKdyP8Yp8AdkkGUJ7K3",
           "owner": "Br3TvrtLoitz2z6QYxe1ikQs9Gi5UoLWwkphMtXdqiSi",
-          "amount": "37300353915213",
-          "uiAmount": 37300353.915213,
-          "pctOfSupply": 3.7300692740079655,
+          "amount": "26521714016378",
+          "uiAmount": 26521714.016378,
+          "pctOfSupply": 2.6521972636691884,
           "ownerCustody": "program-pda",
-          "funder": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
-          "usdValue": 2239356.194433553,
-          "priceImpactPct": 89.68633226848577
+          "usdValue": 1601481.9182554116
         },
         {
-          "address": "2F5bzLu6mNwzNpwgqNvuNF2QcmobtLswtRxaf39N9uUd",
-          "owner": "AzcBxq9NMoVxBfvXcuc1Df3vrSwLAa2ZiMstsvSA91jn",
-          "amount": "35539371180188",
-          "uiAmount": 35539371.180188,
-          "pctOfSupply": 3.5539694008832696,
+          "address": "3sR8AHzD3J8RZmZu1bX4y45omSKgmHULyTTXqAZj4Kc1",
+          "owner": "EqzHmyZPXYZDPTpKteutZudjaj7KWdWNcjfzmBcBiVYv",
+          "amount": "24130451100000",
+          "uiAmount": 24130451.1,
+          "pctOfSupply": 2.413068640247079,
           "ownerCustody": "single-key",
-          "identityName": "MagicEden Euclid Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
-          "usdValue": 2133634.20571107,
-          "priceImpactPct": 89.28386383544205
+          "usdValue": 1457088.3726493777
         },
         {
-          "address": "ATrScBiFiWH1t9QXGSkCVPRRTNMjijvhGjBe5dSFJj7N",
-          "owner": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
-          "amount": "27498779210353",
-          "uiAmount": 27498779.210353,
-          "pctOfSupply": 2.7499029000749635,
+          "address": "8isCcApA6WUYMrA5EqhYSwwrZ4nzkcfqZQE3qQdsHCLY",
+          "owner": "8Mm46CsqxiyAputDUp2cXHg41HE3BfynTeMBDwzrMZQH",
+          "amount": "23386708978434",
+          "uiAmount": 23386708.978434,
+          "pctOfSupply": 2.3386937028476806,
           "ownerCustody": "single-key",
-          "identityName": "Binance Hot Wallet 2",
-          "identityTags": [],
-          "funder": "2ojv9BAiHUrvsm9gxDe7fJSzbNZSJcxZvf8dqmWGHG8S",
-          "funderName": "Binance Hot Wallet 1",
-          "usdValue": 1650910.9190770786,
-          "priceImpactPct": 87.00288007411669
+          "usdValue": 1412178.3959111723
         },
         {
-          "address": "FSvsVpc3G7FEHsy5LGdjKbPravM2GFzG4io6VUwUNDJ6",
-          "owner": "DZFrAxJ3LMEw4ULMqT2fuJWPE5BWMFDhnsdbVTzyueHF",
-          "amount": "23364030284254",
-          "uiAmount": 23364030.284254,
-          "pctOfSupply": 2.336424251587152,
+          "address": "CuDhHiSwvn8ghyXerebRGbKiDourrTkne6BiSKrFF9GJ",
+          "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
+          "amount": "22897528746000",
+          "uiAmount": 22897528.746,
+          "pctOfSupply": 2.289775202591576,
           "ownerCustody": "single-key",
-          "identityName": "Magic Eden Foundation",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
-          "usdValue": 1402678.0030802437,
-          "priceImpactPct": 85.4042326827404
-        },
-        {
-          "address": "86CdQeZ1eYkvmGVCQvZhVRMeALjUGs7jUH4RvWDY5Qdh",
-          "owner": "C6ycXuW4J3wTGxVLonBaWaJVmmWZsitujxFJfdq3zfJ2",
-          "amount": "21848420000000",
-          "uiAmount": 21848420,
-          "pctOfSupply": 2.1848618464282934,
-          "ownerCustody": "unknown",
-          "usdValue": 1311687.1431515086,
-          "priceImpactPct": 84.70609193428488
+          "usdValue": 1382639.8337908187
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "C2q2Z4kmdfutmBYYqA5Bu6bHmbr2E77zk2k91YYEwsQf",
-          "holderOwners": [
-            "AcG5pZLa5c1A6FT8UkVbUNYvwuEKkAQHt5vgxqNPmdXJ",
-            "FcfYR3GNuvWxgto8YkXLFbMKaDX4R6z39Js2MFH7vuLX",
-            "HSR2SbS9ES96oAVzcaSQ4ExbdRRuzUDKEPXE5aQtohGb",
-            "Br3TvrtLoitz2z6QYxe1ikQs9Gi5UoLWwkphMtXdqiSi",
-            "AzcBxq9NMoVxBfvXcuc1Df3vrSwLAa2ZiMstsvSA91jn",
-            "DZFrAxJ3LMEw4ULMqT2fuJWPE5BWMFDhnsdbVTzyueHF"
-          ],
-          "count": 6
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 77.38464476127234,
+        "topNPct": 72.78206544199278,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -677,181 +505,133 @@
           "program-pda": 1,
           "token-account": 0,
           "system-program": 0,
-          "single-key": 7,
-          "unknown": 2
+          "single-key": 8,
+          "unknown": 1
         },
-        "namedCount": 7
-      },
-      "priceUsd": 0.060035789459901845,
-      "marketCapUsd": 60035244.11833138
+        "namedCount": 0
+      }
     },
     "Pumpfun + PumpSwap": {
       "mint": "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
       "symbol": "PUMP",
-      "fetchedAt": "2026-06-09T11:41:55.208Z",
-      "supply": "860067438315063467",
-      "uiSupply": 860067438315.0635,
+      "fetchedAt": "2026-09-16T13:29:46.911Z",
+      "supply": "833748140500065578",
+      "uiSupply": 833748140500.0656,
       "decimals": 6,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 16424170.479999999,
+      "priceUsd": 0.0036004012920932394,
+      "marketCapUsd": 3001827882.3367715,
+      "dexLiquidityUsd": 28654700.989999995,
       "dexPairCount": 30,
-      "dexVolume24h": 6175135.709999999,
+      "dexVolume24h": 16453505.520000005,
       "topHolders": [
         {
           "address": "7AN6avKCJPMkXkW8kPwMuHmaWvJeHH69e8rKpLf9rdfk",
           "owner": "Cfq1ts1iFr1eUWWBm8eFxUzm5R3YA3UvMZznwiShbgZt",
-          "amount": "365461857223222111",
-          "uiAmount": 365461857223.2221,
-          "pctOfSupply": 42.49223269505345,
+          "amount": "229261858182103956",
+          "uiAmount": 229261858182.10397,
+          "pctOfSupply": 27.49773547256097,
           "ownerCustody": "single-key",
-          "identityName": "Pump.fun Token Custodian",
-          "identityTags": [
-            "Kraken Deposit",
-            "Squads Multisig v4"
-          ],
-          "funder": "Cyv1imJTR8vb9Mf23xdewEDC7VQHy1LWcswSWjkqM1Ej",
-          "usdValue": 574509005.9568784,
-          "priceImpactPct": 98.8930891218996
+          "usdValue": 825434690.4265442,
+          "priceImpactPct": 98.71742884823556
         },
         {
           "address": "5Sbgq5EJP7JQDkZQ22cSwWQXFofwsJiuygkPXraDthwf",
           "owner": "8UhbNoBXmGoxJr2TeWW8wmSMoWmjS2rTT2tVJxzuTogC",
-          "amount": "80000000010000235",
+          "amount": "80000000010000236",
           "uiAmount": 80000000010.00024,
-          "pctOfSupply": 9.301596182588453,
+          "pctOfSupply": 9.59522380008162,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "5eDnWgEY8YoVuYRhyvYRmHhaAABpgja3TKgP1ph2UeYg",
-          "usdValue": 125760649.36435473,
-          "priceImpactPct": 95.1343695027721
+          "usdValue": 288032103.403464,
+          "priceImpactPct": 96.41559893511278
         },
         {
           "address": "GGNKqK95ZFFyKem9Gqx7uvc7De4cBTjxYMJYssHWVaAM",
           "owner": "9pkFKCR1mdS31JxjKdtmWg2awZUg6vJUYVY722DAcXzv",
           "amount": "35000000010000254",
           "uiAmount": 35000000010.00026,
-          "pctOfSupply": 4.069448330536484,
+          "pctOfSupply": 4.1979104132103915,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "HNjNnaZYFiAjpxqRDxLgMbHV3DWjFBsh466tNXNXJdfV",
-          "usdValue": 55020284.105747975,
-          "priceImpactPct": 89.52763468765816
-        },
-        {
-          "address": "aBL2UafVZeTDHBa5Y74z2dpBSUMHckkBEhuQLzxda7s",
-          "owner": "85WTujfJ9meJq5hfjAeb5gftj7n8Q7QTsZJbRqMD5ERS",
-          "amount": "29999946428000000",
-          "uiAmount": 29999946428,
-          "pctOfSupply": 3.4880923392207643,
-          "ownerCustody": "single-key",
-          "identityName": "Pump Livestreaming Allocation",
-          "identityTags": [],
-          "funder": "3cBqg6k7g9kBH17hLQPwe4KWn89s3qoP5HN5jGng2p3i",
-          "usdValue": 47160159.29011901,
-          "priceImpactPct": 87.05966185772473
+          "usdValue": 126014045.25926833,
+          "priceImpactPct": 92.15254061382085
         },
         {
           "address": "FapAcxVZBeeyQYMH5uyFmWM8i9HKvAfPqYAe2yYmAQao",
           "owner": "BBvQteuawKB2UtExfevL8HYLjWWsgmWXsp922vFbvCfT",
           "amount": "25000000010023050",
           "uiAmount": 25000000010.02305,
-          "pctOfSupply": 2.906748807860919,
+          "pctOfSupply": 2.9985074383528514,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "CNuceR1f8rCmdf3wJBvzc5eyojRQXKmSLWeCKoMQqYsX",
-          "usdValue": 39300202.93720452,
-          "priceImpactPct": 84.9935662541117
+          "usdValue": 90010032.33841798,
+          "priceImpactPct": 89.3310703067442
         },
         {
           "address": "HXVBCbgfPaUaQguWtdxQ3MSDF61oW22P1F7gKceWcZYv",
           "owner": "GTeSSwovPiVirpvWJpThUWiLDSLsuApmJw621Yom3MhB",
           "amount": "25000000010000234",
           "uiAmount": 25000000010.000233,
-          "pctOfSupply": 2.9067488078582655,
+          "pctOfSupply": 2.998507438350115,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "ABbDxTWSQPoYAYzuJUhmCNYy2bLsEVs3KXSee2p8Kah",
-          "usdValue": 39300202.93716865,
-          "priceImpactPct": 84.98312210474995
+          "usdValue": 90010032.33833584,
+          "priceImpactPct": 89.3310452321901
         },
         {
           "address": "3q1s1v1Ka1jMdcLPHhudzbYSiHvDoYDSnnJVgbsd2D1q",
           "owner": "AvqFxKNrYZNvxsj2oWhLW8det68HzCXBqswshoD2TdT6",
           "amount": "24000000010000267",
           "uiAmount": 24000000010.000267,
-          "pctOfSupply": 2.7904788555904485,
+          "pctOfSupply": 2.878567140864092,
           "ownerCustody": "single-key",
-          "identityName": "Pump.fun Token Hot SOL3 Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "FT8Fbaio4ae4Az4knahUNqNcb2zopg7HfJwC9PE9BQai",
-          "usdValue": 37728194.82031078,
-          "priceImpactPct": 84.49562384050776
+          "usdValue": 86409631.04624271,
+          "priceImpactPct": 88.93365238940314
         },
         {
-          "address": "HKmnRgxMUHwpHqzVKPzF5SyrerioM2tYnBnSFDb7iESV",
-          "owner": "96HiV4cGWTJNCjGVff3RTHgPXmpYz7MSrGTAmxNKVWM9",
-          "amount": "22999958928000000",
-          "uiAmount": 22999958928,
-          "pctOfSupply": 2.6742041267204164,
+          "address": "aBL2UafVZeTDHBa5Y74z2dpBSUMHckkBEhuQLzxda7s",
+          "owner": "85WTujfJ9meJq5hfjAeb5gftj7n8Q7QTsZJbRqMD5ERS",
+          "amount": "21249962053166668",
+          "uiAmount": 21249962053.166668,
+          "pctOfSupply": 2.548726770223603,
           "ownerCustody": "single-key",
-          "funder": "3cBqg6k7g9kBH17hLQPwe4KWn89s3qoP5HN5jGng2p3i",
-          "usdValue": 36156122.12221497,
-          "priceImpactPct": 83.95947642533301
+          "usdValue": 76508390.83315358,
+          "priceImpactPct": 87.69377539717833
         },
         {
           "address": "A3NHkq47aEWwcGbkknGrF5ZbgU84riDRiJWd8Vu6RcT2",
           "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
-          "amount": "22869264786576000",
-          "uiAmount": 22869264786.576,
-          "pctOfSupply": 2.6590083251353644,
+          "amount": "20822382234178001",
+          "uiAmount": 20822382234.178,
+          "pctOfSupply": 2.4974427195350803,
           "ownerCustody": "single-key",
-          "identityName": "Binance 7",
-          "identityTags": [],
-          "funder": "3yFwqXBfZY4jBVUafQ1YEXw189y2dN3V5KQq9uzBDy1E",
-          "funderName": "Binance Cold Wallet 2",
-          "usdValue": 35950669.87107067,
-          "priceImpactPct": 83.86845917410865
+          "usdValue": 74968931.90039378,
+          "priceImpactPct": 87.47103013601944
         },
         {
           "address": "29dkQLrrJY6FS464bSVFoCogiNADvZRsBUCTvvNmeRBY",
           "owner": "8UHpWBnhYNeAQURWjAABp8vSrzfYa69o7sfi65vYLC42",
           "amount": "19131083343250258",
           "uiAmount": 19131083343.250256,
-          "pctOfSupply": 2.2243701471514234,
+          "pctOfSupply": 2.2945878274194187,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "CEzsjzvKvBh1Uo86R9r66gHeVTAdo1rzh5uRi9XxDHy8",
-          "usdValue": 30074218.299874913,
-          "priceImpactPct": 81.43921708541725
-        }
-      ],
-      "fundingClusters": [
+          "usdValue": 68879577.18818167,
+          "priceImpactPct": 86.47597565591484
+        },
         {
-          "funder": "3cBqg6k7g9kBH17hLQPwe4KWn89s3qoP5HN5jGng2p3i",
-          "holderOwners": [
-            "85WTujfJ9meJq5hfjAeb5gftj7n8Q7QTsZJbRqMD5ERS",
-            "96HiV4cGWTJNCjGVff3RTHgPXmpYz7MSrGTAmxNKVWM9"
-          ],
-          "count": 2
+          "address": "F6yfKLkvZJQdJDrJ1EMpbV7cGjCc9DjLDYH3bMPqjwCL",
+          "owner": "ESRc4ce6jpyRyvGJ9Gjgtmwc7wEtR1ZPaQPnh9kWZM67",
+          "amount": "17422422455883347",
+          "uiAmount": 17422422455.883347,
+          "pctOfSupply": 2.0896505322858925,
+          "ownerCustody": "single-key",
+          "usdValue": 62727712.32155667,
+          "priceImpactPct": 85.33298821685776
         }
       ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 75.51292861771599,
+        "topNPct": 59.59685955288404,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -863,170 +643,130 @@
           "single-key": 10,
           "unknown": 0
         },
-        "namedCount": 4
-      },
-      "priceUsd": 0.0015720081168579282,
-      "marketCapUsd": 1352032994.0764854
+        "namedCount": 0
+      }
     },
     "Sanctum": {
       "mint": "CLoUDKc4Ane7HeQcPpE3YHnznRxhMimJ4MyaUqyHFzAu",
       "symbol": "CLOUD",
-      "fetchedAt": "2026-06-09T11:42:19.626Z",
-      "supply": "999992144987683262",
-      "uiSupply": 999992144.9876832,
+      "fetchedAt": "2026-09-16T13:30:00.854Z",
+      "supply": "999991466734277236",
+      "uiSupply": 999991466.7342772,
       "decimals": 9,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 213234.47,
+      "priceUsd": 0.03907114577907639,
+      "marketCapUsd": 39070812.37460736,
+      "dexLiquidityUsd": 580912.29,
       "dexPairCount": 14,
-      "dexVolume24h": 58820.09,
+      "dexVolume24h": 86889.34999999999,
       "topHolders": [
         {
           "address": "9uyCjS84BfeF56WbANu2xHFtrjTe7GsSpLzMJ4adWNXY",
           "owner": "BdVocCXHMpTdcPi8kYpBzK4MJXAn5KzcehGxhMBJqvD4",
           "amount": "250000000066199197",
           "uiAmount": 250000000.0661992,
-          "pctOfSupply": 25.000196383470435,
+          "pctOfSupply": 25.000213340083477,
           "ownerCustody": "single-key",
-          "identityName": "Sanctum Community Cold Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "8pa5Cm7WK7FcEp1ub7wmEDwipBWueStcevK7hEWYnk5f",
-          "usdValue": 3490505.5003083334
+          "usdValue": 9767786.447355576,
+          "priceImpactPct": 99.19948244335013
         },
         {
           "address": "6Xe1e45BYUG8HcwJ9gVr98TRm6T6TbKqTmadVgJGZbY2",
           "owner": "How2rJVQCFKP8iabjBXHoJqvFHCmHUHmFUj6HE9on8hs",
-          "amount": "173121555999999999",
-          "uiAmount": 173121556,
-          "pctOfSupply": 17.31229158826366,
+          "amount": "138285009638888891",
+          "uiAmount": 138285009.6388889,
+          "pctOfSupply": 13.828618967169115,
           "ownerCustody": "program-pda",
-          "funder": "96xCXVHju9PxeCB7QU9z4W9SJBGbTSnt6y9w5vYNzxbt",
-          "usdValue": 2417126.973119701
+          "usdValue": 5402953.770662012,
+          "priceImpactPct": 97.67903281446904
         },
         {
           "address": "EVABZeauZgUphyQR4Nvvy11kJ4dofAxuu8zaFxcruQEE",
           "owner": "8VE2uJkoheDbJd9rCyKzfXmiMqAS4o1B3XGshEh86BGk",
-          "amount": "119509663334419862",
-          "uiAmount": 119509663.33441986,
-          "pctOfSupply": 11.951060209167128,
+          "amount": "117275598839649265",
+          "uiAmount": 117275598.83964926,
+          "pctOfSupply": 11.727659959203663,
           "ownerCustody": "single-key",
-          "identityName": "Sanctum Team Operations Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "DFuzP7h38k5BCzD1wHdVHFpzF6j1byMe68rqvUk3Pgdf",
-          "usdValue": 1668596.5483933196
-        },
-        {
-          "address": "5jbzpJeGZFpPFrwXAdeWn25UJiParK8rayQYJY3r14cv",
-          "owner": "5jbzpJeGZFpPFrwXAdeWn25UJiParK8rayQYJY3r14cv",
-          "amount": "83654930004429073",
-          "uiAmount": 83654930.00442907,
-          "pctOfSupply": 8.365558712009626,
-          "ownerCustody": "token-account",
-          "funder": "3etKXcW2fzEJR5YXoSKSmP6UZ633g9uiFv5yuqFUf66k",
-          "usdValue": 1167991.9729241927
+          "usdValue": 4582092.018592418,
+          "priceImpactPct": 97.40992910992674
         },
         {
           "address": "HtDHJ7P8fuMa9SkAK13qeQQUMraeLDmScpEWEoQCvsQF",
           "owner": "DEnpgmzoAGKXjRCGoLTALm91XMAw88q6npDHPRAmMQj1",
-          "amount": "39465314376112598",
-          "uiAmount": 39465314.3761126,
-          "pctOfSupply": 3.946562437907819,
+          "amount": "60694337528195122",
+          "uiAmount": 60694337.52819512,
+          "pctOfSupply": 6.069485545352471,
           "ownerCustody": "single-key",
-          "identityName": "Sanctum Team Cold Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "8pa5Cm7WK7FcEp1ub7wmEDwipBWueStcevK7hEWYnk5f",
-          "usdValue": 551015.5874589671
-        },
-        {
-          "address": "D9GVEzN4iLqM81voeJ4reVrcVA7gwoAhwYtVxE4buy7J",
-          "owner": "7cAui6ADtxLnpRr2wYvwJWTkzwgmVF2LYKnjKTLx4xR8",
-          "amount": "33329378701630455",
-          "uiAmount": 33329378.701630455,
-          "pctOfSupply": 3.332964050636715,
-          "ownerCustody": "single-key",
-          "identityName": "Bybit Hot Wallet 9",
-          "identityTags": [],
-          "funder": "AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2",
-          "funderName": "Bybit Hot Wallet 1",
-          "usdValue": 465345.5185963801
+          "usdValue": 2371397.3095285785,
+          "priceImpactPct": 94.22659239024482
         },
         {
           "address": "3sHDnMFfX8Y4o7y8ddC6gawUJjGQXaY2P9kESGo67dih",
           "owner": "7rKSEG52uip8iQUeFABwFt8XoxcCFKDZpntVFTGaD8aq",
-          "amount": "32757156060876663",
-          "uiAmount": 32757156.060876664,
-          "pctOfSupply": 3.275741337076216,
+          "amount": "46458672091717903",
+          "uiAmount": 46458672.09171791,
+          "pctOfSupply": 4.645906853929498,
           "ownerCustody": "single-key",
-          "identityName": "AT-CLOUD-LP Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "4GRNbbfQz1WQGfkc19giwg6kSuXoY5C6D19Y4MQgh5Fu",
-          "usdValue": 457356.13349868736
+          "usdValue": 1815193.5499978182,
+          "priceImpactPct": 92.44228959592333
+        },
+        {
+          "address": "5jbzpJeGZFpPFrwXAdeWn25UJiParK8rayQYJY3r14cv",
+          "owner": "5jbzpJeGZFpPFrwXAdeWn25UJiParK8rayQYJY3r14cv",
+          "amount": "34456897765726015",
+          "uiAmount": 34456897.765726015,
+          "pctOfSupply": 3.4457191798099687,
+          "ownerCustody": "token-account",
+          "usdValue": 1346270.4756994126,
+          "priceImpactPct": 89.46436522161335
         },
         {
           "address": "GGnGLoCKaNhg5jxJUUMXW8kqLYGPSrxsv3JuTEc8cR54",
           "owner": "4m2t82jaU9ujHAaE2xu4unc44GW93KVTcrjrCRrmMx2z",
           "amount": "32721061254694300",
           "uiAmount": 32721061.2546943,
-          "pctOfSupply": 3.2721318281052416,
+          "pctOfSupply": 3.2721340474587373,
           "ownerCustody": "single-key",
-          "funder": "8YCxJkYSGYsEryfnZo2UHNeYEjN5gq7w4Nm6RonNUTbb",
-          "usdValue": 456852.1770207724
+          "usdValue": 1278449.354328249,
+          "priceImpactPct": 89.1512960102293
         },
         {
-          "address": "Ay1sXM9gG1ZFARXr1TowweUyhbZrj3BMcX5Zb4HgbcKr",
-          "owner": "DW5VgWAyTiPt8NN5S61NWiKEzVizVWuTtZjJeUovVcmb",
-          "amount": "24321837531252305",
-          "uiAmount": 24321837.531252302,
-          "pctOfSupply": 2.432202858108638,
+          "address": "6R2t3h8HNJZqqLZ6PYnaRKwUWPnTFVZn6ibxcFiJGNp4",
+          "owner": "24Fa6VLyjH8Ra43SRqHm5SjGbE1Xnj5gpEsGmXJ2wQ2k",
+          "amount": "28089831077345478",
+          "uiAmount": 28089831.07734548,
+          "pctOfSupply": 2.809007077738359,
           "ownerCustody": "single-key",
-          "identityName": "Sanctum Community Operations Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "DFuzP7h38k5BCzD1wHdVHFpzF6j1byMe68rqvUk3Pgdf",
-          "usdValue": 339582.03063184704
+          "usdValue": 1097501.8849325955,
+          "priceImpactPct": 87.42954850717977
         },
         {
-          "address": "BkoA4CqsbChovZ3d1a7oTK5kicpGaZi1cKVAHPge2dZW",
-          "owner": "5YyNJH8qcdaC6bktCeD4PmjRZige9Zz9qfpAD4DpryYD",
-          "amount": "18333333000000000",
-          "uiAmount": 18333333,
-          "pctOfSupply": 1.833347700968772,
+          "address": "2BRrUwbxHKBF6iLFYa1uvxJLeijtJPzDa1EyqkL64vVC",
+          "owner": "5xWdGQqqnv1GRoW9KnqwCaEhaJp7EV97Cy3Jn2L9rBtw",
+          "amount": "25035030282020733",
+          "uiAmount": 25035030.282020733,
+          "pctOfSupply": 2.5035243914409486,
           "ownerCustody": "single-key",
-          "funder": "AFQ1zK8RpnNEn8HrZaryTsQtpBqUT5US7G95PMZRWoAu",
-          "usdValue": 255970.39863415697
+          "usdValue": 978147.3177324239,
+          "priceImpactPct": 85.86177180563833
+        },
+        {
+          "address": "7p5E4yJvW6GSbPjQ73s4ntrQcNSASpgaCzsnumkS4jKM",
+          "owner": "9V3d762maHeqH8MXuMXDVuFktmvarufeWKdMuQQ77gjA",
+          "amount": "24444444444444446",
+          "uiAmount": 24444444.444444448,
+          "pctOfSupply": 2.4444653037164312,
+          "ownerCustody": "single-key",
+          "usdValue": 955072.452377423,
+          "priceImpactPct": 84.96905841366997
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "8pa5Cm7WK7FcEp1ub7wmEDwipBWueStcevK7hEWYnk5f",
-          "holderOwners": [
-            "BdVocCXHMpTdcPi8kYpBzK4MJXAn5KzcehGxhMBJqvD4",
-            "DEnpgmzoAGKXjRCGoLTALm91XMAw88q6npDHPRAmMQj1"
-          ],
-          "count": 2
-        },
-        {
-          "funder": "DFuzP7h38k5BCzD1wHdVHFpzF6j1byMe68rqvUk3Pgdf",
-          "holderOwners": [
-            "8VE2uJkoheDbJd9rCyKzfXmiMqAS4o1B3XGshEh86BGk",
-            "DW5VgWAyTiPt8NN5S61NWiKEzVizVWuTtZjJeUovVcmb"
-          ],
-          "count": 2
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 80.72205710571426,
+        "topNPct": 75.74673466590265,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -1038,186 +778,130 @@
           "single-key": 8,
           "unknown": 0
         },
-        "namedCount": 6
-      },
-      "priceUsd": 0.013962021997536234,
-      "marketCapUsd": 13961912.325681476
+        "namedCount": 0
+      }
     },
     "Jupiter Agg": {
       "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
       "symbol": "JUP",
-      "fetchedAt": "2026-06-09T11:43:13.050Z",
-      "supply": "6862435083139805",
-      "uiSupply": 6862435083.139805,
+      "fetchedAt": "2026-09-16T13:30:21.516Z",
+      "supply": "6861486995458751",
+      "uiSupply": 6861486995.458751,
       "decimals": 6,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 1840490.34,
+      "priceUsd": 0.21201753941530138,
+      "marketCapUsd": 1454755589.5072536,
+      "dexLiquidityUsd": 2948794.05,
       "dexPairCount": 30,
-      "dexVolume24h": 2366819.159999999,
+      "dexVolume24h": 4407629.500000001,
       "topHolders": [
         {
           "address": "6G4XDSge4txj5tBkA5gZqefXXE3BRxqA37Yb1pmrHv6N",
           "owner": "EXJHiMkj6NRFDfhWBMKccHNwdSpCT7tdvQeRf87yHm6T",
           "amount": "1700000000108880",
           "uiAmount": 1700000000.10888,
-          "pctOfSupply": 24.772547638163893,
+          "pctOfSupply": 24.775970591127237,
           "ownerCustody": "single-key",
-          "identityName": "Jupiter Community Cold Multisig",
-          "identityTags": [
-            "Squads Multisig v3"
-          ],
-          "funder": "Fg85CHuerWHjajWaS6NEchiT7CGW4WZ4XEL2nXETVqF8",
-          "usdValue": 266658255.942934,
-          "priceImpactPct": 99.99159103599067
+          "usdValue": 360429817.02909684,
+          "priceImpactPct": 99.98986930660642
         },
         {
           "address": "26ddLrqXDext6caX1gRxARePN4kzajyGiAUz9JmzmTGQ",
           "owner": "61aq585V8cR2sZBeawJFt2NPqmN7zDi1sws4KLs5xHXV",
           "amount": "1682700001583080",
           "uiAmount": 1682700001.58308,
-          "pctOfSupply": 24.520450557226773,
+          "pctOfSupply": 24.523838676612936,
           "ownerCustody": "single-key",
-          "identityName": "Jupiter Team Cold Multisig",
-          "identityTags": [
-            "Squads Multisig v3"
-          ],
-          "funder": "Fg85CHuerWHjajWaS6NEchiT7CGW4WZ4XEL2nXETVqF8",
-          "usdValue": 263944616.2756342,
-          "priceImpactPct": 99.99150661312484
-        },
-        {
-          "address": "64cmXBSdHeBQ4zK9yVXtVuLMcVUwGg3fvG7fooSqHwmk",
-          "owner": "Any5gL74oUQy9Psb3goym9STaYMau4CMrTkryS37T7iz",
-          "amount": "281569285486807",
-          "uiAmount": 281569285.486807,
-          "pctOfSupply": 4.10305208101115,
-          "ownerCustody": "single-key",
-          "identityName": "Jupiter Team Admin Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "Fg85CHuerWHjajWaS6NEchiT7CGW4WZ4XEL2nXETVqF8",
-          "usdValue": 44166337.994236,
-          "priceImpactPct": 99.9492337061601
+          "usdValue": 356761913.90976834,
+          "priceImpactPct": 99.99037405084474
         },
         {
           "address": "K6U4dQ8jANMEqQQycXYiDcf3172NGefpQBzdDbavQbA",
           "owner": "FVhQ3QHvXudWSdGix2sdcG47YmrmUxRhf3KCBmiKfekf",
-          "amount": "271492923738762",
-          "uiAmount": 271492923.738762,
-          "pctOfSupply": 3.956218462536544,
+          "amount": "223404963677797",
+          "uiAmount": 223404963.677797,
+          "pctOfSupply": 3.255926358610848,
           "ownerCustody": "single-key",
-          "identityName": "Jupiter Community Hot Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "Fg85CHuerWHjajWaS6NEchiT7CGW4WZ4XEL2nXETVqF8",
-          "usdValue": 42585782.08258208,
-          "priceImpactPct": 99.94739197956058
+          "usdValue": 47365770.692131296,
+          "priceImpactPct": 99.92295657276262
+        },
+        {
+          "address": "64cmXBSdHeBQ4zK9yVXtVuLMcVUwGg3fvG7fooSqHwmk",
+          "owner": "Any5gL74oUQy9Psb3goym9STaYMau4CMrTkryS37T7iz",
+          "amount": "191569085310442",
+          "uiAmount": 191569085.310442,
+          "pctOfSupply": 2.7919470726568636,
+          "ownerCustody": "single-key",
+          "usdValue": 40616006.09555987,
+          "priceImpactPct": 99.91016814757347
+        },
+        {
+          "address": "DpVH8xQZ4aapxwZ6KW9nuEUs9zEePa8HQvXny9Ajj93T",
+          "owner": "6tZT9AUcQn4iHMH79YZEXSy55kDLQ4VbA3PMtfLVNsFX",
+          "amount": "169448000652410",
+          "uiAmount": 169448000.65241,
+          "pctOfSupply": 2.4695521650709025,
+          "ownerCustody": "single-key",
+          "usdValue": 35925948.157166354,
+          "priceImpactPct": 99.89845157504928
         },
         {
           "address": "79S8nKFYLog9dD8sQaYPnxKFda8sEPJwuhXNwng8zhdX",
           "owner": "6DByueU46di4eSLW19Q5dg3oCBGL4knENTtHqVxrWA3P",
           "amount": "159890361000000",
           "uiAmount": 159890361,
-          "pctOfSupply": 2.32993622617767,
+          "pctOfSupply": 2.3302581656982344,
           "ownerCustody": "single-key",
-          "funder": "72i1m5tced8b44411CezCkGYmrh1bF4ChkjBfPBnqysr",
-          "usdValue": 25080049.884479646,
-          "priceImpactPct": 99.91069075075903
-        },
-        {
-          "address": "GDijXRGfd1jhk5GkRPp1TDnEH2FfHURSRZeB5um3pUWk",
-          "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
-          "amount": "140000000000000",
-          "uiAmount": 140000000,
-          "pctOfSupply": 2.0400921583063645,
-          "ownerCustody": "single-key",
-          "identityName": "Binance 7",
-          "identityTags": [],
-          "funder": "3yFwqXBfZY4jBVUafQ1YEXw189y2dN3V5KQq9uzBDy1E",
-          "funderName": "Binance Cold Wallet 2",
-          "usdValue": 21960091.664482202,
-          "priceImpactPct": 99.898080718458
-        },
-        {
-          "address": "DpVH8xQZ4aapxwZ6KW9nuEUs9zEePa8HQvXny9Ajj93T",
-          "owner": "6tZT9AUcQn4iHMH79YZEXSy55kDLQ4VbA3PMtfLVNsFX",
-          "amount": "133200362443945",
-          "uiAmount": 133200362.443945,
-          "pctOfSupply": 1.9410072493246981,
-          "ownerCustody": "single-key",
-          "identityName": "Jupiter Litterbox",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "HnBzGKJg33WJqCTKLCu5JRi16fxoireZk2ApKu6E2nU3",
-          "usdValue": 20893515.49293775,
-          "priceImpactPct": 99.89276338037965
+          "usdValue": 33899560.91544427,
+          "priceImpactPct": 99.89238424389458
         },
         {
           "address": "7bEL9XkPGNg7a3oSiUERKsZtFoJMqKh6VhGDCmMCPqdg",
           "owner": "CbU4oSFCk8SVgW23NLvb5BwctvWcZZHfxRD6HudP8gAo",
           "amount": "126376933041118",
           "uiAmount": 126376933.041118,
-          "pctOfSupply": 1.8415756434856667,
+          "pctOfSupply": 1.841830103660622,
           "ownerCustody": "single-key",
-          "identityName": "Jupiter Team Hot Multisig",
-          "identityTags": [
-            "Squads Multisig v4"
-          ],
-          "funder": "Fg85CHuerWHjajWaS6NEchiT7CGW4WZ4XEL2nXETVqF8",
-          "usdValue": 19823207.384707723,
-          "priceImpactPct": 99.88705561209422
+          "usdValue": 26794126.382230137,
+          "priceImpactPct": 99.87200253874235
         },
         {
           "address": "DWVtxR7oo3uTiuM3o1cCxTJ5wM8Wnjvu1apwMkQhdedY",
           "owner": "CPZmKkAhD2wv1Z21EUZvdH8ZeSD13geAnSfyVBwcW8XK",
           "amount": "103869516852063",
           "uiAmount": 103869516.852063,
-          "pctOfSupply": 1.5135956201211749,
+          "pctOfSupply": 1.5138047615744028,
           "ownerCustody": "single-key",
-          "identityName": "Jupiter DAO Multisig",
-          "identityTags": [
-            "Squads Multisig v3"
-          ],
-          "funder": "H5fKesKS2pc4jmZSghuMoDEQQ2VQyLNo5r9xjANpi8cz",
-          "usdValue": 16292743.651548447,
-          "priceImpactPct": 99.86257905677459
+          "usdValue": 22022159.38323058,
+          "priceImpactPct": 99.83446518194042
+        },
+        {
+          "address": "7HbXjqp4BWCcRPh61ZdESdCfvQtyg7aQu7KKaGAChxX6",
+          "owner": "3gd3dqgtJ4jWfBfLYTX67DALFetjc5iS72sCgRhCkW2u",
+          "amount": "100000000000000",
+          "uiAmount": 100000000,
+          "pctOfSupply": 1.4574100346788477,
+          "ownerCustody": "single-key",
+          "usdValue": 21201753.94153014,
+          "priceImpactPct": 99.83830257461693
         },
         {
           "address": "HG6XGeAwBueqMbubLbMMWRCfhC1wKjDJmQiJjjFdTJDc",
           "owner": "6wsjaQTidXNqmPDw4st2yMtFmTk7yyBEox5SydFQeJe7",
           "amount": "94414767978779",
           "uiAmount": 94414767.978779,
-          "pctOfSupply": 1.3758201984415848,
+          "pctOfSupply": 1.3760103027414765,
           "ownerCustody": "program-pda",
-          "identityTags": [
-            "Jupiter Lock Vault"
-          ],
-          "funder": "F4zqSudk7rmdKuav7MjT9bhoJmf7c3js97Di37a1LZ7o",
-          "usdValue": 14809692.566391472,
-          "priceImpactPct": 99.84881714743757
+          "usdValue": 20017586.791327313,
+          "priceImpactPct": 99.8287516227756
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "Fg85CHuerWHjajWaS6NEchiT7CGW4WZ4XEL2nXETVqF8",
-          "holderOwners": [
-            "EXJHiMkj6NRFDfhWBMKccHNwdSpCT7tdvQeRf87yHm6T",
-            "61aq585V8cR2sZBeawJFt2NPqmN7zDi1sws4KLs5xHXV",
-            "Any5gL74oUQy9Psb3goym9STaYMau4CMrTkryS37T7iz",
-            "FVhQ3QHvXudWSdGix2sdcG47YmrmUxRhf3KCBmiKfekf",
-            "CbU4oSFCk8SVgW23NLvb5BwctvWcZZHfxRD6HudP8gAo"
-          ],
-          "count": 5
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 68.39429583479553,
+        "topNPct": 66.33654823243236,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -1229,184 +913,130 @@
           "single-key": 9,
           "unknown": 0
         },
-        "namedCount": 8
-      },
-      "priceUsd": 0.15685779760344432,
-      "marketCapUsd": 1076426453.337919
+        "namedCount": 0
+      }
     },
     "Raydium": {
       "mint": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
       "symbol": "RAY",
-      "fetchedAt": "2026-06-09T11:43:48.855Z",
-      "supply": "554997695801535",
-      "uiSupply": 554997695.801535,
+      "fetchedAt": "2026-09-16T13:30:43.082Z",
+      "supply": "554997492501627",
+      "uiSupply": 554997492.501627,
       "decimals": 6,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 8279903.949999998,
+      "priceUsd": 1.3547042313087563,
+      "marketCapUsd": 751857451.4577038,
+      "dexLiquidityUsd": 14355789.35,
       "dexPairCount": 30,
-      "dexVolume24h": 4102934.000000002,
+      "dexVolume24h": 9360778.049999999,
       "topHolders": [
         {
           "address": "DmKR61BQk5zJTNCK9rrt8fM8HrDH6DSdE3Rt7sXKoAKb",
           "owner": "8pFhUqCU7Fkxfg2DLytRDf7a9oK4XGtN92PrYwtVQc6G",
           "amount": "138590933144851",
           "uiAmount": 138590933.144851,
-          "pctOfSupply": 24.97144297954177,
+          "pctOfSupply": 24.971452126775997,
           "ownerCustody": "single-key",
-          "identityName": "Raydium Treasury",
-          "identityTags": [],
-          "funder": "6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk",
-          "funderName": "FTX 1",
-          "usdValue": 80743374.02058163,
-          "priceImpactPct": 96.05533424924644
+          "usdValue": 187749723.5523586,
+          "priceImpactPct": 97.16436516422714
         },
         {
           "address": "fArUAncZwVbMimiWv5cPUfFsapdLd8QMXZE4VXqFagR",
           "owner": "8pFhUqCU7Fkxfg2DLytRDf7a9oK4XGtN92PrYwtVQc6G",
           "amount": "123323990040352",
           "uiAmount": 123323990.040352,
-          "pctOfSupply": 22.220630999601877,
+          "pctOfSupply": 22.22063913919223,
           "ownerCustody": "single-key",
-          "identityName": "Raydium Treasury",
-          "identityTags": [],
-          "funder": "6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk",
-          "funderName": "FTX 1",
-          "usdValue": 71848820.3202388,
-          "priceImpactPct": 95.58703614992152
+          "usdValue": 167067531.12954378,
+          "priceImpactPct": 96.82820921039922
         },
         {
           "address": "E5BMFn1mzTGuFWzNHZ7cybWfzetmqhFKS7SM91N5WePU",
           "owner": "DdHDoz94o2WJmD9myRobHCwtx1bESpHTd4SSPe6VEZaz",
-          "amount": "38296522327142",
-          "uiAmount": 38296522.327142,
-          "pctOfSupply": 6.9003029412281895,
+          "amount": "39351647960869",
+          "uiAmount": 39351647.960869,
+          "pctOfSupply": 7.090419054596654,
           "ownerCustody": "single-key",
-          "identityName": "Raydium Buy Backs",
-          "identityTags": [],
-          "funder": "9wkEzW8CnWAbAhu5SEFsdq1Zu4MFqNwaeRqzcfbLwkn3",
-          "usdValue": 22311635.80315979,
-          "priceImpactPct": 87.06428780138674
+          "usdValue": 53309844.00156183,
+          "priceImpactPct": 90.68511169575291
         },
         {
           "address": "8tnpAECxAT9nHBqR1Ba494Ar5dQMPGhL31MmPJz1zZvY",
           "owner": "4qD717qKoj3Sm8YfHMSR7tSKjWn5An817nArA6nGdcUR",
-          "amount": "37759937532934",
-          "uiAmount": 37759937.532934,
-          "pctOfSupply": 6.803620594928886,
+          "amount": "38327991806480",
+          "uiAmount": 38327991.80648,
+          "pctOfSupply": 6.905975670938304,
           "ownerCustody": "single-key",
-          "identityName": "Raydium RAY Stake Pool Authority",
-          "identityTags": [],
-          "usdValue": 21999020.354592092,
-          "priceImpactPct": 86.90240356429013
-        },
-        {
-          "address": "GXanGGy8srBiAVt8Fvj7ZuSQ9tqTZtRVZ9uUGq5RZc9e",
-          "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
-          "amount": "26163226819000",
-          "uiAmount": 26163226.819,
-          "pctOfSupply": 4.714114493973659,
-          "ownerCustody": "single-key",
-          "identityName": "Binance 7",
-          "identityTags": [],
-          "funder": "3yFwqXBfZY4jBVUafQ1YEXw189y2dN3V5KQq9uzBDy1E",
-          "funderName": "Binance Cold Wallet 2",
-          "usdValue": 15242751.893617034,
-          "priceImpactPct": 82.13394352819957
+          "usdValue": 51923092.677805796,
+          "priceImpactPct": 90.47660656508914
         },
         {
           "address": "BEVT2yGq2rvvPCnMipktFWxJaouidExC7scW9GHhMuzi",
           "owner": "DdHDoz94o2WJmD9myRobHCwtx1bESpHTd4SSPe6VEZaz",
-          "amount": "23497797796940",
-          "uiAmount": 23497797.79694,
-          "pctOfSupply": 4.233855018623847,
+          "amount": "23497797799450",
+          "uiAmount": 23497797.79945,
+          "pctOfSupply": 4.233856569970199,
           "ownerCustody": "single-key",
-          "identityName": "Raydium Buy Backs",
-          "identityTags": [],
-          "funder": "9wkEzW8CnWAbAhu5SEFsdq1Zu4MFqNwaeRqzcfbLwkn3",
-          "usdValue": 13689867.245466445,
-          "priceImpactPct": 80.50922124004433
+          "usdValue": 31832566.105352495,
+          "priceImpactPct": 85.33587263918928
         },
         {
           "address": "FpDWkidnRD6pWzYZAnDWEU3kC1hXSmQSqhd9w4nMCn1",
           "owner": "DdHDoz94o2WJmD9myRobHCwtx1bESpHTd4SSPe6VEZaz",
-          "amount": "14021023038440",
-          "uiAmount": 14021023.03844,
-          "pctOfSupply": 2.526320945925848,
+          "amount": "16602128260934",
+          "uiAmount": 16602128.260934,
+          "pctOfSupply": 2.991387976565557,
           "ownerCustody": "single-key",
-          "identityName": "Raydium Buy Backs",
-          "identityTags": [],
-          "funder": "9wkEzW8CnWAbAhu5SEFsdq1Zu4MFqNwaeRqzcfbLwkn3",
-          "usdValue": 8168678.005513621,
-          "priceImpactPct": 71.15443145543638
+          "usdValue": 22490973.403817974,
+          "priceImpactPct": 80.4398174576474
+        },
+        {
+          "address": "GXanGGy8srBiAVt8Fvj7ZuSQ9tqTZtRVZ9uUGq5RZc9e",
+          "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
+          "amount": "14793884000000",
+          "uiAmount": 14793884,
+          "pctOfSupply": 2.665576727800555,
+          "ownerCustody": "single-key",
+          "usdValue": 20041337.25229091,
+          "priceImpactPct": 78.53088437487726
         },
         {
           "address": "5unqG9sYX995czHCtHkkJvd2EaTE58jdvmjfz1nVvo5x",
           "owner": "8pFhUqCU7Fkxfg2DLytRDf7a9oK4XGtN92PrYwtVQc6G",
           "amount": "11100000009656",
           "uiAmount": 11100000.009656,
-          "pctOfSupply": 2.000008305192192,
+          "pctOfSupply": 2.000009037810826,
           "ownerCustody": "single-key",
-          "identityName": "Raydium Treasury",
-          "identityTags": [],
-          "funder": "6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk",
-          "funderName": "FTX 1",
-          "usdValue": 6466883.7424695,
-          "priceImpactPct": 65.0019474159445
+          "usdValue": 15037216.98060822,
+          "priceImpactPct": 73.36365243298624
         },
         {
           "address": "Hrbp7G4uvmZoH1dNNHfGqCw3cGguNtvCApFpwywnYdqn",
           "owner": "GThUX1Atko4tqhN2NaiTazWSeFWMuiUvfFnyJyUghFMJ",
           "amount": "8869656406798",
           "uiAmount": 8869656.406798,
-          "pctOfSupply": 1.59814292453743,
+          "pctOfSupply": 1.5981435099496413,
           "ownerCustody": "single-key",
-          "identityName": "Raydium Protocol Treasury",
-          "identityTags": [
-            "Squads Multisig v3"
-          ],
-          "funder": "8aSRiwajnkCP3ZhWTqTGJBy82ELo3Rt1CoEk5Hyjiqiy",
-          "usdValue": 5167480.789956327,
-          "priceImpactPct": 58.61254853022567
+          "usdValue": 12015761.064544069,
+          "priceImpactPct": 68.6960963460767
         },
         {
           "address": "HoVhs7NAzcAaavr2tc2aaTynJ6kwhdfC2B2Z7EthKpeo",
           "owner": "8pFhUqCU7Fkxfg2DLytRDf7a9oK4XGtN92PrYwtVQc6G",
           "amount": "7300000000000",
           "uiAmount": 7300000,
-          "pctOfSupply": 1.3153207761443484,
+          "pctOfSupply": 1.3153212579566023,
           "ownerCustody": "single-key",
-          "identityName": "Raydium Treasury",
-          "identityTags": [],
-          "usdValue": 4252995.610717155,
-          "priceImpactPct": 53.48602429200242
+          "usdValue": 9889340.888553921,
+          "priceImpactPct": 64.3671168420006
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk",
-          "funderName": "FTX 1",
-          "holderOwners": [
-            "8pFhUqCU7Fkxfg2DLytRDf7a9oK4XGtN92PrYwtVQc6G",
-            "8pFhUqCU7Fkxfg2DLytRDf7a9oK4XGtN92PrYwtVQc6G",
-            "8pFhUqCU7Fkxfg2DLytRDf7a9oK4XGtN92PrYwtVQc6G"
-          ],
-          "count": 3
-        },
-        {
-          "funder": "9wkEzW8CnWAbAhu5SEFsdq1Zu4MFqNwaeRqzcfbLwkn3",
-          "holderOwners": [
-            "DdHDoz94o2WJmD9myRobHCwtx1bESpHTd4SSPe6VEZaz",
-            "DdHDoz94o2WJmD9myRobHCwtx1bESpHTd4SSPe6VEZaz",
-            "DdHDoz94o2WJmD9myRobHCwtx1bESpHTd4SSPe6VEZaz"
-          ],
-          "count": 3
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 77.28375997969803,
+        "topNPct": 75.99278107155656,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -1418,156 +1048,120 @@
           "single-key": 10,
           "unknown": 0
         },
-        "namedCount": 10
-      },
-      "priceUsd": 0.5826021384544048,
-      "marketCapUsd": 323342844.41124153
+        "namedCount": 0
+      }
     },
     "Tensor": {
       "mint": "TNSRxcUxoT9xBG3de7PiJyTDYu7kskLqcpddxnEJAS6",
       "symbol": "TNSR",
-      "fetchedAt": "2026-06-09T11:44:13.792Z",
-      "supply": "783790910128983819",
-      "uiSupply": 783790910.1289839,
+      "fetchedAt": "2026-09-16T13:30:59.968Z",
+      "supply": "783790873325826285",
+      "uiSupply": 783790873.3258263,
       "decimals": 9,
       "mintAuthority": "7rtye8syTEK4W8omFkUiyUcj2MPFRUTq7yuczc7jNZZS",
-      "mintAuthorityCustody": "unverified",
+      "mintAuthorityCustody": "single-key",
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 67986.24999999999,
-      "dexPairCount": 14,
-      "dexVolume24h": 29472.100000000002,
+      "priceUsd": 0.0331815576052792,
+      "marketCapUsd": 26007402.013753,
+      "dexLiquidityUsd": 70516.82999999997,
+      "dexPairCount": 13,
+      "dexVolume24h": 11741.910000000002,
       "topHolders": [
         {
           "address": "6xkTGUTNv8KKvxoRzcb3JmS4D1nQL33cyeURotZ3aEnQ",
           "owner": "FZDZuLD6KJAb1UXcGgvcQAmnDzQEfdbw5tAyJLFLQ6ND",
           "amount": "156911891371830004",
           "uiAmount": 156911891.37183002,
-          "pctOfSupply": 20.01961101411701,
+          "pctOfSupply": 20.019611954144413,
           "ownerCustody": "single-key",
-          "identityName": "Tensor Treasury",
-          "identityTags": [
-            "Squads Multisig v3"
-          ],
-          "funder": "DTewSQpP1N1eC3A1SE9fT3ecEENn6VARGPoEe6LpN8DU",
-          "usdValue": 4616914.317441687
+          "usdValue": 5206580.96250769
         },
         {
           "address": "3tggw2KQRWbHM5o68YKVA82rvJExXMfzd9U4aXhudkrN",
           "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
-          "amount": "112021352100000000",
-          "uiAmount": 112021352.1,
-          "pctOfSupply": 14.292249457392318,
+          "amount": "120664280694000000",
+          "uiAmount": 120664280.694,
+          "pctOfSupply": 15.39495862997108,
           "ownerCustody": "single-key",
-          "identityName": "Binance 7",
-          "identityTags": [],
-          "funder": "3yFwqXBfZY4jBVUafQ1YEXw189y2dN3V5KQq9uzBDy1E",
-          "funderName": "Binance Cold Wallet 2",
-          "usdValue": 3296072.5911083925
+          "usdValue": 4003828.7807475403
         },
         {
           "address": "CXZTDXF54aGTybsQHmB1FdVbbDMwxW6RaFSDnyhH1AVu",
           "owner": "GzFKSq11V3UhXACUH4zBbKv78gyMqxMDy7fivhTCQZRg",
           "amount": "99999903000000000",
           "uiAmount": 99999903,
-          "pctOfSupply": 12.758492310601511,
+          "pctOfSupply": 12.758492909680703,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Squads Multisig v3"
-          ],
-          "funder": "BbwbtomfVnVxuzMbsVTxZPQkm1vn8MiN7zd6pRTLrqu9",
-          "usdValue": 2942358.159519108
+          "usdValue": 3318152.5419168323
         },
         {
           "address": "45m63wJ3PeL8ZBfHwXL1keDb6Eeu4ErznMbKReKmzbcF",
           "owner": "FEhNUhZeQnmbgiX5RKAzYbKkbXtBvPvS1Z6jjBKK7H4J",
           "amount": "68214751420936309",
           "uiAmount": 68214751.42093632,
-          "pctOfSupply": 8.703182256822883,
+          "pctOfSupply": 8.703182665483661,
           "ownerCustody": "unknown",
-          "usdValue": 2007124.25134012
+          "usdValue": 2263471.7038036
         },
         {
           "address": "57BD2PF5omvTDYg1aGDRpq5NjR6narGDvCcD5XF9nzoc",
           "owner": "DUhy8saKX1M9Z9H2ghk1vxN6x2oTx2aRgdN1HLuHyvrc",
           "amount": "57943114290890239",
           "uiAmount": 57943114.29089024,
-          "pctOfSupply": 7.392674952220981,
+          "pctOfSupply": 7.3926752993464575,
           "ownerCustody": "single-key",
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 1704895.6049662281
+          "usdValue": 1922642.784672451
         },
         {
           "address": "BEcoVLJ9uz672qssabkZgEwjuT4YS4bKDvNK9QXrgyQ6",
           "owner": "Am8MAEorCMAKxphqjAz3Ff59NEwPm4W2eS3DQLi2B4hg",
-          "amount": "36643940686512807",
-          "uiAmount": 36643940.686512806,
-          "pctOfSupply": 4.675218889752438,
+          "amount": "30467110434314925",
+          "uiAmount": 30467110.434314925,
+          "pctOfSupply": 3.887147895080117,
           "ownerCustody": "single-key",
-          "funder": "hTvwKr1RvQdPS5xiWfXM2UZYuF55Ei8zzsuB7e58feu",
-          "usdValue": 1078197.0246100656
+          "usdValue": 1010946.1799426237
         },
         {
-          "address": "DxPjbd6dKJS5AGznPRgGgM99LLsFhAsLh9UCoMcmMdJP",
-          "owner": "2iT79T6gX7g3VixXx3vajnvJRsw5KQx7ZzD6m1vEF1A4",
+          "address": "5Pw999zHrPebxQXoMq8NrDDVLdD8SNhV7ygXSxmZWwLk",
+          "owner": "J7MhpGJbUxxp4FKfmcuGdcS21dSz8QiiacaP35NcXRYK",
           "amount": "19998222220000000",
           "uiAmount": 19998222.22,
-          "pctOfSupply": 2.5514741191255985,
-          "ownerCustody": "single-key",
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 588419.8940162305
+          "pctOfSupply": 2.5514742389309024,
+          "ownerCustody": "unknown",
+          "usdValue": 663572.1625961044
         },
         {
           "address": "B75ABurTXtWfnV4exasJpbRXqaSrGzEawYKLd7G7JjQE",
           "owner": "7cAui6ADtxLnpRr2wYvwJWTkzwgmVF2LYKnjKTLx4xR8",
-          "amount": "16022801062065323",
-          "uiAmount": 16022801.062065324,
-          "pctOfSupply": 2.0442698243883113,
+          "amount": "18466060682552023",
+          "uiAmount": 18466060.682552025,
+          "pctOfSupply": 2.355993328194264,
           "ownerCustody": "single-key",
-          "identityName": "Bybit Hot Wallet 9",
-          "identityTags": [],
-          "funder": "AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2",
-          "funderName": "Bybit Hot Wallet 1",
-          "usdValue": 471448.6517383855
+          "usdValue": 612732.6562806814
         },
         {
           "address": "GugV3a7dGm2n5SDmsoiWKgaPGjwkoMBuz1wQaDCAftKb",
           "owner": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
-          "amount": "14228335788433857",
-          "uiAmount": 14228335.788433855,
-          "pctOfSupply": 1.815322888357098,
+          "amount": "12274809059167000",
+          "uiAmount": 12274809.059167,
+          "pctOfSupply": 1.566082162590364,
           "ownerCustody": "single-key",
-          "identityName": "Binance Hot Wallet 2",
-          "identityTags": [],
-          "funder": "2ojv9BAiHUrvsm9gxDe7fJSzbNZSJcxZvf8dqmWGHG8S",
-          "funderName": "Binance Hot Wallet 1",
-          "usdValue": 418649.0051242959
+          "usdValue": 407297.2838905528
         },
         {
           "address": "D1ZZYArDaYdwcmTxT56CdRJjbxCwYARmAgh7NEmq1C9f",
           "owner": "B3awWQPRdPvFfuXgBsfz5WmJhsPmHE2ud48VHx4zdc3R",
-          "amount": "11336331565928012",
-          "uiAmount": 11336331.565928012,
-          "pctOfSupply": 1.4463463940992194,
-          "ownerCustody": "unknown",
-          "usdValue": 333555.8003693495
+          "amount": "9940122359518051",
+          "uiAmount": 9940122.359518051,
+          "pctOfSupply": 1.2682110366174024,
+          "ownerCustody": "single-key",
+          "usdValue": 329828.74267587205
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "holderOwners": [
-            "DUhy8saKX1M9Z9H2ghk1vxN6x2oTx2aRgdN1HLuHyvrc",
-            "2iT79T6gX7g3VixXx3vajnvJRsw5KQx7ZzD6m1vEF1A4"
-          ],
-          "count": 2
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 75.69884210687738,
+        "topNPct": 75.89783012003937,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -1579,171 +1173,130 @@
           "single-key": 8,
           "unknown": 2
         },
-        "namedCount": 4
-      },
-      "priceUsd": 0.02942361013609291,
-      "marketCapUsd": 23061958.167848658
+        "namedCount": 0
+      }
     },
     "Marinade": {
       "mint": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
       "symbol": "MNDE",
-      "fetchedAt": "2026-06-09T11:44:39.059Z",
-      "supply": "699997604377408968",
-      "uiSupply": 699997604.377409,
+      "fetchedAt": "2026-09-16T13:31:14.932Z",
+      "supply": "699997370753205028",
+      "uiSupply": 699997370.753205,
       "decimals": 9,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 301441.95,
-      "dexPairCount": 12,
-      "dexVolume24h": 8653.86,
+      "priceUsd": 0.018556444193382187,
+      "marketCapUsd": 12989462.145896107,
+      "dexLiquidityUsd": 316044.72000000003,
+      "dexPairCount": 17,
+      "dexVolume24h": 13849.899999999998,
       "topHolders": [
         {
           "address": "GR1LBT4cU89cJWE74CP6BsJTf2kriQ9TX59tbDsfxgSi",
           "owner": "B56RWQGf9RFw7t8gxPzrRvk5VRmB5DoF94aLoJ25YtvG",
           "amount": "153600023536334850",
           "uiAmount": 153600023.53633484,
-          "pctOfSupply": 21.94293560089389,
+          "pctOfSupply": 21.942942924351204,
           "ownerCustody": "single-key",
-          "identityName": "Marinade Finance Treasury",
-          "identityTags": [],
-          "funder": "chMavQVSWyZKSGkofRbwdqFkw5DQttMJM5XYXuBUjHK",
-          "usdValue": 2851848.3960120515,
-          "priceImpactPct": 99.36655190432293
+          "usdValue": 2850270.264854188,
+          "priceImpactPct": 99.13835800528048
         },
         {
           "address": "H988v6sNu4dw911AeUo6fy5RsTkDtyfcTAMNpdq1Mo6u",
           "owner": "J5BEceL5z1EQ7JBqEFu4BfPN4PYCeQaW3GXrzXFfCzhs",
           "amount": "113104160793765709",
           "uiAmount": 113104160.79376571,
-          "pctOfSupply": 16.15779255335633,
+          "pctOfSupply": 16.15779794602148,
           "ownerCustody": "single-key",
-          "identityName": "Marinade Treasury",
-          "identityTags": [],
-          "funder": "9QXqs2v22VmTGMdNPXEEBPp3e6NwM9enGAmNhV3LDUZ1",
-          "usdValue": 2099973.112736455,
-          "priceImpactPct": 99.1415361364235
+          "usdValue": 2098811.047808839,
+          "priceImpactPct": 98.83372560103766
         },
         {
           "address": "7RFgHEGbNirfaSyF6FLYhy3uq1VPyABwjdc1YBhuPFcW",
           "owner": "8PrhRaSgggvyfx23H2QHGiuYqZjTwVPCkPtCrq3aqp9n",
-          "amount": "41866700827763126",
-          "uiAmount": 41866700.827763125,
-          "pctOfSupply": 5.980977729916684,
+          "amount": "43782560086684586",
+          "uiAmount": 43782560.086684585,
+          "pctOfSupply": 6.254674933932118,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 777327.248089442,
-          "priceImpactPct": 97.71373323888723
+          "usdValue": 812448.6328919649,
+          "priceImpactPct": 97.04211690742007
         },
         {
           "address": "G5AxzZuXx2y4HMCuzc6vNe3qfFPPQJRPQ72TEX1meY2v",
           "owner": "B56RWQGf9RFw7t8gxPzrRvk5VRmB5DoF94aLoJ25YtvG",
           "amount": "36116209356539962",
           "uiAmount": 36116209.35653996,
-          "pctOfSupply": 5.159476136873696,
+          "pctOfSupply": 5.159477858849457,
           "ownerCustody": "single-key",
-          "identityName": "Marinade Finance Treasury",
-          "identityTags": [],
-          "funder": "chMavQVSWyZKSGkofRbwdqFkw5DQttMJM5XYXuBUjHK",
-          "usdValue": 670559.4918031979,
-          "priceImpactPct": 96.67527854529725
+          "usdValue": 670188.4234011413,
+          "priceImpactPct": 96.4366985247943
         },
         {
-          "address": "6jbGQiaXyuYUuwoBHgWPKS8ySFTL1EA2CySMddbX6gLt",
-          "owner": "89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB",
-          "amount": "30696569546420637",
-          "uiAmount": 30696569.546420638,
-          "pctOfSupply": 4.385239228600323,
-          "ownerCustody": "single-key",
-          "identityName": "Marinade DAO Operations",
-          "identityTags": [],
-          "funder": "6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk",
-          "funderName": "FTX 1",
-          "usdValue": 569934.5651683679,
-          "priceImpactPct": 96.9090900336374
+          "address": "94dFb62HVvv82GtGkkr1iuL9oCcABEii8ybVH4mFKVBA",
+          "owner": "344jPzUH4mK9iaCtWs7wWAuNwme4RPdTjTpW4PeGZTmm",
+          "amount": "30654345000000000",
+          "uiAmount": 30654345,
+          "pctOfSupply": 4.379208591457362,
+          "ownerCustody": "program-pda",
+          "usdValue": 568835.6422771843,
+          "priceImpactPct": 95.82850699519021
         },
         {
           "address": "EVomrzdS3TUpkVmd3ANaKgYf4BDfqnMEHRXnJcfvYxaA",
           "owner": "AhEgQj1ZrTECK982fE8NfoGH1RzwTtw56f8fDMENGewF",
           "amount": "21946372766875876",
           "uiAmount": 21946372.766875874,
-          "pctOfSupply": 3.1352068392284558,
+          "pctOfSupply": 3.1352078856041037,
           "ownerCustody": "program-pda",
-          "funder": "BrBTM61YFAAYJwCxxYuDv2nej5vNx2wjDJEWLcVjmbur",
-          "usdValue": 407472.12488995545,
-          "priceImpactPct": 94.55789105185164
+          "usdValue": 407246.64149569476,
+          "priceImpactPct": 93.40298019949829
+        },
+        {
+          "address": "435oFpXPFsajXpTqzWVZGnqo8CPQmHDvZaWXHtfRCKmN",
+          "owner": "ByiAbN9MJhfQKGK5WJrfgko6XS88qqERQVRLWZTsvyTf",
+          "amount": "19733933286044906",
+          "uiAmount": 19733933.286044903,
+          "pctOfSupply": 2.8191439154708497,
+          "ownerCustody": "single-key",
+          "usdValue": 366191.6317384194,
+          "priceImpactPct": 92.58523728559787
         },
         {
           "address": "XmM4gEB1bZmLbJRXHR8a7MUW3f1anEFd25wKVMjqwgS",
           "owner": "2so7BVGAQNK2wB8ju8a85aMa2EZSuWbjssvTi5FqLvcV",
           "amount": "18030908840545433",
           "uiAmount": 18030908.84054543,
-          "pctOfSupply": 2.5758529354657522,
+          "pctOfSupply": 2.575853795156969,
           "ownerCustody": "unknown",
-          "usdValue": 334774.8084386524,
-          "priceImpactPct": 94.85111731389429
+          "usdValue": 334589.5536555428,
+          "priceImpactPct": 92.36743487897014
         },
         {
           "address": "14F6bmujPU7YUZGkEVaZ9bZkDWxYgeptzxkjMU6h8FQL",
           "owner": "2SZ2TkuEJg3H79kFNLJ9Lg1g74VJiZLhHrJvmAnm49vw",
-          "amount": "16140284168014343",
-          "uiAmount": 16140284.168014344,
-          "pctOfSupply": 2.3057627721983156,
+          "amount": "15715428088024576",
+          "uiAmount": 15715428.088024575,
+          "pctOfSupply": 2.245069588063538,
           "ownerCustody": "single-key",
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 299672.1123863752,
-          "priceImpactPct": 92.666866573439
+          "usdValue": 291622.464290539,
+          "priceImpactPct": 90.7294313523802
         },
         {
           "address": "GbDEQ1u5hJaExf5xqe5fJcy6KrHzYhjgvxfv33soSgGo",
           "owner": "CRAaTBo3BonaritUwZ7tuMWnHMBusG3pzSppznWD4Gjn",
           "amount": "13289719790680963",
           "uiAmount": 13289719.790680964,
-          "pctOfSupply": 1.8985378960691,
+          "pctOfSupply": 1.898538529706344,
           "ownerCustody": "program-pda",
-          "funder": "E89QFGfFZELAmsEpJnCmP6WLCD1MbSiULjTVKxTkTebp",
-          "usdValue": 246746.48607418753,
-          "priceImpactPct": 91.20616191304632
-        },
-        {
-          "address": "3yDn1MQeHSFf7U3n58BfaXejSjteUUkHBNyW68y6hfsj",
-          "owner": "BVXNG6BrL2Tn3NmppnMeXHjBHTaQSnSnLE99JKwZSWPg",
-          "amount": "12638321441272544",
-          "uiAmount": 12638321.441272544,
-          "pctOfSupply": 1.8054806705393376,
-          "ownerCustody": "program-pda",
-          "funder": "DjDsi34mSB66p2nhBL6YvhbcLtZbkGfNybFeLDjJqxJW",
-          "usdValue": 234652.15630030012,
-          "priceImpactPct": 90.75097090888454
+          "usdValue": 246609.9436414581,
+          "priceImpactPct": 89.17071967264113
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "chMavQVSWyZKSGkofRbwdqFkw5DQttMJM5XYXuBUjHK",
-          "holderOwners": [
-            "B56RWQGf9RFw7t8gxPzrRvk5VRmB5DoF94aLoJ25YtvG",
-            "B56RWQGf9RFw7t8gxPzrRvk5VRmB5DoF94aLoJ25YtvG"
-          ],
-          "count": 2
-        },
-        {
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "holderOwners": [
-            "8PrhRaSgggvyfx23H2QHGiuYqZjTwVPCkPtCrq3aqp9n",
-            "2SZ2TkuEJg3H79kFNLJ9Lg1g74VJiZLhHrJvmAnm49vw"
-          ],
-          "count": 2
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 65.3472623631419,
+        "topNPct": 66.56791596861342,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -1755,155 +1308,130 @@
           "single-key": 6,
           "unknown": 1
         },
-        "namedCount": 4
-      },
-      "priceUsd": 0.018566718483200184,
-      "marketCapUsd": 12996658.45938989
+        "namedCount": 0
+      }
     },
     "Pyth": {
       "mint": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
       "symbol": "PYTH",
-      "fetchedAt": "2026-06-09T11:45:15.501Z",
-      "supply": "9999981923363686",
-      "uiSupply": 9999981923.363686,
+      "fetchedAt": "2026-09-16T13:31:30.292Z",
+      "supply": "9999960335367000",
+      "uiSupply": 9999960335.367,
       "decimals": 6,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 316569.70999999996,
+      "priceUsd": 0.05278904456777009,
+      "marketCapUsd": 527888351.8196217,
+      "dexLiquidityUsd": 653691.7600000001,
       "dexPairCount": 30,
-      "dexVolume24h": 84320.42999999998,
+      "dexVolume24h": 1036478.3899999998,
       "topHolders": [
         {
           "address": "23KfDBTdpaBqfn8aUeoEDgfGJ5368gpnyYGfNkKcECqM",
           "owner": "5WumPYv4jDPRqWjWr3EeybLczpcohHrMPShK9WQ85qfY",
-          "amount": "1293781381332316",
-          "uiAmount": 1293781381.332316,
-          "pctOfSupply": 12.937837200580937,
+          "amount": "1272181368132316",
+          "uiAmount": 1272181368.132316,
+          "pctOfSupply": 12.721864142130388,
           "ownerCustody": "single-key",
-          "funder": "Bnrx1rBTCkDQzpH7WA59c5R9Z329nPbhXFXbxXEDVbP5",
-          "usdValue": 40186199.5522027,
-          "priceImpactPct": 99.99413935736075
-        },
-        {
-          "address": "3XSoALqyVbG1ZMgmTwNcuUf294LzjUj7Mvy7MgA7YNVk",
-          "owner": "Ffz4sGA4ZM5i5s6dgP4oHNUoc5q4pEV3gTarULYcjc2Q",
-          "amount": "784885828362834",
-          "uiAmount": 784885828.362834,
-          "pctOfSupply": 7.8488724717496545,
-          "ownerCustody": "single-key",
-          "funder": "J8YEGNZ5ZADT5CUtJMN74Kv5DbNaYSMZ2aUF2ZMP6rK1",
-          "usdValue": 24379372.728183597,
-          "priceImpactPct": 99.99034758838614
+          "usdValue": 67157238.94062357,
+          "priceImpactPct": 99.98439060819527
         },
         {
           "address": "Gnyw7rZykLq9FjLMzsu6nAryMJijy5FjCEbxxdkymRwk",
           "owner": "9HwAxuuowYi3396rfUPk2dFzGvB1H87i8oC2BkEcR4QD",
           "amount": "721833336001007",
           "uiAmount": 721833336.001007,
-          "pctOfSupply": 7.218346408352351,
+          "pctOfSupply": 7.218361991377995,
           "ownerCustody": "single-key",
-          "funder": "Cp48D9zeJmeUG5FUntF2qzwBdLAu6yfk6yVbD4m5Zyw2",
-          "usdValue": 22420896.530522745,
-          "priceImpactPct": 99.9894944052761
+          "usdValue": 38104892.14465932,
+          "priceImpactPct": 99.97249293169477
+        },
+        {
+          "address": "3XSoALqyVbG1ZMgmTwNcuUf294LzjUj7Mvy7MgA7YNVk",
+          "owner": "Ffz4sGA4ZM5i5s6dgP4oHNUoc5q4pEV3gTarULYcjc2Q",
+          "amount": "574885828362834",
+          "uiAmount": 574885828.362834,
+          "pctOfSupply": 5.748881086354185,
+          "ownerCustody": "single-key",
+          "usdValue": 30347673.61482507,
+          "priceImpactPct": 99.9654603629343
         },
         {
           "address": "5ULtZcyfuWvKuwB555WN4W1vsVW4F3yHU9UW1Gd7kAWy",
           "owner": "E294htaeagKoGLJmCpr4gkJF3B4uUEnTcq7kExX7WJGM",
-          "amount": "615179003422960",
-          "uiAmount": 615179003.42296,
-          "pctOfSupply": 6.151801154616815,
+          "amount": "512274487155953",
+          "uiAmount": 512274487.155953,
+          "pctOfSupply": 5.122765190819654,
           "ownerCustody": "unknown",
-          "usdValue": 19108101.68439913,
-          "priceImpactPct": 99.98767185704529
+          "usdValue": 27042480.73340717,
+          "priceImpactPct": 99.9612455269236
         },
         {
           "address": "52AXihP4T7dgtfxFMjjLBFVGucNvHmxMW5GkvM1vQyFU",
           "owner": "8m5Aj17QvyLXuS747LEWMhoQ7gWrSNXia2ZfpBK4C5za",
-          "amount": "484410765840024",
-          "uiAmount": 484410765.840024,
-          "pctOfSupply": 4.84411641493331,
+          "amount": "458369985328841",
+          "uiAmount": 458369985.328841,
+          "pctOfSupply": 4.583718034437771,
           "ownerCustody": "single-key",
-          "identityName": "Upbit Hot Wallet 49",
-          "identityTags": [],
-          "funder": "7UxiedpgYXy1dFB1e6PrbNdnu9ZpCpseHJ8PyKMTAsoy",
-          "funderName": "Upbit Hot Wallet (SOL) 29",
-          "usdValue": 15046303.789930962,
-          "priceImpactPct": 99.98434510872771
-        },
-        {
-          "address": "ACthtigKSdBXfCKLUfZNjQzLMmKHzjbSafqpa1NJ3M7J",
-          "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
-          "amount": "418112547674000",
-          "uiAmount": 418112547.674,
-          "pctOfSupply": 4.181133034822125,
-          "ownerCustody": "single-key",
-          "identityName": "Binance 7",
-          "identityTags": [],
-          "funder": "3yFwqXBfZY4jBVUafQ1YEXw189y2dN3V5KQq9uzBDy1E",
-          "funderName": "Binance Cold Wallet 2",
-          "usdValue": 12987011.962410858,
-          "priceImpactPct": 99.98188343717551
+          "usdValue": 24196913.584052306,
+          "priceImpactPct": 99.95668999618476
         },
         {
           "address": "Eq9dm4pHewdSVaKdpVJogjLW6upd9hNkiboX2eSncmFV",
           "owner": "5cz3Jz3QnDmTsQiw5MwkfV9tq4zf2yCzWcH7tXq5BxCw",
           "amount": "342145831999166",
           "uiAmount": 342145831.999166,
-          "pctOfSupply": 3.421464504848611,
+          "pctOfSupply": 3.4214718911343485,
           "ownerCustody": "single-key",
-          "funder": "Bnrx1rBTCkDQzpH7WA59c5R9Z329nPbhXFXbxXEDVbP5",
-          "usdValue": 10627406.514780607,
-          "priceImpactPct": 99.97783889557732
+          "usdValue": 18061551.57408075,
+          "priceImpactPct": 99.94199250493753
         },
         {
           "address": "B5V95aZZV2jATa8wBjYvjf7dV6bYYxQ2VSzJ6sBD58oL",
           "owner": "3Fy5oFavnWzTZ8YRBhZkyT3ioKtBSDVVxFkbSPefJHyF",
-          "amount": "180000004902003",
-          "uiAmount": 180000004.902003,
-          "pctOfSupply": 1.800003302820537,
+          "amount": "259034091658455",
+          "uiAmount": 259034091.658455,
+          "pctOfSupply": 2.5903511911174837,
           "ownerCustody": "single-key",
-          "funder": "HBxZShcE86UMmF93KUM8eWJKqeEXi5cqWCLYLMMhqMYm",
-          "funderName": "Bitstamp 2",
-          "usdValue": 5590987.95264807,
-          "priceImpactPct": 99.95795697782488
+          "usdValue": 13674162.209130025,
+          "priceImpactPct": 98.99379354038692
+        },
+        {
+          "address": "FQV8HjuAFFGS2iyNakF4D6wjsMug8PXpz9xbTE8CuLZY",
+          "owner": "3gd3dqgtJ4jWfBfLYTX67DALFetjc5iS72sCgRhCkW2u",
+          "amount": "243922241684000",
+          "uiAmount": 243922241.684,
+          "pctOfSupply": 2.439232091964573,
+          "ownerCustody": "single-key",
+          "usdValue": 12876422.087327061,
+          "priceImpactPct": 98.98511296638712
+        },
+        {
+          "address": "ACthtigKSdBXfCKLUfZNjQzLMmKHzjbSafqpa1NJ3M7J",
+          "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
+          "amount": "187682408821000",
+          "uiAmount": 187682408.821,
+          "pctOfSupply": 1.8768315325933944,
+          "ownerCustody": "single-key",
+          "usdValue": 9907575.043838216,
+          "priceImpactPct": 98.94838142632787
         },
         {
           "address": "FQ2yHp7D3SBYQoe2crFATJdhsazJKJ9Yvq4xFbTzCMYx",
           "owner": "HTyLUKeseSzwb5wk1qXPMZUgi857BUfgH36KRL98EUzn",
           "amount": "180000000000000",
           "uiAmount": 180000000,
-          "pctOfSupply": 1.8000032538004183,
+          "pctOfSupply": 1.8000071396622592,
           "ownerCustody": "unknown",
-          "usdValue": 5590987.800386743,
-          "priceImpactPct": 99.95793349160805
-        },
-        {
-          "address": "CMop2kfJnRrE24jwBfCP3E4yMt451appnxRafVLN6bAr",
-          "owner": "69CuwXNhEohuKx1aZxbjBCzBH3hr4hJgR4bPaG81nFGQ",
-          "amount": "163725929202721",
-          "uiAmount": 163725929.202721,
-          "pctOfSupply": 1.6372622516466373,
-          "ownerCustody": "single-key",
-          "funder": "Bnrx1rBTCkDQzpH7WA59c5R9Z329nPbhXFXbxXEDVbP5",
-          "usdValue": 5085498.182107759,
-          "priceImpactPct": 99.10735673126835
+          "usdValue": 9502028.022198616,
+          "priceImpactPct": 98.94246622746385
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "Bnrx1rBTCkDQzpH7WA59c5R9Z329nPbhXFXbxXEDVbP5",
-          "holderOwners": [
-            "5WumPYv4jDPRqWjWr3EeybLczpcohHrMPShK9WQ85qfY",
-            "5cz3Jz3QnDmTsQiw5MwkfV9tq4zf2yCzWcH7tXq5BxCw",
-            "69CuwXNhEohuKx1aZxbjBCzBH3hr4hJgR4bPaG81nFGQ"
-          ],
-          "count": 3
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 51.8408399981714,
+        "topNPct": 47.52348429159204,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -1915,289 +1443,265 @@
           "single-key": 8,
           "unknown": 2
         },
-        "namedCount": 2
-      },
-      "priceUsd": 0.031061043335481903,
-      "marketCapUsd": 310609871.8756351
+        "namedCount": 0
+      }
     },
     "Jito": {
       "mint": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL",
       "symbol": "JTO",
-      "fetchedAt": "2026-06-09T11:45:40.499Z",
-      "supply": "986523003836198210",
-      "uiSupply": 986523003.8361983,
+      "fetchedAt": "2026-09-16T13:31:45.493Z",
+      "supply": "986522624906103964",
+      "uiSupply": 986522624.906104,
       "decimals": 9,
       "mintAuthority": null,
       "mintAuthorityCustody": null,
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 1427980.5300000005,
+      "priceUsd": 0.4054349299174953,
+      "marketCapUsd": 399970731.2908298,
+      "dexLiquidityUsd": 1507700.55,
       "dexPairCount": 30,
-      "dexVolume24h": 966141.77,
+      "dexVolume24h": 327365.19,
       "topHolders": [
         {
           "address": "2Ch9AWnbAaummLkWTTtNgTAvrFq8YMATUaaN77TB2Y6C",
           "owner": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
-          "amount": "209422037506511667",
-          "uiAmount": 209422037.5065117,
-          "pctOfSupply": 21.228297433729583,
+          "amount": "209757742937765988",
+          "uiAmount": 209757742.937766,
+          "pctOfSupply": 21.26233475463682,
           "ownerCustody": "single-key",
-          "identityName": "Jito DAO Treasury",
-          "identityTags": [],
-          "funder": "HoAWsCzbvEEwjwkpvKwPuyxjx57TWxn8RQzbGVEhW8Xx",
-          "usdValue": 132096831.72816862,
-          "priceImpactPct": 99.98597476852328
+          "usdValue": 85043115.80762514,
+          "priceImpactPct": 99.89752231933332
         },
         {
           "address": "4AxcNk9TY2df2XNzyHHJAQMHs3TxdtqihDUtfqchXRBi",
           "owner": "5SybwTvGno6SBApbGinXyLqhnPzs47aaBG4PShyPT8ey",
-          "amount": "70288940662380000",
-          "uiAmount": 70288940.66238,
-          "pctOfSupply": 7.124916539102897,
+          "amount": "55288940662380000",
+          "uiAmount": 55288940.66238,
+          "pctOfSupply": 5.604427031528277,
           "ownerCustody": "single-key",
-          "funder": "CBwnnc3xFq9tFUDbuZ9zYZnPkGUuE6ESChdLs8w3a2AM",
-          "usdValue": 44336052.1059821,
-          "priceImpactPct": 99.95823358170615
+          "usdValue": 22416067.782664593,
+          "priceImpactPct": 97.83734070484934
         },
         {
           "address": "GAXBfxvDvunuCbF3kmH8QDiV5CA7478zcZZ47PvNJ67g",
           "owner": "7r5xFtcJZpc8vtzBCc1S9ooR2xadHt1jcT8HiH23a1x1",
           "amount": "43039504660028016",
           "uiAmount": 43039504.66002802,
-          "pctOfSupply": 4.362747193189047,
+          "pctOfSupply": 4.362748868950113,
           "ownerCustody": "unknown",
-          "usdValue": 27147965.287858836,
-          "priceImpactPct": 99.93177722436106
+          "usdValue": 17449718.555522174,
+          "priceImpactPct": 97.16964334310644
         },
         {
           "address": "39UEXZFE38ypxswoL12vKE2tG8Ab2vJvEQDY2VsiBNvX",
           "owner": "ESnLXehGeReTRw3WxxEZwB4u2C9gAe8dMbob8Q4gm9Yg",
-          "amount": "35974076629948342",
-          "uiAmount": 35974076.62994834,
-          "pctOfSupply": 3.6465522334562266,
+          "amount": "30758977850750875",
+          "uiAmount": 30758977.850750875,
+          "pctOfSupply": 3.117919150985359,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Prime Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 22691315.602422073,
-          "priceImpactPct": 97.66971978087538
+          "usdValue": 12470764.02925297,
+          "priceImpactPct": 95.90228835750253
         },
         {
           "address": "GyUg73gULEjkqQdi2tKgqi3HeRbeQ8dMfmp3STHqoosX",
           "owner": "MbzL6v1mDkF8QW6r9TJKV6eaiYSf6MNtpVei2ciFQHN",
           "amount": "27517281000000000",
           "uiAmount": 27517281,
-          "pctOfSupply": 2.7893197515918193,
+          "pctOfSupply": 2.789320822988633,
           "ownerCustody": "unknown",
-          "usdValue": 17357035.014811695,
-          "priceImpactPct": 96.99028763702958
+          "usdValue": 11156466.893755024,
+          "priceImpactPct": 95.32455539920946
         },
         {
           "address": "Es11aV9LTeSchn4dJoZxGsjjpFtxWnZ6L8UwDfwRCFc",
           "owner": "9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM",
-          "amount": "26544293983000001",
-          "uiAmount": 26544293.983,
-          "pctOfSupply": 2.6906918419316863,
+          "amount": "22282782108000001",
+          "uiAmount": 22282782.108,
+          "pctOfSupply": 2.2587198251150955,
           "ownerCustody": "single-key",
-          "identityName": "Binance 7",
-          "identityTags": [],
-          "funder": "3yFwqXBfZY4jBVUafQ1YEXw189y2dN3V5KQq9uzBDy1E",
-          "funderName": "Binance Cold Wallet 2",
-          "usdValue": 16743305.419833682,
-          "priceImpactPct": 96.64021469888961
+          "usdValue": 9034218.202323798,
+          "priceImpactPct": 94.44205613529924
         },
         {
-          "address": "9WB1LCjVVDEjhRAJa2joQTaq5tZd6FDGtKEWGNFvfNhq",
-          "owner": "2RFu5Vp4uzECctKfTi7twpSLyFkBUg8erCmHZ8ay1Dvv",
-          "amount": "24119690919735655",
-          "uiAmount": 24119690.919735655,
-          "pctOfSupply": 2.4449192594540325,
-          "ownerCustody": "unknown",
-          "usdValue": 15213942.098432163,
-          "priceImpactPct": 99.87840470053085
+          "address": "5HvmiQoySwMDgxxAKzAqW1L5QPkGKAMpgW2cnLRUn1Bu",
+          "owner": "jjCAwuuNpJCNMLAanpwgJZ6cdXzLPXe2GfD6TaDQBXt",
+          "amount": "21171501591495906",
+          "uiAmount": 21171501.591495905,
+          "pctOfSupply": 2.1460735980090657,
+          "ownerCustody": "program-pda",
+          "usdValue": 8583666.263996283,
+          "priceImpactPct": 93.98727427889214
         },
         {
-          "address": "EWGYAthsZDpGdieMwes9FQYSK37xb7YAvSjmhQEkyaBK",
-          "owner": "FQnVcnwEXREJ3D4j7LzNGzCiMUVVqxkGEqZ2KffRY8ud",
+          "address": "XG5LaPwT9NKzzEUUb8zmh68Hp9tdNFm9VADQwMnnYDK",
+          "owner": "3Z9YACFCe36o1fzdktN2bA2rD1wwE1skhwYegeREek1d",
           "amount": "20000000030300000",
           "uiAmount": 20000000.0303,
-          "pctOfSupply": 2.027322216768175,
-          "ownerCustody": "single-key",
-          "identityName": "Jito Labs Coinbase Prime 1",
-          "identityTags": [],
-          "funder": "GXjsuGPih18Sps9q3NneiMmvp67EWkknHTWWVMDghhd8",
-          "usdValue": 12615370.712758724,
-          "priceImpactPct": 99.85313360402151
-        },
-        {
-          "address": "HYEst7jGceURZLs1xtvb3BiTWFHvkgktCqhRjjWoALTs",
-          "owner": "Ad5i15ft4QwmXMvJ721WQdCZwwinMr5X5bmPkfEQhT31",
-          "amount": "20000000000000000",
-          "uiAmount": 20000000,
-          "pctOfSupply": 2.0273222136967814,
+          "pctOfSupply": 2.027322995476518,
           "ownerCustody": "unknown",
-          "identityName": "Jito Labs Coinbase Prime 12",
-          "identityTags": [],
-          "usdValue": 12615370.693646437,
-          "priceImpactPct": 99.85321799154391
+          "usdValue": 8108698.610634584,
+          "priceImpactPct": 93.80635498197631
         },
         {
-          "address": "2CKBFL5kqhkLZDcwHS8YqixgxhQvmwThw9WuoL1z3ZTC",
-          "owner": "CsWayfMjUmFU4Cbndn1QyciPhfNgirRJGPkS2h2LSUyK",
+          "address": "G3HWwMmrw88iaVYCjKuunhBZ538fNPwBRsBQqrYSL9L7",
+          "owner": "7QPeEvK9NrAUgLk5iVLvU8ivbnf4uUB84rREi26mh8ep",
           "amount": "20000000000000000",
           "uiAmount": 20000000,
-          "pctOfSupply": 2.0273222136967814,
-          "ownerCustody": "single-key",
-          "identityName": "Jito Labs Coinbase Prime 2",
-          "identityTags": [],
-          "funder": "DN7u1hNB71VyuY6hRMqG69PViqw566WsFzAuK56NSopn",
-          "usdValue": 12615370.693646437,
-          "priceImpactPct": 95.86894364309339
+          "pctOfSupply": 2.0273229924051237,
+          "ownerCustody": "unknown",
+          "usdValue": 8108698.598349906,
+          "priceImpactPct": 93.80663697344532
+        },
+        {
+          "address": "Ei4ofCSfkzkDPtarpTKMgXBDxhc3BXqcChncFb4q3FGH",
+          "owner": "HGg7Gb7zmQ5kYBXMkDoZTxKZL3vkDhtMkv79243ULSvZ",
+          "amount": "20000000000000000",
+          "uiAmount": 20000000,
+          "pctOfSupply": 2.0273229924051237,
+          "ownerCustody": "unknown",
+          "usdValue": 8108698.598349906,
+          "priceImpactPct": 93.77848065668893
         }
       ],
       "fundingClusters": [],
       "summary": {
-        "topNPct": 50.36941089661704,
+        "topNPct": 47.623513032500135,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
           "serum-multisig": 0,
           "spl-governance": 0,
-          "program-pda": 0,
+          "program-pda": 1,
           "token-account": 0,
           "system-program": 0,
-          "single-key": 6,
-          "unknown": 4
+          "single-key": 4,
+          "unknown": 5
         },
-        "namedCount": 5
-      },
-      "priceUsd": 0.6307685346823219,
-      "marketCapUsd": 622267669.5601614
+        "namedCount": 0
+      }
     },
     "Save (Solend)": {
       "mint": "SLNDpmoWTVADgEdndyvWzroNL7zSi1dF9PC3xHGtPwp",
       "symbol": "SLND",
-      "fetchedAt": "2026-06-09T11:46:06.159Z",
-      "supply": "3368086377405",
-      "uiSupply": 3368086.377405,
+      "fetchedAt": "2026-09-16T13:32:03.249Z",
+      "supply": "3345027060318",
+      "uiSupply": 3345027.060318,
       "decimals": 6,
       "mintAuthority": "EaFPY9LTQeFR7SEyfbKKFuVMtYvUBbYiiK7WvBJJ7iBU",
       "mintAuthorityCustody": "squads-v3",
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 7018.51,
-      "dexPairCount": 8,
-      "dexVolume24h": 249.01999999999998,
+      "priceUsd": 0.2119840441370718,
+      "marketCapUsd": 709092.3639941505,
+      "dexLiquidityUsd": 8709,
+      "dexPairCount": 7,
+      "dexVolume24h": 104.34999999999998,
       "topHolders": [
         {
           "address": "5pHGhh9pjzHP6fWQF4wQ3CKWpZM3YaerRJYN6RLTtZ5m",
           "owner": "DdZR6zRFiUt4S5mg7AV1uKB2z1f1WzcNYCaTEEWPAuby",
-          "amount": "332124642696",
-          "uiAmount": 332124.642696,
-          "pctOfSupply": 9.860930079586948,
+          "amount": "332001563320",
+          "uiAmount": 332001.56332,
+          "pctOfSupply": 9.92522802755556,
           "ownerCustody": "single-key",
-          "identityName": "Save Main Pool Lending Authority",
-          "identityTags": [],
-          "usdValue": 44354.78457814146
+          "usdValue": 70379.03405240373,
+          "priceImpactPct": 96.94423909270309
         },
         {
           "address": "4nmpWvDZoZC2iDTM9tofDYYn8xFym1zfoC9As1Rkjxoc",
           "owner": "3Tgv5QVpixKCZifg63UVtwGiGH2btMNwzHbUSrUNdunp",
           "amount": "307692000000",
           "uiAmount": 307692,
-          "pctOfSupply": 9.135513924588436,
+          "pctOfSupply": 9.198490608645445,
           "ownerCustody": "unknown",
-          "usdValue": 41091.83909279933
+          "usdValue": 65225.7945086239,
+          "priceImpactPct": 96.71077923529867
         },
         {
           "address": "BKGVtaCRG8Jknb5DMqwpng1PPbSf7ReupweQNs6hRTU5",
           "owner": "6WctTPH3HH3DUnZbNtfar7JeyYFeypiFJJQUv2UnUzz2",
           "amount": "305126286198",
           "uiAmount": 305126.286198,
-          "pctOfSupply": 9.05933672737603,
+          "pctOfSupply": 9.121788275428562,
           "ownerCustody": "single-key",
-          "funder": "JBpj7yp4Afvb71TmanVwJZXGeX4kqbGFvjCFCRo3EbTM",
-          "funderName": "FTX US Hot Wallet",
-          "usdValue": 40749.19157934446
+          "usdValue": 64681.90412077764,
+          "priceImpactPct": 96.6840409808473
         },
         {
           "address": "4F8nhofdG22gStypniGhkWKrgfkA3XU37tagKrhiNZ5n",
           "owner": "JE6epx67msdVPgMUskQ11NpLdrNCb2BQ2CMixznkVfWi",
-          "amount": "127229085587",
-          "uiAmount": 127229.085587,
-          "pctOfSupply": 3.7774887972150477,
+          "amount": "266618392528",
+          "uiAmount": 266618.392528,
+          "pctOfSupply": 7.970590004813101,
           "ownerCustody": "single-key",
-          "funder": "ATtacMVDnDQKmvbfu4CcyQAtN35eka9FByqD8fN5y4tD",
-          "usdValue": 16991.26760807885
+          "usdValue": 56518.845089410686,
+          "priceImpactPct": 96.22325501188071
         },
         {
           "address": "4oGKKEfHQ3xLHs1xQCo6mGEFkvUyXbj1fCSUnR3RXspT",
           "owner": "32H5xzE3kXCWWNgMinMKjBLqKVV6ZUqCkoXZuG1tFXe3",
           "amount": "111111000000",
           "uiAmount": 111111,
-          "pctOfSupply": 3.2989355838791576,
+          "pctOfSupply": 3.321677164233077,
           "ownerCustody": "single-key",
-          "funder": "BNWkmnouxcMLxk37WFswNQhjnKZUDSiJPrzVULyfQKAV",
-          "usdValue": 14838.719672399759
-        },
-        {
-          "address": "FbXzzEu914FuM8C3qwmY3sNx9fwScsPn5ocmYeDewdSu",
-          "owner": "FbXzzEu914FuM8C3qwmY3sNx9fwScsPn5ocmYeDewdSu",
-          "amount": "103338249579",
-          "uiAmount": 103338.249579,
-          "pctOfSupply": 3.068159126566663,
-          "ownerCustody": "token-account",
-          "funder": "JE6epx67msdVPgMUskQ11NpLdrNCb2BQ2CMixznkVfWi",
-          "usdValue": 13800.679653133022
+          "usdValue": 23553.759128114187,
+          "priceImpactPct": 91.39368150829684
         },
         {
           "address": "DhYnhqpqEyTbx7xcod5KjTg9grvDNALUAJAc36j6WiVv",
           "owner": "u6PJ8DtQuPFnfmwHbGFULQ4u4EgjDiyYKjVEsynXq2w",
-          "amount": "86409460354",
-          "uiAmount": 86409.460354,
-          "pctOfSupply": 2.5655357574462108,
+          "amount": "85908975694",
+          "uiAmount": 85908.975694,
+          "pctOfSupply": 2.5682595131482415,
           "ownerCustody": "single-key",
-          "identityName": "Gate Hot Wallet",
-          "identityTags": [],
-          "funder": "7cvkjYAkUYs4W8XcXsca7cBrEGFeSUjeZmKoNBvEwyri",
-          "funderName": "Non-circulating Supply List 35",
-          "usdValue": 11539.863372990494
+          "usdValue": 18211.332095287526,
+          "priceImpactPct": 89.14384120476943
         },
         {
           "address": "4Q9PDFcp5QmzFSxs91Ag4u1gRVqKviTKXTVdHZexn7Pq",
           "owner": "DsGymCun25AM9xzZcpe5emXcoeEfZsCr4VQwJ96zTHSo",
           "amount": "80933053439",
           "uiAmount": 80933.053439,
-          "pctOfSupply": 2.4029387720559665,
+          "pctOfSupply": 2.419503698463533,
           "ownerCustody": "single-key",
-          "funder": "DnveXsFpf3U5tL6UxBFEbZRFNYuXMJ3iqsfdDVndZ7Ap",
-          "usdValue": 10808.496838410869
+          "usdValue": 17156.515972360965,
+          "priceImpactPct": 88.55300954425431
         },
         {
           "address": "DDDZoyX8mfuw7oKAx4ALfaXterQhTdqRkuPfsuxUnkJ7",
           "owner": "BYyD5rCQoQb7UEqQWhqTZ9kMyW4sivXWfkWYzBqivhTT",
           "amount": "76923000000",
           "uiAmount": 76923,
-          "pctOfSupply": 2.283878481147109,
+          "pctOfSupply": 2.299622652161361,
           "ownerCustody": "unknown",
-          "usdValue": 10272.959773199833
+          "usdValue": 16306.448627155974,
+          "priceImpactPct": 88.02791950997721
         },
         {
           "address": "7K6AvGbyMjdMGmeUSnvdNDrrYMMXSpcRQPRrHkWZNCWJ",
           "owner": "DzYvPxEiXLbkb8qA6HxKBYSn66xPX3UunbhucJV1dpui",
           "amount": "73947996426",
           "uiAmount": 73947.996426,
-          "pctOfSupply": 2.195549286445988,
+          "pctOfSupply": 2.2106845503058508,
           "ownerCustody": "single-key",
-          "funder": "6JXxJFe8HBRRX46eWGM9qm6JZ2FcZAQC1tx7vQpT74U5",
-          "usdValue": 9875.652179361477
+          "usdValue": 15675.795338217213,
+          "priceImpactPct": 87.60613910158041
+        },
+        {
+          "address": "Fx8KzikoZ8gqiA9Qynoar7uryboCuk9QPVYruyM5Hsic",
+          "owner": "Fx8KzikoZ8gqiA9Qynoar7uryboCuk9QPVYruyM5Hsic",
+          "amount": "62974628688",
+          "uiAmount": 62974.628688,
+          "pctOfSupply": 1.8826343569852382,
+          "ownerCustody": "token-account",
+          "usdValue": 13349.6164673127,
+          "priceImpactPct": 85.75503617922537
         }
       ],
       "fundingClusters": [],
       "summary": {
-        "topNPct": 47.64826653630756,
+        "topNPct": 50.91847885173997,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -2209,183 +1713,130 @@
           "single-key": 7,
           "unknown": 2
         },
-        "namedCount": 2
-      },
-      "priceUsd": 0.13354861060020842,
-      "marketCapUsd": 449803.25608392694
+        "namedCount": 0
+      }
     },
     "Helium": {
       "mint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
       "symbol": "HNT",
-      "fetchedAt": "2026-06-09T11:46:40.931Z",
-      "supply": "18249082316355672",
-      "uiSupply": 182490823.16355672,
+      "fetchedAt": "2026-09-16T13:32:24.582Z",
+      "supply": "18974556610585725",
+      "uiSupply": 189745566.10585725,
       "decimals": 8,
       "mintAuthority": "3QqEkX1juz4bW8mCQBMJLWjEpHqYawvbEUvpc6iwYom3",
       "mintAuthorityCustody": "program-pda",
       "freezeAuthority": null,
       "freezeAuthorityCustody": null,
-      "dexLiquidityUsd": 723050.9700000002,
+      "priceUsd": 0.40813906124508004,
+      "marketCapUsd": 77442577.22586085,
+      "dexLiquidityUsd": 567231.0200000001,
       "dexPairCount": 30,
-      "dexVolume24h": 215061.33999999997,
+      "dexVolume24h": 176106.93999999997,
       "topHolders": [
+        {
+          "address": "6EBWM39kudAZngAWtadvTSFeeMnVrnyTxxJAgYS2mRyo",
+          "owner": "9rnoVgXR4YLZ6nDARNGXH2b4pVAZDimeTFXPkTcRRzQk",
+          "amount": "807917263419489",
+          "uiAmount": 8079172.63419489,
+          "pctOfSupply": 4.257897984128702,
+          "ownerCustody": "single-key",
+          "usdValue": 3297425.934557243,
+          "priceImpactPct": 93.53904645106309
+        },
+        {
+          "address": "GAmSo39zTg3FMgXeZxx3BGnqYnyhPC77LTAwEgiQNnKs",
+          "owner": "DMXdUn7YgQuvJv8dWwQSA5cH7jxYBkRXL1aw2sbqp2vu",
+          "amount": "595393239122578",
+          "uiAmount": 5953932.39122578,
+          "pctOfSupply": 3.137850603530908,
+          "ownerCustody": "single-key",
+          "usdValue": 2430032.3768715644,
+          "priceImpactPct": 91.43166284318227
+        },
         {
           "address": "BUCbfE1pbjUYrdw39kFWHqE3GuvwNVpN4gpWkmugQCpR",
           "owner": "AguTdjmW5SkhepT9qsKsj29SEqiVKsJchsap6Kma9i98",
-          "amount": "676742524511127",
-          "uiAmount": 6767425.24511127,
-          "pctOfSupply": 3.7083646880402257,
+          "amount": "541309238983550",
+          "uiAmount": 5413092.3898355,
+          "pctOfSupply": 2.8528162744080077,
           "ownerCustody": "program-pda",
-          "identityName": "Helium Mobile Deployer Fund",
-          "identityTags": [],
-          "funder": "hprdnjkbziK8NqhThmAn5Gu4XqrBbctX8du4PfJdgvW",
-          "usdValue": 2697518.4851777833,
-          "priceImpactPct": 89.79580204400335
+          "usdValue": 2209294.446420348,
+          "priceImpactPct": 90.65770498794433
         },
         {
-          "address": "5VB1ueGWNpc3mCahGV1TAu7eE5riCEKhvFEuQ8Jaw3Cc",
-          "owner": "9CKnC2kmqG9ZBtQXDfxR5H7Av7X878geV367DdYtybT4",
-          "amount": "553109598326038",
-          "uiAmount": 5531095.98326038,
-          "pctOfSupply": 3.030889930450451,
+          "address": "3gzm7h85eZFmRJkZELTMubAcsKmTPbUVfiFHRhQeiB54",
+          "owner": "AdbyLbVzndJ3VVHPR3hx9iyJgCZ5eWhwuJwLQ8ZSZUTF",
+          "amount": "513242446277182",
+          "uiAmount": 5132424.46277182,
+          "pctOfSupply": 2.7048982319347,
           "ownerCustody": "single-key",
-          "identityName": "FalconX Hot Wallet",
-          "identityTags": [
-            "Fireblocks Custody"
-          ],
-          "funder": "AgsYPSd9jQZEpbTMsvBWKdiAux3eyghdSY355QVHH9Hs",
-          "funderName": "FalconX Hot Wallet",
-          "usdValue": 2204713.47931264,
-          "priceImpactPct": 87.7903722073869
+          "usdValue": 2094742.9021469748,
+          "priceImpactPct": 90.19931001293962
         },
         {
-          "address": "4UawQgP1whQq7BKjTX2f8jLNH79ykc2HtfRjcCjaYDJq",
-          "owner": "7KDuesYVNWb3ost9dgTXvyP6EzcyZWYt1K5X1V1bSurS",
+          "address": "9GKLt8U97y8jiEk4ft79EiPGLBNsNZC6ReFF6GscqzFY",
+          "owner": "J3AQTnobLXsaMGCRehjP7BPgN5Uwma2UiVZn4aaPieSq",
           "amount": "487253608012393",
           "uiAmount": 4872536.08012393,
-          "pctOfSupply": 2.6700170428608008,
+          "pctOfSupply": 2.5679314569098226,
+          "ownerCustody": "unknown",
+          "usdValue": 1988672.301624563,
+          "priceImpactPct": 89.73244366382383
+        },
+        {
+          "address": "4sZm9Pcs3RGiTbpFWRGut9bk7Ebor9kHw1vyy2wnpAtC",
+          "owner": "HLRFLUjxV44EiSHCm8ki8imnoC6WSSv2mKotGd1CTE9v",
+          "amount": "474141707198688",
+          "uiAmount": 4741417.07198688,
+          "pctOfSupply": 2.4988289156341543,
           "ownerCustody": "single-key",
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 1942209.2848864398,
-          "priceImpactPct": 86.36900335583479
+          "usdValue": 1935157.5127321214,
+          "priceImpactPct": 89.48006447319958
         },
         {
           "address": "Hdyhg2cvHdSqPC3UxhFY9czufJ7GbSzxqwSfbnXZmNNp",
           "owner": "5LZkATrLwHYCQj2YuVbjjgsDZzBk6YfL4pFQRJmtboT2",
-          "amount": "438263524658911",
-          "uiAmount": 4382635.24658911,
-          "pctOfSupply": 2.4015647310994863,
+          "amount": "458596517721504",
+          "uiAmount": 4585965.17721504,
+          "pctOfSupply": 2.4169024190302153,
           "ownerCustody": "single-key",
-          "identityName": "Bybit Hot Wallet 4",
-          "identityTags": [
-            "Bitkub Deposit"
-          ],
-          "funder": "AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2",
-          "funderName": "Bybit Hot Wallet 1",
-          "usdValue": 1746933.1633926954,
-          "priceImpactPct": 85.0732363955933
+          "usdValue": 1871711.5223311735,
+          "priceImpactPct": 89.16200396765694
+        },
+        {
+          "address": "3cWxMWp6WFH1V1qgWxiE1KUbrNArjCzV9KrMvLqcbMa7",
+          "owner": "3B7XAQrLoEMDEGvX8569F9GRb9PcXXocJmj5wvhhei9z",
+          "amount": "436395527952676",
+          "uiAmount": 4363955.27952676,
+          "pctOfSupply": 2.299898421390332,
+          "ownerCustody": "single-key",
+          "usdValue": 1781100.6111015626,
+          "priceImpactPct": 88.67053770395484
         },
         {
           "address": "3N1vc1HgKKSiERefvA1sGuZGCenyqVJs9dV7NGe7dZxL",
           "owner": "6JgtYNnSGy31nhnQdiyKV2gNgJo8d4V5D67smVD33Y6T",
           "amount": "423593598452725",
           "uiAmount": 4235935.98452725,
-          "pctOfSupply": 2.3211775316125394,
+          "pctOfSupply": 2.2324294956984985,
           "ownerCustody": "single-key",
-          "funder": "mgrArTL62g582wWV6iM4fwU1LKnbUikDN6akKJ76pzK",
-          "usdValue": 1688458.343673087,
-          "priceImpactPct": 84.64753207457295
+          "usdValue": 1728850.9362192056,
+          "priceImpactPct": 88.36422979811414
         },
         {
-          "address": "cPwsios3vKzA81hXzsVTcArg5U66suPxAtJgvHgQWse",
-          "owner": "AYXGC7sBnX2LnG4rKPx6Ejod5pUr7vut8vokPwSy5uy6",
-          "amount": "392561422920278",
-          "uiAmount": 3925614.22920278,
-          "pctOfSupply": 2.151129662933496,
+          "address": "2siaAQwgd6fbH42iTuAD31zzAjM2Ts1TgijFtiYU6ftF",
+          "owner": "5Q8kAdX64PuwM5PHXJUMEQGigy3koMsmVytumz2nc2hX",
+          "amount": "377996310771504",
+          "uiAmount": 3779963.10771504,
+          "pctOfSupply": 1.9921219690615772,
           "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Prime Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 1564763.0473053455
-        },
-        {
-          "address": "8xo1NXeowBuirXLcy9ZfSAtcfwEUKYp3F9zzNtuNQbGG",
-          "owner": "EHJ16kAVADAC4H1pfHXqQF3P3PcW36fmReyiSbYYmtnH",
-          "amount": "383239584965610",
-          "uiAmount": 3832395.8496561,
-          "pctOfSupply": 2.100048530232849,
-          "ownerCustody": "single-key",
-          "identityTags": [
-            "Squads Multisig v3"
-          ],
-          "funder": "2jwYrvXzypEp9YAFzQM8hGpFru1QeAdA9h7CyyaPpmKS",
-          "usdValue": 1527605.8873991997
-        },
-        {
-          "address": "GAmSo39zTg3FMgXeZxx3BGnqYnyhPC77LTAwEgiQNnKs",
-          "owner": "DMXdUn7YgQuvJv8dWwQSA5cH7jxYBkRXL1aw2sbqp2vu",
-          "amount": "377498429590017",
-          "uiAmount": 3774984.29590017,
-          "pctOfSupply": 2.068588562679042,
-          "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 1504721.4487966048,
-          "priceImpactPct": 83.10253842111365
-        },
-        {
-          "address": "4sZm9Pcs3RGiTbpFWRGut9bk7Ebor9kHw1vyy2wnpAtC",
-          "owner": "HLRFLUjxV44EiSHCm8ki8imnoC6WSSv2mKotGd1CTE9v",
-          "amount": "377498429590017",
-          "uiAmount": 3774984.29590017,
-          "pctOfSupply": 2.068588562679042,
-          "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 1504721.4487966048,
-          "priceImpactPct": 83.1024845841363
-        },
-        {
-          "address": "3gzm7h85eZFmRJkZELTMubAcsKmTPbUVfiFHRhQeiB54",
-          "owner": "AdbyLbVzndJ3VVHPR3hx9iyJgCZ5eWhwuJwLQ8ZSZUTF",
-          "amount": "377498429590017",
-          "uiAmount": 3774984.29590017,
-          "pctOfSupply": 2.068588562679042,
-          "ownerCustody": "single-key",
-          "identityTags": [
-            "Coinbase Deposit"
-          ],
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "usdValue": 1504721.4487966048,
-          "priceImpactPct": 83.11016809814556
+          "usdValue": 1542750.5943238519,
+          "priceImpactPct": 87.14447828513212
         }
       ],
-      "fundingClusters": [
-        {
-          "funder": "59L2oxymiQQ9Hvhh92nt8Y7nDYjsauFkdb3SybdnsG6h",
-          "funderName": "Coinbase Staking & Gas Distributor",
-          "holderOwners": [
-            "7KDuesYVNWb3ost9dgTXvyP6EzcyZWYt1K5X1V1bSurS",
-            "AYXGC7sBnX2LnG4rKPx6Ejod5pUr7vut8vokPwSy5uy6",
-            "DMXdUn7YgQuvJv8dWwQSA5cH7jxYBkRXL1aw2sbqp2vu",
-            "HLRFLUjxV44EiSHCm8ki8imnoC6WSSv2mKotGd1CTE9v",
-            "AdbyLbVzndJ3VVHPR3hx9iyJgCZ5eWhwuJwLQ8ZSZUTF"
-          ],
-          "count": 5
-        }
-      ],
+      "fundingClusters": [],
       "summary": {
-        "topNPct": 24.588957805266975,
+        "topNPct": 26.961575771726913,
         "breakdown": {
           "squads-v4": 0,
           "squads-v3": 0,
@@ -2394,13 +1845,11 @@
           "program-pda": 1,
           "token-account": 0,
           "system-program": 0,
-          "single-key": 9,
-          "unknown": 0
+          "single-key": 8,
+          "unknown": 1
         },
-        "namedCount": 3
-      },
-      "priceUsd": 0.398603366491037,
-      "marketCapUsd": 72741456.46671423
+        "namedCount": 0
+      }
     }
   }
 }

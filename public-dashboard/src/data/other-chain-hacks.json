@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-22",
+  "updatedAt": "2026-09-16",
   "source": "DeFi exploits on chains outside the Solana + EVM scope covered by the two main datasets. Covers verifiable major incidents on Sui, Cosmos ecosystem, NEAR, Aptos, Polkadot parachains, and other non-EVM non-Solana L1s. Excludes CEX-adjacent incidents, tokens/wallets unrelated to smart-contract protocols, and unverified or anonymous reports. Intended for the combined 'all tracked DeFi' view; the chain-level Solana vs EVM comparison does not include these entries.",
   "hacks": [
     {
@@ -121,6 +121,34 @@
       "recoveryNote": "Second exploit within a week of the July 16 incident; protocol paused and rewrote router contracts",
       "affectedProtocols": [],
       "link": "https://rekt.news/thorchain-rekt-2/"
+    },
+    {
+      "date": "2026-08-20",
+      "protocol": "Cosmos EVM chains (shared underflow bug)",
+      "chain": "Cosmos",
+      "amountUsd": 5700000,
+      "category": "contract",
+      "rootCause": "An unsigned integer underflow in the shared Cosmos EVM module let an attacker create an abnormally large balance and then draw down other accounts' legitimate balances without changing total supply. The same bug was exploited across six chains between 20 and 25 August",
+      "recovered": "none",
+      "recoveryNote": "Cosmos Labs urged affected chains to halt. A patch was released on 19 August and the first known unauthorised transaction followed within about a day; the bug had been reported earlier through a bounty programme and initially judged lower severity",
+      "affectedProtocols": [
+        "MANTRA",
+        "TAC",
+        "KiiChain"
+      ],
+      "link": "https://www.theblock.co/news/defi/2026-08-29-cosmos-labs-says-it-wrongly-cleared-the-bug-behind-a-5-7-million-six-chain-hack-413061"
+    },
+    {
+      "date": "2026-09-06",
+      "protocol": "Liquid Network",
+      "chain": "Bitcoin sidechain",
+      "amountUsd": 320000000,
+      "category": "contract",
+      "rootCause": "A range-proof verification cache bug in the Elements codebase governing peg-outs allowed roughly 4,000 unbacked L-BTC to be created and pegged out for real Bitcoin, removing about 95% of the federation reserve in 23 minutes. A fix had been committed to the Elements repository on 1 September but no release containing it had been deployed to production nodes",
+      "recovered": "partial",
+      "recoveryNote": "The actors described themselves as whitehats in an OP_RETURN message and returned about 85% of the withdrawn BTC. Blockstream disabled bridge nodes, paused the sidechain within hours and deployed updated software",
+      "affectedProtocols": [],
+      "link": "https://www.chainalysis.com/blog/320m-exploit-liquid-network/"
     }
   ]
 }

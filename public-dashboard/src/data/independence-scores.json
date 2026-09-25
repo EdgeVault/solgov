@@ -1,25 +1,131 @@
 {
-  "computedAt": "2026-04-17T14:39:55.789Z",
+  "computedAt": "2026-09-16T21:41:41.680Z",
   "groups": [
     {
-      "team": "Jupiter",
+      "team": "Carrot",
       "context": "live",
-      "note": "Three product multisigs: Perps, Lend, Aggregator",
       "multisigs": [
         {
-          "label": "Jupiter Perps",
-          "address": null,
-          "memberCount": 7
+          "label": "Carrot",
+          "address": "BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon",
+          "memberCount": 3
         },
         {
-          "label": "Jupiter Lend",
-          "address": null,
-          "memberCount": 7
+          "label": "Carrot (program admin)",
+          "address": "DrFv23CkTxu84aAYCK7cvUP3zBvFGz2ruuCXuuyPZWbV",
+          "memberCount": 2
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 5,
+      "uniqueSigners": 5,
+      "pairwiseOverlap": [
+        {
+          "a": "Carrot",
+          "b": "Carrot (program admin)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "DefiTuna",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "DefiTuna",
+          "address": "7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv",
+          "memberCount": 5
         },
         {
-          "label": "Jupiter Agg",
-          "address": null,
-          "memberCount": 8
+          "label": "DefiTuna (program admin)",
+          "address": "5Sjxeibf9PmN2WG23nhfJVEJ8paPKfpK7pQ9oyfQkrZy",
+          "memberCount": 3
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 8,
+      "uniqueSigners": 8,
+      "pairwiseOverlap": [
+        {
+          "a": "DefiTuna",
+          "b": "DefiTuna (program admin)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Drift",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Drift",
+          "address": "E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ",
+          "memberCount": 5
+        },
+        {
+          "label": "Drift (program upgrade)",
+          "address": "7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM",
+          "memberCount": 7
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 12,
+      "uniqueSigners": 12,
+      "pairwiseOverlap": [
+        {
+          "a": "Drift",
+          "b": "Drift (program upgrade)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Helium",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Helium",
+          "address": "FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1",
+          "memberCount": 5
+        },
+        {
+          "label": "Helium (Omnix admin)",
+          "address": "1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz",
+          "memberCount": 10
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 15,
+      "uniqueSigners": 15,
+      "pairwiseOverlap": [
+        {
+          "a": "Helium",
+          "b": "Helium (Omnix admin)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Marginfi",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Marginfi",
+          "address": "7FCPipJWVbPbdHymVt1gJYwKciakkJz5GahdQySemvHk",
+          "memberCount": 15
+        },
+        {
+          "label": "Marginfi (program admin)",
+          "address": "9CiwEGczicmjioXiPsaJV92j4UXG1qMLYLQTxej4U7tr",
+          "memberCount": 7
         }
       ],
       "independenceScore": 1,
@@ -28,22 +134,179 @@
       "uniqueSigners": 22,
       "pairwiseOverlap": [
         {
+          "a": "Marginfi",
+          "b": "Marginfi (program admin)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Solstice",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Solstice",
+          "address": "AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf",
+          "memberCount": 5
+        },
+        {
+          "label": "Solstice (program admin)",
+          "address": "BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE",
+          "memberCount": 3
+        }
+      ],
+      "independenceScore": 1,
+      "independencePct": 100,
+      "totalSignerPositions": 8,
+      "uniqueSigners": 8,
+      "pairwiseOverlap": [
+        {
+          "a": "Solstice",
+          "b": "Solstice (program admin)",
+          "shared": 0,
+          "sharedPctOfMinSet": 0
+        }
+      ]
+    },
+    {
+      "team": "Jupiter",
+      "context": "live",
+      "note": "Three product multisigs: Perps, Lend, Aggregator",
+      "multisigs": [
+        {
+          "label": "Jupiter Perps",
+          "address": "AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm",
+          "memberCount": 8
+        },
+        {
+          "label": "Jupiter Lend",
+          "address": "J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P",
+          "memberCount": 6
+        }
+      ],
+      "independenceScore": 0.875,
+      "independencePct": 88,
+      "totalSignerPositions": 14,
+      "uniqueSigners": 13,
+      "pairwiseOverlap": [
+        {
           "a": "Jupiter Perps",
           "b": "Jupiter Lend",
-          "shared": 0,
-          "sharedPctOfMinSet": 0
+          "shared": 1,
+          "sharedPctOfMinSet": 17
+        }
+      ]
+    },
+    {
+      "team": "Voltr",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Voltr",
+          "address": "7szuzpoZzah95BsAu2LQm3bpor5ofiAV4HuinyfFEdse",
+          "memberCount": 7
         },
         {
-          "a": "Jupiter Perps",
-          "b": "Jupiter Agg",
-          "shared": 0,
-          "sharedPctOfMinSet": 0
+          "label": "Voltr (former 3/5)",
+          "address": "5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH",
+          "memberCount": 5
+        }
+      ],
+      "independenceScore": 0.8571428571428571,
+      "independencePct": 86,
+      "totalSignerPositions": 12,
+      "uniqueSigners": 11,
+      "pairwiseOverlap": [
+        {
+          "a": "Voltr",
+          "b": "Voltr (former 3/5)",
+          "shared": 1,
+          "sharedPctOfMinSet": 20
+        }
+      ]
+    },
+    {
+      "team": "LayerZero OFT",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "LayerZero OFT",
+          "address": "9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN",
+          "memberCount": 2
         },
         {
-          "a": "Jupiter Lend",
-          "b": "Jupiter Agg",
-          "shared": 0,
-          "sharedPctOfMinSet": 0
+          "label": "LayerZero OFT (devtools admin)",
+          "address": "HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC",
+          "memberCount": 6
+        }
+      ],
+      "independenceScore": 0.8333333333333334,
+      "independencePct": 83,
+      "totalSignerPositions": 8,
+      "uniqueSigners": 7,
+      "pairwiseOverlap": [
+        {
+          "a": "LayerZero OFT",
+          "b": "LayerZero OFT (devtools admin)",
+          "shared": 1,
+          "sharedPctOfMinSet": 50
+        }
+      ]
+    },
+    {
+      "team": "Ondo Global Markets",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Ondo Global Markets (admin)",
+          "address": "EfMUASGwCsPBafiPi8rwdZfUJSUt7pxAoxayR39PVpMr",
+          "memberCount": 7
+        },
+        {
+          "label": "Ondo Global Markets (1/8 keeper)",
+          "address": "DK37X6PNtzS4oiJAWgJ364NkUq6us3gf4u7GVRdezqvW",
+          "memberCount": 12
+        }
+      ],
+      "independenceScore": 0.8333333333333334,
+      "independencePct": 83,
+      "totalSignerPositions": 19,
+      "uniqueSigners": 17,
+      "pairwiseOverlap": [
+        {
+          "a": "Ondo Global Markets (admin)",
+          "b": "Ondo Global Markets (1/8 keeper)",
+          "shared": 2,
+          "sharedPctOfMinSet": 29
+        }
+      ]
+    },
+    {
+      "team": "Onre Finance",
+      "context": "live",
+      "multisigs": [
+        {
+          "label": "Onre Finance",
+          "address": "922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR",
+          "memberCount": 11
+        },
+        {
+          "label": "Onre Finance (program upgrade)",
+          "address": "2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN",
+          "memberCount": 7
+        }
+      ],
+      "independenceScore": 0.45454545454545453,
+      "independencePct": 45,
+      "totalSignerPositions": 18,
+      "uniqueSigners": 12,
+      "pairwiseOverlap": [
+        {
+          "a": "Onre Finance",
+          "b": "Onre Finance (program upgrade)",
+          "shared": 6,
+          "sharedPctOfMinSet": 86
         }
       ]
     },

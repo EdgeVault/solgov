@@ -8,16 +8,24 @@
 // Output: data/program-deploys.json
 //   programs[programId] = { protocol, name, deploySlot, deployedAt, authority, sizeKB }
 //   protocols[name]     = { lastDeployAt, programId }   (latest deploy across the protocol's programs)
+//   multisigs[address]  = { version, threshold, voters, members, timelockSeconds, roleSeparation }
+//                         for every governance role multisig listed in protocols.ts, so role rows on the
+//                         dashboard show the live configuration rather than the value typed in.
 
 import * as fs from 'fs';
 import * as path from 'path';
 import { Connection, PublicKey } from '@solana/web3.js';
+import * as multisig from '@sqds/multisig';
 import 'dotenv/config';
 import { readJsonStrict, writeJsonAtomic } from './utils/json-file';
 import { protocolsSourcePath } from './utils/protocols-source';
 
 const OUT_FILE = path.join(__dirname, '..', 'data', 'program-deploys.json');
 const LOADER = new PublicKey('BPFLoaderUpgradeab1e11111111111111111111111');
+const SQUADS_V4 = 'SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf';
+const SQUADS_V3 = 'SMPLecH534NA9acpos4G6x7uf3LWbCAwZQE9e8ZekMu';
+
+export interface RoleMultisig { version: 'V4' | 'V3'; threshold: number; voters: number; members: number; timelockSeconds: number; roleSeparation: boolean }
 
 interface TrackedProgram { protocol: string; name: string; id: string }
 interface ProgramDeploy { protocol: string; name: string; deploySlot: number | null; deployedAt: string | null; authority: string | null; sizeKB?: number; readError?: string }
@@ -26,7 +34,35 @@ interface Snapshot {
   complete: boolean;
   programs: Record<string, ProgramDeploy>;
   protocols: Record<string, { lastDeployAt: string; programId: string }>;
+  multisigs: Record<string, RoleMultisig>;
   slotTimes: Record<string, string>;
+}
+
+// Addresses of the governance role multisigs listed as read on-chain ('verified') in protocols.ts.
+export function roleAddressesFromProtocolsSource(src: string): string[] {
+  const out = new Set<string>();
+  for (const m of src.matchAll(/\{\s*role:[^}]*?address:\s*'([1-9A-HJ-NP-Za-km-z]{32,44})'[^}]*?status:\s*'verified'/g)) out.add(m[1]);
+  return Array.from(out);
+}
+
+// Squads V4 via the SDK; Squads V3 by layout (disc 8, threshold u16, authority_index u16,
+// transaction_index u32, ms_change_index u32, bump u8, create_key 32, allow_external_execute bool,
+// keys Vec<Pubkey>). V3 has no per-member permissions and no timelock.
+export function decodeRoleMultisig(owner: string, data: Buffer): RoleMultisig | null {
+  try {
+    if (owner === SQUADS_V4) {
+      const [ms] = multisig.accounts.Multisig.fromAccountInfo({ data } as any);
+      const masks = ms.members.map((m: any) => Number(m.permissions.mask));
+      return { version: 'V4', threshold: ms.threshold, voters: masks.filter((x: number) => (x & 2) !== 0).length, members: masks.length, timelockSeconds: ms.timeLock, roleSeparation: new Set(masks).size > 1 };
+    }
+    if (owner === SQUADS_V3) {
+      const threshold = data.readUInt16LE(8);
+      const n = data.readUInt32LE(54);
+      if (n > 64) return null;
+      return { version: 'V3', threshold, voters: n, members: n, timelockSeconds: 0, roleSeparation: false };
+    }
+  } catch {}
+  return null;
 }
 
 export function programsFromProtocolsSource(src: string): TrackedProgram[] {
@@ -103,9 +139,22 @@ async function main() {
   const used = new Set(Object.values(programs).map(p => String(p.deploySlot)));
   for (const k of Object.keys(slotTimes)) if (!used.has(k)) delete slotTimes[k];
 
-  const snapshot: Snapshot = { scannedAt: new Date().toISOString(), complete, programs, protocols: latestByProtocol(programs), slotTimes };
+  // Governance role multisigs, one batched read.
+  const roleAddrs = roleAddressesFromProtocolsSource(fs.readFileSync(protocolsSourcePath(), 'utf-8'));
+  const multisigs: Record<string, RoleMultisig> = {};
+  for (let i = 0; i < roleAddrs.length; i += 100) {
+    try {
+      const infos = await conn.getMultipleAccountsInfo(roleAddrs.slice(i, i + 100).map(a => new PublicKey(a)));
+      infos.forEach((info, j) => {
+        const decoded = info ? decodeRoleMultisig(info.owner.toBase58(), Buffer.from(info.data)) : null;
+        if (decoded) multisigs[roleAddrs[i + j]] = decoded;
+      });
+    } catch { complete = false; }
+  }
+
+  const snapshot: Snapshot = { scannedAt: new Date().toISOString(), complete, programs, protocols: latestByProtocol(programs), multisigs, slotTimes };
   writeJsonAtomic(OUT_FILE, snapshot);
-  console.log(`${tracked.length} programs, ${Object.keys(snapshot.protocols).length} protocols with a deploy date, ${lookups} new slot lookup(s)${complete ? '' : ' (incomplete)'}. Wrote ${OUT_FILE}`);
+  console.log(`${tracked.length} programs, ${Object.keys(snapshot.protocols).length} protocols with a deploy date, ${Object.keys(multisigs).length}/${roleAddrs.length} role multisigs, ${lookups} new slot lookup(s)${complete ? '' : ' (incomplete)'}. Wrote ${OUT_FILE}`);
 }
 
 if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });

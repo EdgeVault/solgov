@@ -211,6 +211,7 @@ export interface ProgramDeploys {
   scannedAt: string;
   programs: Record<string, { protocol: string; name: string; deployedAt: string | null; authority: string | null; sizeKB?: number }>;
   protocols: Record<string, { lastDeployAt: string; programId: string }>;
+  multisigs?: Record<string, { version: 'V4' | 'V3'; threshold: number; voters: number; members: number; timelockSeconds: number; roleSeparation: boolean }>;
 }
 
 const CACHE_KEY = 'solgov-live-state-v1';
@@ -452,6 +453,24 @@ function mergeLiveState(
       baseUpdated = { ...baseUpdated, lastUpgrade: deployed.slice(0, 10) };
     } else if (liveLatestUpgrade && (!p.lastUpgrade || liveLatestUpgrade > p.lastUpgrade)) {
       baseUpdated = { ...baseUpdated, lastUpgrade: liveLatestUpgrade };
+    }
+    // Governance role multisigs read on-chain: threshold over voting members (total when different, the
+    // same form as the Signers column), timelock and role separation replace the typed-in values.
+    if (programDeploys?.multisigs && Array.isArray(p.governanceRoles)) {
+      baseUpdated = {
+        ...baseUpdated,
+        governanceRoles: p.governanceRoles.map(r => {
+          const live = r.address ? programDeploys.multisigs![r.address] : undefined;
+          if (!live || r.status !== 'verified') return r;
+          return {
+            ...r,
+            threshold: `${live.threshold}/${live.voters}${live.voters !== live.members ? ` (${live.members} total)` : ''}`,
+            // Squads V3 has no timelock; 'None' keeps the benchmark checks treating it as none.
+            timelock: formatTimelock(live.timelockSeconds),
+            roleSeparation: live.roleSeparation,
+          };
+        }),
+      };
     }
     // Each program's current upgrade authority, read from its ProgramData.
     if (programDeploys?.programs && Array.isArray(p.programs)) {

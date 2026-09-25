@@ -152,7 +152,6 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     programUpgrades: [{"name":"Permissionless","count":4,"lastDate":"2026-01-03"}],
     zeroBalanceSigners: 1,
     offHoursConfigChanges: {"offHours":5,"total":7},
-    singlePipelineNote: "1 signer creates 100% of proposals and is top approver",
     neverSignedCount: 1,
   },
   'Jupiter Perps': {
@@ -233,7 +232,6 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     programSizeKB: 0, deployDate: 'unknown', verifiedBuild: false,
     approvedProposals: 730, rejectedProposals: 51, cancelledProposals: 21, spendingLimitUses: 75, hotWalletSigners: 2, ghostSigners90d: 8,
     topFeePayerPct: 100,
-    singlePipelineNote: "1 signer creates 100% of proposals and is top approver",
     hotWalletDetail: {"full":1,"voteOnly":0,"proposeOnly":0,"unknown":1,"worstSwaps":14,"bridgeCount":0},
   },
   'Loopscale': {
@@ -248,7 +246,6 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     approvedProposals: 1496, rejectedProposals: 39, cancelledProposals: 3, spendingLimitUses: 2, hotWalletSigners: 3, ghostSigners90d: 2,
     identifiedSigners: [{"address":"CyNKPfqsSLAejjZtEeNG3pR4SkPhSPHXdGhuNTyudrNs","name":"Loopscale"}],
     topFeePayerPct: 100,
-    singlePipelineNote: "1 signer creates 100% of proposals",
     hotWalletDetail: {"full":3,"voteOnly":0,"proposeOnly":0,"unknown":0,"worstSwaps":126,"bridgeCount":0},
   },
   'Nosana': {
@@ -315,8 +312,6 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     timezoneDiversity: 'distributed', timezoneRegions: ['EU', 'US'],
     programSizeKB: 0, deployDate: 'unknown', verifiedBuild: false,
     approvedProposals: 30, rejectedProposals: 3, cancelledProposals: 0, spendingLimitUses: 0, hotWalletSigners: 2, ghostSigners90d: 6,
-    identifiedSigners: [{"address":"89SrbjbuNyqSqAALKBsKBqMSh463eLvzS4iVWCeArBgB","name":"Marinade DAO Operations"}],
-    fundingSources: [{"funderName":"FTX 1","signerCount":1,"firstSeen":"2021-04-11"}],
     zeroBalanceSigners: 1,
     offHoursConfigChanges: {"offHours":1,"total":6},
     hotWalletDetail: {"full":2,"voteOnly":0,"proposeOnly":0,"unknown":0,"worstSwaps":157,"bridgeCount":0},
@@ -332,7 +327,7 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     timezoneDiversity: 'distributed', timezoneRegions: ['EU', 'US'],
     programSizeKB: 0, deployDate: 'unknown', verifiedBuild: false,
     approvedProposals: 200, rejectedProposals: 2, cancelledProposals: 0, spendingLimitUses: 0, hotWalletSigners: 0,
-    fundingSources: [{"funderName":"Anas (@allinbitcoin_)","signerCount":1,"firstSeen":"2026-04-02"},{"funderName":"PrivacyCash Relayer","signerCount":1,"firstSeen":"2026-04-02"},{"funderName":"Jupiter Gas Wallet","signerCount":1,"firstSeen":"2026-04-02"}],
+    fundingSources: [{"funderName":"Jupiter Gas Wallet","signerCount":1,"firstSeen":"2026-04-02"}],
     offHoursConfigChanges: {"offHours":1,"total":11},
   },
   'Wick': {
@@ -518,8 +513,7 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     timezoneDiversity: 'distributed', timezoneRegions: ['US', 'Asia'],
     programSizeKB: 1096, deployDate: '2026-03-22', verifiedBuild: false,
     approvedProposals: 998, rejectedProposals: 35, cancelledProposals: 4, spendingLimitUses: 28, hotWalletSigners: 0, ghostSigners90d: 6,
-    identifiedSigners: [{"address":"613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY","name":"MetaDAO Operations"},{"address":"4LpE9Lxqb4jYYh8jA8oDhsGDKPNBNkcoXobbAJTa3pWw","name":"Nallok"}],
-    fundingSources: [{"funderName":"Proph3t","signerCount":1,"firstSeen":"2024-08-29"},{"funderName":"Nallok","signerCount":1,"firstSeen":"2026-01-26"},{"funderName":"PrivacyCash Relayer","signerCount":1,"firstSeen":"2026-01-22"}],
+    identifiedSigners: [{"address":"613BRiXuAEn7vibs2oAYzpGW9fXgjzDNuFMM4wPzLdY","name":"MetaDAO Operations"}],
     programUpgrades: [{"name":"Futarchy","count":32,"lastDate":"2026-03-22"}],
     offHoursConfigChanges: {"offHours":4,"total":4},
   },
@@ -534,7 +528,6 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     timezoneDiversity: 'concentrated', timezoneRegions: ['US'],
     programSizeKB: 1836, deployDate: '2026-01-15', verifiedBuild: false,
     approvedProposals: 187, rejectedProposals: 27, cancelledProposals: 4, spendingLimitUses: 0, hotWalletSigners: 0, ghostSigners90d: 0,
-    singlePipelineNote: "1 signer creates 100% of proposals",
   },
   'Tessera V': {
     created: '2025-06-12', totalTxs: 88, configChanges: 5,
@@ -646,7 +639,6 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     programSizeKB: 0, deployDate: '2026-01-13', verifiedBuild: true,
     approvedProposals: 1658, rejectedProposals: 131, cancelledProposals: 0, spendingLimitUses: 0, hotWalletSigners: 0, ghostSigners90d: 1,
     programUpgrades: [{"name":"GMSOL Core","count":18,"lastDate":"2026-03-19"}],
-    singlePipelineNote: "1 signer creates 100% of proposals and is top approver",
   },
   'Ore': {
     created: '2025-11-25', totalTxs: 1141, configChanges: 0, configDates: [],
@@ -658,7 +650,6 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     timezoneDiversity: 'distributed', timezoneRegions: ['US'],
     programSizeKB: 0, deployDate: '2025-11-25', verifiedBuild: false,
     approvedProposals: 714, rejectedProposals: 12, cancelledProposals: 10, spendingLimitUses: 0, hotWalletSigners: 1, ghostSigners90d: 2,
-    identifiedSigners: [{"address":"A4X677EYc2fAuMcJswQuUiN3Hc8zrNNRZuraJVWYnY13","name":"Hardhat Chad (@HardhatChad)"}],
     programUpgrades: [{"name":"Ore V3","count":500,"lastDate":"2026-04-09"}],
     zeroBalanceSigners: 1,
     neverSignedCount: 1,
@@ -691,7 +682,6 @@ export const GOV_PROFILES: Record<string, GovProfile> = {
     approvedProposals: 323, rejectedProposals: 36, cancelledProposals: 2, spendingLimitUses: 8, hotWalletSigners: 2, ghostSigners90d: 2,
     programUpgrades: [{"name":"DefiTuna","count":141,"lastDate":"2026-04-14"}],
     zeroBalanceSigners: 2,
-    singlePipelineNote: "1 signer creates 100% of proposals and is top approver",
     neverSignedCount: 1,
     hotWalletDetail: {"full":1,"voteOnly":0,"proposeOnly":1,"unknown":0,"worstSwaps":131,"bridgeCount":0},
   },

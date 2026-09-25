@@ -232,7 +232,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'Hylo': {
     name: 'Hylo',
-    description: 'Stablecoin and leveraged token protocol. hyUSD backed by LST basket, xSOL for leveraged SOL. Oracle-free by design - uses internal pricing from LST collateral pool.',
+    description: 'Stablecoin and leveraged token protocol (hyUSD, xSOL). V2 (beta, March 2026) runs multi-asset pools and uses Pyth price oracles.',
     oracles: [],
     collateral: [
       { name: 'JitoSOL', role: 'LST collateral backing hyUSD', governance: 'Jito DAO (immutable)', timelock: 'N/A', activeVoters: 'External', configChanges: 0 },
@@ -293,7 +293,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'Wick': {
     name: 'Wick',
-    description: 'Lending protocol. Recently launched (April 2026).',
+    description: 'Yield-swap protocol by Lantern: deposited SOL is staked via lanternSOL and staking rewards are converted into a token the depositor chooses.',
     oracles: [],
     collateral: [],
     routing: [
@@ -426,7 +426,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'BisonFi': {
     name: 'BisonFi',
-    description: 'Proprietary AMM operated by Forward Industries (NASDAQ). Single key upgrade authority. No audit, no governance, no verified build. Receives 55% of Jupiter Agg swap volume.',
+    description: 'Proprietary AMM; the operator is not publicly documented. Single key upgrade authority. No public audit, no governance, no verified build.',
     oracles: [],
     collateral: [],
     routing: [],
@@ -442,7 +442,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'HumidiFi': {
     name: 'HumidiFi',
-    description: 'Proprietary AMM linked to Temporal (DL News). Handles ~35% of all Solana DEX volume. Single key upgrade authority. No audit, no governance, no verified build.',
+    description: 'Proprietary AMM linked to Temporal (DL News). Single key upgrade authority. No public audit, no governance, no verified build.',
     oracles: [],
     collateral: [],
     routing: [],
@@ -450,7 +450,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'Voltr': {
     name: 'Voltr',
-    description: 'Yield vault protocol acquired by Ranger Finance (Nov 2025). Squads V4 multisig for upgrades (verified via tx analysis). No audit, beta stage. Transactions touch multiple protocols per tx (percentages overlap).',
+    description: 'Yield vault protocol acquired by Ranger Finance (Nov 2025). Squads V4 multisig for upgrades (verified via tx analysis). Transactions touch multiple protocols per tx (percentages overlap).',
     oracles: [],
     collateral: [],
     routing: [
@@ -513,7 +513,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'SPL Stake Pool': {
     name: 'SPL Stake Pool',
-    description: 'Core Solana program for liquid staking pools. Controls most stake pools outside Marinade and Sanctum. ~$3.5B TVL. Governed by 6/10 Squads V3 multisig. Audited by Halborn, Neodyme, and Quantstamp.',
+    description: 'Core Solana program for liquid staking pools. Governed by 6/10 Squads V3 multisig. Audited by Halborn, Neodyme, and Quantstamp.',
     oracles: [],
     collateral: [],
     routing: [],
@@ -521,7 +521,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'LayerZero OFT': {
     name: 'LayerZero OFT',
-    description: 'Cross-chain messaging protocol. OFT program handles omnichain fungible token bridging on Solana. 1/2 threshold with only 1 member able to vote and execute, so it is effectively a single signer. Verified build. Audited by Zellic, Trail of Bits, ABDK.',
+    description: 'Cross-chain messaging protocol. OFT program handles omnichain fungible token bridging on Solana. 1/2 threshold with only 1 member able to vote and execute, so it is effectively a single signer. Verified build. The Solana Endpoint and OFT programs were audited by Halborn, Pashov, OtterSec and Zellic.',
     oracles: [],
     collateral: [],
     routing: [],
@@ -537,7 +537,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'GMSOL': {
     name: 'GMSOL',
-    description: 'GMX V2 fork on Solana (GMTrade). 3rd largest perp DEX. Two Squads multisigs: 4/7 core with 10min timelock, 2/3 deployment with 1h timelock. 10 distinct signer keys, no overlap. GMX DAO approved. 8 audits in 16 months. Verified build.',
+    description: 'GMX V2 fork on Solana (GMTrade). One 4/7 Squads multisig with a 10min timelock holds upgrade authority for its programs. GMX DAO approved. 10 audit reports (Sherlock and Zenith). Verified build.',
     oracles: [
       { name: 'Pyth', role: 'Price feeds for perpetual markets', governance: '13/19 Wormhole guardians', timelock: 'Guardian consensus', activeVoters: '19 guardians on-chain', configChanges: 0 },
     ],
@@ -547,7 +547,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'Ore': {
     name: 'Ore',
-    description: 'Proof-of-work mining protocol on Solana. 2/4 Squads V4 multisig but only 2 of 4 signers are active. 1 signer is propose-only, 1 has never transacted. 200+ txs in 6 weeks. No timelock. Founded by HardhatChad.',
+    description: 'Mining protocol on Solana (grid-based SOL staking since 2025, replacing hash-based proof-of-work). 2/4 Squads V4 multisig; 1 signer is propose-only and 1 has never signed a governance transaction. No timelock.',
     oracles: [],
     collateral: [],
     routing: [],
@@ -575,12 +575,12 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'Carrot': {
     name: 'Carrot',
-    description: 'Yield vaults and lending. $11M TVL. Squads V4 multisig (2/3, no timelock). Lost $8.4M in Drift exploit.',
+    description: 'Yield vaults and lending, winding down. Squads V4 multisig (2/3, no timelock). Lost about $8M of TVL in the Drift exploit cascade.',
     oracles: [], collateral: [], routing: [], settlement: [],
   },
   'Phoenix Eternal': {
     name: 'Phoenix Eternal',
-    description: 'On-chain perpetuals exchange by Ellipsis Labs (the Phoenix CLOB team). Currently in private beta. Squads V4 3/6, no timelock. Same multisig also upgrades a beta contract used for testing pre-production upgrades.',
+    description: 'On-chain perpetuals exchange by Ellipsis Labs (the Phoenix CLOB team), publicly named Phoenix Perpetuals; registration requires an access, referral or invite code. Squads V4 3/6, no timelock. Same multisig also upgrades a beta contract used for testing pre-production upgrades.',
     oracles: [],
     collateral: [],
     routing: [],
@@ -588,7 +588,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'Adrena': {
     name: 'Adrena',
-    description: 'On-chain perpetuals exchange governed by ADX token holders via SPL Governance (Realms DAO). 1 ADX = 1 vote, must be staked, duration-lock multipliers. Proposal threshold, voting period, quorum and approval thresholds are not disclosed in public documentation.',
+    description: 'On-chain perpetuals exchange governed by ADX token holders via SPL Governance (Realms DAO), in maintenance mode since November 2025. Proposal threshold, voting period, quorum and approval thresholds are not disclosed in public documentation.',
     oracles: [],
     collateral: [],
     routing: [],
@@ -596,7 +596,7 @@ export const EXPOSURES: Record<string, ProtocolExposure> = {
   },
   'Bullet': {
     name: 'Bullet',
-    description: 'Solana network extension (appchain), successor to Zeta Markets. Trading and settlement live at the rollup layer rather than on Solana mainnet. Hyperlane bridge currently in audit; no mainnet program deployed yet to scan governance on.',
+    description: 'Solana network extension (appchain), successor to Zeta Markets. Trading and settlement live at the rollup layer rather than on Solana mainnet. Hyperlane bridge described as in audit; solgov has not yet verified a Bullet program on Solana mainnet.',
     oracles: [],
     collateral: [],
     routing: [],

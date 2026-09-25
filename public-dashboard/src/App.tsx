@@ -2412,7 +2412,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                             );
                           })()}
                           {g.hotWalletSigners !== undefined && g.hotWalletSigners > 0 && (
-                            <p><span className="text-gray-500">Gov keys with DeFi activity:</span> <span className="text-gray-300">{g.hotWalletSigners} signer{g.hotWalletSigners > 1 ? 's' : ''} <Tooltip text="Same key signs both multisig governance actions and DeFi transactions like swaps or bridges. Squads recommends dedicated keys exclusively for governance, regardless of whether they are stored on hardware or software wallets."><InfoIcon /></Tooltip></span></p>
+                            <p><span className="text-gray-500">Gov keys with DeFi activity:</span> <span className="text-gray-300">{g.hotWalletSigners} signer{g.hotWalletSigners > 1 ? 's' : ''} <span className="text-gray-500">(as of {GOV_PROFILES_AS_OF})</span> <Tooltip text="Same key signs both multisig governance actions and DeFi transactions like swaps or bridges. Squads recommends dedicated keys exclusively for governance, regardless of whether they are stored on hardware or software wallets."><InfoIcon /></Tooltip></span></p>
                           )}
                           {g.topFeePayerPct !== undefined && g.topFeePayerPct >= 70 && (
                             <p><span className="text-gray-500">Gas concentration:</span> <span className="text-gray-300">1 signer pays {g.topFeePayerPct}% of tx fees</span></p>
@@ -2437,7 +2437,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                           })()}
                           {g.identifiedSigners && g.identifiedSigners.length > 0 && (
                             <>
-                              <h4 className="font-bold text-white mt-3 mb-1">Identified Signers</h4>
+                              <h4 className="font-bold text-white mt-3 mb-1">Identified Signers <span className="text-[9px] font-normal text-gray-500">(as of {GOV_PROFILES_AS_OF})</span></h4>
                               <div className="space-y-0.5">
                                 {g.identifiedSigners.map((s, i) => (
                                   <p key={i} className="text-[11px]"><span className="text-gray-300">{s.name}</span> <span className="text-gray-500 font-mono">({s.address.slice(0, 6)}..{s.address.slice(-4)})</span></p>
@@ -2447,7 +2447,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                           )}
                           {g.fundingSources && g.fundingSources.length > 0 && (
                             <>
-                              <h4 className="font-bold text-white mt-3 mb-1">Notable Funding Sources <Tooltip text="Original funding source of governance signers, from first incoming SOL transfer. Identifying exchanges and mixers, not judging intent."><InfoIcon /></Tooltip></h4>
+                              <h4 className="font-bold text-white mt-3 mb-1">Notable Funding Sources <Tooltip text="Original funding source of governance signers, from first incoming SOL transfer. Identifying exchanges and mixers, not judging intent."><InfoIcon /></Tooltip> <span className="text-[9px] font-normal text-gray-500">(as of {GOV_PROFILES_AS_OF})</span></h4>
                               <div className="space-y-0.5">
                                 {g.fundingSources.map((f, i) => (
                                   <p key={i} className="text-[11px]"><span className="text-gray-300">{f.funderName}</span><span className="text-gray-500">: {f.signerCount} signer{f.signerCount > 1 ? 's' : ''}{f.firstSeen ? `, first ${f.firstSeen}` : ''}</span></p>

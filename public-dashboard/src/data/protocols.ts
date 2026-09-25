@@ -651,7 +651,7 @@ export const PROTOCOLS: Protocol[] = [
     verifiedBuild: true,
     configAuthority: 'autonomous',
     authorityRole: 'program-upgrade',
-    authorityRoleNote: 'Squads label: "Exponent Program Upgrades". 3/5 threshold, 4h timelock. $317 in vault.',
+    authorityRoleNote: 'Squads label: "Exponent Program Upgrades". 3/5 threshold, 4h timelock.',
     insuranceFund: {
       hasInsuranceFund: false,
       fundType: 'none',
@@ -918,7 +918,7 @@ export const PROTOCOLS: Protocol[] = [
     verifiedBuild: true,
     configAuthority: 'autonomous',
     authorityRole: 'program-upgrade',
-    authorityRoleNote: 'Squads label: "Nosana Ops". Sub-account labelled "Ops Wallet". $52 in vault - operational, treasury elsewhere.',
+    authorityRoleNote: 'Squads label: "Nosana Ops". Sub-account labelled "Ops Wallet".',
     insuranceFund: {
       hasInsuranceFund: false,
       fundType: 'none',
@@ -1019,7 +1019,7 @@ insuranceFund: {
     verifiedBuild: false,
     configAuthority: 'autonomous',
     authorityRole: 'program-upgrade',
-    authorityRoleNote: 'Squads label: "stabble Admin". $48 in vault.',
+    authorityRoleNote: 'Squads label: "stabble Admin".',
     insuranceFund: {
       hasInsuranceFund: false,
       fundType: 'none',
@@ -1116,7 +1116,7 @@ insuranceFund: {
     verifiedBuild: false,
     configAuthority: 'autonomous',
     authorityRole: 'program-upgrade',
-    authorityRoleNote: 'Squads label: "Solayer Labs". 3/6 threshold. $9 in vault - protocol TVL ($200M+) is held in PDAs of the staking program, not in this multisig vault.',
+    authorityRoleNote: 'Squads label: "Solayer Labs". 3/6 threshold. Protocol TVL is held in PDAs of the staking program, not in this multisig vault.',
     insuranceFund: {
       hasInsuranceFund: false,
       fundType: 'none',
@@ -1891,7 +1891,7 @@ insuranceFund: {
     verifiedBuild: 'partial',
     configAuthority: 'autonomous',
     authorityRole: 'both',
-    authorityRoleNote: 'Squads label: "Triumvirate" (Latin: rule of three). 3/6 voters (6 Full) / 13 total members (rest propose-only), read on-chain 2026-09-16. $1.7M+ in vault. Holds program upgrade authority for Futarchy, Autocrat, AMM.',
+    authorityRoleNote: 'Squads label: "Triumvirate" (Latin: rule of three). 3/6 voters (6 Full) / 13 total members (rest propose-only), read on-chain 2026-09-16. Holds program upgrade authority for Futarchy, Autocrat, AMM.',
         publicDocs: {
       other: 'Futarchy-based governance and fundraising launchpad (permissionless token launches). Verified, immutable, open-source Futarchy and AMM programs. Core contracts audited by Accretion (2025 launchpad audit, 2026 full audit). META token live and exchange-listed (2026).',
       source: 'https://docs.metadao.fi',
@@ -1971,7 +1971,7 @@ insuranceFund: {
     verifiedBuild: false,
     configAuthority: 'autonomous',
     authorityRole: 'both',
-    authorityRoleNote: 'Squads label: "Helium". 3/5 voters / 6 total members (1 propose-only), read on-chain 2026-09-24. $296k+ in vault. Program upgrade authority for 17 named Helium programs covering Sub DAOs, Modular Governance, Treasury, Voter Stake Registry, Data Credits, IoT/Mobile entities, Hex Boosting, Circuit Breaker, Fanout, Rewards Oracle, Lazy Distributor, Price Oracle, Organisations, Mobile Entity, Modular Governance v2, No-Emit, Entity Manager. Concentration scan also flags 7 additional program data accounts under the same vault that haven\'t been programmatically reverse-derived to programIds yet (work in progress).',
+    authorityRoleNote: 'Squads label: "Helium". 3/5 voters / 6 total members (1 propose-only), read on-chain 2026-09-24. Program upgrade authority for 17 named Helium programs covering Sub DAOs, Modular Governance, Treasury, Voter Stake Registry, Data Credits, IoT/Mobile entities, Hex Boosting, Circuit Breaker, Fanout, Rewards Oracle, Lazy Distributor, Price Oracle, Organisations, Mobile Entity, Modular Governance v2, No-Emit, Entity Manager. Concentration scan also flags 7 additional program data accounts under the same vault that haven\'t been programmatically reverse-derived to programIds yet (work in progress).',
         publicDocs: {
       other: 'DePIN wireless network. Programs audited by sec3. Open source on GitHub (helium/helium-program-library). Migrated to Solana April 2023.',
       source: 'https://docs.helium.com',
@@ -2115,7 +2115,7 @@ insuranceFund: {
     configAuthority: 'autonomous',
     verifiedBuild: false,
     authorityRole: 'both',
-    authorityRoleNote: 'Squads label: "deBridge Governance". 2/3 threshold, $23k in vault. Programs are upgraded via indirection: Squads multisig controls a custom governance program (BRTb...) which invoke_signs a PDA upgrade authority (BCTm...) on each program. Single point of control despite the on-chain authority showing as different addresses.',
+    authorityRoleNote: 'Squads label: "deBridge Governance". 2/3 threshold. Programs are upgraded via indirection: Squads multisig controls a custom governance program (BRTb...) which invoke_signs a PDA upgrade authority (BCTm...) on each program. Single point of control despite the on-chain authority showing as different addresses.',
         publicDocs: {
       other: '33 audits across EVM and Solana by Halborn, Neodyme, Zokyo, Ackee, and Smart Security Consulting. Immunefi bug bounty up to $200K (EVM only, Solana not covered). 12-node validator network (8/12 threshold) for cross-chain messaging. Solana program upgrades route through a custom deBridge governance program (BRTbgHnC2AWfumCBU6ExthDie912RiDyiS3uXgMPQPQN) that invoke_signs a program-derived upgrade authority. The governance program itself is upgrade-controlled by Squads V4 multisig FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap at threshold 2 of 3 with zero timelock.',
       source: 'https://github.com/debridge-finance/debridge-security',

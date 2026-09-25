@@ -680,7 +680,10 @@ function App() {
       // deploy buffer still exists. Older snapshots without the field fall back to the stale rule.
       if (typeof r.executable === 'boolean') { if (!r.executable) continue; }
       else if (r.stale === true && (r.status === 'Active' || r.kind === 'ConfigChange')) continue;
-      for (const k of new Set([r.protocol, fam(r.protocol)])) { if (!m.has(k)) m.set(k, []); m.get(k)!.push(r); }
+      // A retired multisig ("former", "historical") no longer governs the protocol, so its proposals stay
+      // under its own label and are not counted as the protocol's.
+      const keys = /\((former|historical)\b/i.test(r.protocol) ? [r.protocol] : [r.protocol, fam(r.protocol)];
+      for (const k of new Set(keys)) { if (!m.has(k)) m.set(k, []); m.get(k)!.push(r); }
     }
     return m;
   }, [livePendingUpgrades]);
@@ -1099,12 +1102,9 @@ function App() {
                         <span className="font-medium text-white whitespace-nowrap">{displayName(p.name)}</span>
                         {(() => {
                           const q = pendingByProtocol.get(p.name) || [];
-                          const upg = q.filter(x => x.kind === 'ProgramUpgrade' || x.kind === 'SetUpgradeAuthority');
-                          const cfg = q.filter(x => x.kind === 'ConfigChange');
-                          if (!upg.length && !cfg.length) return null;
-                          const label = upg.length ? `queued upgrade${upg.length > 1 ? 's' : ''}` : 'queued config change';
-                          const tip = q.slice(0, 4).map(x => `#${x.proposalIndex} ${x.status} ${x.approvals}/${x.threshold}: ${x.detail.slice(0, 90)}`).join('\n');
-                          return <Tooltip text={`Squads proposals approved or open but not yet executed. ${tip}`}><span className="text-[10px] px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20 whitespace-nowrap">{label}</span></Tooltip>;
+                          const label = pendingLabel(q);
+                          if (!label) return null;
+                          return <Tooltip text={pendingTip(q)}><span className="text-[10px] px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20 whitespace-nowrap">{label}</span></Tooltip>;
                         })()}
                       </div>
                     </td>
@@ -1844,6 +1844,24 @@ function App() {
   );
 }
 
+// Badge text and tooltip for open Squads proposals. Approved and waiting only on execution reads as
+// queued; still collecting approvals reads as proposed.
+type PendingItem = import('./hooks/useLiveData').PendingUpgrade;
+const pendingDate = (x: PendingItem) => (/(?:active|approved) at (\d{4}-\d{2}-\d{2})/.exec(x.detail) || [])[1] || 'date unknown';
+const pendingKind = (x: PendingItem) => x.kind === 'ProgramUpgrade' ? 'program upgrade' : x.kind === 'SetUpgradeAuthority' ? 'upgrade authority change' : x.kind === 'ConfigChange' ? 'config change' : x.kind === 'ProgramClose' ? 'program close' : x.kind === 'ProgramExtend' ? 'program extend' : 'vault transaction';
+function pendingLabel(q: PendingItem[]): string | null {
+  const upg = q.filter(x => x.kind === 'ProgramUpgrade' || x.kind === 'SetUpgradeAuthority');
+  const cfg = q.filter(x => x.kind === 'ConfigChange');
+  const pick = upg.length ? upg : cfg;
+  if (!pick.length) return null;
+  const state = pick.some(x => x.status === 'Approved') ? 'queued' : 'proposed';
+  return `${state} ${upg.length ? 'upgrade' : 'config change'}${pick.length > 1 ? 's' : ''}`;
+}
+function pendingTip(q: PendingItem[]): string {
+  const lines = q.slice(0, 5).map(x => `#${x.proposalIndex} ${x.status === 'Approved' ? 'approved' : 'proposed'} ${pendingDate(x)}, ${x.approvals}/${x.threshold} approvals: ${pendingKind(x)}`);
+  return `Squads proposals not yet executed that can still execute on-chain. Queued means approved and waiting only on execution; proposed means still collecting approvals.\n${lines.join('\n')}`;
+}
+
 function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, liveHistorical, historicalAsOf, govActivity, pendingByProtocol, daoNames }: { protocols: typeof PROTOCOLS; liveStates: Record<string, any>; liveActivity: { date: string; timestamp: string; protocol: string; type: string; detail: string }[]; liveHistorical: Record<string, import('./hooks/useLiveData').HistoricalProtocolState>; historicalAsOf: string | null; govActivity: GovActivity | null; pendingByProtocol: Map<string, import('./hooks/useLiveData').PendingUpgrade[]>; daoNames: Set<string> }) {
   const [selectedProtocol, setSelectedProtocol] = useState<string | null>(null);
   // Same as the dashboard table: bring the expanded detail row into view when a protocol near the
@@ -2012,7 +2030,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     for (const [name, state] of Object.entries(liveStates)) {
       const queued = pendingByProtocol.get(name) || [];
       if (queued.length > 0 && typeof state.lastChecked === 'string') {
-        events.push({ date: state.lastChecked.split('T')[0], protocol: name, type: queued.length + ' queued proposal' + (queued.length > 1 ? 's' : ''), ts: state.lastChecked });
+        events.push({ date: state.lastChecked.split('T')[0], protocol: name, type: queued.length + ' open proposal' + (queued.length > 1 ? 's' : ''), ts: state.lastChecked });
       }
       if (state.threatAlerts) {
         for (const alert of state.threatAlerts) {
@@ -2142,12 +2160,12 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                       <span className="font-medium text-white whitespace-nowrap">{displayName(name)}</span>
                       {(() => {
                         const q = pendingByProtocol.get(name) || [];
-                        if (!q.length) return null;
-                        const tip = q.slice(0, 4).map(x => `#${x.proposalIndex} ${x.status} ${x.approvals}/${x.threshold}: ${x.detail.slice(0, 90)}`).join('\n');
+                        const label = pendingLabel(q);
+                        if (!label) return null;
                         return (
-                          <Tooltip text={`Squads proposals open or approved, not yet executed, that could still execute. ${tip}`}>
-                            <span className="ml-2 px-1.5 py-0.5 text-[9px] rounded bg-white/[0.04] text-gray-300 border border-white/[0.08] cursor-help">
-                              {q.length} queued
+                          <Tooltip text={pendingTip(q)}>
+                            <span className="ml-2 px-1.5 py-0.5 text-[9px] rounded bg-white/[0.04] text-gray-300 border border-white/[0.08] cursor-help whitespace-nowrap">
+                              {label}
                             </span>
                           </Tooltip>
                         );
@@ -2222,8 +2240,8 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                                 {q.slice(0, 6).map(x => (
                                   <p key={x.proposalPda} className="text-[11px] text-gray-300">
                                     <a href={`https://solscan.io/account/${x.proposalPda}`} target="_blank" rel="noopener" className="font-mono text-gray-400 hover:text-white underline">#{x.proposalIndex}</a>
-                                    {' '}<span className="text-gray-400">{x.status} {x.approvals}/{x.threshold}</span>
-                                    {' '}<span>{x.kind === 'ProgramUpgrade' ? 'program upgrade' : x.kind === 'SetUpgradeAuthority' ? 'upgrade authority change' : 'config change'}</span>
+                                    {' '}<span className="text-gray-400">{x.status === 'Approved' ? 'approved' : 'proposed'} {pendingDate(x)}, {x.approvals}/{x.threshold}</span>
+                                    {' '}<span>{pendingKind(x)}</span>
                                   </p>
                                 ))}
                               </div>

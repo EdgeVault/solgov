@@ -78,7 +78,7 @@ export interface PendingUpgrade {
   rejections: number;
   threshold: number;
   timelockSeconds: number;
-  kind: 'ProgramUpgrade' | 'SetUpgradeAuthority' | 'ConfigChange' | 'OtherVaultTx';
+  kind: 'ProgramUpgrade' | 'SetUpgradeAuthority' | 'ProgramClose' | 'ProgramExtend' | 'ConfigChange' | 'OtherVaultTx';
   programId: string | null;
   detail: string;
 }

@@ -12,8 +12,11 @@
     "api": "ts-node src/solgov-api.ts",
     "bot": "ts-node src/solgov-bot.ts",
     "triage": "ts-node src/llm-triage.ts",
+    "govscan": "ts-node src/incremental-scan.ts",
     "build": "tsc",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "audit:static": "ts-node src/audit-static-data.ts",
+    "test": "node --test --require ts-node/register/transpile-only \"test/**/*.test.ts\""
   },
   "keywords": [
     "solana",
@@ -27,6 +30,7 @@
   "dependencies": {
     "@coral-xyz/anchor": "^0.30.0",
     "@huma-finance/permissionless-sdk": "^1.0.23",
+    "@solana/spl-token": "^0.3.11",
     "@solana/web3.js": "^1.91.0",
     "@sqds/multisig": "^2.1.0",
     "@sqds/sdk": "^2.0.4",
@@ -40,7 +44,10 @@
   },
   "overrides": {
     "rpc-websockets": {
-      "ws": "8.20.1"
+      "ws": "8.21.3"
+    },
+    "jayson": {
+      "ws": "7.5.13"
     }
   }
 }

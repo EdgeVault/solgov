@@ -42,6 +42,7 @@ function Dropdown({ value, onChange, options }: { value: string; onChange: (v: s
 }
 import { PROTOCOLS, STATS, SQUADS_MINIMUM } from './data/protocols';
 import { GOV_PROFILES, GOV_PROFILES_AS_OF } from './data/governance';
+import { displayName } from './data/displayNames';
 import { EXPOSURES, EXPOSURE_PROTOCOLS, resolveExposureNode } from './data/exposure';
 import type { ExposureNode } from './data/exposure';
 import { getRelationships } from './data/relationships';
@@ -58,12 +59,18 @@ import tokenCustodyData from './data/token-custody.json';
 import otherChainHacksData from './data/other-chain-hacks.json';
 import { TvlChart } from './components/TvlChart';
 import { useLiveData } from './hooks/useLiveData';
-import { useDefiLlama, formatTvlDisplay, formatVolumeDisplay, type DefiLlamaData } from './hooks/useDefiLlama';
+import { useDefiLlama, formatTvlDisplay, formatVolumeDisplay, tvlSourceLabel, type DefiLlamaData } from './hooks/useDefiLlama';
 import { useYieldbayHealth } from './hooks/useYieldbayHealth';
+import { effectiveVoters, meetsSquadsBenchmark, meetsSquadsRatio, meetsSquadsSignerCount, parseThreshold, ratioPct } from './lib/benchmark';
+import { canVote } from './lib/roles';
+import { formatAge, formatTimelock, parseTime } from './lib/time';
 import './index.css';
 import ACTIVITY_FEED from './data/activity-feed.json';
+import govActivitySnapshot from './data/gov-activity.json';
+import type { GovActivity, GovActivityEntry } from './hooks/useLiveData';
 
 import { Tooltip, InfoIcon } from './components/Tooltip';
+import { DaoRiskTab } from './components/DaoRiskTab';
 
 const ACTIVITY_TYPE_LABELS: Record<string, string> = {
   ConfigChange: 'Config change',
@@ -74,6 +81,7 @@ const ACTIVITY_TYPE_LABELS: Record<string, string> = {
   Rejection: 'Proposal rejected',
   Cancellation: 'Proposal cancelled',
   ProposalCreated: 'Proposal created',
+  TreasuryProposal: 'Proposal moves treasury',
   AuthorityActivity: 'Authority activity',
   AuthorityChange: 'Authority changed',
   ProposalPending: 'Proposal pending',
@@ -124,7 +132,7 @@ function cleanLiveActivity(raw: { date: string; protocol: string; type: string; 
     if (!e.protocol || e.protocol === 'Unknown') continue;
     if (e.type === 'Watching') continue;
     const proto = canonProtoName(e.protocol);
-    if ((e.type === 'VaultTx' || e.type === 'ProposalCreated') && decisionKeys.has(`${e.date}|${proto}`)) continue;
+    if (e.type === 'VaultTx' && decisionKeys.has(`${e.date}|${proto}`)) continue;
     let label = ACTIVITY_TYPE_LABELS[e.type] || e.type;
     // Governance-change events carry a specific detail string ("Timelock: none -> 24h", "Threshold: 2 -> 3") - surface it over the generic label so the feed shows exactly what changed.
     if (GOV_CHANGE_TYPES.has(e.type) && e.detail) label = e.detail;
@@ -136,6 +144,30 @@ function cleanLiveActivity(raw: { date: string; protocol: string; type: string; 
   return out;
 }
 
+// "2026-09-18 07:17 UTC" for a timestamp, or null when it cannot be parsed.
+function fmtUtc(s: string | null | undefined): string | null {
+  const t = parseTime(s);
+  if (t === null) return null;
+  const iso = new Date(t).toISOString();
+  return `${iso.slice(0, 10)} ${iso.slice(11, 16)} UTC`;
+}
+
+// Keyboard-operable expandable table row: focusable, announced as a button with its expanded state,
+// toggled by click, Enter or Space. Key presses from controls inside the row are left alone.
+function expandRowProps(isOpen: boolean, toggle: () => void, label: string) {
+  return {
+    role: 'button' as const,
+    tabIndex: 0,
+    'aria-expanded': isOpen,
+    'aria-label': label,
+    onClick: toggle,
+    onKeyDown: (e: React.KeyboardEvent<HTMLElement>) => {
+      if (e.target !== e.currentTarget) return;
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    },
+  };
+}
+
 function Check({ pass, label }: { pass: boolean; label?: string }) {
   return (
     <span className={`font-bold ${pass ? 'text-white' : 'text-gray-500'}`}>
@@ -145,9 +177,12 @@ function Check({ pass, label }: { pass: boolean; label?: string }) {
 }
 
 export const LOGO_FILENAMES: Record<string, string> = {
+  'BonkDAO': 'bonkdao.jpg',
+  'MonkeDAO': 'monkedao.jpg',
+  'SamoDAO': 'samodao.jpg',
   'Hastra PRIME': 'hastra',
   'Orca': 'orca',
-  'Drift': 'drift',
+  'Drift': 'velocity',
   'Kamino': 'kamino',
   'Jupiter Perps': 'jupiter',
   'Jupiter Lend': 'juplend',
@@ -218,7 +253,7 @@ export const LOGO_FILENAMES: Record<string, string> = {
   'Internal AMM': 'driftamm',
 };
 
-function ProtocolLogo({ name }: { name: string }) {
+export function ProtocolLogo({ name }: { name: string }) {
   const [failed, setFailed] = useState(false);
   const filename = LOGO_FILENAMES[name];
 
@@ -562,7 +597,7 @@ const ROLE_BY_MULTISIG: Record<string, { protocol: string; role: string }> = (()
 // protocol's several, otherwise the protocol name on its own.
 function activityLabel(e: { protocol: string; multisig?: string }): string {
   const hit = e.multisig ? ROLE_BY_MULTISIG[e.multisig] : undefined;
-  return hit ? `${hit.protocol} · ${hit.role}` : e.protocol;
+  return hit ? `${displayName(hit.protocol)} · ${hit.role}` : displayName(e.protocol);
 }
 
 // Compact hover summaries for role-separated governance (cold/warm/pause style splits).
@@ -573,41 +608,82 @@ function rolesThresholdTip(roles: any[]): string {
 function rolesTimelockTip(roles: any[]): string {
   return ['Per-role timelocks', ...roles.map(r => `${r.role}: ${r.timelock || 'pending'}`), 'Full breakdown in the dropdown'].join('\n');
 }
-// Tooltip text for the single Squads Safety Benchmark heading on multi-multisig protocols.
-// The section shows the primary multisig inline; this hover surfaces the full four-check
-// benchmark for every multisig. Threshold + timelock are computed from live values; role
-// separation + verified build are real for the primary and pending for the others until
-// the live per-role member scan lands.
+// Tooltip text for the Squads Safety Benchmark heading on multi-multisig protocols. Each
+// multisig's threshold + timelock is shown inline on its card; this hover gives the aggregate
+// so it stays compact even when a protocol runs many multisigs. Role separation is omitted here
+// because it is only member-verified for the primary multisig.
 function rolesBenchmarkTip(p: any): string {
-  const roles = p.governanceRoles || [];
-  const out: string[] = ['Benchmark per multisig'];
-  for (const r of roles) {
-    out.push('');
-    if (!r.threshold) { out.push(`${r.role}: not yet on-chain`); continue; }
-    const m = String(r.threshold).match(/(\d+)\s*\/\s*(\d+)/);
-    const thr = m ? +m[1] : 0, tot = m ? +m[2] : 0, pct = tot > 0 ? Math.round((thr / tot) * 100) : 0;
-    const hasTl = r.timelock && r.timelock !== 'None';
-    const thrPass = thr >= 4 || (thr >= 3 && pct >= 67);
-    const thrNote = thr >= 4 && pct >= 67 ? `${pct}% meets 4/6+`
-      : thr >= 4 ? `${pct}%, ratio below 67%`
-      : thr >= 3 && pct >= 67 ? `${pct}% meets 67%`
-      : `${pct}% below 4/6+`;
-    out.push(`${r.role} (${r.threshold})`);
-    out.push(`${thrPass ? '✓' : '✗'} Threshold ${thrNote}`);
-    out.push(`${hasTl ? '✓' : '✗'} ${hasTl ? `Timelock ${r.timelock}` : 'No timelock'}`);
-    out.push(r.roleSeparation == null ? '- Role separation (not read)' : (r.roleSeparation ? '✓ Role separation' : '✗ No role separation'));
-  }
-  out.push('');
-  out.push(p.verifiedBuild === true ? '✓ Verified build (protocol-wide)'
-    : p.verifiedBuild === 'partial' ? '~ Verified build on some programs'
-    : '✗ No verified build (protocol-wide)');
-  return out.join('\n');
+  const roles = (p.governanceRoles || []).filter((r: any) => r.threshold);
+  const n = roles.length;
+  const withTl = roles.filter((r: any) => r.timelock && r.timelock !== 'None').length;
+  const meetsRatio = roles.filter((r: any) => {
+    const t = parseThreshold(r.threshold);
+    return !!t && meetsSquadsBenchmark(t.threshold, t.signers);
+  }).length;
+  return [
+    `Benchmark across all ${n} multisigs`,
+    '',
+    `${withTl}/${n} carry a governance timelock.`,
+    `${meetsRatio}/${n} meet the Squads 4/6+ (67%) ratio.`,
+    'Per-multisig threshold and timelock are shown on each card.',
+  ].join('\n');
+}
+
+// Per-multisig Squads benchmark for the info icon on each role card. One multisig per hover,
+// so it stays compact regardless of how many a protocol runs. Role separation reads from the
+// per-role flag (null = members not yet scanned), so it never over-claims.
+function roleBenchmarkTip(r: any): string {
+  if (!r.threshold) return `${r.role}: not yet on-chain`;
+  const parsed = parseThreshold(r.threshold);
+  const thr = parsed ? parsed.threshold : 0, tot = parsed ? parsed.signers : 0, pct = ratioPct(thr, tot);
+  const hasTl = r.timelock && r.timelock !== 'None';
+  const ratioOk = meetsSquadsRatio(thr, tot);
+  const countOk = meetsSquadsSignerCount(thr);
+  const thrMeets = ratioOk && countOk;
+  return [
+    `${r.role} Squads benchmark`,
+    '',
+    `${thrMeets ? '✓' : '✗'} Threshold ${r.threshold} (${pct}%)${thrMeets ? ', meets 4/6+ (67%)' : ratioOk ? ', meets 67% ratio' : countOk ? ', meets signer count, ratio below 67%' : ', below 4/6+'}`,
+    `${hasTl ? '✓' : '✗'} ${hasTl ? `Timelock ${r.timelock}` : 'No governance timelock'}`,
+    r.roleSeparation == null ? 'Role separation not yet verified' : (r.roleSeparation ? '✓ Role separation' : '✗ No role separation, all signers full'),
+  ].join('\n');
 }
 
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
 
 function App() {
-  const { protocols: liveProtocols, lastScan, isLive, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf } = useLiveData(PROTOCOLS);
+  const { protocols: liveProtocols, lastScan, newestScan, staleEntries, trackedEntries, isLive, dataSource, liveGovernanceNames, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveOracleConfig, liveMeta, liveGovActivity } = useLiveData(PROTOCOLS);
+  const daoNameSet = useMemo(() => new Set((liveDaos || []).map(d => d.name)), [liveDaos]);
+  const oracleByProtocol = useMemo(() => new Map((liveOracles || []).map(o => [o.protocol, o])), [liveOracles]);
+  // Queued Squads proposals per protocol that would upgrade a program, move its upgrade authority or
+  // change the multisig config, and can still execute (not stale). Keyed by both the exact scanner
+  // label and its family so "Raydium (treasury)" rolls up under Raydium.
+  // Oracle networks each protocol is CONFIGURED to read, decoded from its market / reserve accounts.
+  // Deterministic, unlike the transaction-sampled view, so it is preferred when present. Keyed by
+  // family so "Kamino kLend" resolves for the Kamino row.
+  const oracleConfigByProtocol = useMemo(() => {
+    const m = new Map<string, { networks: string[]; markets: number }>();
+    const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').replace(/\s+kLend$/i, '').trim();
+    for (const r of ((liveOracleConfig?.results || []) as any[])) {
+      if (!Array.isArray(r.networks)) continue;
+      const v = { networks: r.networks as string[], markets: Array.isArray(r.oracleAccounts) ? r.oracleAccounts.length : 0 };
+      for (const k of new Set([r.protocol, fam(r.protocol)])) if (!m.has(k)) m.set(k, v);
+    }
+    return m;
+  }, [liveOracleConfig]);
+  const pendingByProtocol = useMemo(() => {
+    const m = new Map<string, import('./hooks/useLiveData').PendingUpgrade[]>();
+    const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
+    for (const r of (livePendingUpgrades?.results || []) as any[]) {
+      // Only proposals Squads would still let execute. The scanner sets executable from the Squads rules
+      // (stale open proposals and stale config changes cannot execute) and from whether an upgrade's
+      // deploy buffer still exists. Older snapshots without the field fall back to the stale rule.
+      if (typeof r.executable === 'boolean') { if (!r.executable) continue; }
+      else if (r.stale === true && (r.status === 'Active' || r.kind === 'ConfigChange')) continue;
+      for (const k of new Set([r.protocol, fam(r.protocol)])) { if (!m.has(k)) m.set(k, []); m.get(k)!.push(r); }
+    }
+    return m;
+  }, [livePendingUpgrades]);
   const llama = useDefiLlama();
   const [sortKey, setSortKey] = useState<SortKey>('timelockSeconds');
   const [sortAsc, setSortAsc] = useState(true);
@@ -625,9 +701,9 @@ function App() {
     });
     return () => cancelAnimationFrame(id);
   }, [expanded]);
-  type Tab = 'dashboard' | 'govwatch' | 'blast' | 'charts';
+  type Tab = 'dashboard' | 'govwatch' | 'blast' | 'daos' | 'charts';
   type ChartsSub = 'exploits' | 'risk' | 'governance';
-  const VALID_TABS: Tab[] = ['dashboard', 'govwatch', 'blast', 'charts'];
+  const VALID_TABS: Tab[] = ['dashboard', 'govwatch', 'blast', 'daos', 'charts'];
   const VALID_SUBS: ChartsSub[] = ['exploits', 'risk', 'governance'];
   function parseLocation(): { tab: Tab; sub: ChartsSub } {
     if (typeof window === 'undefined') return { tab: 'dashboard', sub: 'exploits' };
@@ -694,13 +770,14 @@ function App() {
     else { setSortKey(key); setSortAsc(true); }
   };
 
+  // Header freshness label. Shows the OLDEST per-protocol read, so a partial refresh is visible, plus
+  // how many tracked entries are older than 24h. When the API is unreachable the cached or bundled
+  // data is labelled as such rather than as a live scan.
   const lastScanLabel = (() => {
-    if (!isLive || !lastScan) return null;
-    const ageMin = Math.round((Date.now() - new Date(lastScan).getTime()) / 60000);
-    return ageMin < 1 ? 'just now'
-      : ageMin < 60 ? `${ageMin} min ago`
-      : ageMin < 1440 ? `${Math.round(ageMin / 60)} h ago`
-      : `${Math.round(ageMin / 1440)} d ago`;
+    const oldest = formatAge(lastScan);
+    if (!oldest) return dataSource === 'fallback' ? 'offline, cached data' : null;
+    const stale = staleEntries > 0 ? `, ${staleEntries} of ${trackedEntries} older than 24h` : '';
+    return isLive ? `oldest read ${oldest}${stale}` : `offline, cached data, oldest read ${oldest}${stale}`;
   })();
 
   const ContactLink = (
@@ -718,19 +795,19 @@ function App() {
 
   const TabBar = (
     <div className="border-b border-white/[0.06]">
-      <div className="max-w-[1400px] mx-auto px-4">
-        <div className="flex gap-1">
-          {(['dashboard', 'govwatch', 'blast', 'charts'] as const).map(tab => (
+      <div className="max-w-[1600px] mx-auto px-2 sm:px-4">
+        <div className="flex gap-1 overflow-x-auto scroll-thin">
+          {(['dashboard', 'govwatch', 'blast', 'daos', 'charts'] as const).map(tab => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 text-xs font-medium rounded-t-md transition-colors ${
+              className={`px-2.5 sm:px-4 py-2 text-xs font-medium rounded-t-md transition-colors whitespace-nowrap flex-shrink-0 ${
                 activeTab === tab
                   ? 'bg-white/[0.06] text-white border border-white/[0.1] border-b-transparent'
                   : 'text-gray-500 hover:text-gray-300'
               }`}
             >
-              {tab === 'dashboard' ? 'Dashboard' : tab === 'govwatch' ? 'GovWatch' : tab === 'blast' ? 'Blast Radius' : 'Charts'}
+              {tab === 'dashboard' ? 'Dashboard' : tab === 'govwatch' ? 'GovWatch' : tab === 'blast' ? 'Blast Radius' : tab === 'daos' ? 'DAOs' : 'Charts'}
             </button>
           ))}
         </div>
@@ -742,7 +819,7 @@ function App() {
     <div className="min-h-screen bg-[#08080d] text-gray-200 overflow-x-hidden">
       {activeTab === 'dashboard' ? (
         <section>
-          <div className="max-w-[1400px] mx-auto px-4 pt-8 pb-6 md:pt-10 md:pb-8 relative">
+          <div className="max-w-[1600px] mx-auto px-4 pt-8 pb-6 md:pt-10 md:pb-8 relative">
             <div className="absolute top-3 right-4 md:top-4 md:right-4">
               {ContactLink}
             </div>
@@ -760,7 +837,7 @@ function App() {
                   Drift's $285M April exploit was compromised signers approving pre-positioned transactions, per Drift's post-mortem. The configuration that let those signatures execute instantly was on chain before the attack: zero timelock, a stale external config authority, a multisig migrated days before. solgov reads configuration like this.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2.5">
-                  <Tooltip text="OpenAPI 3.1 reference. 11 endpoints, live data, try-it-out enabled.">
+                  <Tooltip text="OpenAPI 3.1 reference. 16 endpoints, live data, try-it-out enabled.">
                     <a
                       href="/api-docs.html"
                       target="_blank"
@@ -821,7 +898,7 @@ function App() {
                         <span className="text-[10px] uppercase tracking-[0.08em] text-gray-400">Live activity</span>
                       </div>
                       {lastScanLabel && (
-                        <span className="text-[10px] text-gray-400 font-mono">scan {lastScanLabel}</span>
+                        <span className="text-[10px] text-gray-400 font-mono">{lastScanLabel}</span>
                       )}
                     </div>
                     {recentEvents.length > 0 ? (
@@ -850,7 +927,7 @@ function App() {
         </section>
       ) : (
         <header className="border-b border-white/[0.06]">
-          <div className="max-w-[1400px] mx-auto px-4 pt-5 pb-4 flex items-center justify-between gap-4">
+          <div className="max-w-[1600px] mx-auto px-4 pt-5 pb-4 flex items-center justify-between gap-4">
             <Tooltip text="Back to dashboard">
               <button
                 onClick={() => setActiveTab('dashboard')}
@@ -867,7 +944,7 @@ function App() {
 
       {TabBar}
 
-      <main className="max-w-[1400px] mx-auto px-4 py-5">
+      <main className="max-w-[1600px] mx-auto px-4 py-5">
       {activeTab === 'dashboard' && (<>
         <div className="mb-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] text-gray-500">
           <Tooltip text="Filter table to protocols with a governance timelock">
@@ -889,9 +966,9 @@ function App() {
             </button>
           </Tooltip>
           <span className="flex items-center gap-1.5">
-            <span className="text-white font-medium tabular-nums">{STATS.verifiedBuilds}</span>
+            <span className="text-white font-medium tabular-nums">{liveProtocols.filter(x => x.verifiedBuild === true || x.verifiedBuild === 'partial').length}</span>
             verified builds
-            <Tooltip text="On-chain verified build confirms deployed bytecode matches published source code. Checked via Ellipsis Labs verifier."><InfoIcon /></Tooltip>
+            <Tooltip text="A verified build confirms the deployed bytecode matches published source. Read from the otter-verify registry, counted only when the record is signed by the program's upgrade authority (or a Solana Explorer trusted signer) and the deployed hash still matches the verified build."><InfoIcon /></Tooltip>
           </span>
           <span className="flex items-center gap-1.5">
             <span className="text-white font-medium tabular-nums">{STATS.noInsurance}</span>
@@ -976,8 +1053,8 @@ function App() {
             <thead className="bg-[#0e0e14] sticky top-0 z-20">
               <tr>
                 <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('name')}>Protocol</th>
-                <th className="px-3 py-2.5 text-right text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
-                  TVL {!llama.loading && <Tooltip text="Live from DeFiLlama"><span className="inline-block w-1.5 h-1.5 rounded-full bg-white ml-1" /></Tooltip>}
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
+                  TVL {!llama.loading && llama.source !== 'none' && <Tooltip text={`${tvlSourceLabel(llama)}. Solana TVL only for multichain protocols.`}><span className={`inline-block w-1.5 h-1.5 rounded-full ml-1 ${llama.source === 'live' ? 'bg-white' : 'border border-gray-500'}`} /></Tooltip>}
                 </th>
                 <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">Version</th>
                 <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap cursor-pointer" onClick={() => handleSort('threshold')}>
@@ -990,10 +1067,13 @@ function App() {
                   Prog. TL <Tooltip text="Timelock in the program code itself. From protocol docs or team disclosure."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
+                  Oracles <Tooltip text="Price oracle networks the protocol reads on-chain, sampled from recent transactions. Pyth, Switchboard, RedStone and Dove are signature- or aggregation-verified. Reading more than one means the feeds can be cross-referenced."><InfoIcon /></Tooltip>
+                </th>
+                <th className="px-3 py-2.5 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Last Upgrade <Tooltip text="Most recent program upgrade transaction on-chain."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
-                  30d <Tooltip text="Program upgrade transactions in the last 30 days."><InfoIcon /></Tooltip>
+                  30d <Tooltip text="Program upgrades observed by solgov across this protocol's tracked programs in the last 30 days."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Threshold <Tooltip text="Green: 4+ signers with 67%+ ratio (Squads 4/6+). Amber: 3 signers or below 67%. Red: fewer than 3 or below 50%."><InfoIcon /></Tooltip>
@@ -1012,14 +1092,23 @@ function App() {
             <tbody>
               {sorted.map((p) => (
                 <Fragment key={p.name}>
-                  <tr className="border-t border-white/[0.04] hover:bg-white/[0.02] cursor-pointer" onClick={() => setExpanded(expanded === p.name ? null : p.name)}>
+                  <tr className="border-t border-white/[0.04] hover:bg-white/[0.02] cursor-pointer" {...expandRowProps(expanded === p.name, () => setExpanded(expanded === p.name ? null : p.name), `${displayName(p.name)} details`)}>
                     <td className="px-3 py-2">
                       <div className="flex items-center gap-2">
                         <ProtocolLogo name={p.name} />
-                        <span className="font-medium text-white whitespace-nowrap">{p.name}</span>
+                        <span className="font-medium text-white whitespace-nowrap">{displayName(p.name)}</span>
+                        {(() => {
+                          const q = pendingByProtocol.get(p.name) || [];
+                          const upg = q.filter(x => x.kind === 'ProgramUpgrade' || x.kind === 'SetUpgradeAuthority');
+                          const cfg = q.filter(x => x.kind === 'ConfigChange');
+                          if (!upg.length && !cfg.length) return null;
+                          const label = upg.length ? `queued upgrade${upg.length > 1 ? 's' : ''}` : 'queued config change';
+                          const tip = q.slice(0, 4).map(x => `#${x.proposalIndex} ${x.status} ${x.approvals}/${x.threshold}: ${x.detail.slice(0, 90)}`).join('\n');
+                          return <Tooltip text={`Squads proposals approved or open but not yet executed. ${tip}`}><span className="text-[10px] px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20 whitespace-nowrap">{label}</span></Tooltip>;
+                        })()}
                       </div>
                     </td>
-                    <td className="px-3 py-2 text-xs text-right text-gray-400 whitespace-nowrap">
+                    <td className="px-3 py-2 text-xs text-left text-gray-400 whitespace-nowrap">
                       {formatTvlDisplay(llama.tvl[p.name]) || <span className="text-gray-500">-</span>}
                     </td>
                     <td className="px-3 py-2 text-xs whitespace-nowrap">
@@ -1044,7 +1133,7 @@ function App() {
                           )}
                           {p.governanceRoles && p.governanceRoles.length > 0 && (
                             <Tooltip text={rolesThresholdTip(p.governanceRoles)} align="left">
-                              <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
+                              <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced' || r.status === 'disclosed') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
                             </Tooltip>
                           )}
                         </span>
@@ -1060,11 +1149,11 @@ function App() {
                       )}
                       {p.governanceRoles && p.governanceRoles.length > 0 && (
                         <Tooltip text={rolesTimelockTip(p.governanceRoles)} align="left">
-                          <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
+                          <span className={`ml-1 text-[10px] cursor-help align-middle ${p.governanceRoles.some((r: any) => r.status === 'announced' || r.status === 'disclosed') ? 'text-amber-300/70' : 'text-gray-400'}`}>&#9432;</span>
                         </Tooltip>
                       )}
                     </td>
-                    <td className="px-3 py-2 text-center text-xs">
+                    <td className="px-3 py-2 text-left text-xs">
                       {p.programTimelock === 'verified' ? (
                         <Tooltip text={p.programTimelockNote || 'Program-level timelock verified in code.'}>
                           <span className="text-white cursor-help">Verified<InfoIcon /></span>
@@ -1077,6 +1166,26 @@ function App() {
                         <span className="text-gray-500">-</span>
                       )}
                     </td>
+                    <td className="px-3 py-2 text-xs whitespace-nowrap">
+                      {(() => {
+                        const cfg = oracleConfigByProtocol.get(p.name);
+                        const o: any = oracleByProtocol.get(p.name);
+                        const sampled: string[] = (o && Array.isArray(o.networks)) ? o.networks : [];
+                        if (cfg && cfg.networks.length) {
+                          // Feeds only visible at call time (signed payloads such as RedStone) never appear in
+                          // configured accounts, so anything sampling saw that config did not is appended.
+                          const extra = sampled.filter(n => !cfg.networks.some(c => c.toLowerCase().startsWith(n.toLowerCase()) || n.toLowerCase().startsWith(c.toLowerCase())));
+                          const source = `Configured: decoded from ${cfg.markets} market or reserve account${cfg.markets === 1 ? '' : 's'} on-chain.${extra.length ? ` Also seen in recent transactions but not in configured accounts: ${extra.join(', ')}.` : ''}`;
+                          const all = [...cfg.networks, ...extra];
+                          if (all.length === 1) return <Tooltip text={source}><span className="text-gray-300">{all[0]}</span></Tooltip>;
+                          return <Tooltip text={`${cfg.networks.join(', ')}${extra.length ? `, ${extra.join(', ')}` : ''}. ${source}`}><span className="text-gray-300 cursor-help">Multiple ({all.length})<InfoIcon /></span></Tooltip>;
+                        }
+                        if (!sampled.length) return <span className="text-gray-500">-</span>;
+                        const sampledNote = "Sampled from recent transactions; the protocol's configured oracle accounts were not decoded.";
+                        if (sampled.length === 1) return <Tooltip text={sampledNote}><span className="text-gray-300">{sampled[0]}</span></Tooltip>;
+                        return <Tooltip text={`${sampled.join(', ')}. ${sampledNote}`}><span className="text-gray-300 cursor-help">Multiple ({sampled.length})<InfoIcon /></span></Tooltip>;
+                      })()}
+                    </td>
                     <td className="px-3 py-2 text-xs text-gray-400">{p.lastUpgrade}</td>
                     <td className="px-3 py-2 text-xs text-gray-400 text-center">{p.upgradesLast30d}</td>
                     <td className="px-3 py-2 text-center text-xs">
@@ -1086,20 +1195,20 @@ function App() {
                             <span className="text-gray-500 cursor-help">N/A<InfoIcon /></span>
                           </Tooltip>
                         );
-                        const effectiveTotal = p.activeVoters > 0 ? p.activeVoters : p.totalMembers;
-                        const pct = effectiveTotal > 0 ? p.threshold / effectiveTotal : 0;
-                        const ratioText = `${p.threshold}/${effectiveTotal} (${Math.round(pct*100)}%)`;
-                        if (p.threshold >= 4 && pct >= 0.67) return (
+                        const effectiveTotal = effectiveVoters(p);
+                        const ratioOk = meetsSquadsRatio(p.threshold, effectiveTotal);
+                        const ratioText = `${p.threshold}/${effectiveTotal} (${ratioPct(p.threshold, effectiveTotal)}%)`;
+                        if (meetsSquadsBenchmark(p.threshold, effectiveTotal)) return (
                           <Tooltip text={`${ratioText}. The Squads benchmark is 4/6+ (67%+).`}>
                             <span className="text-white cursor-help">Above<InfoIcon /></span>
                           </Tooltip>
                         );
-                        if (p.threshold >= 4 && pct < 0.67) return (
+                        if (meetsSquadsSignerCount(p.threshold) && !ratioOk) return (
                           <Tooltip text={`${ratioText}. Meets signer count but below 67% ratio. The Squads benchmark is 4/6+ (67%+).`}>
                             <span className="text-gray-300 cursor-help">Partial<InfoIcon /></span>
                           </Tooltip>
                         );
-                        if (p.threshold >= 3 && pct >= 0.67) return (
+                        if (p.threshold >= 3 && ratioOk) return (
                           <Tooltip text={`${ratioText}. Ratio meets 67%+ but fewer than 4 signers. Squads recommends 4/6+ (67%+).`}>
                             <span className="text-gray-300 cursor-help">Partial<InfoIcon /></span>
                           </Tooltip>
@@ -1126,8 +1235,7 @@ function App() {
                     </td>
                     <td className="px-3 py-2 text-center text-xs">
                       {(() => {
-                        const pctThreshold = p.totalMembers > 0 ? p.threshold / p.totalMembers : 0;
-                        const thresholdOk = p.threshold >= 4 && pctThreshold >= 0.67;
+                        const thresholdOk = meetsSquadsBenchmark(p.threshold, effectiveVoters(p));
                         const needsFix = (!p.hasTimelock && p.timelockSeconds !== -1) || !thresholdOk || p.hasRoleSeparation === false;
                         if (p.version === 'Immutable') return <span className="text-gray-500">N/A</span>;
                         if (p.version === 'Appchain') return (
@@ -1189,7 +1297,7 @@ function App() {
                               <div className="mb-3 pb-3 border-b border-white/[0.06]">
                                 <h4 className="font-bold text-white mb-1">TVL</h4>
                                 <p className="text-lg text-white font-semibold">{formatTvlDisplay(llama.tvl[p.name])}</p>
-                                <p className="text-[10px] text-gray-400">Live from DeFiLlama{
+                                <p className="text-[10px] text-gray-400">{tvlSourceLabel(llama)}{
                                   p.name === 'Pumpfun + PumpSwap' ? ' (PumpSwap DEX only - bonding curve SOL not tracked)'
                                   : p.name === 'Drift' ? ' (Drift Trade + Drift Staked SOL combined)'
                                   : p.name === 'Sanctum' ? ' (Validator LSTs + Infinity + Reserve combined)'
@@ -1223,19 +1331,27 @@ function App() {
                                   {p.governanceRoles.some((r: any) => r.status === 'announced') && (
                                     <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded border border-amber-300/[0.25] bg-amber-300/[0.05] text-amber-200/80 font-normal align-middle">Not yet on-chain</span>
                                   )}
+                                  {p.governanceRoles.some((r: any) => r.status === 'disclosed') && (
+                                    <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded border border-amber-300/[0.25] bg-amber-300/[0.05] text-amber-200/80 font-normal align-middle">Some via disclosure</span>
+                                  )}
                                 </h4>
                                 {p.governanceRolesNote && (
-                                  <p className="text-[11px] text-gray-400 mb-2">{p.governanceRolesNote}</p>
+                                  <p className="text-[11px] text-gray-400 mb-2">{p.governanceRolesNote}{p.governanceRolesSource && (<> <a href={p.governanceRolesSource} target="_blank" rel="noopener" className="text-gray-500 hover:text-gray-300 underline">Source</a></>)}</p>
                                 )}
                                 <div className="space-y-2">
                                   {p.governanceRoles.map((r: any, i: number) => (
                                     <div key={i} className="bg-white/[0.03] rounded p-2">
-                                      <span className="text-gray-300 text-[12px] font-medium block">{r.role}</span>
+                                      <div className="flex items-center justify-between gap-2">
+                                        <span className="text-gray-300 text-[12px] font-medium flex items-center">{r.role}{r.threshold && <Tooltip text={roleBenchmarkTip(r)} align="left"><InfoIcon /></Tooltip>}</span>
+                                        {(r.threshold || r.timelock) && (
+                                          <span className="text-[10px] text-gray-400 whitespace-nowrap shrink-0">{r.threshold}{r.threshold && r.timelock ? ' · ' : ''}{r.timelock === 'None' ? 'no timelock' : r.timelock}</span>
+                                        )}
+                                      </div>
                                       <p className="text-[11px] text-gray-400 mt-0.5">{r.scope}</p>
                                       {r.address ? (
                                         <a href={`https://solscan.io/account/${r.address}`} target="_blank" rel="noopener" className="font-mono text-[10px] text-gray-500 hover:text-gray-300 underline decoration-gray-700 break-all">{r.address}</a>
                                       ) : (
-                                        <span className="text-[10px] text-gray-500">Address pending deployment</span>
+                                        <span className="text-[10px] text-gray-500">{r.status === 'disclosed' ? 'Per team disclosure, address not yet verified on-chain' : 'Address pending deployment'}</span>
                                       )}
                                     </div>
                                   ))}
@@ -1244,8 +1360,81 @@ function App() {
                             )}
 
                             <h4 className="font-bold text-white mt-4 mb-2">Upgrade Activity</h4>
+                            {(() => {
+                              // Most recent multisig configuration change from the live activity log, with its age.
+                              // Stated as a fact and a date; whether the change matters is for the reader.
+                              const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
+                              const cfgTypes = new Set(['ConfigChange', 'ThresholdRaised', 'ThresholdLowered', 'SignersAdded', 'SignersRemoved', 'AuthorityChange', 'TimelockChanged', 'TimelockRemoved', 'TimelockAdded']);
+                              const ev = (liveActivity || [])
+                                .filter(e => e && cfgTypes.has(e.type) && e.protocol && fam(e.protocol) === p.name)
+                                .sort((a, b) => String(b.timestamp || b.date).localeCompare(String(a.timestamp || a.date)))[0];
+                              if (!ev) return null;
+                              const t = parseTime(ev.timestamp || ev.date);
+                              const days = t === null ? null : Math.max(0, Math.floor((Date.now() - t) / 86400000));
+                              const which = ev.protocol !== p.name ? ` on ${ev.protocol}` : '';
+                              return <p><span className="text-gray-500">Last config change{which}:</span> {ev.detail} {days !== null && <span className="text-gray-500">({days === 0 ? 'today' : `${days} day${days === 1 ? '' : 's'} ago`})</span>}</p>;
+                            })()}
                             <p><span className="text-gray-500">Last upgrade:</span> {p.lastUpgrade}</p>
                             <p><span className="text-gray-500">Upgrades (30d):</span> {p.upgradesLast30d}</p>
+                            {(() => {
+                              const q = pendingByProtocol.get(p.name) || [];
+                              if (!q.length) return null;
+                              const tl = (sec: number) => sec > 0 ? `${formatTimelock(sec)} timelock` : 'no timelock';
+                              return (
+                                <div className="mt-2">
+                                  <p className="text-gray-500 mb-1">Queued proposals <Tooltip text="Squads proposals that are open or approved but not yet executed and would upgrade a program, move an upgrade authority or change the multisig. Read from the proposal accounts on-chain. Open proposals and config changes that have gone stale are excluded; an approved upgrade that has gone stale is kept because Squads V4 can still execute it."><InfoIcon /></Tooltip></p>
+                                  {q.slice(0, 6).map(x => (
+                                    <p key={x.proposalPda} className="text-[11px] text-gray-300 mb-0.5">
+                                      <a href={`https://solscan.io/account/${x.proposalPda}`} target="_blank" rel="noopener" className="font-mono text-gray-400 hover:text-white underline">#{x.proposalIndex}</a>
+                                      {' '}<span className="text-gray-400">{x.status} {x.approvals}/{x.threshold}, {tl(x.timelockSeconds)}</span>
+                                      {' '}<span className="text-gray-300">{x.kind === 'ProgramUpgrade' ? 'program upgrade' : x.kind === 'SetUpgradeAuthority' ? 'upgrade authority change' : 'config change'}</span>
+                                      <span className="text-gray-500"> · {x.detail.length > 110 ? x.detail.slice(0, 107) + '...' : x.detail}</span>
+                                    </p>
+                                  ))}
+                                </div>
+                              );
+                            })()}
+
+                            {(() => {
+                              // On-chain disclosure signals per program (Neodyme security.txt embedded in the binary,
+                              // the Program Metadata canonical security account) and, for the protocol token, which
+                              // token program it uses and any Token-2022 extension authorities that exist.
+                              const tt = liveTokenTransparency;
+                              if (!tt) return null;
+                              const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
+                              const progs = tt.programs.filter(x => x.protocol === p.name || fam(x.protocol) === p.name);
+                              const tok = (tt.tokens as any[]).find(x => x.protocol === p.name || fam(x.protocol) === p.name);
+                              if (!progs.length && !tok) return null;
+                              const withTxt = progs.filter(x => x.securityTxt.present);
+                              const withMeta = progs.filter(x => x.securityMetadata.exists);
+                              const contact = withTxt.map(x => x.securityTxt.contacts).find(Boolean);
+                              return (
+                                <>
+                                  <h4 className="font-bold text-white mt-4 mb-2">Transparency <Tooltip text="Read from the program binaries and accounts on-chain. security.txt is the Neodyme standard embedded in the program; the security metadata account is the newer Program Metadata standard writable only by the upgrade authority."><InfoIcon /></Tooltip></h4>
+                                  {progs.length > 0 && (
+                                    <p><span className="text-gray-500">security.txt:</span> {withTxt.length} of {progs.length} program{progs.length === 1 ? '' : 's'}{contact ? <span className="text-gray-500"> · {contact.length > 60 ? contact.slice(0, 57) + '...' : contact}</span> : null}</p>
+                                  )}
+                                  {progs.length > 0 && (
+                                    <p><span className="text-gray-500">Security metadata account:</span> {withMeta.length ? `${withMeta.length} of ${progs.length}` : 'none'}</p>
+                                  )}
+                                  {tok && (() => {
+                                    const e = tok.extensions || {};
+                                    const notes: string[] = [];
+                                    if (e.permanentDelegate) notes.push(`permanent delegate ${String(e.permanentDelegate).slice(0, 8)}.. can move or burn any holder's tokens`);
+                                    if (e.transferHookProgram) notes.push(`transfer hook program ${String(e.transferHookProgram).slice(0, 8)}.. runs on every transfer`);
+                                    else if (e.transferHookAuthority) notes.push(`transfer-hook authority ${String(e.transferHookAuthority).slice(0, 8)}.. is set and can install a hook program; none installed`);
+                                    if (e.pauseAuthority) notes.push('pause authority can halt transfers');
+                                    if (e.burnAuthority) notes.push('burn authority must co-sign burns');
+                                    if (e.scaledUiAmountAuthority) notes.push('scaled UI amount authority can change the displayed multiplier');
+                                    if (e.confidentialAuditorSet) notes.push('confidential transfer auditor key set');
+                                    if (e.mintCloseAuthority) notes.push('mint close authority set');
+                                    return (
+                                      <p><span className="text-gray-500">Token program:</span> {tok.program === 'token-2022' ? 'Token-2022' : 'SPL Token'}{tok.program === 'token-2022' ? <span className="text-gray-500"> · {notes.length ? notes.join('; ') : 'no extension authorities set'}</span> : null}</p>
+                                    );
+                                  })()}
+                                </>
+                              );
+                            })()}
 
                             <h4 className="font-bold text-white mt-4 mb-2">On-Chain Addresses</h4>
                             <p><span className="text-gray-500">Multisig:</span></p>
@@ -1322,7 +1511,6 @@ function App() {
                             {p.members ? (
                               <div className="space-y-1">
                                 {(() => {
-                                  const canVote = (r: string) => r === 'Full' || r === 'Vote' || r === 'Propose + Vote' || r === 'Vote + Execute';
                                   const voters = p.members!.filter(m => canVote(m.role));
                                   const nonVoters = p.members!.filter(m => !canVote(m.role) && m.role !== 'None');
                                   const inactive = p.members!.filter(m => m.role === 'None');
@@ -1370,13 +1558,14 @@ function App() {
                               <>
                                 <h4 className="font-bold text-white mb-2">Squads Safety Benchmark{p.governanceRoles && p.governanceRoles.length > 0 ? <Tooltip text={rolesBenchmarkTip(p)} align="left"><InfoIcon /></Tooltip> : null}</h4>
                                 <p>{(() => {
-                                  const effectiveTotal = p.activeVoters > 0 ? p.activeVoters : p.totalMembers;
-                        const pct = effectiveTotal > 0 ? p.threshold / effectiveTotal : 0;
-                                  if (p.threshold >= 4 && pct >= 0.67) return <Check pass={true} label={`Threshold ${p.threshold}/${effectiveTotal} (${Math.round(pct*100)}%) meets Squads 4/6+ (67%+)`} />;
-                                  if (p.threshold >= 4 && pct < 0.67) return <span className="text-gray-300 font-bold">{'\u2713'} Threshold {p.threshold}/{effectiveTotal} ({Math.round(pct*100)}%) - meets signer count, ratio below 67%</span>;
-                                  if (p.threshold >= 3 && pct >= 0.67) return <span className="text-gray-300 font-bold">{'\u2713'} Threshold {p.threshold}/{effectiveTotal} ({Math.round(pct*100)}%) meets 67%+ ratio. Squads reference is 4/6+.</span>;
-                                  if (p.threshold >= 3) return <Check pass={false} label={`Threshold ${p.threshold}/${effectiveTotal} (${Math.round(pct*100)}%) - below 4 signers and below 67% ratio`} />;
-                                  return <Check pass={false} label={`Threshold ${p.threshold}/${effectiveTotal} (${Math.round(pct*100)}%) -${p.threshold} signer${p.threshold === 1 ? '' : 's'} needed to approve`} />;
+                                  const effectiveTotal = effectiveVoters(p);
+                                  const pctLabel = ratioPct(p.threshold, effectiveTotal);
+                                  const ratioOk = meetsSquadsRatio(p.threshold, effectiveTotal);
+                                  if (meetsSquadsBenchmark(p.threshold, effectiveTotal)) return <Check pass={true} label={`Threshold ${p.threshold}/${effectiveTotal} (${pctLabel}%) meets Squads 4/6+ (67%+)`} />;
+                                  if (meetsSquadsSignerCount(p.threshold)) return <span className="text-gray-300 font-bold">{'\u2713'} Threshold {p.threshold}/{effectiveTotal} ({pctLabel}%) - meets signer count, ratio below 67%</span>;
+                                  if (p.threshold >= 3 && ratioOk) return <span className="text-gray-300 font-bold">{'\u2713'} Threshold {p.threshold}/{effectiveTotal} ({pctLabel}%) meets 67%+ ratio. Squads reference is 4/6+.</span>;
+                                  if (p.threshold >= 3) return <Check pass={false} label={`Threshold ${p.threshold}/${effectiveTotal} (${pctLabel}%) - below 4 signers and below 67% ratio`} />;
+                                  return <Check pass={false} label={`Threshold ${p.threshold}/${effectiveTotal} (${pctLabel}%) - ${p.threshold} signer${p.threshold === 1 ? '' : 's'} needed to approve`} />;
                                 })()}</p>
                                 <p>{p.timelockSeconds === -1 ? (
                                   <span className="text-gray-500">Gov. timelock: N/A (not available on {p.version})</span>
@@ -1397,8 +1586,32 @@ function App() {
                                 ) : p.verifiedBuild === 'partial' ? (
                                   <span className="text-gray-300 font-bold">{'\u2713'} Verified build on some programs, not all. Check individual programs below.</span>
                                 ) : (
-                                  <Check pass={false} label="No verified build. Cannot confirm deployed code matches source." />
+                                  <Check pass={false} label={p.verifiedBuildNote ? 'A verified build was published, but the deployed program does not match it.' : 'No verified build. Cannot confirm deployed code matches source.'} />
                                 )}</p>
+                                {(() => {
+                                  // Neutral checklist against two published references. Each line states whether the
+                                  // configuration meets that reference; it is not a score. Numbers verified at source
+                                  // on 2026-09-16: Squads (4+ signers, 67%+ ratio), SEAL (3+ signers, 50% threshold,
+                                  // 7+ signers above $1M, a mandatory delay between approval and execution).
+                                  // n is the voting signer set, the same denominator as the table and the benchmark line above.
+                                  const n = effectiveVoters(p) || 0, t = p.threshold || 0;
+                                  const tvl = llama.tvl[p.name] || 0;
+                                  const hasDelay = (p.timelockSeconds || 0) > 0;
+                                  const rows: { ok: boolean; label: string; src: string; href: string }[] = [
+                                    { ok: meetsSquadsBenchmark(t, n), label: `${t}/${n} against Squads 4/6+ (4+ approvals at 67%+)`, src: 'Squads', href: 'https://docs.squads.so/main/additional-resources/advanced-security-best-practices' },
+                                    { ok: n >= 3 && n > 0 && 2 * t >= n, label: `${t}/${n} against SEAL 3+ signers at 50%`, src: 'SEAL', href: 'https://frameworks.securityalliance.org/wallet-security/secure-multisig-best-practices' },
+                                    ...(tvl >= 1_000_000 ? [{ ok: n >= 7, label: `${n} signers against SEAL 7+ when holding over $1M`, src: 'SEAL', href: 'https://frameworks.securityalliance.org/wallet-security/secure-multisig-best-practices' }] : []),
+                                    { ok: hasDelay, label: hasDelay ? `${p.timelockLabel} delay between approval and execution (SEAL: mandatory delay)` : 'No delay between approval and execution (SEAL: mandatory delay)', src: 'SEAL', href: 'https://frameworks.securityalliance.org/wallet-security/secure-multisig-best-practices' },
+                                  ];
+                                  return (
+                                    <div className="mt-2">
+                                      <p className="text-gray-500 mb-1">Reference benchmarks <Tooltip text="Whether the current configuration meets each published reference. States the comparison only; the reader draws the conclusion."><InfoIcon /></Tooltip></p>
+                                      {rows.map((r, i) => (
+                                        <p key={i} className="text-[11px]"><span className={r.ok ? 'text-gray-300' : 'text-gray-400'}>{r.ok ? '\u2713' : '\u2717'} {r.label}</span> <a href={r.href} target="_blank" rel="noopener" className="text-gray-500 hover:text-white underline">{r.src}</a></p>
+                                      ))}
+                                    </div>
+                                  );
+                                })()}
                                 {p.configAuthority && p.configAuthority !== 'autonomous' && (
                                   <p className="mt-1"><span className="text-gray-400 font-bold">{'\u2717'} External config authority key</span> <span className="text-gray-400">can change threshold, members, and timelock on this multisig without going through the multisig vote</span>. <code className="text-[10px] text-gray-400">{p.configAuthority.slice(0, 12)}...</code>
                                   <Tooltip text="Squads documentation states a Controlled Multisig is not recommended for most use cases."><InfoIcon /></Tooltip></p>
@@ -1535,17 +1748,30 @@ function App() {
         </div>
 
         <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500 space-y-1">
-          <p>All governance data decoded directly from on-chain Solana account data. Live updates via Helius webhooks.{isLive && lastScan ? ` Last event: ${lastScan.split('T')[0]} ${lastScan.split('T')[1]?.slice(0, 5)} UTC.` : ''}{!llama.loading ? ' TVL data live from DeFiLlama.' : ''}</p>
+          <a
+            href="https://www.soladex.io/project/solgov"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View the solgov review on Soladex"
+            className="inline-block mb-3"
+          >
+            <img src="/reviewed-by-soladex.svg?v=2" alt="Reviewed by Soladex" className="h-9 w-auto hover:opacity-80 transition-opacity" />
+          </a>
+          <p>All governance data decoded directly from on-chain Solana account data. Live updates via Helius webhooks.{!isLive && dataSource === 'fallback' ? ' The live API is unreachable, so the figures below are from the last cached response and are not live.' : ''}{fmtUtc(lastScan) ? ` Oldest protocol read: ${fmtUtc(lastScan)}.` : ''}{fmtUtc(newestScan) && newestScan !== lastScan ? ` Newest: ${fmtUtc(newestScan)}.` : ''}{staleEntries > 0 ? ` ${staleEntries} of ${trackedEntries} protocol reads are older than 24h.` : ''}{liveMeta && fmtUtc(liveMeta.generatedAt) ? ` Response assembled ${fmtUtc(liveMeta.generatedAt)}.` : ''}{!llama.loading && llama.source !== 'none' ? ` TVL: ${tvlSourceLabel(llama)}.` : ''}</p>
           <p className="text-gray-700">This dashboard does not provide financial advice. It presents on-chain governance configurations for informational purposes.</p>
         </div>
       </>)}
 
       {activeTab === 'govwatch' && (
-        <GovWatchView protocols={liveProtocols} liveStates={liveStates} liveActivity={liveActivity} liveHistorical={liveHistorical} historicalAsOf={historicalAsOf} />
+        <GovWatchView protocols={liveProtocols} liveStates={liveStates} liveActivity={liveActivity} liveHistorical={liveHistorical} historicalAsOf={historicalAsOf} govActivity={liveGovActivity ?? (govActivitySnapshot as GovActivity)} pendingByProtocol={pendingByProtocol} daoNames={daoNameSet} />
       )}
 
       {activeTab === 'blast' && (
-        <BlastRadiusView llama={llama} liveProtocols={liveProtocols} />
+        <BlastRadiusView llama={llama} liveProtocols={liveProtocols} liveGovernanceNames={liveGovernanceNames} independence={liveIndependence?.groups} />
+      )}
+
+      {activeTab === 'daos' && (
+        <DaoRiskTab daos={liveDaos} activity={liveActivity.filter(e => daoNameSet.has(e.protocol))} />
       )}
 
       {activeTab === 'charts' && (
@@ -1618,7 +1844,7 @@ function App() {
   );
 }
 
-function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, liveHistorical, historicalAsOf }: { protocols: typeof PROTOCOLS; liveStates: Record<string, any>; liveActivity: { date: string; timestamp: string; protocol: string; type: string; detail: string }[]; liveHistorical: Record<string, import('./hooks/useLiveData').HistoricalProtocolState>; historicalAsOf: string | null }) {
+function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, liveHistorical, historicalAsOf, govActivity, pendingByProtocol, daoNames }: { protocols: typeof PROTOCOLS; liveStates: Record<string, any>; liveActivity: { date: string; timestamp: string; protocol: string; type: string; detail: string }[]; liveHistorical: Record<string, import('./hooks/useLiveData').HistoricalProtocolState>; historicalAsOf: string | null; govActivity: GovActivity | null; pendingByProtocol: Map<string, import('./hooks/useLiveData').PendingUpgrade[]>; daoNames: Set<string> }) {
   const [selectedProtocol, setSelectedProtocol] = useState<string | null>(null);
   // Same as the dashboard table: bring the expanded detail row into view when a protocol near the
   // bottom is opened, so the click doesn't look like nothing happened.
@@ -1672,8 +1898,60 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     return counts;
   }, [liveActivity]);
 
+  // Verified-build status from the live-merged protocol (the same value the Dashboard tab shows), with
+  // the dated governance profile only as a fallback for names not in the protocol list.
+  function mergedVerifiedBuild(name: string, profileValue: boolean | undefined): boolean | 'partial' | undefined {
+    const p = liveByName[name];
+    return p && p.verifiedBuild !== undefined ? p.verifiedBuild : profileValue;
+  }
+  function buildStatus(name: string, profileValue: boolean | undefined): string {
+    const vb = mergedVerifiedBuild(name, profileValue);
+    return vb === true ? 'Yes' : vb === 'partial' ? 'Partial' : 'No';
+  }
+
+  // Full-history activity for the protocol's current headline multisig, when it has been read to the
+  // tip. Looked up by address, so a profile can never show another multisig's history.
+  function activityFor(name: string): GovActivityEntry | null {
+    const p = liveByName[name] || PROTOCOLS.find(x => x.name === name);
+    const a = p?.multisigAddress ? govActivity?.entries[p.multisigAddress] : undefined;
+    return a && a.complete ? a : null;
+  }
+
   function getEffectiveGov(name: string, baseGov: typeof GOV_PROFILES[string]) {
     const live = liveByName[name];
+    const act = activityFor(name);
+    if (act) {
+      const totalMembers = live?.totalMembers || act.totalMembers || baseGov.totalMembers;
+      const activeVoters90d = Math.min(totalMembers, act.activeVoters90d ?? baseGov.activeVoters90d);
+      return {
+        ...baseGov,
+        created: act.created ?? baseGov.created,
+        totalTxs: act.totalTxs,
+        configChanges: act.configChanges,
+        configDates: act.configDates,
+        membersAdded: act.membersAdded,
+        membersRemoved: act.membersRemoved,
+        thresholdChanges: act.thresholdChanges,
+        timelockChanges: act.timelockChanges,
+        offHoursConfigChanges: act.offHoursConfigChanges,
+        totalMembers,
+        activeVoters90d,
+        voterRate: totalMembers > 0 ? Math.round((activeVoters90d / totalMembers) * 100) : 0,
+        neverSignedCount: act.neverSignedCount ?? undefined,
+        avgExecuteTimeH: act.avgExecuteTimeH,
+        fastestExecuteH: act.fastestExecuteH,
+        slowestExecuteH: act.slowestExecuteH,
+        proposers: act.proposers,
+        approvers: act.approvers,
+        executors: act.executors,
+        rubberStampSigners: act.rubberStampSigners,
+        approvedProposals: act.approvedProposals,
+        rejectedProposals: act.rejectedProposals,
+        cancelledProposals: act.cancelledProposals,
+        spendingLimitUses: act.spendingLimitUses,
+        topFeePayerPct: act.topFeePayerPct ?? undefined,
+      };
+    }
     const rawHist = liveHistorical[name];
     const histLooksEmpty = rawHist
       && (rawHist.totalTxs ?? 0) === 0
@@ -1683,16 +1961,18 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     const liveDates = liveConfigDatesByProtocol[name] || [];
     const liveCounts = liveCountsByProtocol[name] || { approvals: 0, rejections: 0, cancellations: 0, vaultTx: 0, proposalsCreated: 0, programUpgrades: 0, configChanges: 0 };
     const mergedDates = Array.from(new Set([...liveDates, ...(hist?.configDates ?? []), ...baseGov.configDates])).sort().reverse();
+    // Active voters come from the dated signer snapshot; the member count is live. When members were
+    // added since, new members are assumed active; when members were removed, the count is capped at
+    // the current member count so it can never read more than 100%.
+    const totalMembers = live?.totalMembers || baseGov.totalMembers;
+    const grown = live && live.totalMembers > baseGov.totalMembers ? live.totalMembers - baseGov.totalMembers : 0;
+    const activeVoters90d = Math.max(0, Math.min(totalMembers, baseGov.activeVoters90d + grown));
     return {
       ...baseGov,
-      totalMembers: live?.totalMembers ?? baseGov.totalMembers,
-      activeVoters90d: live && live.totalMembers > baseGov.totalMembers
-        ? Math.min(live.totalMembers, baseGov.activeVoters90d + (live.totalMembers - baseGov.totalMembers))
-        : baseGov.activeVoters90d,
+      totalMembers,
+      activeVoters90d,
       voterRate: live?.totalMembers
-        ? Math.round((live.totalMembers > baseGov.totalMembers
-            ? Math.min(live.totalMembers, baseGov.activeVoters90d + (live.totalMembers - baseGov.totalMembers))
-            : baseGov.activeVoters90d) / live.totalMembers * 100)
+        ? Math.round((activeVoters90d / totalMembers) * 100)
         : baseGov.voterRate,
       configChanges: hist?.configChanges ?? (baseGov.configChanges + liveCounts.configChanges),
       configDates: mergedDates,
@@ -1730,8 +2010,9 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     }
 
     for (const [name, state] of Object.entries(liveStates)) {
-      if (state.pendingProposals > 0 && state.lastChecked) {
-        events.push({ date: state.lastChecked.split('T')[0], protocol: name, type: state.pendingProposals + ' pending proposal' + (state.pendingProposals > 1 ? 's' : ''), ts: state.lastChecked });
+      const queued = pendingByProtocol.get(name) || [];
+      if (queued.length > 0 && typeof state.lastChecked === 'string') {
+        events.push({ date: state.lastChecked.split('T')[0], protocol: name, type: queued.length + ' queued proposal' + (queued.length > 1 ? 's' : ''), ts: state.lastChecked });
       }
       if (state.threatAlerts) {
         for (const alert of state.threatAlerts) {
@@ -1739,12 +2020,14 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
           const uiLabel = cat === 'NONCE' ? 'Durable nonce activity'
             : null;
           if (!uiLabel) continue;
-          events.push({ date: alert.detectedAt.split(' ')[0] || state.lastChecked?.split('T')[0] || '', protocol: name, type: uiLabel, ts: alert.detectedAt });
+          const detected = typeof alert.detectedAt === 'string' ? alert.detectedAt : '';
+          events.push({ date: detected.split(/[ T]/)[0] || (typeof state.lastChecked === 'string' ? state.lastChecked.split('T')[0] : ''), protocol: name, type: uiLabel, ts: detected || undefined });
         }
       }
     }
 
     for (const evt of cleanLiveActivity(liveActivity)) {
+      if (daoNames.has(evt.protocol)) continue; // DAO governance events live in the DAO tab, not the main feed
       events.push({ date: evt.date, protocol: evt.protocol, type: evt.type, ts: evt.timestamp, multisig: evt.multisig });
     }
 
@@ -1789,19 +2072,24 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     });
     if (feedFilter !== 'all') return deduped.filter(e => e.protocol === feedFilter);
     return deduped;
-  }, [feedFilter, liveStates, liveActivity, yieldbay.events]);
+  }, [feedFilter, liveStates, liveActivity, yieldbay.events, daoNames, pendingByProtocol]);
 
   const govEntries = Object.entries(GOV_PROFILES)
     .map(([name, g]) => [name, getEffectiveGov(name, g)] as [string, typeof g])
     .sort((a, b) => b[1].configChanges - a[1].configChanges);
 
+  const activityDate = govActivity?.generatedAt ? govActivity.generatedAt.slice(0, 10) : null;
   const historicalDate = historicalAsOf ? historicalAsOf.slice(0, 10) : null;
-  const snapshotLabel = historicalDate
-    ? `Counts refreshed ${historicalDate}`
-    : `Counts as of ${GOV_PROFILES_AS_OF}`;
-  const snapshotTooltip = historicalDate
-    ? "Proposal/config/spending counts come from the incremental on-chain scan that ran on this date. Multisig state (threshold, members, timelock) is live."
-    : `Proposal/config/spending counts are from the on-chain scan run on ${GOV_PROFILES_AS_OF}. Multisig state (threshold, members, timelock) is live. Signer-level fields (active voters in last 90d, hot wallet flags, ghost signers) are from the same snapshot.`;
+  const snapshotLabel = activityDate
+    ? `Counts refreshed ${activityDate}`
+    : historicalDate
+      ? `Counts refreshed ${historicalDate}`
+      : `Counts as of ${GOV_PROFILES_AS_OF}`;
+  const snapshotTooltip = activityDate
+    ? `Transaction, proposal, config, signer and timing counts are read from each multisig's full on-chain history, refreshed ${activityDate}. Multisig state (threshold, members, timelock) is live. Time zones, hot wallet flags, funders and named signers are from the researched snapshot of ${GOV_PROFILES_AS_OF}.`
+    : historicalDate
+      ? "Proposal/config/spending counts come from the incremental on-chain scan that ran on this date. Multisig state (threshold, members, timelock) is live."
+      : `Proposal/config/spending counts are from the on-chain scan run on ${GOV_PROFILES_AS_OF}. Multisig state (threshold, members, timelock) is live. Signer-level fields (active voters in last 90d, hot wallet flags, ghost signers) are from the same snapshot.`;
 
   return (
     <>
@@ -1846,19 +2134,24 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
               <Fragment key={name}>
                 <tr
                   className="border-t border-white/[0.04] hover:bg-white/[0.02] cursor-pointer"
-                  onClick={() => setSelectedProtocol(selectedProtocol === name ? null : name)}
+                  {...expandRowProps(selectedProtocol === name, () => setSelectedProtocol(selectedProtocol === name ? null : name), `${displayName(name)} governance details`)}
                 >
                   <td className="px-3 py-2">
                     <div className="flex items-center gap-2">
                       <ProtocolLogo name={name} />
-                      <span className="font-medium text-white whitespace-nowrap">{name}</span>
-                      {liveStates[name]?.pendingProposals > 0 && (
-                        <Tooltip text={liveStates[name].pendingProposals + ' proposal' + (liveStates[name].pendingProposals > 1 ? 's' : '') + ' awaiting execution'}>
-                          <span className="ml-2 px-1.5 py-0.5 text-[9px] rounded bg-white/[0.04] text-gray-300 border border-white/[0.08] cursor-help">
-                            {liveStates[name].pendingProposals} pending
-                          </span>
-                        </Tooltip>
-                      )}
+                      <span className="font-medium text-white whitespace-nowrap">{displayName(name)}</span>
+                      {(() => {
+                        const q = pendingByProtocol.get(name) || [];
+                        if (!q.length) return null;
+                        const tip = q.slice(0, 4).map(x => `#${x.proposalIndex} ${x.status} ${x.approvals}/${x.threshold}: ${x.detail.slice(0, 90)}`).join('\n');
+                        return (
+                          <Tooltip text={`Squads proposals open or approved, not yet executed, that could still execute. ${tip}`}>
+                            <span className="ml-2 px-1.5 py-0.5 text-[9px] rounded bg-white/[0.04] text-gray-300 border border-white/[0.08] cursor-help">
+                              {q.length} queued
+                            </span>
+                          </Tooltip>
+                        );
+                      })()}
                       {(() => {
                         const all = liveStates[name]?.threatAlerts || [];
                         const uiAlerts = all.filter((a: any) => a.category === 'NONCE');
@@ -1896,7 +2189,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                   </td>
                   <td className="px-3 py-2 text-xs text-center text-gray-400">{g.proposers}</td>
                   <td className="px-3 py-2 text-xs text-center text-gray-300">
-                    {g.verifiedBuild ? 'Yes' : 'No'}
+                    {buildStatus(name, g.verifiedBuild)}
                   </td>
                   <td className="px-3 py-2 text-xs text-center text-gray-300">
                     {(() => {
@@ -1919,7 +2212,23 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                         <div className="min-w-0 overflow-hidden">
                           <h4 className="font-bold text-white mb-2">Activity</h4>
                           <p><span className="text-gray-500">Created:</span> <span className="text-gray-300">{g.created}</span></p>
-                          <p><span className="text-gray-500">Total transactions:</span> <span className="text-gray-300">{g.totalTxs}{g.totalTxs >= 1000 ? '+' : ''}</span></p>
+                          <p><span className="text-gray-500">Total transactions:</span> <span className="text-gray-300">{g.totalTxs}{g.totalTxs >= 1000 && !activityFor(name) ? '+' : ''}</span></p>
+                          {(() => {
+                            const q = pendingByProtocol.get(name) || [];
+                            if (!q.length) return null;
+                            return (
+                              <div className="mt-1 mb-1">
+                                <p className="text-gray-500">Queued proposals <Tooltip text="Squads proposals open or approved, not yet executed, that could still execute: an upgrade, an upgrade authority change or a multisig config change. Proposals whose deploy buffer has been closed, or that Squads rules no longer allow to execute, are left out."><InfoIcon /></Tooltip></p>
+                                {q.slice(0, 6).map(x => (
+                                  <p key={x.proposalPda} className="text-[11px] text-gray-300">
+                                    <a href={`https://solscan.io/account/${x.proposalPda}`} target="_blank" rel="noopener" className="font-mono text-gray-400 hover:text-white underline">#{x.proposalIndex}</a>
+                                    {' '}<span className="text-gray-400">{x.status} {x.approvals}/{x.threshold}</span>
+                                    {' '}<span>{x.kind === 'ProgramUpgrade' ? 'program upgrade' : x.kind === 'SetUpgradeAuthority' ? 'upgrade authority change' : 'config change'}</span>
+                                  </p>
+                                ))}
+                              </div>
+                            );
+                          })()}
                           {(() => {
                             const protoFeed = (ACTIVITY_FEED as { date: string; protocol: string; type: string; detail: string }[]).filter(e => e.protocol === name);
                             const vaultCount = protoFeed.filter(e => e.type === 'VaultTx').reduce((sum, e) => {
@@ -2099,7 +2408,12 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                           {g.offHoursConfigChanges && g.offHoursConfigChanges.offHours > 0 && (
                             <p><span className="text-gray-500">Off-hours config changes:</span> <span className="text-gray-300">{g.offHoursConfigChanges.offHours} of {g.offHoursConfigChanges.total} <Tooltip text="Config changes made between 22:00-06:00 UTC"><InfoIcon /></Tooltip></span></p>
                           )}
-                          <p><span className="text-gray-500">Verified build:</span> <span className={g.verifiedBuild ? 'text-white' : 'text-gray-300'}>{g.verifiedBuild ? 'Yes' + (g.verifiedBuildDate ? ' (' + g.verifiedBuildDate + ')' : '') : 'No'}</span></p>
+                          {(() => {
+                            const vb = mergedVerifiedBuild(name, g.verifiedBuild);
+                            // The profile date only describes the profile's own "verified" reading, so it is shown only when both agree.
+                            const date = vb === true && g.verifiedBuild && g.verifiedBuildDate ? ' (' + g.verifiedBuildDate + ')' : '';
+                            return <p><span className="text-gray-500">Verified build:</span> <span className={vb ? 'text-white' : 'text-gray-300'}>{buildStatus(name, g.verifiedBuild)}{date}</span></p>;
+                          })()}
                           <p><span className="text-gray-500">Signing activity:</span> <span className="text-gray-300">{g.timezoneDiversity === 'distributed' ? 'Distributed across multiple UTC windows' : g.timezoneDiversity === 'concentrated' ? 'Concentrated in a narrow UTC window' : 'Unknown'}</span></p>
                           {g.identifiedSigners && g.identifiedSigners.length > 0 && (
                             <>
@@ -2125,7 +2439,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                             <>
                               <h4 className="font-bold text-white mt-3 mb-1">Signer Balances <span className="text-[9px] font-normal text-gray-500">(live)</span></h4>
                               <div className="space-y-0.5">
-                                {Object.entries(liveStates[name].signerBalances).map(([addr, bal]: [string, any]) => (
+                                {Object.entries(liveStates[name].signerBalances).filter(([, bal]) => typeof bal === 'number' && Number.isFinite(bal)).map(([addr, bal]: [string, any]) => (
                                   <div key={addr} className="flex items-center gap-2 text-[10px]">
                                     <span className="font-mono text-gray-500">{addr.slice(0, 6)}..{addr.slice(-4)}</span>
                                     <div className="flex-1 h-1 bg-white/[0.04] rounded overflow-hidden">
@@ -2141,8 +2455,8 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                               </div>
                             </>
                           )}
-                          {liveStates[name]?.lastChecked && (
-                            <p className="mt-2 text-[10px] text-gray-400">Last scanned: {liveStates[name].lastChecked.replace('T', ' ').slice(0, 16)} UTC</p>
+                          {fmtUtc(liveStates[name]?.lastChecked) && (
+                            <p className="mt-2 text-[10px] text-gray-400">Last scanned: {fmtUtc(liveStates[name].lastChecked)}</p>
                           )}
                         </div>
                       </div>
@@ -2164,7 +2478,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
             onChange={setFeedFilter}
             options={[
               { value: 'all', label: 'All protocols' },
-              ...govEntries.map(([name]) => ({ value: name, label: name })),
+              ...govEntries.map(([name]) => ({ value: name, label: displayName(name) })),
             ]}
           />
         </div>
@@ -2190,7 +2504,7 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
       </div>
 
       <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500 space-y-1">
-        <p>All data verified on-chain via Helius RPC. Continuous monitoring across {PROTOCOLS.length} protocols.</p>
+        <p>All data verified on-chain via Helius RPC. Continuous monitoring across 50+ protocols.</p>
         <p className="flex items-center gap-1.5">
           {snapshotLabel}
           <Tooltip text={snapshotTooltip}><InfoIcon /></Tooltip>
@@ -2200,7 +2514,10 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
   );
 }
 
-function overlayExposureNode(node: ExposureNode, liveByName: Record<string, typeof PROTOCOLS[0]>): { governance: string; timelock: string; activeVoters: string; isLive: boolean } {
+// Governance values for a dependency row. Values come from the merged protocol (live where the API
+// supplied them, static otherwise); the row is only marked live when its threshold, members and
+// timelock were actually read from the live state in this session.
+function overlayExposureNode(node: ExposureNode, liveByName: Record<string, typeof PROTOCOLS[0]>, liveNames: Set<string>): { governance: string; timelock: string; activeVoters: string; isLive: boolean } {
   const live = liveByName[node.name];
   if (!live || !live.threshold || !live.totalMembers) {
     return { governance: node.governance, timelock: node.timelock, activeVoters: node.activeVoters, isLive: false };
@@ -2214,18 +2531,18 @@ function overlayExposureNode(node: ExposureNode, liveByName: Record<string, type
   const activeVoters = versionTag
     ? node.activeVoters
     : `${live.activeVoters ?? live.totalMembers}/${live.totalMembers}`;
-  return { governance, timelock, activeVoters, isLive: !versionTag };
+  return { governance, timelock, activeVoters, isLive: !versionTag && liveNames.has(node.name) };
 }
 
-function ExposureRow({ node, index, liveByName }: { node: ExposureNode; index: number; liveByName: Record<string, typeof PROTOCOLS[0]> }) {
+function ExposureRow({ node, index, liveByName, liveNames }: { node: ExposureNode; index: number; liveByName: Record<string, typeof PROTOCOLS[0]>; liveNames: Set<string> }) {
   const hasNote = !!node.note;
-  const { governance, timelock, activeVoters, isLive } = overlayExposureNode(node, liveByName);
+  const { governance, timelock, activeVoters, isLive } = overlayExposureNode(node, liveByName, liveNames);
   return (
     <div className={`flex items-start gap-3 py-2.5 px-3 rounded-lg ${hasNote ? 'bg-white/[0.02] border border-white/[0.06]' : 'bg-white/[0.01]'}`}>
       <span className="text-gray-400 text-[10px] w-4 pt-0.5">{index + 1}</span>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-medium text-white">{node.name}</span>
+          <span className="text-xs font-medium text-white">{displayName(node.name)}</span>
           <span className="text-[10px] text-gray-400">{node.role}</span>
           {isLive && (
             <Tooltip text="Governance, timelock and active-voter values for this dependency are pulled live from on-chain reads via the listener.">
@@ -2246,7 +2563,7 @@ function ExposureRow({ node, index, liveByName }: { node: ExposureNode; index: n
   );
 }
 
-function ExposureSection({ title, icon, nodes, emptyText: _emptyText, liveByName }: { title: string; icon: string; nodes: ExposureNode[]; emptyText: string; liveByName: Record<string, typeof PROTOCOLS[0]> }) {
+function ExposureSection({ title, icon, nodes, emptyText: _emptyText, liveByName, liveNames }: { title: string; icon: string; nodes: ExposureNode[]; emptyText: string; liveByName: Record<string, typeof PROTOCOLS[0]>; liveNames: Set<string> }) {
   if (nodes.length === 0) return null;
   const noteCount = nodes.filter(n => n.note).length;
   return (
@@ -2257,13 +2574,13 @@ function ExposureSection({ title, icon, nodes, emptyText: _emptyText, liveByName
         {noteCount > 0 && <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/[0.04] text-gray-300 border border-white/[0.08]">{noteCount} note{noteCount > 1 ? 's' : ''}</span>}
       </div>
       <div className="space-y-1.5">
-        {nodes.map((n, i) => <ExposureRow key={n.name} node={n} index={i} liveByName={liveByName} />)}
+        {nodes.map((n, i) => <ExposureRow key={n.name} node={n} index={i} liveByName={liveByName} liveNames={liveNames} />)}
       </div>
     </div>
   );
 }
 
-function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveProtocols: typeof PROTOCOLS }) {
+function BlastRadiusView({ llama, liveProtocols, liveGovernanceNames, independence }: { llama: DefiLlamaData; liveProtocols: typeof PROTOCOLS; liveGovernanceNames: Set<string>; independence?: import('./components/IndependenceScore').Group[] }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'overview' | 'detail'>('overview');
   const rawExposure = selected ? EXPOSURES[selected] || null : null;
@@ -2332,7 +2649,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
 
           {selected && (
             <div className="mb-4">
-              <SolarSystem protocolName={selected} tvlData={llama.tvl} />
+              <SolarSystem protocolName={selected} tvlData={llama.tvl} protocols={liveProtocols} />
             </div>
           )}
 
@@ -2357,7 +2674,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
         {exposure && <>
           <div className="rounded-lg border border-white/[0.08] bg-white/[0.02] p-4 mb-4">
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-sm font-semibold text-white">{exposure.name}</h3>
+              <h3 className="text-sm font-semibold text-white">{displayName(exposure.name)}</h3>
               <div className="flex items-center gap-2">
                 {selected && formatTvlDisplay(llama.tvl[selected]) && (
                   <span className="text-[10px] px-2 py-0.5 rounded bg-white/[0.05] text-gray-300 border border-white/[0.08]">
@@ -2375,22 +2692,22 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
           </div>
 
           <div className="space-y-1">
-            <ExposureSection title="Price Feeds (Oracles)" icon="📡" nodes={exposure.oracles} emptyText="No oracle dependencies" liveByName={liveByName} />
+            <ExposureSection title="Price Feeds (Oracles)" icon="📡" nodes={exposure.oracles} emptyText="No oracle dependencies" liveByName={liveByName} liveNames={liveGovernanceNames} />
             {exposure.oracles.length > 0 && exposure.collateral.length > 0 && (
               <div className="text-center text-gray-400 text-[10px] py-1">↓ prices feed into ↓</div>
             )}
 
-            <ExposureSection title="Collateral Accepted" icon="🪙" nodes={exposure.collateral} emptyText="No external collateral" liveByName={liveByName} />
+            <ExposureSection title="Collateral Accepted" icon="🪙" nodes={exposure.collateral} emptyText="No external collateral" liveByName={liveByName} liveNames={liveGovernanceNames} />
             {exposure.collateral.length > 0 && exposure.routing.length > 0 && (
               <div className="text-center text-gray-400 text-[10px] py-1">↓ if liquidated, flows to ↓</div>
             )}
 
-            <ExposureSection title="Routing" icon="🔀" nodes={exposure.routing} emptyText="" liveByName={liveByName} />
+            <ExposureSection title="Routing" icon="🔀" nodes={exposure.routing} emptyText="" liveByName={liveByName} liveNames={liveGovernanceNames} />
             {exposure.routing.length > 0 && exposure.settlement.length > 0 && (
               <div className="text-center text-gray-400 text-[10px] py-1">↓ settles on ↓</div>
             )}
 
-            <ExposureSection title="Settlement (DEX Pools)" icon="💱" nodes={exposure.settlement} emptyText="" liveByName={liveByName} />
+            <ExposureSection title="Settlement (DEX Pools)" icon="💱" nodes={exposure.settlement} emptyText="" liveByName={liveByName} liveNames={liveGovernanceNames} />
           </div>
 
           {totalWeakLinks > 0 && (
@@ -2400,7 +2717,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                 .filter(n => n.note)
                 .map((n, i) => (
                   <p key={i} className="text-[11px] text-gray-400 mt-1">
-                    <span className="text-gray-300 font-medium">{n.name}:</span> {n.note}
+                    <span className="text-gray-300 font-medium">{displayName(n.name)}:</span> {n.note}
                   </p>
                 ))
               }
@@ -2421,12 +2738,12 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
               <div className="mt-4">
                 {upstream.length > 0 && (
                   <div className="mb-3">
-                    <h4 className="text-xs font-semibold text-white mb-2">Protocols connected to {exposure.name} ({upstream.length})</h4>
+                    <h4 className="text-xs font-semibold text-white mb-2">Protocols connected to {displayName(exposure.name)} ({upstream.length})</h4>
                     <div className="space-y-1">
                       {upstream.map((r, i) => (
                         <div key={i} className="py-1.5 px-3 bg-white/[0.01] rounded text-[11px]">
                           <div className="flex items-center gap-3">
-                            <span className="text-white font-medium w-28 flex-shrink-0">{r.protocol}</span>
+                            <span className="text-white font-medium w-28 flex-shrink-0">{displayName(r.protocol)}</span>
                             <span className="text-gray-400 flex-1">{r.detail}</span>
                             <span className="text-gray-400 text-[10px]">{r.verified}</span>
                           </div>
@@ -2440,12 +2757,12 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                 )}
                 {downstream.length > 0 && (
                   <div>
-                    <h4 className="text-xs font-semibold text-white mb-2">{exposure.name} connected to ({downstream.length})</h4>
+                    <h4 className="text-xs font-semibold text-white mb-2">{displayName(exposure.name)} connected to ({downstream.length})</h4>
                     <div className="space-y-1">
                       {downstream.map((r, i) => (
                         <div key={i} className="py-1.5 px-3 bg-white/[0.01] rounded text-[11px]">
                           <div className="flex items-center gap-3">
-                            <span className="text-white font-medium w-28 flex-shrink-0">{r.protocol}</span>
+                            <span className="text-white font-medium w-28 flex-shrink-0">{displayName(r.protocol)}</span>
                             <span className="text-gray-400 flex-1">{r.detail}</span>
                             <span className="text-gray-400 text-[10px]">{r.verified}</span>
                           </div>
@@ -2462,13 +2779,14 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
           })()}
 
           {selected && (() => {
-            const g = findLiveGroupForProtocol(selected);
+            const g = findLiveGroupForProtocol(selected, independence);
             return g ? <IndependenceScorePanel group={g} /> : null;
           })()}
 
           {selected === 'Drift' && (
             <div className="mt-4 rounded-lg border border-white/[0.06] bg-white/[0.02] p-4">
               <h4 className="text-xs font-semibold text-white mb-3">Case Study: April 1, 2026</h4>
+              <p className="text-[11px] text-gray-500 mb-3">Drift rebranded to Velocity DEX in July 2026. This exploit is recorded under the Drift name it carried at the time.</p>
 
               <DriftCaseStudySolar affected={DRIFT_CASE_STUDY.affected} />
 
@@ -2575,7 +2893,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
               </div>
 
               {(() => {
-                const g = findCaseStudyGroup('Drift');
+                const g = findCaseStudyGroup('Drift', independence);
                 return g ? <IndependenceScorePanel group={g} /> : null;
               })()}
 
@@ -2593,7 +2911,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                   <tbody>
                     {DRIFT_CASE_STUDY.affected.map((p, i) => (
                       <tr key={i} className="border-t border-white/[0.03]">
-                        <td className="py-1.5 pr-3 text-gray-300">{p.name}</td>
+                        <td className="py-1.5 pr-3 text-gray-300">{displayName(p.name)}</td>
                         <td className="py-1.5 px-3 text-right text-gray-300">{p.loss}</td>
                         <td className="py-1.5 px-3 text-center text-gray-400">{p.chainDepth}</td>
                         <td className="py-1.5 pl-3 text-gray-500">{p.source}</td>
@@ -2603,7 +2921,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                 </table>
               </div>
 
-              <h5 className="text-[11px] text-white font-medium mt-3 mb-1">Recovery Multisig (E44y4 - April 2 to present)</h5>
+              <h5 className="text-[11px] text-white font-medium mt-3 mb-1">Recovery Multisig (E44y4 - April 2 to June 26 2026)</h5>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-3 text-[11px]">
                 <div className="bg-white/[0.03] rounded p-2">
                   <p className="text-gray-500">Governance</p>
@@ -2622,8 +2940,12 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
                   <p className="text-gray-300">13 transfers across 55 multisig transactions, around $16.07M USDC moved as part of recovery</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2 md:col-span-2">
-                  <p className="text-gray-500">External configAuthority (still active)</p>
-                  <p className="text-gray-300">The same configAuthority key is still set on the recovery multisig. It can still change the threshold, members, or timelock on this multisig without going through the multisig approval process.</p>
+                  <p className="text-gray-500">External configAuthority (still set)</p>
+                  <p className="text-gray-300">The same configAuthority key is still set on the recovery multisig. It can still change the threshold, members, or timelock on this multisig without going through the multisig approval process. Since June 26 2026 this multisig holds upgrade authority over no program.</p>
+                </div>
+                <div className="bg-white/[0.03] rounded p-2 md:col-span-3">
+                  <p className="text-gray-500">Program authority since June 26 2026</p>
+                  <p className="text-gray-300">Upgrade authority for Drift Protocol V2 moved to a new 4/7 multisig (7qipz...) with a 1h timelock, no external configAuthority and a signer set that shares no key with the exploited or recovery multisigs. The recovery multisig executed the handover.</p>
                 </div>
               </div>
 
@@ -2631,7 +2953,7 @@ function BlastRadiusView({ llama, liveProtocols }: { llama: DefiLlamaData; liveP
           )}
 
       <div className="mt-6 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500">
-        <p>Routing and settlement data verified on-chain where possible. Oracle dependencies sourced from protocol documentation (oracle price accounts are read via account references and cannot be verified through transaction analysis). Governance data from solgov on-chain audits. Data covers the {PROTOCOLS.length} protocols tracked on solgov.</p>
+        <p>Routing and settlement data verified on-chain where possible. Oracle dependencies sourced from protocol documentation (oracle price accounts are read via account references and cannot be verified through transaction analysis). Governance data from solgov on-chain audits. Data covers the 50+ protocols tracked on solgov.</p>
       </div>
         </>}
       </div>

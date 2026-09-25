@@ -3,7 +3,7 @@
 import scores from '../data/independence-scores.json';
 
 type Overlap = { a: string; b: string; shared: number; sharedPctOfMinSet: number };
-type Group = {
+export type Group = {
   team: string;
   context: 'live' | 'case-study';
   note?: string;
@@ -94,25 +94,26 @@ export function IndependenceScorePanel({ group }: { group: Group }) {
   );
 }
 
-export function findLiveGroupForProtocol(protocolName: string): Group | null {
-  for (const g of groups) {
+// `source` lets the caller pass live groups from the API; the bundled JSON is the offline fallback.
+export function findLiveGroupForProtocol(protocolName: string, source: Group[] = groups): Group | null {
+  for (const g of source) {
     if (g.context !== 'live') continue;
     if (g.multisigs.some(m => m.label === protocolName)) return g;
   }
   return null;
 }
 
-export function findCaseStudyGroup(teamPrefix: string): Group | null {
-  for (const g of groups) {
+export function findCaseStudyGroup(teamPrefix: string, source: Group[] = groups): Group | null {
+  for (const g of source) {
     if (g.context !== 'case-study') continue;
     if (g.team.toLowerCase().startsWith(teamPrefix.toLowerCase())) return g;
   }
   return null;
 }
 
-export function IndependenceScoreSummary({ onJumpTo }: { onJumpTo?: (protocol: string) => void }) {
-  const liveGroups = groups.filter(g => g.context === 'live');
-  const caseStudies = groups.filter(g => g.context === 'case-study');
+export function IndependenceScoreSummary({ onJumpTo, source = groups }: { onJumpTo?: (protocol: string) => void; source?: Group[] }) {
+  const liveGroups = source.filter(g => g.context === 'live');
+  const caseStudies = source.filter(g => g.context === 'case-study');
 
   return (
     <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-4 mb-4">

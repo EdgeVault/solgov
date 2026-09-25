@@ -5,6 +5,7 @@ import type { Protocol } from '../data/protocols';
 import metricHistory from '../data/metric-history.json';
 import tokenCircuitBreakers from '../data/token-circuit-breakers.json';
 import { connectionCount, RELATIONSHIPS } from '../data/relationships';
+import { effectiveVoters, meetsSquadsBenchmark } from '../lib/benchmark';
 
 type ChartSpec = {
   key: string;
@@ -341,9 +342,10 @@ function CurrentStateBars({ protocols, liveIntegrity, liveActivity }: { protocol
   }).length;
 
   const singleSigner = protocols.filter(p => p.version === 'Single Signer').length;
+  // Same test and denominator as the "Above" cell in the main table: threshold over voting signers.
   const meetsSquadsRec = protocols.filter(p => {
-    if (!p.threshold || !p.totalMembers) return false;
-    return p.threshold >= 4 && (p.threshold / p.totalMembers) >= 0.67;
+    if (p.version === 'Appchain' || !p.threshold || !p.totalMembers) return false;
+    return meetsSquadsBenchmark(p.threshold, effectiveVoters(p));
   }).length;
 
   const allKnown = new Set<string>(Object.keys(RELATIONSHIPS));
@@ -396,8 +398,8 @@ function CurrentStateBars({ protocols, liveIntegrity, liveActivity }: { protocol
       key: 'squads-recommendation',
       count: meetsSquadsRec,
       total: totalProtocols,
-      label: "Teams meeting Squads' threshold recommendation",
-      description: 'Squads best practice: at least 4 signers with at least 67% approval threshold. Only counts the "Above" case in the main table, not Partial. Different governance models (Pythian Council, Wormhole Guardians, Realms DAO, Single Signer) are not Squads multisigs and are not directly comparable to this recommendation.',
+      label: "Teams meeting Squads' threshold recommendation (threshold over voting signers)",
+      description: 'Squads best practice: 4/6 and above, at least 4 approvals and at least two thirds of the signer set. The signer set is the members who can vote, the same denominator as the Threshold column in the main table, so this counts exactly the "Above" cases there, not Partial. Different governance models (Pythian Council, Wormhole Guardians, Realms DAO, Single Signer) are not Squads multisigs and are not directly comparable to this recommendation.',
     },
     {
       key: 'connection-hubs',

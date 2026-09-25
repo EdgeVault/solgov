@@ -15,9 +15,12 @@ import {
   EventType,
 } from './subscriptions';
 import { readActivityLog } from './activity-log';
-import { nameMatches } from './llm-tools';
+import { nameMatches, resolveName, findNonceInstruction } from './llm-tools';
 import { addTracked, verifySquadsMultisig, listTracked, MAX_TRACKED } from './user-tracked-multisigs';
 import { Connection } from '@solana/web3.js';
+import { escapeHtml, splitTelegramHtml } from './utils/telegram-html';
+import { pendingText, verifiedText, recentText, healthText, relatedHint } from './bot-lookups';
+import { alertName } from './utils/display-names';
 
 const TG_TOKEN = process.env.TELEGRAM_BOT_TOKEN!;
 const TG_CHAT_ID = process.env.TELEGRAM_CHAT_ID!;
@@ -97,6 +100,15 @@ async function sendMessage(text: string, chatIdOverride?: number | string, threa
     return null;
   } finally {
     clearTimeout(timer);
+  }
+}
+
+// Sends text that may exceed Telegram's 4096-char limit as several messages, split on line
+// boundaries. The reply markup, if any, goes on the last part.
+async function sendLongMessage(text: string, chatIdOverride?: number | string, threadId?: number, replyMarkup?: any): Promise<void> {
+  const parts = splitTelegramHtml(text);
+  for (let i = 0; i < parts.length; i++) {
+    await sendMessage(parts[i], chatIdOverride, threadId, i === parts.length - 1 ? replyMarkup : undefined);
   }
 }
 
@@ -231,7 +243,10 @@ function fullHelpText(): string {
     `<b>Scanning</b>\n` +
     `<code>/scan</code>  /tier1  /deep  /status\n\n` +
     `<b>Lookup</b>\n` +
-    `<code>/check &lt;name&gt;</code>  <code>/nonce &lt;address&gt;</code>\n\n` +
+    `<code>/check &lt;name&gt;</code>  <code>/nonce &lt;address&gt;</code>\n` +
+    `<code>/pending &lt;name&gt;</code> queued upgrade and config proposals\n` +
+    `<code>/verified &lt;name&gt;</code> verified-build status per program\n` +
+    `<code>/recent [24h|7d]</code> governance changes across all protocols\n\n` +
     `<b>Subscriptions (DM)</b>\n` +
     `<code>/subscribe &lt;protocol&gt;</code>\n` +
     `<code>/unsubscribe &lt;protocol&gt;</code>\n` +
@@ -245,30 +260,39 @@ function fullHelpText(): string {
 
 type PendingAction = 'report' | 'subscribe' | 'check' | 'nonce' | 'unsubscribe';
 const pendingActions: Map<number, { action: PendingAction; createdAt: number }> = new Map();
+const PENDING_ACTION_TTL_MS = 5 * 60 * 1000;
 
-async function getUpdates(): Promise<any[]> {
+// Returns null when the poll failed (network error or a Telegram error such as 409 when a second bot
+// instance is polling), so the loop can back off instead of retrying immediately.
+async function getUpdates(): Promise<any[] | null> {
   try {
     const allowed = encodeURIComponent(JSON.stringify(['message', 'callback_query']));
     const resp = await fetch(
       `https://api.telegram.org/bot${TG_TOKEN}/getUpdates?offset=${lastOffset}&timeout=30&allowed_updates=${allowed}`
     );
     const data = await resp.json() as any;
-    if (data.ok && data.result.length > 0) {
-      lastOffset = data.result[data.result.length - 1].update_id + 1;
-      return data.result;
+    if (!data.ok) {
+      console.error(`[BOT] getUpdates failed: ${resp.status} ${String(data.description || '').slice(0, 120)}`);
+      return null;
     }
-  } catch {}
-  return [];
+    if (data.result.length > 0) {
+      lastOffset = data.result[data.result.length - 1].update_id + 1;
+    }
+    return data.result;
+  } catch (e: any) {
+    console.error('[BOT] getUpdates error:', e?.message?.slice(0, 120));
+    return null;
+  }
 }
 
 function runScan(mode: string): Promise<string> {
   return new Promise((resolve) => {
     exec(
-      `npx tsx src/solgov-monitor.ts ${mode}`,
+      `node -r ts-node/register/transpile-only src/solgov-monitor.ts ${mode}`,
       { cwd: path.join(__dirname, '..'), timeout: 300000 },
       (error, stdout, stderr) => {
         if (error) {
-          resolve(`Scan error: ${error.message.slice(0, 100)}`);
+          resolve(`Scan error: ${escapeHtml(error.message.slice(0, 100))}`);
         } else {
           const lines = stdout.split('\n');
           const hasChanges = lines.some((l) => l.includes('changes'));
@@ -282,7 +306,10 @@ function runScan(mode: string): Promise<string> {
 const STATUS_NAME_MAP: Record<string, string> = {
   'Pumpfun': 'Pumpfun + PumpSwap',
   'Huma': 'Huma Finance',
-  'Onre Finance (secondary)': 'Onre Finance',
+  'Onre Finance (treasury)': 'Onre Finance',
+  'Drift (interim recovery)': 'Drift',
+  'Voltr (former 3/5)': 'Voltr',
+  'Jito (program upgrade)': 'Jito',
   'deBridge (governance multisig)': 'deBridge',
   'Raydium (treasury)': 'Raydium',
 };
@@ -295,8 +322,12 @@ function getStatus(): string {
     if (rawNames.length === 0) return 'No scan data yet. Run /scan first.';
 
     const byCanonical = new Map<string, any>();
+    const rawSet = new Set(rawNames);
     for (const name of rawNames) {
-      const canonical = STATUS_NAME_MAP[name] || name;
+      if (/\(historical/i.test(name)) continue;
+      // A secondary multisig ("Name (role)") counts under its protocol when that protocol is tracked.
+      const family = name.replace(/\s*\([^)]*\)\s*$/, '').trim();
+      const canonical = STATUS_NAME_MAP[name] || (family !== name && rawSet.has(family) ? family : name);
       const isPrimary = name === canonical;
       const existing = byCanonical.get(canonical);
       const existingIsPrimary = existing?.__rawName === canonical;
@@ -342,10 +373,8 @@ function checkProtocol(name: string): string {
     if (!fs.existsSync(STATE_FILE)) return 'No scan data yet. Run /scan first.';
     const state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8'));
 
-    const match = Object.keys(state).find(
-      (k) => !k.startsWith('_') && nameMatches(k, name)
-    );
-    if (!match) return `Protocol "${name}" not found. Try /status to see tracked protocols.`;
+    const match = resolveName(Object.keys(state).filter((k) => !k.startsWith('_')), name);
+    if (!match) return `Protocol "${escapeHtml(name)}" not found. Try /status to see tracked protocols.`;
 
     const p = state[match];
     const members = p.members?.length || 0;
@@ -353,22 +382,22 @@ function checkProtocol(name: string): string {
     const nonces = p.nonceAlerts?.length || 0;
     const pct = members > 0 ? Math.round((p.threshold / members) * 100) : 0;
 
-    let msg = `<b>${match}</b>\n\n`;
+    let msg = `<b>${escapeHtml(alertName(match))}</b>\n\n`;
     msg += `<b>Multisig</b>\n`;
-    msg += `Threshold: ${p.threshold}/${members} (${pct}%)\n`;
+    msg += `Threshold: ${escapeHtml(p.threshold)}/${members} (${pct}%)\n`;
     msg += `Gov. timelock: ${tl}\n`;
     const threats = p.threatAlerts || [];
     if (threats.length > 0) {
       msg += `\n⚠️ <b>Threat alerts: ${threats.length}</b>\n`;
       for (const t of threats) {
         const icon = t.severity === 'CRITICAL' ? '🚨' : t.severity === 'HIGH' ? '⚠️' : 'ℹ️';
-        msg += `${icon} ${t.category}: ${t.detail}\n`;
-        msg += `  Signer: ${t.signer?.slice(0, 8)}... | ${t.detectedAt}\n`;
+        msg += `${icon} ${escapeHtml(t.category)}: ${escapeHtml(t.detail)}\n`;
+        msg += `  Signer: ${escapeHtml(t.signer?.slice(0, 8))}... | ${escapeHtml(t.detectedAt)}\n`;
       }
     } else {
       msg += `Threat scan: Clean\n`;
     }
-    msg += `Last checked: ${p.lastChecked?.split('T')[0] || 'unknown'}`;
+    msg += `Last checked: ${escapeHtml(p.lastChecked?.split('T')[0] || 'unknown')}`;
     if (p.programAuthorities) {
       const auths = Object.entries(p.programAuthorities) as [string, string][];
       if (auths.length > 0) {
@@ -380,11 +409,11 @@ function checkProtocol(name: string): string {
           byAuth.set(auth, list);
         }
         for (const [auth, names] of byAuth) {
-          const shortAuth = auth.slice(0, 8) + '...';
+          const shortAuth = escapeHtml(String(auth).slice(0, 8)) + '...';
           if (names.length === 1) {
-            msg += `${names[0]}: ${shortAuth}\n`;
+            msg += `${escapeHtml(names[0])}: ${shortAuth}\n`;
           } else {
-            msg += `${shortAuth} controls ${names.length}:\n  ${names.join(', ')}\n`;
+            msg += `${shortAuth} controls ${names.length}:\n  ${names.map(escapeHtml).join(', ')}\n`;
           }
         }
       }
@@ -414,6 +443,8 @@ async function checkNonce(address: string): Promise<string> {
     let nonceFound = false;
     let nonceTime = '';
     let nonceSig = '';
+    let nonceIx = '';
+    let inspected = 0;
 
     for (const sig of recent.slice(0, 5)) {
       const txResp = await fetch(process.env.HELIUS_RPC_URL!, {
@@ -426,15 +457,13 @@ async function checkNonce(address: string): Promise<string> {
         }),
       });
       const txData = await txResp.json() as any;
-      const logs = txData.result?.meta?.logMessages || [];
-      const hasNonce = logs.some((l: string) =>
-        l.includes('InitializeNonceAccount') ||
-        l.includes('AdvanceNonceAccount') ||
-        l.includes('AuthorizeNonceAccount') ||
-        l.includes('WithdrawNonceAccount')
-      );
-      if (hasNonce) {
+      if (!txData?.result) continue;
+      inspected++;
+      // The System Program does not log instruction names, so read the parsed instructions.
+      const found = findNonceInstruction(txData.result);
+      if (found) {
         nonceFound = true;
+        nonceIx = found;
         nonceTime = sig.blockTime
           ? new Date(sig.blockTime * 1000).toISOString().replace('T', ' ').slice(0, 16) + ' UTC'
           : 'unknown';
@@ -443,19 +472,21 @@ async function checkNonce(address: string): Promise<string> {
       }
     }
 
+    const shortAddr = escapeHtml(`${address.slice(0, 8)}...${address.slice(-4)}`);
     if (nonceFound) {
       return `🚨 <b>Durable nonce activity</b>\n\n` +
-        `Address: ${address.slice(0, 8)}...${address.slice(-4)}\n` +
+        `Address: ${shortAddr}\n` +
+        `Instruction: ${escapeHtml(nonceIx)}\n` +
         `Detected: ${nonceTime}\n` +
-        `Signature: ${nonceSig}...`;
+        `Signature: ${escapeHtml(nonceSig)}...`;
     } else {
-      return `✅ <b>Clean</b>\n\n` +
-        `Address: ${address.slice(0, 8)}...${address.slice(-4)}\n` +
-        `Transactions checked: ${recent.length} (14 day window)\n` +
-        `Durable nonce activity: none detected`;
+      return `✅ <b>No durable nonce instructions found</b>\n\n` +
+        `Address: ${shortAddr}\n` +
+        `Transactions inspected: ${inspected} most recent of ${recent.length} found (last 20 signatures, 14 day window)\n` +
+        `Durable nonce instructions: none in the inspected transactions`;
     }
   } catch (e: any) {
-    return `Error checking address: ${e.message?.slice(0, 60)}`;
+    return `Error checking address: ${escapeHtml(e.message?.slice(0, 60))}`;
   }
 }
 
@@ -492,10 +523,25 @@ function recordReportHit(userId: number): void {
   reportUserHits.set(userId, hits);
 }
 
+// Drops rate-limit hits and pending prompts older than their windows so the maps do not grow
+// with every user who ever tapped a button. Called from the poll loop.
+function pruneBotState(): void {
+  const now = Date.now();
+  const hitCutoff = now - REPORT_USER_WINDOW_MS;
+  for (const [userId, hits] of reportUserHits) {
+    const live = hits.filter(t => t > hitCutoff);
+    if (live.length === 0) reportUserHits.delete(userId);
+    else if (live.length !== hits.length) reportUserHits.set(userId, live);
+  }
+  for (const [userId, p] of pendingActions) {
+    if (now - p.createdAt > PENDING_ACTION_TTL_MS) pendingActions.delete(userId);
+  }
+}
+
 async function generateReport(protocol: string, window: '24h' | '7d', userId?: number): Promise<string> {
   try {
     const state = fs.existsSync(STATE_FILE) ? JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8')) : {};
-    const protocolName = Object.keys(state).find(k => !k.startsWith('_') && nameMatches(k, protocol));
+    const protocolName = resolveName(Object.keys(state).filter(k => !k.startsWith('_')), protocol);
     const protocolState = protocolName ? state[protocolName] : null;
 
     let activity: any[] = readActivityLog();
@@ -513,7 +559,7 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
     const cutoff = new Date(cutoffMs).toISOString().slice(0, 10);
     const cutoffIso = new Date(cutoffMs).toISOString();
     const relevant = activity.filter((e: any) => {
-      const protoMatch = e.protocol && nameMatches(e.protocol, protocol);
+      const protoMatch = e.protocol && nameMatches(e.protocol, protocolName || protocol);
       if (!protoMatch) return false;
       if (e.timestamp) return e.timestamp >= cutoffIso;
       return e.date >= cutoff;
@@ -533,7 +579,8 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
     const cached = reportCache.get(cacheKey);
     if (cached) return cached.text;
 
-    const displayName = protocolName || protocol;
+    // protocol is user input when nothing resolved, so the display name is always escaped.
+    const displayName = escapeHtml(alertName(protocolName || protocol));
 
     if (!protocolState) {
       const miss = `<b>${displayName} - ${window} briefing</b>\n\nNot tracked in monitor-state. Try /status for the full list.`;
@@ -564,7 +611,7 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
     lines.push(`<b>${displayName} - ${window} briefing</b>`);
     lines.push('');
     lines.push(`<b>Governance</b>`);
-    lines.push(`• Multisig: ${thresh}/${memberCount} signers`);
+    lines.push(`• Multisig: ${escapeHtml(thresh)}/${memberCount} signers`);
     lines.push(`• Timelock: ${tlLabel}`);
     lines.push(`• State freshness: ${freshness}`);
     if (pendingProposals > 0) {
@@ -575,8 +622,8 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
       lines.push(`<b>Open threat alerts (${threats.length})</b>`);
       for (const t of threats.slice(0, 6)) {
         const icon = t.severity === 'CRITICAL' ? '🚨' : t.severity === 'HIGH' ? '⚠️' : 'ℹ️';
-        const signer = t.signer ? ` · ${t.signer.slice(0, 8)}…` : '';
-        lines.push(`${icon} ${t.category}: ${t.detail}${signer}`);
+        const signer = t.signer ? ` · ${escapeHtml(String(t.signer).slice(0, 8))}…` : '';
+        lines.push(`${icon} ${escapeHtml(t.category)}: ${escapeHtml(t.detail)}${signer}`);
       }
       if (threats.length > 6) lines.push(`<i>…and ${threats.length - 6} more</i>`);
     }
@@ -590,8 +637,9 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
       const shown = deduped.slice(0, 15);
       for (const e of shown) {
         const when = e.date || (e.timestamp ? e.timestamp.slice(0, 10) : '?');
-        const detail = e.detail ? ` · ${String(e.detail).slice(0, 160)}` : '';
-        lines.push(`• ${when} - <b>${e.type}</b>${detail}`);
+        // Truncate before escaping so the cut never lands inside an entity.
+        const detail = e.detail ? ` · ${escapeHtml(String(e.detail).slice(0, 160))}` : '';
+        lines.push(`• ${escapeHtml(when)} - <b>${escapeHtml(e.type)}</b>${detail}`);
       }
       if (deduped.length > shown.length) lines.push(`<i>…and ${deduped.length - shown.length} more</i>`);
     }
@@ -606,7 +654,7 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
     if (userId !== undefined) recordReportHit(userId);
     return final;
   } catch (e: any) {
-    return `Error generating report: ${e.message?.slice(0, 100)}`;
+    return `Error generating report: ${escapeHtml(e.message?.slice(0, 100))}`;
   }
 }
 
@@ -629,10 +677,16 @@ export async function handleCallback(data: string, ctx: { userId: number; chatId
       ? out.text
       : '⚠️ Triage temporarily unavailable. The LLM returned no output. Try the button again in a minute.';
     const finalMarkup = out?.replyMarkup;
+    // The placeholder takes the first part; any overflow follows as new messages, with the
+    // "Scan deeper" button on the last part.
+    const parts = splitTelegramHtml(finalText);
     if (placeholder) {
-      await editMessage(placeholder.chatId, placeholder.messageId, finalText, finalMarkup);
+      await editMessage(placeholder.chatId, placeholder.messageId, parts[0], parts.length === 1 ? finalMarkup : undefined);
+      for (let i = 1; i < parts.length; i++) {
+        await sendMessage(parts[i], replyTo, replyThread, i === parts.length - 1 ? finalMarkup : undefined);
+      }
     } else {
-      await sendMessage(finalText, replyTo, replyThread, finalMarkup);
+      await sendLongMessage(finalText, replyTo, replyThread, finalMarkup);
     }
     return;
   }
@@ -651,6 +705,10 @@ export async function handleCallback(data: string, ctx: { userId: number; chatId
       await sendMessage(welcomeText(), replyTo, replyThread, mainMenuKeyboard(ctx.userId));
       return;
     case 'cmd:tier1':
+      if (!isAdmin(ctx.userId)) {
+        await sendMessage('Manual scans are admin-only. /status shows live state from the always-on listener.', replyTo, replyThread);
+        return;
+      }
       if (scanning) { await sendMessage('Scan already in progress...', replyTo, replyThread); return; }
       scanning = true;
       await sendMessage('🏆 Starting tier 1 scan (11 high-risk protocols)...', replyTo, replyThread);
@@ -658,6 +716,10 @@ export async function handleCallback(data: string, ctx: { userId: number; chatId
       scanning = false;
       return;
     case 'cmd:deep':
+      if (!isAdmin(ctx.userId)) {
+        await sendMessage('Deep audit is admin-only (RPC-heavy, 2-3 min). /status shows current state.', replyTo, replyThread);
+        return;
+      }
       if (scanning) { await sendMessage('Scan already in progress...', replyTo, replyThread); return; }
       scanning = true;
       await sendMessage('🔬 Starting deep audit (member permissions, verified builds, full threat detection). 2-3 minutes...', replyTo, replyThread);
@@ -715,7 +777,7 @@ export async function handleCallback(data: string, ctx: { userId: number; chatId
           const typeLabel = sub.types.includes('*') ? 'all' : sub.types.join(', ');
           await sendMessage(
             `<b>Your subscription</b>\n\n` +
-            `Protocols: ${sub.protocols.join(', ') || '(none)'}\n` +
+            `Protocols: ${sub.protocols.map((p: string) => escapeHtml(alertName(p))).join(', ') || '(none)'}\n` +
             `Severities: ${sevLabel}\n` +
             `Event types: ${typeLabel}\n` +
             `Since: ${sub.createdAt.slice(0, 10)}`,
@@ -734,7 +796,7 @@ export async function handleCallback(data: string, ctx: { userId: number; chatId
         const typeLabel = sub.types.includes('*') ? 'all' : sub.types.join(', ');
         await sendMessage(
           `<b>Your subscription</b>\n\n` +
-          `Protocols: ${sub.protocols.join(', ') || '(none)'}\n` +
+          `Protocols: ${sub.protocols.map((p: string) => escapeHtml(alertName(p))).join(', ') || '(none)'}\n` +
           `Severities: ${sevLabel}\n` +
           `Event types: ${typeLabel}\n` +
           `Since: ${sub.createdAt.slice(0, 10)}`,
@@ -833,14 +895,21 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
       await sendMessage(dmOnlyMessage('subscribe', 'Subscribe'), replyTo, replyThread);
       return;
     }
-    const protocol = cmd.slice('/subscribe'.length).trim();
-    if (!protocol) {
+    const requested = cmd.slice('/subscribe'.length).trim();
+    if (!requested) {
       await sendMessage('Usage: /subscribe &lt;protocol&gt;\nExample: /subscribe Solstice', replyTo, replyThread);
       return;
     }
+    // Store the tracked name when the query resolves to one ("velocity" -> "Drift"), so alerts, which
+    // carry the tracked name, reach the subscriber. An unknown name is stored as typed.
+    let protocol = requested;
+    try {
+      const state = JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8'));
+      protocol = resolveName(Object.keys(state).filter(k => !k.startsWith('_')), requested) ?? requested;
+    } catch {}
     const sub = addProtocolsToSubscription(ctx.userId, ctx.chatId, [protocol], ctx.username);
     await sendMessage(
-      `✅ Subscribed to <b>${protocol}</b>.\nYou will receive alerts for this protocol at your current filter settings.\nProtocols subscribed: ${sub.protocols.join(', ')}`,
+      `✅ Subscribed to <b>${escapeHtml(alertName(protocol))}</b>.\nYou will receive alerts for this protocol at your current filter settings.\nProtocols subscribed: ${sub.protocols.map((p: string) => escapeHtml(alertName(p))).join(', ')}`,
       replyTo,
       replyThread
     );
@@ -856,12 +925,12 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
     }
     const { found, remaining } = removeProtocolFromSubscription(ctx.userId, protocol);
     if (!found) {
-      await sendMessage(`${protocol} was not in your subscriptions.`, replyTo, replyThread);
+      await sendMessage(`${escapeHtml(protocol)} was not in your subscriptions.`, replyTo, replyThread);
     } else {
       await sendMessage(
         remaining.length > 0
-          ? `Removed <b>${protocol}</b>. Still subscribed to: ${remaining.join(', ')}.`
-          : `Removed <b>${protocol}</b>. No remaining subscriptions.`,
+          ? `Removed <b>${escapeHtml(protocol)}</b>. Still subscribed to: ${remaining.map(escapeHtml).join(', ')}.`
+          : `Removed <b>${escapeHtml(protocol)}</b>. No remaining subscriptions.`,
         replyTo, replyThread,
       );
     }
@@ -880,7 +949,7 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
         const typeLabel = sub.types.includes('*') ? 'all' : sub.types.join(', ');
         await sendMessage(
           `<b>Your subscription</b>\n\n` +
-          `Protocols: ${sub.protocols.join(', ') || '(none)'}\n` +
+          `Protocols: ${sub.protocols.map((p: string) => escapeHtml(alertName(p))).join(', ') || '(none)'}\n` +
           `Severities: ${sevLabel}\n` +
           `Event types: ${typeLabel}\n` +
           `Since: ${sub.createdAt.slice(0, 10)}`,
@@ -899,7 +968,7 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
       const typeLabel = sub.types.includes('*') ? 'all' : sub.types.join(', ');
       await sendMessage(
         `<b>Your subscription</b>\n\n` +
-        `Protocols: ${sub.protocols.join(', ') || '(none)'}\n` +
+        `Protocols: ${sub.protocols.map((p: string) => escapeHtml(alertName(p))).join(', ') || '(none)'}\n` +
         `Severities: ${sevLabel}\n` +
         `Event types: ${typeLabel}\n` +
         `Since: ${sub.createdAt.slice(0, 10)}`,
@@ -967,22 +1036,22 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
       await sendMessage('On-chain verification unavailable: HELIUS_RPC_URL not configured on the bot host.', replyTo, replyThread);
       return;
     }
-    await sendMessage(`🔎 Verifying <code>${address.slice(0, 12)}...</code> on-chain...`, replyTo, replyThread);
+    await sendMessage(`🔎 Verifying <code>${escapeHtml(address.slice(0, 12))}...</code> on-chain...`, replyTo, replyThread);
     const conn = new Connection(process.env.HELIUS_RPC_URL, 'confirmed');
     const verified = await verifySquadsMultisig(conn, address);
     if (!verified.ok) {
-      await sendMessage(`❌ ${verified.error}`, replyTo, replyThread);
+      await sendMessage(`❌ ${escapeHtml(verified.error)}`, replyTo, replyThread);
       return;
     }
     const result = addTracked({ address, label, addedBy: `tg:${ctx.userId}` });
     if (!result.ok) {
-      await sendMessage(`❌ ${result.error}`, replyTo, replyThread);
+      await sendMessage(`❌ ${escapeHtml(result.error)}`, replyTo, replyThread);
       return;
     }
     addProtocolsToSubscription(ctx.userId, ctx.chatId, [result.entry!.label], ctx.username);
     await sendMessage(
-      `✅ <b>Tracking ${result.entry!.label}</b>\n` +
-      `Address: <code>${result.entry!.address}</code>\n` +
+      `✅ <b>Tracking ${escapeHtml(result.entry!.label)}</b>\n` +
+      `Address: <code>${escapeHtml(result.entry!.address)}</code>\n` +
       `On-chain: ${verified.threshold}/${verified.memberCount} multisig\n` +
       `Listener will pick up new events on the next WebSocket cycle (~60s).\n` +
       `You're auto-subscribed for alerts in this DM.`,
@@ -1040,7 +1109,7 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
       await sendMessage('Usage: /nonce &lt;solana address&gt;\nChecks last 14 days for durable nonce activity on a specific address.', replyTo, replyThread);
       return;
     }
-    await sendMessage(`🔍 Checking ${address.slice(0, 8)}... for durable nonce activity (14 day window)...`, replyTo, replyThread);
+    await sendMessage(`🔍 Checking ${escapeHtml(address.slice(0, 8))}... for durable nonce activity (14 day window)...`, replyTo, replyThread);
     const result = await checkNonce(address);
     await sendMessage(result, replyTo, replyThread);
   } else if (cmdLower === '/status') {
@@ -1050,7 +1119,22 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
     if (!name) {
       await sendMessage('Usage: /check &lt;protocol name&gt;\nExample: /check drift', replyTo, replyThread);
     } else {
-      await sendMessage(checkProtocol(name), replyTo, replyThread);
+      await sendLongMessage(checkProtocol(name) + relatedHint(name), replyTo, replyThread);
+    }
+  } else if (cmdLower.startsWith('/pending')) {
+    const name = cmd.slice('/pending'.length).trim();
+    await sendLongMessage(name ? pendingText(name) : 'Usage: /pending &lt;protocol name&gt;\nExample: /pending orca', replyTo, replyThread);
+  } else if (cmdLower.startsWith('/verified')) {
+    const name = cmd.slice('/verified'.length).trim();
+    await sendLongMessage(name ? verifiedText(name) : 'Usage: /verified &lt;protocol name&gt;\nExample: /verified kamino', replyTo, replyThread);
+  } else if (cmdLower.startsWith('/recent')) {
+    const arg = cmdLower.slice('/recent'.length).trim();
+    await sendLongMessage(recentText(arg === '7d' ? '7d' : '24h'), replyTo, replyThread);
+  } else if (cmdLower === '/health') {
+    if (!isAdmin(ctx.userId)) {
+      await sendMessage('Data freshness is admin-only. The public API has the same check at /api/v1/health.', replyTo, replyThread);
+    } else {
+      await sendMessage(healthText(), replyTo, replyThread);
     }
   } else if (cmdLower.startsWith('/report')) {
     const body = cmd.slice('/report'.length).trim();
@@ -1070,12 +1154,10 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
       );
       return;
     }
-    await sendMessage(`📋 Generating ${window} report for <b>${protocol}</b>...`, replyTo, replyThread);
+    await sendMessage(`📋 Generating ${window} report for <b>${escapeHtml(protocol)}</b>...`, replyTo, replyThread);
     const report = await generateReport(protocol, window, ctx.userId);
-    const safe = report.length > 4000
-      ? report.slice(0, 3950) + '\n\n<i>…[truncated, narrow window or use /check for a summary]</i>'
-      : report;
-    await sendMessage(safe, replyTo, replyThread);
+    // Split on line boundaries rather than truncating mid-tag.
+    await sendLongMessage(report, replyTo, replyThread);
   }
 }
 
@@ -1138,16 +1220,18 @@ async function runInternalTestSweep(group: string, threadIdForCtx?: number, live
   setDryRunSink(null);
 
   if (live && (group === 'all' || group === 'triage')) {
+    // Illustrative only: the showcase shows the shape of a triage step, not findings about any
+    // tracked protocol. Real steps are produced by the LLM from live tool results.
     const cannedSteps = [
       {
         label: 'Step 2: Authority check (2 tools)',
-        body: 'The current upgrade authority of the Drift program is GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo, a vault PDA controlled by the E44y4Gm multisig. The multisig is 3/5 threshold with no governance timelock. The external configAuthority key A1eC8n2t remains dormant since 2024.',
+        body: 'Example output. This step reads the program\'s current upgrade authority from its ProgramData account, compares it with the multisig recorded for the protocol, and states the multisig threshold and timelock as read on chain.',
         verdict: 'routine',
         nextLabel: 'Priors (step 3)',
       },
       {
         label: 'Step 3: Priors (2 tools)',
-        body: 'No ProgramUpgrade events on the Drift program in the last 30 days. Last upgrade 2026-04-05. Activity feed shows the recovery multisig migration on 2026-04-02 with no subsequent admin transfers. No durable nonce activity on current signers.',
+        body: 'Example output. This step counts recent program upgrades and authority changes in the activity feed and lists any durable nonce instructions found on the current signers.',
         verdict: 'routine',
         nextLabel: undefined,
       },
@@ -1156,7 +1240,7 @@ async function runInternalTestSweep(group: string, threadIdForCtx?: number, live
       const step = cannedSteps[i];
       const placeholder = await sendMessage('🔎 Scanning deeper...', adminCtx.chatId, adminCtx.threadId);
       await sleep(400);
-      const verdictText = `🧠 <b>Auto-triage: Drift</b>\n${step.label}\n\n${step.body}\n\n<b>Verdict:</b> ${step.verdict}`;
+      const verdictText = `🧠 <b>Auto-triage: example protocol</b> <i>(illustrative)</i>\n${step.label}\n\n${step.body}\n\n<b>Verdict:</b> ${step.verdict}`;
       const markup = step.nextLabel
         ? { inline_keyboard: [[{ text: `🔎 ${step.nextLabel}`, callback_data: 'noop' }]] }
         : undefined;
@@ -1196,7 +1280,7 @@ async function runInternalTestSweep(group: string, threadIdForCtx?: number, live
   if (live) return '';
   const passed = results.filter(r => r.ok).length;
   const icon = (ok: boolean) => ok ? '✓' : '✗';
-  const lines = results.map(r => `${icon(r.ok)} ${r.name}${r.err ? ` - <i>${r.err}</i>` : ''}`);
+  const lines = results.map(r => `${icon(r.ok)} ${escapeHtml(r.name)}${r.err ? ` - <i>${escapeHtml(r.err)}</i>` : ''}`);
   return `<b>🧪 Test sweep: ${passed}/${results.length} passed</b>\n\n${lines.join('\n')}`;
 }
 
@@ -1205,68 +1289,86 @@ async function main() {
   await fetchBotUsername();
   await sendMessage('🟢 <b>SolGov Bot online.</b> Type /help for commands.');
 
+  let failures = 0;
   while (true) {
     try {
+      pruneBotState();
       const updates = await getUpdates();
+      if (updates === null) {
+        failures++;
+        await new Promise(r => setTimeout(r, Math.min(30000, 1000 * 2 ** Math.min(failures, 5))));
+        continue;
+      }
+      failures = 0;
       for (const update of updates) {
-        if (update.callback_query) {
-          const cb = update.callback_query;
-          const msg = cb.message;
-          const ctx = {
-            userId: cb.from?.id || 0,
-            chatId: msg?.chat?.id || 0,
-            username: cb.from?.username || cb.from?.first_name,
-            isPrivate: msg?.chat?.type === 'private',
-            threadId: msg?.message_thread_id,
-          };
-          console.log(`Callback: ${cb.data} from @${ctx.username || ctx.userId}`);
-          await answerCallbackQuery(cb.id);
-          await handleCallback(cb.data || '', ctx);
-          continue;
-        }
-
-        const msg = update.message;
-        const text = msg?.text;
-        if (!text) continue;
-
-        const ctx = {
-          userId: msg.from?.id || 0,
-          chatId: msg.chat?.id || 0,
-          username: msg.from?.username || msg.from?.first_name,
-          isPrivate: msg.chat?.type === 'private',
-          threadId: msg.message_thread_id,
-        };
-
-        const pending = pendingActions.get(ctx.userId);
-        if (pending && !text.startsWith('/')) {
-          if (Date.now() - pending.createdAt > 5 * 60 * 1000) {
-            pendingActions.delete(ctx.userId);
-          } else {
-            pendingActions.delete(ctx.userId);
-            const actionToCmd: Record<PendingAction, string> = {
-              subscribe: '/subscribe',
-              report: '/report',
-              check: '/check',
-              nonce: '/nonce',
-              unsubscribe: '/unsubscribe',
-            };
-            const cmdPrefix = actionToCmd[pending.action];
-            if (cmdPrefix) {
-              console.log(`Pending ${pending.action} resolved: ${text} from @${ctx.username || ctx.userId}`);
-              await handleCommand(`${cmdPrefix} ${text}`, ctx);
-            }
-            continue;
-          }
-        }
-
-        if (text.startsWith('/')) {
-          console.log(`Command: ${text} from @${ctx.username || ctx.userId} (${ctx.isPrivate ? 'DM' : 'group'})`);
-          await handleCommand(text, ctx);
+        // Each update is isolated: the offset has already moved past this batch, so a throw
+        // here would otherwise silently drop every later update in it.
+        try {
+          await handleUpdate(update);
+        } catch (e: any) {
+          console.error(`[BOT] update ${update?.update_id} failed:`, e?.message?.slice(0, 200));
         }
       }
     } catch (e: any) {
       console.error('Poll error:', e.message);
     }
+  }
+}
+
+async function handleUpdate(update: any): Promise<void> {
+  if (update.callback_query) {
+    const cb = update.callback_query;
+    const msg = cb.message;
+    const ctx = {
+      userId: cb.from?.id || 0,
+      chatId: msg?.chat?.id || 0,
+      username: cb.from?.username || cb.from?.first_name,
+      isPrivate: msg?.chat?.type === 'private',
+      threadId: msg?.message_thread_id,
+    };
+    console.log(`Callback: ${cb.data} from @${ctx.username || ctx.userId}`);
+    await answerCallbackQuery(cb.id);
+    await handleCallback(cb.data || '', ctx);
+    return;
+  }
+
+  const msg = update.message;
+  const text = msg?.text;
+  if (!text) return;
+
+  const ctx = {
+    userId: msg.from?.id || 0,
+    chatId: msg.chat?.id || 0,
+    username: msg.from?.username || msg.from?.first_name,
+    isPrivate: msg.chat?.type === 'private',
+    threadId: msg.message_thread_id,
+  };
+
+  const pending = pendingActions.get(ctx.userId);
+  if (pending && !text.startsWith('/')) {
+    if (Date.now() - pending.createdAt > PENDING_ACTION_TTL_MS) {
+      pendingActions.delete(ctx.userId);
+    } else {
+      pendingActions.delete(ctx.userId);
+      const actionToCmd: Record<PendingAction, string> = {
+        subscribe: '/subscribe',
+        report: '/report',
+        check: '/check',
+        nonce: '/nonce',
+        unsubscribe: '/unsubscribe',
+      };
+      const cmdPrefix = actionToCmd[pending.action];
+      if (cmdPrefix) {
+        console.log(`Pending ${pending.action} resolved: ${text} from @${ctx.username || ctx.userId}`);
+        await handleCommand(`${cmdPrefix} ${text}`, ctx);
+      }
+      return;
+    }
+  }
+
+  if (text.startsWith('/')) {
+    console.log(`Command: ${text} from @${ctx.username || ctx.userId} (${ctx.isPrivate ? 'DM' : 'group'})`);
+    await handleCommand(text, ctx);
   }
 }
 

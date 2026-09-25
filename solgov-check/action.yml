@@ -1,0 +1,45 @@
+name: 'solgov governance check'
+description: 'Fails CI when a protocol''s live on-chain governance (multisig threshold, signers, timelock, config authority, program upgrade authorities) drifts from the values committed in the repository. Data from solgov.xyz, read on-chain.'
+author: 'solgov'
+branding:
+  icon: 'shield'
+  color: 'gray-dark'
+inputs:
+  protocol:
+    description: 'Protocol name as tracked by solgov (see https://solgov.xyz/api/v1/protocols)'
+    required: true
+  expected:
+    description: 'Path to the committed expectation file'
+    required: false
+    default: '.solgov.json'
+  fail-on-drift:
+    description: 'Exit non-zero when live state differs from the expectation'
+    required: false
+    default: 'true'
+  api-base:
+    description: 'Override the API base URL'
+    required: false
+    default: 'https://solgov.xyz'
+  max-age-hours:
+    description: 'Fail when the live state is older than this many hours (its lastChecked time). 0 disables the check.'
+    required: false
+    default: '48'
+outputs:
+  drifted:
+    description: 'true when any expected field differs from live'
+    value: ${{ steps.check.outputs.drifted }}
+  live:
+    description: 'JSON of the live governance state that was compared'
+    value: ${{ steps.check.outputs.live }}
+runs:
+  using: 'composite'
+  steps:
+    - id: check
+      shell: bash
+      env:
+        SOLGOV_PROTOCOL: ${{ inputs.protocol }}
+        SOLGOV_EXPECTED: ${{ inputs.expected }}
+        SOLGOV_FAIL: ${{ inputs.fail-on-drift }}
+        SOLGOV_API_BASE: ${{ inputs.api-base }}
+        SOLGOV_MAX_AGE_HOURS: ${{ inputs.max-age-hours }}
+      run: node "${{ github.action_path }}/check.mjs"

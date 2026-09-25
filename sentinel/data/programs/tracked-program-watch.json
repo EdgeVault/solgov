@@ -130,36 +130,6 @@
     "role": "peripheral"
   },
   {
-    "name": "Loopscale (Loopscale Core (jg82))",
-    "programId": "jg82rRko6Hu1KqZ47RR95Jrq1cfqBhaAPXStseajmfQ",
-    "role": "holds-funds"
-  },
-  {
-    "name": "Loopscale (HAiowc)",
-    "programId": "HAiowc2WWGp3VwVjpAtiduLCwWQmQqVPQgLbn5jurM8o",
-    "role": "holds-funds"
-  },
-  {
-    "name": "Loopscale (HaioYY)",
-    "programId": "HaioYYCZuXWxiHjFG9i8MnzAH6dFdgh1E1eCGjTwWzb",
-    "role": "holds-funds"
-  },
-  {
-    "name": "Loopscale (haio6i)",
-    "programId": "haio6iJNBgiAcm6DfxbqAfwNpsqhd4n2qswjPNhxuzF",
-    "role": "holds-funds"
-  },
-  {
-    "name": "Loopscale (HaiooU)",
-    "programId": "HaiooUZ4qzSEi2sn1qbwH8mKVXgnwY8oyziUStJDcb6Z",
-    "role": "holds-funds"
-  },
-  {
-    "name": "Loopscale (Haio3o)",
-    "programId": "Haio3oNYt8MtL9traoQNJ9RXK1XEVaQBBrZZKXt2VXjz",
-    "role": "holds-funds"
-  },
-  {
     "name": "Exponent (Core)",
     "programId": "ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7",
     "role": "holds-funds"
@@ -242,11 +212,6 @@
   {
     "name": "Stabble (Stable Swap)",
     "programId": "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ",
-    "role": "holds-funds"
-  },
-  {
-    "name": "Flash Trade (Flash Trade Aux (6U1gV))",
-    "programId": "6U1gVgVs5A1Uys9sKRWHucE1o6ZvfDFXrnJuNkbX49EE",
     "role": "holds-funds"
   },
   {
@@ -890,36 +855,6 @@
     "role": "routes-funds"
   },
   {
-    "name": "GMSOL Deploy (Deploy 1)",
-    "programId": "12b3t1cNiAUoYLiWFEnFa4w6qYxVAiqCWU7KZuzLPYtH",
-    "role": "peripheral"
-  },
-  {
-    "name": "GMSOL Deploy (Deploy 2)",
-    "programId": "43fZGRtmEsP7ExnJE1dbTbNjaP1ncvVmMPusSeksWGEj",
-    "role": "peripheral"
-  },
-  {
-    "name": "GMSOL Deploy (Deploy 3)",
-    "programId": "4Heqc8QEjJCspHR8y96wgZBnBfbe3Qb8N6JBZMQt9iw2",
-    "role": "peripheral"
-  },
-  {
-    "name": "GMSOL Deploy (Deploy 4)",
-    "programId": "5JsSAL3kJDUWD4ZveYXYZmgm1eVqueesTZVdAvtZg8cR",
-    "role": "peripheral"
-  },
-  {
-    "name": "GMSOL Deploy (Deploy 5)",
-    "programId": "5uawA6ehYTu69Ggvm3LSK84qFawPKxbWgfngwj15NRJ",
-    "role": "peripheral"
-  },
-  {
-    "name": "GMSOL Deploy (Deploy 6)",
-    "programId": "CiQPQrmQh6BPhb9k7dFnsEs5gKPgdrvNKFc5xie5xVGd",
-    "role": "peripheral"
-  },
-  {
     "name": "Carrot (Carrot)",
     "programId": "CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s",
     "role": "holds-funds"
@@ -938,5 +873,35 @@
     "name": "DefiTuna (DefiTuna)",
     "programId": "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD",
     "role": "holds-funds"
+  },
+  {
+    "name": "Drift (Velocity)",
+    "programId": "vELoC1audYbSYVRXn1vPaV8Axoa9oU6BYmNGZZBDZ1P",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Loopscale (Loopscale)",
+    "programId": "1oopBoJG58DgkUVKkEzKgyG9dvRmpgeEm1AVjoHkF78",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Loopscale (Beam)",
+    "programId": "beamVVkNmKeXcuZ6zLpC9eM5YgVyAn4Z9xdPrz3gCW2",
+    "role": "peripheral"
+  },
+  {
+    "name": "Voltr (Vault (vVoLTR))",
+    "programId": "vVoLTRjQmtFpiYoegx285Ze4gsLJ8ZxgFKVcuvmG1a8",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Flash Trade (Perpetuals)",
+    "programId": "FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn",
+    "role": "holds-funds"
+  },
+  {
+    "name": "Drift (JIT Proxy (Velocity))",
+    "programId": "J1TPRoXCtGuMcWiWFE6RB9eZU8U35PBMETCwNQLCNPhQ",
+    "role": "routes-funds"
   }
 ]

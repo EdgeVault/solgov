@@ -1,0 +1,28 @@
+{
+  "name": "solgov-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing solgov.xyz on-chain governance data for Solana DeFi protocols to AI agents. Read-only. Facts, not scores.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "solgov-mcp": "dist/index.js" },
+  "main": "dist/index.js",
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": ["solana", "governance", "multisig", "mcp", "model-context-protocol", "defi", "security"],
+  "repository": { "type": "git", "url": "https://github.com/EdgeVault/solgov" },
+  "homepage": "https://solgov.xyz",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "tsx": "^4.19.0",
+    "@types/node": "^20.14.0"
+  }
+}

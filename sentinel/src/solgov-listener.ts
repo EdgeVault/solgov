@@ -7,6 +7,10 @@ import * as multisig from '@sqds/multisig';
 import * as fs from 'fs';
 import * as path from 'path';
 import { resolveIdentities, formatAddress, labelAddress } from './utils/identity';
+import { escapeHtml, splitTelegramHtml } from './utils/telegram-html';
+import { alertName } from './utils/display-names';
+import { readJsonStrict, writeJsonAtomic } from './utils/json-file';
+import { isTrackedName } from './user-tracked-multisigs';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -21,11 +25,16 @@ const TG_THREADS = {
 
 const STATE_FILE = path.join(__dirname, '..', 'data', 'monitor-state.json');
 const PREV_STATE_FILE = path.join(__dirname, '..', 'data', 'listener-prev-state.json');
+// Last seen deploy slot and upgrade authority per watched program. Persisted so a restart neither
+// loses the baseline (a SetAuthority arriving first after restart would otherwise look like no change)
+// nor misses a change made while the process was down.
+const PROGRAM_STATE_FILE = path.join(__dirname, '..', 'data', 'listener-program-state.json');
 
 import { appendActivity as logActivity } from './activity-log';
 
 const WATCH_LIST: { name: string; address: string; type: 'v4' | 'v3' | 'serum' | 'authority' }[] = [
-  { name: 'Drift', address: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', type: 'v4' },
+  { name: 'Drift', address: '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM', type: 'v4' },
+  { name: 'Drift (interim recovery)', address: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', type: 'v4' },
   { name: 'Pumpfun + PumpSwap', address: '2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW', type: 'v4' },
   { name: 'Magic Eden', address: 'J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE', type: 'v4' },
   { name: 'Exponent', address: '51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH', type: 'v4' },
@@ -46,17 +55,18 @@ const WATCH_LIST: { name: string; address: string; type: 'v4' | 'v3' | 'serum' |
   { name: 'Solayer', address: '5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp', type: 'v4' },
   { name: 'Flash Trade', address: 'Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF', type: 'v4' },
   { name: 'Wick', address: '8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA', type: 'v4' },
-  { name: 'Onre Finance', address: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4' },
-  { name: 'Onre Finance (secondary)', address: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4' },
+  { name: 'Onre Finance (treasury)', address: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4' },
+  { name: 'Onre Finance', address: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4' },
   { name: 'MetaDAO', address: '8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH', type: 'v4' },
   { name: 'Helium', address: 'FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1', type: 'v4' },
-  { name: 'Voltr', address: '5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH', type: 'v4' },
+  { name: 'Voltr', address: '7szuzpoZzah95BsAu2LQm3bpor5ofiAV4HuinyfFEdse', type: 'v4' },
+  { name: 'Voltr (former 3/5)', address: '5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH', type: 'v4' },
+  { name: 'Jito (program upgrade)', address: 'AJVQRHk9rg25HzE2TompdcjfvQGuZdytPXhU1SgxUxBa', type: 'v4' },
   { name: 'Tessera V', address: '3JW5VWy76TBT5NBbdyrWU6i3fz8XecDko7viGeFSKw7e', type: 'v4' },
   { name: 'LayerZero OFT', address: '9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN', type: 'v4' },
   { name: 'SolvBTC', address: 'HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE', type: 'v4' },
   { name: 'GMSOL', address: 'CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1', type: 'v4' },
   { name: 'Ore', address: 'CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo', type: 'v4' },
-  { name: 'GMSOL Deploy', address: 'F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A', type: 'v4' },
   { name: 'Carrot', address: 'BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon', type: 'v4' },
   { name: 'DefiTuna', address: '7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv', type: 'v4' },
 
@@ -93,7 +103,8 @@ try {
   ];
 }
 
-const prevState: Record<string, { threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }> = {};
+type PrevEntry = { address?: string; threshold: number; memberCount: number; voterCount?: number; timeLock: number; configAuthority: string; memberKeys: string[] };
+const prevState: Record<string, PrevEntry> = {};
 
 let reconnectDelayMs = 5000;
 let currentWs: WebSocket | null = null;
@@ -115,10 +126,10 @@ function loadPrevState() {
 
 function savePrevState() {
   try {
-    const dir = path.dirname(PREV_STATE_FILE);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(PREV_STATE_FILE, JSON.stringify(prevState, null, 2));
-  } catch {}
+    writeJsonAtomic(PREV_STATE_FILE, prevState);
+  } catch (e: any) {
+    console.error('[PREV] Save failed:', e.message);
+  }
 }
 
 async function sendTelegram(message: string, severity: Severity = 'MONITOR') {
@@ -126,6 +137,10 @@ async function sendTelegram(message: string, severity: Severity = 'MONITOR') {
     console.log('[TG]', message);
     return;
   }
+  for (const part of splitTelegramHtml(message)) await sendTelegramPart(part, severity);
+}
+
+async function sendTelegramPart(message: string, severity: Severity) {
   const threadId = TG_THREADS[severity];
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
@@ -169,16 +184,17 @@ async function sendToSubscribers(event: {
     const matches = matchSubscribersForAlert(event);
     for (const { userId, subscription } of matches) {
       try {
-        await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        const resp = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             chat_id: subscription.chatId,
-            text: `🔔 <b>Your subscription: ${event.protocol}</b>\n\n${event.message}`,
+            text: splitTelegramHtml(`🔔 <b>Your subscription: ${escapeHtml(alertName(event.protocol))}</b>\n\n${event.message}`)[0],
             parse_mode: 'HTML',
           }),
         });
-        touchNotified(userId);
+        if (resp.ok) touchNotified(userId);
+        else console.error(`[SUBS] DM to ${userId} failed: ${resp.status}`);
       } catch (e: any) {
         console.error(`[SUBS] DM to ${userId} failed:`, e.message);
       }
@@ -187,7 +203,7 @@ async function sendToSubscribers(event: {
   } catch (e: any) {
     console.error('[SUBS] routing error:', e.message);
   }
-  if (event.severity === 'CRITICAL' || event.severity === 'HIGH') {
+  if (!isTrackedName(event.protocol)) {
     try {
       const { fanoutEvent } = require('./webhook-registry');
       await fanoutEvent({
@@ -210,6 +226,7 @@ async function sendPublic(message: string) {
     console.log('[PUBLIC]', message);
     return;
   }
+  message = splitTelegramHtml(message)[0];
   const publicChannel = process.env.TELEGRAM_PUBLIC_CHANNEL_ID;
   const body: any = {
     text: message,
@@ -250,7 +267,7 @@ interface TypedChange {
   severity: Severity;
 }
 
-function classifyV4Change(name: string, prev: { threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }, now: { threshold: number; memberCount: number; timeLock: number; configAuthority: string; memberKeys: string[] }): TypedChange[] {
+function classifyV4Change(name: string, prev: PrevEntry, now: PrevEntry): TypedChange[] {
   const events: TypedChange[] = [];
 
   const tlLabel = (s: number) => {
@@ -290,8 +307,17 @@ function classifyV4Change(name: string, prev: { threshold: number; memberCount: 
     events.push({ type: 'TimelockChanged', detail: `Timelock: ${tlLabel(prev.timeLock)} → ${tlLabel(now.timeLock)}`, severity: sev });
   }
 
+  // Members that lost the Vote permission lower the number of signers who can approve without any
+  // change to threshold or member count. Only compared when both sides recorded a voter count.
+  if (typeof prev.voterCount === 'number' && typeof now.voterCount === 'number' && prev.voterCount !== now.voterCount) {
+    const sev: Severity = now.voterCount < prev.voterCount ? 'HIGH' : 'MONITOR';
+    events.push({ type: 'VotersChanged', detail: `Members with vote permission: ${prev.voterCount} → ${now.voterCount}`, severity: sev });
+  }
+
   if (prev.configAuthority !== now.configAuthority) {
-    if (now.configAuthority !== 'autonomous') {
+    if (now.configAuthority !== 'autonomous' && prev.configAuthority !== 'autonomous') {
+      events.push({ type: 'ExternalAdminKeyChanged', detail: `External admin key on multisig: ${prev.configAuthority.slice(0, 12)}... → ${now.configAuthority.slice(0, 12)}...`, severity: 'CRITICAL' });
+    } else if (now.configAuthority !== 'autonomous') {
       events.push({ type: 'ExternalAdminKeyAdded', detail: `External admin key on multisig: none → ${now.configAuthority.slice(0, 12)}...`, severity: 'CRITICAL' });
     } else {
       events.push({ type: 'ExternalAdminKeyCleared', detail: `External admin key on multisig: ${prev.configAuthority.slice(0, 12)}... → none`, severity: 'HIGH' });
@@ -308,8 +334,40 @@ function overallSeverity(events: TypedChange[]): Severity {
   return max;
 }
 
-async function handleV4Change(name: string, address: string, conn: Connection) {
+// Account notifications carry the account data and the slot it was read at. Decoding that payload,
+// rather than re-fetching, removes the chance of a load-balanced RPC node returning an older state
+// than the one notified (which would read as a change and then its reversal). Notifications for one
+// account are handled one at a time and older slots are dropped.
+const lastSlotByAddress = new Map<string, number>();
+const queueByAddress = new Map<string, Promise<void>>();
+
+function enqueue(address: string, task: () => Promise<void>): void {
+  const prevTask = queueByAddress.get(address) || Promise.resolve();
+  const next = prevTask.then(task, task).catch((e: any) => console.error(`[QUEUE] ${address.slice(0, 8)}:`, e?.message));
+  queueByAddress.set(address, next);
+}
+
+function isStaleSlot(address: string, slot: number | undefined): boolean {
+  if (typeof slot !== 'number') return false;
+  const last = lastSlotByAddress.get(address);
+  if (last !== undefined && slot < last) return true;
+  lastSlotByAddress.set(address, slot);
+  return false;
+}
+
+async function handleV4Notification(name: string, address: string, conn: Connection, value: any, slot: number | undefined) {
   try {
+    if (isStaleSlot(address, slot)) {
+      console.log(`[SKIP] ${name}: notification for slot ${slot} is older than one already processed`);
+      return;
+    }
+    const raw = Array.isArray(value?.data) ? value.data[0] : null;
+    if (typeof raw === 'string') {
+      const info = { data: Buffer.from(raw, 'base64'), executable: !!value.executable, lamports: value.lamports, owner: new PublicKey(value.owner), rentEpoch: value.rentEpoch };
+      const [ms] = multisig.accounts.Multisig.fromAccountInfo(info as any);
+      await processV4State(name, ms, address);
+      return;
+    }
     const ms = await multisig.accounts.Multisig.fromAccountAddress(conn, new PublicKey(address));
     await processV4State(name, ms, address);
   } catch (e: any) {
@@ -318,6 +376,9 @@ async function handleV4Change(name: string, address: string, conn: Connection) {
 }
 
 async function processV4State(name: string, ms: any, address: string) {
+  // User-submitted multisigs (see user-tracked-multisigs.ts) are DM-only: they never write
+  // monitor-state, never post to the public channel or the risk-team threads.
+  const tracked = isTrackedName(name);
   try {
     const threshold = ms.threshold;
     const memberCount = ms.members.length;
@@ -326,11 +387,11 @@ async function processV4State(name: string, ms: any, address: string) {
     const caStr = ca ? ca.toBase58() : null;
     const configAuthority = (!caStr || caStr === '11111111111111111111111111111111') ? 'autonomous' : caStr;
     const memberKeys = ms.members.map((m: any) => m.key.toBase58());
+    const maskOf = (m: any) => { const mask = (m.permissions as any)?.mask ?? (m.permissions as any) ?? 0; return typeof mask === 'number' ? mask : 0; };
+    const voterCount = ms.members.filter((m: any) => maskOf(m) & 2).length;
 
-    try {
-      const stateDir = path.dirname(STATE_FILE);
-      if (!fs.existsSync(stateDir)) fs.mkdirSync(stateDir, { recursive: true });
-      const state = fs.existsSync(STATE_FILE) ? JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8')) : {};
+    if (!tracked) try {
+      const state = readJsonStrict<Record<string, any>>(STATE_FILE, {});
       const dashName = name === 'Pumpfun' ? 'Pumpfun + PumpSwap'
         : name === 'Pump.fun' ? 'Pumpfun + PumpSwap'
         : name === 'Huma' ? 'Huma Finance'
@@ -339,26 +400,33 @@ async function processV4State(name: string, ms: any, address: string) {
         ...(state[dashName] || {}),
         threshold,
         members: memberKeys,
-        memberPerms: Object.fromEntries(ms.members.map((m: any) => {
-          const mask = (m.permissions as any)?.mask ?? (m.permissions as any) ?? 0;
-          return [m.key.toBase58(), decodePerms(typeof mask === 'number' ? mask : 0)];
-        })),
+        memberPerms: Object.fromEntries(ms.members.map((m: any) => [m.key.toBase58(), decodePerms(maskOf(m))])),
         timeLock,
         configAuthority,
+        address,
         lastChecked: new Date().toISOString(),
       };
-      fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-    } catch {}
+      writeJsonAtomic(STATE_FILE, state);
+    } catch (e: any) {
+      // A corrupt state file is left for the monitor to rebuild rather than overwritten with one entry.
+      console.error(`[STATE] ${name}: state write skipped: ${e.message?.slice(0, 80)}`);
+    }
 
-    const prev = prevState[name];
+    let prev: (typeof prevState)[string] | undefined = prevState[name];
+    // Same name, different multisig: the entry was re-pointed after an on-chain handover. Baseline it
+    // fresh rather than reporting the new account's config as changes to the old one.
+    if (prev && prev.address && prev.address !== address) {
+      console.log(`[INIT] ${name}: multisig address changed ${prev.address.slice(0, 8)} -> ${address.slice(0, 8)}, re-baselining`);
+      prev = undefined;
+    }
     if (!prev) {
-      prevState[name] = { threshold, memberCount, timeLock, configAuthority, memberKeys };
+      prevState[name] = { address, threshold, memberCount, voterCount, timeLock, configAuthority, memberKeys };
       savePrevState();
       console.log(`[INIT] ${name}: ${threshold}/${memberCount}, timelock=${timeLock}s, configAuth=${configAuthority === 'autonomous' ? 'autonomous' : configAuthority.slice(0, 12) + '...'}`);
       return;
     }
 
-    const now = { threshold, memberCount, timeLock, configAuthority, memberKeys };
+    const now: PrevEntry = { threshold, memberCount, voterCount, timeLock, configAuthority, memberKeys };
     const typedChanges = classifyV4Change(name, prev, now);
     const severity = overallSeverity(typedChanges);
     const changes = typedChanges.map(c => c.detail);
@@ -368,7 +436,7 @@ async function processV4State(name: string, ms: any, address: string) {
 
       // Log one activity entry per typed change so the feed can distinguish
       // timelock / threshold / rotation / external-key events from one another.
-      for (const c of typedChanges) {
+      if (!tracked) for (const c of typedChanges) {
         logActivity(name, c.type, c.detail, address);
       }
 
@@ -390,12 +458,15 @@ async function processV4State(name: string, ms: any, address: string) {
         ? changes.map(c => c.startsWith('External admin key on multisig: none') ? `External admin key on multisig: none → ${caLabelled}` : c)
         : changes;
 
-      const pub = `<b>${name}</b>\n${changesLabelled.join('\n')}${signerBlock}\n${timestamp} UTC\nsolgov.xyz`;
+      const safeName = escapeHtml(alertName(name));
+      const pub = `<b>${safeName}</b>\n${changesLabelled.join('\n')}${signerBlock}\n${timestamp} UTC\nsolgov.xyz`;
       const sevHeader = severity === 'CRITICAL' ? '🔴 <b>CRITICAL</b>' : severity === 'HIGH' ? '🟡 <b>HIGH ALERT</b>' : '📋 <b>MONITOR</b>';
-      const alertMsg = `${sevHeader}\n\n<b>${name}</b>\n${changesLabelled.join('\n')}${signerBlock}\n📅 ${timestamp} UTC`;
+      const alertMsg = `${sevHeader}\n\n<b>${safeName}</b>\n${changesLabelled.join('\n')}${signerBlock}\n📅 ${timestamp} UTC`;
       console.log(`[${severity}] ${name}:`, changes.join(', '));
-      await sendTelegram(alertMsg, severity);
-      if (severity === 'CRITICAL' || severity === 'HIGH') await sendPublic(pub);
+      if (!tracked) {
+        await sendTelegram(alertMsg, severity);
+        if (severity === 'CRITICAL' || severity === 'HIGH') await sendPublic(pub);
+      }
 
       await sendToSubscribers({
         protocol: name,
@@ -405,7 +476,7 @@ async function processV4State(name: string, ms: any, address: string) {
       });
     }
 
-    prevState[name] = { threshold, memberCount, timeLock, configAuthority, memberKeys };
+    prevState[name] = { address, threshold, memberCount, voterCount, timeLock, configAuthority, memberKeys };
     savePrevState();
   } catch (e: any) {
     console.error(`[ERROR] ${name}:`, e.message?.slice(0, 60));
@@ -471,12 +542,12 @@ async function handleAuthorityChange(name: string, address: string) {
 
   const label = await labelAddress(address);
 
+  // Any lamport transfer into an authority account fires its subscription, so "activity" is not
+  // evidence of an authority action and anyone can trigger it. Internal threads only, never public.
   if (name.includes('USD1') || name.includes('PYUSD')) {
     const msg = `🔴 <b>CRITICAL: stablecoin authority activity</b>\n\n<b>${name}</b>\nAddress: <code>${label}</code>\n📅 ${timestamp} UTC`;
     console.log(`[CRITICAL] ${name}: stablecoin authority activity (${label})`);
     await sendTelegram(msg, 'CRITICAL');
-    const pub = `<b>${name}</b>\nAuthority signed a transaction.\nAddress: <code>${label}</code>\n${timestamp} UTC\nsolgov.xyz`;
-    await sendPublic(pub);
     return;
   }
 
@@ -484,8 +555,6 @@ async function handleAuthorityChange(name: string, address: string) {
     const msg = `🟡 <b>HIGH: Off-hours authority activity</b>\n\n<b>${name}</b>\nAddress: <code>${label}</code>\nActivity at ${hour}:00 UTC\n📅 ${timestamp} UTC`;
     console.log(`[HIGH] ${name}: off-hours authority activity (${label})`);
     await sendTelegram(msg, 'HIGH');
-    const pub = `<b>${name}</b>\nAuthority signed a transaction.\nAddress: <code>${label}</code>\n${timestamp} UTC\nsolgov.xyz`;
-    await sendPublic(pub);
   } else {
     const msg = `📋 <b>${name}</b>\nAddress: <code>${label}</code>\nAuthority activity at ${hour}:00 UTC\n📅 ${timestamp} UTC`;
     console.log(`[MONITOR] ${name}: authority activity at ${hour}:00 UTC (${label})`);
@@ -494,29 +563,93 @@ async function handleAuthorityChange(name: string, address: string) {
 }
 
 const lastUpgradeAuthority: Record<string, string> = {};
+const lastDeploySlot: Record<string, number> = {};
+
+function loadProgramState(): boolean {
+  try {
+    const raw = readJsonStrict<{ authority?: Record<string, string>; deploySlot?: Record<string, number> } | null>(PROGRAM_STATE_FILE, null);
+    if (!raw) return false;
+    Object.assign(lastUpgradeAuthority, raw.authority || {});
+    Object.assign(lastDeploySlot, raw.deploySlot || {});
+    console.log(`[PROGRAMS] Loaded baseline for ${Object.keys(lastDeploySlot).length} programs`);
+    return true;
+  } catch (e: any) {
+    console.error('[PROGRAMS] Baseline load failed:', e.message);
+    return false;
+  }
+}
+
+let programStateTimer: NodeJS.Timeout | null = null;
+function saveProgramStateSoon() {
+  if (programStateTimer) return;
+  programStateTimer = setTimeout(() => {
+    programStateTimer = null;
+    try { writeJsonAtomic(PROGRAM_STATE_FILE, { authority: lastUpgradeAuthority, deploySlot: lastDeploySlot }); }
+    catch (e: any) { console.error('[PROGRAMS] Baseline save failed:', e.message); }
+  }, 2000);
+}
+
+// Reads the upgrade authority and deploy slot from a ProgramData account. Returns null when the data
+// is not a ProgramData account (too short, wrong tag) so a failed read is never recorded as IMMUTABLE.
+function readProgramData(data: Buffer): { authority: string; deploySlot: number } | null {
+  if (data.length < 45 || data.readUInt32LE(0) !== 3) return null;
+  const authority = data[12] === 1 ? new PublicKey(data.subarray(13, 45)).toBase58() : 'IMMUTABLE';
+  return { authority, deploySlot: Number(data.readBigUInt64LE(4)) };
+}
 
 async function handleProgramUpgrade(name: string, conn: Connection, programId: string) {
-  if (suppressAsDuplicate(`prog:${programId}`)) {
-    console.log(`[DEDUPE] suppressing duplicate program upgrade alert for ${name} (${programId.slice(0, 12)})`);
-    return;
-  }
-  recentAlerts.set(`protocol-upgrade:${protocolFamily(name)}`, Date.now() + ALERT_DEDUPE_MS);
   try {
     const info = await conn.getAccountInfo(new PublicKey(programId));
     if (!info || !info.executable) return;
     const pdKey = new PublicKey(info.data.slice(4, 36));
     const pdInfo = await conn.getAccountInfo(pdKey);
     if (!pdInfo) return;
-
-    let authAddr = 'IMMUTABLE';
-    if (pdInfo.data[12] === 1) {
-      authAddr = new PublicKey(pdInfo.data.slice(13, 45)).toBase58();
+    const parsed = readProgramData(pdInfo.data);
+    if (!parsed) {
+      console.log(`[SKIP] ${name}: ProgramData for ${programId.slice(0, 12)} did not parse`);
+      return;
     }
+    const authAddr = parsed.authority;
 
     const progEntry = PROGRAM_DATA_WATCH.find(p => p.programId === programId);
     const role: ProgramRole = progEntry?.role ?? 'peripheral';
 
-    if (role === 'peripheral') {
+    const prevAuth = lastUpgradeAuthority[programId];
+    const isAuthorityChange = prevAuth !== undefined && prevAuth !== authAddr;
+    lastUpgradeAuthority[programId] = authAddr;
+
+    // A ProgramData accountSubscribe notification fires on ANY write to the account (rent top-up, a
+    // read/write that does not redeploy, etc), not only on an upgrade. Confirm a genuine redeploy by
+    // the last-deployed slot (u64 at offset 4, written only by the loader on deploy/upgrade): treat it
+    // as an upgrade only if that slot advanced from the last seen value, or was deployed in the last
+    // 30 minutes. Without this, a non-upgrade write posts a phantom "Program X upgraded" to the public
+    // activity feed and a subscriber DM (the same bug fixed in solgov-monitor.ts checkProgramUpgrades).
+    // Authority changes are proven from the authority bytes and still fire regardless.
+    const deploySlot = parsed.deploySlot;
+    const prevSlot = lastDeploySlot[programId];
+    lastDeploySlot[programId] = deploySlot;
+    saveProgramStateSoon();
+    const slotAdvanced = prevSlot !== undefined && deploySlot > prevSlot;
+    // Block time of the deploy: used for the "deployed in the last 30 minutes" fallback when there is no
+    // baseline, and as the event time so a change found after a restart is reported when it happened.
+    let deployTime: number | null = null;
+    try { deployTime = await conn.getBlockTime(deploySlot); } catch {}
+    const recentlyDeployed = prevSlot === undefined && !!deployTime && (Date.now() / 1000 - deployTime) < 30 * 60;
+    const isRealUpgrade = slotAdvanced || recentlyDeployed;
+    if (!isRealUpgrade && !isAuthorityChange) {
+      console.log(`[SKIP] ${name}: ProgramData write but deploy slot ${deploySlot} did not advance and is not recent - not an upgrade`);
+      return;
+    }
+
+    // Dedupe only once the event is confirmed, so a non-upgrade write (rent top-up, ExtendProgram)
+    // cannot use up the dedupe window and suppress the real upgrade that follows it.
+    const dedupeKey = isAuthorityChange ? `prog-auth:${programId}:${authAddr}` : `prog:${programId}:${deploySlot}`;
+    if (suppressAsDuplicate(dedupeKey)) {
+      console.log(`[DEDUPE] suppressing duplicate program alert for ${name} (${programId.slice(0, 12)})`);
+      return;
+    }
+    recentAlerts.set(`protocol-upgrade:${protocolFamily(name)}`, Date.now() + ALERT_DEDUPE_MS);
+    if (role === 'peripheral' && !isAuthorityChange) {
       const familyKey = `peripheral-batch:${protocolFamily(name)}`;
       if (recentAlerts.has(familyKey)) {
         console.log(`[DEDUPE] peripheral upgrade for ${name} suppressed; ${protocolFamily(name)} batch already alerted within 5min`);
@@ -525,16 +658,13 @@ async function handleProgramUpgrade(name: string, conn: Connection, programId: s
       recentAlerts.set(familyKey, Date.now() + 5 * 60 * 1000);
     }
 
-    const prevAuth = lastUpgradeAuthority[programId];
-    const isAuthorityChange = prevAuth !== undefined && prevAuth !== authAddr;
-    lastUpgradeAuthority[programId] = authAddr;
-
-    const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
-    const hour = new Date().getUTCHours();
+    const eventDate = !isAuthorityChange && deployTime ? new Date(deployTime * 1000) : new Date();
+    const timestamp = eventDate.toISOString().replace('T', ' ').slice(0, 19);
+    const hour = eventDate.getUTCHours();
     const kind = isAuthorityChange ? 'AuthorityChange' : 'ProgramUpgrade';
     logActivity(name, kind, isAuthorityChange
       ? `${programId.slice(0, 12)}... upgrade authority changed to ${authAddr.slice(0, 12)}...`
-      : `Program ${programId.slice(0, 12)}... upgraded at ${hour}:00 UTC`);
+      : `Program ${programId.slice(0, 12)}... upgraded at ${hour}:00 UTC`, undefined, eventDate.toISOString());
 
     const authLabel = authAddr === 'IMMUTABLE' ? 'IMMUTABLE' : await labelAddress(authAddr);
     const prevAuthLabel = prevAuth && prevAuth !== 'IMMUTABLE' ? await labelAddress(prevAuth) : prevAuth || 'unknown';
@@ -573,13 +703,13 @@ async function handleProgramUpgrade(name: string, conn: Connection, programId: s
     const authLine = isAuthorityChange
       ? `Authority: <code>${prevAuthLabel}</code> → <code>${authLabel}</code>`
       : `Authority: <code>${authLabel}</code>`;
-    const msg = `${header}\n\n<b>${name}</b>\nProgram: <code>${programId.slice(0, 12)}...</code>\n${authLine}\nRole: ${role}\n📅 ${timestamp} UTC`;
+    const msg = `${header}\n\n<b>${escapeHtml(alertName(name))}</b>\nProgram: <code>${programId.slice(0, 12)}...</code>\n${authLine}\nRole: ${role}\n📅 ${timestamp} UTC`;
     console.log(`[${severity}] ${name}: ${isAuthorityChange ? 'auth change' : 'upgrade'} role=${role} (${authLabel})`);
 
     if (severity === 'CRITICAL' || severity === 'HIGH') {
       await sendTelegram(msg, severity);
       if (isAuthorityChange) {
-        const pub = `<b>${name}</b>\nUpgrade authority changed.\nProgram: <code>${programId.slice(0, 12)}...</code>\n${authLine}\n${timestamp} UTC\nsolgov.xyz`;
+        const pub = `<b>${escapeHtml(alertName(name))}</b>\nUpgrade authority changed.\nProgram: <code>${programId.slice(0, 12)}...</code>\n${authLine}\n${timestamp} UTC\nsolgov.xyz`;
         await sendPublic(pub);
       }
     } else {
@@ -633,8 +763,9 @@ function connectWebSocket(conn: Connection, programDataWatch: { name: string; ad
     let userTracked: { name: string; address: string; type: 'v4' }[] = [];
     try {
       const { listTracked } = require('./user-tracked-multisigs');
+      // listTracked() returns namespaced names ("Tracked: ..."), which processV4State keeps DM-only.
       userTracked = (listTracked() as Array<any>).map(m => ({
-        name: m.label || `Custom ${m.address.slice(0, 8)}`,
+        name: m.label,
         address: m.address,
         type: 'v4' as const,
       }));
@@ -687,6 +818,19 @@ function connectWebSocket(conn: Connection, programDataWatch: { name: string; ad
         }
         return;
       }
+      if (msg.id && msg.error) {
+        // A rejected subscription would otherwise leave that account unwatched until the next reconnect.
+        const item = pendingByReqId.get(msg.id);
+        pendingByReqId.delete(msg.id);
+        console.error(`[WS] Subscribe failed for ${item?.name || msg.id}: ${JSON.stringify(msg.error).slice(0, 120)}`);
+        if (item) setTimeout(() => {
+          if (ws.readyState !== WebSocket.OPEN) return;
+          subId++;
+          pendingByReqId.set(subId, item);
+          ws.send(JSON.stringify({ jsonrpc: '2.0', id: subId, method: 'accountSubscribe', params: [item.address, { encoding: 'base64', commitment: 'confirmed' }] }));
+        }, 5000);
+        return;
+      }
 
       if (msg.method === 'accountNotification') {
         const serverSubId: number | undefined = msg.params?.subscription;
@@ -697,23 +841,24 @@ function connectWebSocket(conn: Connection, programDataWatch: { name: string; ad
           return;
         }
 
+        const notifSlot: number | undefined = msg.params?.result?.context?.slot;
+        const notifValue = msg.params?.result?.value;
         if (changedItem.type === 'v4') {
-          await sleep(1000);
-          await handleV4Change(changedItem.name, changedItem.address, conn);
+          enqueue(changedItem.address, () => handleV4Notification(changedItem.name, changedItem.address, conn, notifValue, notifSlot));
         } else if (changedItem.type === 'v3' || changedItem.type === 'serum') {
           logActivity(changedItem.name, 'VaultTx', 'Account data changed', changedItem.address);
         } else if (changedItem.type === 'authority') {
           await handleAuthorityChange(changedItem.name, changedItem.address);
         } else if (changedItem.type === 'program-upgrade') {
-          await sleep(1000);
           const progName = changedItem.name.replace(' (upgrade)', '');
           const prog = PROGRAM_DATA_WATCH.find(p => p.name === progName);
-          if (prog) {
-            await handleProgramUpgrade(progName, conn, prog.programId);
+          if (prog && !isStaleSlot(changedItem.address, notifSlot)) {
+            enqueue(changedItem.address, async () => { await sleep(1000); await handleProgramUpgrade(progName, conn, prog.programId); });
           }
         }
       }
     } catch (e: any) {
+      console.error('[WS] message handling error:', e?.message?.slice(0, 120));
     }
   });
 
@@ -728,12 +873,22 @@ function connectWebSocket(conn: Connection, programDataWatch: { name: string; ad
     console.error('[WS] Error:', err.message);
   });
 
+  // A half-open socket never fires 'close', so monitoring would stop silently. Terminate when pongs
+  // stop arriving; the close handler then reconnects and resubscribes.
+  let lastPong = Date.now();
+  ws.on('pong', () => { lastPong = Date.now(); });
   const heartbeat = setInterval(() => {
-    if (ws.readyState === WebSocket.OPEN) {
-      ws.ping();
-    } else {
+    if (ws.readyState !== WebSocket.OPEN) {
       clearInterval(heartbeat);
+      return;
     }
+    if (Date.now() - lastPong > 90000) {
+      console.error('[WS] No pong for 90s, terminating socket');
+      clearInterval(heartbeat);
+      ws.terminate();
+      return;
+    }
+    ws.ping();
   }, 30000);
 }
 
@@ -781,16 +936,48 @@ async function main() {
   savePrevState();
 
   console.log('\nResolving program data accounts...');
+  const hadBaseline = loadProgramState();
   const programDataWatch: { name: string; address: string }[] = [];
-  for (const prog of PROGRAM_DATA_WATCH) {
-    try {
-      const info = await conn.getAccountInfo(new PublicKey(prog.programId));
-      if (info && info.executable) {
-        const pdKey = new PublicKey(info.data.slice(4, 36)).toBase58();
-        programDataWatch.push({ name: prog.name, address: pdKey });
+  const changedWhileDown: { name: string; programId: string }[] = [];
+  const valid = PROGRAM_DATA_WATCH.filter(p => { try { new PublicKey(p.programId); return true; } catch { console.error(`[INIT] invalid program id for ${p.name}`); return false; } });
+  for (let i = 0; i < valid.length; i += 100) {
+    const batch = valid.slice(i, i + 100);
+    let progInfos: any[] = [];
+    let pdInfos: any[] = [];
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        progInfos = await conn.getMultipleAccountsInfo(batch.map(p => new PublicKey(p.programId)));
+        const pdKeys = progInfos.map(info => info && info.executable && info.data.length >= 36 ? new PublicKey(info.data.slice(4, 36)) : null);
+        const present = pdKeys.filter((k): k is PublicKey => !!k);
+        const fetched = present.length ? await conn.getMultipleAccountsInfo(present) : [];
+        let j = 0;
+        pdInfos = pdKeys.map(k => (k ? { key: k, info: fetched[j++] } : null));
+        break;
+      } catch (e: any) {
+        console.error(`[INIT] ProgramData batch ${i / 100 + 1} attempt ${attempt} failed: ${e.message?.slice(0, 80)}`);
+        await sleep(2000 * attempt);
       }
-      await sleep(300);
-    } catch {}
+    }
+    batch.forEach((prog, k) => {
+      const pd = pdInfos[k];
+      if (!pd) { console.error(`[INIT] ${prog.name}: program account not resolved, not watched this session`); return; }
+      programDataWatch.push({ name: prog.name, address: pd.key.toBase58() });
+      const parsed = pd.info ? readProgramData(pd.info.data) : null;
+      if (!parsed) return;
+      const known = lastDeploySlot[prog.programId] !== undefined;
+      if (hadBaseline && known && (lastDeploySlot[prog.programId] !== parsed.deploySlot || lastUpgradeAuthority[prog.programId] !== parsed.authority)) {
+        changedWhileDown.push({ name: prog.name, programId: prog.programId });
+        return; // keep the stored baseline so handleProgramUpgrade sees the difference
+      }
+      lastDeploySlot[prog.programId] = parsed.deploySlot;
+      lastUpgradeAuthority[prog.programId] = parsed.authority;
+    });
+    await sleep(300);
+  }
+  saveProgramStateSoon();
+  if (changedWhileDown.length) {
+    console.log(`[INIT] ${changedWhileDown.length} program(s) changed while the listener was down; checking each`);
+    for (const c of changedWhileDown) { await handleProgramUpgrade(c.name, conn, c.programId); await sleep(500); }
   }
 
   console.log(`\nStarting WebSocket listener (${WATCH_LIST.length} accounts + ${programDataWatch.length} program data)...\n`);

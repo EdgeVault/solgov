@@ -2,6 +2,8 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { escapeHtml } from './utils/telegram-html';
+import { writeJsonAtomic } from './utils/json-file';
 
 const YIELDBAY_BASE = 'https://api.yieldbay.fi';
 const POLL_INTERVAL_MS = 5 * 60 * 1000; // 5 min - matches their refresh cadence
@@ -52,9 +54,7 @@ function loadCacheFromDisk(): void {
 
 function saveCacheToDisk(): void {
   try {
-    const dir = path.dirname(CACHE_FILE);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
+    writeJsonAtomic(CACHE_FILE, cache);
   } catch (e: any) {
     console.error('[YIELDBAY] cache save failed:', e?.message);
   }
@@ -121,11 +121,42 @@ const YIELDBAY_TO_SOLGOV: Record<string, string[]> = {
   'spl_stake_pools': ['Jito', 'Marinade', 'BlazeStake'],
 };
 
+// Yieldbay's spl_stake_pools feed covers many pools. An incident is attributed to a specific
+// pool's protocol only when the event names that pool; otherwise it goes to subscribers of the
+// generic SPL Stake Pool entry rather than to every stake-pool protocol.
+const STAKE_POOL_BY_NAME: Array<{ re: RegExp; protocol: string }> = [
+  { re: /\bjito(sol)?\b/i, protocol: 'Jito' },
+  { re: /\b(marinade|msol)\b/i, protocol: 'Marinade' },
+  { re: /\b(blaze(stake)?|bsol)\b/i, protocol: 'BlazeStake' },
+];
+const GENERIC_STAKE_POOL = 'SPL Stake Pool';
+
+function solgovNamesFor(e: YieldbayEvent): string[] {
+  if (e.protocol !== 'spl_stake_pools') return YIELDBAY_TO_SOLGOV[e.protocol] || [];
+  const label = `${e.entity?.name || ''} ${e.protocol_name || ''}`;
+  const hit = STAKE_POOL_BY_NAME.find(p => p.re.test(label));
+  return [hit ? hit.protocol : GENERIC_STAKE_POOL];
+}
+
+const YIELDBAY_FALLBACK_URL = 'https://app.yieldbay.fi/health';
+
+// Only http(s) links go into an <a href>; anything else falls back to the Yieldbay health page.
+function safeHttpUrl(raw: unknown): string {
+  try {
+    const u = new URL(String(raw ?? ''));
+    if (u.protocol === 'https:' || u.protocol === 'http:') return u.toString();
+  } catch { /* not a URL */ }
+  return YIELDBAY_FALLBACK_URL;
+}
+
 // Track which Yieldbay event ids have already been pushed through Telegram so
 // rolling polls don't re-alert on the same incident every 5 minutes. Capped
 // to the most recent 1000 ids to bound memory.
 const seenAlertIds: Set<string> = new Set();
 const seenAlertOrder: string[] = [];
+// Set after the first successful poll has seeded seenAlertIds. Keying the seed on an empty set
+// instead would re-seed every poll after a quiet start and drop the first real event unsent.
+let seededFromFirstPoll = false;
 
 function markSeen(id: string): void {
   if (seenAlertIds.has(id)) return;
@@ -158,17 +189,18 @@ async function fanoutNewYieldbayEvents(events: YieldbayEvent[]): Promise<void> {
     if (e.status !== 'open' && e.status !== 'detected') continue;
     if (seenAlertIds.has(e.id)) continue;
     markSeen(e.id);
-    const solgovNames = YIELDBAY_TO_SOLGOV[e.protocol] || [];
+    const solgovNames = solgovNamesFor(e);
     if (solgovNames.length === 0) continue;
     // Yieldbay 'critical' → SolGov 'CRITICAL'; 'warning' → 'HIGH'
     const severity = e.severity === 'critical' ? 'CRITICAL' : 'HIGH';
     const delta = e.values?.worst_delta_pct || e.values?.delta_pct || '';
     const summary = e.display?.summary || `${e.entity?.name || 'event'}: ${delta}`;
-    const ybUrl = e.links?.app || 'https://app.yieldbay.fi/health';
+    const ybUrl = safeHttpUrl(e.links?.app);
+    // Every field below comes from Yieldbay's API, so it is escaped for parse_mode HTML.
     const message =
-      `<b>${e.severity === 'critical' ? '🚨' : '⚠️'} Yieldbay: ${e.protocol_name}</b>\n` +
-      `${summary}\n` +
-      `<a href="${ybUrl}">View on Yieldbay</a>`;
+      `<b>${e.severity === 'critical' ? '🚨' : '⚠️'} Yieldbay: ${escapeHtml(e.protocol_name)}</b>\n` +
+      `${escapeHtml(summary)}\n` +
+      `<a href="${escapeHtml(ybUrl)}">View on Yieldbay</a>`;
 
     for (const protocolName of solgovNames) {
       try {
@@ -179,16 +211,21 @@ async function fanoutNewYieldbayEvents(events: YieldbayEvent[]): Promise<void> {
         });
         for (const { userId, subscription } of (matches || [])) {
           try {
-            await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+            const resp = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 chat_id: subscription.chatId,
-                text: `🔔 <b>Your subscription: ${protocolName}</b>\n\n${message}`,
+                text: `🔔 <b>Your subscription: ${escapeHtml(protocolName)}</b>\n\n${message}`,
                 parse_mode: 'HTML',
                 disable_web_page_preview: true,
               }),
             });
+            if (!resp.ok) {
+              const body = await resp.text().catch(() => '');
+              console.error(`[YIELDBAY-FANOUT] DM to ${userId} rejected: ${resp.status} ${body.slice(0, 120)}`);
+              continue;
+            }
             if (touchNotified) touchNotified(userId);
           } catch (err: any) {
             console.error(`[YIELDBAY-FANOUT] DM to ${userId} failed:`, err.message?.slice(0, 80));
@@ -217,8 +254,9 @@ export async function pollYieldbayOnce(): Promise<{ ok: boolean; error?: string;
     // Fire-and-forget Telegram fanout - never blocks cache update on
     // delivery hiccups. First-ever poll seeds seenAlertIds with current
     // events so subscribers don't get flooded with backfill on cold start.
-    if (seenAlertIds.size === 0) {
+    if (!seededFromFirstPoll) {
       for (const e of events) markSeen(e.id);
+      seededFromFirstPoll = true;
       console.log(`[YIELDBAY] seeded ${events.length} existing events; future deliveries will only fire on new events`);
     } else {
       void fanoutNewYieldbayEvents(events);

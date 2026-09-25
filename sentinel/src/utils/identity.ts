@@ -1,6 +1,7 @@
 // Wallet identity resolution: Helius batch lookups plus a local known-address registry.
 
 import * as fs from 'fs';
+import { escapeHtml } from './telegram-html';
 import * as path from 'path';
 import { batchWalletIdentity } from './helius-api';
 
@@ -104,12 +105,14 @@ export async function resolveIdentities(addresses: string[]): Promise<Record<str
 /**
  * Format a pubkey for alert display. Returns either "Name (Abcd...wxyz)" or just "Abcd...wxyz".
  * Synchronous - call resolveIdentities() to pre-warm the cache before formatting.
+ * Output is HTML-escaped: labels come from a third-party API and every caller interpolates the result
+ * into a Telegram HTML message.
  */
 export function formatAddress(address: string, identity?: CacheEntry): string {
   const short = `${address.slice(0, 6)}...${address.slice(-4)}`;
   if (identity && identity.label) {
     const typeTag = identity.type ? ` [${identity.type}]` : '';
-    return `${identity.label}${typeTag} (${short})`;
+    return escapeHtml(`${identity.label}${typeTag} (${short})`);
   }
   return short;
 }

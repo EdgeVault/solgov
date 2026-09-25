@@ -1,11 +1,13 @@
 // Append-only log of governance events powering the public activity feed.
 
 import * as fs from 'fs';
+import { writeJsonAtomic } from './utils/json-file';
 import * as path from 'path';
 
 const LOG_FILE = path.join(__dirname, '..', 'data', 'activity-log.jsonl');
 const STATE_FILE = path.join(__dirname, '..', 'data', 'monitor-state.json');
-const MAX_ENTRIES = 500;
+// Enough history for the changelog and cadence endpoints; /api/state serves only the latest 500.
+const MAX_ENTRIES = 5000;
 
 export interface ActivityEvent {
   date: string;
@@ -30,16 +32,17 @@ function migrateOnce(): void {
     }
     if ('_activityLog' in state) {
       delete state._activityLog;
-      fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
+      writeJsonAtomic(STATE_FILE, state);
     }
   } catch {}
 }
 
-export function appendActivity(protocol: string, type: string, detail: string, multisig?: string): void {
+export function appendActivity(protocol: string, type: string, detail: string, multisig?: string, timestamp?: string): void {
   migrateOnce();
+  const ts = timestamp || new Date().toISOString();
   const event: ActivityEvent = {
-    date: new Date().toISOString().split('T')[0],
-    timestamp: new Date().toISOString(),
+    date: ts.split('T')[0],
+    timestamp: ts,
     protocol,
     type,
     detail,
@@ -65,8 +68,13 @@ export function readActivityLog(): ActivityEvent[] {
     if (events.length > MAX_ENTRIES * 1.2) {
       const trimmed = events.slice(-MAX_ENTRIES);
       try {
-        fs.writeFileSync(LOG_FILE, trimmed.map(e => JSON.stringify(e)).join('\n') + '\n');
-      } catch {}
+        // Write to a temp file and rename so a concurrent reader never sees a truncated log.
+        const tmp = `${LOG_FILE}.${process.pid}.tmp`;
+        fs.writeFileSync(tmp, trimmed.map(e => JSON.stringify(e)).join('\n') + '\n');
+        fs.renameSync(tmp, LOG_FILE);
+      } catch (e: any) {
+        console.error('[ACTIVITY_LOG] trim failed:', e?.message || e);
+      }
       return trimmed;
     }
     return events;

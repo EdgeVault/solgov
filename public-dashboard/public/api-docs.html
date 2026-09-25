@@ -70,7 +70,7 @@
   <div class="topbar">
     <div class="left">
       <span class="title">solgov API</span>
-      <span class="subtitle">OpenAPI 3.1 · 11 endpoints · live</span>
+      <span class="subtitle">OpenAPI 3.1 · 16 endpoints · live</span>
     </div>
     <div class="right">
       <a href="/">← back to dashboard</a>
@@ -81,6 +81,12 @@
     data-url="/api/openapi.json"
     data-configuration='{"theme":"none","darkMode":true,"hideDarkModeToggle":true,"layout":"modern","hiddenClients":["nodejs-undici","nodejs-native"],"defaultHttpClient":{"targetKey":"shell","clientKey":"curl"},"metaData":{"title":"solgov API"}}'
   ></script>
-  <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+  <!-- Pinned version with Subresource Integrity. standalone.js is the file shipped in the npm package
+       (not jsDelivr's generated .min.js), so its hash is stable. To upgrade, change the version and
+       recompute the hash: openssl dgst -sha384 -binary standalone.js | openssl base64 -A -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@1.71.0/dist/browser/standalone.js"
+    integrity="sha384-I7aSmSxf06vl5HT10vzNOAryO+PFCAVHIGwhZerHn6yM/O0642381S3kw9o7fFQd"
+    crossorigin="anonymous"></script>
 </body>
 </html>

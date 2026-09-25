@@ -7,10 +7,16 @@ import * as path from 'path';
 import { Connection, PublicKey } from '@solana/web3.js';
 import * as multisig from '@sqds/multisig';
 import { loadSignerWhitelists, detectNewFunders, persistNewFunder, findProtocolsForSigner } from './signer-funder-detection';
-import { nameMatches } from './llm-tools';
+import { nameMatches, resolveExactName } from './llm-tools';
+import { dedupeUpgradesByFamily, cadenceFromKeys } from './utils/upgrade-events';
 import { createSubscription, getSubscription as getWebhookSub, deleteSubscription as deleteWebhookSub, publicView, type Severity as WebhookSeverity } from './webhook-registry';
 import { startYieldbayPoller, getCachedIncidents, getCachedSummary } from './fetch-yieldbay-health';
 import { listTracked, addTracked, verifySquadsMultisig, MAX_TRACKED } from './user-tracked-multisigs';
+import { escapeHtml, splitTelegramHtml } from './utils/telegram-html';
+import { alertName } from './utils/display-names';
+import { readJsonStrict } from './utils/json-file';
+import { checkWebhookUrl } from './utils/net-guard';
+import * as crypto from 'crypto';
 
 const HELIUS_RPC_URL = process.env.HELIUS_RPC_URL || '';
 const conn = HELIUS_RPC_URL ? new Connection(HELIUS_RPC_URL, 'confirmed') : null;
@@ -25,8 +31,9 @@ const TG_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '';
 const TG_THREADS = { CRITICAL: 65, HIGH: 67, MONITOR: 69, PUBLIC: 21 };
 
 const ADDRESS_TO_PROTOCOL: Record<string, string> = {
-  'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ': 'Drift',
-  '2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW': 'Pumpfun',
+  '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM': 'Drift',
+  'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ': 'Drift (interim recovery)',
+  '2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW': 'Pumpfun + PumpSwap',
   'J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE': 'Magic Eden',
   '51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH': 'Exponent',
   'ktKWwDt5J8NFMi5jQNRRBDKAhimU5tnrGCcXuYJmxqE': 'Nosana',
@@ -39,29 +46,32 @@ const ADDRESS_TO_PROTOCOL: Record<string, string> = {
   '6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM': 'Kamino',
   'AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm': 'Jupiter Perps',
   'J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P': 'Jupiter Lend',
-  'uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX': 'Huma',
+  'uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX': 'Huma Finance',
   'AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf': 'Solstice',
   '93RQfY6VHRkqXBCEhMY5u92bCGp428DTzqZUEA2Hjr9h': 'Switchboard',
   'F1WZezmt2J1dSsXrQWrS2Umn9CYzPPR2eP3sunZrMX29': 'Titan',
   '5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp': 'Solayer',
   'Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF': 'Flash Trade',
   '8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA': 'Wick',
-  '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR': 'Onre Finance',
+  '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN': 'Onre Finance',
+  '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR': 'Onre Finance (treasury)',
   '8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH': 'MetaDAO',
   'FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1': 'Helium',
-  '5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH': 'Voltr',
+  '7szuzpoZzah95BsAu2LQm3bpor5ofiAV4HuinyfFEdse': 'Voltr',
+  '5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH': 'Voltr (former 3/5)',
+  'AJVQRHk9rg25HzE2TompdcjfvQGuZdytPXhU1SgxUxBa': 'Jito (program upgrade)',
   '3JW5VWy76TBT5NBbdyrWU6i3fz8XecDko7viGeFSKw7e': 'Tessera V',
   '9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN': 'LayerZero OFT',
   'HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE': 'SolvBTC',
   'CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1': 'GMSOL',
   'CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo': 'Ore',
-  'F7axBNUgWQQ33ZYLdenCk5SV3wBrKyYz9R7MscdPJi1A': 'GMSOL Deploy',
   'BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon': 'Carrot',
   '7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv': 'DefiTuna',
   'FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap': 'deBridge',
   'AApfiPZgV5MoPU691GwhdDhq5sKEMMH1Uh8S4Z9xvP6b': 'Sanctum',
   '7ZyDFzet6sKgZLN4D89JLfo7chu2n7nYdkFt5RCFk8Sf': 'Jupiter Agg',
-  'EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm': 'Raydium',
+  'tr8rgazUrZzgdkfc6Q622nVJHMMzh29trdBE2uBHb4u': 'Raydium',
+  'EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm': 'Raydium (treasury)',
   '3djJ66VVaG7si2wsh9isspeZX13meHDvwBzuPGCowY4Z': 'Tensor',
   '6x3BDkL2n7VjBWxRD95EsbQi2R2E4zxrvcz1VA6pihnK': 'Phoenix DEX',
   'CoEsykatDegLB7pcMJia79JSriDdi71nPnjgeSfw623k': 'Meteora',
@@ -70,6 +80,10 @@ const ADDRESS_TO_PROTOCOL: Record<string, string> = {
   '3yqoHFE4nBGchuVH5rJuZMFvsmnaDTuLLdvGPDUEJcbW': 'SPL Stake Pool',
   'Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9': 'Drift (BBC5g vault)',
   'GA5aPX7hFNaxoi8akdbcFVMCrkdfbYC42q7BERPguTNo': 'Drift (E44y4Gm vault)',
+  '8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai': 'Drift (vault)',
+  'G2FCNGgQQ7MYyJvkXw1du86YGR6vXXejuQG9LsjX1kEs': 'Voltr (vault)',
+  'FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f': 'Onre Finance (vault)',
+  '8EP3VommYzMRSdnSn88GnQpxjRwxg6nroTeUNJoqu9b8': 'Jito (AJVQ vault)',
   '4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ': 'Jupiter Lend (vault)',
   'GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV': 'Orca (vault)',
   '6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA': 'GMSOL (main vault)',
@@ -79,10 +93,8 @@ const ADDRESS_TO_PROTOCOL: Record<string, string> = {
   '4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ': 'Helium (vault)',
   'pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U': 'Helium (vault 2)',
   'BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM': 'SolvBTC (vault)',
-  '4SMcPtixKvjgj3U5N7C4kcnHYcySudLZfFWc523NAvXJ': 'GMSOL (vault)',
   'J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV': 'Ore (vault)',
   '9ECeczLtFZDYE3NX6G7uNw5BUGjoJAu1kFyEihA5hMaM': 'Ondo Global Markets (vault A)',
-  'haioSqc3tdn5Hat815ehNNA3sN2AHR8hXYJbDafok9P': 'Loopscale (vault)',
   '5JKhn62nyvAE7aRb5zksXiovDEPX6mAcbdxFsJEdVmbw': 'Ondo Global Markets (vault B)',
   '3hiQADryzHeV6gQa8gojLV5EHNAKXdujtTX2u8evVh1Z': 'Berrie Dex / unknown (mixed-program vault)',
   '2ZgW3Y7o9Ws3CCWWUF2TBry5wSVuM4M98s7xD4XWDUda': 'Flash Trade (vault)',
@@ -96,22 +108,19 @@ const ADDRESS_TO_PROTOCOL: Record<string, string> = {
   '2LW6PSEjp81xSEttWwXDB6Etb1eKdhYPbFEojYbyhx88': 'Drift (historical 2LW6PS exploited)',
   '61ApQqLoWVfTuzua9c22SWMj78RGv77x6Z2kzcJVGNjP': 'Drift (historical 61ApQqLoW)',
   'GMNVGNk8Kso1cjre4Wx7zx2knP4uKLNVtpfay2FEEaAi': 'Drift (historical GMNVGNk8)',
-  '5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk': 'Kamino KFarms',
+  '5HzXCm7omo3M7sX5nC4XcAxcTXEC22UHegB1hQiRvbfk': 'Kamino (Farms)',
   '9CiwEGczicmjioXiPsaJV92j4UXG1qMLYLQTxej4U7tr': 'Project 0 (program admin)',
-  '1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz': 'Helium (Omnix admin)',
-  'NG2KqHb4SE1HmqSf1GfJHorKGVNcYfgVSdwPPvn7Lsq': 'Loopscale (program admin)',
+  '1XEcKnazz6RVxiv6dwqgW45PQxUmYNyqHJpTohPaFzz': 'Helium (Omnix)',
   'HB3boZwyCUmjCo2uPWfVS2WKYmdgGv2XVpRgUaX5CkxC': 'LayerZero OFT (devtools admin)',
   '9dUjjx2Vi7GbBtuxN8N71MEFuD6Yn3QTtwLTYYjvZnLr': 'Berrie Dex (program admin)',
-  'BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE': 'Solstice (program admin)',
+  'BPdkMGWnttz4izo6RD6pXpcbVgGiqD2GR3Jds7HvaXEE': 'Solstice (Aux)',
   'DrFv23CkTxu84aAYCK7cvUP3zBvFGz2ruuCXuuyPZWbV': 'Carrot (program admin)',
-  'GPuMML3FeJXTr948CvTwSYANHm74RSW5iUibw5T6vSfa': 'Flash Trade (program admin)',
   'EfMUASGwCsPBafiPi8rwdZfUJSUt7pxAoxayR39PVpMr': 'Ondo Global Markets (admin)',
   'DK37X6PNtzS4oiJAWgJ364NkUq6us3gf4u7GVRdezqvW': 'Ondo Global Markets (1/8 keeper)',
   '5Sjxeibf9PmN2WG23nhfJVEJ8paPKfpK7pQ9oyfQkrZy': 'DefiTuna (program admin)',
   '7PMRcwPChXuwKA5Z5znNf6avJgW454gGGboV1Yt1xGgq': 'Raydium (program admin V3)',
   '3Eun8CdkJsd5WZC7NdNLUPQCx86cXKtwAK6EFLuWsn5w': 'Meteora (program admin V3)',
   'BRwx9yUrdP9aZMxJGgarLCKcNr3iCn7yj1nDAy4jfUUk': 'Parcl (governance V3)',
-  'D1LUJooB3ywFDqKwkha5Saqy2u7bnCDvu3rKQReByBZT': 'Magic Eden (program admin)',
 };
 
 const PROGRAM_ID_TO_NAME: Record<string, string> = {
@@ -171,13 +180,42 @@ function formatUKTime(date: Date): string {
   return date.toLocaleString('en-GB', { timeZone: 'Europe/London', hour12: false }).replace(',', '');
 }
 
+// solgov's mapping of the facts it publishes to the STRIDE Governance controls defined by Asymmetric
+// Research for the Solana Foundation (https://stride.asymmetric.re/framework). Vocabulary alignment
+// only: solgov states on-chain evidence and assigns no maturity level or score. Control IDs and pillar
+// names verified against the framework page on 2026-09-16.
+const STRIDE_MAP = {
+  source: 'https://stride.asymmetric.re/framework',
+  pillar: 'Governance',
+  maturityScale: 'STRIDE rates 0 Not implemented, 1 Basic, 2 Mature, 3 Advanced. solgov does not assign these.',
+  controls: {
+    G1: { name: 'Privileged roles & separation of duties', evidence: ['memberPerms (Proposer / Voter / Executor roles per signer)', 'hasRoleSeparation', 'governanceRoles (purpose-specific multisigs, where disclosed)', '_independence (signer overlap across a team\'s multisigs)', 'configAuthority (who can change the multisig itself)'] },
+    G2: { name: 'Upgrade authority', evidence: ['programAuthorities (upgrade authority per program; IMMUTABLE when revoked)', '_verifiedBuilds (otter-verify status where the signer is the upgrade authority)', '_pendingUpgrades (queued Squads proposals that upgrade a program or move its authority)', 'ProgramUpgrade activity events (confirmed by ProgramData deploy slot)'] },
+    G3: { name: 'Timelock & delay mechanisms', evidence: ['timeLock (Squads multisig time lock, seconds)', 'SetTimeLock config events (change history)', '_pendingUpgrades.timelockSeconds (delay before a queued change can execute)'] },
+    G4: { name: 'Multisig configuration', evidence: ['threshold', 'members / totalMembers', 'activeVoters', 'SignersAdded / SignersRemoved / ThresholdRaised / ThresholdLowered events'] },
+    G5: { name: 'Risk parameter controls', evidence: ['ConfigChange activity events', '_oracleConfig (which oracle accounts each market is configured to read)'] },
+  },
+  otherPillars: {
+    'Oracle / external dependencies': ['_oracles', '_oracleConfig', 'blast-radius relationships'],
+    'Supply chain / release process': ['_verifiedBuilds', '_tokenTransparency.programs.securityMetadata'],
+    'Operational': ['_tokenTransparency.programs.securityTxt', '_tokenTransparency.tokens (Token-2022 extension authorities)'],
+  },
+  note: 'STRIDE assessments are point-in-time narrative findings published by Asymmetric Research. solgov publishes the continuous on-chain evidence those controls reference. No STRIDE level is asserted for any protocol here.',
+};
+
 const CANONICAL_MAP: Record<string, { canonical: string; role: 'primary' | 'treasury' | 'governance' | 'secondary' | 'historical' }> = {
   'Raydium (treasury)':           { canonical: 'Raydium',     role: 'treasury' },
-  'Onre Finance (secondary)':     { canonical: 'Onre Finance', role: 'secondary' },
+  'Onre Finance (treasury)':      { canonical: 'Onre Finance', role: 'treasury' },
+  'Drift (interim recovery)':     { canonical: 'Drift',        role: 'secondary' },
+  'Voltr (former 3/5)':           { canonical: 'Voltr',        role: 'secondary' },
+  'Jito (program upgrade)':       { canonical: 'Jito',         role: 'governance' },
   'deBridge (governance multisig)': { canonical: 'deBridge',   role: 'governance' },
 };
 function resolveCanonical(name: string): { canonical: string; role: 'primary' | 'treasury' | 'governance' | 'secondary' | 'historical' } {
-  return CANONICAL_MAP[name] || { canonical: name, role: 'primary' };
+  if (CANONICAL_MAP[name]) return CANONICAL_MAP[name];
+  const m = /^(.*?)\s*\(historical.*\)$/i.exec(name);
+  if (m) return { canonical: m[1].trim(), role: 'historical' };
+  return { canonical: name, role: 'primary' };
 }
 
 const HISTORICAL_NAME_MAP: Record<string, string> = {
@@ -246,16 +284,17 @@ async function sendToSubscribers(event: {
     const matches = matchSubscribersForAlert(event);
     for (const { userId, subscription } of matches) {
       try {
-        await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+        const resp = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             chat_id: subscription.chatId,
-            text: `🔔 <b>Your subscription: ${event.protocol}</b>\n\n${event.message}`,
+            text: splitTelegramHtml(`🔔 <b>Your subscription: ${escapeHtml(alertName(event.protocol))}</b>\n\n${event.message}`)[0],
             parse_mode: 'HTML',
           }),
         });
-        touchNotified(userId);
+        if (resp.ok) touchNotified(userId);
+        else console.error(`[SUBS] DM to ${userId} failed: ${resp.status}`);
       } catch (e: any) {
         console.error(`[SUBS] DM to ${userId} failed:`, e.message);
       }
@@ -274,7 +313,7 @@ async function sendTelegram(message: string, severity: keyof typeof TG_THREADS =
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         chat_id: TG_CHAT_ID,
-        text: message,
+        text: splitTelegramHtml(message)[0],
         parse_mode: 'HTML',
         message_thread_id: TG_THREADS[severity],
       }),
@@ -288,7 +327,7 @@ async function sendTelegram(message: string, severity: keyof typeof TG_THREADS =
 async function sendPublic(message: string) {
   if (!TG_TOKEN) { console.log('[PUBLIC]', message); return; }
   const publicChannel = process.env.TELEGRAM_PUBLIC_CHANNEL_ID;
-  const body: any = { text: message, parse_mode: 'HTML', disable_web_page_preview: true };
+  const body: any = { text: splitTelegramHtml(message)[0], parse_mode: 'HTML', disable_web_page_preview: true };
   if (publicChannel) {
     body.chat_id = publicChannel;
   } else {
@@ -431,24 +470,26 @@ async function checkSignerFunding(event: any) {
     console.log(logLine);
     const activityDetail = f.isRepeatOffender
       ? `Repeat cross-protocol funder ${f.funder.slice(0, 12)} sent ${solStr} SOL to signer ${f.signer.slice(0, 8)} (prior hits: ${f.priorProtocolsHit.join(', ')})`
-      : `New funder for signer ${f.signer.slice(0, 8)}: ${f.funder.slice(0, 12)} sent ${solStr} SOL`;
-    logActivity(protocolLabel, 'SignerFundingAnomaly', activityDetail);
+      : `Funder not in tracked history for signer ${f.signer.slice(0, 8)}: ${f.funder.slice(0, 12)} sent ${solStr} SOL`;
+    // A funder missing from solgov's recorded history is a heuristic, not an on-chain governance fact,
+    // so it goes to the internal risk thread only and is not written to the public activity feed.
+    console.log(`[SIGNER_FUNDING] ${activityDetail}`);
 
     const repeatLine = f.isRepeatOffender
       ? `\nFunder previously seen on: ${f.priorProtocolsHit.join(', ')}`
       : '';
     const headline = f.isRepeatOffender
       ? '🔴 <b>Cross-protocol funder reappearing</b>'
-      : '🔴 <b>New funder for tracked signer</b>';
+      : '🔴 <b>Unrecognised funder for tracked signer</b>';
 
     const msg = `${headline}\n\n` +
-      `<b>${protocolLabel}</b>\n` +
-      `Signer: <code>${f.signer}</code>\n` +
-      `Funder: <code>${f.funder}</code>\n` +
-      `Amount: ${solStr} SOL (first time from this funder to this signer)\n` +
+      `<b>${escapeHtml(protocolLabel)}</b>\n` +
+      `Signer: <code>${escapeHtml(f.signer)}</code>\n` +
+      `Funder: <code>${escapeHtml(f.funder)}</code>\n` +
+      `Amount: ${solStr} SOL (not in this signer's tracked funding history)\n` +
       `📅 ${ukTime}` +
       repeatLine + `\n\n` +
-      `<code>${f.signature.slice(0, 24)}...</code>`;
+      `<code>${escapeHtml(String(f.signature).slice(0, 24))}...</code>`;
     await sendTelegram(msg, 'CRITICAL');
 
     persistNewFunder(f.signer, f.funder, f.amountSol, f.timestamp);
@@ -456,14 +497,14 @@ async function checkSignerFunding(event: any) {
 }
 
 async function processWebhookEvent(event: any) {
-  const sig = event.signature;
+  const sig = typeof event?.signature === 'string' ? event.signature : '';
   if (!sig || processedSignatures.has(sig)) return;
   addProcessedSig(sig);
 
   try { await checkSignerFunding(event); } catch (e: any) { console.error('[SIGNER_FUNDING] check failed:', e.message); }
 
-  const type = event.type || 'UNKNOWN';
-  const description = event.description || '';
+  const type = typeof event.type === 'string' ? event.type : 'UNKNOWN';
+  const description = typeof event.description === 'string' ? event.description : '';
   const feePayer = event.feePayer || '';
   const timestamp = event.timestamp ? new Date(event.timestamp * 1000).toISOString() : new Date().toISOString();
   const timeStr = timestamp.replace('T', ' ').slice(0, 19);
@@ -519,15 +560,6 @@ async function processWebhookEvent(event: any) {
         }
       }
     }
-    if (!upgradedProgramId && protocol === 'Unknown') {
-      const systemAddrs = new Set(['11111111111111111111111111111111', 'BPFLoaderUpgradeab1e11111111111111111111111', 'SysvarC1ock11111111111111111111111111111111', 'SysvarRent111111111111111111111111111111111']);
-      for (const addr of involvedAddresses) {
-        if (!systemAddrs.has(addr) && addr !== feePayer) {
-          upgradedProgramId = addr + ' (best-guess, buffer or unrelated)';
-          break;
-        }
-      }
-    }
   }
 
   const activityType =
@@ -539,7 +571,7 @@ async function processWebhookEvent(event: any) {
     type === 'UPGRADE_PROGRAM_INSTRUCTION' || type === 'FINALIZE_PROGRAM_INSTRUCTION' ? 'ProgramUpgrade' :
     'GovernanceActivity';
 
-  const shortDesc = description.length > 120 ? description.slice(0, 120) + '...' : description;
+  const shortDesc = escapeHtml(description.length > 120 ? description.slice(0, 120) + '...' : description);
 
   const niceTypeLabel = (
     type === 'EXECUTE_CONFIG_TRANSACTION' ? 'Config change' :
@@ -555,7 +587,9 @@ async function processWebhookEvent(event: any) {
   const programDetail = upgradedProgramId
     ? ` (program ${upgradedProgramId.slice(0, 12)}...)`
     : '';
-  logActivity(protocol, activityType, `${niceTypeLabel}${programDetail}`);
+  // Program upgrades are logged by the listener after the ProgramData deploy slot confirms them; a
+  // second entry from here would double-count upgrade cadence.
+  if (activityType !== 'ProgramUpgrade') logActivity(protocol, activityType, `${niceTypeLabel}${programDetail}`);
 
   let { severity, alertMonitor } = classifyEvent(type, protocol, description);
   let diffChanges: string[] = [];
@@ -589,24 +623,15 @@ async function processWebhookEvent(event: any) {
         diffChanges = diff.changes;
         console.log(`[CONFIG_DIFF] ${protocol}: ${diff.severity} | ${diff.changes.join(' | ')}`);
 
-        try {
-          const state = fs.existsSync(STATE_FILE) ? JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8')) : {};
-          state[protocol] = {
-            ...(state[protocol] || {}),
-            threshold: newState.threshold,
-            members: state[protocol]?.members || [],
-            timeLock: newState.timeLock,
-            configAuthority: newState.configAuthority,
-            lastChecked: new Date().toISOString(),
-          };
-          fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-        } catch (e: any) { console.error('[STATE] write failed:', e?.message || e); }
       }
     }
   }
 
   const ukTime = formatUKTime(new Date(timestamp));
-  const upgradeInfo = upgradedProgramId ? `\nProgram: <code>${upgradedProgramId.slice(0, 16)}...</code>` : '';
+  const upgradeInfo = upgradedProgramId ? `\nProgram: <code>${escapeHtml(upgradedProgramId.slice(0, 16))}...</code>` : '';
+  const safeProtocol = escapeHtml(alertName(protocol));
+  // Config changes on tracked V4 multisigs are alerted publicly and to subscribers by the listener.
+  const listenerCoversConfig = type === 'EXECUTE_CONFIG_TRANSACTION';
 
   console.log(`[WEBHOOK] ${severity} | ${protocol} | ${type} | ${ukTime} | ${sig}`);
 
@@ -621,7 +646,7 @@ async function processWebhookEvent(event: any) {
     type === 'CREATE_TRANSACTION' ? 'Proposal created' :
     type === 'REJECT_TRANSACTION' ? 'Proposal rejected' :
     type === 'CANCEL_TRANSACTION' ? 'Proposal cancelled' :
-    type.replace(/_/g, ' ').toLowerCase()
+    escapeHtml(type.replace(/_/g, ' ').toLowerCase())
   );
 
   const isUpgradeEventCoveredByListener =
@@ -635,46 +660,56 @@ async function processWebhookEvent(event: any) {
     undefined;
 
   if (severity === 'CRITICAL') {
-    const msg = `🔴 <b>CRITICAL: ${niceTitle}</b>\n\n<b>${protocol}</b>${upgradeInfo}${diffText || '\n' + shortDesc}\n📅 ${ukTime}\n\n<code>${sig.slice(0, 20)}...</code>`;
+    const msg = `🔴 <b>CRITICAL: ${niceTitle}</b>\n\n<b>${safeProtocol}</b>${upgradeInfo}${diffText || '\n' + shortDesc}\n📅 ${ukTime}\n\n<code>${escapeHtml(sig.slice(0, 20))}...</code>`;
     if (!isUpgradeEventCoveredByListener) {
       await sendTelegram(msg, 'CRITICAL');
-      const pubBody = diffText || `\n${shortDesc}`;
-      const pub = `<b>${protocol}</b>${pubBody}\n${ukTime} UTC\nsolgov.xyz`;
-      await sendPublic(pub);
     } else {
       console.log(`[WEBHOOK] suppressing duplicate ${type} for ${protocol}; listener handles upgrade events`);
     }
-    if (!isUpgradeEventCoveredByListener) {
+    if (!isUpgradeEventCoveredByListener && !listenerCoversConfig) {
       await sendToSubscribers({ protocol, severity: 'CRITICAL', type: subType, message: msg });
     }
   } else if (severity === 'HIGH') {
-    const msg = `🟡 <b>${niceTitle}</b>\n\n<b>${protocol}</b>${upgradeInfo}${diffText || '\n' + shortDesc}\n📅 ${ukTime}`;
+    const msg = `🟡 <b>${niceTitle}</b>\n\n<b>${safeProtocol}</b>${upgradeInfo}${diffText || '\n' + shortDesc}\n📅 ${ukTime}`;
     if (!isUpgradeEventCoveredByListener) {
       await sendTelegram(msg, 'HIGH');
-      if (type.includes('VAULT')) {
-        const pub = `<b>${protocol}</b>\n${niceTitle}${upgradeInfo}\n${ukTime} UTC\nsolgov.xyz`;
+      if (type.includes('VAULT') && protocol !== 'Unknown') {
+        const pub = `<b>${safeProtocol}</b>\n${niceTitle}${upgradeInfo}\n${ukTime} UTC\nsolgov.xyz`;
         await sendPublic(pub);
       }
     } else {
       console.log(`[WEBHOOK] suppressing duplicate ${type} for ${protocol}; listener handles upgrade events`);
     }
-    if (!isUpgradeEventCoveredByListener) {
+    if (!isUpgradeEventCoveredByListener && !listenerCoversConfig) {
       await sendToSubscribers({ protocol, severity: 'HIGH', type: subType, message: msg });
     }
   } else if (alertMonitor) {
     const msg = diffChanges.length > 0
-      ? `📋 <b>${protocol}</b> governance update${diffText}\n${ukTime}`
-      : `📋 <b>${protocol}</b> ${niceTitle.toLowerCase()}${upgradeInfo}\n${ukTime}`;
+      ? `📋 <b>${safeProtocol}</b> governance update${diffText}\n${ukTime}`
+      : `📋 <b>${safeProtocol}</b> ${niceTitle.toLowerCase()}${upgradeInfo}\n${ukTime}`;
     if (!isUpgradeEventCoveredByListener) {
       await sendTelegram(msg, 'MONITOR');
-      await sendToSubscribers({ protocol, severity: 'MONITOR', type: subType, message: msg });
+      if (!listenerCoversConfig) await sendToSubscribers({ protocol, severity: 'MONITOR', type: subType, message: msg });
     }
   }
 }
 
+// Helius delivers events to /webhook. Without a configured secret the receiver refuses everything:
+// forged events would otherwise reach the risk-team threads, the activity log and the signer registry.
+// The token is accepted from the Authorization header (Helius "authHeader") or the ?token= query.
+function webhookAuthorised(req: http.IncomingMessage, url: URL): boolean {
+  if (!WEBHOOK_SECRET) return false;
+  const header = String(req.headers['authorization'] || '').replace(/^Bearer\s+/i, '');
+  const given = header || url.searchParams.get('token') || '';
+  const a = Buffer.from(given, 'utf-8');
+  const b = Buffer.from(WEBHOOK_SECRET, 'utf-8');
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
+
 async function handleWebhook(req: http.IncomingMessage, res: http.ServerResponse) {
   const url = new URL(req.url || '/', `http://localhost:${PORT}`);
-  if (WEBHOOK_SECRET && url.searchParams.get('token') !== WEBHOOK_SECRET) {
+  if (!webhookAuthorised(req, url)) {
+    if (!WEBHOOK_SECRET) console.error('[WEBHOOK] rejected: WEBHOOK_SECRET is not set');
     res.writeHead(401);
     res.end(JSON.stringify({ error: 'Unauthorised' }));
     return;
@@ -721,6 +756,10 @@ const rateBuckets = new Map<string, RateBucket>();
 const writeRateBuckets = new Map<string, RateBucket>();
 const globalBucket: RateBucket = { count: 0, windowStart: Date.now() };
 
+// Public traffic reaches the API as client -> Vercel rewrite -> Cloudflare -> this process. Vercel sets
+// X-Forwarded-For to the real client, so its first entry identifies the user for the per-client buckets.
+// A caller that goes to api.solgov.xyz directly can put anything in that header, though, so writes are
+// also counted against the address that actually connected to Cloudflare, which cannot be forged.
 function clientIp(req: http.IncomingMessage): string {
   const fwd = req.headers['x-forwarded-for'];
   if (typeof fwd === 'string' && fwd.length > 0) {
@@ -728,6 +767,15 @@ function clientIp(req: http.IncomingMessage): string {
   }
   return req.socket.remoteAddress || 'unknown';
 }
+
+function peerIp(req: http.IncomingMessage): string {
+  const cf = req.headers['cf-connecting-ip'];
+  if (typeof cf === 'string' && cf.length > 0) return cf.trim();
+  return req.socket.remoteAddress || 'unknown';
+}
+
+// Higher than the per-client write cap because every dashboard user shares Vercel's egress addresses.
+const WRITE_PEER_RATE_LIMIT_MAX = parseInt(process.env.SOLGOV_API_WRITE_PEER_RATE_LIMIT_MAX || '30', 10);
 
 function bumpBucket(bucket: RateBucket | undefined, max: number, now: number): { allowed: boolean; remaining: number; resetSec: number; bucket: RateBucket } {
   if (!bucket || now - bucket.windowStart >= RATE_LIMIT_WINDOW_MS) {
@@ -750,8 +798,11 @@ function checkRateLimit(ip: string): { allowed: boolean; remaining: number; rese
   return { allowed: r.allowed, remaining: r.remaining, resetSec: r.resetSec };
 }
 
-function checkWriteRateLimit(ip: string): { allowed: boolean; remaining: number; resetSec: number } {
+function checkWriteRateLimit(ip: string, peer: string): { allowed: boolean; remaining: number; resetSec: number } {
   const now = Date.now();
+  const p = bumpBucket(writeRateBuckets.get(`peer:${peer}`), WRITE_PEER_RATE_LIMIT_MAX, now);
+  writeRateBuckets.set(`peer:${peer}`, p.bucket);
+  if (!p.allowed) return { allowed: false, remaining: 0, resetSec: p.resetSec };
   const r = bumpBucket(writeRateBuckets.get(ip), WRITE_RATE_LIMIT_MAX, now);
   writeRateBuckets.set(ip, r.bucket);
   return { allowed: r.allowed, remaining: r.remaining, resetSec: r.resetSec };
@@ -799,42 +850,8 @@ async function readJsonBody(req: http.IncomingMessage, maxBytes = 8192): Promise
 const VALID_SEVERITIES: WebhookSeverity[] = ['CRITICAL', 'HIGH', 'MONITOR'];
 
 function sanitiseWebhookUrl(raw: unknown): { ok: true; url: string } | { ok: false; error: string } {
-  if (typeof raw !== 'string') return { ok: false, error: 'url must be a string' };
-  if (raw.length > 2000) return { ok: false, error: 'url too long' };
-  let parsed: URL;
-  try { parsed = new URL(raw); } catch { return { ok: false, error: 'url not parseable' }; }
-  if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
-    return { ok: false, error: 'url must use http or https' };
-  }
-  if (parsed.username || parsed.password) {
-    return { ok: false, error: 'url must not contain credentials' };
-  }
-  const host = parsed.hostname.toLowerCase();
-  if (!host) return { ok: false, error: 'url missing host' };
-  // Reject obvious internal hostnames
-  const internalHostnames = ['localhost', 'localhost.localdomain', 'metadata.google.internal', 'metadata.goog'];
-  if (internalHostnames.includes(host) || host.endsWith('.local') || host.endsWith('.internal') || host.endsWith('.localhost')) {
-    return { ok: false, error: 'url targets a non-public host' };
-  }
-  // Reject IP-shaped hosts that point inside the VPS / private ranges / metadata
-  const ipv4 = host.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
-  if (ipv4) {
-    const a = parseInt(ipv4[1], 10), b = parseInt(ipv4[2], 10);
-    const isPrivate =
-      a === 0 ||                             // unspecified
-      a === 10 ||                            // 10/8
-      a === 127 ||                           // loopback
-      (a === 169 && b === 254) ||            // link-local + cloud metadata
-      (a === 172 && b >= 16 && b <= 31) ||   // 172.16/12
-      (a === 192 && b === 168) ||            // 192.168/16
-      a === 100 && (b >= 64 && b <= 127) ||  // CGNAT
-      a >= 224;                              // multicast / reserved
-    if (isPrivate) return { ok: false, error: 'url targets a non-public IP range' };
-  }
-  if (host === '::1' || host === '0:0:0:0:0:0:0:1' || host.startsWith('fc') || host.startsWith('fd') || host.startsWith('fe80:') || host === '::') {
-    return { ok: false, error: 'url targets a non-public IPv6 range' };
-  }
-  return { ok: true, url: parsed.toString() };
+  // Registration-time check; deliveries re-check after DNS resolution (utils/net-guard.ts).
+  return checkWebhookUrl(raw);
 }
 
 async function handleWebhookSubscribe(req: http.IncomingMessage, res: http.ServerResponse) {
@@ -977,7 +994,7 @@ function buildOpenApiSpec(host: string): any {
       '/api/v1/state': {
         get: {
           summary: 'Full monitor state (heavy)',
-          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log. ~100 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
+          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _adminPath, _publicCommitsAhead, _govActivity, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). ~100 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
           responses: { '200': { description: 'Complete state object' } },
         },
       },
@@ -990,9 +1007,46 @@ function buildOpenApiSpec(host: string): any {
       },
       '/api/v1/health': {
         get: {
-          summary: 'Liveness and freshness check',
-          description: 'Reports liveness and the age of the underlying state file in minutes. Useful for client-side freshness assertions.',
-          responses: { '200': { description: 'Status report' } },
+          summary: 'Freshness of every data surface',
+          description: 'Reports each data surface the API serves (live multisig state, integrity scan, activity log, weekly historical aggregates, independence scores, pending upgrades, verified builds, token transparency, oracle reads, DAO risk) with its last stamp, age in hours and whether it is stale against the cadence its producer is expected to run on. `status` is `ok` when nothing is stale and `degraded` otherwise; `staleSurfaces` lists the names. Intended for client-side freshness assertions and for catching a stopped cron.',
+          responses: { '200': { description: 'Per-surface freshness report' } },
+        },
+      },
+      '/api/v1/stride': {
+        get: {
+          summary: 'Mapping of solgov fields to STRIDE governance controls',
+          description: 'solgov\'s mapping of the on-chain facts it publishes to the STRIDE Governance controls (G1 to G5) defined by Asymmetric Research for the Solana Foundation. Vocabulary alignment only: no maturity level or score is asserted for any protocol. Includes the source URL.',
+          responses: { '200': { description: 'Control-to-evidence mapping' } },
+        },
+      },
+      '/api/v1/changelog/{protocol}': {
+        get: {
+          summary: 'Permanent per-protocol change history',
+          description: 'Every governance event recorded for one protocol (config changes, signer changes, timelock changes, program upgrades, proposals), newest first. Matches the base protocol name and any program-suffixed variant such as "Raydium (LaunchLab)". Use `?limit=` up to 500. Each event is citable by its timestamp, type and detail.',
+          parameters: [{ name: 'protocol', in: 'path', required: true, schema: { type: 'string' } }, { name: 'limit', in: 'query', schema: { type: 'integer', default: 100, maximum: 500 } }],
+          responses: { '200': { description: 'Events for the protocol' }, '400': { description: 'Missing protocol' } },
+        },
+      },
+      '/api/v1/cadence': {
+        get: {
+          summary: 'Program upgrade cadence per protocol',
+          description: 'For each protocol: upgrades observed, first and last observed, count in the last 30 days and the mean interval in days. Derived from confirmed ProgramUpgrade events (deploy-slot verified) in the activity log; the same upgrade reported by the real-time listener and the daily digest is counted once. Covers the activity log window (roughly a year), not lifetime totals.',
+          responses: { '200': { description: 'Cadence per protocol' } },
+        },
+      },
+      '/api/v1/badge/{protocol}.json': {
+        get: {
+          summary: 'shields.io endpoint badge',
+          description: 'A shields.io endpoint-badge payload stating the protocol\'s current multisig threshold and timelock, e.g. "4/7 multisig, 24h timelock". Colour is always neutral; the badge implies no grade. Embed with https://img.shields.io/endpoint?url=https://solgov.xyz/api/v1/badge/Kamino.json',
+          parameters: [{ name: 'protocol', in: 'path', required: true, schema: { type: 'string' } }],
+          responses: { '200': { description: 'shields.io endpoint schema' } },
+        },
+      },
+      '/api/v1/feed.xml': {
+        get: {
+          summary: 'RSS 2.0 feed of governance events',
+          description: 'The last 50 public activity events as RSS, for Telegram, Discord and Farcaster relays. Each item links to the protocol changelog.',
+          responses: { '200': { description: 'RSS XML' } },
         },
       },
       '/api/v1/track': {
@@ -1067,9 +1121,32 @@ function buildOpenApiSpec(host: string): any {
   };
 }
 
-const server = http.createServer(async (req, res) => {
+// Decodes a URL path segment; a malformed escape returns null instead of throwing.
+function safeDecode(seg: string): string | null {
+  try { return decodeURIComponent(seg); } catch { return null; }
+}
+
+process.on('unhandledRejection', (reason: any) => {
+  console.error(`[UNHANDLED-REJECTION] ${String(reason?.message || reason).slice(0, 200)}`);
+});
+process.on('uncaughtException', (err: any) => {
+  console.error(`[UNCAUGHT-EXCEPTION] ${String(err?.message || err).slice(0, 200)}`);
+});
+
+const server = http.createServer((req, res) => {
+  handleRequest(req, res).catch((e: any) => {
+    console.error(`[API] ${req.method} ${req.url?.slice(0, 120)} failed: ${e?.message?.slice(0, 160)}`);
+    if (!res.headersSent) {
+      res.setHeader('Content-Type', 'application/json');
+      res.writeHead(500);
+    }
+    try { res.end(JSON.stringify({ error: 'Internal error' })); } catch {}
+  });
+});
+
+async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse): Promise<void> {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
@@ -1114,7 +1191,7 @@ const server = http.createServer(async (req, res) => {
     }
   } else if (isApiWrite) {
     const ip = clientIp(req);
-    const rl = checkWriteRateLimit(ip);
+    const rl = checkWriteRateLimit(ip, peerIp(req));
     res.setHeader('X-RateLimit-Limit', String(WRITE_RATE_LIMIT_MAX));
     res.setHeader('X-RateLimit-Remaining', String(rl.remaining));
     res.setHeader('X-RateLimit-Reset', String(rl.resetSec));
@@ -1130,7 +1207,35 @@ const server = http.createServer(async (req, res) => {
   if (url.pathname === '/api/state' && req.method === 'GET') {
     try {
       const raw = JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8'));
-      raw._activityLog = readActivityLog().filter(e => e?.type !== 'Watching');
+      raw._activityLog = readActivityLog().filter(e => e?.type !== 'Watching').slice(-500);
+      try { const daoPath = path.join(__dirname, '..', 'data', 'dao-risk.json'); if (fs.existsSync(daoPath)) raw._daos = JSON.parse(fs.readFileSync(daoPath, 'utf-8')).daos || []; } catch { /* optional */ }
+      try { const oraclePath = path.join(__dirname, '..', 'data', 'oracle-sources.json'); if (fs.existsSync(oraclePath)) raw._oracles = JSON.parse(fs.readFileSync(oraclePath, 'utf-8')).results || []; } catch { /* optional */ }
+      try { const compPath = path.join(__dirname, '..', 'data', 'composability.json'); if (fs.existsSync(compPath)) raw._composability = JSON.parse(fs.readFileSync(compPath, 'utf-8')).results || []; } catch { /* optional */ }
+      // Optional scanner outputs. Each is produced by its own cron on the VPS and attached when present,
+      // so a missing or failed scan degrades to an absent key rather than a broken response.
+      const attach = (key: string, file: string) => {
+        try { const fp = path.join(__dirname, '..', 'data', file); if (fs.existsSync(fp)) raw[key] = JSON.parse(fs.readFileSync(fp, 'utf-8')); } catch { /* optional */ }
+      };
+      attach('_independence', 'independence-scores.json');
+      attach('_pendingUpgrades', 'pending-upgrades.json');
+      attach('_verifiedBuilds', 'verified-builds.json');
+      attach('_tokenTransparency', 'token-transparency.json');
+      attach('_oracleConfig', 'oracle-config.json');
+      attach('_adminPath', 'admin-path.json');
+      attach('_govActivity', 'gov-activity.json');
+      // Public commits ahead of each verified build. The git facts are attached; the keyword-ranked
+      // candidate list is stripped here because a keyword match is not evidence and must not name a
+      // team on the public API. Full detail stays in the data file for the risk team.
+      try {
+        const pf = path.join(__dirname, '..', 'data', 'public-fix-watch.json');
+        if (fs.existsSync(pf)) {
+          const j = JSON.parse(fs.readFileSync(pf, 'utf-8'));
+          raw._publicCommitsAhead = { scannedAt: j.scannedAt, results: (j.results || []).map((r: any) => ({ protocol: r.protocol, program: r.program, programName: r.programName, repo: r.repo, deployedCommit: r.deployedCommit, defaultBranch: r.defaultBranch, aheadCount: r.aheadCount, latestCommitAt: r.commits && r.commits.length ? r.commits[r.commits.length - 1].date : null, ...(r.error ? { error: r.error } : {}) })) };
+        }
+      } catch { /* optional */ }
+      // Provenance for integrators: when this response was assembled and when the state file it is
+      // built from was last written. Per-protocol `lastChecked` gives the read time of each entry.
+      try { raw._meta = { generatedAt: new Date().toISOString(), stateFileWrittenAt: new Date(fs.statSync(STATE_FILE).mtimeMs).toISOString() }; } catch { /* optional */ }
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Cache-Control', 'public, s-maxage=30, stale-while-revalidate=60');
       res.writeHead(200);
@@ -1371,7 +1476,7 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(200);
     res.end(JSON.stringify(buildOpenApiSpec(req.headers.host || `localhost:${PORT}`)));
   } else if (url.pathname.startsWith('/api/governance/') && req.method === 'GET') {
-    const rawName = decodeURIComponent(url.pathname.slice('/api/governance/'.length));
+    const rawName = safeDecode(url.pathname.slice('/api/governance/'.length)) ?? '';
     if (!rawName) {
       res.writeHead(400);
       res.end(JSON.stringify({ error: 'Protocol name required: /api/governance/<name>' }));
@@ -1501,18 +1606,139 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(500);
       res.end(JSON.stringify({ error: 'Failed to read activity', detail: e.message?.slice(0, 100) }));
     }
-  } else if (url.pathname === '/api/health' && req.method === 'GET') {
-    const stateExists = fs.existsSync(STATE_FILE);
-    const stateAge = stateExists
-      ? Math.round((Date.now() - fs.statSync(STATE_FILE).mtimeMs) / 1000 / 60)
-      : -1;
+  } else if (url.pathname === '/api/stride' && req.method === 'GET') {
     res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Cache-Control', 'public, s-maxage=3600');
+    res.writeHead(200);
+    res.end(JSON.stringify(STRIDE_MAP));
+  } else if (url.pathname.startsWith('/api/changelog/') && req.method === 'GET') {
+    // Permanent, linkable per-protocol change history drawn from the activity log, so a partner can
+    // cite one URL per change. Matches the base protocol name and any program-suffixed variant.
+    const rawName = (safeDecode(url.pathname.slice('/api/changelog/'.length)) ?? '').slice(0, 100);
+    const limit = Math.min(500, Math.max(1, parseInt(url.searchParams.get('limit') || '100', 10) || 100));
+    const family = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim().toLowerCase();
+    const want = family(rawName);
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Cache-Control', 'public, s-maxage=60');
+    if (!rawName) { res.writeHead(400); res.end(JSON.stringify({ error: 'Protocol name required: /api/changelog/<name>' })); return; }
+    const events = readActivityLog()
+      .filter(e => e && e.type !== 'Watching' && e.protocol && family(e.protocol) === want)
+      .sort((a, b) => String(b.timestamp || b.date || '').localeCompare(String(a.timestamp || a.date || '')))
+      .slice(0, limit)
+      .map(e => ({ date: e.date, timestamp: e.timestamp, protocol: e.protocol, type: e.type, detail: e.detail, ...(e.multisig ? { multisig: e.multisig } : {}) }));
+    res.writeHead(200);
+    res.end(JSON.stringify({ protocol: rawName, count: events.length, events }));
+  } else if (url.pathname === '/api/cadence' && req.method === 'GET') {
+    // Upgrade cadence per protocol from confirmed ProgramUpgrade events. The same upgrade is reported
+    // by the listener and by the monitor digest; utils/upgrade-events collapses both onto the hour it
+    // happened before counting.
+    const byFamily = dedupeUpgradesByFamily(readActivityLog() as any[]);
+    const out: Record<string, any> = {};
+    for (const [name, keys] of byFamily) out[name] = cadenceFromKeys(keys);
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Cache-Control', 'public, s-maxage=300');
+    res.writeHead(200);
+    const log = readActivityLog();
+    const coversFrom = log.reduce<string | null>((m, e) => { const t = e?.timestamp || e?.date; return t && (!m || t < m) ? t : m; }, null);
+    res.end(JSON.stringify({ generatedAt: new Date().toISOString(), coversFrom, note: 'Counts are upgrades solgov observed in its activity log since coversFrom; not lifetime totals.', protocols: out }));
+  } else if (url.pathname.startsWith('/api/badge/') && url.pathname.endsWith('.json') && req.method === 'GET') {
+    // shields.io endpoint badge. Neutral colour on purpose: the badge states the configuration and
+    // implies no grade. https://shields.io/badges/endpoint-badge
+    const rawName = (safeDecode(url.pathname.slice('/api/badge/'.length, -'.json'.length)) ?? '').slice(0, 100);
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    let message = 'not tracked';
+    let state: any;
+    try {
+      state = readJsonStrict<any>(STATE_FILE, {});
+    } catch {
+      // A failed read must not be cached at the edge as "not tracked".
+      res.setHeader('Cache-Control', 'no-store');
+      res.writeHead(503);
+      res.end(JSON.stringify({ schemaVersion: 1, label: 'solgov', message: 'unavailable', color: 'lightgrey', isError: true }));
+      return;
+    }
+    res.setHeader('Cache-Control', 'public, s-maxage=1800');
+    // Exact name, case-insensitive. No fuzzy fallback: "jupiter" matching an arbitrary Jupiter product
+    // would put the wrong configuration on someone's README.
+    const keys = Object.keys(state).filter(k => !k.startsWith('_'));
+    const key = keys.find(k => k.toLowerCase() === rawName.toLowerCase()) || resolveExactName(keys, rawName);
+    if (key) {
+      const p = state[key];
+      const tl = typeof p.timeLock === 'number' ? p.timeLock : 0;
+      const tlLabel = tl <= 0 ? 'no timelock' : tl < 3600 ? `${Math.round(tl / 60)}min timelock` : tl < 172800 ? `${Math.round(tl / 360) / 10}h timelock` : `${Math.round(tl / 8640) / 10}d timelock`;
+      const members = Array.isArray(p.members) ? new Set(p.members).size : 0;
+      message = p.threshold && members ? `${p.threshold}/${members} multisig, ${tlLabel}` : 'tracked';
+    }
+    res.writeHead(200);
+    res.end(JSON.stringify({ schemaVersion: 1, label: 'solgov', message, color: 'lightgrey', cacheSeconds: 1800 }));
+  } else if (url.pathname === '/api/feed.xml' && req.method === 'GET') {
+    // RSS 2.0 of the public activity feed, so Telegram, Discord and Farcaster relays can follow it.
+    const esc = (v: any) => String(v ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const items = readActivityLog()
+      .filter(e => e && e.type !== 'Watching')
+      .sort((a, b) => String(b.timestamp || b.date || '').localeCompare(String(a.timestamp || a.date || '')))
+      .slice(0, 50)
+      .map(e => {
+        const when = e.timestamp || e.date || new Date().toISOString();
+        const link = `https://solgov.xyz/api/v1/changelog/${encodeURIComponent((e.protocol || '').replace(/\s*\(.*\)\s*$/, ''))}`;
+        return `    <item>\n      <title>${esc(e.protocol)}: ${esc(e.type)}</title>\n      <description>${esc(e.detail)}</description>\n      <pubDate>${new Date(when).toUTCString()}</pubDate>\n      <guid isPermaLink="false">${esc(`${when}|${e.protocol}|${e.type}`)}</guid>\n      <link>${esc(link)}</link>\n    </item>`;
+      }).join('\n');
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n  <channel>\n    <title>solgov governance events</title>\n    <link>https://solgov.xyz</link>\n    <description>On-chain governance changes across tracked Solana protocols. Facts only.</description>\n    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>\n${items}\n  </channel>\n</rss>\n`;
+    res.setHeader('Content-Type', 'application/rss+xml; charset=utf-8');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Cache-Control', 'public, s-maxage=300');
+    res.writeHead(200);
+    res.end(xml);
+  } else if (url.pathname === '/api/health' && req.method === 'GET') {
+    // Freshness of every data surface the API serves, each against the cadence its producer is
+    // expected to run on. A cron that stops silently shows up here as `stale: true` instead of being
+    // discovered months later (the weekly historical scan, the integrity metricHistory and the
+    // verified-build check all failed silently in 2026 before this existed).
+    const dataDir = path.join(__dirname, '..', 'data');
+    const now = Date.now();
+    const readJson = (f: string): any => { try { return JSON.parse(fs.readFileSync(path.join(dataDir, f), 'utf-8')); } catch { return null; } };
+    const stampOf = (j: any, keys: string[]): string | null => { for (const k of keys) if (j && typeof j[k] === 'string') return j[k]; return null; };
+    const maxField = (j: any, field: string): string | null => {
+      if (!j || typeof j !== 'object') return null;
+      let best: string | null = null;
+      for (const [k, v] of Object.entries(j)) { if (k.startsWith('_') || !v || typeof v !== 'object') continue; const t = (v as any)[field]; if (typeof t === 'string' && (!best || t > best)) best = t; }
+      return best;
+    };
+    const state = readJson('monitor-state.json');
+    const surfaces: { name: string; file: string; expectedHours: number; stampAt: string | null }[] = [
+      { name: 'monitorState', file: 'monitor-state.json', expectedHours: 3, stampAt: maxField(state, 'lastChecked') },
+      { name: 'integrity', file: 'monitor-state.json#_integrity', expectedHours: 36, stampAt: state?._integrity?.scannedAt || null },
+      { name: 'activityLog', file: 'activity-log.jsonl', expectedHours: 48, stampAt: (() => { try { return new Date(fs.statSync(path.join(dataDir, 'activity-log.jsonl')).mtimeMs).toISOString(); } catch { return null; } })() },
+      { name: 'govActivity', file: 'gov-activity.json', expectedHours: 36, stampAt: stampOf(readJson('gov-activity.json'), ['generatedAt']) },
+      { name: 'independence', file: 'independence-scores.json', expectedHours: 36, stampAt: stampOf(readJson('independence-scores.json'), ['computedAt']) },
+      { name: 'pendingUpgrades', file: 'pending-upgrades.json', expectedHours: 36, stampAt: stampOf(readJson('pending-upgrades.json'), ['scannedAt']) },
+      { name: 'verifiedBuilds', file: 'verified-builds.json', expectedHours: 24 * 9, stampAt: stampOf(readJson('verified-builds.json'), ['scannedAt']) },
+      { name: 'tokenTransparency', file: 'token-transparency.json', expectedHours: 24 * 9, stampAt: stampOf(readJson('token-transparency.json'), ['scannedAt']) },
+      { name: 'oracleSources', file: 'oracle-sources.json', expectedHours: 36, stampAt: stampOf(readJson('oracle-sources.json'), ['scannedAt']) },
+      { name: 'oracleConfig', file: 'oracle-config.json', expectedHours: 24 * 9, stampAt: stampOf(readJson('oracle-config.json'), ['scannedAt']) },
+      { name: 'daoRisk', file: 'dao-risk.json', expectedHours: 36, stampAt: stampOf(readJson('dao-risk.json'), ['scannedAt', 'computedAt', 'updatedAt']) },
+      { name: 'composability', file: 'composability.json', expectedHours: 36, stampAt: stampOf(readJson('composability.json'), ['scannedAt']) },
+      { name: 'adminPath', file: 'admin-path.json', expectedHours: 24 * 9, stampAt: stampOf(readJson('admin-path.json'), ['scannedAt']) },
+      { name: 'publicFixWatch', file: 'public-fix-watch.json', expectedHours: 48, stampAt: stampOf(readJson('public-fix-watch.json'), ['scannedAt']) },
+    ];
+    const report = surfaces.map(sf => {
+      const ageHours = sf.stampAt ? Math.round((now - new Date(sf.stampAt).getTime()) / 3600000) : null;
+      return { ...sf, ageHours, present: sf.stampAt !== null, stale: sf.stampAt === null || (ageHours !== null && ageHours > sf.expectedHours) };
+    });
+    const staleSurfaces = report.filter(r => r.stale).map(r => r.name);
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 'no-store');
     res.writeHead(200);
     res.end(JSON.stringify({
-      status: 'ok',
-      stateFile: stateExists,
-      stateAgeMinutes: stateAge,
+      status: staleSurfaces.length === 0 ? 'ok' : 'degraded',
+      generatedAt: new Date().toISOString(),
+      staleSurfaces,
+      surfaces: report,
     }));
   } else if (url.pathname === '/webhook' && req.method === 'POST') {
     await handleWebhook(req, res);
@@ -1528,7 +1754,7 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(404);
     res.end(JSON.stringify({ error: 'Not found' }));
   }
-});
+}
 
 server.listen(PORT, () => {
   console.log(`SolGov API running on port ${PORT}`);

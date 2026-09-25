@@ -2,6 +2,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { writeJsonAtomic, readJsonStrict } from './utils/json-file';
 
 type FunderStats = {
   address: string;
@@ -13,7 +14,8 @@ type FunderStats = {
 type SignerHistory = {
   signer: string;
   scannedAt: string;
-  funders: FunderStats[];
+  funders: FunderStats[];            // whitelisted: at least one transfer >= WHITELIST_MIN_LAMPORTS
+  belowMinFunders?: FunderStats[];   // recorded only: every transfer so far was below the minimum
 };
 type HistoryFile = {
   scannedAt: string;
@@ -23,10 +25,16 @@ type HistoryFile = {
 const HISTORY_PATH = path.join(__dirname, '..', 'data', 'signer-funder-history.json');
 const REGISTRY_PATH = path.join(__dirname, '..', 'data', 'suspicious-funder-registry.json');
 
+// A transfer below this size is recorded but does not whitelist its funder, so a dust transfer
+// cannot pre-clear an address ahead of a larger funding transfer from the same address.
+export const WHITELIST_MIN_LAMPORTS = 10_000_000; // 0.01 SOL
+const WHITELIST_MIN_SOL = WHITELIST_MIN_LAMPORTS / 1e9;
+
 // In-memory whitelist: signer address → Set of known funder addresses
 const signerWhitelists = new Map<string, Set<string>>();
-// Track what has already been seen live to avoid re-alerting on the same new funder
-const seenLive = new Map<string, Set<string>>();
+// Funders already reported for a signer with below-minimum transfers only. Suppresses repeat
+// reports of further small transfers; a transfer at or above the minimum is still reported.
+const belowMinSeen = new Map<string, Set<string>>();
 
 // Cross-protocol registry: funder address → history of signer hits across protocols.
 // When a new-funder detection fires, the funder is recorded here. On subsequent
@@ -49,20 +57,26 @@ type Registry = {
   funders: Record<string, RegistryEntry>;
 };
 
-function loadRegistry(): Registry {
-  if (!fs.existsSync(REGISTRY_PATH)) {
-    return { updatedAt: new Date().toISOString(), funders: {} };
-  }
+// Returns null when the file exists but does not parse; the caller then skips the write so a
+// corrupt registry is never replaced with an empty one.
+function loadRegistry(): Registry | null {
   try {
-    return JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8'));
-  } catch {
-    return { updatedAt: new Date().toISOString(), funders: {} };
+    const reg = readJsonStrict<Registry>(REGISTRY_PATH, { updatedAt: new Date().toISOString(), funders: {} });
+    if (!reg.funders) reg.funders = {};
+    return reg;
+  } catch (e: any) {
+    console.error(`[SIGNER_FUNDING] ${e?.message}; registry not updated this run`);
+    return null;
   }
 }
 
 function saveRegistry(reg: Registry) {
   reg.updatedAt = new Date().toISOString();
-  fs.writeFileSync(REGISTRY_PATH, JSON.stringify(reg, null, 2));
+  try {
+    writeJsonAtomic(REGISTRY_PATH, reg);
+  } catch (e: any) {
+    console.error('[SIGNER_FUNDING] registry save failed:', e?.message);
+  }
 }
 
 export function loadSignerWhitelists(): number {
@@ -70,11 +84,19 @@ export function loadSignerWhitelists(): number {
     console.warn('[SIGNER_FUNDING] No history file - detection disabled');
     return 0;
   }
-  const data: HistoryFile = JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8'));
+  let data: HistoryFile;
+  try {
+    data = readJsonStrict<HistoryFile>(HISTORY_PATH, { scannedAt: '', signers: {} });
+  } catch (e: any) {
+    console.error(`[SIGNER_FUNDING] ${e?.message}; detection disabled`);
+    return 0;
+  }
   signerWhitelists.clear();
-  for (const [signer, h] of Object.entries(data.signers)) {
-    const set = new Set(h.funders.map(f => f.address));
+  belowMinSeen.clear();
+  for (const [signer, h] of Object.entries(data.signers || {})) {
+    const set = new Set((h.funders || []).map(f => f.address));
     signerWhitelists.set(signer, set);
+    if (h.belowMinFunders?.length) belowMinSeen.set(signer, new Set(h.belowMinFunders.map(f => f.address)));
   }
   console.log(`[SIGNER_FUNDING] Loaded whitelists for ${signerWhitelists.size} signers`);
   return signerWhitelists.size;
@@ -88,6 +110,7 @@ type NewFunderFinding = {
   timestamp: number;
   isRepeatOffender: boolean;
   priorProtocolsHit: string[];
+  belowWhitelistMin: boolean;   // recorded, but the funder stays off the whitelist
 };
 
 /**
@@ -113,15 +136,18 @@ export function detectNewFunders(event: any): NewFunderFinding[] {
     if (!whitelist) continue; // not a tracked signer
     if (whitelist.has(from)) continue; // known funder, not anomalous
 
-    // Dedup: skip re-alerting if this (signer, funder) pair has already been seen this session
-    const seen = seenLive.get(to);
-    if (seen && seen.has(from)) continue;
-    if (!seen) seenLive.set(to, new Set([from]));
-    else seen.add(from);
+    // Below-minimum transfers: report the first per (signer, funder) pair, never whitelist.
+    const belowMin = amount < WHITELIST_MIN_LAMPORTS;
+    if (belowMin) {
+      const seen = belowMinSeen.get(to);
+      if (seen && seen.has(from)) continue;
+      if (!seen) belowMinSeen.set(to, new Set([from]));
+      else seen.add(from);
+    }
 
     // Cross-protocol registry lookup: has this funder hit other tracked signers before?
     const reg = loadRegistry();
-    const priorEntry = reg.funders[from];
+    const priorEntry = reg?.funders[from];
     const priorProtocols = priorEntry
       ? [...new Set(priorEntry.hits.flatMap(h => h.protocols))]
       : [];
@@ -135,6 +161,7 @@ export function detectNewFunders(event: any): NewFunderFinding[] {
       timestamp: ts,
       isRepeatOffender: isRepeat,
       priorProtocolsHit: priorProtocols,
+      belowWhitelistMin: belowMin,
     });
 
     // Record this hit in the registry for future cross-protocol correlation
@@ -146,16 +173,19 @@ export function detectNewFunders(event: any): NewFunderFinding[] {
       timestamp: ts,
       signature: sig,
     };
-    if (priorEntry) {
-      priorEntry.lastSeen = ts;
-      priorEntry.hits.push(hit);
-    } else {
-      reg.funders[from] = { firstSeen: ts, lastSeen: ts, hits: [hit] };
+    if (reg) {
+      if (priorEntry) {
+        priorEntry.lastSeen = ts;
+        priorEntry.hits.push(hit);
+      } else {
+        reg.funders[from] = { firstSeen: ts, lastSeen: ts, hits: [hit] };
+      }
+      saveRegistry(reg);
     }
-    saveRegistry(reg);
 
-    // Persist: add to in-memory whitelist so future transfers from same funder don't re-alert
-    whitelist.add(from);
+    // Add to the in-memory whitelist so future transfers from the same funder don't re-alert,
+    // but only once a transfer at or above the minimum has been seen.
+    if (!belowMin) whitelist.add(from);
   }
 
   return findings;
@@ -165,35 +195,48 @@ export function detectNewFunders(event: any): NewFunderFinding[] {
  * Expose the registry for read-only access (e.g. dashboard surfaces).
  */
 export function getSuspiciousFunders(): Registry {
-  return loadRegistry();
+  return loadRegistry() ?? { updatedAt: new Date().toISOString(), funders: {} };
 }
 
 /**
- * Append a new funder to the on-disk whitelist so subsequent runs (after restart)
+ * Record a new funder in the on-disk history so subsequent runs (after restart)
  * remember this one has already been flagged. Run async after sending alerts.
+ * A transfer at or above the minimum whitelists the funder; a smaller one is
+ * recorded under belowMinFunders without whitelisting it.
  */
 export function persistNewFunder(signer: string, funder: string, amountSol: number, ts: number): void {
   try {
-    if (!fs.existsSync(HISTORY_PATH)) return;
-    const data: HistoryFile = JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8'));
-    const history = data.signers[signer];
+    // readJsonStrict throws on a corrupt file; the catch below logs it and skips the write.
+    const data = readJsonStrict<HistoryFile | null>(HISTORY_PATH, null);
+    if (!data) return;
+    const history = data.signers?.[signer];
     if (!history) return;
+    if (!Array.isArray(history.funders)) history.funders = [];
 
-    const existing = history.funders.find(f => f.address === funder);
+    const whitelisted = amountSol >= WHITELIST_MIN_SOL;
+    let existing = history.funders.find(f => f.address === funder);
+    if (!existing) {
+      const below = history.belowMinFunders || [];
+      const prior = below.find(f => f.address === funder);
+      if (prior && whitelisted) {
+        // Promote: the funder has now sent at least the minimum.
+        history.belowMinFunders = below.filter(f => f.address !== funder);
+        history.funders.push(prior);
+        existing = prior;
+      } else if (prior) {
+        existing = prior;
+      }
+    }
     if (existing) {
       existing.txCount++;
       existing.totalSol += amountSol;
       existing.lastSeen = Math.max(existing.lastSeen, ts);
     } else {
-      history.funders.push({
-        address: funder,
-        txCount: 1,
-        totalSol: amountSol,
-        firstSeen: ts,
-        lastSeen: ts,
-      });
+      const entry = { address: funder, txCount: 1, totalSol: amountSol, firstSeen: ts, lastSeen: ts };
+      if (whitelisted) history.funders.push(entry);
+      else (history.belowMinFunders ||= []).push(entry);
     }
-    fs.writeFileSync(HISTORY_PATH, JSON.stringify(data, null, 2));
+    writeJsonAtomic(HISTORY_PATH, data);
   } catch (e: any) {
     console.error('[SIGNER_FUNDING] persist failed:', e.message);
   }

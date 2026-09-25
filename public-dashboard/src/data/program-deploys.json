@@ -1,0 +1,1660 @@
+{
+ "scannedAt": "2026-09-25T18:50:57.534Z",
+ "complete": true,
+ "programs": {
+  "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc": {
+   "protocol": "Orca",
+   "name": "Whirlpools",
+   "deploySlot": 440170207,
+   "deployedAt": "2026-08-19T01:28:54.000Z",
+   "authority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+   "sizeKB": 10240
+  },
+  "9W959DqEETiGZocYWCQPaJ6sBmUzgfxXfqGeTEdp3aQP": {
+   "protocol": "Orca",
+   "name": "Token Swap V2",
+   "deploySlot": 161177892,
+   "deployedAt": "2022-11-15T13:20:58.000Z",
+   "authority": "23zF9Azpe9CN4iPeTsQndD1mQpcb5Gz1qFREL5gPTZvG",
+   "sizeKB": 675
+  },
+  "waveQX2yP3H1pVU8djGvEHmYg8uamQ84AuyGtpsrXTF": {
+   "protocol": "Orca",
+   "name": "Wave (waveQX)",
+   "deploySlot": 365746180,
+   "deployedAt": "2025-09-09T19:53:02.000Z",
+   "authority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+   "sizeKB": 489
+  },
+  "StaKE6XNKVVhG8Qu9hDJBqCW3eRe7MDGLz17nJZetLT": {
+   "protocol": "Orca",
+   "name": "Stake (StaKE6)",
+   "deploySlot": 370039372,
+   "deployedAt": "2025-09-29T12:15:20.000Z",
+   "authority": "GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV",
+   "sizeKB": 100
+  },
+  "vELoC1audYbSYVRXn1vPaV8Axoa9oU6BYmNGZZBDZ1P": {
+   "protocol": "Drift",
+   "name": "Velocity",
+   "deploySlot": 444950246,
+   "deployedAt": "2026-09-07T02:20:30.000Z",
+   "authority": "8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai",
+   "sizeKB": 5125
+  },
+  "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH": {
+   "protocol": "Drift",
+   "name": "Protocol V2 (legacy Drift)",
+   "deploySlot": 429731225,
+   "deployedAt": "2026-06-29T19:57:01.000Z",
+   "authority": "8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai",
+   "sizeKB": 6517
+  },
+  "J1TPRoXCtGuMcWiWFE6RB9eZU8U35PBMETCwNQLCNPhQ": {
+   "protocol": "Drift",
+   "name": "JIT Proxy",
+   "deploySlot": 444950206,
+   "deployedAt": "2026-09-07T02:20:17.000Z",
+   "authority": "8jj7zJgdr5bDndc7evM74FMGwzLPmd4u4QxNzFi1BMai",
+   "sizeKB": 633
+  },
+  "vAuLTsyrvSfZRuRB3XgvkPwNGgYSs9YRYymVebLKoxR": {
+   "protocol": "Drift",
+   "name": "Vaults",
+   "deploySlot": 410041556,
+   "deployedAt": "2026-03-31T07:12:00.000Z",
+   "authority": "Ad21qwCb3C98M6UNqjGsZgR48549Spp7W1UWETV29cZ9",
+   "sizeKB": 2212
+  },
+  "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA": {
+   "protocol": "Project 0",
+   "name": "Lending V2",
+   "deploySlot": 444313123,
+   "deployedAt": "2026-09-04T18:26:28.000Z",
+   "authority": "J3oBkTkDXU3TcAggJEa3YeBZE5om5yNAdTtLVNXFD47",
+   "sizeKB": 10240
+  },
+  "LipsxuAkFkwa4RKNzn51wAsW7Dedzt1RNHMkTkDEZUW": {
+   "protocol": "Project 0",
+   "name": "LIP",
+   "deploySlot": 177290523,
+   "deployedAt": "2023-02-11T23:31:59.000Z",
+   "authority": "3HGdGLrnK9DsnHi1mCrUMLGfQHcu6xUrXhMY14GYjqvM",
+   "sizeKB": 1152
+  },
+  "CAW7771FWrfBFtxAUrSw38fBVtKHns9WW9KCw65vnVsH": {
+   "protocol": "Project 0",
+   "name": "CAW (mrgn legacy admin)",
+   "deploySlot": 320038659,
+   "deployedAt": "2025-02-11T22:55:00.000Z",
+   "authority": "Gy7pgCryzquDBHkpGkJGBRAyLpdmdqkifjLdKMoS1GEE",
+   "sizeKB": 544
+  },
+  "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD": {
+   "protocol": "Kamino",
+   "name": "kLend",
+   "deploySlot": 440486775,
+   "deployedAt": "2026-08-20T14:04:04.000Z",
+   "authority": "GzFgdRJXmawPhGeBsyRCDLx4jAKPsvbUqoqitzppkzkW",
+   "sizeKB": 10240
+  },
+  "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc": {
+   "protocol": "Kamino",
+   "name": "Liquidity",
+   "deploySlot": 445049632,
+   "deployedAt": "2026-09-07T11:05:29.000Z",
+   "authority": "3pAxu6C9ykZvyyzdknZvmz6CbWGZPTjRevjk4PRF5ib7",
+   "sizeKB": 10240
+  },
+  "FarmsPZpWu9i7Kky8tPN37rs2TpmMrAZrC7S7vJa91Hr": {
+   "protocol": "Kamino",
+   "name": "KFarms",
+   "deploySlot": 444035168,
+   "deployedAt": "2026-09-03T18:04:39.000Z",
+   "authority": "CivjSDKgTpmkRNL4zYcmv9D9QqPJg6yTxBVxMGcXvMuY",
+   "sizeKB": 10240
+  },
+  "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu": {
+   "protocol": "Jupiter Perps",
+   "name": "Perpetuals",
+   "deploySlot": 413092478,
+   "deployedAt": "2026-04-14T04:40:41.000Z",
+   "authority": "5myNNmEmPm3UAnJ2ggLEpnTFb9t9Gk8369wKw6n3uAKx",
+   "sizeKB": 10240
+  },
+  "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC": {
+   "protocol": "Jupiter Lend",
+   "name": "Liquidity",
+   "deploySlot": 449989280,
+   "deployedAt": "2026-09-24T09:33:34.000Z",
+   "authority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+   "sizeKB": 773
+  },
+  "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9": {
+   "protocol": "Jupiter Lend",
+   "name": "Lending",
+   "deploySlot": 430476341,
+   "deployedAt": "2026-07-03T07:28:46.000Z",
+   "authority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+   "sizeKB": 635
+  },
+  "jup7TthsMgcR9Y3L277b8Eo9uboVSmu1utkuXHNUKar": {
+   "protocol": "Jupiter Lend",
+   "name": "Reward Rate",
+   "deploySlot": 362668463,
+   "deployedAt": "2025-08-26T16:18:56.000Z",
+   "authority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+   "sizeKB": 315
+  },
+  "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi": {
+   "protocol": "Jupiter Lend",
+   "name": "Vaults",
+   "deploySlot": 449989995,
+   "deployedAt": "2026-09-24T09:36:45.000Z",
+   "authority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+   "sizeKB": 2137
+  },
+  "jupnw4B6Eqs7ft6rxpzYLJZYSnrpRgPcr589n5Kv4oc": {
+   "protocol": "Jupiter Lend",
+   "name": "Oracle",
+   "deploySlot": 449989861,
+   "deployedAt": "2026-09-24T09:36:09.000Z",
+   "authority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+   "sizeKB": 752
+  },
+  "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS": {
+   "protocol": "Jupiter Lend",
+   "name": "Flashloan",
+   "deploySlot": 430476301,
+   "deployedAt": "2026-07-03T07:28:30.000Z",
+   "authority": "4MsgBB5VPoTrUSp5XnfbViV386C1UnsTdifLBw33ZMSJ",
+   "sizeKB": 348
+  },
+  "M2mx93ekt1fmXSVkTrUL9xVFHkmME8HTUi5Cyc5aF7K": {
+   "protocol": "Magic Eden",
+   "name": "Marketplace V2",
+   "deploySlot": 358179668,
+   "deployedAt": "2025-08-06T04:47:35.000Z",
+   "authority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+   "sizeKB": 1406
+  },
+  "mmm3XBJg5gk8XJxEKBvdgptZz6SgK4tXvn36sodowMc": {
+   "protocol": "Magic Eden",
+   "name": "AMM",
+   "deploySlot": 303987844,
+   "deployedAt": "2024-11-27T19:18:51.000Z",
+   "authority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+   "sizeKB": 1468
+  },
+  "LUCK57mxzZiRGF2PdHAY79P6tZ8Apsi381tKvBrTdqk": {
+   "protocol": "Magic Eden",
+   "name": "Luck (LUCK57)",
+   "deploySlot": 389049129,
+   "deployedAt": "2025-12-25T10:31:58.000Z",
+   "authority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+   "sizeKB": 3418
+  },
+  "WDPKndVQYXANGvAxRgZujP4nT5rDMNqbs6aVeZe9kxX": {
+   "protocol": "Magic Eden",
+   "name": "WDPK",
+   "deploySlot": 412332202,
+   "deployedAt": "2026-04-10T17:14:01.000Z",
+   "authority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+   "sizeKB": 1213
+  },
+  "CMZYPASGWeTz7RNGHaRJfCq2XQ5pYK6nDvVQxzkH51zb": {
+   "protocol": "Magic Eden",
+   "name": "CMZY",
+   "deploySlot": 305467062,
+   "deployedAt": "2024-12-05T01:50:16.000Z",
+   "authority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+   "sizeKB": 1299
+  },
+  "M3mxk5W2tt27WGT7THox7PmgRDp4m6NEhL5xvxrBfS1": {
+   "protocol": "Magic Eden",
+   "name": "M3MX",
+   "deploySlot": 362682932,
+   "deployedAt": "2025-08-26T17:53:52.000Z",
+   "authority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+   "sizeKB": 2441
+  },
+  "PCKjSaQaZb3AcmjTcb2fcLanh9Mky9ZvuaKqTBxsqWE": {
+   "protocol": "Magic Eden",
+   "name": "PCKj",
+   "deploySlot": 393693930,
+   "deployedAt": "2026-01-15T15:54:23.000Z",
+   "authority": "9GWPeu3cBfkGSEit6HMaAFKswoirxqgMqykMh7RVH2Bb",
+   "sizeKB": 1311
+  },
+  "1oopBoJG58DgkUVKkEzKgyG9dvRmpgeEm1AVjoHkF78": {
+   "protocol": "Loopscale",
+   "name": "Loopscale",
+   "deploySlot": 440130674,
+   "deployedAt": "2026-08-18T20:54:52.000Z",
+   "authority": "DwBXwJDZ4Av4miT62sEssWJUinkzwkmPPB4Fg3fKEfft",
+   "sizeKB": 3371
+  },
+  "beamVVkNmKeXcuZ6zLpC9eM5YgVyAn4Z9xdPrz3gCW2": {
+   "protocol": "Loopscale",
+   "name": "Beam",
+   "deploySlot": 436597531,
+   "deployedAt": "2026-08-01T16:43:42.000Z",
+   "authority": "DwBXwJDZ4Av4miT62sEssWJUinkzwkmPPB4Fg3fKEfft",
+   "sizeKB": 664
+  },
+  "ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7": {
+   "protocol": "Exponent",
+   "name": "Core",
+   "deploySlot": 419311653,
+   "deployedAt": "2026-05-12T18:50:13.000Z",
+   "authority": "2tX7aHkV1r7am6bnTPqQJNBbEkbqDpNWHBYPahSQb9TP",
+   "sizeKB": 1977
+  },
+  "HumaXepHnjaRCpjYTokxY4UtaJcmx41prQ8cxGmFC5fn": {
+   "protocol": "Huma Finance",
+   "name": "Permissionless",
+   "deploySlot": 426862901,
+   "deployedAt": "2026-06-16T13:38:14.000Z",
+   "authority": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+   "sizeKB": 1717
+  },
+  "EVQ4s1b6N1vmWFDv8PRNc77kufBP8HcrSNWXQAhRsJq9": {
+   "protocol": "Huma Finance",
+   "name": "Institutional",
+   "deploySlot": 426862063,
+   "deployedAt": "2026-06-16T13:32:38.000Z",
+   "authority": "D6GEJYVtQGVrLVj1QSZbxWW73NnKJyHEzMBDAtCzraaF",
+   "sizeKB": 1759
+  },
+  "USXyiSTsPEWz55pSK7sZoUL79ntoVGQbaTDT57tH6bx": {
+   "protocol": "Solstice",
+   "name": "USX",
+   "deploySlot": 441672563,
+   "deployedAt": "2026-08-25T16:45:41.000Z",
+   "authority": "BzMuMbtah9bqN4HERkPo2PsVoaQKD2xfvYq1xfDCFwEb",
+   "sizeKB": 941
+  },
+  "eUSXyKoZ6aGejYVbnp3wtWQ1E8zuokLAJPecPxxtgG3": {
+   "protocol": "Solstice",
+   "name": "YieldVault",
+   "deploySlot": 416855566,
+   "deployedAt": "2026-05-01T10:14:50.000Z",
+   "authority": "CYr14TrXD5MAertRqcR58KirPz7XoHGZjfBsfn5M2voh",
+   "sizeKB": 599
+  },
+  "7FaMyGiTVdjm8dd3PxpjjCX15ibbmuE1zWVFX2PHxYUK": {
+   "protocol": "Solstice",
+   "name": "Solstice Aux (7FaMy)",
+   "deploySlot": 384188928,
+   "deployedAt": "2025-12-03T11:20:19.000Z",
+   "authority": "HNc9Ws3TEA9Wm1tHrhWubGAX7ryjJUG9jue6dR8ZvjF9",
+   "sizeKB": 464
+  },
+  "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": {
+   "protocol": "Pumpfun + PumpSwap",
+   "name": "Bonding Curve",
+   "deploySlot": 449734335,
+   "deployedAt": "2026-09-23T14:45:19.000Z",
+   "authority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+   "sizeKB": 10240
+  },
+  "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA": {
+   "protocol": "Pumpfun + PumpSwap",
+   "name": "PumpSwap",
+   "deploySlot": 446462733,
+   "deployedAt": "2026-09-12T15:23:56.000Z",
+   "authority": "7gZufwwAo17y5kg8FMyJy2phgpvv9RSdzWtdXiWHjFr8",
+   "sizeKB": 10240
+  },
+  "FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q": {
+   "protocol": "Lulo",
+   "name": "FlexLend",
+   "deploySlot": 450363903,
+   "deployedAt": "2026-09-25T13:18:12.000Z",
+   "authority": "FP1AgtaWxArMHtJqDZkxqMSUCCTwGLC3xgt85by9a1zs",
+   "sizeKB": 2524
+  },
+  "nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM": {
+   "protocol": "Nosana",
+   "name": "Jobs",
+   "deploySlot": 443142866,
+   "deployedAt": "2026-08-31T11:43:12.000Z",
+   "authority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+   "sizeKB": 893
+  },
+  "nosScmHY2uR24Zh751PmGj9ww9QRNHewh9H59AfrTJE": {
+   "protocol": "Nosana",
+   "name": "Staking",
+   "deploySlot": 433074263,
+   "deployedAt": "2026-07-15T13:44:20.000Z",
+   "authority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+   "sizeKB": 690
+  },
+  "nosRB8DUV67oLNrL45bo2pFLrmsWPiewe2Lk2DRNYCp": {
+   "protocol": "Nosana",
+   "name": "Rewards",
+   "deploySlot": 433074227,
+   "deployedAt": "2026-07-15T13:44:05.000Z",
+   "authority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+   "sizeKB": 716
+  },
+  "nosNeZR64wiEhQc5j251bsP4WqDabT6hmz4PHyoHLGD": {
+   "protocol": "Nosana",
+   "name": "Nodes",
+   "deploySlot": 432871887,
+   "deployedAt": "2026-07-14T14:34:56.000Z",
+   "authority": "GXs53JMXbgdMDhtmjE9iNgSmC1gu8f3adZhXuCEq1Bx9",
+   "sizeKB": 552
+  },
+  "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f": {
+   "protocol": "Switchboard",
+   "name": "Oracle V2",
+   "deploySlot": 318815164,
+   "deployedAt": "2025-02-06T08:11:49.000Z",
+   "authority": "2NvGRFswVx3GXxURNSfjbsWY4iP1ufj8LvAKJWGXSm4D",
+   "sizeKB": 1683
+  },
+  "sbattyXrzedoNATfc4L31wC9Mhxsi1BmFhTiN8gDshx": {
+   "protocol": "Switchboard",
+   "name": "Attestation",
+   "deploySlot": 242032013,
+   "deployedAt": "2024-01-15T20:54:51.000Z",
+   "authority": "31Sof5r1xi7dfcaz4x9Kuwm8J9ueAdDduMcme59sP8gc",
+   "sizeKB": 1866
+  },
+  "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv": {
+   "protocol": "Switchboard",
+   "name": "On-Demand",
+   "deploySlot": 420822344,
+   "deployedAt": "2026-05-19T18:20:18.000Z",
+   "authority": "DREcTwxxuehtUVgnGwDpTcKT9zTK5uDmdLbnRY7cijEx",
+   "sizeKB": 1321
+  },
+  "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ": {
+   "protocol": "Stabble",
+   "name": "Stable Swap",
+   "deploySlot": 395407721,
+   "deployedAt": "2026-01-23T12:59:00.000Z",
+   "authority": "9rHUPE2ng7stBuaeAM7heiVHLLGPAqGjYKQ3BBUWxKSP",
+   "sizeKB": 1217
+  },
+  "FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn": {
+   "protocol": "Flash Trade",
+   "name": "Perpetuals",
+   "deploySlot": 447531048,
+   "deployedAt": "2026-09-16T13:12:42.000Z",
+   "authority": "dhfZwJfdesv7fNW3nngCSjeGbx9zWUusLtfPaWbVKvo",
+   "sizeKB": 6893
+  },
+  "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx": {
+   "protocol": "Sanctum",
+   "name": "Infinity (S Controller)",
+   "deploySlot": 411884877,
+   "deployedAt": "2026-04-08T16:13:02.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 1013
+  },
+  "unpXTU2Ndrc7WWNyEhQWe4udTzSibLPi25SXv2xbCHQ": {
+   "protocol": "Sanctum",
+   "name": "Unstake",
+   "deploySlot": 220337978,
+   "deployedAt": "2023-09-28T17:05:56.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 833
+  },
+  "stkitrT1Uoy18Dk1fTrgPw8W6MVzoCfYoAFT4MLsmhq": {
+   "protocol": "Sanctum",
+   "name": "Router",
+   "deploySlot": 341718242,
+   "deployedAt": "2025-05-22T13:35:00.000Z",
+   "authority": "8VE2uJkoheDbJd9rCyKzfXmiMqAS4o1B3XGshEh86BGk",
+   "sizeKB": 501
+  },
+  "sp1V4h2gWorkGhVcazBc22Hfo2f5sd7jcjT4EDPrWFF": {
+   "protocol": "Sanctum",
+   "name": "SOL Value Calculator",
+   "deploySlot": 248053685,
+   "deployedAt": "2024-02-14T05:20:23.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 405
+  },
+  "mare3SCyfZkAndpBRBeonETmkCCB3TJTTrz8ZN2dnhP": {
+   "protocol": "Sanctum",
+   "name": "Marinade SOL Calculator",
+   "deploySlot": 248059530,
+   "deployedAt": "2024-02-14T06:01:25.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 399
+  },
+  "sspUE1vrh7xRoXxGsg7vR1zde2WdGtJRbyK9uRumBDy": {
+   "protocol": "Sanctum",
+   "name": "SPL Stake Pool Calculator",
+   "deploySlot": 248057484,
+   "deployedAt": "2024-02-14T05:47:03.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 405
+  },
+  "f1tUoNEKrDp1oeGn4zxr7bh41eN6VcfHjfrL3ZqQday": {
+   "protocol": "Sanctum",
+   "name": "Flat Fee Pricing",
+   "deploySlot": 248445657,
+   "deployedAt": "2024-02-16T02:51:14.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 289
+  },
+  "1idUSy4MGGKyKhvjSnGZ6Zc7Q4eKQcibym4BkEEw9KR": {
+   "protocol": "Sanctum",
+   "name": "LiDo SOL Calculator",
+   "deploySlot": 248059092,
+   "deployedAt": "2024-02-14T05:58:19.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 387
+  },
+  "wsoGmxQLSvwWpuaidCApxN5kEowLe2HLQLJhCQnj4bE": {
+   "protocol": "Sanctum",
+   "name": "wSOL Calculator",
+   "deploySlot": 248060231,
+   "deployedAt": "2024-02-14T06:06:16.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 135
+  },
+  "s1b6NRXj6ygNu1QMKXh2H9LUR2aPApAAm1UQ2DjdhNV": {
+   "protocol": "Sanctum",
+   "name": "S1B6",
+   "deploySlot": 376937485,
+   "deployedAt": "2025-10-31T04:56:48.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 30
+  },
+  "SP12tWFxD9oJsVWNavTTBZvMbA6gkAmxtVgxdqvyvhY": {
+   "protocol": "Sanctum",
+   "name": "SP12 (Stake Pool)",
+   "deploySlot": 371704212,
+   "deployedAt": "2025-10-07T03:05:26.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 1055
+  },
+  "ssmbu3KZxgonUtjEMCKspZzxvUQCxAFnyh1rcHUeEDo": {
+   "protocol": "Sanctum",
+   "name": "SSMBU",
+   "deploySlot": 258005833,
+   "deployedAt": "2024-04-02T21:43:28.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 203
+  },
+  "SPMBzsVUuoHA4Jm6KunbsotaahvVikZs1JyTW6iJvbn": {
+   "protocol": "Sanctum",
+   "name": "SPMB",
+   "deploySlot": 371704232,
+   "deployedAt": "2025-10-07T03:05:34.000Z",
+   "authority": "47SND7bGKvNXrqfP1bjsLCbwTgZhFBzAgmZ42QSkRScz",
+   "sizeKB": 1055
+  },
+  "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4": {
+   "protocol": "Jupiter Agg",
+   "name": "Aggregator V6",
+   "deploySlot": 449280566,
+   "deployedAt": "2026-09-22T05:12:12.000Z",
+   "authority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+   "sizeKB": 2824
+  },
+  "DCA265Vj8a9CEuX1eb1LWRnDT7uK6q1xMipnNyatn23M": {
+   "protocol": "Jupiter Agg",
+   "name": "DCA",
+   "deploySlot": 321636439,
+   "deployedAt": "2025-02-19T06:51:18.000Z",
+   "authority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+   "sizeKB": 1019
+  },
+  "jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu": {
+   "protocol": "Jupiter Agg",
+   "name": "Limit Orders",
+   "deploySlot": 302272927,
+   "deployedAt": "2024-11-19T05:10:47.000Z",
+   "authority": "CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ",
+   "sizeKB": 654
+  },
+  "675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8": {
+   "protocol": "Raydium",
+   "name": "AMM V4",
+   "deploySlot": 445763204,
+   "deployedAt": "2026-09-10T01:52:56.000Z",
+   "authority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+   "sizeKB": 1373
+  },
+  "CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK": {
+   "protocol": "Raydium",
+   "name": "CLMM",
+   "deploySlot": 439846317,
+   "deployedAt": "2026-08-17T12:05:42.000Z",
+   "authority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+   "sizeKB": 1660
+  },
+  "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C": {
+   "protocol": "Raydium",
+   "name": "CP-Swap",
+   "deploySlot": 445763504,
+   "deployedAt": "2026-09-10T01:54:31.000Z",
+   "authority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+   "sizeKB": 775
+  },
+  "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj": {
+   "protocol": "Raydium",
+   "name": "LaunchLab",
+   "deploySlot": 446221802,
+   "deployedAt": "2026-09-11T18:11:14.000Z",
+   "authority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+   "sizeKB": 2500
+  },
+  "EhhTKczWMGQt46ynNeRX1WfeagwwJd7ufHvCDjRxjo5Q": {
+   "protocol": "Raydium",
+   "name": "Staking",
+   "deploySlot": 232525455,
+   "deployedAt": "2023-11-27T08:27:58.000Z",
+   "authority": "FytDrVzDybM1TwFQPGb8qaxZR7dBCzNeqT3vtQsceZQK",
+   "sizeKB": 270
+  },
+  "TCMPhJdwDryooaGtiocG1u3xcYbRpiJzb283XfCZsDp": {
+   "protocol": "Tensor",
+   "name": "Marketplace",
+   "deploySlot": 382037338,
+   "deployedAt": "2025-11-23T18:32:29.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 7813
+  },
+  "TAMM6ub33ij1mbetoMyVBLeKY5iP41i4UPUJQGkhfsg": {
+   "protocol": "Tensor",
+   "name": "AMM",
+   "deploySlot": 350750392,
+   "deployedAt": "2025-07-03T01:53:40.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 2181
+  },
+  "TSWAPaqyCSx2KABk68Shruf4rp7CxcNi8hAsbdwmHbN": {
+   "protocol": "Tensor",
+   "name": "TensorSwap",
+   "deploySlot": 382951878,
+   "deployedAt": "2025-11-27T21:54:36.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 1953
+  },
+  "TL1ST2iRBzuGTqLn1KXnGdSnEow62BzPnGiqyRXhWtW": {
+   "protocol": "Tensor",
+   "name": "Listing (TList)",
+   "deploySlot": 350750283,
+   "deployedAt": "2025-07-03T01:52:58.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 504
+  },
+  "TLoCKic2wGJm7VhZKumih4Lc35fUhYqVMgA4j389Buk": {
+   "protocol": "Tensor",
+   "name": "Lock (TLock)",
+   "deploySlot": 306134813,
+   "deployedAt": "2024-12-08T07:13:35.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 1953
+  },
+  "VFeesufQJnGunv2kBXDYnThT1CoAYB45U31qGDe5QjU": {
+   "protocol": "Tensor",
+   "name": "Fees (VFees)",
+   "deploySlot": 382964878,
+   "deployedAt": "2025-11-27T23:18:44.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 620
+  },
+  "3vtZSP5wZe8QgX71EjrpGArEwM8LSgzTiEHkw6pSGFLD": {
+   "protocol": "Tensor",
+   "name": "Aux 1",
+   "deploySlot": 244520112,
+   "deployedAt": "2024-01-27T22:15:52.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 347
+  },
+  "TB1Dqt8JeKQh7RLDzfYDJsq8KS4fS2yt87avRjyRxMv": {
+   "protocol": "Tensor",
+   "name": "Bid (TBid)",
+   "deploySlot": 350750318,
+   "deployedAt": "2025-07-03T01:53:12.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 5859
+  },
+  "TFEEgwDP6nn1s8mMX2tTNPPz8j2VomkphLUmyxKm17A": {
+   "protocol": "Tensor",
+   "name": "Fee distribution (TFee)",
+   "deploySlot": 295286666,
+   "deployedAt": "2024-10-13T00:29:59.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 182
+  },
+  "VAggLCsx2hpZXF5t5aHfJC4Lt4rBKDuyUfbad1akWvA": {
+   "protocol": "Tensor",
+   "name": "Aggregator (VAgg)",
+   "deploySlot": 382769067,
+   "deployedAt": "2025-11-27T02:12:49.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 176
+  },
+  "VordrNZMkkryqCDFhFRcti4x3j94KY8fog3RhjGDVok": {
+   "protocol": "Tensor",
+   "name": "Order (Vordr)",
+   "deploySlot": 382766839,
+   "deployedAt": "2025-11-27T01:58:30.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 1198
+  },
+  "Td1ST8yc9Vt7vsBY7rZzrCjkXeGnr4ECMtso9ueLhyQ": {
+   "protocol": "Tensor",
+   "name": "Listing v2 (Tlist v2)",
+   "deploySlot": 382701193,
+   "deployedAt": "2025-11-26T18:54:05.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 1000
+  },
+  "TSTKEiz9sqJRypokAkRhaW29rnDYDSxqWxmdv9brkp2": {
+   "protocol": "Tensor",
+   "name": "Stake (TStake)",
+   "deploySlot": 214810153,
+   "deployedAt": "2023-08-31T22:15:51.000Z",
+   "authority": "BsumKVhbu2uDUtabgUKPcA9apw2NAyyZuu52Z3aJRHkv",
+   "sizeKB": 7813
+  },
+  "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY": {
+   "protocol": "Phoenix DEX",
+   "name": "CLOB V1",
+   "deploySlot": 231433470,
+   "deployedAt": "2023-11-21T21:12:23.000Z",
+   "authority": "8mv7G3fJq5a5ej7E14vgcSGeQKH79emjU9fVfuhyitEq",
+   "sizeKB": 4883
+  },
+  "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo": {
+   "protocol": "Meteora",
+   "name": "DLMM",
+   "deploySlot": 423977638,
+   "deployedAt": "2026-06-03T07:03:07.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 2178
+  },
+  "Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB": {
+   "protocol": "Meteora",
+   "name": "Dynamic AMM",
+   "deploySlot": 442210200,
+   "deployedAt": "2026-08-27T23:22:44.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 1880
+  },
+  "cpamdpZCGKUy5JxQXB4dcpGPiikHawvSWAd6mEn1sGG": {
+   "protocol": "Meteora",
+   "name": "DAMM V2",
+   "deploySlot": 445230614,
+   "deployedAt": "2026-09-08T03:00:21.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 2123
+  },
+  "24Uqj9JCLxUeoC3hGfh5W3s9FM9uCHDS2SG3LYwBpyTi": {
+   "protocol": "Meteora",
+   "name": "Dynamic Vault",
+   "deploySlot": 388396429,
+   "deployedAt": "2025-12-22T11:20:39.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 1885
+  },
+  "GacY9YuN16HNRTy7ZWwULPccwvfFSBeNLuAQP7y38Du3": {
+   "protocol": "Meteora",
+   "name": "Aux 1",
+   "deploySlot": 236912333,
+   "deployedAt": "2023-12-20T03:57:48.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 783
+  },
+  "zapvX9M3uf5pvy4wRPAbQgdQsM1xmuiFnkfHKPvwMiz": {
+   "protocol": "Meteora",
+   "name": "Zap",
+   "deploySlot": 409147580,
+   "deployedAt": "2026-03-27T06:03:05.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 732
+  },
+  "pDisRpxvnFw4osSqDPqMJ62tLsVQGsHL4tMX23ArYrL": {
+   "protocol": "Meteora",
+   "name": "Distribution (pDis)",
+   "deploySlot": 372412915,
+   "deployedAt": "2025-10-10T09:05:21.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 713
+  },
+  "abcSyangMHdGzUGKhBhKoQzSFdJKUdkPGf5cbXVHpEw": {
+   "protocol": "Meteora",
+   "name": "Alpha Bonding Curve",
+   "deploySlot": 327325526,
+   "deployedAt": "2025-03-17T09:30:03.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 475
+  },
+  "CAT7rbZD4eJ8zscj89HYWUKNcqhujQ9RB1zYrbrF5rXb": {
+   "protocol": "Meteora",
+   "name": "CAT",
+   "deploySlot": 324268558,
+   "deployedAt": "2025-03-03T08:16:30.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 1685
+  },
+  "FEESngU3neckdwib9X3KWqdL7Mjmqk9XNp3uh5JbP4KP": {
+   "protocol": "Meteora",
+   "name": "Fees",
+   "deploySlot": 303711101,
+   "deployedAt": "2024-11-26T09:46:16.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 1816
+  },
+  "dfsdo2UqvwfN8DuUVrMRNfQe11VaiNoKcMqLHVvDPzh": {
+   "protocol": "Meteora",
+   "name": "DFSDO",
+   "deploySlot": 435662190,
+   "deployedAt": "2026-07-28T03:00:22.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 708
+  },
+  "FarmuwXPWXvefWUeqFAa5w6rifLkq5X6E8bimYvrhCB1": {
+   "protocol": "Meteora",
+   "name": "Farm",
+   "deploySlot": 263477228,
+   "deployedAt": "2024-05-02T15:25:53.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 920
+  },
+  "vaU6kP7iNEGkbmPkLmZfGwiGxd4Mob24QQCie5R9kd2": {
+   "protocol": "Meteora",
+   "name": "Vault",
+   "deploySlot": 349243341,
+   "deployedAt": "2025-06-26T03:44:51.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 1058
+  },
+  "presSVxnf9UU8jMxhgSMqaRwNiT36qeBdNeTRKjTdbj": {
+   "protocol": "Meteora",
+   "name": "PreS",
+   "deploySlot": 382570576,
+   "deployedAt": "2025-11-26T04:47:54.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 748
+  },
+  "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN": {
+   "protocol": "Meteora",
+   "name": "DBC",
+   "deploySlot": 445503633,
+   "deployedAt": "2026-09-09T03:02:14.000Z",
+   "authority": "JADaUV8kvDpDbJr55wxXJHVaBS3VCj8thZZHjfeuCVLd",
+   "sizeKB": 2272
+  },
+  "PaRCLKPpkfHQfXTruT8yhEUx5oRNH8z8erBnzEerc8a": {
+   "protocol": "Parcl",
+   "name": "Parcl Perps Core (PaRCL)",
+   "deploySlot": 175350608,
+   "deployedAt": "2023-01-31T16:24:56.000Z",
+   "authority": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+   "sizeKB": 140
+  },
+  "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y": {
+   "protocol": "Parcl",
+   "name": "Parcl Perps Aux (3parc)",
+   "deploySlot": 433062862,
+   "deployedAt": "2026-07-15T12:26:07.000Z",
+   "authority": "EkTyBhV2evLGhn4fdeuuT7ZyFu8eN4Hqpo8HEJCjEvTo",
+   "sizeKB": 2533
+  },
+  "2GTq96kiPYg2XbDwvcHha1gMTo2bjfiuCc72Z8bKq4HX": {
+   "protocol": "Parcl",
+   "name": "Parcl Governance 1 (2GTq)",
+   "deploySlot": 314203516,
+   "deployedAt": "2025-01-15T18:24:52.000Z",
+   "authority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+   "sizeKB": 788
+  },
+  "Di9ZVJeJrRZdQEWzAFYmfjukjR5dUQb7KMaDmv34rNJg": {
+   "protocol": "Parcl",
+   "name": "Parcl Governance 2 (Di9Z)",
+   "deploySlot": 275371512,
+   "deployedAt": "2024-07-03T03:41:32.000Z",
+   "authority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+   "sizeKB": 1316
+  },
+  "2gWf5xLAzZaKX9tQj9vuXsaxTWtzTZDFRn21J3zjNVgu": {
+   "protocol": "Parcl",
+   "name": "Parcl Governance 3 (2gWf)",
+   "deploySlot": 275374448,
+   "deployedAt": "2024-07-03T04:04:00.000Z",
+   "authority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+   "sizeKB": 1398
+  },
+  "5tu3xkmLfud5BAwSuQke4WSjoHcQ52SbrPwX9es8j6Ve": {
+   "protocol": "Parcl",
+   "name": "Parcl Governance 4 (5tu3)",
+   "deploySlot": 256822655,
+   "deployedAt": "2024-03-27T20:23:14.000Z",
+   "authority": "GKKZmEPuhowYTQcAXBUZtRMn6tXN74t2c51RAvK3aYTL",
+   "sizeKB": 796
+  },
+  "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD": {
+   "protocol": "Marinade",
+   "name": "Liquid Staking",
+   "deploySlot": 433290841,
+   "deployedAt": "2026-07-16T14:33:16.000Z",
+   "authority": "551FBXSXdhcRDDkdcb3ThDRg84Mwe5Zs6YjJ1EEoyzBp",
+   "sizeKB": 1962
+  },
+  "FsJ3A3u2vn5cTVofAjvy6y5kwABJAqYWpe4975bi2epH": {
+   "protocol": "Pyth",
+   "name": "Legacy Oracle",
+   "deploySlot": 252428081,
+   "deployedAt": "2024-03-06T09:30:46.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 80
+  },
+  "rec5EKMGg6MxZYaMdyBfgwp4d5rB9T1VQH5pJv5LtFJ": {
+   "protocol": "Pyth",
+   "name": "Pull Oracle",
+   "deploySlot": 327047637,
+   "deployedAt": "2025-03-16T02:45:56.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 1324
+  },
+  "pythWSnswVUd12oZpeFP8e9CVaEqJg25g1Vtc2biRsT": {
+   "protocol": "Pyth",
+   "name": "Push Oracle",
+   "deploySlot": 261073328,
+   "deployedAt": "2024-04-19T16:11:02.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 273
+  },
+  "prfmVhiQTN5Spgoxa8uZJba35V1s7XXReqbBiqPDWeJ": {
+   "protocol": "Pyth",
+   "name": "Pyth Governance",
+   "deploySlot": 243407967,
+   "deployedAt": "2024-01-22T13:52:06.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 382
+  },
+  "pytd2yyk641x7ak7mkaasSJVXh6YYZnC7wTmtgAyxPt": {
+   "protocol": "Pyth",
+   "name": "Pyth Crosschain",
+   "deploySlot": 330575503,
+   "deployedAt": "2025-04-01T10:30:45.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 292
+  },
+  "HDwcJBJXjL9FpJ7UBsYBtaDjsBUhuLCUYoz3zr8SWWaQ": {
+   "protocol": "Pyth",
+   "name": "HDwc",
+   "deploySlot": 441901675,
+   "deployedAt": "2026-08-26T16:00:49.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 1324
+  },
+  "tstPARXbQ5yxVkRU2UcZRbYphzbUEW6t5ihzpLaafgz": {
+   "protocol": "Pyth",
+   "name": "Test (tstPAR)",
+   "deploySlot": 242272759,
+   "deployedAt": "2024-01-17T02:09:46.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 361
+  },
+  "GovFUVGZWWwyoLq8rhnoVWknRFkhDSbQiSoREJ5LiZCV": {
+   "protocol": "Pyth",
+   "name": "Governance (GovFUV)",
+   "deploySlot": 156076780,
+   "deployedAt": "2022-10-18T21:43:57.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 1259
+  },
+  "sta99txADjRfwHQQMNckb8vUN4jcAAhN2HBMTR2Ah6d": {
+   "protocol": "Pyth",
+   "name": "Staking (sta99)",
+   "deploySlot": 156422374,
+   "deployedAt": "2022-10-20T20:41:42.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 1114
+  },
+  "PytERJFhAKuNNuaiXkApLfWzwNwSNDACpigT3LwQfou": {
+   "protocol": "Pyth",
+   "name": "PytER",
+   "deploySlot": 416412500,
+   "deployedAt": "2026-04-29T09:42:59.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 371
+  },
+  "escMHe7kSqPcDHx4HU44rAHhgdTLBZkUrU39aN8kMcL": {
+   "protocol": "Pyth",
+   "name": "escrow (escMHe)",
+   "deploySlot": 176378694,
+   "deployedAt": "2023-02-06T18:00:02.000Z",
+   "authority": "6oXTdojyfDS8m5VtTaYB9xRCxpKGSvKJFndLUPV3V3wT",
+   "sizeKB": 601
+  },
+  "Vau1t6sLNxnzB7ZDsef8TLbPLfyZMYXH8WTNqUdm9g8": {
+   "protocol": "Jito",
+   "name": "Vault",
+   "deploySlot": 333957056,
+   "deployedAt": "2025-04-17T01:11:54.000Z",
+   "authority": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+   "sizeKB": 844
+  },
+  "RestkWeAVL8fRGgzhfeoqFhsqKRchg6aa1XrcH96z4Q": {
+   "protocol": "Jito",
+   "name": "Restaking",
+   "deploySlot": 316737787,
+   "deployedAt": "2025-01-27T16:30:55.000Z",
+   "authority": "5eosrve6LktMZgVNszYzebgmmC7BjLK8NoWyRQtcmGTF",
+   "sizeKB": 560
+  },
+  "Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8": {
+   "protocol": "Jito",
+   "name": "Steward",
+   "deploySlot": 426760972,
+   "deployedAt": "2026-06-16T02:26:19.000Z",
+   "authority": "8EP3VommYzMRSdnSn88GnQpxjRwxg6nroTeUNJoqu9b8",
+   "sizeKB": 1756
+  },
+  "T1pyyaTNZsKv2WcRAB8oVnk93mLJw2XzjtVYqCsaHqt": {
+   "protocol": "Jito",
+   "name": "Tip Payment",
+   "deploySlot": 337435036,
+   "deployedAt": "2025-05-02T23:31:47.000Z",
+   "authority": "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+   "sizeKB": 763
+  },
+  "4R3gSG8BpU4t19KYj8CfnbtRpnT8gtk4dvTHxVRwc2r7": {
+   "protocol": "Jito",
+   "name": "Tip Distribution",
+   "deploySlot": 403585576,
+   "deployedAt": "2026-03-01T21:43:57.000Z",
+   "authority": "4ivLcnNLhe4cKdpV9b4jyEmxgbYWFgktHcTyyBvYavsD",
+   "sizeKB": 10240
+  },
+  "HistoryJTGbKQD2mRgLZ3XhqHnN811Qpez8X9kCcGHoa": {
+   "protocol": "Jito",
+   "name": "Validator History",
+   "deploySlot": 421278668,
+   "deployedAt": "2026-05-21T20:58:01.000Z",
+   "authority": "8EP3VommYzMRSdnSn88GnQpxjRwxg6nroTeUNJoqu9b8",
+   "sizeKB": 963
+  },
+  "zbcKGdAmXfthXY3rEPBzexVByT2cqRqCZb9NwWdGQ2T": {
+   "protocol": "Zebec",
+   "name": "Streaming",
+   "deploySlot": 159738421,
+   "deployedAt": "2022-11-07T05:47:54.000Z",
+   "authority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+   "sizeKB": 3030
+  },
+  "b6ZPysThkApNx2YDiGsPUiYPE7Ub1kTRdCWp7gBkzbr": {
+   "protocol": "Zebec",
+   "name": "Multisig Helper",
+   "deploySlot": 248752486,
+   "deployedAt": "2024-02-17T14:38:06.000Z",
+   "authority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+   "sizeKB": 1172
+  },
+  "AknC341xog56SrnoK6j3mUvaD1Y7tYayx1sxUGpeYWdX": {
+   "protocol": "Zebec",
+   "name": "SDK/V1",
+   "deploySlot": 160254148,
+   "deployedAt": "2022-11-10T06:02:32.000Z",
+   "authority": "5aUDpuNNbAvme6hPi4o2vBbzHMrF7h3xB4kfKNMk6V8h",
+   "sizeKB": 974
+  },
+  "wickHYqFr8NayYurE8M4oT8F4ZrYUwzaFoiXctCDSmF": {
+   "protocol": "Wick",
+   "name": "Wick",
+   "deploySlot": 429296589,
+   "deployedAt": "2026-06-27T19:09:50.000Z",
+   "authority": "3bAHFKgJx7mHeyo2VmDCGp4QmKxTbPdtF5MfPF16R19P",
+   "sizeKB": 815
+  },
+  "onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe": {
+   "protocol": "Onre Finance",
+   "name": "Core",
+   "deploySlot": 442113459,
+   "deployedAt": "2026-08-27T13:31:07.000Z",
+   "authority": "FvmhydbpHGQzMUp51GmhB1fwsrkyfmnRsTg7oPwDe25f",
+   "sizeKB": 1870
+  },
+  "FUTARELBfJfQ8RDGhg1wdhddq1odMAJUePHFuBYfUxKq": {
+   "protocol": "MetaDAO",
+   "name": "Futarchy",
+   "deploySlot": 423005106,
+   "deployedAt": "2026-05-29T19:49:53.000Z",
+   "authority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+   "sizeKB": 1214
+  },
+  "auToUr3CQza3D4qreT6Std2MTomfzvrEeCC5qh7ivW5": {
+   "protocol": "MetaDAO",
+   "name": "Autocrat",
+   "deploySlot": 371664176,
+   "deployedAt": "2025-10-06T22:41:28.000Z",
+   "authority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+   "sizeKB": 573
+  },
+  "AMMJdEiCCa8mdugg6JPF7gFirmmxisTfDJoSNSUi5zDJ": {
+   "protocol": "MetaDAO",
+   "name": "AMM",
+   "deploySlot": 353521514,
+   "deployedAt": "2025-07-15T18:51:06.000Z",
+   "authority": "6awyHMshBGVjJ3ozdSJdyyDE1CTAXUwrpNMaRGMsb4sf",
+   "sizeKB": 372
+  },
+  "hemjuPXBpNvggtaUnN1MwT3wrdhttKEfosTcc2P9Pg8": {
+   "protocol": "Helium",
+   "name": "Entity Manager",
+   "deploySlot": 450188204,
+   "deployedAt": "2026-09-25T00:16:46.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 1836
+  },
+  "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT": {
+   "protocol": "Helium",
+   "name": "Data Credits",
+   "deploySlot": 450189748,
+   "deployedAt": "2026-09-25T00:23:40.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 1126
+  },
+  "hdaoVTCqhfHHo75XdAMxBKdUqvq1i5bF23sisBqVgGR": {
+   "protocol": "Helium",
+   "name": "Sub DAOs",
+   "deploySlot": 450188162,
+   "deployedAt": "2026-09-25T00:16:35.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 2423
+  },
+  "hvsrNC3NKbcryqDs2DocYHZ9yPKEVzdSjQG6RVtK1s8": {
+   "protocol": "Helium",
+   "name": "Voter Stake Registry",
+   "deploySlot": 450188123,
+   "deployedAt": "2026-09-25T00:16:25.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 1914
+  },
+  "propFYxqmVcufMhk5esNMrexq2ogHbbC2kP9PU1qxKs": {
+   "protocol": "Helium",
+   "name": "Modular Governance (proposals)",
+   "deploySlot": 333675384,
+   "deployedAt": "2025-04-15T17:59:00.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 653
+  },
+  "nprx42sXf5rpVnwBWEdRg1d8tuCWsTuVLys1pRWwE6p": {
+   "protocol": "Helium",
+   "name": "Modular Governance (proposals v2)",
+   "deploySlot": 333675372,
+   "deployedAt": "2025-04-15T17:58:56.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 368
+  },
+  "treaf4wWBBty3fHdyBpo35Mz84M8k3heKXmjmi9vFt5": {
+   "protocol": "Helium",
+   "name": "Treasury Management",
+   "deploySlot": 339861344,
+   "deployedAt": "2025-05-14T01:35:42.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 712
+  },
+  "memMa1HG4odAFmUbGWfPwS1WWfK95k99F2YTkGvyxZr": {
+   "protocol": "Helium",
+   "name": "Mobile Entity",
+   "deploySlot": 450187282,
+   "deployedAt": "2026-09-25T00:12:38.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 1117
+  },
+  "noEmmgLmQdk6DLiPV8CSwQv3qQDyGEhz9m5A4zhtByv": {
+   "protocol": "Helium",
+   "name": "No-Emit",
+   "deploySlot": 333675543,
+   "deployedAt": "2025-04-15T18:00:03.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 511
+  },
+  "1atrmQs3eq1N2FEYWu6tyTXbCjP4uQwExpjtnhXtS8h": {
+   "protocol": "Helium",
+   "name": "IoT Distributor",
+   "deploySlot": 449427750,
+   "deployedAt": "2026-09-22T16:06:07.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 705
+  },
+  "orgdXvHVLkWgBYerptASkAwkZAE563CJUu717dMNx5f": {
+   "protocol": "Helium",
+   "name": "Organisations",
+   "deploySlot": 333675395,
+   "deployedAt": "2025-04-15T17:59:04.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 573
+  },
+  "porcSnvH9pvcYPmQ65Y8qcZSRxQBiBBQX7UV5nmBegy": {
+   "protocol": "Helium",
+   "name": "Price Oracle",
+   "deploySlot": 373781852,
+   "deployedAt": "2025-10-16T16:07:32.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 449
+  },
+  "hexbnKYoA2GercNNhHUCCfrTRWrHjT6ujKPXTa5NPqJ": {
+   "protocol": "Helium",
+   "name": "Hex Boosting",
+   "deploySlot": 364237268,
+   "deployedAt": "2025-09-02T20:23:33.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 770
+  },
+  "circAbx64bbsscPbQzZAUvuXpHqrCe6fLMzc2uKXz9g": {
+   "protocol": "Helium",
+   "name": "Circuit Breaker",
+   "deploySlot": 339861292,
+   "deployedAt": "2025-05-14T01:35:22.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 624
+  },
+  "fanqeMu3fw8R4LwKNbahPtYXJsyLL6NXyfe2BqzhfB6": {
+   "protocol": "Helium",
+   "name": "Fanout",
+   "deploySlot": 444064159,
+   "deployedAt": "2026-09-03T20:37:13.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 1074
+  },
+  "rorcfdX4h9m9swCKgcypaHJ8NGYVANBpmV9EHn3cYrF": {
+   "protocol": "Helium",
+   "name": "Rewards Oracle",
+   "deploySlot": 447075694,
+   "deployedAt": "2026-09-14T21:10:49.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 461
+  },
+  "1azyuavdMyvsivtNxPoz6SucD18eDHeXzFCUPq5XU7w": {
+   "protocol": "Helium",
+   "name": "Lazy Distributor",
+   "deploySlot": 448828210,
+   "deployedAt": "2026-09-20T19:38:04.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 988
+  },
+  "mfanLprNnaiP4RX9Zz1BMcDosYHCqnG24H1fMEbi9Gn": {
+   "protocol": "Helium",
+   "name": "Mobile Fanout (mfan)",
+   "deploySlot": 446150028,
+   "deployedAt": "2026-09-11T11:50:57.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 722
+  },
+  "tuktukUrfhXT6ZT77QTU8RQtvgL967uRuVagWF57zVA": {
+   "protocol": "Helium",
+   "name": "TukTuk",
+   "deploySlot": 448828254,
+   "deployedAt": "2026-09-20T19:38:16.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 708
+  },
+  "cronAjRZnJn3MTP3B9kE62NWDrjSuAPVXf9c4hu4grM": {
+   "protocol": "Helium",
+   "name": "Cron",
+   "deploySlot": 446149939,
+   "deployedAt": "2026-09-11T11:50:30.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 687
+  },
+  "topqqzQZroCyRrgyM5zVq6xkFDVnfF13iixSjajydgU": {
+   "protocol": "Helium",
+   "name": "Top (topqq)",
+   "deploySlot": 450188241,
+   "deployedAt": "2026-09-25T00:16:57.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 949
+  },
+  "stcfiqW3fwD9QCd8Bqr1NBLrs7dftZHBQe7RiMMA4aM": {
+   "protocol": "Helium",
+   "name": "Stake Controller (stcfi)",
+   "deploySlot": 338061485,
+   "deployedAt": "2025-05-05T20:03:09.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 753
+  },
+  "hcrLPFgFUY6sCUKzqLWxXx5bntDiDCrAZVcrXfx9AHu": {
+   "protocol": "Helium",
+   "name": "hcrLP",
+   "deploySlot": 447362713,
+   "deployedAt": "2026-09-15T22:23:49.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 1058
+  },
+  "we1cGnTxTkDP9Sk49dw1d3T7ik7V2NfnY4qDGCDHXfC": {
+   "protocol": "Helium",
+   "name": "we1cG",
+   "deploySlot": 446149823,
+   "deployedAt": "2026-09-11T11:49:52.000Z",
+   "authority": "pULUgsYtKvT7qhsL8QJ2oJXYQUeCCdjtfawPnBqEr3U",
+   "sizeKB": 652
+  },
+  "omnixgS8fnqHfCcTGKWj6JtKjzpJZ1Y5y9pyFkQDkYE": {
+   "protocol": "Helium",
+   "name": "Omnix Admin",
+   "deploySlot": 439721901,
+   "deployedAt": "2026-08-16T21:45:47.000Z",
+   "authority": "4JpPs9Mi11qoj6GthQPiTjUc4gXq8BAoSs3AD6NVjQUZ",
+   "sizeKB": 1455
+  },
+  "aVoLTRCRt3NnnchvLYH6rMYehJHwM5m45RmLBZq7PGz": {
+   "protocol": "Voltr",
+   "name": "Vaults",
+   "deploySlot": 335558866,
+   "deployedAt": "2025-04-24T09:16:50.000Z",
+   "authority": "G2FCNGgQQ7MYyJvkXw1du86YGR6vXXejuQG9LsjX1kEs",
+   "sizeKB": 1011
+  },
+  "vVoLTRjQmtFpiYoegx285Ze4gsLJ8ZxgFKVcuvmG1a8": {
+   "protocol": "Voltr",
+   "name": "Vault (vVoLTR)",
+   "deploySlot": 445223838,
+   "deployedAt": "2026-09-08T02:24:36.000Z",
+   "authority": "G2FCNGgQQ7MYyJvkXw1du86YGR6vXXejuQG9LsjX1kEs",
+   "sizeKB": 1035
+  },
+  "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH": {
+   "protocol": "Tessera V",
+   "name": "AMM",
+   "deploySlot": 446053401,
+   "deployedAt": "2026-09-11T03:21:52.000Z",
+   "authority": "7bJ9xu9UGVZPtYzH1fMwdaKdvfhqeSJtoFc2eGrXBPhK",
+   "sizeKB": 563
+  },
+  "DEbrdGj3HsRsAzx6uH4MKyREKxVAfBydijLUF3ygsFfh": {
+   "protocol": "deBridge",
+   "name": "Main",
+   "deploySlot": 304933432,
+   "deployedAt": "2024-12-02T10:44:38.000Z",
+   "authority": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+   "sizeKB": 1901
+  },
+  "DeSetTwWhjZq6Pz9Kfdo1KoS5NqtsM6G8ERbX4SSCSft": {
+   "protocol": "deBridge",
+   "name": "Settings",
+   "deploySlot": 304121464,
+   "deployedAt": "2024-11-28T11:19:17.000Z",
+   "authority": "BCTmawGzu1pMmaf9fdGaD1Mcfp8XQ6JiZ4jYaFzyeR1x",
+   "sizeKB": 1598
+  },
+  "BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi": {
+   "protocol": "BisonFi",
+   "name": "AMM",
+   "deploySlot": 449101126,
+   "deployedAt": "2026-09-21T15:52:40.000Z",
+   "authority": "6dDjBZdpafRKe7WuVHYTF1HphW1BWiKqioMD5eBGYipS",
+   "sizeKB": 247
+  },
+  "9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp": {
+   "protocol": "HumidiFi",
+   "name": "AMM",
+   "deploySlot": 449592669,
+   "deployedAt": "2026-09-23T04:19:23.000Z",
+   "authority": "FMP7rvAsrs69YKBsaqgbB5mpnWrimNM8LNDfHLEzngLA",
+   "sizeKB": 384
+  },
+  "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW": {
+   "protocol": "Photon",
+   "name": "Trading Bot",
+   "deploySlot": 429582497,
+   "deployedAt": "2026-06-29T03:09:15.000Z",
+   "authority": "9Vv9LiU728TNdA9mR1w3xGPgcFaqpGA4Baeo7RGJJew6",
+   "sizeKB": 933
+  },
+  "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy": {
+   "protocol": "SPL Stake Pool",
+   "name": "Stake Pool",
+   "deploySlot": 429882117,
+   "deployedAt": "2026-06-30T12:53:10.000Z",
+   "authority": "dPpFfahSWhm5M2RB3nVaHsXfnh9ooz5bWtR3WeUguDH",
+   "sizeKB": 1055
+  },
+  "219m42qCuVirVvWs5GnkuX4aWFx5pX6D9RSTE1vsV5WS": {
+   "protocol": "LayerZero OFT",
+   "name": "OFT",
+   "deploySlot": 396489378,
+   "deployedAt": "2026-01-28T13:24:25.000Z",
+   "authority": "6nopWptiA5bw3hDsAzDcwEcLSNcrYfbCErKmM14QZS31",
+   "sizeKB": 527
+  },
+  "A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN": {
+   "protocol": "LayerZero OFT",
+   "name": "Devtools (A8W6A)",
+   "deploySlot": 396881916,
+   "deployedAt": "2026-01-30T09:04:02.000Z",
+   "authority": "G9jXsKZ2XXfNEks2dmouKiJJFBWcn8SQHmMkcy3TUVf5",
+   "sizeKB": 527
+  },
+  "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz": {
+   "protocol": "SolvBTC",
+   "name": "Solv Protocol",
+   "deploySlot": 376935908,
+   "deployedAt": "2025-10-31T04:46:16.000Z",
+   "authority": "BsF2mR9brTd7u7wGWrejksQzsdrGFNcddRSYeNpHZixM",
+   "sizeKB": 589
+  },
+  "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo": {
+   "protocol": "GMSOL",
+   "name": "Core",
+   "deploySlot": 438769784,
+   "deployedAt": "2026-08-12T07:34:23.000Z",
+   "authority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+   "sizeKB": 4241
+  },
+  "GTuvYD5SxkTq4FLG6JV1FQ5dkczr1AfgDcBHaFsBdtBg": {
+   "protocol": "GMSOL",
+   "name": "Exchange",
+   "deploySlot": 374632307,
+   "deployedAt": "2025-10-20T14:06:10.000Z",
+   "authority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+   "sizeKB": 823
+  },
+  "LPMWczEVgXyQ3979XaqqEttanCXmYGvtJqPVtw1PvC8": {
+   "protocol": "GMSOL",
+   "name": "LP Manager",
+   "deploySlot": 399521457,
+   "deployedAt": "2026-02-11T10:09:43.000Z",
+   "authority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+   "sizeKB": 498
+  },
+  "2AxuNr6euZPKQbTwNsLBjzFTZFAevA85F4PW9m9Dv8pc": {
+   "protocol": "GMSOL",
+   "name": "Router",
+   "deploySlot": 348433799,
+   "deployedAt": "2025-06-22T09:22:54.000Z",
+   "authority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+   "sizeKB": 279
+  },
+  "TimeBQ7gQyWyQMD3bTteAdy7hTVDNWSwELdSVZHfSXL": {
+   "protocol": "GMSOL",
+   "name": "TimeBQ",
+   "deploySlot": 352328085,
+   "deployedAt": "2025-07-10T07:40:43.000Z",
+   "authority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+   "sizeKB": 419
+  },
+  "12cJKgP9r2bcaruqu3XsCS1hxLqsHrmZhqG5Qy2TWRap": {
+   "protocol": "GMSOL",
+   "name": "12cJK",
+   "deploySlot": 353258181,
+   "deployedAt": "2025-07-14T13:54:22.000Z",
+   "authority": "6qp7veALWas5rxXJRQXUEbffRtDyhB8koxenBpS51SrA",
+   "sizeKB": 165
+  },
+  "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv": {
+   "protocol": "Ore",
+   "name": "Ore V3",
+   "deploySlot": 447099416,
+   "deployedAt": "2026-09-14T23:16:11.000Z",
+   "authority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+   "sizeKB": 409
+  },
+  "3jSkUuYBoJzQPMEzTvkDFXCZUBksPamrVhrnHR9igu2X": {
+   "protocol": "Ore",
+   "name": "3jSk",
+   "deploySlot": 428925245,
+   "deployedAt": "2026-06-26T01:45:56.000Z",
+   "authority": "J5K5tWj3nKfxuSkAJ25WTMf4u5EsxJRfUoRKKxgrfFGV",
+   "sizeKB": 119
+  },
+  "LStwN2E5Uw6MCtuxHRLhy8RY9hxqW2XRpLzettb696y": {
+   "protocol": "Ore",
+   "name": "LStw",
+   "deploySlot": 423010599,
+   "deployedAt": "2026-05-29T20:26:05.000Z",
+   "authority": "IMMUTABLE",
+   "sizeKB": 254
+  },
+  "STkEAu2cEyQp5ktgUauRVq8es6mEP2w6ixw4NEd5tDJ": {
+   "protocol": "Ore",
+   "name": "Stake (STkE)",
+   "deploySlot": 422961850,
+   "deployedAt": "2026-05-29T15:03:43.000Z",
+   "authority": "IMMUTABLE",
+   "sizeKB": 260
+  },
+  "CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s": {
+   "protocol": "Carrot",
+   "name": "Carrot",
+   "deploySlot": 413352663,
+   "deployedAt": "2026-04-15T09:10:04.000Z",
+   "authority": "3eUEKYy7bPqtZ3KyUvCgpXV55v8TfN4xE85NickX6SUM",
+   "sizeKB": 2538
+  },
+  "JAZWcGrpSWNPTBj8QtJ9UyQqhJCDhG9GJkDeMf5NQBiq": {
+   "protocol": "Carrot",
+   "name": "JAZW",
+   "deploySlot": 342979433,
+   "deployedAt": "2025-05-28T07:39:30.000Z",
+   "authority": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+   "sizeKB": 856
+  },
+  "Fk1RpqsfeWt8KnFCTW9NQVdVxYvxuqjGn6iPB9wrmM8h": {
+   "protocol": "Carrot",
+   "name": "Fk1R",
+   "deploySlot": 342990776,
+   "deployedAt": "2025-05-28T08:53:48.000Z",
+   "authority": "3bcxfPkGRLbHfkFb5DADLP9k5SCJmGU2H6MhuE2WxVdV",
+   "sizeKB": 194
+  },
+  "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD": {
+   "protocol": "DefiTuna",
+   "name": "DefiTuna",
+   "deploySlot": 449738895,
+   "deployedAt": "2026-09-23T15:05:43.000Z",
+   "authority": "FWFrrwQ3kd91FEBD17paLUNmWwCYwpxg9bQCXGAcq7jx",
+   "sizeKB": 2841
+  },
+  "EtrnLzgbS7nMMy5fbD42kXiUzGg8XQzJ972Xtk1cjWih": {
+   "protocol": "Phoenix Eternal",
+   "name": "Phoenix Perpetuals",
+   "deploySlot": 447323692,
+   "deployedAt": "2026-09-15T18:57:02.000Z",
+   "authority": "GPgADQrhzGoUgLqxsZMKvSpwcLaJFVTq6gEixKhmcwpm",
+   "sizeKB": 3281
+  },
+  "13gDzEXCdocbj8iAiqrScGo47NiSuYENGsRqi3SEAwet": {
+   "protocol": "Adrena",
+   "name": "Perpetuals",
+   "deploySlot": 424701356,
+   "deployedAt": "2026-06-06T15:10:34.000Z",
+   "authority": "7VzEXYvGmLg3tdVuFuGFQdr7GP5tutTUt8EcTGHvG8Ev",
+   "sizeKB": 4244
+  }
+ },
+ "protocols": {
+  "Orca": {
+   "lastDeployAt": "2026-08-19T01:28:54.000Z",
+   "programId": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc"
+  },
+  "Drift": {
+   "lastDeployAt": "2026-09-07T02:20:30.000Z",
+   "programId": "vELoC1audYbSYVRXn1vPaV8Axoa9oU6BYmNGZZBDZ1P"
+  },
+  "Project 0": {
+   "lastDeployAt": "2026-09-04T18:26:28.000Z",
+   "programId": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA"
+  },
+  "Kamino": {
+   "lastDeployAt": "2026-09-07T11:05:29.000Z",
+   "programId": "6LtLpnUFNByNXLyCoK9wA2MykKAmQNZKBdY8s47dehDc"
+  },
+  "Jupiter Perps": {
+   "lastDeployAt": "2026-04-14T04:40:41.000Z",
+   "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu"
+  },
+  "Jupiter Lend": {
+   "lastDeployAt": "2026-09-24T09:36:45.000Z",
+   "programId": "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi"
+  },
+  "Magic Eden": {
+   "lastDeployAt": "2026-04-10T17:14:01.000Z",
+   "programId": "WDPKndVQYXANGvAxRgZujP4nT5rDMNqbs6aVeZe9kxX"
+  },
+  "Loopscale": {
+   "lastDeployAt": "2026-08-18T20:54:52.000Z",
+   "programId": "1oopBoJG58DgkUVKkEzKgyG9dvRmpgeEm1AVjoHkF78"
+  },
+  "Exponent": {
+   "lastDeployAt": "2026-05-12T18:50:13.000Z",
+   "programId": "ExponentnaRg3CQbW6dqQNZKXp7gtZ9DGMp1cwC4HAS7"
+  },
+  "Huma Finance": {
+   "lastDeployAt": "2026-06-16T13:38:14.000Z",
+   "programId": "HumaXepHnjaRCpjYTokxY4UtaJcmx41prQ8cxGmFC5fn"
+  },
+  "Solstice": {
+   "lastDeployAt": "2026-08-25T16:45:41.000Z",
+   "programId": "USXyiSTsPEWz55pSK7sZoUL79ntoVGQbaTDT57tH6bx"
+  },
+  "Pumpfun + PumpSwap": {
+   "lastDeployAt": "2026-09-23T14:45:19.000Z",
+   "programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"
+  },
+  "Lulo": {
+   "lastDeployAt": "2026-09-25T13:18:12.000Z",
+   "programId": "FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q"
+  },
+  "Nosana": {
+   "lastDeployAt": "2026-08-31T11:43:12.000Z",
+   "programId": "nosJhNRqr2bc9g1nfGDcXXTXvYUmxD4cVwy2pMWhrYM"
+  },
+  "Switchboard": {
+   "lastDeployAt": "2026-05-19T18:20:18.000Z",
+   "programId": "SBondMDrcV3K4kxZR1HNVT7osZxAHVHgYXL5Ze1oMUv"
+  },
+  "Stabble": {
+   "lastDeployAt": "2026-01-23T12:59:00.000Z",
+   "programId": "swapNyd8XiQwJ6ianp9snpu4brUqFxadzvHebnAXjJZ"
+  },
+  "Flash Trade": {
+   "lastDeployAt": "2026-09-16T13:12:42.000Z",
+   "programId": "FLASH6Lo6h3iasJKWDs2F8TkW2UKf3s15C8PMGuVfgBn"
+  },
+  "Sanctum": {
+   "lastDeployAt": "2026-04-08T16:13:02.000Z",
+   "programId": "5ocnV1qiCgaQR8Jb8xWnVbApfaygJ8tNoZfgPwsgx9kx"
+  },
+  "Jupiter Agg": {
+   "lastDeployAt": "2026-09-22T05:12:12.000Z",
+   "programId": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4"
+  },
+  "Raydium": {
+   "lastDeployAt": "2026-09-11T18:11:14.000Z",
+   "programId": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj"
+  },
+  "Tensor": {
+   "lastDeployAt": "2025-11-27T23:18:44.000Z",
+   "programId": "VFeesufQJnGunv2kBXDYnThT1CoAYB45U31qGDe5QjU"
+  },
+  "Phoenix DEX": {
+   "lastDeployAt": "2023-11-21T21:12:23.000Z",
+   "programId": "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY"
+  },
+  "Meteora": {
+   "lastDeployAt": "2026-09-09T03:02:14.000Z",
+   "programId": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN"
+  },
+  "Parcl": {
+   "lastDeployAt": "2026-07-15T12:26:07.000Z",
+   "programId": "3parcLrT7WnXAcyPfkCz49oofuuf2guUKkjuFkAhZW8Y"
+  },
+  "Marinade": {
+   "lastDeployAt": "2026-07-16T14:33:16.000Z",
+   "programId": "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD"
+  },
+  "Pyth": {
+   "lastDeployAt": "2026-08-26T16:00:49.000Z",
+   "programId": "HDwcJBJXjL9FpJ7UBsYBtaDjsBUhuLCUYoz3zr8SWWaQ"
+  },
+  "Jito": {
+   "lastDeployAt": "2026-06-16T02:26:19.000Z",
+   "programId": "Stewardf95sJbmtcZsyagb2dg4Mo8eVQho8gpECvLx8"
+  },
+  "Zebec": {
+   "lastDeployAt": "2024-02-17T14:38:06.000Z",
+   "programId": "b6ZPysThkApNx2YDiGsPUiYPE7Ub1kTRdCWp7gBkzbr"
+  },
+  "Wick": {
+   "lastDeployAt": "2026-06-27T19:09:50.000Z",
+   "programId": "wickHYqFr8NayYurE8M4oT8F4ZrYUwzaFoiXctCDSmF"
+  },
+  "Onre Finance": {
+   "lastDeployAt": "2026-08-27T13:31:07.000Z",
+   "programId": "onreuGhHHgVzMWSkj2oQDLDtvvGvoepBPkqyaubFcwe"
+  },
+  "MetaDAO": {
+   "lastDeployAt": "2026-05-29T19:49:53.000Z",
+   "programId": "FUTARELBfJfQ8RDGhg1wdhddq1odMAJUePHFuBYfUxKq"
+  },
+  "Helium": {
+   "lastDeployAt": "2026-09-25T00:23:40.000Z",
+   "programId": "credMBJhYFzfn7NxBMdU4aUqFggAjgztaCcv2Fo6fPT"
+  },
+  "Voltr": {
+   "lastDeployAt": "2026-09-08T02:24:36.000Z",
+   "programId": "vVoLTRjQmtFpiYoegx285Ze4gsLJ8ZxgFKVcuvmG1a8"
+  },
+  "Tessera V": {
+   "lastDeployAt": "2026-09-11T03:21:52.000Z",
+   "programId": "TessVdML9pBGgG9yGks7o4HewRaXVAMuoVj4x83GLQH"
+  },
+  "deBridge": {
+   "lastDeployAt": "2024-12-02T10:44:38.000Z",
+   "programId": "DEbrdGj3HsRsAzx6uH4MKyREKxVAfBydijLUF3ygsFfh"
+  },
+  "BisonFi": {
+   "lastDeployAt": "2026-09-21T15:52:40.000Z",
+   "programId": "BiSoNHVpsVZW2F7rx2eQ59yQwKxzU5NvBcmKshCSUypi"
+  },
+  "HumidiFi": {
+   "lastDeployAt": "2026-09-23T04:19:23.000Z",
+   "programId": "9H6tua7jkLhdm3w8BvgpTn5LZNU7g4ZynDmCiNN3q6Rp"
+  },
+  "Photon": {
+   "lastDeployAt": "2026-06-29T03:09:15.000Z",
+   "programId": "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW"
+  },
+  "SPL Stake Pool": {
+   "lastDeployAt": "2026-06-30T12:53:10.000Z",
+   "programId": "SPoo1Ku8WFXoNDMHPsrGSTSG1Y47rzgn41SLUNakuHy"
+  },
+  "LayerZero OFT": {
+   "lastDeployAt": "2026-01-30T09:04:02.000Z",
+   "programId": "A8W6AL4JhE4EDDcfXZ1Q8vQpwp83AnPj4UZ6y86gVFKN"
+  },
+  "SolvBTC": {
+   "lastDeployAt": "2025-10-31T04:46:16.000Z",
+   "programId": "soLv1S6GsAEVEnXmVY3oz6GtrNJteQ28iTyRQrHXvkz"
+  },
+  "GMSOL": {
+   "lastDeployAt": "2026-08-12T07:34:23.000Z",
+   "programId": "Gmso1uvJnLbawvw7yezdfCDcPydwW2s2iqG3w6MDucLo"
+  },
+  "Ore": {
+   "lastDeployAt": "2026-09-14T23:16:11.000Z",
+   "programId": "oreV3EG1i9BEgiAJ8b177Z2S2rMarzak4NMv1kULvWv"
+  },
+  "Carrot": {
+   "lastDeployAt": "2026-04-15T09:10:04.000Z",
+   "programId": "CarrotwivhMpDnm27EHmRLeQ683Z1PufuqEmBZvD282s"
+  },
+  "DefiTuna": {
+   "lastDeployAt": "2026-09-23T15:05:43.000Z",
+   "programId": "tuna4uSQZncNeeiAMKbstuxA9CUkHH6HmC64wgmnogD"
+  },
+  "Phoenix Eternal": {
+   "lastDeployAt": "2026-09-15T18:57:02.000Z",
+   "programId": "EtrnLzgbS7nMMy5fbD42kXiUzGg8XQzJ972Xtk1cjWih"
+  },
+  "Adrena": {
+   "lastDeployAt": "2026-06-06T15:10:34.000Z",
+   "programId": "13gDzEXCdocbj8iAiqrScGo47NiSuYENGsRqi3SEAwet"
+  }
+ }
+}

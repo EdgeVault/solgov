@@ -994,7 +994,7 @@ function buildOpenApiSpec(host: string): any {
       '/api/v1/state': {
         get: {
           summary: 'Full monitor state (heavy)',
-          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _adminPath, _publicCommitsAhead, _govActivity, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). ~100 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
+          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _adminPath, _publicCommitsAhead, _govActivity, _programDeploys, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). ~100 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
           responses: { '200': { description: 'Complete state object' } },
         },
       },
@@ -1223,6 +1223,10 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
       attach('_oracleConfig', 'oracle-config.json');
       attach('_adminPath', 'admin-path.json');
       attach('_govActivity', 'gov-activity.json');
+      try {
+        const pd = path.join(__dirname, '..', 'data', 'program-deploys.json');
+        if (fs.existsSync(pd)) { const j = JSON.parse(fs.readFileSync(pd, 'utf-8')); raw._programDeploys = { scannedAt: j.scannedAt, complete: j.complete, programs: j.programs, protocols: j.protocols }; }
+      } catch { /* optional */ }
       // Public commits ahead of each verified build. The git facts are attached; the keyword-ranked
       // candidate list is stripped here because a keyword match is not evidence and must not name a
       // team on the public API. Full detail stays in the data file for the risk team.
@@ -1714,6 +1718,7 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
       { name: 'integrity', file: 'monitor-state.json#_integrity', expectedHours: 36, stampAt: state?._integrity?.scannedAt || null },
       { name: 'activityLog', file: 'activity-log.jsonl', expectedHours: 48, stampAt: (() => { try { return new Date(fs.statSync(path.join(dataDir, 'activity-log.jsonl')).mtimeMs).toISOString(); } catch { return null; } })() },
       { name: 'govActivity', file: 'gov-activity.json', expectedHours: 36, stampAt: stampOf(readJson('gov-activity.json'), ['generatedAt']) },
+      { name: 'programDeploys', file: 'program-deploys.json', expectedHours: 6, stampAt: stampOf(readJson('program-deploys.json'), ['scannedAt']) },
       { name: 'independence', file: 'independence-scores.json', expectedHours: 36, stampAt: stampOf(readJson('independence-scores.json'), ['computedAt']) },
       { name: 'pendingUpgrades', file: 'pending-upgrades.json', expectedHours: 36, stampAt: stampOf(readJson('pending-upgrades.json'), ['scannedAt']) },
       { name: 'verifiedBuilds', file: 'verified-builds.json', expectedHours: 24 * 9, stampAt: stampOf(readJson('verified-builds.json'), ['scannedAt']) },

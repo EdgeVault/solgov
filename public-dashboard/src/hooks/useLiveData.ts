@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import type { Protocol } from '../data/protocols';
 import snapshot from '../data/live-snapshot.json';
+import deploysSnapshot from '../data/program-deploys.json';
 import { decodeRole, canVote } from '../lib/roles';
 import { effectiveVoters, meetsSquadsBenchmark } from '../lib/benchmark';
 import { formatTimelock, parseTime } from '../lib/time';
@@ -205,6 +206,13 @@ export interface GovActivityEntry {
 }
 export interface GovActivity { generatedAt: string; entries: Record<string, GovActivityEntry> }
 
+// Latest deploy of every tracked program, read from its ProgramData (sentinel/src/program-deploys.ts).
+export interface ProgramDeploys {
+  scannedAt: string;
+  programs: Record<string, { protocol: string; name: string; deployedAt: string | null; authority: string | null; sizeKB?: number }>;
+  protocols: Record<string, { lastDeployAt: string; programId: string }>;
+}
+
 const CACHE_KEY = 'solgov-live-state-v1';
 
 function readCache(): MonitorState | null {
@@ -255,6 +263,7 @@ export interface LiveDataResult {
   liveMeta: { generatedAt: string; stateFileWrittenAt: string } | null;
   liveOracleConfig: { scannedAt: string; results: any[] } | null;
   liveGovActivity: GovActivity | null;
+  liveProgramDeploys: ProgramDeploys | null;
 }
 
 export function useLiveData(staticProtocols: Protocol[]): LiveDataResult {
@@ -325,7 +334,7 @@ function mergeLiveState(
   now: number,
 ): LiveDataResult {
   if (!loaded) {
-    return { protocols: staticProtocols, lastScan: null, newestScan: null, staleEntries: 0, trackedEntries: 0, isLive: false, dataSource: 'static', liveGovernanceNames: new Set(), liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [], liveOracles: [], liveIndependence: null, livePendingUpgrades: null, liveVerifiedBuilds: null, liveTokenTransparency: null, liveMeta: null, liveOracleConfig: null, liveGovActivity: null };
+    return { protocols: staticProtocols, lastScan: null, newestScan: null, staleEntries: 0, trackedEntries: 0, isLive: false, dataSource: 'static', liveGovernanceNames: new Set(), liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [], liveOracles: [], liveIndependence: null, livePendingUpgrades: null, liveVerifiedBuilds: null, liveTokenTransparency: null, liveMeta: null, liveOracleConfig: null, liveGovActivity: null, liveProgramDeploys: null };
   }
 
   const liveState = loaded.data;
@@ -404,6 +413,10 @@ function mergeLiveState(
   }
 
   // Verified builds are only trusted while the scan is recent; an old scan falls back to the static flag.
+  // Live deploy scan, or the bundled snapshot when the API has not served one.
+  const programDeploys: ProgramDeploys | null =
+    !isObj(ls._programDeploys) ? (deploysSnapshot as unknown as ProgramDeploys) :
+    isObj(ls._programDeploys) && isObj(ls._programDeploys.protocols) && isObj(ls._programDeploys.programs) ? ls._programDeploys : null;
   const vbRaw = ls._verifiedBuilds;
   const vbAt = parseTime(vbRaw?.scannedAt);
   const liveVerifiedBuilds = isObj(vbRaw) && Array.isArray(vbRaw.programs) && vbAt !== null && now - vbAt <= VERIFIED_BUILDS_MAX_AGE_MS ? vbRaw as LiveDataResult['liveVerifiedBuilds'] : null;
@@ -432,8 +445,23 @@ function mergeLiveState(
     // edited and contradict a live-corrected lastUpgrade.
     const liveLatestUpgrade = latestUpgradeByProtocol[p.name];
     let baseUpdated = { ...p, upgradesLast30d: upgradeKeysByProtocol[p.name]?.size ?? 0 };
-    if (liveLatestUpgrade && (!p.lastUpgrade || liveLatestUpgrade > p.lastUpgrade)) {
+    // The deploy slot in each program's ProgramData is the authoritative last-upgrade date. The activity
+    // log only covers recent events, so it is used only when the deploy scan is unavailable.
+    const deployed = programDeploys?.protocols?.[p.name]?.lastDeployAt;
+    if (typeof deployed === 'string') {
+      baseUpdated = { ...baseUpdated, lastUpgrade: deployed.slice(0, 10) };
+    } else if (liveLatestUpgrade && (!p.lastUpgrade || liveLatestUpgrade > p.lastUpgrade)) {
       baseUpdated = { ...baseUpdated, lastUpgrade: liveLatestUpgrade };
+    }
+    // Each program's current upgrade authority, read from its ProgramData.
+    if (programDeploys?.programs && Array.isArray(p.programs)) {
+      baseUpdated = {
+        ...baseUpdated,
+        programs: p.programs.map(pr => {
+          const live = programDeploys.programs[pr.id];
+          return live && typeof live.authority === 'string' ? { ...pr, authority: live.authority } : pr;
+        }),
+      };
     }
     // Verified builds from the live otter-verify scan replace the static flag. The scan re-validates
     // the deployed hash locally and follows the Solana Explorer's signer policy, so it also catches a
@@ -556,6 +584,6 @@ function mergeLiveState(
   return {
     protocols: merged, lastScan, newestScan, staleEntries, trackedEntries,
     isLive, dataSource: loaded.source, liveGovernanceNames,
-    liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveMeta, liveOracleConfig, liveGovActivity,
+    liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveMeta, liveOracleConfig, liveGovActivity, liveProgramDeploys: programDeploys,
   };
 }

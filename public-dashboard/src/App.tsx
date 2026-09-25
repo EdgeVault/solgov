@@ -652,7 +652,7 @@ function roleBenchmarkTip(r: any): string {
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
 
 function App() {
-  const { protocols: liveProtocols, lastScan, newestScan, staleEntries, trackedEntries, isLive, dataSource, liveGovernanceNames, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveOracleConfig, liveMeta, liveGovActivity } = useLiveData(PROTOCOLS);
+  const { protocols: liveProtocols, lastScan, newestScan, staleEntries, trackedEntries, isLive, dataSource, liveGovernanceNames, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveOracleConfig, liveMeta, liveGovActivity, liveProgramDeploys } = useLiveData(PROTOCOLS);
   const daoNameSet = useMemo(() => new Set((liveDaos || []).map(d => d.name)), [liveDaos]);
   const oracleByProtocol = useMemo(() => new Map((liveOracles || []).map(o => [o.protocol, o])), [liveOracles]);
   // Queued Squads proposals per protocol that would upgrade a program, move its upgrade authority or
@@ -1763,7 +1763,7 @@ function App() {
       </>)}
 
       {activeTab === 'govwatch' && (
-        <GovWatchView protocols={liveProtocols} liveStates={liveStates} liveActivity={liveActivity} liveHistorical={liveHistorical} historicalAsOf={historicalAsOf} govActivity={liveGovActivity ?? (govActivitySnapshot as GovActivity)} pendingByProtocol={pendingByProtocol} daoNames={daoNameSet} />
+        <GovWatchView protocols={liveProtocols} liveStates={liveStates} liveActivity={liveActivity} liveHistorical={liveHistorical} historicalAsOf={historicalAsOf} govActivity={liveGovActivity ?? (govActivitySnapshot as GovActivity)} pendingByProtocol={pendingByProtocol} programDeploys={liveProgramDeploys} daoNames={daoNameSet} />
       )}
 
       {activeTab === 'blast' && (
@@ -1862,7 +1862,7 @@ function pendingTip(q: PendingItem[]): string {
   return `Squads proposals not yet executed that can still execute on-chain. Queued means approved and waiting only on execution; proposed means still collecting approvals.\n${lines.join('\n')}`;
 }
 
-function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, liveHistorical, historicalAsOf, govActivity, pendingByProtocol, daoNames }: { protocols: typeof PROTOCOLS; liveStates: Record<string, any>; liveActivity: { date: string; timestamp: string; protocol: string; type: string; detail: string }[]; liveHistorical: Record<string, import('./hooks/useLiveData').HistoricalProtocolState>; historicalAsOf: string | null; govActivity: GovActivity | null; pendingByProtocol: Map<string, import('./hooks/useLiveData').PendingUpgrade[]>; daoNames: Set<string> }) {
+function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, liveHistorical, historicalAsOf, govActivity, pendingByProtocol, programDeploys, daoNames }: { programDeploys: import('./hooks/useLiveData').ProgramDeploys | null; protocols: typeof PROTOCOLS; liveStates: Record<string, any>; liveActivity: { date: string; timestamp: string; protocol: string; type: string; detail: string }[]; liveHistorical: Record<string, import('./hooks/useLiveData').HistoricalProtocolState>; historicalAsOf: string | null; govActivity: GovActivity | null; pendingByProtocol: Map<string, import('./hooks/useLiveData').PendingUpgrade[]>; daoNames: Set<string> }) {
   const [selectedProtocol, setSelectedProtocol] = useState<string | null>(null);
   // Same as the dashboard table: bring the expanded detail row into view when a protocol near the
   // bottom is opened, so the click doesn't look like nothing happened.
@@ -1933,6 +1933,15 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
     const p = liveByName[name] || PROTOCOLS.find(x => x.name === name);
     const a = p?.multisigAddress ? govActivity?.entries[p.multisigAddress] : undefined;
     return a && a.complete ? a : null;
+  }
+
+  // The protocol's programs with their live deploy date and size, newest deploy first.
+  function liveProgramsOf(name: string): { id: string; name: string; deployedAt: string | null; sizeKB?: number }[] {
+    if (!programDeploys?.programs) return [];
+    return Object.entries(programDeploys.programs)
+      .filter(([, p]) => p.protocol === name && p.deployedAt)
+      .map(([id, p]) => ({ id, name: p.name, deployedAt: p.deployedAt, sizeKB: p.sizeKB }))
+      .sort((a, b) => (b.deployedAt || '').localeCompare(a.deployedAt || ''));
   }
 
   function getEffectiveGov(name: string, baseGov: typeof GOV_PROFILES[string]) {
@@ -2248,22 +2257,17 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                             );
                           })()}
                           {(() => {
-                            const protoFeed = (ACTIVITY_FEED as { date: string; protocol: string; type: string; detail: string }[]).filter(e => e.protocol === name);
-                            const vaultCount = protoFeed.filter(e => e.type === 'VaultTx').reduce((sum, e) => {
-                              const m = e.detail.match(/\(x(\d+)\)/); return sum + (m ? parseInt(m[1]) : 1);
-                            }, 0);
-                            const slCount = protoFeed.filter(e => e.type === 'SpendingLimit').reduce((sum, e) => {
-                              const m = e.detail.match(/\(x(\d+)\)/); return sum + (m ? parseInt(m[1]) : 1);
-                            }, 0);
+                            // Vault execution and spending-limit counts come from the full-history activity
+                            // data (proposals approved and spending limit uses, further down).
                             return (
                               <div className="mt-1 space-y-0.5">
-                                {vaultCount > 0 && <p><span className="text-gray-500">Vault executions:</span> <span className="text-gray-300">{vaultCount}</span></p>}
-                                {slCount > 0 && <p><span className="text-gray-500">Spending limit uses:</span> <span className="text-gray-300">{slCount}</span></p>}
                                 <p><span className="text-gray-500">Config changes:</span> <span className="text-gray-300">{g.configChanges}</span></p>
                               </div>
                             );
                           })()}
                           {(() => {
+                            // Live per-program deploys (below) replace the dated single-program fields.
+                            if (liveProgramsOf(name).length > 0) return null;
                             const hasMultipleProgs = (g.programUpgrades?.length ?? 0) > 1;
                             if (hasMultipleProgs) return null;
                             const sizeLabel = g.programSizeKB === 10240
@@ -2336,7 +2340,16 @@ function GovWatchView({ protocols: liveProtocols, liveStates, liveActivity, live
                               </div>
                             </>
                           )}
-                          {g.programUpgrades && g.programUpgrades.length > 0 && (
+                          {liveProgramsOf(name).length > 0 ? (
+                            <>
+                              <h4 className="font-bold text-white mt-3 mb-1">Programs <Tooltip text="Last deploy date and current size of each program, read from its ProgramData account on-chain."><InfoIcon /></Tooltip></h4>
+                              <div className="space-y-0.5">
+                                {liveProgramsOf(name).map(pr => (
+                                  <p key={pr.id} className="text-[11px]"><span className="text-gray-500">{pr.name}:</span> <span className="text-gray-300">last deployed {pr.deployedAt ? pr.deployedAt.slice(0, 10) : 'unknown'}</span>{pr.sizeKB ? <span className="text-gray-500"> · {pr.sizeKB} KB</span> : null}</p>
+                                ))}
+                              </div>
+                            </>
+                          ) : g.programUpgrades && g.programUpgrades.length > 0 && (
                             <>
                               <h4 className="font-bold text-white mt-3 mb-1">Program Upgrades</h4>
                               <div className="space-y-0.5">

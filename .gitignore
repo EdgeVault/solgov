@@ -136,6 +136,7 @@ sentinel/src/*.ts
 !sentinel/src/bot-lookups.ts
 !sentinel/src/migrate-tracked-subscriptions.ts
 !sentinel/src/gov-activity.ts
+!sentinel/src/program-deploys.ts
 
 # Investigation reports (forensics scratch, not part of the product)
 sentinel/src/investigations/

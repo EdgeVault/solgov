@@ -257,6 +257,71 @@ function normalizeConfigAuthority(value: unknown): string {
   return trimmed;
 }
 
+// Timelock seconds as a label: None, N/A (no timelock concept), 10min, 1h, 1h 30min, 3d.
+function timelockLabel(sec: number): string {
+  if (sec === -1) return 'N/A';
+  if (!Number.isFinite(sec) || sec <= 0) return 'None';
+  if (sec < 3600) return `${Math.round(sec / 60)}min`;
+  if (sec < 48 * 3600) {
+    const m = Math.round(sec / 60);
+    return m % 60 ? `${Math.floor(m / 60)}h ${m % 60}min` : `${m / 60}h`;
+  }
+  return `${Math.round(sec / 86400)}d`;
+}
+
+// Monitor-state keys that predate the dashboard's protocol names.
+const STATE_TO_PROTOCOL_NAME: Record<string, string> = { 'Pumpfun': 'Pumpfun + PumpSwap', 'Huma': 'Huma Finance' };
+
+// Scanner outputs attached to the per-protocol governance responses. Each is optional: when a file is
+// missing or unreadable the related fields are null rather than guessed.
+function readScannerJson(file: string): any | null {
+  try { return JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', file), 'utf-8')); } catch { return null; }
+}
+
+interface ScannerExtras { deploys: any | null; pending: any | null; activity: any | null }
+
+function loadScannerExtras(): ScannerExtras {
+  return { deploys: readScannerJson('program-deploys.json'), pending: readScannerJson('pending-upgrades.json'), activity: readScannerJson('gov-activity.json') };
+}
+
+// Squads proposals for this multisig that are open or approved, not executed, and can still execute
+// (the scanner checks Squads rules and every buffer, target account and authority the proposal needs).
+function queuedProposalsFor(stateKey: string, x: ScannerExtras): any[] | null {
+  if (!x.pending || !Array.isArray(x.pending.results)) return null;
+  const names = new Set([stateKey, STATE_TO_PROTOCOL_NAME[stateKey]].filter(Boolean));
+  return x.pending.results
+    .filter((r: any) => names.has(r.protocol) && r.executable === true)
+    .map((r: any) => ({
+      proposalIndex: r.proposalIndex,
+      proposal: r.proposalPda,
+      status: r.status === 'Approved' ? 'approved' : 'proposed',
+      approvals: r.approvals,
+      threshold: r.threshold,
+      kind: r.kind,
+      programId: r.programId ?? null,
+      detail: r.detail,
+    }));
+}
+
+function programDeploysFor(stateKey: string, x: ScannerExtras): { lastUpgrade: any; programs: any[] } | null {
+  if (!x.deploys || !x.deploys.programs) return null;
+  const name = STATE_TO_PROTOCOL_NAME[stateKey] || stateKey;
+  const programs = Object.entries(x.deploys.programs as Record<string, any>)
+    .filter(([, p]) => p.protocol === name)
+    .map(([id, p]) => ({ programId: id, name: p.name, lastDeployedAt: p.deployedAt ?? null, upgradeAuthority: p.authority ?? null, sizeKB: p.sizeKB ?? null }));
+  const latest = x.deploys.protocols?.[name];
+  return { lastUpgrade: latest ? { at: latest.lastDeployAt, programId: latest.programId } : null, programs };
+}
+
+function governanceActivityFor(stateKey: string, x: ScannerExtras): any | null {
+  if (!x.activity || !x.activity.entries) return null;
+  const name = STATE_TO_PROTOCOL_NAME[stateKey] || stateKey;
+  const hit = Object.entries(x.activity.entries as Record<string, any>).find(([, e]) => e.name === name && e.complete);
+  if (!hit) return null;
+  const [address, e] = hit;
+  return { multisig: address, generatedAt: x.activity.generatedAt, ...e, name: undefined, complete: undefined };
+}
+
 const processedSignatures = new Set<string>();
 const MAX_DEDUP_SIZE = 10_000;
 
@@ -954,7 +1019,7 @@ function buildOpenApiSpec(host: string): any {
       '/api/v1/governance': {
         get: {
           summary: 'Live governance slice for every tracked protocol',
-          description: 'One row per tracked protocol with current threshold, signer count, timelock, configAuthority, pending proposals, threat alerts, and governance model. Refreshed within ~30 minutes. Each row also includes `lastChecked` and `stalenessHours` so freshness is self-reporting.',
+          description: 'One row per tracked protocol with current threshold, signer count, timelock, configAuthority, pending proposals, threat alerts, last program upgrade and governance model. Refreshed within ~30 minutes. Each row also includes `lastChecked` and `stalenessHours` so freshness is self-reporting. `pendingProposals` counts Squads proposals that are open or approved, not executed, and can still execute (the scanner checks Squads rules and every deploy buffer, target account and authority a proposal needs); null when that scan is unavailable. `lastUpgradeAt` is the latest deploy across the protocol\'s programs, read from each program\'s ProgramData.',
           parameters: [{ name: 'protocols', in: 'query', schema: { type: 'string' }, description: 'Comma-separated names to filter (case-insensitive substring match)' }],
           responses: { '200': { description: 'Map of protocol to governance slice' } },
         },
@@ -962,7 +1027,11 @@ function buildOpenApiSpec(host: string): any {
       '/api/v1/governance/{protocol}': {
         get: {
           summary: 'Single-protocol governance slice (with members)',
-          description: 'Same shape as `/governance` but for one protocol. Adds the full member list, threat alert detail, program upgrade authorities, and `governanceModel`. Name match is case-insensitive with substring fallback.',
+          description: 'Same shape as `/governance` but for one protocol. Adds the full member list, threat alert detail, program upgrade authorities and `governanceModel`, plus:\n' +
+            '- `queuedProposals`: each proposal that can still execute (`status` approved or proposed, approvals/threshold, kind, programId, detail).\n' +
+            '- `lastUpgrade` `{ at, programId }` and `programs[]` `{ programId, name, lastDeployedAt, upgradeAuthority, sizeKB }`, read from ProgramData every 3 hours.\n' +
+            '- `activity`: counts read from the headline multisig\'s full on-chain history (refreshed daily): `created`, `totalTxs`, `configChanges`, `configDates`, members added/removed, threshold and timelock changes, `approvedProposals` (proposals executed), `rejectedProposals` (rejected and never executed), `cancelledProposals`, `proposers`/`approvers`/`executors` (distinct signers), `activeVoters90d`, `neverSignedCount`, proposal-to-execution hours and `offHoursConfigChanges` (22:00-06:00 UTC). Keyed to the multisig address it was read from.\n' +
+            'Name match is case-insensitive with substring fallback. Fields whose source scan is unavailable are null.',
           parameters: [{ name: 'protocol', in: 'path', required: true, schema: { type: 'string' } }],
           responses: {
             '200': { description: 'Governance slice' },
@@ -994,21 +1063,22 @@ function buildOpenApiSpec(host: string): any {
       '/api/v1/state': {
         get: {
           summary: 'Full monitor state (heavy)',
-          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _adminPath, _publicCommitsAhead, _govActivity, _programDeploys, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). ~100 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
+          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _adminPath, _publicCommitsAhead, _govActivity, _programDeploys, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). `_govActivity.entries` is keyed by multisig address; `_programDeploys` holds per-program deploy dates and authorities, latest deploy per protocol, and role-multisig configurations. Each protocol\'s `pendingProposals` is the count of proposals that can still execute (see `/governance`). ~150 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
           responses: { '200': { description: 'Complete state object' } },
         },
       },
       '/api/v1/historical': {
         get: {
           summary: 'Scan-derived aggregates (refreshed weekly)',
-          description: 'Cumulative on-chain activity counts per protocol: total transactions, approved/rejected/cancelled proposals, configuration changes, program upgrades, unique fee payers. Recomputed weekly via an incremental on-chain scan. Each entry has its own `lastUpdated` timestamp; expect entries to be up to 7 days behind the live `/governance` view.',
+          deprecated: true,
+          description: 'Deprecated: the scan behind this endpoint is no longer run, and some entries describe multisigs that protocols have since replaced. Use the `activity` field of `/governance/{protocol}` (or `_govActivity` in `/state`), which is read from each current multisig\'s full on-chain history and refreshed daily. Kept for existing clients; each entry has its own `lastUpdated` timestamp.',
           responses: { '200': { description: 'Historical aggregates per protocol, with per-entry lastUpdated' } },
         },
       },
       '/api/v1/health': {
         get: {
           summary: 'Freshness of every data surface',
-          description: 'Reports each data surface the API serves (live multisig state, integrity scan, activity log, weekly historical aggregates, independence scores, pending upgrades, verified builds, token transparency, oracle reads, DAO risk) with its last stamp, age in hours and whether it is stale against the cadence its producer is expected to run on. `status` is `ok` when nothing is stale and `degraded` otherwise; `staleSurfaces` lists the names. Intended for client-side freshness assertions and for catching a stopped cron.',
+          description: 'Reports each data surface the API serves (live multisig state, integrity scan, activity log, governance activity, program deploys, independence scores, pending upgrades, verified builds, token transparency, oracle reads, DAO risk, admin path, public commits) with its last stamp, age in hours and whether it is stale against the cadence its producer is expected to run on. `status` is `ok` when nothing is stale and `degraded` otherwise; `staleSurfaces` lists the names. Intended for client-side freshness assertions and for catching a stopped cron.',
           responses: { '200': { description: 'Per-surface freshness report' } },
         },
       },
@@ -1223,6 +1293,16 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
       attach('_oracleConfig', 'oracle-config.json');
       attach('_adminPath', 'admin-path.json');
       attach('_govActivity', 'gov-activity.json');
+      // pendingProposals in monitor-state is a recent-activity heuristic; serve the count of proposals
+      // that can actually still execute, from the pending-upgrades scan, or null when it is unavailable.
+      {
+        const extras = { deploys: null, pending: raw._pendingUpgrades ?? null, activity: null };
+        for (const k of Object.keys(raw)) {
+          if (k.startsWith('_') || !raw[k] || typeof raw[k] !== 'object') continue;
+          const q = queuedProposalsFor(k, extras);
+          raw[k].pendingProposals = q ? q.length : null;
+        }
+      }
       try {
         const pd = path.join(__dirname, '..', 'data', 'program-deploys.json');
         if (fs.existsSync(pd)) { const j = JSON.parse(fs.readFileSync(pd, 'utf-8')); raw._programDeploys = { scannedAt: j.scannedAt, complete: j.complete, programs: j.programs, protocols: j.protocols }; }
@@ -1297,6 +1377,7 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
         .sort();
       const out: Record<string, any> = {};
       const now = Date.now();
+      const extras = loadScannerExtras();
       for (const name of all) {
         const p = state[name];
         const lastCheckedIso: string | null = p.lastChecked || null;
@@ -1304,7 +1385,9 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
           ? Math.round((now - new Date(lastCheckedIso).getTime()) / 3600_000)
           : null;
         const tlSec = p.timeLock ?? 0;
-        const tlLabel = tlSec === 0 ? 'None' : tlSec === -1 ? 'N/A' : `${Math.round(tlSec / 3600)}h`;
+        const tlLabel = timelockLabel(tlSec);
+        const queued = queuedProposalsFor(name, extras);
+        const deploys = programDeploysFor(name, extras);
         const memberKeysRaw: string[] = (p.members || []).map((m: any) =>
           typeof m === 'string' ? m : (m.key || m.publicKey || '')
         );
@@ -1320,7 +1403,8 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
           timelock: { seconds: tlSec, label: tlLabel },
           configAuthority: normalizeConfigAuthority(p.configAuthority),
           openThreatAlerts: (p.threatAlerts || []).length,
-          pendingProposals: p.pendingProposals ?? 0,
+          pendingProposals: queued ? queued.length : null,
+          lastUpgradeAt: deploys?.lastUpgrade?.at ?? null,
         };
       }
       res.setHeader('Content-Type', 'application/json');
@@ -1508,11 +1592,14 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
         ? Math.round((Date.now() - new Date(lastCheckedIso).getTime()) / 3600_000)
         : null;
       const tlSec = p.timeLock ?? 0;
-      const tlLabel = tlSec === 0 ? 'None' : tlSec === -1 ? 'N/A' : `${Math.round(tlSec / 3600)}h`;
+      const tlLabel = timelockLabel(tlSec);
       const memberKeysRaw: string[] = (p.members || []).map((m: any) =>
         typeof m === 'string' ? m : (m.key || m.publicKey || '')
       );
       const memberKeys = Array.from(new Set(memberKeysRaw.filter(Boolean)));
+      const extras = loadScannerExtras();
+      const queued = queuedProposalsFor(matchKey, extras);
+      const deploys = programDeploysFor(matchKey, extras);
       const threats = (p.threatAlerts || []).map((t: any) => ({
         severity: t.severity,
         category: t.category,
@@ -1539,8 +1626,12 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
         configAuthority: normalizeConfigAuthority(p.configAuthority),
         openThreatAlerts: threats.length,
         threatAlerts: threats,
-        pendingProposals: p.pendingProposals ?? 0,
+        pendingProposals: queued ? queued.length : null,
+        queuedProposals: queued,
         programAuthorities: p.programAuthorities || {},
+        lastUpgrade: deploys?.lastUpgrade ?? null,
+        programs: deploys?.programs ?? null,
+        activity: governanceActivityFor(matchKey, extras),
         source: `https://solgov.xyz`,
       }));
     } catch (e: any) {

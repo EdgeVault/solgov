@@ -32,6 +32,25 @@ function timelockLabel(sec: number | undefined): string {
   return `${Math.round(sec / 8640) / 10}d timelock`;
 }
 
+// Short timelock label for bot replies: None, N/A, 10min, 1h, 1h 30min.
+export function timelockShort(sec: number): string {
+  if (sec === -1) return 'N/A';
+  if (!Number.isFinite(sec) || sec <= 0) return 'None';
+  if (sec < 3600) return `${Math.round(sec / 60)}min`;
+  const m = Math.round(sec / 60);
+  return m % 60 ? `${Math.floor(m / 60)}h ${m % 60}min` : `${m / 60}h`;
+}
+
+// Number of proposals for one tracked multisig that can still execute, per the pending-upgrades scan
+// (Squads rules plus every buffer, target account and authority checked). null when no scan exists.
+export function executableProposalCount(stateKey: string, dataDir = DATA_DIR): number | null {
+  const snap = readJsonLoose<any>(path.join(dataDir, 'pending-upgrades.json'), null);
+  if (!snap || !Array.isArray(snap.results)) return null;
+  const alias: Record<string, string> = { 'Pumpfun': 'Pumpfun + PumpSwap', 'Huma': 'Huma Finance' };
+  const names = new Set([stateKey, alias[stateKey]].filter(Boolean));
+  return snap.results.filter((r: any) => names.has(r.protocol) && r.executable === true).length;
+}
+
 // Queued Squads proposals that touch program upgrades, upgrade authority or multisig config.
 export function pendingText(query: string, dataDir = DATA_DIR): string {
   const snap = readJsonLoose<any>(path.join(dataDir, 'pending-upgrades.json'), null);

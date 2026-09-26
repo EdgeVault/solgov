@@ -19,7 +19,7 @@ import { nameMatches, resolveName, findNonceInstruction } from './llm-tools';
 import { addTracked, verifySquadsMultisig, listTracked, MAX_TRACKED } from './user-tracked-multisigs';
 import { Connection } from '@solana/web3.js';
 import { escapeHtml, splitTelegramHtml } from './utils/telegram-html';
-import { pendingText, verifiedText, recentText, healthText, relatedHint } from './bot-lookups';
+import { pendingText, verifiedText, recentText, healthText, relatedHint, executableProposalCount, timelockShort } from './bot-lookups';
 import { alertName } from './utils/display-names';
 
 const TG_TOKEN = process.env.TELEGRAM_BOT_TOKEN!;
@@ -378,7 +378,7 @@ function checkProtocol(name: string): string {
 
     const p = state[match];
     const members = p.members?.length || 0;
-    const tl = p.timeLock === 0 ? 'None' : p.timeLock === -1 ? 'N/A' : `${Math.round(p.timeLock / 3600)}h`;
+    const tl = timelockShort(p.timeLock ?? 0);
     const nonces = p.nonceAlerts?.length || 0;
     const pct = members > 0 ? Math.round((p.threshold / members) * 100) : 0;
 
@@ -603,9 +603,10 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
     const memberCount = protocolState.members?.length ?? 0;
     const thresh = protocolState.threshold ?? '?';
     const tlSec = protocolState.timeLock ?? 0;
-    const tlLabel = tlSec === 0 ? 'None' : tlSec === -1 ? 'N/A' : `${Math.round(tlSec / 3600)}h`;
+    const tlLabel = timelockShort(tlSec);
     const threats = (protocolState.threatAlerts || []) as Array<any>;
-    const pendingProposals = protocolState.pendingProposals ?? 0;
+    // Proposals that can still execute, from the pending-upgrades scan (not monitor-state's activity count).
+    const pendingProposals = executableProposalCount(protocolName || protocol) ?? 0;
 
     const lines: string[] = [];
     lines.push(`<b>${displayName} - ${window} briefing</b>`);

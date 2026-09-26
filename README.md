@@ -27,6 +27,8 @@ Every claim in the dashboard traces to an on-chain RPC read or a named source UR
 
 ## Latest
 
+- Sep 2026: governance activity per protocol (proposals, config changes, signers, execution times) read from each multisig's full on-chain history and refreshed daily; last upgrade, program authorities and governance role multisigs read from the chain every 3 hours; all served per protocol on `/api/governance/{protocol}`
+- Sep 2026: queued proposals shown only when they can still execute on-chain (Squads rules, deploy buffers, target accounts and authorities checked), labelled queued when approved and proposed while collecting approvals
 - Sep 2026: queued Squads proposals surfaced per protocol before execution, with approvals, threshold and timelock read on-chain
 - Sep 2026: verified-build status read live from the on-chain verification PDA and verify.osec.io, replacing the static flag where it is superseded
 - Sep 2026: token and program transparency block added (security.txt, program metadata, Token-2022 extensions), plus STRIDE control mapping, changelog, cadence, badge and RSS endpoints
@@ -83,7 +85,7 @@ The web UI at `solgov.xyz`. Four tabs:
 
 ![Blast Radius: Drift cascade across 22 downstream protocols](docs/blast-radius.png)
 
-Data flows: build-time snapshot bundled into the app, then `/api/state` and `/api/historical` overlay live state on first render.
+Data flows: build-time snapshot bundled into the app, then `/api/state` overlays live state on first render, including governance activity, program deploys and queued proposals.
 
 ### sentinel
 
@@ -91,7 +93,9 @@ The backend that runs on a VPS:
 
 - `solgov-listener.ts` - WebSocket account-subscribe on every tracked Squads V4 multisig. Detects threshold, member, timelock, and configAuthority diffs in real time.
 - `solgov-monitor.ts` - cron-driven full + config scans. Catches anything the listener misses (V3 multisigs, programs where no multisig was found on the upgrade authority, Wormhole, Realms DAO).
-- `solgov-api.ts` - HTTP API. Serves monitor state, historical aggregates, and the governance slice for any tracked protocol. Receives Helius webhooks.
+- `solgov-api.ts` - HTTP API. Serves monitor state and the governance slice for any tracked protocol, including queued proposals, program deploys and full-history governance activity. Receives Helius webhooks.
+- `gov-activity.ts`, `program-deploys.ts`, `pending-upgrades.ts` - scheduled on-chain readers behind those fields (daily, every 3 hours, every 6 hours).
+- `audit-published.ts` - weekly check of published protocol data against live state, source links and research dates; reports internally.
 - `solgov-bot.ts` - Telegram bot. `/status`, `/check`, `/report`, `/nonce`, subscriptions with severity and event-type filters, auto-triage on critical alerts.
 
 ![Telegram bot subscription feed: Yieldbay vault drawdown alerts and a HIGH custody program upgrade on Kamino kLend, severity-tagged with program ID, authority, role, and timestamp](docs/telegram-bot.png)

@@ -26,16 +26,16 @@ fs.writeFileSync(path.join(dir, 'verified-builds.json'), JSON.stringify({
 
 test('pendingText lists proposals with their executability', () => {
   const t = pendingText('orca', dir);
-  assert.match(t, /Queued proposals: Orca/);
-  assert.match(t, /#94 ProgramUpgrade: 1\/5 approvals, 24h timelock, open/);
-  assert.match(t, /#90 ConfigChange: 0\/5 approvals, 24h timelock, can no longer execute/);
+  assert.match(t, /Open proposals: Orca/);
+  assert.match(t, /#94 Program code update: 1 of 5 approvals, 24h timelock, collecting approvals/);
+  assert.match(t, /#90 Multisig settings change: 0 of 5 approvals, 24h timelock, can no longer go through/);
 });
 
 test('pendingText resolves the Velocity alias and keeps approved-but-stale vault transactions executable', () => {
   const t = pendingText('velocity', dir);
   assert.match(t, /Velocity \(formerly Drift\)/);
   // Older snapshots carry stale without executable; stale falls back to not executable.
-  assert.match(t, /#7 ProgramUpgrade: 4\/4 approvals, 1h timelock, can no longer execute/);
+  assert.match(t, /#7 Program code update: 4 of 4 approvals, 1h timelock, can no longer go through/);
 });
 
 test('pendingText handles an unknown protocol and missing data', () => {

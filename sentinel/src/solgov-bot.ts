@@ -20,6 +20,7 @@ import { addTracked, verifySquadsMultisig, listTracked, MAX_TRACKED } from './us
 import { Connection } from '@solana/web3.js';
 import { escapeHtml, splitTelegramHtml } from './utils/telegram-html';
 import { pendingText, verifiedText, recentText, healthText, relatedHint, executableProposalCount, timelockShort } from './bot-lookups';
+import { eventLabel, threatLabel, authorityText } from './utils/event-labels';
 import { alertName } from './utils/display-names';
 
 const TG_TOKEN = process.env.TELEGRAM_BOT_TOKEN!;
@@ -384,24 +385,24 @@ function checkProtocol(name: string): string {
 
     let msg = `<b>${escapeHtml(alertName(match))}</b>\n\n`;
     msg += `<b>Multisig</b>\n`;
-    msg += `Threshold: ${escapeHtml(p.threshold)}/${members} (${pct}%)\n`;
-    msg += `Gov. timelock: ${tl}\n`;
+    msg += `Approvals needed: ${escapeHtml(p.threshold)} of ${members} signers (${pct}%)\n`;
+    msg += `Delay before approved changes take effect (timelock): ${tl}\n`;
     const threats = p.threatAlerts || [];
     if (threats.length > 0) {
-      msg += `\n⚠️ <b>Threat alerts: ${threats.length}</b>\n`;
+      msg += `\n⚠️ <b>Signer risk flags: ${threats.length}</b>\n`;
       for (const t of threats) {
         const icon = t.severity === 'CRITICAL' ? '🚨' : t.severity === 'HIGH' ? '⚠️' : 'ℹ️';
-        msg += `${icon} ${escapeHtml(t.category)}: ${escapeHtml(t.detail)}\n`;
-        msg += `  Signer: ${escapeHtml(t.signer?.slice(0, 8))}... | ${escapeHtml(t.detectedAt)}\n`;
+        msg += `${icon} ${escapeHtml(threatLabel(t.category))}: ${escapeHtml(t.detail)}\n`;
+        msg += `  Signer wallet: ${escapeHtml(t.signer?.slice(0, 8))}... | ${escapeHtml(t.detectedAt)}\n`;
       }
     } else {
-      msg += `Threat scan: Clean\n`;
+      msg += `Signer risk checks: nothing found\n`;
     }
     msg += `Last checked: ${escapeHtml(p.lastChecked?.split('T')[0] || 'unknown')}`;
     if (p.programAuthorities) {
       const auths = Object.entries(p.programAuthorities) as [string, string][];
       if (auths.length > 0) {
-        msg += `\n\n<b>Programs (${auths.length})</b>\n`;
+        msg += `\n\n<b>Who can upgrade each program (${auths.length})</b>\n`;
         const byAuth = new Map<string, string[]>();
         for (const [name, auth] of auths) {
           const list = byAuth.get(auth) || [];
@@ -409,7 +410,7 @@ function checkProtocol(name: string): string {
           byAuth.set(auth, list);
         }
         for (const [auth, names] of byAuth) {
-          const shortAuth = escapeHtml(String(auth).slice(0, 8)) + '...';
+          const shortAuth = auth === 'IMMUTABLE' ? escapeHtml(authorityText(auth)) : `wallet ${escapeHtml(String(auth).slice(0, 8))}...`;
           if (names.length === 1) {
             msg += `${escapeHtml(names[0])}: ${shortAuth}\n`;
           } else {
@@ -474,16 +475,17 @@ async function checkNonce(address: string): Promise<string> {
 
     const shortAddr = escapeHtml(`${address.slice(0, 8)}...${address.slice(-4)}`);
     if (nonceFound) {
-      return `🚨 <b>Durable nonce activity</b>\n\n` +
+      return `🚨 <b>Pre-signed transaction activity found</b>\n` +
+        `<i>This address used a durable nonce: a transaction signed now that can be submitted later.</i>\n\n` +
         `Address: ${shortAddr}\n` +
-        `Instruction: ${escapeHtml(nonceIx)}\n` +
+        `Technical detail: ${escapeHtml(nonceIx)}\n` +
         `Detected: ${nonceTime}\n` +
-        `Signature: ${escapeHtml(nonceSig)}...`;
+        `Transaction: ${escapeHtml(nonceSig)}...`;
     } else {
-      return `✅ <b>No durable nonce instructions found</b>\n\n` +
+      return `✅ <b>No pre-signed transaction activity found</b>\n\n` +
         `Address: ${shortAddr}\n` +
-        `Transactions inspected: ${inspected} most recent of ${recent.length} found (last 20 signatures, 14 day window)\n` +
-        `Durable nonce instructions: none in the inspected transactions`;
+        `Checked: the ${inspected} most recent of ${recent.length} transactions from the last 14 days\n` +
+        `Durable nonce use (sign now, submit later): none found`;
     }
   } catch (e: any) {
     return `Error checking address: ${escapeHtml(e.message?.slice(0, 60))}`;
@@ -640,7 +642,7 @@ async function generateReport(protocol: string, window: '24h' | '7d', userId?: n
         const when = e.date || (e.timestamp ? e.timestamp.slice(0, 10) : '?');
         // Truncate before escaping so the cut never lands inside an entity.
         const detail = e.detail ? ` · ${escapeHtml(String(e.detail).slice(0, 160))}` : '';
-        lines.push(`• ${escapeHtml(when)} - <b>${escapeHtml(e.type)}</b>${detail}`);
+        lines.push(`• ${escapeHtml(when)} - <b>${escapeHtml(eventLabel(e.type))}</b>${detail}`);
       }
       if (deduped.length > shown.length) lines.push(`<i>…and ${deduped.length - shown.length} more</i>`);
     }
@@ -764,7 +766,13 @@ export async function handleCallback(data: string, ctx: { userId: number; chatId
         `<b>Filter your subscription</b>\n\n` +
         `Send <code>/filters severity:CRITICAL</code> to only receive critical alerts.\n\n` +
         `<b>Severity options:</b> CRITICAL, HIGH, MONITOR (comma-separate for multiple)\n` +
-        `<b>Type options:</b> AuthorityChange, ProgramUpgrade, ConfigChange, NONCE, VaultTx, * (all)\n\n` +
+        `<b>Type options</b> (type the code on the left):\n` +
+        `• AuthorityChange: who can upgrade a program changed\n` +
+        `• ProgramUpgrade: a program's code was updated\n` +
+        `• ConfigChange: multisig settings changed (signers, threshold, timelock)\n` +
+        `• NONCE: pre-signed transaction activity on a signer\n` +
+        `• VaultTx: a transaction sent from the multisig\n` +
+        `• * : everything\n\n` +
         `Example: <code>/filters severity:CRITICAL,HIGH types:AuthorityChange,ProgramUpgrade</code>`,
         replyTo,
         replyThread
@@ -992,7 +1000,7 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
       await sendMessage(
         `Usage: /filters severity:CRITICAL,HIGH types:AuthorityChange,ProgramUpgrade\n` +
         `Severity options: CRITICAL, HIGH, MONITOR, or omit for all.\n` +
-        `Type options: ConfigChange, AuthorityChange, ProgramUpgrade, NONCE, VaultTx, or * for all.`,
+        `Type options: AuthorityChange (who can upgrade a program changed), ProgramUpgrade (program code updated), ConfigChange (multisig settings changed), NONCE (pre-signed transaction activity), VaultTx (transaction sent from the multisig), or * for all.`,
         replyTo,
         replyThread
       );
@@ -1022,8 +1030,8 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
     const arg = cmd.slice('/track'.length).trim();
     if (!arg) {
       await sendMessage(
-        `<b>Track a Squads v4 multisig</b>\n\n` +
-        `Submit any Squads v4 multisig address - solgov verifies it on-chain, adds it to the listener, and auto-subscribes you for alerts.\n\n` +
+        `<b>Track a Squads V4 multisig</b>\n\n` +
+        `Send the address of any Squads V4 multisig (a shared wallet where several signers must approve changes). solgov checks it on-chain, starts watching it, and sends its alerts to you privately in this chat.\n\n` +
         `Usage: <code>/track &lt;address&gt; [optional label]</code>\n` +
         `Currently tracked: ${listTracked().length}/${MAX_TRACKED}`,
         replyTo, replyThread,
@@ -1034,7 +1042,8 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
     const address = parts[0];
     const label = parts.slice(1).join(' ').slice(0, 60) || undefined;
     if (!process.env.HELIUS_RPC_URL) {
-      await sendMessage('On-chain verification unavailable: HELIUS_RPC_URL not configured on the bot host.', replyTo, replyThread);
+      console.error('[BOT] /track: HELIUS_RPC_URL not configured');
+      await sendMessage('Checking addresses on-chain is temporarily unavailable. Please try again later.', replyTo, replyThread);
       return;
     }
     await sendMessage(`🔎 Verifying <code>${escapeHtml(address.slice(0, 12))}...</code> on-chain...`, replyTo, replyThread);
@@ -1053,14 +1062,14 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
     await sendMessage(
       `✅ <b>Tracking ${escapeHtml(result.entry!.label)}</b>\n` +
       `Address: <code>${escapeHtml(result.entry!.address)}</code>\n` +
-      `On-chain: ${verified.threshold}/${verified.memberCount} multisig\n` +
-      `Listener will pick up new events on the next WebSocket cycle (~60s).\n` +
-      `You're auto-subscribed for alerts in this DM.`,
+      `Read on-chain: ${verified.threshold} of ${verified.memberCount} signers needed to approve\n` +
+      `Watching starts within about a minute.\n` +
+      `Alerts for it will come to you here, privately.`,
       replyTo, replyThread,
     );
   } else if (cmdLower === '/scan') {
     if (!isAdmin(ctx.userId)) {
-      await sendMessage('Manual scans are admin-only because they fire on-demand RPC calls against every tracked protocol. The dashboard at solgov.xyz and /status here both show live state already, refreshed automatically by the always-on listener.', replyTo, replyThread);
+      await sendMessage('Manual scans are admin-only because each one reads the blockchain for every tracked protocol. The dashboard at solgov.xyz and /status here both show live state already, refreshed automatically by the always-on listener.', replyTo, replyThread);
       return;
     }
     if (scanning) {
@@ -1102,12 +1111,12 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
     scanning = false;
   } else if (cmdLower.startsWith('/nonce ')) {
     if (!isAdmin(ctx.userId)) {
-      await sendMessage('Nonce lookup is admin-only because each call fires several on-demand RPC requests. The CRITICAL/HIGH alert stream surfaces durable-nonce signals automatically as they appear on chain.', replyTo, replyThread);
+      await sendMessage('This lookup is admin-only because each check reads the blockchain several times. Pre-signed transaction activity (durable nonces) on tracked signers is already reported automatically in the CRITICAL and HIGH alerts.', replyTo, replyThread);
       return;
     }
     const address = cmd.slice(7).trim();
     if (!address || address.length < 32) {
-      await sendMessage('Usage: /nonce &lt;solana address&gt;\nChecks last 14 days for durable nonce activity on a specific address.', replyTo, replyThread);
+      await sendMessage('Usage: /nonce &lt;solana address&gt;\nChecks the last 14 days for pre-signed transaction activity (durable nonces: transactions signed now that can be submitted later) on an address.', replyTo, replyThread);
       return;
     }
     await sendMessage(`🔍 Checking ${escapeHtml(address.slice(0, 8))}... for durable nonce activity (14 day window)...`, replyTo, replyThread);

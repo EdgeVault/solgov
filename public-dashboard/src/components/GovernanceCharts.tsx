@@ -378,7 +378,7 @@ function CurrentStateBars({ protocols, liveIntegrity, liveActivity }: { protocol
       count: cbWrapped,
       total: totalTokens,
       label: "Mint authorities wrapped by Helium's open-source circuit breaker",
-      description: 'Mint authority is set to a PDA of the Helium circuit-breaker program (circAbx64...). The program enforces rate-limit rules on every mint, so a compromised protocol authority cannot skip them. Audited by Sec3 and open-source since 2023.',
+      description: 'Mint authority is held by an account controlled by the Helium circuit-breaker program (circAbx64...), which has no private key, so no person can sign for it directly. The program enforces rate-limit rules on every mint, so a compromised protocol authority cannot skip them. Audited by Sec3 and open-source since 2023.',
     },
     {
       key: 'kelp-class-mint',

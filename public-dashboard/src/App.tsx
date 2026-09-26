@@ -73,23 +73,25 @@ import { Tooltip, InfoIcon } from './components/Tooltip';
 import { DaoRiskTab } from './components/DaoRiskTab';
 
 const ACTIVITY_TYPE_LABELS: Record<string, string> = {
-  ConfigChange: 'Config change',
-  VaultTx: 'Vault transaction executed',
+  ConfigChange: 'Multisig settings changed',
+  VaultTx: 'Transaction sent from the multisig',
   SpendingLimit: 'Spending limit used',
-  ProgramUpgrade: 'Program upgrade',
+  ProgramUpgrade: 'Program code updated',
   Approval: 'Proposal approved',
   Rejection: 'Proposal rejected',
   Cancellation: 'Proposal cancelled',
   ProposalCreated: 'Proposal created',
-  TreasuryProposal: 'Proposal moves treasury',
-  AuthorityActivity: 'Authority activity',
-  AuthorityChange: 'Authority changed',
-  ProposalPending: 'Proposal pending',
+  TreasuryProposal: 'Proposal to move treasury funds',
+  AuthorityActivity: 'Activity by a controlling wallet',
+  AuthorityChange: 'Program control changed',
+  ProposalPending: 'Proposal waiting',
   GovernanceActivity: 'Governance activity',
-  MintAuthorityChange: 'Mint authority change',
-  DVNConfigChange: 'DVN config change',
-  OFTRouteChange: 'OFT route change',
-  IntegrityChange: 'Integrity change',
+  MintAuthorityChange: 'Token minting control changed',
+  DVNConfigChange: 'Cross-chain message checks changed',
+  OFTRouteChange: 'Cross-chain token route changed',
+  IntegrityChange: 'Daily check found a change',
+  NONCE: 'Pre-signed transaction activity',
+  GovernanceConfigProposal: 'DAO voting rules change proposed',
   TimelockAdded: 'Timelock added',
   TimelockRemoved: 'Timelock removed',
   TimelockChanged: 'Timelock changed',
@@ -97,13 +99,13 @@ const ACTIVITY_TYPE_LABELS: Record<string, string> = {
   ThresholdLowered: 'Threshold lowered',
   SignersAdded: 'Signers added',
   SignersRemoved: 'Signers removed',
-  SignerRotation: 'Signer rotation',
+  SignerRotation: 'Signers swapped',
   ExternalAdminKeyAdded: 'External admin key set',
   ExternalAdminKeyCleared: 'External admin key cleared',
   ExternalAdminKeyChanged: 'External admin key changed',
   VotersChanged: 'Voting members changed',
-  VoteConcentration: 'Vote concentration',
-  Composability: 'Composability change',
+  VoteConcentration: 'Voting power concentrated',
+  Composability: 'Protocol connection changed',
 };
 
 // Governance-change event types where the detail string is more informative
@@ -116,6 +118,13 @@ const GOV_CHANGE_TYPES: Set<string> = new Set([
   'SignersAdded', 'SignersRemoved', 'SignerRotation', 'VotersChanged',
   'ExternalAdminKeyAdded', 'ExternalAdminKeyCleared', 'ExternalAdminKeyChanged',
 ]);
+
+// Fallback for an event type with no label yet: "SomeNewEvent" or "SOME_EVENT" becomes "Some new event",
+// so a raw code name never reaches the public feed.
+function humaniseEventType(t: string): string {
+  const words = t.replace(/_/g, ' ').replace(/([a-z])([A-Z])/g, '$1 $2').trim().toLowerCase();
+  return words ? words[0].toUpperCase() + words.slice(1) : t;
+}
 
 function canonProtoName(raw: string): string {
   let s = raw.replace(/\s*\([^)]*\)\s*$/, '').trim();
@@ -137,7 +146,7 @@ function cleanLiveActivity(raw: { date: string; protocol: string; type: string; 
     if (e.type === 'Watching') continue;
     const proto = canonProtoName(e.protocol);
     if (e.type === 'VaultTx' && decisionKeys.has(`${e.date}|${proto}`)) continue;
-    let label = ACTIVITY_TYPE_LABELS[e.type] || e.type;
+    let label = ACTIVITY_TYPE_LABELS[e.type] || humaniseEventType(e.type);
     // Governance-change events carry a specific detail string ("Timelock: none -> 24h", "Threshold: 2 -> 3") - surface it over the generic label so the feed shows exactly what changed.
     if (GOV_CHANGE_TYPES.has(e.type) && e.detail) label = e.detail;
     const key = `${e.date}|${proto}|${label}|${e.multisig || ''}`;
@@ -1089,7 +1098,7 @@ function App() {
                   Roles <Tooltip text="The Squads benchmark separates Proposer, Voter, and Executor roles."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
-                  Status <Tooltip text="Governance version capability. V4 supports timelocks natively. V3/legacy does not."><InfoIcon /></Tooltip>
+                  Status <Tooltip text="Which version of the multisig software the protocol uses. The current version (Squads V4) can set a delay before approved changes take effect; the older version (V3) cannot."><InfoIcon /></Tooltip>
                 </th>
                 <th className="px-3 py-2.5 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wide whitespace-nowrap">
                   Insurance <Tooltip text="Funded insurance mechanism based on public documentation."><InfoIcon /></Tooltip>
@@ -1263,8 +1272,8 @@ function App() {
                           </Tooltip>
                         );
                         if (p.version === 'Squads V3' || p.version === 'Serum Multisig') return (
-                          <Tooltip text="This multisig version does not support timelocks or role separation natively. V4 supports governance-level timelocks.">
-                            <span className="text-gray-300/70 whitespace-nowrap">V3/Legacy<InfoIcon /></span>
+                          <Tooltip text="Older multisig version (Squads V3 or Serum). It cannot set a delay before changes take effect or give signers different roles; the current version (Squads V4) can.">
+                            <span className="text-gray-300/70 whitespace-nowrap">Older version<InfoIcon /></span>
                           </Tooltip>
                         );
                         if (!needsFix) return <span className="text-gray-500">N/A</span>;
@@ -1326,7 +1335,7 @@ function App() {
                               <Tooltip text={p.programTimelockNote || 'From public documentation, not independently verified on-chain.'}><span className="text-gray-300 cursor-help whitespace-nowrap">Yes (docs)<InfoIcon /></span></Tooltip>
                             ) : 'Not reported'}</p>
                             <p><span className="text-gray-500">Version:</span> {p.version}</p>
-                            <p><span className="text-gray-500">Can add timelock:</span> {p.canAddTimelock ? 'Yes (V4 config transaction)' : 'Not available on this version'}</p>
+                            <p><span className="text-gray-500">Can add timelock:</span> {p.canAddTimelock ? 'Yes, through a multisig settings change' : 'Not available on this version'}</p>
 
                             {p.governanceRoles && p.governanceRoles.length > 0 && (
                               <>
@@ -2824,15 +2833,15 @@ function BlastRadiusView({ llama, liveProtocols, liveGovernanceNames, independen
                 </div>
                 <div className="bg-white/[0.03] rounded p-2">
                   <p className="text-gray-500">Config changes</p>
-                  <p className="text-gray-300">2 in first 22 days (1 threshold change to 2/5, configAuthority set on May 13, 2024), then stable</p>
+                  <p className="text-gray-300">2 in first 22 days (1 threshold change to 2/5, external admin key set on May 13, 2024), then stable</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2">
                   <p className="text-gray-500">Signing activity hours</p>
                   <p className="text-gray-300">Concentrated UTC 6-14 (2pm-10pm SGT)</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2 md:col-span-3">
-                  <p className="text-gray-500">External configAuthority</p>
-                  <p className="text-gray-300">A single key set as the multisig's configAuthority. This key can change the threshold, add or remove members, and change the timelock without any proposal or vote from the multisig. Squads documentation states a Controlled Multisig is not recommended for most use cases. Drift is the only protocol on solgov where this is set to an external key rather than autonomous.</p>
+                  <p className="text-gray-500">External admin key</p>
+                  <p className="text-gray-300">A single key set as the multisig's external admin key (configAuthority). This key can change the threshold, add or remove members, and change the timelock without any proposal or vote from the multisig. Squads documentation states a Controlled Multisig is not recommended for most use cases. Drift is the only protocol on solgov where this is set to an external key rather than autonomous.</p>
                 </div>
               </div>
 
@@ -2871,8 +2880,8 @@ function BlastRadiusView({ llama, liveProtocols, liveGovernanceNames, independen
                   <p className="text-gray-300">UpdateAdmin on Drift program (changed program admin to attacker-controlled address)</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2 md:col-span-3">
-                  <p className="text-gray-500">External configAuthority (active during exploit)</p>
-                  <p className="text-gray-300">The same configAuthority key was carried over to the new multisig. It could have been used to change settings on the multisig at any point during the 7 day window without going through the multisig approval process.</p>
+                  <p className="text-gray-500">External admin key (active during exploit)</p>
+                  <p className="text-gray-300">The same external admin key was carried over to the new multisig. It could have been used to change settings on the multisig at any point during the 7 day window without going through the multisig approval process.</p>
                 </div>
               </div>
 
@@ -2895,7 +2904,7 @@ function BlastRadiusView({ llama, liveProtocols, liveGovernanceNames, independen
                   <p className="text-gray-300">6 verified Drift programs: Drift Vaults, drift-jit-proxy, Drift Oracle Receiver, drift-stake-voter (Realms vote plugin), drift-competitions (insurance fund prize draws), and merkle-distributor (airdrop). Drift Protocol V2 was the 7th but moved to E44y4Gm on April 2 at 01:39 UTC during recovery.</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2">
-                  <p className="text-gray-500">configAuthority</p>
+                  <p className="text-gray-500">External admin key</p>
                   <p className="text-gray-300">Same A1eC8n2t key as 2LW6PS</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2">
@@ -2912,7 +2921,7 @@ function BlastRadiusView({ llama, liveProtocols, liveGovernanceNames, independen
                 </div>
                 <div className="bg-white/[0.03] rounded p-2 md:col-span-3">
                   <p className="text-gray-500">Why this matters</p>
-                  <p className="text-gray-300">Same five members, same configAuthority, same zero timelock, same Approve+Execute setting. The only differing variable in the multisig flow was threshold. If the configAuthority key had also been compromised, threshold would not have mattered - the attacker could have lowered any threshold to 1, added their own member, and taken over anything those multisigs control. BBC5g controls 6 Drift programs and E44y4Gm controls Drift Protocol V2. A single key compromise on A1eC8n2t maps to taking over the whole Drift program suite.</p>
+                  <p className="text-gray-300">Same five members, same external admin key, same zero timelock, same Approve+Execute setting. The only differing variable in the multisig flow was threshold. If the configAuthority key had also been compromised, threshold would not have mattered - the attacker could have lowered any threshold to 1, added their own member, and taken over anything those multisigs control. BBC5g controls 6 Drift programs and E44y4Gm controls Drift Protocol V2. A single key compromise on A1eC8n2t maps to taking over the whole Drift program suite.</p>
                 </div>
               </div>
 
@@ -2964,12 +2973,12 @@ function BlastRadiusView({ llama, liveProtocols, liveGovernanceNames, independen
                   <p className="text-gray-300">13 transfers across 55 multisig transactions, around $16.07M USDC moved as part of recovery</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2 md:col-span-2">
-                  <p className="text-gray-500">External configAuthority (still set)</p>
-                  <p className="text-gray-300">The same configAuthority key is still set on the recovery multisig. It can still change the threshold, members, or timelock on this multisig without going through the multisig approval process. Since June 26 2026 this multisig holds upgrade authority over no program.</p>
+                  <p className="text-gray-500">External admin key (still set)</p>
+                  <p className="text-gray-300">The same external admin key is still set on the recovery multisig. It can still change the threshold, members, or timelock on this multisig without going through the multisig approval process. Since June 26 2026 this multisig holds upgrade authority over no program.</p>
                 </div>
                 <div className="bg-white/[0.03] rounded p-2 md:col-span-3">
                   <p className="text-gray-500">Program authority since June 26 2026</p>
-                  <p className="text-gray-300">Upgrade authority for Drift Protocol V2 moved to a new 4/7 multisig (7qipz...) with a 1h timelock, no external configAuthority and a signer set that shares no key with the exploited or recovery multisigs. The recovery multisig executed the handover.</p>
+                  <p className="text-gray-300">Upgrade authority for Drift Protocol V2 moved to a new 4/7 multisig (7qipz...) with a 1h timelock, no external admin key and a signer set that shares no key with the exploited or recovery multisigs. The recovery multisig executed the handover.</p>
                 </div>
               </div>
 

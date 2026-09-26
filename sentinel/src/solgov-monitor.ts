@@ -288,6 +288,7 @@ async function sendPublic(message: string) {
 import { appendActivity as logActivity } from './activity-log';
 import { scanRealmsDAOs, writeDaoRiskSnapshot } from './realms';
 import { runTriageAndPost } from './llm-triage';
+import { threatLabel } from './utils/event-labels';
 
 // A corrupt state file throws (readJsonStrict) and the run aborts: treating it as empty would make every
 // protocol look new, baseline real changes silently, and overwrite the file with a partial state.
@@ -775,13 +776,13 @@ function diffState(name: string, prev: ProtocolState, curr: ProtocolState, p: Pr
       if (t.severity === 'CRITICAL' || t.severity === 'HIGH') {
         const icon = t.severity === 'CRITICAL' ? '🚨' : '⚠️';
         changes.push(
-          `${icon} [${t.severity}] ${t.category}\n` +
+          `${icon} [${t.severity}] ${threatLabel(t.category)}\n` +
           `${t.detail}\n` +
           `Signer: ${t.signer.slice(0, 8)}...\n` +
           `📅 ${t.detectedAt}`
         );
       } else if (t.severity === 'LOW') {
-        watching.push(`${t.category}: ${t.detail} (${t.signer.slice(0, 8)}...)`);
+        watching.push(`${threatLabel(t.category)}: ${t.detail} (signer ${t.signer.slice(0, 8)}...)`);
       }
     }
   }
@@ -791,7 +792,7 @@ function diffState(name: string, prev: ProtocolState, curr: ProtocolState, p: Pr
       const prevAuth = prev.programAuthorities[progName];
       const currAuth = curr.programAuthorities[progName];
       if (prevAuth && currAuth && prevAuth !== currAuth) {
-        changes.push(`⚠️ ${progName} authority CHANGED: ${prevAuth.slice(0, 8)}... → ${currAuth.slice(0, 8)}...`);
+        changes.push(`⚠️ ${progName}: who can upgrade it changed from ${prevAuth === 'IMMUTABLE' ? 'nobody' : `${prevAuth.slice(0, 8)}...`} to ${currAuth === 'IMMUTABLE' ? 'nobody (it can no longer be changed)' : `${currAuth.slice(0, 8)}...`}`);
       }
     }
   }
@@ -803,7 +804,7 @@ function diffState(name: string, prev: ProtocolState, curr: ProtocolState, p: Pr
         const prevActual = prev.programAuthorities?.[prog.name];
         const alreadyReported = prevActual === actual;
         if (!alreadyReported) {
-          changes.push(`🚨 ${prog.name} authority MISMATCH: expected ${prog.expectedAuth.slice(0, 8)}... got ${actual.slice(0, 8)}...`);
+          changes.push(`🚨 ${prog.name}: upgrade key is not the expected one (expected ${prog.expectedAuth.slice(0, 8)}..., found ${actual === 'IMMUTABLE' ? 'none' : `${actual.slice(0, 8)}...`})`);
         }
       }
     }
@@ -1006,7 +1007,7 @@ async function main() {
       `Scan: ${scanLabel}\n` +
       `Protocols: ${protocolCount}\n` +
       `Changes: ${allChanges.length}\n` +
-      `Stored threat alerts: ${threatCount} (${criticalCount} critical)\n` +
+      `Open signer risk flags: ${threatCount} (${criticalCount} critical)\n` +
       `<i>${timestamp}</i>`;
     await sendTelegram(msg, runSeverity);
     // Only blocks that are HIGH or CRITICAL in this run go public.

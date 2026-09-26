@@ -97,18 +97,19 @@ export async function verifySquadsMultisig(
   conn: Connection,
   address: string,
 ): Promise<{ ok: true; threshold: number; memberCount: number } | { ok: false; error: string }> {
-  if (!isAddressValidBase58(address)) return { ok: false, error: 'Not a valid base58 pubkey' };
+  if (!isAddressValidBase58(address)) return { ok: false, error: 'That is not a valid Solana address.' };
   let info;
   try {
     info = await conn.getAccountInfo(new PublicKey(address));
   } catch (e: any) {
-    return { ok: false, error: `RPC error: ${e.message?.slice(0, 80)}` };
+    console.error('[USER-TRACKED] RPC error:', e?.message);
+    return { ok: false, error: 'Could not read the blockchain just now. Please try again shortly.' };
   }
-  if (!info) return { ok: false, error: 'Account not found on-chain' };
+  if (!info) return { ok: false, error: 'Nothing exists at that address on Solana.' };
   // Squads v4 program owns its accounts. Verify ownership before parsing.
   const SQUADS_V4 = 'SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf';
   if (info.owner.toBase58() !== SQUADS_V4) {
-    return { ok: false, error: `Account is not owned by Squads v4 program (owner: ${info.owner.toBase58().slice(0, 12)}...)` };
+    return { ok: false, error: 'That address is not a Squads V4 multisig. Send the multisig address itself (not its vault or a member wallet).' };
   }
   // Decode via official SDK so the validation matches the listener's parser.
   try {
@@ -117,7 +118,8 @@ export async function verifySquadsMultisig(
     const memberCount = Array.isArray(ms.members) ? ms.members.length : 0;
     return { ok: true, threshold: Number(ms.threshold || 0), memberCount };
   } catch (e: any) {
-    return { ok: false, error: `Squads decode failed: ${e.message?.slice(0, 80)}` };
+    console.error('[USER-TRACKED] Squads decode failed:', e?.message);
+    return { ok: false, error: 'That account could not be read as a Squads V4 multisig.' };
   }
 }
 
@@ -132,7 +134,7 @@ export function addTracked(input: { address: string; label?: string; addedBy?: s
   const existing = reg.multisigs.find(m => m.address === input.address);
   if (existing) return { ok: true, entry: { ...existing, label: trackedName(existing.address, existing.label) } };
   if (reg.multisigs.length >= MAX_TRACKED) {
-    return { ok: false, error: `User-tracked cap reached (${MAX_TRACKED}). No new submissions accepted.` };
+    return { ok: false, error: `The tracking list is full (${MAX_TRACKED} multisigs), so no new ones can be added right now.` };
   }
   if (input.addedBy && reg.multisigs.filter(m => m.addedBy === input.addedBy).length >= MAX_PER_SUBMITTER) {
     return { ok: false, error: `Each submitter can track up to ${MAX_PER_SUBMITTER} multisigs.` };

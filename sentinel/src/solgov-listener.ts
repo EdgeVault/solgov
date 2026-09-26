@@ -11,6 +11,7 @@ import { escapeHtml, splitTelegramHtml } from './utils/telegram-html';
 import { alertName } from './utils/display-names';
 import { readJsonStrict, writeJsonAtomic } from './utils/json-file';
 import { isTrackedName } from './user-tracked-multisigs';
+import { authorityText, ROLE_LABELS } from './utils/event-labels';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -311,7 +312,7 @@ function classifyV4Change(name: string, prev: PrevEntry, now: PrevEntry): TypedC
   // change to threshold or member count. Only compared when both sides recorded a voter count.
   if (typeof prev.voterCount === 'number' && typeof now.voterCount === 'number' && prev.voterCount !== now.voterCount) {
     const sev: Severity = now.voterCount < prev.voterCount ? 'HIGH' : 'MONITOR';
-    events.push({ type: 'VotersChanged', detail: `Members with vote permission: ${prev.voterCount} → ${now.voterCount}`, severity: sev });
+    events.push({ type: 'VotersChanged', detail: `Members who can vote on proposals: ${prev.voterCount} → ${now.voterCount}`, severity: sev });
   }
 
   if (prev.configAuthority !== now.configAuthority) {
@@ -663,11 +664,11 @@ async function handleProgramUpgrade(name: string, conn: Connection, programId: s
     const hour = eventDate.getUTCHours();
     const kind = isAuthorityChange ? 'AuthorityChange' : 'ProgramUpgrade';
     logActivity(name, kind, isAuthorityChange
-      ? `${programId.slice(0, 12)}... upgrade authority changed to ${authAddr.slice(0, 12)}...`
-      : `Program ${programId.slice(0, 12)}... upgraded at ${hour}:00 UTC`, undefined, eventDate.toISOString());
+      ? `Who can upgrade program ${programId.slice(0, 12)}... changed to ${authAddr === 'IMMUTABLE' ? 'nobody (it can no longer be changed)' : `${authAddr.slice(0, 12)}...`}`
+      : `Program code updated at ${hour}:00 UTC (program ${programId.slice(0, 12)}...)`, undefined, eventDate.toISOString());
 
-    const authLabel = authAddr === 'IMMUTABLE' ? 'IMMUTABLE' : await labelAddress(authAddr);
-    const prevAuthLabel = prevAuth && prevAuth !== 'IMMUTABLE' ? await labelAddress(prevAuth) : prevAuth || 'unknown';
+    const authLabel = authAddr === 'IMMUTABLE' ? escapeHtml(authorityText(authAddr)) : await labelAddress(authAddr);
+    const prevAuthLabel = prevAuth && prevAuth !== 'IMMUTABLE' ? await labelAddress(prevAuth) : prevAuth === 'IMMUTABLE' ? escapeHtml(authorityText(prevAuth)) : 'unknown';
 
     const noMultisigProgs = ['BisonFi', 'HumidiFi', 'Photon', 'Save'];
     const isNoMultisig = noMultisigProgs.some(s => name.includes(s));
@@ -678,38 +679,38 @@ async function handleProgramUpgrade(name: string, conn: Connection, programId: s
     if (isNoMultisig) {
       severity = 'CRITICAL';
       header = isAuthorityChange
-        ? '🔴 <b>CRITICAL: Upgrade authority changed (no multisig found on-chain)</b>'
-        : '🔴 <b>CRITICAL: Program upgrade (no multisig found on-chain)</b>';
+        ? '🔴 <b>CRITICAL: Who can upgrade this program changed (no multisig found on-chain)</b>'
+        : '🔴 <b>CRITICAL: Program code updated by a single wallet (no multisig found on-chain)</b>';
     } else if (role === 'holds-funds' && isAuthorityChange) {
       severity = 'CRITICAL';
-      header = '🔴 <b>CRITICAL: Custody program authority changed</b>';
+      header = '🔴 <b>CRITICAL: Control of a program holding user funds changed</b>';
     } else if (role === 'routes-funds' && isAuthorityChange) {
       severity = 'HIGH';
-      header = '🟠 <b>HIGH: Routing program authority changed</b>';
+      header = '🟠 <b>HIGH: Control of a program routing user funds changed</b>';
     } else if (role === 'peripheral' && isAuthorityChange) {
       severity = 'MONITOR';
-      header = '🟦 <b>Peripheral program upgrade authority changed</b>';
+      header = '🟦 <b>Control of a supporting program changed</b>';
     } else if (role === 'holds-funds') {
       severity = 'HIGH';
-      header = isOffHours ? '🟠 <b>HIGH: Custody program upgrade (off-hours)</b>' : '🟠 <b>HIGH: Custody program upgrade</b>';
+      header = isOffHours ? '🟠 <b>HIGH: Code updated on a program holding user funds (outside 06:00-22:00 UTC)</b>' : '🟠 <b>HIGH: Code updated on a program holding user funds</b>';
     } else if (role === 'routes-funds') {
       severity = isOffHours ? 'HIGH' : 'MONITOR';
-      header = isOffHours ? '🟠 <b>HIGH: Routing program upgrade (off-hours)</b>' : '🟦 <b>Routing program upgrade</b>';
+      header = isOffHours ? '🟠 <b>HIGH: Code updated on a program routing user funds (outside 06:00-22:00 UTC)</b>' : '🟦 <b>Code updated on a program routing user funds</b>';
     } else {
       severity = 'MONITOR';
-      header = '🟦 <b>Peripheral program upgrade</b>';
+      header = '🟦 <b>Supporting program code updated</b>';
     }
 
     const authLine = isAuthorityChange
-      ? `Authority: <code>${prevAuthLabel}</code> → <code>${authLabel}</code>`
-      : `Authority: <code>${authLabel}</code>`;
-    const msg = `${header}\n\n<b>${escapeHtml(alertName(name))}</b>\nProgram: <code>${programId.slice(0, 12)}...</code>\n${authLine}\nRole: ${role}\n📅 ${timestamp} UTC`;
+      ? `Who can upgrade it: <code>${prevAuthLabel}</code> → <code>${authLabel}</code>`
+      : `Who can upgrade it: <code>${authLabel}</code>`;
+    const msg = `${header}\n\n<b>${escapeHtml(alertName(name))}</b>\nProgram: <code>${programId.slice(0, 12)}...</code>\n${authLine}\nWhat it does: ${escapeHtml(ROLE_LABELS[role] ?? role)}\n📅 ${timestamp} UTC`;
     console.log(`[${severity}] ${name}: ${isAuthorityChange ? 'auth change' : 'upgrade'} role=${role} (${authLabel})`);
 
     if (severity === 'CRITICAL' || severity === 'HIGH') {
       await sendTelegram(msg, severity);
       if (isAuthorityChange) {
-        const pub = `<b>${escapeHtml(alertName(name))}</b>\nUpgrade authority changed.\nProgram: <code>${programId.slice(0, 12)}...</code>\n${authLine}\n${timestamp} UTC\nsolgov.xyz`;
+        const pub = `<b>${escapeHtml(alertName(name))}</b>\nWho can upgrade this program changed.\nProgram: <code>${programId.slice(0, 12)}...</code>\n${authLine}\n${timestamp} UTC\nsolgov.xyz`;
         await sendPublic(pub);
       }
     } else {

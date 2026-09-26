@@ -9,6 +9,7 @@ import { escapeHtml } from './utils/telegram-html';
 import { alertName } from './utils/display-names';
 import { resolveName, nameMatches } from './llm-tools';
 import { readActivityLog } from './activity-log';
+import { eventLabel } from './utils/event-labels';
 
 export const DATA_DIR = path.join(__dirname, '..', 'data');
 
@@ -59,12 +60,20 @@ export function pendingText(query: string, dataDir = DATA_DIR): string {
   const protocol = resolveName(names, query);
   if (!protocol) return `No queued upgrade or config proposals found for <b>${escapeHtml(query)}</b>.\n${escapeHtml(scannedLine(snap.scannedAt))}.`;
   const rows = snap.results.filter((r: any) => r.protocol === protocol);
-  const lines = [`<b>Queued proposals: ${escapeHtml(alertName(protocol))}</b>`, ''];
+  const lines = [`<b>Open proposals: ${escapeHtml(alertName(protocol))}</b>`, ''];
+  const kindText: Record<string, string> = {
+    ProgramUpgrade: 'Program code update',
+    SetUpgradeAuthority: 'Change of who can upgrade a program',
+    ProgramClose: 'Program closure',
+    ProgramExtend: 'Program size increase',
+    ConfigChange: 'Multisig settings change',
+    OtherVaultTx: 'Other transaction',
+  };
   for (const r of rows.slice(0, 15)) {
     // executable is written by the scanner from Squads rules; older snapshots only carry stale.
     const exec = typeof r.executable === 'boolean' ? r.executable : !r.stale;
-    const state = exec ? (r.status === 'Approved' ? 'approved, can execute' : 'open') : 'can no longer execute';
-    lines.push(`• #${escapeHtml(r.proposalIndex)} ${escapeHtml(r.kind)}: ${escapeHtml(r.approvals)}/${escapeHtml(r.threshold)} approvals, ${escapeHtml(timelockLabel(r.timelockSeconds))}, ${state}`);
+    const state = exec ? (r.status === 'Approved' ? 'approved, can still go through' : 'collecting approvals') : 'can no longer go through';
+    lines.push(`• #${escapeHtml(r.proposalIndex)} ${escapeHtml(kindText[r.kind] ?? r.kind)}: ${escapeHtml(r.approvals)} of ${escapeHtml(r.threshold)} approvals, ${escapeHtml(timelockLabel(r.timelockSeconds))}, ${state}`);
     if (r.programId) lines.push(`  Program <code>${escapeHtml(short(r.programId))}</code>`);
   }
   if (rows.length > 15) lines.push(`<i>...and ${rows.length - 15} more</i>`);
@@ -87,7 +96,7 @@ export function verifiedText(query: string, dataDir = DATA_DIR): string {
     const repo = p.verified === true && p.repo ? ` (${escapeHtml(String(p.repo).replace(/^https:\/\/github\.com\//, '').slice(0, 60))})` : '';
     lines.push(`• ${escapeHtml(p.name || short(p.programId))}: ${status}${repo}`);
   }
-  lines.push('', escapeHtml(scannedLine(snap.scannedAt)), 'Source: on-chain verification PDA and verify.osec.io');
+  lines.push('', escapeHtml(scannedLine(snap.scannedAt)), 'Source: the on-chain verification record and verify.osec.io');
   return lines.join('\n');
 }
 
@@ -103,7 +112,8 @@ export function recentText(window: '24h' | '7d'): string {
   const lines = [`<b>Governance changes, last ${window}</b>`, ''];
   for (const e of events.slice(0, 25)) {
     const when = String(e.timestamp || e.date).replace('T', ' ').slice(0, 16);
-    lines.push(`• ${escapeHtml(when)} <b>${escapeHtml(alertName(e.protocol))}</b>: ${escapeHtml(String(e.detail).slice(0, 140))}`);
+    const detail = e.detail ? `: ${escapeHtml(String(e.detail).slice(0, 140))}` : '';
+    lines.push(`• ${escapeHtml(when)} <b>${escapeHtml(alertName(e.protocol))}</b> ${escapeHtml(eventLabel(String(e.type)))}${detail}`);
   }
   if (events.length > 25) lines.push(`<i>...and ${events.length - 25} more</i>`);
   return lines.join('\n');

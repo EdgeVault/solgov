@@ -100,6 +100,10 @@ const ACTIVITY_TYPE_LABELS: Record<string, string> = {
   SignerRotation: 'Signer rotation',
   ExternalAdminKeyAdded: 'External admin key set',
   ExternalAdminKeyCleared: 'External admin key cleared',
+  ExternalAdminKeyChanged: 'External admin key changed',
+  VotersChanged: 'Voting members changed',
+  VoteConcentration: 'Vote concentration',
+  Composability: 'Composability change',
 };
 
 // Governance-change event types where the detail string is more informative
@@ -109,8 +113,8 @@ const GOV_CHANGE_TYPES: Set<string> = new Set([
   'ConfigChange',
   'TimelockAdded', 'TimelockRemoved', 'TimelockChanged',
   'ThresholdRaised', 'ThresholdLowered',
-  'SignersAdded', 'SignersRemoved', 'SignerRotation',
-  'ExternalAdminKeyAdded', 'ExternalAdminKeyCleared',
+  'SignersAdded', 'SignersRemoved', 'SignerRotation', 'VotersChanged',
+  'ExternalAdminKeyAdded', 'ExternalAdminKeyCleared', 'ExternalAdminKeyChanged',
 ]);
 
 function canonProtoName(raw: string): string {
@@ -1364,7 +1368,7 @@ function App() {
                               // Most recent multisig configuration change from the live activity log, with its age.
                               // Stated as a fact and a date; whether the change matters is for the reader.
                               const fam = (n: string) => n.replace(/\s*\(.*\)\s*$/, '').trim();
-                              const cfgTypes = new Set(['ConfigChange', 'ThresholdRaised', 'ThresholdLowered', 'SignersAdded', 'SignersRemoved', 'AuthorityChange', 'TimelockChanged', 'TimelockRemoved', 'TimelockAdded']);
+                              const cfgTypes = new Set(['ConfigChange', 'ThresholdRaised', 'ThresholdLowered', 'SignersAdded', 'SignersRemoved', 'VotersChanged', 'AuthorityChange', 'TimelockChanged', 'TimelockRemoved', 'TimelockAdded', 'ExternalAdminKeyChanged']);
                               const ev = (liveActivity || [])
                                 .filter(e => e && cfgTypes.has(e.type) && e.protocol && fam(e.protocol) === p.name)
                                 .sort((a, b) => String(b.timestamp || b.date).localeCompare(String(a.timestamp || a.date)))[0];

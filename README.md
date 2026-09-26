@@ -28,7 +28,7 @@ Every claim in the dashboard traces to an on-chain RPC read or a named source UR
 ## Latest
 
 - Sep 2026: every protocol entry re-checked against primary sources and on-chain reads, with a weekly automated check of published data against live chain state, source links and research dates
-- Sep 2026: Telegram bot lookups added: `/pending` (proposals that can still execute), `/verified` (verified-build status), `/recent` (governance events over 24h or 7 days), and `/track` for any Squads V4 multisig with private DM alerts
+- Sep 2026: Telegram bot lookups added: `/pending` (open proposals and whether each can still execute), `/verified` (verified-build status), `/recent` (governance events over 24h or 7 days), and `/track` for any Squads V4 multisig with private DM alerts
 - Sep 2026: Drift shown as Velocity (formerly Drift) across the dashboard, bot and API, with lookups and subscriptions accepting either name
 - Sep 2026: governance activity per protocol (proposals, config changes, signers, execution times) read from each multisig's full on-chain history and refreshed daily; last upgrade, program authorities and governance role multisigs read from the chain every 3 hours; all served per protocol on `/api/governance/{protocol}`
 - Sep 2026: queued proposals shown only when they can still execute on-chain (Squads rules, deploy buffers, target accounts and authorities checked), labelled queued when approved and proposed while collecting approvals

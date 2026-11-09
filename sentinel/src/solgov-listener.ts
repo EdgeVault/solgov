@@ -595,7 +595,9 @@ async function handleAdminNotification(account: string, value: any) {
   if (!t || typeof raw !== 'string') return;
   const fields = adminWatcher.read(t, String(value.owner), Buffer.from(raw, 'base64'));
   if (!fields) { console.log(`[ADMIN] ${t.name}: notification failed owner/discriminator check; skipped`); return; }
-  for (const a of await adminWatcher.observe(t, fields)) await dispatchAdminAlert(a);
+  const alerts = await adminWatcher.observe(t, fields);
+  for (const a of alerts) await dispatchAdminAlert(a);
+  if (alerts.length) await adminWatcher.writeSnapshot();
 }
 
 function connectWebSocket(conn: Connection, programDataWatch: { name: string; address: string }[] = []) {
@@ -847,6 +849,7 @@ async function main() {
     console.log(`[ADMIN] Watching ${adminWatcher.targets.length} protocol admin account(s)`);
     const changedWhileDownAdmin = await adminWatcher.initialRead();
     for (const a of changedWhileDownAdmin) await dispatchAdminAlert(a);
+    await adminWatcher.writeSnapshot();
   } catch (e: any) {
     console.error('[ADMIN] init failed; Admin Watch off this session:', e.message);
     adminWatcher = null;

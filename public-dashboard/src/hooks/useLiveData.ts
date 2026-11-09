@@ -265,6 +265,22 @@ export interface LiveDataResult {
   liveOracleConfig: { scannedAt: string; results: any[] } | null;
   liveGovActivity: GovActivity | null;
   liveProgramDeploys: ProgramDeploys | null;
+  liveAdminWatch: AdminWatch | null;
+}
+
+// Admin Watch snapshot (sentinel/src/admin-watch.ts): admin keys inside protocol state accounts.
+export type AdminHolder =
+  | { kind: 'immutable' }
+  | { kind: 'multisig-vault'; address: string; multisigName: string; threshold: number; memberCount: number; timeLock: number; configAuthority: string }
+  | { kind: 'untracked'; address: string; scope?: 'live' | 'replay' | 'unchecked' };
+export interface AdminWatchField {
+  name: string; label: string; kind: 'active' | 'pending'; value: string;
+  holder: AdminHolder | null; holderText: string; handoverProposed?: boolean;
+  watchingSince: string; lastChange: { at: string; detail: string } | null;
+}
+export interface AdminWatch {
+  generatedAt: string;
+  targets: { protocol: string; name: string; account: string; programId: string; fields: AdminWatchField[] }[];
 }
 
 export function useLiveData(staticProtocols: Protocol[]): LiveDataResult {
@@ -335,7 +351,7 @@ function mergeLiveState(
   now: number,
 ): LiveDataResult {
   if (!loaded) {
-    return { protocols: staticProtocols, lastScan: null, newestScan: null, staleEntries: 0, trackedEntries: 0, isLive: false, dataSource: 'static', liveGovernanceNames: new Set(), liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [], liveOracles: [], liveIndependence: null, livePendingUpgrades: null, liveVerifiedBuilds: null, liveTokenTransparency: null, liveMeta: null, liveOracleConfig: null, liveGovActivity: null, liveProgramDeploys: null };
+    return { protocols: staticProtocols, lastScan: null, newestScan: null, staleEntries: 0, trackedEntries: 0, isLive: false, dataSource: 'static', liveGovernanceNames: new Set(), liveStates: {}, liveActivity: [], liveIntegrity: null, liveHistorical: {}, historicalAsOf: null, liveDaos: [], liveOracles: [], liveIndependence: null, livePendingUpgrades: null, liveVerifiedBuilds: null, liveTokenTransparency: null, liveMeta: null, liveOracleConfig: null, liveGovActivity: null, liveProgramDeploys: null, liveAdminWatch: null };
   }
 
   const liveState = loaded.data;
@@ -599,10 +615,11 @@ function mergeLiveState(
   const liveMeta = isObj(ls._meta) && typeof ls._meta.generatedAt === 'string' ? ls._meta : null;
   const liveOracleConfig = isObj(ls._oracleConfig) && Array.isArray(ls._oracleConfig.results) ? ls._oracleConfig : null;
   const liveGovActivity = isObj(ls._govActivity) && isObj(ls._govActivity.entries) && typeof ls._govActivity.generatedAt === 'string' ? ls._govActivity as GovActivity : null;
+  const liveAdminWatch = isObj(ls._adminWatch) && Array.isArray(ls._adminWatch.targets) && ls._adminWatch.targets.length > 0 ? ls._adminWatch as AdminWatch : null;
 
   return {
     protocols: merged, lastScan, newestScan, staleEntries, trackedEntries,
     isLive, dataSource: loaded.source, liveGovernanceNames,
-    liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveMeta, liveOracleConfig, liveGovActivity, liveProgramDeploys: programDeploys,
+    liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveMeta, liveOracleConfig, liveGovActivity, liveProgramDeploys: programDeploys, liveAdminWatch,
   };
 }

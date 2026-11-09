@@ -49,6 +49,7 @@ import { getRelationships } from './data/relationships';
 import { DRIFT_CASE_STUDY } from './data/driftCaseStudy';
 import { SolarSystem, OverviewSolarSystem, DriftCaseStudySolar } from './components/SolarSystem';
 import { IndependenceScorePanel, findLiveGroupForProtocol, findCaseStudyGroup } from './components/IndependenceScore';
+import { AdminKeysPanel } from './components/AdminKeysPanel';
 import { GovernanceCharts } from './components/GovernanceCharts';
 import { SolanaHackChart } from './components/SolanaHackChart';
 import { ChainRiskPanel } from './components/ChainRiskPanel';
@@ -669,7 +670,7 @@ function roleBenchmarkTip(r: any): string {
 type SortKey = 'name' | 'threshold' | 'timelockSeconds' | 'totalMembers';
 
 function App() {
-  const { protocols: liveProtocols, lastScan, newestScan, staleEntries, trackedEntries, isLive, dataSource, liveGovernanceNames, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveOracleConfig, liveMeta, liveGovActivity, liveProgramDeploys } = useLiveData(PROTOCOLS);
+  const { protocols: liveProtocols, lastScan, newestScan, staleEntries, trackedEntries, isLive, dataSource, liveGovernanceNames, liveStates, liveActivity, liveIntegrity, liveHistorical, historicalAsOf, liveDaos, liveOracles, liveIndependence, livePendingUpgrades, liveVerifiedBuilds, liveTokenTransparency, liveOracleConfig, liveMeta, liveGovActivity, liveProgramDeploys, liveAdminWatch } = useLiveData(PROTOCOLS);
   const daoNameSet = useMemo(() => new Set((liveDaos || []).map(d => d.name)), [liveDaos]);
   const oracleByProtocol = useMemo(() => new Map((liveOracles || []).map(o => [o.protocol, o])), [liveOracles]);
   // Queued Squads proposals per protocol that would upgrade a program, move its upgrade authority or
@@ -1763,6 +1764,8 @@ function App() {
             </tbody>
           </table>
         </div>
+
+        {liveAdminWatch && <AdminKeysPanel data={liveAdminWatch} />}
 
         <div className="mt-8 pt-5 border-t border-white/[0.04] text-[11px] text-gray-500 space-y-1">
           <a

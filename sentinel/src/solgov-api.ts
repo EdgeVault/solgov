@@ -1063,7 +1063,7 @@ function buildOpenApiSpec(host: string): any {
       '/api/v1/state': {
         get: {
           summary: 'Full monitor state (heavy)',
-          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _adminPath, _publicCommitsAhead, _govActivity, _programDeploys, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). `_govActivity.entries` is keyed by multisig address; `_programDeploys` holds per-program deploy dates and authorities, latest deploy per protocol, and role-multisig configurations. Each protocol\'s `pendingProposals` is the count of proposals that can still execute (see `/governance`). ~150 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
+          description: 'Complete state object: every tracked protocol\'s live multisig data, plus the recent activity log and optional scanner outputs under underscore keys (_daos, _oracles, _oracleConfig, _composability, _independence, _pendingUpgrades, _verifiedBuilds, _tokenTransparency, _adminPath, _adminWatch, _publicCommitsAhead, _govActivity, _programDeploys, _integrity) and `_meta` provenance (generatedAt, stateFileWrittenAt). `_adminWatch` lists the admin keys held inside protocol state accounts, their current holder and the last change seen (written by the listener at start-up and on every change); `_govActivity.entries` is keyed by multisig address; `_programDeploys` holds per-program deploy dates and authorities, latest deploy per protocol, and role-multisig configurations. Each protocol\'s `pendingProposals` is the count of proposals that can still execute (see `/governance`). ~150 KB response. Prefer `/governance` or `/governance/{protocol}` for normal use; `/state` is intended for the dashboard and bulk integrations.',
           responses: { '200': { description: 'Complete state object' } },
         },
       },
@@ -1292,6 +1292,7 @@ async function handleRequest(req: http.IncomingMessage, res: http.ServerResponse
       attach('_tokenTransparency', 'token-transparency.json');
       attach('_oracleConfig', 'oracle-config.json');
       attach('_adminPath', 'admin-path.json');
+      attach('_adminWatch', 'admin-watch.json');
       attach('_govActivity', 'gov-activity.json');
       // pendingProposals in monitor-state is a recent-activity heuristic; serve the count of proposals
       // that can actually still execute, from the pending-upgrades scan, or null when it is unavailable.

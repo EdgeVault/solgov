@@ -19,7 +19,7 @@ import { nameMatches, resolveName, findNonceInstruction } from './llm-tools';
 import { addTracked, verifySquadsMultisig, listTracked, MAX_TRACKED } from './user-tracked-multisigs';
 import { Connection } from '@solana/web3.js';
 import { escapeHtml, splitTelegramHtml } from './utils/telegram-html';
-import { pendingText, verifiedText, recentText, healthText, relatedHint, executableProposalCount, timelockShort } from './bot-lookups';
+import { pendingText, verifiedText, adminText, recentText, healthText, relatedHint, executableProposalCount, timelockShort } from './bot-lookups';
 import { eventLabel, threatLabel, authorityText } from './utils/event-labels';
 import { alertName } from './utils/display-names';
 
@@ -247,6 +247,7 @@ function fullHelpText(): string {
     `<code>/check &lt;name&gt;</code>  <code>/nonce &lt;address&gt;</code>\n` +
     `<code>/pending &lt;name&gt;</code> queued upgrade and config proposals\n` +
     `<code>/verified &lt;name&gt;</code> verified-build status per program\n` +
+    `<code>/admin [name]</code> protocol admin keys and who holds them\n` +
     `<code>/recent [24h|7d]</code> governance changes across all protocols\n\n` +
     `<b>Subscriptions (DM)</b>\n` +
     `<code>/subscribe &lt;protocol&gt;</code>\n` +
@@ -1137,6 +1138,8 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
   } else if (cmdLower.startsWith('/verified')) {
     const name = cmd.slice('/verified'.length).trim();
     await sendLongMessage(name ? verifiedText(name) : 'Usage: /verified &lt;protocol name&gt;\nExample: /verified kamino', replyTo, replyThread);
+  } else if (cmdLower === '/admin' || cmdLower.startsWith('/admin ')) {
+    await sendLongMessage(adminText(cmd.slice('/admin'.length).trim()), replyTo, replyThread);
   } else if (cmdLower.startsWith('/recent')) {
     const arg = cmdLower.slice('/recent'.length).trim();
     await sendLongMessage(recentText(arg === '7d' ? '7d' : '24h'), replyTo, replyThread);

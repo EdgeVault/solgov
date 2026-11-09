@@ -17,7 +17,7 @@ import { Connection, PublicKey } from '@solana/web3.js';
 import * as multisig from '@sqds/multisig';
 import { readAdminFields, classifyAdminChange, NONE, type AdminTarget } from './detectors/admin-watch';
 import { snapshotFromV4, type Severity } from './detectors/multisig-config';
-import type { HolderFacts } from './detectors/holder';
+import { describeHolder, type HolderFacts } from './detectors/holder';
 import { vaultPda } from './replay/squads-v4';
 import { WATCH_LIST } from './watch-list';
 import { protocolsSourcePath } from './utils/protocols-source';
@@ -26,6 +26,24 @@ import { readJsonStrict, writeJsonAtomic } from './utils/json-file';
 const DATA = path.join(__dirname, '..', 'data');
 const TARGETS_FILE = path.join(DATA, 'admin-watch', 'targets.json');
 const STATE_FILE = path.join(DATA, 'listener-admin-state.json');
+// Public snapshot served by solgov-api as _adminWatch (dashboard panel, bot /admin).
+export const SNAPSHOT_FILE = path.join(DATA, 'admin-watch.json');
+
+export interface AdminSnapshotField {
+  name: string;
+  label: string;
+  kind: 'active' | 'pending';
+  value: string;            // current key, or NONE
+  holder: HolderFacts | null;
+  holderText: string;       // plain-English holder (same wording as alerts)
+  handoverProposed?: boolean; // pending fields only
+  watchingSince: string;    // ISO: first time solgov read this field
+  lastChange: { at: string; detail: string } | null; // last change seen since watching began
+}
+export interface AdminSnapshot {
+  generatedAt: string;
+  targets: { protocol: string; name: string; account: string; programId: string; fields: AdminSnapshotField[] }[];
+}
 
 export type LiveAdminTarget = AdminTarget & { accountType: string; verified?: string; discriminator?: string; live?: boolean };
 
@@ -79,8 +97,45 @@ export class AdminWatcher {
   private holderReg = buildHolderRegistry();
   private registry = this.holderReg.reg;
   private untrackedScope: 'live' | 'unchecked' = this.holderReg.complete ? 'live' : 'unchecked';
-  constructor(private conn: Connection, public targets: LiveAdminTarget[] = loadLiveAdminTargets(), private stateFile: string = STATE_FILE) {
+  private since: Record<string, string> = {};                                  // `${account}:${field}` -> ISO
+  private lastChange: Record<string, { at: string; detail: string } | null> = {};
+  constructor(private conn: Connection, public targets: LiveAdminTarget[] = loadLiveAdminTargets(), private stateFile: string = STATE_FILE, private snapshotFile: string = SNAPSHOT_FILE) {
     this.baseline = readJsonStrict<Record<string, Record<string, string>>>(this.stateFile, {});
+    try {
+      const prev = readJsonStrict<AdminSnapshot | null>(this.snapshotFile, null);
+      for (const t of prev?.targets || []) for (const f of t.fields) {
+        this.since[`${t.account}:${f.name}`] = f.watchingSince;
+        this.lastChange[`${t.account}:${f.name}`] = f.lastChange;
+      }
+    } catch { /* a corrupt snapshot is rebuilt from the baseline */ }
+  }
+
+  // Writes the public snapshot from the current baseline, resolving each holder from a live read.
+  async writeSnapshot(): Promise<AdminSnapshot> {
+    const now = new Date().toISOString();
+    const snap: AdminSnapshot = { generatedAt: now, targets: [] };
+    for (const t of this.targets) {
+      const vals = this.baseline[t.account];
+      if (!vals) continue;
+      const fields: AdminSnapshotField[] = [];
+      for (const f of t.fields) {
+        const value = vals[f.name];
+        if (value === undefined) continue;
+        const key = `${t.account}:${f.name}`;
+        const holder = value === NONE ? null : await this.holder(value);
+        const proposed = f.kind === 'pending' ? value !== NONE && !(f.pendingFor && vals[f.pendingFor] === value) : undefined;
+        const holderText = f.kind === 'pending' && !proposed ? 'No handover pending' : holder ? describeHolder(holder) : 'none';
+        fields.push({
+          name: f.name, label: f.label, kind: f.kind, value, holder, holderText,
+          ...(f.kind === 'pending' ? { handoverProposed: proposed } : {}),
+          watchingSince: this.since[key] || (this.since[key] = now),
+          lastChange: this.lastChange[key] ?? null,
+        });
+      }
+      snap.targets.push({ protocol: t.protocol, name: t.name, account: t.account, programId: t.programId, fields });
+    }
+    try { writeJsonAtomic(this.snapshotFile, snap); } catch (e: any) { console.error('[ADMIN] snapshot write failed:', e.message); }
+    return snap;
   }
 
   private save() {
@@ -144,6 +199,7 @@ export class AdminWatcher {
       });
       const txLink = f.kind === 'active' && before !== NONE ? await this.executingTx(before, t.account) : null;
       alerts.push({ target: t, field: f.name, ...ch, txLink });
+      this.lastChange[`${t.account}:${f.name}`] = { at: new Date().toISOString(), detail: ch.detail };
     }
     return alerts;
   }

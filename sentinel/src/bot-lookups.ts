@@ -100,6 +100,50 @@ export function verifiedText(query: string, dataDir = DATA_DIR): string {
   return lines.join('\n');
 }
 
+// Admin keys held inside protocol state accounts (Admin Watch), with who holds each one now.
+// No query lists every watched protocol.
+export function adminText(query: string, dataDir = DATA_DIR): string {
+  const snap = readJsonLoose<any>(path.join(dataDir, 'admin-watch.json'), null);
+  if (!snap || !Array.isArray(snap.targets) || snap.targets.length === 0) return 'Admin key data is not available yet.';
+  const names = Array.from(new Set<string>(snap.targets.map((t: any) => t.protocol).filter(Boolean)));
+  let targets = snap.targets;
+  if (query) {
+    const protocol = resolveName(names, query);
+    if (!protocol) return `No watched admin keys for <b>${escapeHtml(query)}</b>.\nWatched now: ${names.map(n => escapeHtml(alertName(n))).join(', ')}.`;
+    targets = targets.filter((t: any) => t.protocol === protocol);
+  }
+  const day = (iso: string) => { const d = new Date(iso); return Number.isNaN(d.getTime()) ? iso.slice(0, 10) : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); };
+  const held = (f: any): string => {
+    const h = f.holder;
+    if (h?.kind === 'multisig-vault') {
+      const tl = h.timeLock > 0 ? `${timelockShort(h.timeLock)} timelock` : 'no timelock';
+      return `${escapeHtml(h.multisigName)} multisig, ${h.threshold} of ${h.memberCount} signers, ${tl}${h.configAuthority !== 'autonomous' ? ', external admin key set' : ''}`;
+    }
+    if (h?.kind === 'untracked') return `<code>${escapeHtml(short(f.value))}</code>${h.scope === 'unchecked' ? '' : ' (not linked to a multisig solgov tracks)'}`;
+    return escapeHtml(f.holderText);
+  };
+  const lines = [query ? `<b>🔑 Admin keys: ${escapeHtml(alertName(targets[0].protocol))}</b>` : '<b>🔑 Protocol admin keys</b>', ''];
+  let since: string | null = null;
+  for (const t of targets) {
+    if (!query) lines.push(`<b>${escapeHtml(alertName(t.protocol))}</b>`);
+    for (const f of t.fields || []) {
+      if (f.watchingSince && (!since || f.watchingSince < since)) since = f.watchingSince;
+      if (f.kind === 'pending') { lines.push(f.handoverProposed ? `  ⚠️ Handover proposed to ${held(f)}. It takes effect only once the new key claims it.` : '  Handover: none pending'); continue; }
+      const i = String(f.label).indexOf(' (');
+      const title = i > 0 ? f.label.slice(0, i) : f.label;
+      const note = i > 0 && f.label.endsWith(')') ? f.label.slice(i + 2, -1) : null;
+      lines.push(`• <b>${escapeHtml(title)}</b>`);
+      if (note) lines.push(`  ${escapeHtml(note.charAt(0).toUpperCase() + note.slice(1))}`);
+      lines.push(`  Held by: ${held(f)}`);
+      lines.push(f.lastChange ? `  Changed ${escapeHtml(day(f.lastChange.at))}: ${escapeHtml(f.lastChange.detail)}` : '  No change seen since watching began');
+    }
+    lines.push('');
+  }
+  lines.push('Read on-chain from each protocol\'s settings account. solgov sends an alert when any of these keys changes.');
+  if (since) lines.push(`Watching since ${escapeHtml(day(since))}.`);
+  return lines.join('\n');
+}
+
 // Governance changes across every tracked protocol in a window, newest first.
 const CHANGE_TYPES = /^(Threshold|Signers|SignerRotation|Timelock|ExternalAdminKey|VotersChanged|ConfigChange|AuthorityChange|ProgramUpgrade|GovernanceConfigProposal|RealmAuthority|NONCE)/;
 

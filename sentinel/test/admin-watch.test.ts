@@ -111,3 +111,30 @@ test('live target list excludes unverified and held-back targets (Drift is held 
   assert.ok(live.every(t => t.verified && t.discriminator && t.live !== false));
   assert.ok(!live.some(t => t.protocol === 'Drift'));
 });
+
+test('writeSnapshot records holders, pending handover state, watching-since and the last change', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'adminsnap-'));
+  const snapFile = path.join(dir, 'admin-watch.json');
+  const paired = { ...target, fields: [target.fields[0], { ...target.fields[1], pendingFor: 'fee' }] };
+  const w = new AdminWatcher(fakeConn, [paired], path.join(dir, 'state.json'), snapFile);
+  await w.observe(paired, w.read(paired, paired.programId, acct(K1, K1))!);
+  let snap = await w.writeSnapshot();
+  const [fee, next] = snap.targets[0].fields;
+  assert.equal(fee.value, K1.toBase58());
+  // K1 is a real tracked vault (Orca) and the fake connection cannot read its multisig, so the
+  // holder is 'unchecked': the address alone, with no tracked/untracked claim.
+  assert.equal(fee.holderText, `${K1.toBase58().slice(0, 8)}...`);
+  assert.equal(fee.lastChange, null);
+  assert.equal(next.handoverProposed, false);
+  assert.equal(next.holderText, 'No handover pending');
+  const since = fee.watchingSince;
+  await w.observe(paired, w.read(paired, paired.programId, acct(K2, K2))!);
+  snap = await w.writeSnapshot();
+  assert.equal(snap.targets[0].fields[0].watchingSince, since);
+  assert.match(snap.targets[0].fields[0].lastChange!.detail, /Test fee authority/);
+  // A restart keeps watching-since and the last change from the snapshot on disk.
+  const w2 = new AdminWatcher(fakeConn, [paired], path.join(dir, 'state.json'), snapFile);
+  const snap2 = await w2.writeSnapshot();
+  assert.equal(snap2.targets[0].fields[0].watchingSince, since);
+  assert.ok(snap2.targets[0].fields[0].lastChange);
+});

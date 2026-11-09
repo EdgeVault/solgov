@@ -138,6 +138,10 @@ sentinel/src/*.ts
 !sentinel/src/gov-activity.ts
 !sentinel/src/program-deploys.ts
 !sentinel/src/audit-published.ts
+!sentinel/src/watch-list.ts
+!sentinel/src/admin-watch.ts
+!sentinel/src/admin-watch-verify.ts
+!sentinel/src/replay.ts
 
 # Investigation reports (forensics scratch, not part of the product)
 sentinel/src/investigations/
@@ -150,3 +154,10 @@ sentinel/src/*.ps1
 frontier-hackathon-projects.xlsx
 *.xlsx
 *.csv
+
+# Replay: raw cached chain history, and results held internal until reviewed
+sentinel/data/replay/history/
+sentinel/data/replay/results/
+sentinel/data/replay/scenarios/drift-*.json
+sentinel/test/fixtures/replay/drift-*.json
+sentinel/test/local/

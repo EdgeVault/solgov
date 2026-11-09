@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Drift V2 protocol admin",
+    "protocol": "Drift",
+    "programId": "dRiftyHA39MWEi3m9aunc5MzRF1JYuBsbn6VPcn33UH",
+    "account": "5zpq7DvB6UdFFvpmBPspGPNfUGoBRRCE2HHg5u3gxcsN",
+    "accountType": "State",
+    "role": "holds-funds",
+    "fields": [
+      {
+        "name": "admin",
+        "label": "Drift V2 State admin key",
+        "kind": "active",
+        "offset": 8
+      }
+    ],
+    "setters": [
+      {
+        "ix": "update_admin",
+        "field": "admin",
+        "stateAccountIndex": 1,
+        "newValueArgOffset": 8,
+        "currentAdminAccountIndex": 0
+      }
+    ],
+    "historyFrom": [],
+    "verified": "2026-11-09",
+    "discriminator": "d8926b5e684bb6b1",
+    "live": false,
+    "liveNote": "Held back pending confirmation of how the current program version uses this field."
+  },
+  {
+    "name": "Kamino Lend main market owner",
+    "protocol": "Kamino",
+    "programId": "KLend2g3cP87fffoy8q1mQqGKjrxjC8boSyAYavgmjD",
+    "account": "7u3HeHxYDLhnCoErrtycNokbQYbWGzLs6JSDqGAv5PfF",
+    "accountType": "LendingMarket",
+    "role": "holds-funds",
+    "fields": [
+      {
+        "name": "owner",
+        "label": "Kamino Lend main market owner (the key that controls the market's settings)",
+        "kind": "active",
+        "offset": 24
+      },
+      {
+        "name": "ownerCached",
+        "label": "Kamino Lend main market owner",
+        "kind": "pending",
+        "offset": 56,
+        "pendingFor": "owner"
+      }
+    ],
+    "setters": [],
+    "historyFrom": [],
+    "verified": "2026-11-09",
+    "discriminator": "f6723262489d1c78"
+  },
+  {
+    "name": "marginfi main group admin",
+    "protocol": "Project 0",
+    "programId": "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+    "account": "4qp6Fx6tnZkY5Wropq9wUYgtFxXKwE6viZxFHg3rdAG8",
+    "accountType": "MarginfiGroup",
+    "role": "holds-funds",
+    "fields": [
+      {
+        "name": "admin",
+        "label": "marginfi main group admin (the top-level admin key in the group's settings)",
+        "kind": "active",
+        "offset": 8
+      }
+    ],
+    "setters": [],
+    "historyFrom": [],
+    "verified": "2026-11-09",
+    "discriminator": "b617adf097ceb643"
+  },
+  {
+    "name": "Orca Whirlpools config authorities",
+    "protocol": "Orca",
+    "programId": "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc",
+    "account": "2LecshUwdy9xi7meFgHtFJQNSKk4KdTrcpvaB56dP2NQ",
+    "accountType": "WhirlpoolsConfig",
+    "role": "routes-funds",
+    "fields": [
+      {
+        "name": "feeAuthority",
+        "label": "Orca pool fee authority (can change pool fee rates)",
+        "kind": "active",
+        "offset": 8,
+        "severity": "HIGH"
+      },
+      {
+        "name": "collectProtocolFeesAuthority",
+        "label": "Orca protocol fee collection key",
+        "kind": "active",
+        "offset": 40,
+        "severity": "HIGH"
+      },
+      {
+        "name": "rewardEmissionsSuperAuthority",
+        "label": "Orca reward emissions super authority (assigns who manages pool rewards)",
+        "kind": "active",
+        "offset": 72,
+        "severity": "HIGH"
+      }
+    ],
+    "setters": [],
+    "historyFrom": [],
+    "verified": "2026-11-09",
+    "discriminator": "9d1431e0d957c1fe"
+  }
+]

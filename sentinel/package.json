@@ -16,7 +16,8 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "audit:static": "ts-node src/audit-static-data.ts",
-    "test": "node --test --require ts-node/register/transpile-only \"test/**/*.test.ts\""
+    "test": "node --test --require ts-node/register/transpile-only \"test/**/*.test.ts\"",
+    "replay": "ts-node --transpile-only src/replay.ts"
   },
   "keywords": [
     "solana",

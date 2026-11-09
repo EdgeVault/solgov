@@ -12,6 +12,9 @@ import { alertName } from './utils/display-names';
 import { readJsonStrict, writeJsonAtomic } from './utils/json-file';
 import { isTrackedName } from './user-tracked-multisigs';
 import { authorityText, ROLE_LABELS } from './utils/event-labels';
+import { classifyV4Change, overallSeverity, snapshotFromV4, type Severity, type MultisigSnapshot } from './detectors/multisig-config';
+import { readProgramData, decideProgramEvent, classifyProgramSeverity, type ProgramRole } from './detectors/program-upgrade';
+import { AdminWatcher, type AdminAlert } from './admin-watch';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -33,63 +36,8 @@ const PROGRAM_STATE_FILE = path.join(__dirname, '..', 'data', 'listener-program-
 
 import { appendActivity as logActivity } from './activity-log';
 
-const WATCH_LIST: { name: string; address: string; type: 'v4' | 'v3' | 'serum' | 'authority' }[] = [
-  { name: 'Drift', address: '7qipzLR9j1JcvdxE1XJEFgvoyFmgBpgw5hMdHBMPcJtM', type: 'v4' },
-  { name: 'Drift (interim recovery)', address: 'E44y4Gm693AFdGXk4zir5D3ivHn7jns9aWkm8c5q1NDQ', type: 'v4' },
-  { name: 'Pumpfun + PumpSwap', address: '2yMoQqQrtbhq3nQ3wFoQQawWS65qcqUXcwHEYha4rshW', type: 'v4' },
-  { name: 'Magic Eden', address: 'J2SasfUti5RffbeohWpBDMiGsYGCN11fgyQKTVeREKYE', type: 'v4' },
-  { name: 'Exponent', address: '51smH7pBDKJDgmVnVks3gMWaPQFfmQ5s4Fc223yHcjuH', type: 'v4' },
-  { name: 'Nosana', address: 'ktKWwDt5J8NFMi5jQNRRBDKAhimU5tnrGCcXuYJmxqE', type: 'v4' },
-  { name: 'Lulo', address: '8Sr4rQJL2aQT3EL97mbrk1T9VMw4pCS2mxMPp2QBzHQq', type: 'v4' },
-  { name: 'Stabble', address: 'AFRN2ECAY1YTbfkXD7yvoc1iaxYdt5BdyyqyPRsrHaK2', type: 'v4' },
-  { name: 'Hylo', address: '2z3t2eBz7VL39Q3vEvaemd5mhT9XLoFofEH2cXvwCJvb', type: 'v4' },
-  { name: 'Loopscale', address: 'C4awuufiuL8DNT5wMDP27HneKKqbgynrsbCa4XYGSuPk', type: 'v4' },
-  { name: 'Orca', address: 'BQsDWkL417U4tVE2sDnPks469pKdm6YzFgKH77doiEjF', type: 'v4' },
-  { name: 'Project 0', address: '7FCPipJWVbPbdHymVt1gJYwKciakkJz5GahdQySemvHk', type: 'v4' },
-  { name: 'Kamino', address: '6hhBGCtmg7tPWUSgp3LG6X2rsmYWAc4tNsA6G4CnfQbM', type: 'v4' },
-  { name: 'Jupiter Perps', address: 'AxkJ8oH5aDu4ZRWfsujPtxdb6Vhq4gDehpoReBgrUUSm', type: 'v4' },
-  { name: 'Jupiter Lend', address: 'J3mJ3wz6xkVUk3T8qHnuAYNxsRH3ixHsryYNZAU2vG8P', type: 'v4' },
-  { name: 'Huma Finance', address: 'uGLhzjot32i9nNKZKUoCzr7sG8bFAXQRN3uZPTUr7gX', type: 'v4' },
-  { name: 'Solstice', address: 'AEb1u8FK8EuXLcPtprCy8s4NkqBNoP5mfbuEEop2dJGf', type: 'v4' },
-  { name: 'Switchboard', address: '93RQfY6VHRkqXBCEhMY5u92bCGp428DTzqZUEA2Hjr9h', type: 'v4' },
-  { name: 'Titan', address: 'F1WZezmt2J1dSsXrQWrS2Umn9CYzPPR2eP3sunZrMX29', type: 'v4' },
-  { name: 'Solayer', address: '5AQ3c2nC3Ua5Ms1QP4XpcfaU2Q31C8VhiUJGX3c8zFqp', type: 'v4' },
-  { name: 'Flash Trade', address: 'Gb33UeQNnQ4XDuobtGq9M6PVKRVfoH77p8d6JXsgqyXF', type: 'v4' },
-  { name: 'Wick', address: '8YmCRSNu7eCjLkhFB4LgDjjjGzfa37ztMoPhXZymWcCA', type: 'v4' },
-  { name: 'Onre Finance (treasury)', address: '922xY8imV8NC1FXbaR9VFtNZV7RxQiq19gC42fQG5AfR', type: 'v4' },
-  { name: 'Onre Finance', address: '2AD4x72wXvjZVxSQPCt77NYZGXNdMbFvtD5F3mcUAtcN', type: 'v4' },
-  { name: 'MetaDAO', address: '8N3Tvc6B1wEVKVC6iD4s6eyaCNqX2ovj2xze2q3Q9DWH', type: 'v4' },
-  { name: 'Helium', address: 'FXyzyVsmPRuZjbe97tsCpDqPAPPhBny4dr2hemo8XmL1', type: 'v4' },
-  { name: 'Voltr', address: '7szuzpoZzah95BsAu2LQm3bpor5ofiAV4HuinyfFEdse', type: 'v4' },
-  { name: 'Voltr (former 3/5)', address: '5QctVSVmX1wdA9emmQFLQGnVbbiR6zPcDkmX8xEScxGH', type: 'v4' },
-  { name: 'Jito (program upgrade)', address: 'AJVQRHk9rg25HzE2TompdcjfvQGuZdytPXhU1SgxUxBa', type: 'v4' },
-  { name: 'Tessera V', address: '3JW5VWy76TBT5NBbdyrWU6i3fz8XecDko7viGeFSKw7e', type: 'v4' },
-  { name: 'LayerZero OFT', address: '9XnbnSvCk33J5Daxc9uJ2MxySTKPuM1KKoFJNmaAk7tN', type: 'v4' },
-  { name: 'SolvBTC', address: 'HRr5HqBE7XXMTYD7V6MwojkHxYGttwozEx6atAprp7XE', type: 'v4' },
-  { name: 'GMSOL', address: 'CxnEVpQQcYa628TywzHGXeJ2jdVmbU51rnERat9xunP1', type: 'v4' },
-  { name: 'Ore', address: 'CHvPhBYPSEdjCrv5xUuzvscqwFYm5wMggWLk2Bvkjgwo', type: 'v4' },
-  { name: 'Carrot', address: 'BVQn1waSbAD5fd6rJifaKY8yRrXSUCdd6cA9DZfwVDon', type: 'v4' },
-  { name: 'DefiTuna', address: '7tmQEKTNAwmkepvfo2zKvZ1KDHD4nEtQ39eZGwxQ1fQv', type: 'v4' },
+import { WATCH_LIST } from './watch-list';
 
-  { name: 'Sanctum', address: 'AApfiPZgV5MoPU691GwhdDhq5sKEMMH1Uh8S4Z9xvP6b', type: 'v3' },
-  { name: 'Jupiter Agg', address: '7ZyDFzet6sKgZLN4D89JLfo7chu2n7nYdkFt5RCFk8Sf', type: 'v3' },
-  { name: 'Raydium', address: 'tr8rgazUrZzgdkfc6Q622nVJHMMzh29trdBE2uBHb4u', type: 'v4' },
-  { name: 'Raydium (treasury)', address: 'EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm', type: 'v3' },
-  { name: 'Tensor', address: '3djJ66VVaG7si2wsh9isspeZX13meHDvwBzuPGCowY4Z', type: 'v3' },
-  { name: 'Phoenix DEX', address: '6x3BDkL2n7VjBWxRD95EsbQi2R2E4zxrvcz1VA6pihnK', type: 'v3' },
-  { name: 'Meteora', address: 'CoEsykatDegLB7pcMJia79JSriDdi71nPnjgeSfw623k', type: 'v3' },
-  { name: 'Parcl', address: '7qCHZqcbLm9VYUCLtFmFFSyDsvuZ5GHhypv7b4JRAEUE', type: 'v3' },
-  { name: 'Marinade', address: 'magrsHFQxkkioAy45VWnZnFBBdKVdy2ZiRoRGYT9Wed', type: 'v3' },
-  { name: 'SPL Stake Pool', address: '3yqoHFE4nBGchuVH5rJuZMFvsmnaDTuLLdvGPDUEJcbW', type: 'v3' },
-
-  { name: 'USD1 mint authority', address: '7RiokaeTceeKT57YtZzWXXDuHwtQG7HvWa8hpC8riYTE', type: 'authority' },
-  { name: 'PYUSD freeze authority', address: '2apBGMsS6ti9RyF5TwQTDswXBWskiJP2LD4cUEDqYJjk', type: 'authority' },
-
-  { name: 'deBridge (governance multisig)', address: 'FHebUVvpfPzfcaWdhwYMP5uHLpRG6zbN8LcExJYAt8Ap', type: 'v4' },
-  { name: 'Phoenix Eternal', address: 'Eq2cke33VYoMpunvbMdeCi44PLX7RLzttgFibvvUjvpc', type: 'v4' },
-];
-
-type ProgramRole = 'holds-funds' | 'routes-funds' | 'peripheral';
 const TRACKED_PROGRAM_WATCH_PATH = path.join(__dirname, '..', 'data', 'programs', 'tracked-program-watch.json');
 let PROGRAM_DATA_WATCH: { name: string; programId: string; role: ProgramRole }[] = [];
 try {
@@ -104,7 +52,7 @@ try {
   ];
 }
 
-type PrevEntry = { address?: string; threshold: number; memberCount: number; voterCount?: number; timeLock: number; configAuthority: string; memberKeys: string[] };
+type PrevEntry = MultisigSnapshot;
 const prevState: Record<string, PrevEntry> = {};
 
 let reconnectDelayMs = 5000;
@@ -260,81 +208,6 @@ function decodePerms(mask: number): string {
   return parts.length === 3 ? 'Full' : parts.join('+') || 'None';
 }
 
-type Severity = 'CRITICAL' | 'HIGH' | 'MONITOR';
-
-interface TypedChange {
-  type: string;
-  detail: string;
-  severity: Severity;
-}
-
-function classifyV4Change(name: string, prev: PrevEntry, now: PrevEntry): TypedChange[] {
-  const events: TypedChange[] = [];
-
-  const tlLabel = (s: number) => {
-    if (s === 0) return 'none';
-    const h = s / 3600;
-    if (h >= 1) return `${Math.round(h)}h`;
-    return `${Math.round(s / 60)}min`;
-  };
-
-  if (now.threshold < prev.threshold) {
-    events.push({ type: 'ThresholdLowered', detail: `Threshold: ${prev.threshold} → ${now.threshold}`, severity: 'CRITICAL' });
-  } else if (now.threshold > prev.threshold) {
-    events.push({ type: 'ThresholdRaised', detail: `Threshold: ${prev.threshold} → ${now.threshold}`, severity: 'HIGH' });
-  }
-
-  const added = now.memberKeys.filter(k => !prev.memberKeys.includes(k));
-  const removed = prev.memberKeys.filter(k => !now.memberKeys.includes(k));
-  if (added.length > 0 && removed.length > 0 && added.length === removed.length && now.memberCount === prev.memberCount) {
-    // Intra-tx rotation: members swapped out 1:1 with count unchanged.
-    events.push({ type: 'SignerRotation', detail: `Signer rotation: ${added.length} swapped (total signers unchanged at ${now.memberCount})`, severity: 'HIGH' });
-  } else {
-    if (removed.length > 0) {
-      const sev: Severity = removed.length >= 3 ? 'CRITICAL' : 'HIGH';
-      events.push({ type: 'SignersRemoved', detail: `Total signers: ${prev.memberCount} → ${now.memberCount} (-${removed.length})`, severity: sev });
-    }
-    if (added.length > 0) {
-      events.push({ type: 'SignersAdded', detail: `Total signers: ${prev.memberCount} → ${now.memberCount} (+${added.length})`, severity: 'MONITOR' });
-    }
-  }
-
-  if (prev.timeLock === 0 && now.timeLock > 0) {
-    events.push({ type: 'TimelockAdded', detail: `Timelock: none → ${tlLabel(now.timeLock)}`, severity: 'HIGH' });
-  } else if (prev.timeLock > 0 && now.timeLock === 0) {
-    events.push({ type: 'TimelockRemoved', detail: `Timelock: ${tlLabel(prev.timeLock)} → none`, severity: 'CRITICAL' });
-  } else if (now.timeLock !== prev.timeLock) {
-    const sev: Severity = now.timeLock < prev.timeLock ? 'HIGH' : 'MONITOR';
-    events.push({ type: 'TimelockChanged', detail: `Timelock: ${tlLabel(prev.timeLock)} → ${tlLabel(now.timeLock)}`, severity: sev });
-  }
-
-  // Members that lost the Vote permission lower the number of signers who can approve without any
-  // change to threshold or member count. Only compared when both sides recorded a voter count.
-  if (typeof prev.voterCount === 'number' && typeof now.voterCount === 'number' && prev.voterCount !== now.voterCount) {
-    const sev: Severity = now.voterCount < prev.voterCount ? 'HIGH' : 'MONITOR';
-    events.push({ type: 'VotersChanged', detail: `Members who can vote on proposals: ${prev.voterCount} → ${now.voterCount}`, severity: sev });
-  }
-
-  if (prev.configAuthority !== now.configAuthority) {
-    if (now.configAuthority !== 'autonomous' && prev.configAuthority !== 'autonomous') {
-      events.push({ type: 'ExternalAdminKeyChanged', detail: `External admin key on multisig: ${prev.configAuthority.slice(0, 12)}... → ${now.configAuthority.slice(0, 12)}...`, severity: 'CRITICAL' });
-    } else if (now.configAuthority !== 'autonomous') {
-      events.push({ type: 'ExternalAdminKeyAdded', detail: `External admin key on multisig: none → ${now.configAuthority.slice(0, 12)}...`, severity: 'CRITICAL' });
-    } else {
-      events.push({ type: 'ExternalAdminKeyCleared', detail: `External admin key on multisig: ${prev.configAuthority.slice(0, 12)}... → none`, severity: 'HIGH' });
-    }
-  }
-
-  return events;
-}
-
-function overallSeverity(events: TypedChange[]): Severity {
-  const rank: Record<Severity, number> = { MONITOR: 0, HIGH: 1, CRITICAL: 2 };
-  let max: Severity = 'MONITOR';
-  for (const e of events) if (rank[e.severity] > rank[max]) max = e.severity;
-  return max;
-}
-
 // Account notifications carry the account data and the slot it was read at. Decoding that payload,
 // rather than re-fetching, removes the chance of a load-balanced RPC node returning an older state
 // than the one notified (which would read as a change and then its reversal). Notifications for one
@@ -381,15 +254,8 @@ async function processV4State(name: string, ms: any, address: string) {
   // monitor-state, never post to the public channel or the risk-team threads.
   const tracked = isTrackedName(name);
   try {
-    const threshold = ms.threshold;
-    const memberCount = ms.members.length;
-    const timeLock = ms.timeLock;
-    const ca = (ms as any).configAuthority;
-    const caStr = ca ? ca.toBase58() : null;
-    const configAuthority = (!caStr || caStr === '11111111111111111111111111111111') ? 'autonomous' : caStr;
-    const memberKeys = ms.members.map((m: any) => m.key.toBase58());
+    const { threshold, memberCount, voterCount, timeLock, configAuthority, memberKeys } = snapshotFromV4(ms);
     const maskOf = (m: any) => { const mask = (m.permissions as any)?.mask ?? (m.permissions as any) ?? 0; return typeof mask === 'number' ? mask : 0; };
-    const voterCount = ms.members.filter((m: any) => maskOf(m) & 2).length;
 
     if (!tracked) try {
       const state = readJsonStrict<Record<string, any>>(STATE_FILE, {});
@@ -428,7 +294,7 @@ async function processV4State(name: string, ms: any, address: string) {
     }
 
     const now: PrevEntry = { threshold, memberCount, voterCount, timeLock, configAuthority, memberKeys };
-    const typedChanges = classifyV4Change(name, prev, now);
+    const typedChanges = classifyV4Change(prev, now);
     const severity = overallSeverity(typedChanges);
     const changes = typedChanges.map(c => c.detail);
 
@@ -590,14 +456,6 @@ function saveProgramStateSoon() {
   }, 2000);
 }
 
-// Reads the upgrade authority and deploy slot from a ProgramData account. Returns null when the data
-// is not a ProgramData account (too short, wrong tag) so a failed read is never recorded as IMMUTABLE.
-function readProgramData(data: Buffer): { authority: string; deploySlot: number } | null {
-  if (data.length < 45 || data.readUInt32LE(0) !== 3) return null;
-  const authority = data[12] === 1 ? new PublicKey(data.subarray(13, 45)).toBase58() : 'IMMUTABLE';
-  return { authority, deploySlot: Number(data.readBigUInt64LE(4)) };
-}
-
 async function handleProgramUpgrade(name: string, conn: Connection, programId: string) {
   try {
     const info = await conn.getAccountInfo(new PublicKey(programId));
@@ -616,27 +474,22 @@ async function handleProgramUpgrade(name: string, conn: Connection, programId: s
     const role: ProgramRole = progEntry?.role ?? 'peripheral';
 
     const prevAuth = lastUpgradeAuthority[programId];
-    const isAuthorityChange = prevAuth !== undefined && prevAuth !== authAddr;
     lastUpgradeAuthority[programId] = authAddr;
 
-    // A ProgramData accountSubscribe notification fires on ANY write to the account (rent top-up, a
-    // read/write that does not redeploy, etc), not only on an upgrade. Confirm a genuine redeploy by
-    // the last-deployed slot (u64 at offset 4, written only by the loader on deploy/upgrade): treat it
-    // as an upgrade only if that slot advanced from the last seen value, or was deployed in the last
-    // 30 minutes. Without this, a non-upgrade write posts a phantom "Program X upgraded" to the public
-    // activity feed and a subscriber DM (the same bug fixed in solgov-monitor.ts checkProgramUpgrades).
-    // Authority changes are proven from the authority bytes and still fire regardless.
+    // A ProgramData notification fires on any write, not only an upgrade; decideProgramEvent proves a
+    // redeploy from the deploy slot (see detectors/program-upgrade.ts). Without it a non-upgrade write
+    // posts a phantom "Program X upgraded" to the public feed.
     const deploySlot = parsed.deploySlot;
     const prevSlot = lastDeploySlot[programId];
     lastDeploySlot[programId] = deploySlot;
     saveProgramStateSoon();
-    const slotAdvanced = prevSlot !== undefined && deploySlot > prevSlot;
     // Block time of the deploy: used for the "deployed in the last 30 minutes" fallback when there is no
     // baseline, and as the event time so a change found after a restart is reported when it happened.
     let deployTime: number | null = null;
     try { deployTime = await conn.getBlockTime(deploySlot); } catch {}
-    const recentlyDeployed = prevSlot === undefined && !!deployTime && (Date.now() / 1000 - deployTime) < 30 * 60;
-    const isRealUpgrade = slotAdvanced || recentlyDeployed;
+    const { isAuthorityChange, isRealUpgrade } = decideProgramEvent({
+      prevAuthority: prevAuth, authority: authAddr, prevDeploySlot: prevSlot, deploySlot, deployTime, nowSec: Date.now() / 1000,
+    });
     if (!isRealUpgrade && !isAuthorityChange) {
       console.log(`[SKIP] ${name}: ProgramData write but deploy slot ${deploySlot} did not advance and is not recent - not an upgrade`);
       return;
@@ -670,36 +523,7 @@ async function handleProgramUpgrade(name: string, conn: Connection, programId: s
     const authLabel = authAddr === 'IMMUTABLE' ? escapeHtml(authorityText(authAddr)) : await labelAddress(authAddr);
     const prevAuthLabel = prevAuth && prevAuth !== 'IMMUTABLE' ? await labelAddress(prevAuth) : prevAuth === 'IMMUTABLE' ? escapeHtml(authorityText(prevAuth)) : 'unknown';
 
-    const noMultisigProgs = ['BisonFi', 'HumidiFi', 'Photon', 'Save'];
-    const isNoMultisig = noMultisigProgs.some(s => name.includes(s));
-    const isOffHours = hour < 6 || hour > 22;
-
-    let severity: 'CRITICAL' | 'HIGH' | 'MONITOR' = 'MONITOR';
-    let header = '';
-    if (isNoMultisig) {
-      severity = 'CRITICAL';
-      header = isAuthorityChange
-        ? '🔴 <b>CRITICAL: Who can upgrade this program changed (no multisig found on-chain)</b>'
-        : '🔴 <b>CRITICAL: Program code updated by a single wallet (no multisig found on-chain)</b>';
-    } else if (role === 'holds-funds' && isAuthorityChange) {
-      severity = 'CRITICAL';
-      header = '🔴 <b>CRITICAL: Control of a program holding user funds changed</b>';
-    } else if (role === 'routes-funds' && isAuthorityChange) {
-      severity = 'HIGH';
-      header = '🟠 <b>HIGH: Control of a program routing user funds changed</b>';
-    } else if (role === 'peripheral' && isAuthorityChange) {
-      severity = 'MONITOR';
-      header = '🟦 <b>Control of a supporting program changed</b>';
-    } else if (role === 'holds-funds') {
-      severity = 'HIGH';
-      header = isOffHours ? '🟠 <b>HIGH: Code updated on a program holding user funds (outside 06:00-22:00 UTC)</b>' : '🟠 <b>HIGH: Code updated on a program holding user funds</b>';
-    } else if (role === 'routes-funds') {
-      severity = isOffHours ? 'HIGH' : 'MONITOR';
-      header = isOffHours ? '🟠 <b>HIGH: Code updated on a program routing user funds (outside 06:00-22:00 UTC)</b>' : '🟦 <b>Code updated on a program routing user funds</b>';
-    } else {
-      severity = 'MONITOR';
-      header = '🟦 <b>Supporting program code updated</b>';
-    }
+    const { severity, header } = classifyProgramSeverity({ name, role, isAuthorityChange, hourUtc: hour });
 
     const authLine = isAuthorityChange
       ? `Who can upgrade it: <code>${prevAuthLabel}</code> → <code>${authLabel}</code>`
@@ -743,6 +567,35 @@ async function handleProgramUpgrade(name: string, conn: Connection, programId: s
   } catch (e: any) {
     console.error(`[UPGRADE ERROR] ${name}:`, e.message?.slice(0, 40));
   }
+}
+
+// Admin Watch (see admin-watch.ts): admin key fields inside protocol state accounts.
+let adminWatcher: AdminWatcher | null = null;
+
+async function dispatchAdminAlert(a: AdminAlert) {
+  const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
+  const safeName = escapeHtml(alertName(a.target.protocol));
+  const detail = escapeHtml(a.detail);
+  const link = a.txLink ? `\n${a.txLink}` : '';
+  const sevHeader = a.severity === 'CRITICAL' ? '🔴 <b>CRITICAL: Protocol admin key changed</b>'
+    : a.type === 'AdminHandoverProposed' ? '🟠 <b>HIGH: Protocol admin handover proposed</b>'
+    : a.severity === 'HIGH' ? '🟠 <b>HIGH: Protocol admin key changed</b>' : '📋 <b>MONITOR</b>';
+  const msg = `${sevHeader}\n\n<b>${safeName}</b>\n${detail}\nAccount: <code>${a.target.account.slice(0, 12)}...</code>${link}\n📅 ${timestamp} UTC`;
+  console.log(`[${a.severity}] ${a.target.name}: ${a.type} ${a.field}`);
+  logActivity(a.target.protocol, a.type, a.detail, a.target.account);
+  await sendTelegram(msg, a.severity);
+  if (a.public) await sendPublic(`<b>${safeName}</b>\n${detail}${link}\n${timestamp} UTC\nsolgov.xyz`);
+  await sendToSubscribers({ protocol: a.target.protocol, severity: a.severity, type: 'AuthorityChange', message: msg });
+}
+
+async function handleAdminNotification(account: string, value: any) {
+  if (!adminWatcher) return;
+  const t = adminWatcher.targets.find(x => x.account === account);
+  const raw = Array.isArray(value?.data) ? value.data[0] : null;
+  if (!t || typeof raw !== 'string') return;
+  const fields = adminWatcher.read(t, String(value.owner), Buffer.from(raw, 'base64'));
+  if (!fields) { console.log(`[ADMIN] ${t.name}: notification failed owner/discriminator check; skipped`); return; }
+  for (const a of await adminWatcher.observe(t, fields)) await dispatchAdminAlert(a);
 }
 
 function connectWebSocket(conn: Connection, programDataWatch: { name: string; address: string }[] = []) {
@@ -802,7 +655,13 @@ function connectWebSocket(conn: Connection, programDataWatch: { name: string; ad
       }));
     }
 
-    console.log(`[WS] ${allAccounts.length + programDataWatch.length} subscriptions sent`);
+    for (const t of adminWatcher?.targets || []) {
+      subId++;
+      pendingByReqId.set(subId, { name: t.name, address: t.account, type: 'admin-state' });
+      ws.send(JSON.stringify({ jsonrpc: '2.0', id: subId, method: 'accountSubscribe', params: [t.account, { encoding: 'base64', commitment: 'confirmed' }] }));
+    }
+
+    console.log(`[WS] ${allAccounts.length + programDataWatch.length + (adminWatcher?.targets.length || 0)} subscriptions sent`);
     reconnectDelayMs = 5000;
     setTimeout(() => { void reVerifyAllV4(conn, 'ws-reconnect'); }, 3000);
   });
@@ -850,6 +709,8 @@ function connectWebSocket(conn: Connection, programDataWatch: { name: string; ad
           logActivity(changedItem.name, 'VaultTx', 'Account data changed', changedItem.address);
         } else if (changedItem.type === 'authority') {
           await handleAuthorityChange(changedItem.name, changedItem.address);
+        } else if (changedItem.type === 'admin-state') {
+          if (!isStaleSlot(changedItem.address, notifSlot)) enqueue(changedItem.address, () => handleAdminNotification(changedItem.address, notifValue));
         } else if (changedItem.type === 'program-upgrade') {
           const progName = changedItem.name.replace(' (upgrade)', '');
           const prog = PROGRAM_DATA_WATCH.find(p => p.name === progName);
@@ -981,7 +842,17 @@ async function main() {
     for (const c of changedWhileDown) { await handleProgramUpgrade(c.name, conn, c.programId); await sleep(500); }
   }
 
-  console.log(`\nStarting WebSocket listener (${WATCH_LIST.length} accounts + ${programDataWatch.length} program data)...\n`);
+  try {
+    adminWatcher = new AdminWatcher(conn);
+    console.log(`[ADMIN] Watching ${adminWatcher.targets.length} protocol admin account(s)`);
+    const changedWhileDownAdmin = await adminWatcher.initialRead();
+    for (const a of changedWhileDownAdmin) await dispatchAdminAlert(a);
+  } catch (e: any) {
+    console.error('[ADMIN] init failed; Admin Watch off this session:', e.message);
+    adminWatcher = null;
+  }
+
+  console.log(`\nStarting WebSocket listener (${WATCH_LIST.length} accounts + ${programDataWatch.length} program data + ${adminWatcher?.targets.length || 0} admin accounts)...\n`);
   connectWebSocket(conn, programDataWatch);
 
   try {

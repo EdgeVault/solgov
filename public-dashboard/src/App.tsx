@@ -103,6 +103,9 @@ const ACTIVITY_TYPE_LABELS: Record<string, string> = {
   ExternalAdminKeyAdded: 'External admin key set',
   ExternalAdminKeyCleared: 'External admin key cleared',
   ExternalAdminKeyChanged: 'External admin key changed',
+  AdminKeyChanged: 'Protocol admin key changed',
+  AdminHandoverProposed: 'Protocol admin handover proposed',
+  AdminHandoverCleared: 'Proposed admin handover cleared',
   VotersChanged: 'Voting members changed',
   VoteConcentration: 'Voting power concentrated',
   Composability: 'Protocol connection changed',
@@ -117,6 +120,7 @@ const GOV_CHANGE_TYPES: Set<string> = new Set([
   'ThresholdRaised', 'ThresholdLowered',
   'SignersAdded', 'SignersRemoved', 'SignerRotation', 'VotersChanged',
   'ExternalAdminKeyAdded', 'ExternalAdminKeyCleared', 'ExternalAdminKeyChanged',
+  'AdminKeyChanged', 'AdminHandoverProposed', 'AdminHandoverCleared',
 ]);
 
 // Fallback for an event type with no label yet: "SomeNewEvent" or "SOME_EVENT" becomes "Some new event",

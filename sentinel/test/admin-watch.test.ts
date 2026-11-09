@@ -4,8 +4,9 @@ import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
 import { PublicKey } from '@solana/web3.js';
-import { AdminWatcher, protocolsMultisigs, loadLiveAdminTargets, type LiveAdminTarget } from '../src/admin-watch';
+import { AdminWatcher, protocolsMultisigs, loadLiveAdminTargets, v3VaultPda, nativeTreasuryPda, parseV3Multisig, type LiveAdminTarget } from '../src/admin-watch';
 import { classifyAdminChange, readAdminFields, NONE } from '../src/detectors/admin-watch';
+import { describeHolder } from '../src/detectors/holder';
 
 const K1 = new PublicKey('GwH3Hiv5mACLX3ufTw1pFsrhSPon5tdw252DBs4Rx4PV');
 const K2 = new PublicKey('CRQd5wvbf6FKVmjHC7on8w4pzFPzudij2BKXRcMCu7aK');
@@ -137,4 +138,49 @@ test('writeSnapshot records holders, pending handover state, watching-since and 
   const snap2 = await w2.writeSnapshot();
   assert.equal(snap2.targets[0].fields[0].watchingSince, since);
   assert.ok(snap2.targets[0].fields[0].lastChange);
+});
+
+test('afterVec reads a key that follows a variable-length list (Jupiter Perps layout)', () => {
+  const t: LiveAdminTarget = { ...target, fields: [{ name: 'admin', label: 'Perps admin', kind: 'active', afterVec: { lenOffset: 15, elemSize: 32, maxLen: 64 } }] };
+  const mk = (pools: number, len = pools) => {
+    const b = Buffer.alloc(19 + pools * 32 + 32 + 10);
+    b.writeUInt32LE(len, 15);
+    K1.toBuffer().copy(b, 19 + pools * 32);
+    return b;
+  };
+  assert.deepEqual(readAdminFields(t, mk(1)), { admin: K1.toBase58() });
+  assert.deepEqual(readAdminFields(t, mk(3)), { admin: K1.toBase58() });
+  assert.equal(readAdminFields(t, mk(1, 9999)), null, 'implausible list length is skipped, never misread');
+});
+
+test('Squads V3 vault and SPL Governance treasury derivations match the on-chain holders', () => {
+  // Jupiter Perps admin (read 9 Nov 2026) is the V3 vault of the Jupiter Agg multisig.
+  assert.equal(v3VaultPda('7ZyDFzet6sKgZLN4D89JLfo7chu2n7nYdkFt5RCFk8Sf', 1), 'CvQZZ23qYDWF2RUpxYJ8y9K4skmuvYEEjH7fK58jtipQ');
+  // Marinade State admin (read 9 Nov 2026) is the native treasury of a Marinade DAO governance account.
+  assert.equal(nativeTreasuryPda('M5Fg6GipNvPzWgXNr5wj1EDcp8GB9J53cgyE7YGYLbL', 'GovMaiHfpVPw8BAM1mbdzgmSZYDw2tdP32J2fapoQoYs'), '42VJbDihcS81YJPbuhHnHgvo1ehu42j8VK9sNwrnAarR');
+});
+
+test('V3 multisig parser reads threshold and member count, rejects junk', () => {
+  const b = Buffer.alloc(8 + 2 + 2 + 4 + 4 + 1 + 32 + 1 + 4 + 7 * 32);
+  b.writeUInt16LE(4, 8);
+  b.writeUInt32LE(7, 8 + 2 + 2 + 4 + 4 + 1 + 32 + 1);
+  assert.deepEqual(parseV3Multisig(b), { threshold: 4, memberCount: 7 });
+  assert.equal(parseV3Multisig(Buffer.alloc(10)), null);
+  b.writeUInt16LE(9, 8);
+  assert.equal(parseV3Multisig(b), null, 'threshold above member count is rejected');
+});
+
+test('DAO treasury holder is described only when the governance account links to the named realm', async () => {
+  const gov = 'M5Fg6GipNvPzWgXNr5wj1EDcp8GB9J53cgyE7YGYLbL', realm = '899YG3yk4F66ZgbNWLHriZHTXSKk9e1kvsKEquW7L6Mo', prog = 'GovMaiHfpVPw8BAM1mbdzgmSZYDw2tdP32J2fapoQoYs';
+  const treasury = nativeTreasuryPda(gov, prog);
+  const t: LiveAdminTarget = { ...target, daoTreasuries: [{ governance: gov, realm, realmName: 'Marinade DAO', programId: prog }] };
+  const govData = (r: string) => { const d = Buffer.alloc(100); d[0] = 18; new PublicKey(r).toBuffer().copy(d, 1); return d; };
+  const conn = (r: string, owner = prog): any => ({ ...fakeConn, getAccountInfo: async () => ({ owner: new PublicKey(owner), data: govData(r) }) });
+  const ok = await (new AdminWatcher(conn(realm), [t], tmpState(), tmpState()) as any).holder(treasury);
+  assert.equal(ok.kind, 'dao-treasury');
+  assert.match(describeHolder(ok), /^Marinade DAO governance treasury/);
+  const wrongRealm = await (new AdminWatcher(conn(K2.toBase58()), [t], tmpState(), tmpState()) as any).holder(treasury);
+  assert.deepEqual([wrongRealm.kind, wrongRealm.scope], ['untracked', 'unchecked']);
+  const wrongOwner = await (new AdminWatcher(conn(realm, K2.toBase58()), [t], tmpState(), tmpState()) as any).holder(treasury);
+  assert.deepEqual([wrongOwner.kind, wrongOwner.scope], ['untracked', 'unchecked']);
 });

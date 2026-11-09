@@ -6,9 +6,10 @@
 // notification re-checks the owner and discriminator, so a layout change after a program upgrade is
 // skipped rather than read at the wrong offset.
 //
-// Each change names who now holds the key: a vault of a multisig solgov tracks is described from a
-// live read of that multisig (threshold, signers, timelock, external admin key); anything else is
-// stated as not being a vault of any tracked multisig. Where the previous holder was a tracked
+// Each change names who now holds the key: a vault of a multisig solgov tracks (Squads V4 or V3) is
+// described from a live read of that multisig (threshold, signers, timelock, external admin key); an
+// SPL Governance treasury listed in a target's daoTreasuries is described once its linkage checks out
+// on-chain; anything else is stated as not being a vault of any tracked multisig. Where the previous holder was a tracked
 // multisig, the executing transaction is looked up and linked.
 
 import * as fs from 'fs';
@@ -20,6 +21,7 @@ import { snapshotFromV4, type Severity } from './detectors/multisig-config';
 import { describeHolder, type HolderFacts } from './detectors/holder';
 import { vaultPda } from './replay/squads-v4';
 import { WATCH_LIST } from './watch-list';
+import { SQUADS_V3_PROGRAM, SQUADS_V4_PROGRAM } from './utils/constants';
 import { protocolsSourcePath } from './utils/protocols-source';
 import { readJsonStrict, writeJsonAtomic } from './utils/json-file';
 
@@ -45,7 +47,31 @@ export interface AdminSnapshot {
   targets: { protocol: string; name: string; account: string; programId: string; fields: AdminSnapshotField[] }[];
 }
 
-export type LiveAdminTarget = AdminTarget & { accountType: string; verified?: string; discriminator?: string; live?: boolean };
+// An SPL Governance account whose native treasury may hold one of the target's keys. Checked live
+// before use: the treasury PDA is derived from `governance`, and the governance account must be owned
+// by `programId` and point at `realm`.
+export interface DaoTreasuryHint { governance: string; realm: string; realmName: string; programId: string }
+export type LiveAdminTarget = AdminTarget & { accountType: string; verified?: string; discriminator?: string; live?: boolean; daoTreasuries?: DaoTreasuryHint[] };
+
+export function nativeTreasuryPda(governance: string, programId: string): string {
+  return PublicKey.findProgramAddressSync([Buffer.from('native-treasury'), new PublicKey(governance).toBuffer()], new PublicKey(programId))[0].toBase58();
+}
+
+// Squads V3 (squads-mpl) vault: seeds ['squad', multisig, authority index (u32 LE), 'authority'].
+export function v3VaultPda(address: string, index = 1): string {
+  const i = Buffer.alloc(4); i.writeUInt32LE(index);
+  return PublicKey.findProgramAddressSync([Buffer.from('squad'), new PublicKey(address).toBuffer(), i, Buffer.from('authority')], SQUADS_V3_PROGRAM)[0].toBase58();
+}
+
+// Squads V3 multisig account: 8 disc, threshold u16, authority index u16, tx index u32, change index
+// u32, bump u8, create key 32, allow external execute u8, keys Vec<Pubkey>. V3 has no timelock.
+export function parseV3Multisig(data: Buffer): { threshold: number; memberCount: number } | null {
+  if (data.length < 8 + 2 + 2 + 4 + 4 + 1 + 32 + 1 + 4) return null;
+  const threshold = data.readUInt16LE(8);
+  const memberCount = data.readUInt32LE(8 + 2 + 2 + 4 + 4 + 1 + 32 + 1);
+  if (!threshold || !memberCount || memberCount > 64 || threshold > memberCount) return null;
+  return { threshold, memberCount };
+}
 
 export function loadLiveAdminTargets(): LiveAdminTarget[] {
   const all = readJsonStrict<LiveAdminTarget[]>(TARGETS_FILE, []);
@@ -70,9 +96,12 @@ export function protocolsMultisigs(src: string): { name: string; address: string
 export function buildHolderRegistry(): { reg: Map<string, { name: string; multisig: string }>; complete: boolean } {
   const reg = new Map<string, { name: string; multisig: string }>();
   const add = (name: string, address: string) => {
+    // V4 vault PDAs (index 0 and 1) and the V3 default vault (index 1). Which program actually owns the
+    // multisig is checked when the holder is read, so an address that is not V3 never matches as V3.
     for (const i of [0, 1]) { try { const v = vaultPda(address, i); if (!reg.has(v)) reg.set(v, { name, multisig: address }); } catch {} }
+    try { const v = v3VaultPda(address, 1); if (!reg.has(v)) reg.set(v, { name, multisig: address }); } catch {}
   };
-  for (const w of WATCH_LIST) if (w.type === 'v4') add(w.name, w.address);
+  for (const w of WATCH_LIST) if (w.type === 'v4' || w.type === 'v3') add(w.name, w.address);
   let complete = false;
   try {
     const found = protocolsMultisigs(fs.readFileSync(protocolsSourcePath(), 'utf-8'));
@@ -97,10 +126,14 @@ export class AdminWatcher {
   private holderReg = buildHolderRegistry();
   private registry = this.holderReg.reg;
   private untrackedScope: 'live' | 'unchecked' = this.holderReg.complete ? 'live' : 'unchecked';
+  private daoHints = new Map<string, DaoTreasuryHint>();                         // treasury PDA -> hint
   private since: Record<string, string> = {};                                  // `${account}:${field}` -> ISO
   private lastChange: Record<string, { at: string; detail: string } | null> = {};
   constructor(private conn: Connection, public targets: LiveAdminTarget[] = loadLiveAdminTargets(), private stateFile: string = STATE_FILE, private snapshotFile: string = SNAPSHOT_FILE) {
     this.baseline = readJsonStrict<Record<string, Record<string, string>>>(this.stateFile, {});
+    for (const t of this.targets) for (const h of t.daoTreasuries || []) {
+      try { this.daoHints.set(nativeTreasuryPda(h.governance, h.programId), h); } catch {}
+    }
     try {
       const prev = readJsonStrict<AdminSnapshot | null>(this.snapshotFile, null);
       for (const t of prev?.targets || []) for (const f of t.fields) {
@@ -143,15 +176,34 @@ export class AdminWatcher {
   }
 
   private async holder(key: string): Promise<HolderFacts> {
+    const dao = this.daoHints.get(key);
+    if (dao) {
+      try {
+        const g = await this.conn.getAccountInfo(new PublicKey(dao.governance));
+        if (g && g.owner.toBase58() === dao.programId && g.data.length >= 33 && new PublicKey(g.data.subarray(1, 33)).toBase58() === dao.realm) {
+          return { kind: 'dao-treasury', address: key, realmName: dao.realmName, realm: dao.realm, governance: dao.governance };
+        }
+      } catch {}
+      // Hinted but the linkage did not check out (or could not be read): make no claim.
+      return { kind: 'untracked', address: key, scope: 'unchecked' };
+    }
     const r = this.registry.get(key);
     if (!r) return { kind: 'untracked', address: key, scope: this.untrackedScope };
     try {
       const info = await this.conn.getAccountInfo(new PublicKey(r.multisig));
       // Known tracked vault but its multisig could not be read: make no tracked/untracked claim.
       if (!info) return { kind: 'untracked', address: key, scope: 'unchecked' };
-      const [ms] = multisig.accounts.Multisig.fromAccountInfo(info);
-      const s = snapshotFromV4(ms);
-      return { kind: 'multisig-vault', address: r.multisig, multisigName: r.name, threshold: s.threshold, memberCount: s.memberCount, timeLock: s.timeLock, configAuthority: s.configAuthority };
+      const owner = info.owner.toBase58();
+      if (owner === SQUADS_V4_PROGRAM.toBase58() && key !== v3VaultPda(r.multisig, 1)) {
+        const [ms] = multisig.accounts.Multisig.fromAccountInfo(info);
+        const s = snapshotFromV4(ms);
+        return { kind: 'multisig-vault', version: 'v4', address: r.multisig, multisigName: r.name, threshold: s.threshold, memberCount: s.memberCount, timeLock: s.timeLock, configAuthority: s.configAuthority };
+      }
+      if (owner === SQUADS_V3_PROGRAM.toBase58() && key === v3VaultPda(r.multisig, 1)) {
+        const s = parseV3Multisig(info.data);
+        if (s) return { kind: 'multisig-vault', version: 'v3', address: r.multisig, multisigName: r.name, threshold: s.threshold, memberCount: s.memberCount, timeLock: 0, configAuthority: 'autonomous' };
+      }
+      return { kind: 'untracked', address: key, scope: 'unchecked' };
     } catch { return { kind: 'untracked', address: key, scope: 'unchecked' }; }
   }
 

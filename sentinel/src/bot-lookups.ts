@@ -119,6 +119,7 @@ export function adminText(query: string, dataDir = DATA_DIR): string {
       const tl = h.timeLock > 0 ? `${timelockShort(h.timeLock)} timelock` : 'no timelock';
       return `${escapeHtml(h.multisigName)} multisig, ${h.threshold} of ${h.memberCount} signers, ${tl}${h.configAuthority !== 'autonomous' ? ', external admin key set' : ''}`;
     }
+    if (h?.kind === 'dao-treasury') return `${escapeHtml(h.realmName)} governance treasury (acts only through a proposal voted on in this DAO)`;
     if (h?.kind === 'untracked') return `<code>${escapeHtml(short(f.value))}</code>${h.scope === 'unchecked' ? '' : ' (not linked to a multisig solgov tracks)'}`;
     return escapeHtml(f.holderText);
   };

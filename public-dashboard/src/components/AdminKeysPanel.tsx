@@ -28,6 +28,17 @@ function splitLabel(label: string): { title: string; note: string | null } {
 function Holder({ h, value }: { h: AdminHolder | null; value: string }) {
   if (!h) return <span className="text-gray-400">None set</span>;
   if (h.kind === 'immutable') return <span className="text-gray-300">Nobody (it can no longer be changed)</span>;
+  if (h.kind === 'dao-treasury') {
+    return (
+      <div className="flex flex-col gap-1">
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="rounded border border-white/[0.12] bg-white/[0.04] px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-gray-300">DAO</span>
+          <a href={solscan(h.realm)} target="_blank" rel="noopener" className="text-gray-100 hover:underline decoration-gray-600">{h.realmName}</a>
+        </div>
+        <div className="text-[11px] text-gray-400">Governance treasury. Acts only through a proposal voted on in this DAO</div>
+      </div>
+    );
+  }
   if (h.kind === 'multisig-vault') {
     return (
       <div className="flex flex-col gap-1">
@@ -85,7 +96,7 @@ export function AdminKeysPanel({ data }: { data: AdminWatch }) {
       <p className="text-[12px] text-gray-500 max-w-3xl leading-relaxed mb-4">
         These keys sit inside each protocol's own settings account, separate from the key that can upgrade the program. solgov reads them on-chain and sends an alert when one changes, describing who holds the new key. A proposed handover is flagged before it takes effect.
       </p>
-      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3 items-start">
         {data.targets.map(t => {
           const active = t.fields.filter(f => f.kind === 'active');
           const pending = t.fields.filter(f => f.kind === 'pending');
@@ -105,7 +116,7 @@ export function AdminKeysPanel({ data }: { data: AdminWatch }) {
           );
         })}
       </div>
-      <p className="mt-3 text-[10px] text-gray-600">Source: each protocol's on-chain settings account, read live. Holder details are read from the multisig account at the same time.</p>
+      <p className="mt-3 text-[10px] text-gray-600">Source: each protocol's on-chain settings account, read live. Holder details are read from the multisig or DAO governance account at the same time.</p>
     </section>
   );
 }

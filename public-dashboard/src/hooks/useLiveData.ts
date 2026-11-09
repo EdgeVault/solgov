@@ -271,7 +271,8 @@ export interface LiveDataResult {
 // Admin Watch snapshot (sentinel/src/admin-watch.ts): admin keys inside protocol state accounts.
 export type AdminHolder =
   | { kind: 'immutable' }
-  | { kind: 'multisig-vault'; address: string; multisigName: string; threshold: number; memberCount: number; timeLock: number; configAuthority: string }
+  | { kind: 'multisig-vault'; address: string; multisigName: string; threshold: number; memberCount: number; timeLock: number; configAuthority: string; version?: 'v3' | 'v4' }
+  | { kind: 'dao-treasury'; address: string; realmName: string; realm: string; governance: string }
   | { kind: 'untracked'; address: string; scope?: 'live' | 'replay' | 'unchecked' };
 export interface AdminWatchField {
   name: string; label: string; kind: 'active' | 'pending'; value: string;

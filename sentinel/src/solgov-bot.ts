@@ -768,7 +768,7 @@ export async function handleCallback(data: string, ctx: { userId: number; chatId
         `Send <code>/filters severity:CRITICAL</code> to only receive critical alerts.\n\n` +
         `<b>Severity options:</b> CRITICAL, HIGH, MONITOR (comma-separate for multiple)\n` +
         `<b>Type options</b> (type the code on the left):\n` +
-        `• AuthorityChange: who can upgrade a program changed\n` +
+        `• AuthorityChange: who can upgrade a program changed, or a protocol admin key changed or was proposed to move\n` +
         `• ProgramUpgrade: a program's code was updated\n` +
         `• ConfigChange: multisig settings changed (signers, threshold, timelock)\n` +
         `• NONCE: pre-signed transaction activity on a signer\n` +
@@ -1001,7 +1001,7 @@ export async function handleCommand(text: string, ctx: { userId: number; chatId:
       await sendMessage(
         `Usage: /filters severity:CRITICAL,HIGH types:AuthorityChange,ProgramUpgrade\n` +
         `Severity options: CRITICAL, HIGH, MONITOR, or omit for all.\n` +
-        `Type options: AuthorityChange (who can upgrade a program changed), ProgramUpgrade (program code updated), ConfigChange (multisig settings changed), NONCE (pre-signed transaction activity), VaultTx (transaction sent from the multisig), or * for all.`,
+        `Type options: AuthorityChange (who can upgrade a program changed, or a protocol admin key changed),ProgramUpgrade (program code updated), ConfigChange (multisig settings changed), NONCE (pre-signed transaction activity), VaultTx (transaction sent from the multisig), or * for all.`,
         replyTo,
         replyThread
       );

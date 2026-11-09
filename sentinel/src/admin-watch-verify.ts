@@ -38,7 +38,7 @@ export const accountDisc = (name: string) => crypto.createHash('sha256').update(
     const fields = readAdminFields(t, info.data) || {};
     for (const f of t.fields) {
       const v = fields[f.name];
-      console.log(`  ${f.name.padEnd(30)} @${String(f.offset).padEnd(3)} ${v}  ${v && vaults.get(v) ? '= ' + vaults.get(v) : v === 'NONE' ? '(empty)' : '(not a watch-list multisig vault)'}`);
+      console.log(`  ${f.name.padEnd(30)} @${String(f.offset ?? (f.afterVec ? `vec${f.afterVec.lenOffset}+` : '?')).padEnd(3)} ${v}  ${v && vaults.get(v) ? '= ' + vaults.get(v) : v === 'NONE' ? '(empty)' : '(not a watch-list multisig vault)'}`);
     }
     if (stamp && ownerOk && discOk) { t.verified = today; t.discriminator = disc; }
   });

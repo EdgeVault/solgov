@@ -21,7 +21,10 @@ export interface AdminField {
   label: string;            // plain English, shown in alerts
   kind: 'active' | 'pending';
   offset?: number;          // byte offset of the 32-byte key in the state account (live reads)
-  pendingFor?: string;      // pending fields: the active field it would replace (equal value = nothing pending)
+  // For a key that sits after a variable-length list of 32-byte keys (e.g. Jupiter Perps admin after
+  // `pools: Vec<Pubkey>`): the list's u32 length is read at lenOffset and the key follows the list.
+  afterVec?: { lenOffset: number; elemSize: number; maxLen: number };
+  pendingFor?: string;     // pending fields: the active field it would replace (equal value = nothing pending)
   severity?: Severity;      // active fields: override the role-based severity for lower-stakes keys
 }
 
@@ -50,9 +53,17 @@ export const NONE = 'NONE';
 export function readAdminFields(t: AdminTarget, data: Buffer): Record<string, string> | null {
   const out: Record<string, string> = {};
   for (const f of t.fields) {
-    if (f.offset === undefined) continue;
-    if (data.length < f.offset + 32) return null;
-    const key = new PublicKey(data.subarray(f.offset, f.offset + 32));
+    let offset = f.offset;
+    if (f.afterVec) {
+      const v = f.afterVec;
+      if (data.length < v.lenOffset + 4) return null;
+      const len = data.readUInt32LE(v.lenOffset);
+      if (len > v.maxLen) return null; // implausible length = layout not as expected; skip, never misread
+      offset = v.lenOffset + 4 + len * v.elemSize;
+    }
+    if (offset === undefined) continue;
+    if (data.length < offset + 32) return null;
+    const key = new PublicKey(data.subarray(offset, offset + 32));
     out[f.name] = key.equals(PublicKey.default) ? NONE : key.toBase58();
   }
   return out;

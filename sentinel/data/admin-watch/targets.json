@@ -110,5 +110,57 @@
     "historyFrom": [],
     "verified": "2026-11-09",
     "discriminator": "9d1431e0d957c1fe"
+  },
+  {
+    "name": "Jupiter Perps admin",
+    "protocol": "Jupiter Perps",
+    "programId": "PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu",
+    "account": "H4ND9aYttUVLFmNypZqLjZ52FYiGvdEB45GmwNoKEjTj",
+    "accountType": "Perpetuals",
+    "role": "holds-funds",
+    "fields": [
+      {
+        "name": "admin",
+        "label": "Jupiter Perps admin (the top-level admin key in the exchange's settings)",
+        "kind": "active",
+        "afterVec": {
+          "lenOffset": 15,
+          "elemSize": 32,
+          "maxLen": 64
+        }
+      }
+    ],
+    "setters": [],
+    "historyFrom": [],
+    "verified": "2026-11-09",
+    "discriminator": "1ca762bf68526cc4"
+  },
+  {
+    "name": "Marinade liquid staking admin",
+    "protocol": "Marinade",
+    "programId": "MarBmsSgKXdrN1egZf5sqe1TMai9K1rChYNDJgjq7aD",
+    "account": "8szGkuLTAux9XMgZ2vtY39jVSowEcpBfFfD8hXSEqdGC",
+    "accountType": "State",
+    "role": "holds-funds",
+    "fields": [
+      {
+        "name": "adminAuthority",
+        "label": "Marinade liquid staking admin (the top-level admin key in the mSOL program's settings)",
+        "kind": "active",
+        "offset": 40
+      }
+    ],
+    "setters": [],
+    "historyFrom": [],
+    "daoTreasuries": [
+      {
+        "governance": "M5Fg6GipNvPzWgXNr5wj1EDcp8GB9J53cgyE7YGYLbL",
+        "realm": "899YG3yk4F66ZgbNWLHriZHTXSKk9e1kvsKEquW7L6Mo",
+        "realmName": "Marinade DAO",
+        "programId": "GovMaiHfpVPw8BAM1mbdzgmSZYDw2tdP32J2fapoQoYs"
+      }
+    ],
+    "verified": "2026-11-09",
+    "discriminator": "d8926b5e684bb6b1"
   }
 ]

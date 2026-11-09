@@ -8,7 +8,8 @@
     "prebuild": "node scripts/fetch-snapshot.mjs && node scripts/fetch-historical-tvl.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "node -e \"require('fs').copyFileSync('vercel.json','dist/vercel.json')\""
   },
   "dependencies": {
     "react": "^19.2.4",
